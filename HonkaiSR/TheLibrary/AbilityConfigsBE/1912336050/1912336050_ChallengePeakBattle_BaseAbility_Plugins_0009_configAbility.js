@@ -46,6 +46,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1236507091\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009_02</a>[<span class=\"descriptionNumberColor\">Seize the Moment</span>]",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0009_ADF_1</span>. After using an attack, applies a Weakness of this unit's Type to the enemy target. This effect is removed when the enemy target recovers from the Weakness Break state.",
+      "type": "Other",
+      "statusName": "Seize the Moment",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -591,10 +594,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0009_ADF_1</span>. After using an attack, applies a Weakness of this unit's Type to the enemy target. This effect is removed when the enemy target recovers from the Weakness Break state.",
-      "type": "Other",
-      "statusName": "Seize the Moment"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -641,9 +641,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

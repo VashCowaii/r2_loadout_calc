@@ -63,9 +63,7 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

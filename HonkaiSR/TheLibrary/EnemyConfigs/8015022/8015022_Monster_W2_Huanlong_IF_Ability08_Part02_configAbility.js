@@ -587,7 +587,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1637495295\">Monster_W2_HuanlongPart_IF_LastSummonMark</a>",
-      "stackData": [],
       "latentQueue": [
         "WeakProtect"
       ]

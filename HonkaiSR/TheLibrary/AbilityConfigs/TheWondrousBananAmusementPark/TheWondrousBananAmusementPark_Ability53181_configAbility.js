@@ -17,6 +17,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__103322561\">Relic_318_Sub</a>[<span class=\"descriptionNumberColor\">The Wondrous BananAmusement Park</span>]",
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">#SkillRelic_318_2_P2_CriticalDamageBase</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "The Wondrous BananAmusement Park",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -39,11 +43,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">#SkillRelic_318_2_P2_CriticalDamageBase</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "The Wondrous BananAmusement Park"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -143,9 +143,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

@@ -275,8 +275,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-566337732\">Yukong_Ability01_Preshow</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",

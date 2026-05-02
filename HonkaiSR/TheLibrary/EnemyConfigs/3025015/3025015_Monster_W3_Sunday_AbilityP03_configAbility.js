@@ -137,13 +137,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-709595036\">Enemy_W3_Sunday_MainStory380_Mar7thAllDamageTypeAddedRatio</a>",
+      "stackData": [
+        "MDF_AllDamageTypeAddedRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -171,15 +172,20 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AllDamageTypeAddedRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__484414107\">Enemy_W3_Sunday_MainStory380_DamageTakenRatio</a>",
+      "stackData": [
+        "MDF_Monster_DamageTakenRatio_Level01",
+        "MDF_Monster_DamageTakenRatio_Level02",
+        "MDF_Monster_DamageTakenRatio_Level03",
+        "MDF_Monster_DamageTakenRatio_Level04",
+        "MDF_Monster_DamageTakenRatio_Level05",
+        "MDF_Monster_DamageTakenRatio_Level06",
+        "MDF_Monster_DamageTakenRatio_Level00"
+      ],
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -333,17 +339,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Monster_DamageTakenRatio_Level01",
-        "MDF_Monster_DamageTakenRatio_Level02",
-        "MDF_Monster_DamageTakenRatio_Level03",
-        "MDF_Monster_DamageTakenRatio_Level04",
-        "MDF_Monster_DamageTakenRatio_Level05",
-        "MDF_Monster_DamageTakenRatio_Level06",
-        "MDF_Monster_DamageTakenRatio_Level00"
-      ],
-      "latentQueue": []
+      ]
     }
   ]
 }

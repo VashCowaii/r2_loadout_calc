@@ -31,6 +31,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1494385561\">Yanqing_Eidolon1</a>",
+      "stackData": [
+        "MDF_DamageRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -72,11 +75,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageRatio"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

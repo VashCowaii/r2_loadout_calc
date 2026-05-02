@@ -84,9 +84,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -104,9 +102,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -153,9 +149,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Energy Change"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {

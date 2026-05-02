@@ -12,6 +12,20 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__62451815\">Acheron_UltraAbilitySpareCount_PointB1</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": [
+        "MaxSP",
+        "CurrentSP",
+        "MDF_SkillUseFlag",
+        "MDF_SkillUseDubuff",
+        "OnEnterBattleFlag",
+        "OnCharacterCreateFlag"
+      ],
+      "description": "After using the Ultimate, gains Slashed Dream by an amount equal to the number of Quadrivalent Ascendance stacks. At the same time, applies a corresponding number of Crimson Knot stacks to a random enemy. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> time(s).",
+      "type": "Other",
+      "statusName": "Quadrivalent Ascendance",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -102,25 +116,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "MaxSP",
-        "CurrentSP",
-        "MDF_SkillUseFlag",
-        "MDF_SkillUseDubuff",
-        "OnEnterBattleFlag",
-        "OnCharacterCreateFlag"
-      ],
-      "description": "After using the Ultimate, gains Slashed Dream by an amount equal to the number of Quadrivalent Ascendance stacks. At the same time, applies a corresponding number of Crimson Knot stacks to a random enemy. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> time(s).",
-      "type": "Other",
-      "statusName": "Quadrivalent Ascendance"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1886427249\">Acheron_UltraAbilitySpareCount</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Acheron obtains <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> point(s) of Slashed Dream after she uses her Ultimate, and applies <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> stack(s) of Crimson Knot on a random enemy.",
+      "type": "Other",
+      "statusName": "Quadrivalent Ascendance",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -198,14 +204,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Acheron obtains <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> point(s) of Slashed Dream after she uses her Ultimate, and applies <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> stack(s) of Crimson Knot on a random enemy.",
-      "type": "Other",
-      "statusName": "Quadrivalent Ascendance"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -289,13 +288,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-84702346\">Acheron_Eidolon6_AddRegardAsAbilityType</a>",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": [
+        "CurrentSP",
+        "MaxSP"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -366,18 +370,22 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "CurrentSP",
-        "MaxSP"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1111481031\">Acheron_Eidolon4_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Vulnerability</span>]",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": [
+        "MaxSP",
+        "CurrentSP"
+      ],
+      "description": "Increases Ultimate DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Ultimate DMG Vulnerability",
+      "statusName": "Ultimate DMG Vulnerability",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -409,23 +417,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "MaxSP",
-        "CurrentSP"
-      ],
-      "description": "Increases Ultimate DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Ultimate DMG Vulnerability",
-      "statusName": "Ultimate DMG Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__447524573\">Acheron_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Reduces All-Type RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, lasting till the end of the Ultimate.",
+      "type": "Debuff",
+      "effectName": "All-Type RES Reduction",
+      "statusName": "All-Type RES Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -450,15 +454,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Reduces All-Type RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, lasting till the end of the Ultimate.",
-      "type": "Debuff",
-      "effectName": "All-Type RES Reduction",
-      "statusName": "All-Type RES Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -466,6 +462,14 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
+      ],
+      "latentQueue": [
+        "MaxSP",
+        "CurrentSP",
+        "MDF_SkillUseFlag",
+        "MDF_SkillUseDubuff",
+        "OnEnterBattleFlag",
+        "OnCharacterCreateFlag"
       ],
       "execute": [
         {
@@ -694,15 +698,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MaxSP",
-        "CurrentSP",
-        "MDF_SkillUseFlag",
-        "MDF_SkillUseDubuff",
-        "OnEnterBattleFlag",
-        "OnCharacterCreateFlag"
       ]
     },
     {
@@ -712,6 +707,10 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "When removed, immediately deals Lightning DMG equal to <span class=\"descriptionNumberColor\">MDF_PropertyValue01</span> of Acheron's ATK to all enemies once. For every stack of Crimson Knot removed, this DMG multiplier additionally increases, up to a maximum of <span class=\"descriptionNumberColor\">MDF_PropertyValue02</span>.",
+      "type": "Other",
+      "effectName": "Crimson Knot",
+      "statusName": "Crimson Knot",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -888,11 +887,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "When removed, immediately deals Lightning DMG equal to <span class=\"descriptionNumberColor\">MDF_PropertyValue01</span> of Acheron's ATK to all enemies once. For every stack of Crimson Knot removed, this DMG multiplier additionally increases, up to a maximum of <span class=\"descriptionNumberColor\">MDF_PropertyValue02</span>.",
-      "type": "Other",
-      "effectName": "Crimson Knot",
-      "statusName": "Crimson Knot"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -929,9 +924,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -962,9 +955,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -995,9 +986,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1028,9 +1017,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1038,6 +1025,14 @@ const configAbility = {
       "stackType": "Replace",
       "modifierFlags": [
         "ForceStanceDamage"
+      ],
+      "latentQueue": [
+        "MaxSP",
+        "CurrentSP",
+        "MDF_SkillUseFlag",
+        "MDF_SkillUseDubuff",
+        "OnEnterBattleFlag",
+        "OnCharacterCreateFlag"
       ],
       "execute": [
         {
@@ -1101,21 +1096,16 @@ const configAbility = {
         {
           "eventTrigger": "Leave Battle"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MaxSP",
-        "CurrentSP",
-        "MDF_SkillUseFlag",
-        "MDF_SkillUseDubuff",
-        "OnEnterBattleFlag",
-        "OnCharacterCreateFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-535608708\">Acheron_PointB3_DamageUp</a>[<span class=\"descriptionNumberColor\">Thunder Core</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Thunder Core",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1149,11 +1139,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Thunder Core"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1238,6 +1224,14 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "ListenBattleEventSkill"
+      ],
+      "latentQueue": [
+        "MaxSP",
+        "CurrentSP",
+        "MDF_SkillUseFlag",
+        "MDF_SkillUseDubuff",
+        "OnEnterBattleFlag",
+        "OnCharacterCreateFlag"
       ],
       "execute": [
         {
@@ -1368,21 +1362,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MaxSP",
-        "CurrentSP",
-        "MDF_SkillUseFlag",
-        "MDF_SkillUseDubuff",
-        "OnEnterBattleFlag",
-        "OnCharacterCreateFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-317541958\">Acheron_BlockModifySp</a>",
       "stackType": "Replace",
+      "latentQueue": [
+        "CurrentSP",
+        "MaxSP"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1462,18 +1451,12 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "CurrentSP",
-        "MaxSP"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1065497457\">Acheron_RuondDeBonusCD</a>",
       "stackType": "Replace",
-      "stackData": [],
       "latentQueue": [
         "OnCharacterCreateFlag",
         "OnEnterBattleFlag",

@@ -97,7 +97,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1926104538\">Kafka_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]",
-      "stackData": [],
       "latentQueue": [
         "Kafka_Listen_Rank1"
       ],
@@ -110,6 +109,9 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-748126065\">M_Kafka_Passive</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
+      ],
+      "latentQueue": [
+        "Kafka_Listen_Rank1"
       ],
       "execute": [
         {
@@ -281,10 +283,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Kafka_Listen_Rank1"
       ]
     },
     {
@@ -768,6 +766,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__42937918\">Kafka_Passive_DotSpecialMark_Listen</a>",
+      "latentQueue": [
+        "Kafka_Listen_Rank1",
+        "Kafka_Listen_Rank2",
+        "Kafka_Listen_Rank6"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -884,12 +887,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Kafka_Listen_Rank1",
-        "Kafka_Listen_Rank2",
-        "Kafka_Listen_Rank6"
       ]
     }
   ],

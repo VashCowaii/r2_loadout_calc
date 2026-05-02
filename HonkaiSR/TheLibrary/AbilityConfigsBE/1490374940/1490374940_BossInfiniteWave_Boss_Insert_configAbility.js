@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-842805226\">BossInfiniteWave_DamageTaken_Modifier</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -41,13 +45,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Vulnerability"
+      ]
     }
   ],
   "targetObjectData": {

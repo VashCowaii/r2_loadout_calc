@@ -53,9 +53,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

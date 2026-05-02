@@ -10,13 +10,16 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1076207439\">Herta_Passive_Flag</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1076207439\">Herta_Passive_Flag</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-256958111\">Herta_Passive_ATK</a>",
+      "latentQueue": [
+        "Herta_Count_Insert",
+        "Herta_Count_ATK",
+        "MAvatar_Herta_Passive_CoolDown"
+      ],
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Anyone]",
@@ -114,18 +117,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Herta_Count_Insert",
-        "Herta_Count_ATK",
-        "MAvatar_Herta_Passive_CoolDown"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-677386583\">Herta_Passive_Charge</a>",
       "stackType": "ReplaceByCaster",
+      "stackLimit": 4,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -142,9 +141,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 4,
-      "addStacksPerTrigger": 1
+      ]
     }
   ],
   "references": []

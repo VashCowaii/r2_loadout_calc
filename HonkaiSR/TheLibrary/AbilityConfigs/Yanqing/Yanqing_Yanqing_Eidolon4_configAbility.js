@@ -17,6 +17,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1096242682\">Yanqing_Eidolon4_IcePenetrate</a>[<span class=\"descriptionNumberColor\">Searing Sting</span>]",
+      "description": "Ice RES PEN +<span class=\"descriptionNumberColor\">MDF_IcePenetrate</span>.",
+      "type": "Buff",
+      "effectName": "Ice RES PEN",
+      "statusName": "Searing Sting",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -39,11 +43,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Ice RES PEN +<span class=\"descriptionNumberColor\">MDF_IcePenetrate</span>.",
-      "type": "Buff",
-      "effectName": "Ice RES PEN",
-      "statusName": "Searing Sting"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -159,9 +159,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

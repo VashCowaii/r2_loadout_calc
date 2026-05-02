@@ -229,6 +229,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1777994335\">Enemy_W2_Argenti_IF_EX02_UltraState</a>[<span class=\"descriptionNumberColor\">Medal of Elegance</span>]",
+          "description": "Cannot be selected before the next action or before all summons have been defeated. Use Undeniable Fate the next time this unit takes action.",
+          "type": "Buff",
+          "effectName": "Medal of Elegance",
+          "statusName": "Medal of Elegance",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -325,11 +329,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Cannot be selected before the next action or before all summons have been defeated. Use Undeniable Fate the next time this unit takes action.",
-          "type": "Buff",
-          "effectName": "Medal of Elegance",
-          "statusName": "Medal of Elegance"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -337,6 +337,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span> and increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue2</span>.",
+          "type": "Buff",
+          "effectName": "Golden Harvest",
+          "statusName": "Golden Harvest",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -492,15 +496,15 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span> and increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue2</span>.",
-          "type": "Buff",
-          "effectName": "Golden Harvest",
-          "statusName": "Golden Harvest"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__529665307\">Enemy_W2_Argenti_IF_EX02_DefendState</a>[<span class=\"descriptionNumberColor\">Chivalric Wrath</span>]",
+          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+          "type": "Buff",
+          "effectName": "Chivalric Wrath",
+          "statusName": "Chivalric Wrath",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -628,11 +632,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
-          "type": "Buff",
-          "effectName": "Chivalric Wrath",
-          "statusName": "Chivalric Wrath"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -817,9 +817,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1003,9 +1001,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2529,9 +2525,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2546,9 +2540,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2611,9 +2603,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3346,27 +3336,19 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>"
         },
         {
           "name": "Modifier Construction",
@@ -3597,9 +3579,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>"
         }
       ]
     },
@@ -4272,9 +4252,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4404,6 +4382,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__278285473\">Enemy_W2_Argenti_IF_EnterCombatAlert</a>",
+          "latentQueue": [
+            "Monster_IF_InsertCount",
+            "Monster_IF_InsertCameraFlag",
+            "Monster_IF_InsertCount02",
+            "Monster_IF_InsertCameraFlag02"
+          ],
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Anyone]",
@@ -4424,18 +4408,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Monster_IF_InsertCount",
-            "Monster_IF_InsertCameraFlag",
-            "Monster_IF_InsertCount02",
-            "Monster_IF_InsertCameraFlag02"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1109870649\">Enemy_W2_Argenti_IF_PowerCollecterController</a>",
+          "latentQueue": [
+            "Monster_IF_InsertCount",
+            "Monster_IF_InsertCameraFlag",
+            "Monster_IF_InsertCount02",
+            "Monster_IF_InsertCameraFlag02"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -4499,18 +4482,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Monster_IF_InsertCount",
-            "Monster_IF_InsertCameraFlag",
-            "Monster_IF_InsertCount02",
-            "Monster_IF_InsertCameraFlag02"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2120668767\">Enemy_W2_Argenti_IF_AIController</a>",
+          "latentQueue": [
+            "Monster_IF_InsertCount",
+            "Monster_IF_InsertCameraFlag",
+            "Monster_IF_InsertCount02",
+            "Monster_IF_InsertCameraFlag02"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4642,13 +4624,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Monster_IF_InsertCount",
-            "Monster_IF_InsertCameraFlag",
-            "Monster_IF_InsertCount02",
-            "Monster_IF_InsertCameraFlag02"
           ]
         }
       ]
@@ -6641,9 +6616,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Being Attacked End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6743,9 +6716,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6955,6 +6926,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2064984483\">Monster_W2_GS_Argenti_SpecialVictory_LockHP</a>",
+          "latentQueue": [
+            "AIFlag",
+            "Phase_Flag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7031,11 +7006,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag",
-            "Phase_Flag"
           ]
         }
       ]
@@ -7262,9 +7232,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7372,9 +7340,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7612,14 +7578,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1784319990\">Enemy_W2_Argenti_IF_EX_EnemyCount_Sub</a>[<span class=\"descriptionNumberColor\">Stellar Aegis</span>]",
           "stackType": "Replace",
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddRatio</span> and reduces DMG received by <span class=\"descriptionNumberColor\">MDF_TokenDMGRduceRatio</span>.",
+          "type": "Buff",
+          "statusName": "Stellar Aegis",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7666,17 +7635,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddRatio</span> and reduces DMG received by <span class=\"descriptionNumberColor\">MDF_TokenDMGRduceRatio</span>.",
-          "type": "Buff",
-          "statusName": "Stellar Aegis",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1397396521\">Enemy_W2_Argenti_IF_EX_EnemyCount</a>",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_ShowValue1",
+            "MDF_ShowValue2"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7801,18 +7769,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ShowValue1",
-            "MDF_ShowValue2"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__806413908\">Enemy_W2_Argenti_IF_EX_ExtraEnhanceController</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__806413908\">Enemy_W2_Argenti_IF_EX_ExtraEnhanceController</a>"
         },
         {
           "name": "Modifier Construction",
@@ -8182,9 +8143,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8193,6 +8152,11 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Soul Enhancement",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -8234,17 +8198,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Soul Enhancement",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1768656268\">Enemy_W2_Argenti_IF_EX_PowerUpDark</a>[<span class=\"descriptionNumberColor\">Regain Enhancement</span>]",
           "stackType": "Replace",
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Regain Enhancement",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -8292,24 +8256,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Regain Enhancement",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1645398218\">Enemy_W2_Argenti_IF_EX_PowerAddMax</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1645398218\">Enemy_W2_Argenti_IF_EX_PowerAddMax</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-169910900\">Enemy_W2_Argenti_IF_EX_PowerAdd</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-169910900\">Enemy_W2_Argenti_IF_EX_PowerAdd</a>"
         },
         {
           "name": "Modifier Construction",
@@ -8321,6 +8276,20 @@ const compositeAbilityObject = {
             "KeepOnDeathrattle",
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_LightPowerUp",
+            "MDF_DamageAddedRatio"
+          ],
+          "latentQueue": [
+            "MDF_IF_BOSS_PowerFlag01",
+            "MDF_IF_BOSS_PowerFlag02",
+            "MDF_IF_BOSS_PowerFlag03",
+            "MDF_IF_BOSS_PowerFlag04"
+          ],
+          "description": "The knight's prayers bid the liberation of souls. Abilities have been enhanced.",
+          "type": "Buff",
+          "effectName": "Soulfreed",
+          "statusName": "Soulfreed",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -8496,21 +8465,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_LightPowerUp",
-            "MDF_DamageAddedRatio"
-          ],
-          "latentQueue": [
-            "MDF_IF_BOSS_PowerFlag01",
-            "MDF_IF_BOSS_PowerFlag02",
-            "MDF_IF_BOSS_PowerFlag03",
-            "MDF_IF_BOSS_PowerFlag04"
-          ],
-          "description": "The knight's prayers bid the liberation of souls. Abilities have been enhanced.",
-          "type": "Buff",
-          "effectName": "Soulfreed",
-          "statusName": "Soulfreed"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8528,9 +8483,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-274903726\">Monster_W2_Argenti_IF_AccumulatePower</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-274903726\">Monster_W2_Argenti_IF_AccumulatePower</a>"
         },
         {
           "name": "Modifier Construction",
@@ -8619,9 +8572,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8690,9 +8641,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8918,9 +8867,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9341,14 +9288,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1546767870\">Monster_W2_Argenti_IF_FlowerPower</a>[<span class=\"descriptionNumberColor\">Wreath</span>]",
           "stackType": "Replace",
+          "description": "Every stack additionally adds one instance of DMG dealt for Undeniable Fate.",
+          "type": "Buff",
+          "effectName": "Wreath",
+          "statusName": "Wreath",
+          "stackLimit": 4,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -9388,13 +9339,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Every stack additionally adds one instance of DMG dealt for Undeniable Fate.",
-          "type": "Buff",
-          "effectName": "Wreath",
-          "statusName": "Wreath",
-          "stackLimit": 4,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9433,6 +9378,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1334735657\">Enemy_W2_Argenti_IF_Boss_Enhance</a>",
+          "latentQueue": [
+            "Monster_IF_InsertCount",
+            "Monster_IF_InsertCameraFlag",
+            "Monster_IF_InsertCount02",
+            "Monster_IF_InsertCameraFlag02"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -9492,13 +9443,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Monster_IF_InsertCount",
-            "Monster_IF_InsertCameraFlag",
-            "Monster_IF_InsertCount02",
-            "Monster_IF_InsertCameraFlag02"
           ]
         },
         {
@@ -9855,6 +9799,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]",
           "stackType": "Refresh",
+          "description": "The knight's prayers completely ascended the soul. This is regarded as equal to \"Soulfreed.\"",
+          "type": "Buff",
+          "effectName": "Soul Ascension",
+          "statusName": "Soul Ascension",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -9862,18 +9810,16 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The knight's prayers completely ascended the soul. This is regarded as equal to \"Soulfreed.\"",
-          "type": "Buff",
-          "effectName": "Soul Ascension",
-          "statusName": "Soul Ascension"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]",
           "stackType": "Refresh",
+          "description": "The knight's prayers bid the liberation of souls. Abilities have been enhanced.",
+          "type": "Buff",
+          "effectName": "Soulfreed",
+          "statusName": "Soulfreed",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -9881,13 +9827,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The knight's prayers bid the liberation of souls. Abilities have been enhanced.",
-          "type": "Buff",
-          "effectName": "Soulfreed",
-          "statusName": "Soulfreed"
+          ]
         }
       ],
       "references": []

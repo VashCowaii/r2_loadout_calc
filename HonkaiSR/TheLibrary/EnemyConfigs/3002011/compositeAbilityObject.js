@@ -742,9 +742,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },

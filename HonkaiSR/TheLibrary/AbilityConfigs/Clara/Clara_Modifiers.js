@@ -17,6 +17,12 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-796199138\">Klara_Passive_DamageReduce</a>[<span class=\"descriptionNumberColor\">Guardian</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Guardian",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -39,14 +45,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Guardian"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -55,6 +54,9 @@ const configAbility = {
         "ListenBattleEventSkill",
         "RemoveWhenCasterDead"
       ],
+      "description": "The target is Marked by Svarog.",
+      "type": "Other",
+      "statusName": "Mark of Counter",
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: Start",
@@ -113,17 +115,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "The target is Marked by Svarog.",
-      "type": "Other",
-      "statusName": "Mark of Counter"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-459252663\">Klara_TechniqueUsage_AggroUP</a>[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Higher chance to be attacked.",
+      "type": "Buff",
+      "statusName": "A Small Price for Victory",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -146,14 +149,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Higher chance to be attacked.",
-      "type": "Buff",
-      "statusName": "A Small Price for Victory"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -184,9 +180,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

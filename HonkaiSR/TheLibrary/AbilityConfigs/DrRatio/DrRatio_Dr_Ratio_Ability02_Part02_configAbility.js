@@ -458,6 +458,18 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1051491293\">Dr_Ratio_Slow</a>[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": [
+        "_Dr_RatioAttack",
+        "_Dr_Ratio_00_EnergyBar_Flag",
+        "_SkillTree_SkillFlag"
+      ],
+      "description": "Effect RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Effect RES Reduction",
+      "statusName": "Effect RES Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -482,19 +494,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "_Dr_RatioAttack",
-        "_Dr_Ratio_00_EnergyBar_Flag",
-        "_SkillTree_SkillFlag"
-      ],
-      "description": "Effect RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Effect RES Reduction",
-      "statusName": "Effect RES Reduction"
+      ]
     }
   ],
   "targetObjectData": {

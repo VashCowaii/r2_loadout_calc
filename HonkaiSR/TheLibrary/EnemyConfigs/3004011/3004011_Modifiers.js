@@ -44,9 +44,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -80,9 +78,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -132,14 +128,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__919092314\">Monster_W3_FigureBoss_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUP</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -173,14 +172,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUP</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -394,13 +386,25 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
+      "stackData": [
+        "MDF_BreakDelayRatio",
+        "MDF_ChosenOneSpeedUp",
+        "MDF_ExploreDamagePercentage",
+        "MDF_ExploreDelayRatio",
+        "MDF_ExploreDamageUpRatio"
+      ],
+      "latentQueue": [
+        "BreakEndFlag"
+      ],
+      "description": "An extra action can be taken every turn and SPD increases slightly.",
+      "type": "Buff",
+      "effectName": "Impresario",
+      "statusName": "Impresario",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -925,21 +929,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_BreakDelayRatio",
-        "MDF_ChosenOneSpeedUp",
-        "MDF_ExploreDamagePercentage",
-        "MDF_ExploreDelayRatio",
-        "MDF_ExploreDamageUpRatio"
-      ],
-      "latentQueue": [
-        "BreakEndFlag"
-      ],
-      "description": "An extra action can be taken every turn and SPD increases slightly.",
-      "type": "Buff",
-      "effectName": "Impresario",
-      "statusName": "Impresario"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1095,21 +1085,24 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-900182182\">Monster_W3_FigureBoss_Standard_Basic</a>[<span class=\"descriptionNumberColor\">\"Puppets of the Order\"</span>]",
+      "description": "Puppets controlled by Order. Can become Impresario.",
+      "type": "Other",
+      "effectName": "\"Puppets of the Order\"",
+      "statusName": "\"Puppets of the Order\"",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Puppets controlled by Order. Can become Impresario.",
-      "type": "Other",
-      "effectName": "\"Puppets of the Order\"",
-      "statusName": "\"Puppets of the Order\""
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-51027530\">Monster_W3_FigureBoss_Standard_Part2Break</a>",
+      "latentQueue": [
+        "BreakEndFlag",
+        "InsertCheck",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -1123,12 +1116,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "BreakEndFlag",
-        "InsertCheck",
-        "AIFlag"
       ]
     },
     {
@@ -1138,14 +1125,13 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "latentQueue": [
+        "BreakEndFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "BreakEndFlag"
       ]
     },
     {
@@ -1557,9 +1543,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1571,9 +1555,7 @@ const configAbility = {
         {
           "eventTrigger": "Exit View-Mode [Anyone]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2093,13 +2075,16 @@ const configAbility = {
           ],
           "priorityLevel": -91
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-843842211\">W3_FigureBoss_BattleScore2</a>",
+      "latentQueue": [
+        "BreakEndFlag",
+        "InsertCheck",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2146,12 +2131,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "BreakEndFlag",
-        "InsertCheck",
-        "AIFlag"
       ]
     },
     {
@@ -2326,9 +2305,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2378,9 +2355,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2483,13 +2458,25 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
+      "stackData": [
+        "MDF_BreakDelayRatio",
+        "MDF_ChosenOneSpeedUp",
+        "MDF_ExploreDamagePercentage",
+        "MDF_ExploreDelayRatio",
+        "MDF_ExploreDamageUpRatio"
+      ],
+      "latentQueue": [
+        "BreakEndFlag"
+      ],
+      "description": "An extra action can be taken every turn with a slight increase in SPD.",
+      "type": "Buff",
+      "effectName": "Impresario",
+      "statusName": "Impresario",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2929,21 +2916,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_BreakDelayRatio",
-        "MDF_ChosenOneSpeedUp",
-        "MDF_ExploreDamagePercentage",
-        "MDF_ExploreDelayRatio",
-        "MDF_ExploreDamageUpRatio"
-      ],
-      "latentQueue": [
-        "BreakEndFlag"
-      ],
-      "description": "An extra action can be taken every turn with a slight increase in SPD.",
-      "type": "Buff",
-      "effectName": "Impresario",
-      "statusName": "Impresario"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3098,21 +3071,24 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1336534629\">Enemy_W3_DollElite_Commnon_Basic</a>[<span class=\"descriptionNumberColor\">\"Puppets of the Order\"</span>]",
+      "description": "Puppets controlled by Order. Can become Impresario.",
+      "type": "Other",
+      "effectName": "\"Puppets of the Order\"",
+      "statusName": "\"Puppets of the Order\"",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Puppets controlled by Order. Can become Impresario.",
-      "type": "Other",
-      "effectName": "\"Puppets of the Order\"",
-      "statusName": "\"Puppets of the Order\""
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1198317781\">Enemy_W3_DollElite_Commnon_Part2Break</a>",
+      "latentQueue": [
+        "BreakEndFlag",
+        "InsertCheck",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -3126,12 +3102,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "BreakEndFlag",
-        "InsertCheck",
-        "AIFlag"
       ]
     },
     {
@@ -3140,6 +3110,9 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
+      ],
+      "latentQueue": [
+        "BreakEndFlag"
       ],
       "execute": [
         {
@@ -3170,10 +3143,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "BreakEndFlag"
       ]
     },
     {
@@ -3489,9 +3458,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3503,9 +3470,7 @@ const configAbility = {
         {
           "eventTrigger": "Exit View-Mode [Anyone]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4036,9 +4001,7 @@ const configAbility = {
           ],
           "priorityLevel": -91
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

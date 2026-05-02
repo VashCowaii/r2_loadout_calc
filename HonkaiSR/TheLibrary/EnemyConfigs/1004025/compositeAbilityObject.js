@@ -271,9 +271,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -707,6 +705,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-691800003\">Monster_W1_Gepard_IF_03_Toast</a>",
+          "latentQueue": [
+            "ReturnAttackCounter",
+            "PhaseFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -732,11 +734,6 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "ReturnAttackCounter",
-            "PhaseFlag"
           ]
         }
       ]
@@ -1936,9 +1933,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2082,6 +2077,11 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__513595051\">Enemy_W1_Gepard_IF_03_ListenSelfBreak</a>",
+          "latentQueue": [
+            "AIFlag",
+            "PhaseFlag",
+            "isMainAttack"
+          ],
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -2177,17 +2177,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag",
-            "PhaseFlag",
-            "isMainAttack"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1123298870\">Enemy_W1_Gepard_IF_03_Command</a>",
+          "latentQueue": [
+            "AIFlag",
+            "PhaseFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2219,11 +2217,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag",
-            "PhaseFlag"
           ]
         }
       ]
@@ -2869,9 +2862,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2912,9 +2903,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3024,6 +3013,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1419162291\">Enemy_W1_Gepard_ListenSelfBreak</a>",
+          "latentQueue": [
+            "Gepard_SummonCounter",
+            "Gepard_AICounter"
+          ],
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -3040,16 +3033,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Gepard_SummonCounter",
-            "Gepard_AICounter"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1151984120\">Enemy_W1_Gepard_Command</a>",
+          "latentQueue": [
+            "Gepard_SummonCounter",
+            "Gepard_AICounter"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3081,11 +3073,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Gepard_SummonCounter",
-            "Gepard_AICounter"
           ]
         }
       ]
@@ -4612,9 +4599,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4846,9 +4831,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -45
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4866,6 +4849,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__514811508\">Enemy_W1_Gepard_IF_03_Part2EnhanceInti</a>",
           "stackType": "Refresh",
+          "latentQueue": [
+            "AIFlag",
+            "PhaseFlag",
+            "isMainAttack"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4914,12 +4902,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag",
-            "PhaseFlag",
-            "isMainAttack"
           ]
         },
         {
@@ -5275,15 +5257,19 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Pre-Death [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1559306113\">Enemy_W1_Gepard_IF_03_WeaknessProtect</a>",
           "modifierFlags": [
             "MuteBreak"
+          ],
+          "latentQueue": [
+            "isMainAttack",
+            "PhaseFlag",
+            "AIFlag",
+            "Bronya_LimboFlag"
           ],
           "execute": [
             {
@@ -5302,19 +5288,26 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "isMainAttack",
-            "PhaseFlag",
-            "AIFlag",
-            "Bronya_LimboFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_SpeedUpPerLayer",
+            "MDF_AttackUpPerLayer"
+          ],
+          "latentQueue": [
+            "isMainAttack",
+            "PhaseFlag",
+            "AIFlag"
+          ],
+          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpPerLayer</span> and ATK by <span class=\"descriptionNumberColor\">MDF_AttackUpPerLayer</span>. All stacks are lost when Weakness is broken.",
+          "type": "Buff",
+          "effectName": "Enhance",
+          "statusName": "Will of Steel",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -5441,26 +5434,22 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedUpPerLayer",
-            "MDF_AttackUpPerLayer"
-          ],
-          "latentQueue": [
-            "isMainAttack",
-            "PhaseFlag",
-            "AIFlag"
-          ],
-          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpPerLayer</span> and ATK by <span class=\"descriptionNumberColor\">MDF_AttackUpPerLayer</span>. All stacks are lost when Weakness is broken.",
-          "type": "Buff",
-          "effectName": "Enhance",
-          "statusName": "Will of Steel",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1430608043\">Enemy_W1_Gepard_IF_03_Enhance</a>[<span class=\"descriptionNumberColor\">Thick and Thin</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_SpeedUp"
+          ],
+          "latentQueue": [
+            "PhaseFlag"
+          ],
+          "description": "Greatly enhances this unit, increasing SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>. When in this state, Frigid Waterfall has a slight chance to Freeze the attacked target.",
+          "type": "Buff",
+          "effectName": "Enhance",
+          "statusName": "Thick and Thin",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5483,17 +5472,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedUp"
-          ],
-          "latentQueue": [
-            "PhaseFlag"
-          ],
-          "description": "Greatly enhances this unit, increasing SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>. When in this state, Frigid Waterfall has a slight chance to Freeze the attacked target.",
-          "type": "Buff",
-          "effectName": "Enhance",
-          "statusName": "Thick and Thin"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5503,6 +5482,13 @@ const compositeAbilityObject = {
             "DisableAction",
             "MuteSpeed"
           ],
+          "latentQueue": [
+            "Gepard_LimboFlag"
+          ],
+          "description": "Enters Downed state, waiting for recovery.",
+          "type": "Other",
+          "effectName": "Downed",
+          "statusName": "Valor Via Setbacks",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5513,15 +5499,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Gepard_LimboFlag"
-          ],
-          "description": "Enters Downed state, waiting for recovery.",
-          "type": "Other",
-          "effectName": "Downed",
-          "statusName": "Valor Via Setbacks"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5637,6 +5615,7 @@ const compositeAbilityObject = {
             "BlockDamageExcludeDot",
             "MuteBreak"
           ],
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5680,8 +5659,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5689,17 +5667,15 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "TeamAction"
           ],
+          "description": "Silvermane Guards will focus their attacks on this target.",
+          "type": "Debuff",
+          "effectName": "Lock On",
+          "statusName": "Aggravate",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Silvermane Guards will focus their attacks on this target.",
-          "type": "Debuff",
-          "effectName": "Lock On",
-          "statusName": "Aggravate"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5739,9 +5715,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5797,9 +5771,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5910,9 +5882,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5947,13 +5917,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1932026203\">Monster_W1_Gepard_RemoveOneMore</a>",
+          "latentQueue": [
+            "Gepard_SummonCounter",
+            "Gepard_AICounter"
+          ],
           "execute": [
             {
               "eventTrigger": "Action End [Owner]",
@@ -6038,11 +6010,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Gepard_SummonCounter",
-            "Gepard_AICounter"
           ]
         },
         {
@@ -6054,6 +6021,11 @@ const compositeAbilityObject = {
             "BlockDamageExcludeDot",
             "MuteBreak"
           ],
+          "useEntitySnapshot": true,
+          "description": "Nullifies all DMG received except for DoT until after being attacked.",
+          "type": "Buff",
+          "effectName": "Barrier",
+          "statusName": "Barrier",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -6097,14 +6069,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Nullifies all DMG received except for DoT until after being attacked.",
-          "type": "Buff",
-          "effectName": "Barrier",
-          "statusName": "Barrier"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6112,6 +6077,14 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "Shield"
+          ],
+          "stackData": [
+            "MDF_ShieldPercentage",
+            "MDF_MaxHPHitPercentage1",
+            "MDF_MaxHPHitPercentage2"
+          ],
+          "latentQueue": [
+            "UsedShieldFlag"
           ],
           "execute": [
             {
@@ -6449,20 +6422,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ShieldPercentage",
-            "MDF_MaxHPHitPercentage1",
-            "MDF_MaxHPHitPercentage2"
-          ],
-          "latentQueue": [
-            "UsedShieldFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-243818097\">SPRL_Flag</a>",
-          "stackData": [],
           "latentQueue": [
             "SPRLCount",
             "Strike_SPRLCount"
@@ -6473,6 +6437,9 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-508706525\">Gepard_RL_Break</a>",
           "modifierFlags": [
             "DisableAction"
+          ],
+          "latentQueue": [
+            "UsedShieldFlag"
           ],
           "execute": [
             {
@@ -6496,16 +6463,11 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "UsedShieldFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1185722758\">Gepard_RL_ShieldIcon2</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]",
-          "stackData": [],
           "latentQueue": [
             "UsedShieldFlag"
           ],
@@ -6517,7 +6479,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1788931056\">Gepard_RL_ShieldIcon</a>[<span class=\"descriptionNumberColor\">Collective Shield</span>]",
-          "stackData": [],
           "latentQueue": [
             "UsedShieldFlag"
           ],
@@ -6532,6 +6493,9 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "Shield"
+          ],
+          "latentQueue": [
+            "UsedShieldFlag"
           ],
           "execute": [
             {
@@ -6551,10 +6515,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "UsedShieldFlag"
           ]
         },
         {
@@ -6563,6 +6523,14 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "Shield"
+          ],
+          "stackData": [
+            "MDF_ShieldPercentage",
+            "MDF_MaxHPHitPercentage1",
+            "MDF_MaxHPHitPercentage2"
+          ],
+          "latentQueue": [
+            "UsedShieldFlag"
           ],
           "execute": [
             {
@@ -6865,14 +6833,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ShieldPercentage",
-            "MDF_MaxHPHitPercentage1",
-            "MDF_MaxHPHitPercentage2"
-          ],
-          "latentQueue": [
-            "UsedShieldFlag"
           ]
         },
         {
@@ -6881,6 +6841,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak"
           ],
+          "latentQueue": [
+            "UsedShieldFlag"
+          ],
+          "description": "Toughness cannot be reduced.",
+          "type": "Other",
+          "effectName": "Toughness Protection",
+          "statusName": "Toughness Protection",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6904,21 +6871,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "UsedShieldFlag"
-          ],
-          "description": "Toughness cannot be reduced.",
-          "type": "Other",
-          "effectName": "Toughness Protection",
-          "statusName": "Toughness Protection"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__979801477\">Monster_Standard_Endurance</a>",
           "modifierFlags": [
             "Endurance"
+          ],
+          "latentQueue": [
+            "Gepard_LimboFlag",
+            "Bronya_LimboFlag",
+            "isMainAttack"
           ],
           "execute": [
             {
@@ -6935,18 +6899,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Gepard_LimboFlag",
-            "Bronya_LimboFlag",
-            "isMainAttack"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__352751855\">Monster_W1_Gepard_RL_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_DamageAddedRatio"
+          ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6980,16 +6946,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageAddedRatio"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6997,6 +6954,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteHitH"
           ],
+          "latentQueue": [
+            "ReturnAttackCounter"
+          ],
+          "description": "Uses a Powerful Counter on the attacker after being attacked.",
+          "type": "Buff",
+          "effectName": "Counter",
+          "statusName": "Counter",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -7112,15 +7076,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "ReturnAttackCounter"
-          ],
-          "description": "Uses a Powerful Counter on the attacker after being attacked.",
-          "type": "Buff",
-          "effectName": "Counter",
-          "statusName": "Counter"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7270,13 +7226,14 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__802362263\">Monster_W1_Gepard_RL_AIWatcher</a>",
+          "latentQueue": [
+            "UsedShieldFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -7291,10 +7248,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "UsedShieldFlag"
           ]
         },
         {
@@ -7303,6 +7256,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "DisableHealHP"
           ],
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -7313,8 +7267,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "duration": 1
+          ]
         }
       ],
       "references": []

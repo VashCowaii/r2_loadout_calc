@@ -22,6 +22,9 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Sundered Paradise",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -47,10 +50,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Sundered Paradise"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -59,6 +59,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1240607258\">MStrongChallengeEX_Talent_StageAbility_PLY_008</a>[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
+      "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Sundered Paradise",
       "execute": [
         {
           "eventTrigger": "Deal Damage End [Owner]: Any",
@@ -231,10 +234,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Sundered Paradise"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -305,9 +305,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

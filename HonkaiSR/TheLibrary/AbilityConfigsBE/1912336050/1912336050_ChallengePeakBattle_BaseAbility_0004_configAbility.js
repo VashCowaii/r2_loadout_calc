@@ -31,6 +31,9 @@ const configAbility = {
         "MuteBreak",
         "STAT_AITargetLowerPriority"
       ],
+      "description": "Will not have HP and Toughness reduced, and increases Effect RES by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0004_ADF_1</span>. When all elite enemy targets are eliminated, this unit will also be eliminated.",
+      "type": "Other",
+      "statusName": "Under Protection",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -86,10 +89,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Will not have HP and Toughness reduced, and increases Effect RES by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0004_ADF_1</span>. When all elite enemy targets are eliminated, this unit will also be eliminated.",
-      "type": "Other",
-      "statusName": "Under Protection"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -267,9 +267,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

@@ -769,7 +769,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1974630244\">Enemy_W3_Dinosaur_01_Ability07_HitTag</a>",
-          "stackData": [],
           "latentQueue": [
             "Monster_W3_Dinosaur_01_Skill07_DeltaTime",
             "EffRandomYaw",
@@ -1809,7 +1808,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1974630244\">Enemy_W3_Dinosaur_01_Ability07_HitTag</a>",
-          "stackData": [],
           "latentQueue": [
             "Monster_W3_Dinosaur_01_Skill07_DeltaTime",
             "EffRandomYaw",
@@ -2352,6 +2350,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "latentQueue": [
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2411,15 +2412,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__207648995\">W3_Dinosaur_01_BattleScore1</a>",
+          "latentQueue": [
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2480,16 +2480,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_MaxLayer"
+          ],
+          "description": "Each stack causes \"Bonepiercing Odium\" to additionally deal DMG 1 time, stacking up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s). Weaken is dispelled when Broken.",
+          "type": "Buff",
+          "effectName": "Scorchbone Inferno",
+          "statusName": "Scorchbone Inferno",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2512,20 +2515,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxLayer"
-          ],
-          "latentQueue": [],
-          "description": "Each stack causes \"Bonepiercing Odium\" to additionally deal DMG 1 time, stacking up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s). Weaken is dispelled when Broken.",
-          "type": "Buff",
-          "effectName": "Scorchbone Inferno",
-          "statusName": "Scorchbone Inferno"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1395319081\">Enemy_W3_Dinosaur_01_Standard_Growth</a>[<span class=\"descriptionNumberColor\">Obscure Blaze</span>]",
           "stackType": "Replace",
+          "description": "Each stack causes Bonepiercing Odium to deal DMG 1 additional time, up to 5 times. This state will be dispelled after being Weakness Broken.",
+          "type": "Buff",
+          "effectName": "Obscure Blaze",
+          "statusName": "Obscure Blaze",
+          "stackLimit": 5,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2548,14 +2548,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Each stack causes Bonepiercing Odium to deal DMG 1 additional time, up to 5 times. This state will be dispelled after being Weakness Broken.",
-          "type": "Buff",
-          "effectName": "Obscure Blaze",
-          "statusName": "Obscure Blaze",
-          "stackLimit": 5
+          ]
         }
       ],
       "references": []

@@ -14,19 +14,18 @@ const configAbility = {
       "modifierFlags": [
         "TeamAction"
       ],
-      "execute": [
-        {
-          "eventTrigger": "When Constructing Modifier"
-        }
-      ],
-      "stackData": [],
       "latentQueue": [
         "Gepard_SummonCounter"
       ],
       "description": "Silvermane Guards will focus their attacks on this target.",
       "type": "Debuff",
       "effectName": "Lock On",
-      "statusName": "Aggravate"
+      "statusName": "Aggravate",
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier"
+        }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -66,9 +65,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -124,9 +121,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -237,9 +232,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -274,13 +267,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1932026203\">Monster_W1_Gepard_RemoveOneMore</a>",
+      "latentQueue": [
+        "Gepard_SummonCounter",
+        "Gepard_AICounter"
+      ],
       "execute": [
         {
           "eventTrigger": "Action End [Owner]",
@@ -365,11 +360,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Gepard_SummonCounter",
-        "Gepard_AICounter"
       ]
     },
     {
@@ -381,6 +371,11 @@ const configAbility = {
         "BlockDamageExcludeDot",
         "MuteBreak"
       ],
+      "useEntitySnapshot": true,
+      "description": "Nullifies all DMG received except for DoT until after being attacked.",
+      "type": "Buff",
+      "effectName": "Barrier",
+      "statusName": "Barrier",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -424,14 +419,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Nullifies all DMG received except for DoT until after being attacked.",
-      "type": "Buff",
-      "effectName": "Barrier",
-      "statusName": "Barrier"
+      ]
     }
   ],
   "references": []

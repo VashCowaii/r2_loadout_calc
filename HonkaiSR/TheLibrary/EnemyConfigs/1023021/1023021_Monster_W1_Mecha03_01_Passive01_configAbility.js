@@ -81,18 +81,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-923896178\">Monster_W1_Mecha03_01_MureHitFly</a>",
       "modifierFlags": [
         "MuteHitFly"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -110,9 +106,7 @@ const configAbility = {
         {
           "eventTrigger": "End Broken State [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

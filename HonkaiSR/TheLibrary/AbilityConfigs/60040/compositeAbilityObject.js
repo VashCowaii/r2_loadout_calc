@@ -144,9 +144,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -164,9 +162,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -225,9 +221,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -274,9 +268,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Energy Change"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -288,9 +280,7 @@ const compositeAbilityObject = {
                 "Show BattleEvent Button"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -628,9 +618,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-2000427421\">MissionBattleEvent60039_CharacterForceVisible</a>",
           "modifierFlags": [
             "STAT_ForceActionable"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {

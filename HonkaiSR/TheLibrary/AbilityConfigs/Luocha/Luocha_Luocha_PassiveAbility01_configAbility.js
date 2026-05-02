@@ -197,6 +197,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-613660626\">Luocha_Passive01_QuickHealthHP</a>",
+      "stackData": [
+        "MDF_HPRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "HP Change [Anyone]",
@@ -477,11 +480,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_HPRatio"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

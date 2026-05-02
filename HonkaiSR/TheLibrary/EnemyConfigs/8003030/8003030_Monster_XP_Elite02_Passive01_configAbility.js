@@ -70,6 +70,17 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__783092667\">Monster_XP_Elite02_DebuffEnhanceEffect</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Missing Description",
+      "type": "Debuff",
+      "stackLimit": 10,
+      "addStacksPerTrigger": {
+        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+        "displayLines": "ModifierStackLayer",
+        "constants": [],
+        "variables": [
+          "ModifierStackLayer"
+        ]
+      },
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -101,18 +112,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Debuff",
-      "stackLimit": 10,
-      "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -547,9 +547,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -598,9 +596,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -664,9 +660,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -678,9 +672,7 @@ const configAbility = {
         {
           "eventTrigger": "When Put in Deathstate Limbo"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

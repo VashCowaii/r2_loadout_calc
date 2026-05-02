@@ -27,6 +27,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__394065750\">LC_20022_Sub2</a>[<span class=\"descriptionNumberColor\">Commemoration</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P1_DamageAddedRatio</span>, up to 4 stacks.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Commemoration",
+          "stackLimit": 4,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -60,13 +66,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P1_DamageAddedRatio</span>, up to 4 stacks.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Commemoration",
-          "stackLimit": 4,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -179,9 +179,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

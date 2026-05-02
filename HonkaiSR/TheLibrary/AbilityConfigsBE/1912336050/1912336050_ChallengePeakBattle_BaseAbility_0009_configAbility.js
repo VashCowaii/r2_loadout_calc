@@ -18,6 +18,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__954434320\">Modifier_ChallengePeakBattle_BaseAbility_0009_02</a>[<span class=\"descriptionNumberColor\">Interference</span>]",
+      "description": "After using an attack, randomly inflicts <span class=\"descriptionNumberColor\">ChallengePeakBattle_0009_ADF_1</span> or <span class=\"descriptionNumberColor\">ChallengePeakBattle_0009_ADF_2</span> action delay on the target.",
+      "type": "Other",
+      "statusName": "Interference",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -62,10 +65,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "After using an attack, randomly inflicts <span class=\"descriptionNumberColor\">ChallengePeakBattle_0009_ADF_1</span> or <span class=\"descriptionNumberColor\">ChallengePeakBattle_0009_ADF_2</span> action delay on the target.",
-      "type": "Other",
-      "statusName": "Interference"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -115,9 +115,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

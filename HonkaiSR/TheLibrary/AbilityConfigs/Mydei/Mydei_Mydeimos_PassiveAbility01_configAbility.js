@@ -141,6 +141,27 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-863542474\">Mydeimos_BPAbility_PreShow</a>",
       "stackType": "ReplaceByCaster",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
+        "skillType": [
+          "Skill"
+        ],
+        "conditions": {
+          "name": "Compare: Variable",
+          "value1": "DV_HPRatioPreshow",
+          "compareType": ">=",
+          "value2": 100
+        },
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": -1
+        }
+      },
       "execute": [
         {
           "eventTrigger": "Update Target Selected(UI) [Owner]",
@@ -219,35 +240,24 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "target": {
-          "name": "Target Name",
-          "target": "{{Modifier Holder}}"
-        },
-        "skillType": [
-          "Skill"
-        ],
-        "conditions": {
-          "name": "Compare: Variable",
-          "value1": "DV_HPRatioPreshow",
-          "compareType": ">=",
-          "value2": 100
-        },
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": -1
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1001366743\">Mydeimos_Passive01Modifier</a>",
       "stackType": "ReplaceByCaster",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1569520574\">Mydeimos_UltraTargetSpecialMark</a>",
+          "aliveOnly": "False",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -932,20 +942,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1569520574\">Mydeimos_UltraTargetSpecialMark</a>",
-          "aliveOnly": "False",
-          "haloStatus": true
         }
       ]
     }

@@ -98,6 +98,9 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
+      "type": "Buff",
+      "statusName": "Causality in Trichotomy",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -120,15 +123,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
-      "type": "Buff",
-      "statusName": "Causality in Trichotomy"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__810472054\">Cyrene_PointB3_Sub2</a>[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]",
       "stackType": "Replace",
+      "description": "Ice RES PEN increases by <span class=\"descriptionNumberColor\">_AddValue</span>.",
+      "type": "Buff",
+      "statusName": "Causality in Trichotomy",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -165,10 +168,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Ice RES PEN increases by <span class=\"descriptionNumberColor\">_AddValue</span>.",
-      "type": "Buff",
-      "statusName": "Causality in Trichotomy"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -256,13 +256,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__619883840\">Cyrene_Passive_Sub</a>[<span class=\"descriptionNumberColor\">Hearts Gather as One</span>]",
+      "stackData": [
+        "MDF_DamageIncrease"
+      ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
+      "type": "Buff",
+      "statusName": "Hearts Gather as One",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -285,14 +289,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageIncrease"
-      ],
-      "latentQueue": [],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
-      "type": "Buff",
-      "statusName": "Hearts Gather as One"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -326,6 +323,30 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1470142416\">Cyrene_Ability03</a>[<span class=\"descriptionNumberColor\">Ripples of Past Reverie</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [],
+      "description": "Basic ATK is replaced with Enhanced Basic ATK, and the Zone effect from the Skill has no duration limit. Increases this unit's and Demiurge's CRIT Rate by <span class=\"descriptionNumberColor\">#Skill03_P3_CritChance</span>.",
+      "type": "Buff",
+      "statusName": "Ripples of Past Reverie",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}+{{Caster's Memosprite}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1765178435\">Cyrene_Ability03_Sub</a>",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_CritChance": {
+              "operator": "Variables[0] (0.5) || RETURN",
+              "displayLines": "0.5",
+              "constants": [],
+              "variables": [
+                0.5
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -421,38 +442,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Basic ATK is replaced with Enhanced Basic ATK, and the Zone effect from the Skill has no duration limit. Increases this unit's and Demiurge's CRIT Rate by <span class=\"descriptionNumberColor\">#Skill03_P3_CritChance</span>.",
-      "type": "Buff",
-      "statusName": "Ripples of Past Reverie",
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}+{{Caster's Memosprite}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1765178435\">Cyrene_Ability03_Sub</a>",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_CritChance": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
-            }
-          }
-        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-556268195\">Cyrene_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_BasicDamagePercentage</span> of the original DMG.",
+      "type": "Buff",
+      "statusName": "Bloom, Elysium of Beyond",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any"
@@ -609,16 +607,41 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_BasicDamagePercentage</span> of the original DMG.",
-      "type": "Buff",
-      "statusName": "Bloom, Elysium of Beyond"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1356425425\">Cyrene_Ability02_Bonus_Main</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "stackData": [
+        "MDF_OriginDamagePercentage"
+      ],
+      "description": "For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_BasicDamagePercentage</span> of the original DMG.",
+      "type": "Buff",
+      "statusName": "Bloom, Elysium of Beyond",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]-{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-556268195\">Cyrene_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
+          "aliveOnly": "True",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_OriginDamagePercentage": {
+              "operator": "Variables[0] (0.24) || RETURN",
+              "displayLines": "0.24",
+              "constants": [],
+              "variables": [
+                0.24
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -786,35 +809,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_OriginDamagePercentage"
-      ],
-      "latentQueue": [],
-      "description": "For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_BasicDamagePercentage</span> of the original DMG.",
-      "type": "Buff",
-      "statusName": "Bloom, Elysium of Beyond",
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]-{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-556268195\">Cyrene_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
-          "aliveOnly": "True",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_OriginDamagePercentage": {
-              "operator": "Variables[0] (0.24) || RETURN",
-              "displayLines": "0.24",
-              "constants": [],
-              "variables": [
-                0.24
-              ]
-            }
-          }
-        }
       ]
     },
     {
@@ -916,6 +910,15 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_SPAdd"
+      ],
+      "latentQueue": [
+        "MDF_FirstTimeMax"
+      ],
+      "description": "When taking action, grants Cyrene \"Recollection.\"",
+      "type": "Other",
+      "statusName": "Future",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -1025,16 +1028,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SPAdd"
-      ],
-      "latentQueue": [
-        "MDF_FirstTimeMax"
-      ],
-      "description": "When taking action, grants Cyrene \"Recollection.\"",
-      "type": "Other",
-      "statusName": "Future"
+      ]
     }
   ],
   "references": []

@@ -38,6 +38,10 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
+      "description": "Cocolia, Mother of Deception's Toughness cannot be reduced while there are enemies on the field.",
+      "type": "Buff",
+      "effectName": "Weakness Protected",
+      "statusName": "Weakness Protected",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -64,11 +68,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Cocolia, Mother of Deception's Toughness cannot be reduced while there are enemies on the field.",
-      "type": "Buff",
-      "effectName": "Weakness Protected",
-      "statusName": "Weakness Protected"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -179,9 +179,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

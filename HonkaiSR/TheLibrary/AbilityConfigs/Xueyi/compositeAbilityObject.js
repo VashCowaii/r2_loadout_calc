@@ -130,9 +130,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -742,9 +740,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1404,15 +1400,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1978430980\">Xueyi_StancePreview</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1938,6 +1930,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__900132102\">Xueyi_AbilityEidolon1_InserteDamageRatio</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "Is_Insert"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1965,12 +1963,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "Is_Insert"
           ]
         },
         {
@@ -2078,6 +2070,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1263094705\">Xueyi_Passive_Trace03</a>[<span class=\"descriptionNumberColor\">Perspicacious Mainframe</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "<span class=\"descriptionNumberColor\">MDF_Tree03Layer</span> overflowing Karma stacks.",
+          "type": "Other",
+          "statusName": "Perspicacious Mainframe",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2104,10 +2099,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "<span class=\"descriptionNumberColor\">MDF_Tree03Layer</span> overflowing Karma stacks.",
-          "type": "Other",
-          "statusName": "Perspicacious Mainframe"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2153,24 +2145,6 @@ const compositeAbilityObject = {
                 }
               ],
               "priorityLevel": -80
-            }
-          ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"1730434775\">Xueyi_CheckBreakDamageAddedRatioChange</a>"
-                    }
-                  ]
-                }
-              ]
             }
           ],
           "modifierFunctions": [
@@ -2251,13 +2225,38 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [],
-          "latentQueue": []
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1730434775\">Xueyi_CheckBreakDamageAddedRatioChange</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__444597683\">Xueyi_BP_Passive01</a>[<span class=\"descriptionNumberColor\">Karma</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PassiveLayer"
+          ],
+          "latentQueue": [
+            "Is_Insert"
+          ],
+          "description": "When \"Karma\" is fully stacked, consume all \"Karma\" stacks and immediately use 1 Follow-Up ATK against enemies.",
+          "type": "Other",
+          "statusName": "Karma",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2349,16 +2348,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PassiveLayer"
-          ],
-          "latentQueue": [
-            "Is_Insert"
-          ],
-          "description": "When \"Karma\" is fully stacked, consume all \"Karma\" stacks and immediately use 1 Follow-Up ATK against enemies.",
-          "type": "Other",
-          "statusName": "Karma"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2846,14 +2836,22 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__674322254\">Xueyi_AbilityEidolon4</a>[<span class=\"descriptionNumberColor\">Break Effect Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_SkillRank04_BreakDamageAttackRatio"
+          ],
+          "latentQueue": [
+            "Is_Ultra"
+          ],
+          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_SkillRank04_BreakDamageAttackRatio</span>.",
+          "type": "Buff",
+          "effectName": "Break Effect Boost",
+          "statusName": "Break Effect Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2876,21 +2874,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SkillRank04_BreakDamageAttackRatio"
-          ],
-          "latentQueue": [
-            "Is_Ultra"
-          ],
-          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_SkillRank04_BreakDamageAttackRatio</span>.",
-          "type": "Buff",
-          "effectName": "Break Effect Boost",
-          "statusName": "Break Effect Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__462393770\">Xueyi_Trace02</a>",
+          "stackData": [
+            "MDF_SkillTree02_AllDamageTypeAddedRatio"
+          ],
+          "latentQueue": [
+            "Is_Ultra"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -2907,12 +2901,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SkillTree02_AllDamageTypeAddedRatio"
-          ],
-          "latentQueue": [
-            "Is_Ultra"
           ]
         },
         {
@@ -2921,6 +2909,9 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "ForceStanceDamage"
+          ],
+          "latentQueue": [
+            "Is_Ultra"
           ],
           "execute": [
             {
@@ -2944,10 +2935,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Is_Ultra"
           ]
         },
         {
@@ -3098,15 +3085,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1316595895\">Xueyi_Passive_OnListenStance</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "latentQueue": [
+            "_Xueyi_Attack"
           ],
           "execute": [
             {
@@ -3283,10 +3271,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_Xueyi_Attack"
           ]
         }
       ],

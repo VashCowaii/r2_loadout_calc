@@ -27,15 +27,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1300974870\">Enemy_W4_Unicorn_01_SummonMark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1300974870\">Enemy_W4_Unicorn_01_SummonMark</a>"
     },
     {
       "name": "Modifier Construction",
@@ -82,9 +78,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -93,6 +87,13 @@ const configAbility = {
         "MuteHitH",
         "STAT_SuperArmor"
       ],
+      "stackData": [
+        "MDF_AllDamageTypeResistance"
+      ],
+      "description": "In this state, DMG taken from attacks is reduced. When action advances, HP will be consumed. Summons \"Mirage Fizzle Kid\" and slightly delays \"Incubation\" action. When \"Incubation\" takes action, all remaining \"Mirage Fizzle Kid\" will be summoned.",
+      "type": "Other",
+      "effectName": "Incubation",
+      "statusName": "Breeding Frenzy",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -214,15 +215,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AllDamageTypeResistance"
-      ],
-      "latentQueue": [],
-      "description": "In this state, DMG taken from attacks is reduced. When action advances, HP will be consumed. Summons \"Mirage Fizzle Kid\" and slightly delays \"Incubation\" action. When \"Incubation\" takes action, all remaining \"Mirage Fizzle Kid\" will be summoned.",
-      "type": "Other",
-      "effectName": "Incubation",
-      "statusName": "Breeding Frenzy"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -232,6 +225,13 @@ const configAbility = {
         "BlockDamageExcludeDot",
         "MuteBreak"
       ],
+      "latentQueue": [
+        "AIFlag"
+      ],
+      "description": "Immune to all DMG except DoTs. This status is dispelled after being attacked.",
+      "type": "Buff",
+      "effectName": "Barrier",
+      "statusName": "Maelstrom's Eye",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -275,19 +275,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
-      ],
-      "description": "Immune to all DMG except DoTs. This status is dispelled after being attacked.",
-      "type": "Buff",
-      "effectName": "Barrier",
-      "statusName": "Maelstrom's Eye"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1300638915\">Enemy_W4_Unicorn_01_SummonMonsterWeak</a>[<span class=\"descriptionNumberColor\">Weakling</span>]",
+      "stackData": [
+        "MDF_InitHP",
+        "MDF_DefenceAddedRatio"
+      ],
+      "description": "Due to premature hatching, decreases DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>.",
+      "type": "Debuff",
+      "effectName": "Weakened",
+      "statusName": "Weakling",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -330,16 +330,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_InitHP",
-        "MDF_DefenceAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "Due to premature hatching, decreases DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>.",
-      "type": "Debuff",
-      "effectName": "Weakened",
-      "statusName": "Weakling"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -347,6 +338,13 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
+      "latentQueue": [
+        "AIFlag"
+      ],
+      "description": "In this state, \"Cyclonic Swarm Mother's\" Toughness cannot be reduced. \"Cyclonic Swarm Mother\" will use \"Rain Is Born to Fall\". Eliminate all \"Mirage Fizzle Kids\" to dispel this state.",
+      "type": "Other",
+      "effectName": "Enhance",
+      "statusName": "Fetal Movement of the Ocean",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -484,15 +482,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
-      ],
-      "description": "In this state, \"Cyclonic Swarm Mother's\" Toughness cannot be reduced. \"Cyclonic Swarm Mother\" will use \"Rain Is Born to Fall\". Eliminate all \"Mirage Fizzle Kids\" to dispel this state.",
-      "type": "Other",
-      "effectName": "Enhance",
-      "statusName": "Fetal Movement of the Ocean"
+      ]
     }
   ],
   "references": []

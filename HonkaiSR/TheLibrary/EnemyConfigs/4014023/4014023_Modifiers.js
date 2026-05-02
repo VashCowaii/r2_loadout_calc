@@ -66,9 +66,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -112,21 +110,21 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-191666641\">Monster_W4_Hearse_FullPhase1</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-191666641\">Monster_W4_Hearse_FullPhase1</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-516776989\">Monster_W4_Hearse_ForceAutoLock</a>",
       "modifierFlags": [
         "TauntForAutoLock"
+      ],
+      "latentQueue": [
+        "Tutorial_Flag",
+        "MDF_KillByHearse"
       ],
       "execute": [
         {
@@ -148,11 +146,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Tutorial_Flag",
-        "MDF_KillByHearse"
       ]
     },
     {
@@ -229,9 +222,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -242,9 +233,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1663613862\">Monster_W4_Hearse_BattleScore1Count</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1663613862\">Monster_W4_Hearse_BattleScore1Count</a>"
     },
     {
       "name": "Modifier Construction",
@@ -274,9 +263,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -327,6 +314,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1169900751\">Monster_W4_Hearse_SetSpeed</a>",
+      "stackData": [
+        "MDF_Speed"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -359,11 +349,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Speed"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -387,9 +373,7 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -398,9 +382,7 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -418,9 +400,7 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -432,9 +412,7 @@ const configAbility = {
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -443,9 +421,7 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -539,9 +515,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -558,9 +532,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__2101563151\">Monster_W4_Hearse_Ability04_Mark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__2101563151\">Monster_W4_Hearse_Ability04_Mark</a>"
     },
     {
       "name": "Modifier Construction",
@@ -569,14 +541,11 @@ const configAbility = {
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1178549218\">Monster_W4_Hearse_Ability01_Mark</a>",
-      "stackData": [],
       "latentQueue": [
         "Tutorial_Flag",
         "MDF_KillByHearse"
@@ -895,9 +864,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -905,6 +872,14 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_DamageTakenUpRatio",
+        "MDF_ConfineChance"
+      ],
+      "description": "Increases received damage by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span>. When receiving attacks, there is a chance to be inflicted with Imprisonment. Defeat the corresponding \"Conquer or Be Conquered\" to dispel this effect.",
+      "type": "Other",
+      "effectName": "Drowning in Terror",
+      "statusName": "Drowning in Terror",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -963,16 +938,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageTakenUpRatio",
-        "MDF_ConfineChance"
-      ],
-      "latentQueue": [],
-      "description": "Increases received damage by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span>. When receiving attacks, there is a chance to be inflicted with Imprisonment. Defeat the corresponding \"Conquer or Be Conquered\" to dispel this effect.",
-      "type": "Other",
-      "effectName": "Drowning in Terror",
-      "statusName": "Drowning in Terror"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -980,6 +946,13 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_DamageTakenUpRatio"
+      ],
+      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span>. This effect can be dispelled by defeating the \"Conquer or Be Conquered\" corresponding to this unit.",
+      "type": "Other",
+      "effectName": "Fear",
+      "statusName": "Strife-Granted Fear",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1005,21 +978,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageTakenUpRatio"
-      ],
-      "latentQueue": [],
-      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span>. This effect can be dispelled by defeating the \"Conquer or Be Conquered\" corresponding to this unit.",
-      "type": "Other",
-      "effectName": "Fear",
-      "statusName": "Strife-Granted Fear"
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-689985018\">Monster_W4_Hearse_ActionBarHint</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-689985018\">Monster_W4_Hearse_ActionBarHint</a>"
     },
     {
       "name": "Modifier Construction",
@@ -1602,9 +1565,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1623,14 +1584,20 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1275245570\">Monster_W4_Hearse_InChangePhase</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1275245570\">Monster_W4_Hearse_InChangePhase</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__985676222\">Monster_W4_Hearse_Enhance</a>[<span class=\"descriptionNumberColor\">Strife-Granted Valiance</span>]",
       "stackType": "Replace",
+      "latentQueue": [
+        "MDF_KillByHearse"
+      ],
+      "description": "Each stack increases DMG dealt for the next attack.",
+      "type": "Buff",
+      "effectName": "Valiance",
+      "statusName": "Strife-Granted Valiance",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1643,16 +1610,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_KillByHearse"
-      ],
-      "description": "Each stack increases DMG dealt for the next attack.",
-      "type": "Buff",
-      "effectName": "Valiance",
-      "statusName": "Strife-Granted Valiance",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",

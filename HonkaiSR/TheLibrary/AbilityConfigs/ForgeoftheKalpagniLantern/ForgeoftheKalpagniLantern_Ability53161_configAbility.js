@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1101990991\">Relic_316_Sub</a>[<span class=\"descriptionNumberColor\">Forge of the Kalpagni Lantern</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Break Effect increases by <span class=\"descriptionNumberColor\">#SkillRelic_316_2_P2_BreakDamageAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "Break Effect Boost",
+      "statusName": "Forge of the Kalpagni Lantern",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,11 +44,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Break Effect increases by <span class=\"descriptionNumberColor\">#SkillRelic_316_2_P2_BreakDamageAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "Break Effect Boost",
-      "statusName": "Forge of the Kalpagni Lantern"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -110,9 +110,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

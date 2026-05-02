@@ -187,6 +187,16 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__815099001\">Enemy_W5_Magical_DeathRattle_Sun</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "Deathrattle"
+          ],
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "CRIT DMG Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -209,17 +219,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "Deathrattle"
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "CRIT DMG Boost"
+          ]
         }
       ]
     },
@@ -402,6 +402,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-813387797\">Enemy_W5_Magical_DeathRattle_Rain</a>[<span class=\"descriptionNumberColor\">SPD Reduction</span>]",
           "stackType": "Replace",
+          "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "SPD Reduction",
+          "statusName": "SPD Reduction",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -424,11 +428,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "SPD Reduction",
-          "statusName": "SPD Reduction"
+          ]
         }
       ]
     },
@@ -686,9 +686,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -756,9 +754,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": 100
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -792,6 +788,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "description": "When receiving a killing blow, uses \"First Kiss ❤ Sunny Skies.\" At the start of the turn, enters the \"Rainy Day\" state.",
+          "type": "Other",
+          "effectName": "Sunny Day",
+          "statusName": "Sunny Day",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -803,11 +803,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When receiving a killing blow, uses \"First Kiss ❤ Sunny Skies.\" At the start of the turn, enters the \"Rainy Day\" state.",
-          "type": "Other",
-          "effectName": "Sunny Day",
-          "statusName": "Sunny Day"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -815,6 +811,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "description": "Uses \"Gentle Rains ❤ How I Miss You\" when receiving a killing blow.",
+          "type": "Other",
+          "effectName": "Rainy Day",
+          "statusName": "Rainy Day",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -835,13 +835,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Uses \"Gentle Rains ❤ How I Miss You\" when receiving a killing blow.",
-          "type": "Other",
-          "effectName": "Rainy Day",
-          "statusName": "Rainy Day"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1069,9 +1063,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Enter Battle"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

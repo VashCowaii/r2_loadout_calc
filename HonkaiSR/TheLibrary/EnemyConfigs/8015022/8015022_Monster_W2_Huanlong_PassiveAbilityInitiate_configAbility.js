@@ -397,18 +397,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1729049919\">Monster_W2_Huanlong_MuteHitFly</a>",
       "modifierFlags": [
         "MuteHitFly"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

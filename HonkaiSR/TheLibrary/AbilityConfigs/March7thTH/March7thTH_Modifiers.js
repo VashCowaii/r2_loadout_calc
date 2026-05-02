@@ -149,13 +149,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1941685711\">Mar_7th_10_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]",
+      "latentQueue": [
+        "_target_stance_before_attack"
+      ],
+      "description": "The \"Blade Dances on Waves' Fight\" effect cannot be triggered yet.",
+      "type": "Other",
+      "statusName": "Blade Dances on Waves' Fight",
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -163,14 +167,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_target_stance_before_attack"
-      ],
-      "description": "The \"Blade Dances on Waves' Fight\" effect cannot be triggered yet.",
-      "type": "Other",
-      "statusName": "Blade Dances on Waves' Fight"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -305,6 +302,14 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__754306422\">Mar_7th_10_Enhance_Visual</a>",
+      "removalDependencies": {
+        "name": "Removal Dependency",
+        "dependancyName": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
+        "casterFilter": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        }
+      },
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -321,19 +326,17 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "removalDependencies": {
-        "name": "Removal Dependency",
-        "dependancyName": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
-        "casterFilter": {
-          "name": "Target Name",
-          "target": "{{Caster}}"
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2055743569\">Mar_7th_10_Enhance</a>",
+      "stackData": [
+        "MDF_PropertyRatio"
+      ],
+      "latentQueue": [
+        "_has_enhanced_this_turn"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -439,12 +442,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [
-        "_has_enhanced_this_turn"
       ]
     },
     {
@@ -454,6 +451,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "When Shifu is on the field, increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "My Sword Stirs Starlight",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -476,11 +477,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "When Shifu is on the field, increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "My Sword Stirs Starlight"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -489,33 +486,9 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
-      "execute": [
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier",
-          "execute": [
-            {
-              "name": "Stack Target Stat Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-              "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
-              }
-            }
-          ]
-        }
-      ],
       "stackData": [
         "MDF_PropertyRatio"
       ],
-      "latentQueue": [],
       "description": "Increases SPD of %CasterName's Shifu by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
       "type": "Buff",
       "statusName": "Master, It's Tea Time!",
@@ -526,7 +499,30 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         }
-      }
+      },
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
+                "displayLines": "MDF_PropertyRatio",
+                "constants": [],
+                "variables": [
+                  "MDF_PropertyRatio"
+                ]
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -539,6 +535,10 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "After using an attack or Ultimate, %CasterName gains a max of 1 Charge point each time.",
+      "type": "Other",
+      "effectName": "Become Shifu",
+      "statusName": "Shifu",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -809,13 +809,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "After using an attack or Ultimate, %CasterName gains a max of 1 Charge point each time.",
-      "type": "Other",
-      "effectName": "Become Shifu",
-      "statusName": "Shifu"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -829,7 +823,6 @@ const configAbility = {
         "MDF_PropertyRatio",
         "MDF_Count"
       ],
-      "latentQueue": [],
       "description": "When Charge equals to <span class=\"descriptionNumberColor\">MDF_Count</span> or more, immediately takes action and simultaneously increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. Additionally, Basic ATK gets Enhanced.",
       "type": "Other",
       "statusName": "Charge"

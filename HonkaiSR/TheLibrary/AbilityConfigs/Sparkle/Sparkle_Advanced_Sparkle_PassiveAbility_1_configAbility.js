@@ -521,15 +521,11 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-489784205\">Advanced_Sparkle_AbilityPreshow</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",

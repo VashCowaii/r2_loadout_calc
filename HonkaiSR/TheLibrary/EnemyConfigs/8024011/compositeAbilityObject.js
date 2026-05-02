@@ -3930,9 +3930,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3981,18 +3979,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1817540919\">Monster_SW_Boss_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4010,6 +4004,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-407978863\">SW_Boss_BattleScore3_CharacterListen</a>",
           "stackType": "Replace",
+          "useEntitySnapshot": true,
+          "stackLimit": 2,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Action End [Owner]",
@@ -4059,10 +4056,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackLimit": 2,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4165,9 +4159,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4227,9 +4219,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4304,9 +4294,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4321,14 +4309,11 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__335567830\">Monster_SW_Boss_Ability04Mark</a>",
-          "stackData": [],
           "latentQueue": [
             "Phase2FirstSummon"
           ]
@@ -4336,27 +4321,31 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__507878310\">Monster_SW_Boss_Ability04Target</a>",
-          "stackData": [],
           "latentQueue": [
             "Phase2FirstSummon"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2020120612\">Monster_SW_Boss_Ability06Mark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-2020120612\">Monster_SW_Boss_Ability06Mark</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-736124809\">Monster_SW_Boss_SplitMark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-736124809\">Monster_SW_Boss_SplitMark</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-658511969\">Monster_SW_Boss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "stackType": "Replace",
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_DamageTakenUpRatio_PerLayer"
+          ],
+          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4386,22 +4375,23 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_DamageTakenUpRatio_PerLayer"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_DamageUpRatio_PerLayer"
+          ],
+          "latentQueue": [
+            "Phase2FirstSummon"
+          ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect is stackable.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4431,18 +4421,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUpRatio_PerLayer"
-          ],
-          "latentQueue": [
-            "Phase2FirstSummon"
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect is stackable.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4455,9 +4434,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1638258882\">Monster_SW_Boss_Ability07_Mark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1638258882\">Monster_SW_Boss_Ability07_Mark</a>"
         },
         {
           "name": "Modifier Construction",
@@ -4468,6 +4445,16 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Poison"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "Modifier_Poison_DamagePercentage"
+          ],
+          "description": "Takes Wind DMG at the start of each turn for a certain number of turns.",
+          "type": "Debuff",
+          "effectName": "Wind Shear",
+          "statusName": "Wind Shear",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -4547,22 +4534,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "Modifier_Poison_DamagePercentage"
-          ],
-          "latentQueue": [],
-          "description": "Takes Wind DMG at the start of each turn for a certain number of turns.",
-          "type": "Debuff",
-          "effectName": "Wind Shear",
-          "statusName": "Wind Shear",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-395700903\">Monster_SW_Boss_DOTExtra</a>",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -4594,12 +4571,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1913825605\">Monster_SW_Boss_PoisonDamage</a>",
+          "latentQueue": [
+            "Skill02First"
+          ],
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4617,17 +4597,13 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Skill02First"
-          ],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-378348755\">Monster_SW_Boss_PoisonCount</a>",
           "stackType": "Replace",
+          "stackLimit": 5,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4688,8 +4664,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 5
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4849,9 +4824,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

@@ -194,9 +194,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -204,7 +202,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteHitFly"
       ],
-      "stackData": [],
       "latentQueue": [
         "SummonSequence"
       ]
@@ -212,6 +209,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
+      "latentQueue": [
+        "SummonSequence"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]"
@@ -219,10 +219,6 @@ const configAbility = {
         {
           "eventTrigger": "Action Choice Window [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "SummonSequence"
       ]
     }
   ]

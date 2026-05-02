@@ -18,6 +18,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-971304181\">Relic_129_Sub</a>[<span class=\"descriptionNumberColor\">Ever-Glorious Magical Girl</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Elation DMG dealt ignores <span class=\"descriptionNumberColor\">_DefenceAddRatio</span> of the target's DEF.",
+      "type": "Buff",
+      "statusName": "Ever-Glorious Magical Girl",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -45,14 +48,22 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Elation DMG dealt ignores <span class=\"descriptionNumberColor\">_DefenceAddRatio</span> of the target's DEF.",
-      "type": "Buff",
-      "statusName": "Ever-Glorious Magical Girl"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__153004230\">Relic_129_Main</a>",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}} +{{Caster's Memosprite}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-971304181\">Relic_129_Sub</a>[<span class=\"descriptionNumberColor\">Ever-Glorious Magical Girl</span>]",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -258,19 +269,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}} +{{Caster's Memosprite}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-971304181\">Relic_129_Sub</a>[<span class=\"descriptionNumberColor\">Ever-Glorious Magical Girl</span>]",
-          "haloStatus": true
         }
       ]
     }

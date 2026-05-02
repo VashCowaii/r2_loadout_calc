@@ -321,7 +321,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-560490418\">M_Advanced_BlackSwan_Maze_StopAddDot</a>",
-      "stackData": [],
       "latentQueue": [
         "MazeSkill_Triggered",
         "_can_continue"
@@ -330,7 +329,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1474232906\">M_Advanced_BlackSwan_Maze_Flag</a>",
-      "stackData": [],
       "latentQueue": [
         "MazeSkill_Triggered",
         "_can_continue"

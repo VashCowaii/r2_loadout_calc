@@ -45,6 +45,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2094982629\">Moze_TechniqueUsage_DamageUpModifier</a>[<span class=\"descriptionNumberColor\">Bated Wings</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Bated Wings",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -67,12 +72,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Bated Wings",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -129,9 +129,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1591,9 +1589,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2209,9 +2205,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2286,9 +2280,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2327,9 +2319,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2520,6 +2510,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1395014383\">Moze_Ability03_DamageAddModifier</a>[<span class=\"descriptionNumberColor\">Heathprowler</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_DamageAddRatio"
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageAddRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Heathprowler",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2542,19 +2539,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageAddRatio"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageAddRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Heathprowler"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1536415722\">M_Moze_Ultimate_AddRegardAsAttackType</a>",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2597,8 +2587,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "duration": 1
+          ]
         }
       ],
       "targetObjectData": {
@@ -3060,15 +3049,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-59329108\">Moze_InInsert_Tag</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-59329108\">Moze_InInsert_Tag</a>"
         },
         {
           "name": "Modifier Construction",
@@ -3076,6 +3061,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "BlockInfect"
           ],
+          "description": "Follow-Up ATK DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Follow-Up ATK DMG Vulnerability",
+          "statusName": "Vengewise",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -3107,19 +3096,13 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Follow-Up ATK DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Follow-Up ATK DMG Vulnerability",
-          "statusName": "Vengewise"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__707542368\">Moze_Point01_CD</a>[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "stackData": [],
-          "latentQueue": [],
           "description": "The Trace \"Nightfeather\" effect's auto-trigger is still on cooldown.",
           "type": "Other",
           "statusName": "Nightfeather"
@@ -3132,6 +3115,10 @@ const compositeAbilityObject = {
             "BlockInfect",
             "RemoveWhenOwnerUnstage"
           ],
+          "description": "This unit is marked as \"Prey.\" After every time it receives an attack, it will receive Lightning Additional DMG equal to <span class=\"descriptionNumberColor\">#SkillP01_P1_ExtraDamagePercentage</span> of Moze's ATK, and Moze will consume 1 point of Charge.",
+          "type": "Debuff",
+          "effectName": "Prey",
+          "statusName": "Prey",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3766,13 +3753,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "This unit is marked as \"Prey.\" After every time it receives an attack, it will receive Lightning Additional DMG equal to <span class=\"descriptionNumberColor\">#SkillP01_P1_ExtraDamagePercentage</span> of Moze's ATK, and Moze will consume 1 point of Charge.",
-          "type": "Debuff",
-          "effectName": "Prey",
-          "statusName": "Prey"
+          ]
         },
         {
           "name": "Modifier Construction",

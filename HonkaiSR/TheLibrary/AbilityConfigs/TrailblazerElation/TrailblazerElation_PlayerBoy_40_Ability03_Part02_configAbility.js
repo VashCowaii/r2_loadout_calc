@@ -341,6 +341,16 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1890166672\">Player_40_Eidolon2ElationRatio</a>[<span class=\"descriptionNumberColor\">History in the Making...</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": [
+        "_Rank02"
+      ],
+      "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Elation Boost",
+      "statusName": "History in the Making...",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -364,17 +374,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "_Rank02"
-      ],
-      "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Elation Boost",
-      "statusName": "History in the Making..."
+      ]
     }
   ],
   "targetObjectData": {

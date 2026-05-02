@@ -567,9 +567,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -919,6 +917,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__889164751\">Enemy_W3_SundayPart_IF_WeaknessShare</a>",
           "stackType": "Multiple",
+          "stackData": [
+            "MDF_WeaknessShare"
+          ],
+          "latentQueue": [
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1233,18 +1237,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_WeaknessShare"
-          ],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1909411233\">Enemy_W3_SundayPart_IF_AlreadyWeaknessShare</a>",
-          "stackData": [],
           "latentQueue": [
             "AIFlag"
           ]
@@ -1263,9 +1260,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1310,9 +1305,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

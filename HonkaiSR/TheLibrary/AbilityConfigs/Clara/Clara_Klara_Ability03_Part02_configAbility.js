@@ -234,6 +234,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-632500359\">Klara_Eidolon2_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "Refresh",
+      "stackData": [
+        "MDF_AttackUP"
+      ],
+      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackUP</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "ATK Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -256,15 +263,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AttackUP"
-      ],
-      "latentQueue": [],
-      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackUP</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "ATK Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -303,6 +302,12 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
       "counter": 1,
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_ShowAmmo"
+      ],
+      "description": "Teammates being attacked will also trigger Counter, for which the DMG multiplier is also increased.",
+      "type": "Buff",
+      "statusName": "Enhanced Counter",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -426,14 +431,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ShowAmmo"
-      ],
-      "latentQueue": [],
-      "description": "Teammates being attacked will also trigger Counter, for which the DMG multiplier is also increased.",
-      "type": "Buff",
-      "statusName": "Enhanced Counter"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -442,6 +440,14 @@ const configAbility = {
       "modifierFlags": [
         "STAT_Burst"
       ],
+      "stackData": [
+        "MDF_AggroAddedRatio",
+        "MDF_PropertyValue"
+      ],
+      "description": "Receives less DMG with a higher chance to be attacked.",
+      "type": "Buff",
+      "effectName": "DMG Mitigation",
+      "statusName": "Promise, Not Command",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -480,16 +486,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AggroAddedRatio",
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Receives less DMG with a higher chance to be attacked.",
-      "type": "Buff",
-      "effectName": "DMG Mitigation",
-      "statusName": "Promise, Not Command"
+      ]
     }
   ],
   "targetObjectData": {

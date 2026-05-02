@@ -1917,9 +1917,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1929,9 +1927,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Enter Battle",
               "priorityLevel": 999999
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1949,9 +1945,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2443,9 +2437,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2562,9 +2554,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2606,9 +2596,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2991,9 +2979,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3065,6 +3051,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak"
           ],
+          "stackData": [
+            "MDF_DefenceAddedRatio"
+          ],
+          "description": "DEF increases. Toughness cannot be reduced.",
+          "type": "Buff",
+          "effectName": "DEF Boost",
+          "statusName": "Hardy Leaf Sheath",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3104,15 +3097,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DefenceAddedRatio"
-          ],
-          "latentQueue": [],
-          "description": "DEF increases. Toughness cannot be reduced.",
-          "type": "Buff",
-          "effectName": "DEF Boost",
-          "statusName": "Hardy Leaf Sheath"
+          ]
         }
       ]
     },
@@ -3376,6 +3361,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1765961654\">Enemy_W2_Xuanlu_MinionMark_4</a>",
+          "stackData": [
+            "MDF_MaxMinionCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3474,11 +3462,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxMinionCount"
-          ],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3605,6 +3589,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1849849749\">Enemy_W2_Xuanlu_MinionMark_3</a>",
+          "stackData": [
+            "MDF_MaxMinionCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3703,11 +3690,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxMinionCount"
-          ],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3845,6 +3828,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1866627368\">Enemy_W2_Xuanlu_MinionMark_2</a>",
+          "stackData": [
+            "MDF_MaxMinionCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3943,11 +3929,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxMinionCount"
-          ],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4074,6 +4056,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1816294511\">Enemy_W2_Xuanlu_MinionMark_1</a>",
+          "stackData": [
+            "MDF_MaxMinionCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4172,11 +4157,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxMinionCount"
-          ],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4332,9 +4313,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4376,9 +4355,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4486,9 +4463,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4505,6 +4480,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__163974997\">Monster_W2_Xuanlu_10_RL_LowHP</a>",
+          "stackData": [
+            "MDF_LowHPRatio"
+          ],
+          "latentQueue": [
+            "InsertCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "HP Change [Owner]",
@@ -4591,25 +4572,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_LowHPRatio"
-          ],
-          "latentQueue": [
-            "InsertCheck"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__113542848\">Enemy_W2_Xuanlu_10_SecondPhase</a>",
+          "latentQueue": [
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
@@ -4753,13 +4727,14 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1146705485\">Enemy_W2_Xuanlu_10_MinionMark_4</a>",
+          "stackData": [
+            "MDF_MaxMinionCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4843,15 +4818,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxMinionCount"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1029262152\">Enemy_W2_Xuanlu_10_MinionMark_3</a>",
+          "stackData": [
+            "MDF_MaxMinionCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4935,15 +4909,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxMinionCount"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1046039771\">Enemy_W2_Xuanlu_10_MinionMark_2</a>",
+          "stackData": [
+            "MDF_MaxMinionCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5027,15 +5000,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxMinionCount"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1062817390\">Enemy_W2_Xuanlu_10_MinionMark_1</a>",
+          "stackData": [
+            "MDF_MaxMinionCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5119,16 +5091,22 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxMinionCount"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__938780665\">Enemy_W2_Xuanlu_10_EnergyDrain</a>[<span class=\"descriptionNumberColor\">Synwood Renewal</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MMonster_W2_Xuanlu_10_EnergyDrain_TriggerHealRatio",
+            "MMonster_W2_Xuanlu_10_EnergyDrain_TurnHealRatio"
+          ],
+          "description": "In every turn, restores HP equal to <span class=\"descriptionNumberColor\">MMonster_W2_Xuanlu_10_EnergyDrain_TurnHealRatio</span> of the unit's Max HP.",
+          "type": "Buff",
+          "effectName": "Synwood Renewal",
+          "statusName": "Synwood Renewal",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -5196,23 +5174,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MMonster_W2_Xuanlu_10_EnergyDrain_TriggerHealRatio",
-            "MMonster_W2_Xuanlu_10_EnergyDrain_TurnHealRatio"
-          ],
-          "latentQueue": [],
-          "description": "In every turn, restores HP equal to <span class=\"descriptionNumberColor\">MMonster_W2_Xuanlu_10_EnergyDrain_TurnHealRatio</span> of the unit's Max HP.",
-          "type": "Buff",
-          "effectName": "Synwood Renewal",
-          "statusName": "Synwood Renewal",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-536192328\">Enemy_W2_Xuanlu_10_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Vigor Overflow</span>]",
           "stackType": "Replace",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect is stackable.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Vigor Overflow",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5242,16 +5214,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect is stackable.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Vigor Overflow",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1367728749\">Enemy_W2_Xuanlu_10_RL_RageHandler</a>",
+          "stackData": [
+            "MDF_DamageUpRatio_PerLayer"
+          ],
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -5364,11 +5334,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUpRatio_PerLayer"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5376,7 +5342,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "DisableAction"
           ],
-          "stackData": [],
           "latentQueue": [
             "InsertCheck"
           ]
@@ -5384,15 +5349,14 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-561335331\">Enemy_W2_Xuanlu_SecondPhase</a>",
+          "latentQueue": [
+            "AIFlag",
+            "TurnFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag",
-            "TurnFlag"
           ]
         },
         {
@@ -5401,7 +5365,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Endurance"
           ],
-          "stackData": [],
           "latentQueue": [
             "InsertCheck"
           ]
@@ -5510,9 +5473,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5581,9 +5542,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5730,9 +5689,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

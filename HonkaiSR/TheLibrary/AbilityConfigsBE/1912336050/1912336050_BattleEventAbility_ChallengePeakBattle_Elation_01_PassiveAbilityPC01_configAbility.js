@@ -33,9 +33,7 @@ const configAbility = {
           "eventTrigger": "Enter Battle",
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

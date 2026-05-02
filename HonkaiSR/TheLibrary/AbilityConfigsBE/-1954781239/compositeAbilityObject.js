@@ -497,6 +497,18 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2041839191\">Modifier_FantasticStory_BaseAbility_0050</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "ADF_1",
+            "ADF_2",
+            "ADF_3",
+            "TempHP"
+          ],
+          "latentQueue": [
+            "DV_FantasticStory_PlusAbility_0051",
+            "DV_FantasticStory_PlusAbility_0052",
+            "DV_FantasticStory_PlusAbility_0053",
+            "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1261,18 +1273,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "ADF_1",
-            "ADF_2",
-            "ADF_3",
-            "TempHP"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_0051",
-            "DV_FantasticStory_PlusAbility_0052",
-            "DV_FantasticStory_PlusAbility_0053",
-            "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag"
           ]
         }
       ]
@@ -1840,6 +1840,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__355925913\">Modifier_FantasticStory_BaseAbility_0040_plus3_sub</a>[<span class=\"descriptionNumberColor\">Bonus Charge</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "After attacking enemy targets, Whimsicality additionally gains <span class=\"descriptionNumberColor\">_Extra_Count</span> point(s) of Charge.",
+          "type": "Buff",
+          "effectName": "Bonus Charge",
+          "statusName": "Bonus Charge",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -1871,11 +1875,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After attacking enemy targets, Whimsicality additionally gains <span class=\"descriptionNumberColor\">_Extra_Count</span> point(s) of Charge.",
-          "type": "Buff",
-          "effectName": "Bonus Charge",
-          "statusName": "Bonus Charge"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1967,6 +1967,18 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1941026382\">Modifier_FantasticStory_BaseAbility_0040</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "ADF_1",
+            "ADF_2",
+            "ADF_3",
+            "TempHP"
+          ],
+          "latentQueue": [
+            "DV_FantasticStory_PlusAbility_0041",
+            "DV_FantasticStory_PlusAbility_0042",
+            "DV_FantasticStory_PlusAbility_0043",
+            "DV_FantasticStory_BaseAbility_0040_TriggerDamageFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2999,18 +3011,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "ADF_1",
-            "ADF_2",
-            "ADF_3",
-            "TempHP"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_0041",
-            "DV_FantasticStory_PlusAbility_0042",
-            "DV_FantasticStory_PlusAbility_0043",
-            "DV_FantasticStory_BaseAbility_0040_TriggerDamageFlag"
           ]
         }
       ]
@@ -3869,6 +3869,21 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1973742977\">Modifier_FantasticStory_BaseAbility_0030</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "ADF_1",
+            "ADF_2",
+            "TempHP"
+          ],
+          "latentQueue": [
+            "DV_FantasticStory_PlusAbility_0031",
+            "DV_FantasticStory_PlusAbility_0032",
+            "DV_FantasticStory_PlusAbility_0033",
+            "DV_FantasticStory_PlusAbility_0034",
+            "DV_FantasticStory_PlusAbility_0035",
+            "DV_FantasticStory_PlusAbility_0036",
+            "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
+            "DV_FantasticStory_PlusAbility_0031_TriggerDamageFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4853,21 +4868,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "ADF_1",
-            "ADF_2",
-            "TempHP"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_0031",
-            "DV_FantasticStory_PlusAbility_0032",
-            "DV_FantasticStory_PlusAbility_0033",
-            "DV_FantasticStory_PlusAbility_0034",
-            "DV_FantasticStory_PlusAbility_0035",
-            "DV_FantasticStory_PlusAbility_0036",
-            "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
-            "DV_FantasticStory_PlusAbility_0031_TriggerDamageFlag"
           ]
         }
       ]
@@ -6220,6 +6220,13 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Poison"
           ],
+          "useEntitySnapshot": true,
+          "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
+          "type": "Debuff",
+          "effectName": "Wind Shear",
+          "statusName": "Gimmick",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -6299,14 +6306,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
-          "type": "Debuff",
-          "effectName": "Wind Shear",
-          "statusName": "Gimmick",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6360,6 +6360,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1454047232\">Modifier_FantasticStory_BaseAbility_0020_sub5</a>[<span class=\"descriptionNumberColor\">Gimmick</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0027_ADF_1</span>. Upon Breaking an enemy target's Weakness, applies Wind Shear to all enemies.",
+          "type": "Buff",
+          "statusName": "Gimmick",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6382,15 +6385,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0027_ADF_1</span>. Upon Breaking an enemy target's Weakness, applies Wind Shear to all enemies.",
-          "type": "Buff",
-          "statusName": "Gimmick"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1437269613\">Modifier_FantasticStory_BaseAbility_0020_sub4</a>[<span class=\"descriptionNumberColor\">Verification</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">DmgAddedRatio</span> and increases SPD by <span class=\"descriptionNumberColor\">SpdAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG and SPD Boost",
+          "statusName": "Verification",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6429,11 +6433,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">DmgAddedRatio</span> and increases SPD by <span class=\"descriptionNumberColor\">SpdAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG and SPD Boost",
-          "statusName": "Verification"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6444,6 +6444,13 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Poison"
           ],
+          "useEntitySnapshot": true,
+          "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
+          "type": "Debuff",
+          "effectName": "Wind Shear",
+          "statusName": "Argument",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -6523,14 +6530,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
-          "type": "Debuff",
-          "effectName": "Wind Shear",
-          "statusName": "Argument",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6630,6 +6630,13 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Poison"
           ],
+          "useEntitySnapshot": true,
+          "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
+          "type": "Debuff",
+          "effectName": "Wind Shear",
+          "statusName": "Rumor",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -6709,14 +6716,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
-          "type": "Debuff",
-          "effectName": "Wind Shear",
-          "statusName": "Rumor",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7248,6 +7248,22 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1872930168\">Modifier_FantasticStory_BaseAbility_0020</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "ADF_1",
+            "ADF_2",
+            "ADF_3",
+            "TempHP"
+          ],
+          "latentQueue": [
+            "DV_FantasticStory_PlusAbility_0021",
+            "DV_FantasticStory_PlusAbility_0022",
+            "DV_FantasticStory_PlusAbility_0023",
+            "DV_FantasticStory_PlusAbility_0024",
+            "DV_FantasticStory_PlusAbility_0025",
+            "DV_FantasticStory_PlusAbility_0026",
+            "DV_FantasticStory_PlusAbility_0027",
+            "DV_FantasticStory_PlusAbility_0028"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7782,22 +7798,6 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [
-            "ADF_1",
-            "ADF_2",
-            "ADF_3",
-            "TempHP"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_0021",
-            "DV_FantasticStory_PlusAbility_0022",
-            "DV_FantasticStory_PlusAbility_0023",
-            "DV_FantasticStory_PlusAbility_0024",
-            "DV_FantasticStory_PlusAbility_0025",
-            "DV_FantasticStory_PlusAbility_0026",
-            "DV_FantasticStory_PlusAbility_0027",
-            "DV_FantasticStory_PlusAbility_0028"
           ]
         }
       ]
@@ -8488,6 +8488,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2046125016\">Modifier_FantasticStory_BaseAbility_0010_plus6_ultraDmgUp</a>[<span class=\"descriptionNumberColor\">Splash</span>]",
           "stackType": "Replace",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">DmgAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Splash",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -8510,16 +8514,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">DmgAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Splash"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__637313409\">Modifier_FantasticStory_BaseAbility_0010_plus3_ultraDmgUp</a>[<span class=\"descriptionNumberColor\">Rupture</span>]",
           "stackType": "Replace",
+          "description": "Ultimate deals <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0013_layerDmg</span> more DMG.",
+          "type": "Buff",
+          "effectName": "Ultimate DMG Boost",
+          "statusName": "Rupture",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -8573,11 +8577,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Ultimate deals <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0013_layerDmg</span> more DMG.",
-          "type": "Buff",
-          "effectName": "Ultimate DMG Boost",
-          "statusName": "Rupture"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8586,6 +8586,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Deathrattle"
           ],
+          "description": "When this unit's turn starts or when this unit is defeated, this unit and adjacent targets take a set amount of DMG based on the active number of Shatter stacks.",
+          "type": "Debuff",
+          "effectName": "Shatter",
+          "statusName": "Shatter",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -9168,11 +9172,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When this unit's turn starts or when this unit is defeated, this unit and adjacent targets take a set amount of DMG based on the active number of Shatter stacks.",
-          "type": "Debuff",
-          "effectName": "Shatter",
-          "statusName": "Shatter"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9686,6 +9686,19 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-508947277\">Modifier_FantasticStory_BaseAbility_0010</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "ADF_1",
+            "ADF_2",
+            "TempHP"
+          ],
+          "latentQueue": [
+            "DV_FantasticStory_PlusAbility_0011",
+            "DV_FantasticStory_PlusAbility_0012",
+            "DV_FantasticStory_PlusAbility_0013",
+            "DV_FantasticStory_PlusAbility_0014",
+            "DV_FantasticStory_PlusAbility_0016",
+            "DV_FantasticStory_PlusAbility_0018"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -10034,19 +10047,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "ADF_1",
-            "ADF_2",
-            "TempHP"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_0011",
-            "DV_FantasticStory_PlusAbility_0012",
-            "DV_FantasticStory_PlusAbility_0013",
-            "DV_FantasticStory_PlusAbility_0014",
-            "DV_FantasticStory_PlusAbility_0016",
-            "DV_FantasticStory_PlusAbility_0018"
           ]
         }
       ]
@@ -10089,6 +10089,21 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-28797912\">Modifier_FantasticStory_BaseAbility_0050_plus3_sub</a>[<span class=\"descriptionNumberColor\">Free Writing</span>]",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag",
+            "DV_FantasticStory_PlusAbility_0053",
+            "DV_FantasticStory_PlusAbility_0052",
+            "DV_FantasticStory_PlusAbility_0051"
+          ],
+          "description": "When attacking via using Ultimate, ignore the enemy targets' Weakness to deal Toughness Reduction.",
+          "type": "Buff",
+          "statusName": "Free Writing",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "skillType": "Ultimate",
+            "showAsForcedReduction": true
+          },
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -10125,28 +10140,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__805201127\">Modifier_FantasticStory_BaseAbility_0050_plus2_sub</a>[<span class=\"descriptionNumberColor\">Picturesque</span>]",
+          "stackType": "ReplaceByCaster",
           "latentQueue": [
             "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag",
             "DV_FantasticStory_PlusAbility_0053",
             "DV_FantasticStory_PlusAbility_0052",
             "DV_FantasticStory_PlusAbility_0051"
           ],
-          "description": "When attacking via using Ultimate, ignore the enemy targets' Weakness to deal Toughness Reduction.",
+          "description": "Follow-Up ATK DMG dealt increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0052_ADF_1</span>. Follow-Up ATKs' Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0052_ADF_2</span>.",
           "type": "Buff",
-          "statusName": "Free Writing",
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "skillType": "Ultimate",
-            "showAsForcedReduction": true
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__805201127\">Modifier_FantasticStory_BaseAbility_0050_plus2_sub</a>[<span class=\"descriptionNumberColor\">Picturesque</span>]",
-          "stackType": "ReplaceByCaster",
+          "statusName": "Picturesque",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -10179,22 +10187,22 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__225763044\">Modifier_FantasticStory_BaseAbility_0050_plus1_sub2</a>[<span class=\"descriptionNumberColor\">Arioso</span>]",
+          "stackType": "ReplaceByCaster",
           "latentQueue": [
             "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag",
             "DV_FantasticStory_PlusAbility_0053",
             "DV_FantasticStory_PlusAbility_0052",
             "DV_FantasticStory_PlusAbility_0051"
           ],
-          "description": "Follow-Up ATK DMG dealt increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0052_ADF_1</span>. Follow-Up ATKs' Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0052_ADF_2</span>.",
-          "type": "Buff",
-          "statusName": "Picturesque"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__225763044\">Modifier_FantasticStory_BaseAbility_0050_plus1_sub2</a>[<span class=\"descriptionNumberColor\">Arioso</span>]",
-          "stackType": "ReplaceByCaster",
+          "description": "Break DMG taken increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0051_ADF_1</span>.",
+          "type": "Debuff",
+          "effectName": "Arioso",
+          "statusName": "Arioso",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -10226,23 +10234,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__937919550\">Modifier_FantasticStory_BaseAbility_0050_plus1_sub</a>[<span class=\"descriptionNumberColor\">Arioso</span>]",
+          "stackType": "ReplaceByCaster",
           "latentQueue": [
             "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag",
             "DV_FantasticStory_PlusAbility_0053",
             "DV_FantasticStory_PlusAbility_0052",
             "DV_FantasticStory_PlusAbility_0051"
           ],
-          "description": "Break DMG taken increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0051_ADF_1</span>.",
-          "type": "Debuff",
-          "effectName": "Arioso",
-          "statusName": "Arioso"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__937919550\">Modifier_FantasticStory_BaseAbility_0050_plus1_sub</a>[<span class=\"descriptionNumberColor\">Arioso</span>]",
-          "stackType": "ReplaceByCaster",
+          "description": "If Super Break DMG is dealt to enemies after using an attack, additionally charges Whimsicality by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0051_ADF_2</span> points.",
+          "type": "Buff",
+          "statusName": "Arioso",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -10333,22 +10339,25 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag",
-            "DV_FantasticStory_PlusAbility_0053",
-            "DV_FantasticStory_PlusAbility_0052",
-            "DV_FantasticStory_PlusAbility_0051"
-          ],
-          "description": "If Super Break DMG is dealt to enemies after using an attack, additionally charges Whimsicality by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0051_ADF_2</span> points.",
-          "type": "Buff",
-          "statusName": "Arioso"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1558011426\">Modifier_FantasticStory_BaseAbility_0040_plus2_sub</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Boost</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "_DamageUpRatio"
+          ],
+          "latentQueue": [
+            "DV_FantasticStory_BaseAbility_0040_TriggerDamageFlag",
+            "DV_FantasticStory_PlusAbility_0043",
+            "DV_FantasticStory_PlusAbility_0042",
+            "DV_FantasticStory_PlusAbility_0041"
+          ],
+          "description": "Increases DMG dealt by Ultimate by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0042_ADF_1</span>. After the Ultimate is cast, Whimsicality additionally gains <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0042_ADF_2</span> point(s) of Charge.",
+          "type": "Buff",
+          "effectName": "Ultimate DMG Boost",
+          "statusName": "Ultimate DMG Boost",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -10403,25 +10412,25 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "_DamageUpRatio"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_BaseAbility_0040_TriggerDamageFlag",
-            "DV_FantasticStory_PlusAbility_0043",
-            "DV_FantasticStory_PlusAbility_0042",
-            "DV_FantasticStory_PlusAbility_0041"
-          ],
-          "description": "Increases DMG dealt by Ultimate by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0042_ADF_1</span>. After the Ultimate is cast, Whimsicality additionally gains <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0042_ADF_2</span> point(s) of Charge.",
-          "type": "Buff",
-          "effectName": "Ultimate DMG Boost",
-          "statusName": "Ultimate DMG Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1083847243\">Modifier_FantasticStory_BaseAbility_0030_plus6_sub</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "_DamageSumRatio"
+          ],
+          "latentQueue": [
+            "DV_FantasticStory_PlusAbility_0031_TriggerDamageFlag",
+            "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
+            "DV_FantasticStory_PlusAbility_0036",
+            "DV_FantasticStory_PlusAbility_0035",
+            "DV_FantasticStory_PlusAbility_0034",
+            "DV_FantasticStory_PlusAbility_0033",
+            "DV_FantasticStory_PlusAbility_0032",
+            "DV_FantasticStory_PlusAbility_0031"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Any",
@@ -10463,19 +10472,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "_DamageSumRatio"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_0031_TriggerDamageFlag",
-            "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
-            "DV_FantasticStory_PlusAbility_0036",
-            "DV_FantasticStory_PlusAbility_0035",
-            "DV_FantasticStory_PlusAbility_0034",
-            "DV_FantasticStory_PlusAbility_0033",
-            "DV_FantasticStory_PlusAbility_0032",
-            "DV_FantasticStory_PlusAbility_0031"
           ]
         },
         {
@@ -10491,6 +10487,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1117415883\">Modifier_FantasticStory_BaseAbility_0030_plus5_AddStockedSP</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
+            "DV_FantasticStory_PlusAbility_0034",
+            "DV_FantasticStory_PlusAbility_0035"
+          ],
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -10615,18 +10616,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
-            "DV_FantasticStory_PlusAbility_0034",
-            "DV_FantasticStory_PlusAbility_0035"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1329142430\">Modifier_FantasticStory_BaseAbility_0030_plus5_AddSP</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "_AddSP"
+          ],
+          "latentQueue": [
+            "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
+            "DV_FantasticStory_PlusAbility_0034",
+            "DV_FantasticStory_PlusAbility_0035"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -10786,20 +10789,54 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "_AddSP"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
-            "DV_FantasticStory_PlusAbility_0034",
-            "DV_FantasticStory_PlusAbility_0035"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1737739841\">Modifier_FantasticStory_BaseAbility_0010_plus6_sub</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "DV_FantasticStory_PlusAbility_0016",
+            "DV_FantasticStory_PlusAbility_0014",
+            "DV_FantasticStory_PlusAbility_0013",
+            "DV_FantasticStory_PlusAbility_0012"
+          ],
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "skillType": [
+              "Ultimate"
+            ],
+            "conditions": {
+              "name": "Is Part Of",
+              "of": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player Team Ability Target Lock}}"
+              },
+              "mustBeAlive2": true
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": {
+                "operator": "Constants[0] (0) || Variables[0] (DV_FantasticStory_PlusAbility_0016_ADF_3) || SUB || RETURN",
+                "displayLines": "(0 - DV_FantasticStory_PlusAbility_0016_ADF_3)",
+                "constants": [
+                  0
+                ],
+                "variables": [
+                  "DV_FantasticStory_PlusAbility_0016_ADF_3"
+                ]
+              }
+            }
+          },
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -10850,55 +10887,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1440555734\">Modifier_FantasticStory_BaseAbility_0010_plus5_sub</a>",
+          "stackType": "ReplaceByCaster",
           "latentQueue": [
             "DV_FantasticStory_PlusAbility_0016",
             "DV_FantasticStory_PlusAbility_0014",
             "DV_FantasticStory_PlusAbility_0013",
             "DV_FantasticStory_PlusAbility_0012"
           ],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "skillType": [
-              "Ultimate"
-            ],
-            "conditions": {
-              "name": "Is Part Of",
-              "of": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "target": {
-                "name": "Target Name",
-                "target": "{{Player Team Ability Target Lock}}"
-              },
-              "mustBeAlive2": true
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": {
-                "operator": "Constants[0] (0) || Variables[0] (DV_FantasticStory_PlusAbility_0016_ADF_3) || SUB || RETURN",
-                "displayLines": "(0 - DV_FantasticStory_PlusAbility_0016_ADF_3)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "DV_FantasticStory_PlusAbility_0016_ADF_3"
-                ]
-              }
-            }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1440555734\">Modifier_FantasticStory_BaseAbility_0010_plus5_sub</a>",
-          "stackType": "ReplaceByCaster",
           "execute": [
             {
               "eventTrigger": "Ability Use [Anyone]: Start",
@@ -11020,19 +11020,25 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_0016",
-            "DV_FantasticStory_PlusAbility_0014",
-            "DV_FantasticStory_PlusAbility_0013",
-            "DV_FantasticStory_PlusAbility_0012"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>[<span class=\"descriptionNumberColor\">Scalded</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "ReceiveDmgRatio"
+          ],
+          "latentQueue": [
+            "DV_FantasticStory_PlusAbility_0012",
+            "DV_FantasticStory_PlusAbility_0013",
+            "DV_FantasticStory_PlusAbility_0014",
+            "DV_FantasticStory_PlusAbility_0016"
+          ],
+          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">TotalDmgRatio</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Scalded",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -11074,20 +11080,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "ReceiveDmgRatio"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_0012",
-            "DV_FantasticStory_PlusAbility_0013",
-            "DV_FantasticStory_PlusAbility_0014",
-            "DV_FantasticStory_PlusAbility_0016"
-          ],
-          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">TotalDmgRatio</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Scalded"
+          ]
         }
       ],
       "references": []

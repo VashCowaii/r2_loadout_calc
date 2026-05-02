@@ -46,9 +46,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-361184588\">Monster_Monster_W2_Lycan_BattlePerform_DisAbleAction</a>",
       "modifierFlags": [
         "DisableAction"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -66,9 +64,7 @@ const configAbility = {
         {
           "eventTrigger": "Being Attacked End [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

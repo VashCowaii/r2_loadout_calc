@@ -590,9 +590,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -845,12 +843,12 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ForceHitH"
           ],
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -858,6 +856,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Stealth"
           ],
+          "description": "Cannot become the primary target for abilities that require active selection. When Weakness is Broken or when all enemy units on the field aside from this unit are in \"Lurking\" state, dispels \"Lurking\" state for this unit. When there are no other enemy units on the battlefield, this unit dispels the \"Lurking\" state.",
+          "type": "Buff",
+          "effectName": "Lurking",
+          "statusName": "Lurking",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1045,13 +1047,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Cannot become the primary target for abilities that require active selection. When Weakness is Broken or when all enemy units on the field aside from this unit are in \"Lurking\" state, dispels \"Lurking\" state for this unit. When there are no other enemy units on the battlefield, this unit dispels the \"Lurking\" state.",
-          "type": "Buff",
-          "effectName": "Lurking",
-          "statusName": "Lurking"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1060,6 +1056,11 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ForceHitH"
           ],
+          "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Flawed",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1096,12 +1097,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Flawed",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1110,9 +1106,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1120,6 +1114,14 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Stealth"
           ],
+          "stackData": [
+            "MDF_StealthBreak_ActionDelayRatio",
+            "MDF_StealthBreak_AllDamageTypeTakenRatio"
+          ],
+          "description": "Cannot become the primary target for abilities that require active selection. DMG received increases by <span class=\"descriptionNumberColor\">MDF_StealthBreak_AllDamageTypeTakenRatio</span>. When Weakness is Broken or when all enemy units on the field aside from this unit are in \"Lurking\" state, dispels \"Lurking\" state for this unit. When there are no other enemy units on the battlefield, this unit dispels the \"Lurking\" state.",
+          "type": "Buff",
+          "effectName": "Lurking",
+          "statusName": "Lurking",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1346,16 +1348,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_StealthBreak_ActionDelayRatio",
-            "MDF_StealthBreak_AllDamageTypeTakenRatio"
-          ],
-          "latentQueue": [],
-          "description": "Cannot become the primary target for abilities that require active selection. DMG received increases by <span class=\"descriptionNumberColor\">MDF_StealthBreak_AllDamageTypeTakenRatio</span>. When Weakness is Broken or when all enemy units on the field aside from this unit are in \"Lurking\" state, dispels \"Lurking\" state for this unit. When there are no other enemy units on the battlefield, this unit dispels the \"Lurking\" state.",
-          "type": "Buff",
-          "effectName": "Lurking",
-          "statusName": "Lurking"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1410,9 +1403,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

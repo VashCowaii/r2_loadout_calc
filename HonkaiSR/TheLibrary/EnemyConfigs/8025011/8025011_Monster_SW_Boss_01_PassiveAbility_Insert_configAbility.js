@@ -152,6 +152,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__346528323\">Monster_SW_Boss_01_MainBattleLockHP</a>",
+      "latentQueue": [
+        "BreakEndFlag",
+        "InsertCheck",
+        "AIFlag",
+        "Phase2FirstTurn"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -175,13 +181,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "BreakEndFlag",
-        "InsertCheck",
-        "AIFlag",
-        "Phase2FirstTurn"
       ]
     }
   ]

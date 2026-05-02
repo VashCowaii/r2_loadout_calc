@@ -27,6 +27,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__410951674\">LC_24000_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P3_DamageAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -49,16 +53,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P3_DamageAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__844192795\">LC_24000_AttackAddedRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">#SkillEquip_P1_AttackAddedRatio</span>, up to <span class=\"descriptionNumberColor\">#SkillEquip_P2_MaxLayer</span> stack(s).",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "ATK Boost",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -92,13 +98,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">#SkillEquip_P1_AttackAddedRatio</span>, up to <span class=\"descriptionNumberColor\">#SkillEquip_P2_MaxLayer</span> stack(s).",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "ATK Boost",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -220,9 +220,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

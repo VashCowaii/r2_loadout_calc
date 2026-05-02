@@ -365,6 +365,13 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__689500868\">StageAbility_Maze_Castorice_Modifier</a>",
+          "stackData": [
+            "MDF_LoseHP"
+          ],
+          "latentQueue": [
+            "Castorice_SkillMaze_Flag",
+            "EnterBattlePlayTimes"
+          ],
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -410,13 +417,6 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -81
             }
-          ],
-          "stackData": [
-            "MDF_LoseHP"
-          ],
-          "latentQueue": [
-            "Castorice_SkillMaze_Flag",
-            "EnterBattlePlayTimes"
           ]
         }
       ],
@@ -671,7 +671,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1698152191\">Castorice_Eidolon4_Listen</a>",
-          "stackData": [],
           "latentQueue": [
             "OverHeal"
           ],
@@ -928,6 +927,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1345662684\">Castorice_RefreshMaxSpecialSPFlag</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "OverHeal"
+          ],
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -940,10 +942,6 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": 10001
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "OverHeal"
           ]
         },
         {
@@ -952,6 +950,74 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ListenBattleEventSkill",
             "RemoveWhenCasterDead"
+          ],
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"958490815\">Castorice_Passive02_OnListenHPChange</a>",
+              "aliveOnly": "False",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_AllDamageTypeAddedRatio": {
+                  "operator": "Variables[0] (0.2) || RETURN",
+                  "displayLines": "0.2",
+                  "constants": [],
+                  "variables": [
+                    0.2
+                  ]
+                },
+                "MDF_LifeTime": {
+                  "operator": "Variables[0] (3) || RETURN",
+                  "displayLines": "3",
+                  "constants": [],
+                  "variables": [
+                    3
+                  ]
+                },
+                "MDF_MaxLayer": {
+                  "operator": "Variables[0] (3) || RETURN",
+                  "displayLines": "3",
+                  "constants": [],
+                  "variables": [
+                    3
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] - {{Caster's Memosprite}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"445281600\">Castorice_LoseHPPreShow</a>",
+              "aliveOnly": "False",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PreShowMaxHP": 0,
+                "MDF_PreShowCurrentHP": 0,
+                "MDF_LoseHPRatio01": {
+                  "operator": "Variables[0] (0.3) || RETURN",
+                  "displayLines": "0.3",
+                  "constants": [],
+                  "variables": [
+                    0.3
+                  ]
+                },
+                "MDF_LoseHPRatio02": {
+                  "operator": "Variables[0] (0.4) || RETURN",
+                  "displayLines": "0.4",
+                  "constants": [],
+                  "variables": [
+                    0.4
+                  ]
+                }
+              }
+            }
           ],
           "execute": [
             {
@@ -1167,105 +1233,6 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Leave Battle"
-            }
-          ],
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "Castorice_Passive_Count",
-              "from": "ContextOwner",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "maxValue": 9999999,
-                  "whenValueChanges": [
-                    {
-                      "name": "Define Custom Variable with Changes to Stats",
-                      "variableName": "Castorice_DeltaAdd"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>",
-                        "invertCondition": true,
-                        "justAddedOrActive": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Update Displayed Energy Bar",
-                          "value": {
-                            "operator": "Variables[0] (Castorice_Passive_Count) || RETURN",
-                            "displayLines": "Castorice_Passive_Count",
-                            "constants": [],
-                            "variables": [
-                              "Castorice_Passive_Count"
-                            ]
-                          },
-                          "displaySubType": "Percent",
-                          "displayShowIcon": "False",
-                          "maximum": {
-                            "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                            "displayLines": "Castorice_Passive_MaxCount",
-                            "constants": [],
-                            "variables": [
-                              "Castorice_Passive_MaxCount"
-                            ]
-                          },
-                          "assignState": "True",
-                          "bar#": "Number"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Castorice_DeltaAdd",
-                      "value": 0
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "triggerClampedChanges": true,
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-272315266\">Castorice_CheckCurrentSpecialSPChange</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "triggerClampedChanges": true,
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-272315266\">Castorice_CheckCurrentSpecialSPChange</a>"
-                    }
-                  ]
-                }
-              ]
             }
           ],
           "modifierFunctions": [
@@ -1538,74 +1505,103 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
+          "variableValueChange": [
             {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"958490815\">Castorice_Passive02_OnListenHPChange</a>",
-              "aliveOnly": "False",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
-                },
-                "MDF_LifeTime": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
-                },
-                "MDF_MaxLayer": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
+              "name": "Variable Value Changes",
+              "variableName": "Castorice_Passive_Count",
+              "from": "ContextOwner",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "maxValue": 9999999,
+                  "whenValueChanges": [
+                    {
+                      "name": "Define Custom Variable with Changes to Stats",
+                      "variableName": "Castorice_DeltaAdd"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>",
+                        "invertCondition": true,
+                        "justAddedOrActive": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Update Displayed Energy Bar",
+                          "value": {
+                            "operator": "Variables[0] (Castorice_Passive_Count) || RETURN",
+                            "displayLines": "Castorice_Passive_Count",
+                            "constants": [],
+                            "variables": [
+                              "Castorice_Passive_Count"
+                            ]
+                          },
+                          "displaySubType": "Percent",
+                          "displayShowIcon": "False",
+                          "maximum": {
+                            "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
+                            "displayLines": "Castorice_Passive_MaxCount",
+                            "constants": [],
+                            "variables": [
+                              "Castorice_Passive_MaxCount"
+                            ]
+                          },
+                          "assignState": "True",
+                          "bar#": "Number"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "Castorice_DeltaAdd",
+                      "value": 0
+                    }
                   ]
                 }
-              }
+              ]
+            }
+          ],
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "triggerClampedChanges": true,
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-272315266\">Castorice_CheckCurrentSpecialSPChange</a>"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] - {{Caster's Memosprite}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"445281600\">Castorice_LoseHPPreShow</a>",
-              "aliveOnly": "False",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_PreShowMaxHP": 0,
-                "MDF_PreShowCurrentHP": 0,
-                "MDF_LoseHPRatio01": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
-                },
-                "MDF_LoseHPRatio02": {
-                  "operator": "Variables[0] (0.4) || RETURN",
-                  "displayLines": "0.4",
-                  "constants": [],
-                  "variables": [
-                    0.4
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "triggerClampedChanges": true,
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-272315266\">Castorice_CheckCurrentSpecialSPChange</a>"
+                    }
                   ]
                 }
-              }
+              ]
             }
           ]
         }
@@ -2475,6 +2471,15 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-459849199\">Castorice_Eidolon6_QuantumPenetrate</a>[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "OverHeal"
+          ],
+          "description": "When dealing DMG, increases Quantum RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Await for Years to Loom",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -2491,20 +2496,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1861384440\">Castorice_Eidolon4_HealTakenRatio</a>[<span class=\"descriptionNumberColor\">Rest in Songs of Gloom</span>]",
           "stackData": [
             "MDF_PropertyValue"
           ],
           "latentQueue": [
             "OverHeal"
           ],
-          "description": "When dealing DMG, increases Quantum RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "description": "The HP restored when receiving healing increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Buff",
-          "statusName": "Await for Years to Loom"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1861384440\">Castorice_Eidolon4_HealTakenRatio</a>[<span class=\"descriptionNumberColor\">Rest in Songs of Gloom</span>]",
+          "effectName": "HP Restoration Boost",
+          "statusName": "Rest in Songs of Gloom",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2527,22 +2533,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "OverHeal"
-          ],
-          "description": "The HP restored when receiving healing increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "HP Restoration Boost",
-          "statusName": "Rest in Songs of Gloom"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Can be used to offset the HP cost of Netherwing's Memosprite Skill, \"Breath Scorches the Shadow.\" A maximum of <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> \"Ardent Will\" can be possessed at any given time.",
+          "type": "Other",
+          "effectName": "Ardent Will",
+          "statusName": "Ardent Will",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2558,16 +2558,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Can be used to offset the HP cost of Netherwing's Memosprite Skill, \"Breath Scorches the Shadow.\" A maximum of <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> \"Ardent Will\" can be possessed at any given time.",
-          "type": "Other",
-          "effectName": "Ardent Will",
-          "statusName": "Ardent Will"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2083586529\">Castorice_Eidolon2_OnListenValueChange</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "OverHeal"
+          ],
           "variableValueChange": [
             {
               "name": "Variable Value Changes",
@@ -2641,10 +2640,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "OverHeal"
           ]
         },
         {
@@ -2655,14 +2650,16 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Where The West Wind Dwells</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Every stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, lasting until the end of this turn.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Where The West Wind Dwells",
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -2702,11 +2699,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Every stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, lasting until the end of this turn.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Where The West Wind Dwells"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2922,7 +2915,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__950021136\">Castorice_PointB1_HealTaxes</a>",
-          "stackData": [],
           "latentQueue": [
             "OverHeal"
           ],
@@ -2963,6 +2955,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "Inverted Torch",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2985,16 +2981,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "Inverted Torch"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__115720497\">Memosprite_Castorice_PointB2_OnListen</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "Castorice_PointB2_HPRatio",
+            "Castorice_PointB2_SpeedRatio"
+          ],
+          "latentQueue": [
+            "OverHeal"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3132,19 +3131,23 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "Castorice_PointB2_HPRatio",
-            "Castorice_PointB2_SpeedRatio"
-          ],
-          "latentQueue": [
-            "OverHeal"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue",
+            "MDF_MaxLayer"
+          ],
+          "latentQueue": [
+            "MDF_Castorice_AttackFlag"
+          ],
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3178,23 +3181,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_MaxLayer"
-          ],
-          "latentQueue": [
-            "MDF_Castorice_AttackFlag"
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-658097441\">Castorice_Ability03_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, lasting until the Territory ends.",
+          "type": "Debuff",
+          "effectName": "All-Type RES Reduction",
+          "statusName": "All-Type RES Reduction",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3219,11 +3215,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, lasting until the Territory ends.",
-          "type": "Debuff",
-          "effectName": "All-Type RES Reduction",
-          "statusName": "All-Type RES Reduction"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3231,6 +3223,28 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "SpecialBattleArea"
+          ],
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-658097441\">Castorice_Ability03_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+              "aliveOnly": "False",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.2) || RETURN",
+                  "displayLines": "0.2",
+                  "constants": [],
+                  "variables": [
+                    0.2
+                  ]
+                }
+              }
+            }
           ],
           "execute": [
             {
@@ -3326,30 +3340,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-658097441\">Castorice_Ability03_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
-              "aliveOnly": "False",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
-                }
-              }
-            }
           ]
         },
         {
@@ -3357,6 +3347,12 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__445281600\">Castorice_LoseHPPreShow</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "MDF_PreShowMaxHP",
+            "MDF_PreShowCurrentHP",
+            "MDF_LoseHPRatio01",
+            "MDF_LoseHPRatio02"
           ],
           "execute": [
             {
@@ -3461,14 +3457,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PreShowMaxHP",
-            "MDF_PreShowCurrentHP",
-            "MDF_LoseHPRatio01",
-            "MDF_LoseHPRatio02"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []
@@ -3844,9 +3833,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -4074,9 +4061,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4108,6 +4093,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
           "stackType": "Replace",
+          "stackData": [
+            "_AttackTime"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4222,11 +4210,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "_AttackTime"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4601,9 +4585,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4901,9 +4883,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -7600,6 +7580,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1100856476\">Memosprite_CastoriceServant_StandByOnPhase2</a>",
+          "latentQueue": [
+            "CastoriceServant_ReadyFlag"
+          ],
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -7630,12 +7614,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "CastoriceServant_ReadyFlag"
-          ],
-          "duration": 1
+          ]
         }
       ],
       "targetObjectData": {
@@ -7692,6 +7671,20 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__313910489\">Memosprite_CastoriceServant_Eidolon6_StancePreview</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "skillType": "Memosprite",
+            "toughnessForcedReductionPreview": {
+              "operator": "Variables[0] (CASTORICE_OBJECT_UNUSED_8) || RETURN",
+              "displayLines": "CASTORICE_OBJECT_UNUSED_8",
+              "constants": [],
+              "variables": [
+                "CASTORICE_OBJECT_UNUSED_8"
+              ]
+            },
+            "showAsForcedReduction": true
+          },
           "abilityValueChange": [
             {
               "name": "Ability Value Changes",
@@ -7721,23 +7714,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "skillType": "Memosprite",
-            "toughnessForcedReductionPreview": {
-              "operator": "Variables[0] (CASTORICE_OBJECT_UNUSED_8) || RETURN",
-              "displayLines": "CASTORICE_OBJECT_UNUSED_8",
-              "constants": [],
-              "variables": [
-                "CASTORICE_OBJECT_UNUSED_8"
-              ]
-            },
-            "showAsForcedReduction": true
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7768,14 +7745,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1420894416\">Memosprite_CastoriceServant_Ability23Check</a>",
-          "stackData": [],
           "latentQueue": [
             "CL_PlayTimes",
             "CL_EnterBattlePlayTimes"
@@ -7785,6 +7759,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-256072391\">Memosprite_CastoriceServant_BP_Explode</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "CL_PlayTimes",
+            "CL_EnterBattlePlayTimes"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -7885,17 +7863,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "CL_PlayTimes",
-            "CL_EnterBattlePlayTimes"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1341939671\">Memosprite_CastoriceServant_Disable</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "CL_EnterBattlePlayTimes",
+            "CL_PlayTimes",
+            "CastoriceServant_BPSkill_Level"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7913,12 +7891,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "CL_EnterBattlePlayTimes",
-            "CL_PlayTimes",
-            "CastoriceServant_BPSkill_Level"
           ]
         },
         {
@@ -8021,14 +7993,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__148040455\">Memosprite_CastoriceServant_BPCost_2</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "CastoriceServant_BPSkill_Level"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -8048,16 +8021,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "CastoriceServant_BPSkill_Level"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__164818074\">Memosprite_CastoriceServant_BPCost_1</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "CastoriceServant_BPSkill_Level"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -8077,10 +8049,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "CastoriceServant_BPSkill_Level"
           ]
         },
         {
@@ -8095,14 +8063,14 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2133723962\">Memosprite_CastoriceServant_InsideExplode</a>[<span class=\"descriptionNumberColor\">Back to the Black</span>]",
+          "description": "Triggers the Talent effect of \"Wings Sweep the Ruins\" the next time \"Breath Scorches the Shadow\" is used.",
+          "type": "Other",
+          "statusName": "Back to the Black",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "description": "Triggers the Talent effect of \"Wings Sweep the Ruins\" the next time \"Breath Scorches the Shadow\" is used.",
-          "type": "Other",
-          "statusName": "Back to the Black"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8114,9 +8082,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8273,8 +8239,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1340712313\">Memosprite_CastoriceServant_OnListenHitDamageSplit</a>",
-          "stackData": [],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -8481,14 +8445,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-509656395\">Memosprite_CastoriceServant_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Roar Rumbles the Realm",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -8511,15 +8480,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Roar Rumbles the Realm"
+          ]
         }
       ],
       "references": []

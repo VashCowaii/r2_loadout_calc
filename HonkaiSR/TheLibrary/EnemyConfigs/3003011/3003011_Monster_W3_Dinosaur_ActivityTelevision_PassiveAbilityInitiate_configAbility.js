@@ -69,6 +69,9 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
+      "stackData": [
+        "MDF_DamageTypeResistance"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -91,11 +94,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageTypeResistance"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -150,9 +149,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -194,15 +191,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-23950311\">MModifier_Monster_W3_Dinosaur_ATMark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-23950311\">MModifier_Monster_W3_Dinosaur_ATMark</a>"
     }
   ]
 }

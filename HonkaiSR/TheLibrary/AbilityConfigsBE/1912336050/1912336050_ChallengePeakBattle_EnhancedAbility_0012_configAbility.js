@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1351261938\">Modifier_ChallengePeakBattle_EnhancedAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement+</span>]",
       "stackType": "Replace",
+      "description": "Each stack reduces DMG received by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_1</span> and CRIT DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_3</span>, stackable up to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_2</span> time(s). Stacks are cleared at the start of turn or when entering the Weakness Break state.",
+      "type": "Other",
+      "statusName": "Unending Refinement+",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -63,11 +67,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack reduces DMG received by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_1</span> and CRIT DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_3</span>, stackable up to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_2</span> time(s). Stacks are cleared at the start of turn or when entering the Weakness Break state.",
-      "type": "Other",
-      "statusName": "Unending Refinement+",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -344,9 +344,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

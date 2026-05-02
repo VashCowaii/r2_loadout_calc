@@ -242,6 +242,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "latentQueue": [
+            "TV_01_EliteFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Pre-Death [Owner]",
@@ -315,16 +318,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "TV_01_EliteFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__868255192\">Monster_W3_TV_01_SummonMonsterEnd</a>",
           "stackType": "Replace",
+          "latentQueue": [
+            "TV_01_EliteFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Action End [Owner]",
@@ -340,10 +342,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "TV_01_EliteFlag"
           ]
         }
       ]
@@ -705,6 +703,7 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1515699713\">Monster_W4_Herta_SummonMonsterKillTogether</a>",
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -736,10 +735,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -801,9 +797,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1041,6 +1035,7 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1515699713\">Monster_W4_Herta_SummonMonsterKillTogether</a>",
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1072,10 +1067,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1123,9 +1115,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1236,9 +1226,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -70
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",

@@ -74,9 +74,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1592345722\">Enemy_W1_CocoliaP2_FirstSummonSpecial</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1592345722\">Enemy_W1_CocoliaP2_FirstSummonSpecial</a>"
         },
         {
           "name": "Modifier Construction",
@@ -96,9 +94,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -187,9 +183,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -246,9 +240,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -306,9 +298,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -336,9 +326,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -350,9 +338,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -385,9 +371,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -424,6 +408,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak"
           ],
+          "description": "Cocolia, Mother of Deception's Toughness cannot be reduced while there are enemies on the field.",
+          "type": "Buff",
+          "effectName": "Weakness Protected",
+          "statusName": "Weakness Protected",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -450,11 +438,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Cocolia, Mother of Deception's Toughness cannot be reduced while there are enemies on the field.",
-          "type": "Buff",
-          "effectName": "Weakness Protected",
-          "statusName": "Weakness Protected"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -565,9 +549,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -773,6 +755,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1981362800\">Enemy_W1_CocoliaP2_FinalPhase_SpeedUp</a>",
+          "stackData": [
+            "MDF_SpeedDelta"
+          ],
+          "latentQueue": [
+            "Cocolia_AICounter"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -795,12 +783,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedDelta"
-          ],
-          "latentQueue": [
-            "Cocolia_AICounter"
           ]
         },
         {
@@ -810,9 +792,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -949,6 +929,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1894460121\">Enemy_W1_CocoliaP2_TauntResistanceDown</a>",
+          "latentQueue": [
+            "Cocolia_AICounter",
+            "Cocolia_Tips_Taunt"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -964,11 +948,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Cocolia_AICounter",
-            "Cocolia_Tips_Taunt"
           ]
         },
         {
@@ -1081,9 +1060,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1093,6 +1070,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__964527705\">Enemy_W1_CocoliaP2_PartController</a>",
           "counter": 1,
+          "latentQueue": [
+            "Cocolia_AICounter",
+            "Cocolia_Tips_Taunt"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1204,11 +1185,6 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Cocolia_AICounter",
-            "Cocolia_Tips_Taunt"
           ]
         }
       ]
@@ -1471,9 +1447,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1545,9 +1519,7 @@ const compositeAbilityObject = {
                 "Deleted bullshit"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1635,9 +1607,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1649,9 +1619,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2145,13 +2113,15 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1681589484\">Enemy_W1_CocoliaP2_Ability08_Charge</a>[<span class=\"descriptionNumberColor\">The Creation's Prelude</span>]",
+          "description": "The next attack will cause Last Choir of Genesis to all targets.",
+          "type": "Other",
+          "effectName": "The Creation's Prelude",
+          "statusName": "The Creation's Prelude",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2211,13 +2181,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The next attack will cause Last Choir of Genesis to all targets.",
-          "type": "Other",
-          "effectName": "The Creation's Prelude",
-          "statusName": "The Creation's Prelude"
+          ]
         }
       ]
     },
@@ -3142,9 +3106,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3153,6 +3115,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1780808632\">Enemy_W1_CocoliaP2_MarkPlayer10_Controller</a>",
+          "latentQueue": [
+            "Cocolia_AICounter",
+            "Cocolia_Tips_Taunt"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3200,11 +3166,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Cocolia_AICounter",
-            "Cocolia_Tips_Taunt"
           ]
         },
         {
@@ -3346,13 +3307,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1361193715\">Enemy_W1_CocoliaP2_SpinSpeedController</a>",
+          "latentQueue": [
+            "Cocolia_AICounter",
+            "Cocolia_Tips_Taunt"
+          ],
           "execute": [
             {
               "eventTrigger": "When Put in Deathstate Limbo"
@@ -3363,25 +3326,19 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "End Broken State [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Cocolia_AICounter",
-            "Cocolia_Tips_Taunt"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2030503230\">Enemy_W1_CocoliaP2_EnvironmentEffect_ALL</a>",
+          "latentQueue": [
+            "Cocolia_AICounter",
+            "Cocolia_Tips_Taunt"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Cocolia_AICounter",
-            "Cocolia_Tips_Taunt"
           ]
         },
         {
@@ -3391,22 +3348,19 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-856191872\">Enemy_W1_CocoliaP2_EnvironmentEffect_01</a>",
+          "latentQueue": [
+            "Cocolia_AICounter",
+            "Cocolia_Tips_Taunt"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Cocolia_AICounter",
-            "Cocolia_Tips_Taunt"
           ]
         },
         {
@@ -3472,9 +3426,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3483,23 +3435,19 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
+          "description": "%CasterName will focus attacks on this target.",
+          "type": "Other",
+          "effectName": "Harbinger of Annihilation",
+          "statusName": "Harbinger of Annihilation",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "%CasterName will focus attacks on this target.",
-          "type": "Other",
-          "effectName": "Harbinger of Annihilation",
-          "statusName": "Harbinger of Annihilation"
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1444596959\">Enemy_W1_CocoliaP2_Weekly</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1444596959\">Enemy_W1_CocoliaP2_Weekly</a>"
         }
       ],
       "references": []

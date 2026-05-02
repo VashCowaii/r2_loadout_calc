@@ -338,9 +338,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -421,9 +419,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -55
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -613,6 +609,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">#SkillP01_P1_SpeedUpRatio</span>.",
+          "type": "Buff",
+          "statusName": "Somatotypical Helix",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -635,10 +634,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">#SkillP01_P1_SpeedUpRatio</span>.",
-          "type": "Buff",
-          "statusName": "Somatotypical Helix"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1201,9 +1197,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1319,6 +1313,10 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__678689072\">RuanMei_Ability03_Area_Eidolon1_Caster</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">#Skill03_P1_PenetrateRatio</span>. When dealing DMG, ignores <span class=\"descriptionNumberColor\">#SkillRank_Rank01_P1_IgnoreDEFRatio</span> of the target's DEF.",
+          "type": "Buff",
+          "effectName": "All-Type RES PEN Boost",
+          "statusName": "Petals to Stream, Repose in Dream",
           "variableValueChange": [
             {
               "name": "Variable Value Changes",
@@ -1359,17 +1357,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">#Skill03_P1_PenetrateRatio</span>. When dealing DMG, ignores <span class=\"descriptionNumberColor\">#SkillRank_Rank01_P1_IgnoreDEFRatio</span> of the target's DEF.",
-          "type": "Buff",
-          "effectName": "All-Type RES PEN Boost",
-          "statusName": "Petals to Stream, Repose in Dream"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-995060554\">RuanMei_Ability03_Area_Caster</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">#Skill03_P1_PenetrateRatio</span>.",
+          "type": "Buff",
+          "effectName": "All-Type RES PEN Boost",
+          "statusName": "Petals to Stream, Repose in Dream",
           "variableValueChange": [
             {
               "name": "Variable Value Changes",
@@ -1410,11 +1408,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">#Skill03_P1_PenetrateRatio</span>.",
-          "type": "Buff",
-          "effectName": "All-Type RES PEN Boost",
-          "statusName": "Petals to Stream, Repose in Dream"
+          ]
         }
       ],
       "targetObjectData": {
@@ -1563,6 +1557,10 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1509368163\">RuanMei_Ability02_Area_Caster</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">Skill02_P1_DamageAddedRatioFinal</span>. Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">#Skill02_P2_StanceBreakAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "Boost DMG and Weakness Break Efficiency",
+          "statusName": "Overtone",
           "variableValueChange": [
             {
               "name": "Variable Value Changes",
@@ -1614,11 +1612,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">Skill02_P1_DamageAddedRatioFinal</span>. Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">#Skill02_P2_StanceBreakAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "Boost DMG and Weakness Break Efficiency",
-          "statusName": "Overtone"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1846,9 +1840,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1986,7 +1978,6 @@ const compositeAbilityObject = {
             "Skill02_P1_DamageAddedRatio_Friend",
             "Skill02_P2_StanceBreakAddedRatio_Friend"
           ],
-          "latentQueue": [],
           "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">Skill02_P1_DamageAddedRatio_Friend</span>. Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">Skill02_P2_StanceBreakAddedRatio_Friend</span>.",
           "type": "Buff",
           "effectName": "Boost DMG and Weakness Break Efficiency",
@@ -2046,9 +2037,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2061,6 +2050,10 @@ const compositeAbilityObject = {
             "BreakExtend",
             "RemoveWhenCasterDead"
           ],
+          "description": "When enemy targets attempt to recover from the Weakness Break state, prolong the duration of their Weakness Break state and deal Ice Break DMG to them.",
+          "type": "Debuff",
+          "effectName": "Weakness Break Extension",
+          "statusName": "Thanatoplum Rebloom",
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Owner]",
@@ -2308,11 +2301,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When enemy targets attempt to recover from the Weakness Break state, prolong the duration of their Weakness Break state and deal Ice Break DMG to them.",
-          "type": "Debuff",
-          "effectName": "Weakness Break Extension",
-          "statusName": "Thanatoplum Rebloom"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2420,6 +2409,54 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1385395722\">RuanMei_PassiveArea</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "Skill03_P1_PenetrateRatio"
+          ],
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"806368907\">RuanMei_PassiveArea_PenetrateUP</a>",
+              "aliveOnly": "True",
+              "haloStatus": true,
+              "valuePerStack": {
+                "Ability03_P1_PenetrateRatio": {
+                  "operator": "Variables[0] (0.25) || RETURN",
+                  "displayLines": "0.25",
+                  "constants": [],
+                  "variables": [
+                    0.25
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"68128116\">RuanMei_Ability03_Eidolon1_DefenceIgnore</a>",
+              "haloStatus": true,
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 1
+              },
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.2) || RETURN",
+                  "displayLines": "0.2",
+                  "constants": [],
+                  "variables": [
+                    0.2
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2679,61 +2716,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "Skill03_P1_PenetrateRatio"
-          ],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"806368907\">RuanMei_PassiveArea_PenetrateUP</a>",
-              "aliveOnly": "True",
-              "haloStatus": true,
-              "valuePerStack": {
-                "Ability03_P1_PenetrateRatio": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectables}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"68128116\">RuanMei_Ability03_Eidolon1_DefenceIgnore</a>",
-              "haloStatus": true,
-              "conditions": {
-                "name": "Eidolon Activated",
-                "eidolon": 1
-              },
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
-                }
-              }
-            }
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__353149410\">RuanMei_Eidolon4_Passive_BreakDamageAddedUp</a>[<span class=\"descriptionNumberColor\">Chatoyant Éclat</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">#SkillRank_Rank04_P1_BreakDamageAdded</span>.",
+          "type": "Buff",
+          "effectName": "Break Effect Boost",
+          "statusName": "Chatoyant Éclat",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2751,11 +2743,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">#SkillRank_Rank04_P1_BreakDamageAdded</span>.",
-          "type": "Buff",
-          "effectName": "Break Effect Boost",
-          "statusName": "Chatoyant Éclat"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2804,14 +2792,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__614915339\">RuanMei_Eidolon4_PassiveStackProperty</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "SkillRank_Rank04_P1_BreakDamageAdded"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2834,15 +2823,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "SkillRank_Rank04_P1_BreakDamageAdded"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1641844295\">RuanMei_AttackBreakEnemyAttackUp</a>[<span class=\"descriptionNumberColor\">Reedside Promenade</span>]",
+          "stackData": [
+            "SkillRank_Rank02_P1_AttackUpRatio"
+          ],
+          "description": "When dealing DMG to enemy targets with Weakness Break, increases ATK by <span class=\"descriptionNumberColor\">#SkillRank_Rank02_P1_AttackUpRatio</span>.",
+          "type": "Buff",
+          "statusName": "Reedside Promenade",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -2872,19 +2863,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "SkillRank_Rank02_P1_AttackUpRatio"
-          ],
-          "latentQueue": [],
-          "description": "When dealing DMG to enemy targets with Weakness Break, increases ATK by <span class=\"descriptionNumberColor\">#SkillRank_Rank02_P1_AttackUpRatio</span>.",
-          "type": "Buff",
-          "statusName": "Reedside Promenade"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__68128116\">RuanMei_Ability03_Eidolon1_DefenceIgnore</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "Skill03_P1_PenetrateRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -2901,12 +2891,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "Skill03_P1_PenetrateRatio"
           ]
         },
         {
@@ -3245,13 +3229,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-780236472\">RuanMei_Tree02_RecoverSP</a>",
+          "stackData": [
+            "SkillTree_PointB2_P1_SP"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -3274,15 +3259,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "SkillTree_PointB2_P1_SP"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-23155683\">RuanMei_BreakDamageAdded</a>[<span class=\"descriptionNumberColor\">Inert Respiration</span>]",
+          "stackData": [
+            "SkillTree_PointB1_P1_BreakDamageAdded"
+          ],
+          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">SkillTree_PointB1_P1_BreakDamageAdded</span>.",
+          "type": "Buff",
+          "statusName": "Inert Respiration",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3305,14 +3292,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "SkillTree_PointB1_P1_BreakDamageAdded"
-          ],
-          "latentQueue": [],
-          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">SkillTree_PointB1_P1_BreakDamageAdded</span>.",
-          "type": "Buff",
-          "statusName": "Inert Respiration"
+          ]
         }
       ],
       "references": []

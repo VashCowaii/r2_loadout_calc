@@ -12,6 +12,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1075380141\">Enemy_XP_Element_TeamBonus_Frost</a>",
       "stackType": "Replace",
+      "duration": 3,
+      "stackLimit": 30,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -123,10 +126,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "duration": 3,
-      "stackLimit": 30,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -197,6 +197,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-376212446\">Enemy_W1_Mecha_TeamBonus_AttackUp</a>",
       "stackType": "Replace",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -238,13 +239,13 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__411638775\">Enemy_W1_Mecha_TeamBonus_SpeedUp</a>",
       "stackType": "Replace",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -286,8 +287,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -527,6 +527,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1265575978\">Enemy_W2_Abomi_TeamBonus_BuffUp</a>",
       "stackType": "Replace",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -623,8 +624,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -812,6 +812,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-980276025\">Enemy_WRSoldier_01_UnFeverResistance</a>[<span class=\"descriptionNumberColor\">Helmet and Armor</span>]",
+      "description": "Receives <span class=\"descriptionNumberColor\">MDF_AllDamageTypeResistance</span> less DMG. This effect is removed when Weakness is broken.",
+      "type": "Buff",
+      "effectName": "Helmet and Armor",
+      "statusName": "Helmet and Armor",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -834,11 +838,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Receives <span class=\"descriptionNumberColor\">MDF_AllDamageTypeResistance</span> less DMG. This effect is removed when Weakness is broken.",
-      "type": "Buff",
-      "effectName": "Helmet and Armor",
-      "statusName": "Helmet and Armor"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -909,6 +909,7 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__982542315\">Boss_Cocolia_P2_GlobalShield</a>",
+      "useEntitySnapshot": true,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -931,8 +932,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true
+      ]
     },
     {
       "name": "Modifier Construction",

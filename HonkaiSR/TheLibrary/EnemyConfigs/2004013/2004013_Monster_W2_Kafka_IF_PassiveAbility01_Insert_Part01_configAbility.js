@@ -139,27 +139,25 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__410285383\">Monster_W2_Kafka_IF_BeControled</a>",
+      "latentQueue": [
+        "Insert_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Insert_Flag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>",
+      "latentQueue": [
+        "Insert_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Insert_Flag"
       ]
     }
   ]

@@ -128,9 +128,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1148,6 +1146,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1150044679\">Argenti_Eidolon2_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Agate's Humility</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Agate's Humility",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1170,11 +1172,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Agate's Humility"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1252,9 +1250,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1297,9 +1293,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1339,9 +1333,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1399,9 +1391,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1431,14 +1421,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__68075206\">Argenti_Passive_Charge</a>[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CritChance</span>.",
+          "type": "Buff",
+          "effectName": "Apotheosis",
+          "statusName": "Apotheosis",
+          "stackLimit": 10,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1526,15 +1520,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CritChance</span>.",
-          "type": "Buff",
-          "effectName": "Apotheosis",
-          "statusName": "Apotheosis",
-          "stackLimit": 10,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1544,9 +1530,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1635,9 +1619,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

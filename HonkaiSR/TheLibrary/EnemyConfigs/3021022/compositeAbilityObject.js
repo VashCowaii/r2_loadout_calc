@@ -694,9 +694,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1707,9 +1705,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2204,9 +2200,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>"
         }
       ]
     },
@@ -2525,9 +2519,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2548,6 +2540,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Shield"
           ],
+          "stackData": [
+            "MDF_ShowValue"
+          ],
+          "description": "Gains a Shield that can offset DMG.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Shield",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2600,15 +2599,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Ability Use [Owner]: End"
             }
-          ],
-          "stackData": [
-            "MDF_ShowValue"
-          ],
-          "latentQueue": [],
-          "description": "Gains a Shield that can offset DMG.",
-          "type": "Buff",
-          "effectName": "Shield",
-          "statusName": "Shield"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3185,6 +3176,10 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "RemoveWhenCasterUnstage"
           ],
+          "description": "Can only select %CasterName as the target to attack.",
+          "type": "Debuff",
+          "effectName": "Taunt",
+          "statusName": "Taunt",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -3369,13 +3364,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Can only select %CasterName as the target to attack.",
-          "type": "Debuff",
-          "effectName": "Taunt",
-          "statusName": "Taunt"
+          ]
         }
       ],
       "references": []

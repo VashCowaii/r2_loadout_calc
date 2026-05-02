@@ -52,6 +52,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1949316860\">Enemy_W2_Lycan_01_RageStatusEnhance</a>[<span class=\"descriptionNumberColor\">Moon Rage</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Enters the Moon Rage state and can take an extra action every turn. After attacking a target, restores this unit's HP. This state will be removed when this unit is Weakness Broken.",
+      "type": "Buff",
+      "effectName": "Mending Attack",
+      "statusName": "Moon Rage",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -171,16 +175,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Enters the Moon Rage state and can take an extra action every turn. After attacking a target, restores this unit's HP. This state will be removed when this unit is Weakness Broken.",
-      "type": "Buff",
-      "effectName": "Mending Attack",
-      "statusName": "Moon Rage"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1326641454\">Enemy_W2_Lycan_01_RageStatus</a>[<span class=\"descriptionNumberColor\">Moon Rage</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. After attacking an allied target, restores this unit's HP. This state will be removed when this unit is Weakness Broken.",
+      "type": "Buff",
+      "effectName": "Mending Attack",
+      "statusName": "Moon Rage",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -308,11 +312,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. After attacking an allied target, restores this unit's HP. This state will be removed when this unit is Weakness Broken.",
-      "type": "Buff",
-      "effectName": "Mending Attack",
-      "statusName": "Moon Rage"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -404,9 +404,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

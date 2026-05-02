@@ -93,9 +93,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1775073303\">Monster_W2_HuanlongPart_01_MuteHitFly</a>",
       "modifierFlags": [
         "MuteHitFly"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

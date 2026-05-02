@@ -43,6 +43,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1013040664\">LC_21054_Sub</a>[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Outgoing Healing increases by <span class=\"descriptionNumberColor\">#SkillEquip_P2_HealRatio</span>.",
+          "type": "Buff",
+          "effectName": "Outgoing Healing Boost",
+          "statusName": "Outgoing Healing Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -65,11 +69,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Outgoing Healing increases by <span class=\"descriptionNumberColor\">#SkillEquip_P2_HealRatio</span>.",
-          "type": "Buff",
-          "effectName": "Outgoing Healing Boost",
-          "statusName": "Outgoing Healing Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -129,9 +129,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

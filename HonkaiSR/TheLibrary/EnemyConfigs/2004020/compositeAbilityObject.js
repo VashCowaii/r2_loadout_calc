@@ -168,9 +168,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -343,9 +341,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Leave Battle"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -412,9 +408,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -658,9 +652,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -905,9 +897,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2779,9 +2769,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2800,6 +2788,11 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1085065543\">W2_YanQing_BattleScore7</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "W2_Yanqing_00_AICounter",
+            "W2_Yanqing_00_AIPhase",
+            "W2_Yanqing_00_WeakPointState"
           ],
           "execute": [
             {
@@ -2833,12 +2826,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_AICounter",
-            "W2_Yanqing_00_AIPhase",
-            "W2_Yanqing_00_WeakPointState"
           ]
         },
         {
@@ -2846,6 +2833,11 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1101843162\">W2_YanQing_BattleScore6</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "W2_Yanqing_00_AICounter",
+            "W2_Yanqing_00_AIPhase",
+            "W2_Yanqing_00_WeakPointState"
           ],
           "execute": [
             {
@@ -2884,12 +2876,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_AICounter",
-            "W2_Yanqing_00_AIPhase",
-            "W2_Yanqing_00_WeakPointState"
           ]
         },
         {
@@ -2897,6 +2883,11 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1118620781\">W2_YanQing_BattleScore5</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "W2_Yanqing_00_AICounter",
+            "W2_Yanqing_00_AIPhase",
+            "W2_Yanqing_00_WeakPointState"
           ],
           "execute": [
             {
@@ -2935,12 +2926,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_AICounter",
-            "W2_Yanqing_00_AIPhase",
-            "W2_Yanqing_00_WeakPointState"
           ]
         },
         {
@@ -2948,6 +2933,11 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1135398400\">W2_YanQing_BattleScore4</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "W2_Yanqing_00_AICounter",
+            "W2_Yanqing_00_AIPhase",
+            "W2_Yanqing_00_WeakPointState"
           ],
           "execute": [
             {
@@ -2986,12 +2976,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_AICounter",
-            "W2_Yanqing_00_AIPhase",
-            "W2_Yanqing_00_WeakPointState"
           ]
         },
         {
@@ -2999,6 +2983,11 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1017955067\">W2_YanQing_BattleScore3</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "W2_Yanqing_00_AICounter",
+            "W2_Yanqing_00_AIPhase",
+            "W2_Yanqing_00_WeakPointState"
           ],
           "execute": [
             {
@@ -3032,12 +3021,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_AICounter",
-            "W2_Yanqing_00_AIPhase",
-            "W2_Yanqing_00_WeakPointState"
           ]
         },
         {
@@ -3045,6 +3028,11 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1034732686\">W2_YanQing_BattleScore2</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "W2_Yanqing_00_AICounter",
+            "W2_Yanqing_00_AIPhase",
+            "W2_Yanqing_00_WeakPointState"
           ],
           "execute": [
             {
@@ -3078,12 +3066,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_AICounter",
-            "W2_Yanqing_00_AIPhase",
-            "W2_Yanqing_00_WeakPointState"
           ]
         },
         {
@@ -3091,6 +3073,11 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1051510305\">W2_YanQing_BattleScore1</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "W2_Yanqing_00_AICounter",
+            "W2_Yanqing_00_AIPhase",
+            "W2_Yanqing_00_WeakPointState"
           ],
           "execute": [
             {
@@ -3124,12 +3111,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_AICounter",
-            "W2_Yanqing_00_AIPhase",
-            "W2_Yanqing_00_WeakPointState"
           ]
         },
         {
@@ -3139,9 +3120,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3161,9 +3140,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3191,9 +3168,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3202,9 +3177,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3213,9 +3186,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3291,9 +3262,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3305,9 +3274,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3327,9 +3294,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3617,6 +3582,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__90667768\">DanhengIL_EXAbility01_LV2</a>",
+          "latentQueue": [
+            "DanhengIL_MainBattle_Counter"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3693,15 +3661,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DanhengIL_MainBattle_Counter"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__141000625\">DanhengIL_EXAbility01_LV1</a>",
+          "latentQueue": [
+            "W2_Yanqing_00_MainBattle_Flag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3786,10 +3753,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_MainBattle_Flag"
           ]
         },
         {
@@ -3835,29 +3798,27 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__310423138\">DanhengIL_EXAbility01_Diable_Ultra</a>",
+          "latentQueue": [
+            "DanhengIL_MainBattle_Counter"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DanhengIL_MainBattle_Counter"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__684006930\">Enemy_W2_Yanqing_StandByEffect</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            }
-          ],
-          "stackData": [],
           "latentQueue": [
             "W2_Yanqing_00_AICounter",
             "W2_Yanqing_00_AIPhase",
             "W2_Yanqing_00_WeakPointState"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            }
           ]
         },
         {
@@ -3979,13 +3940,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1466013786\">Enemy_W2_Yanqing_StandBySwordEffect_Controller</a>",
+          "latentQueue": [
+            "W2_Yanqing_00_AICounter",
+            "W2_Yanqing_00_AIPhase",
+            "W2_Yanqing_00_WeakPointState"
+          ],
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -4194,12 +4158,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_AICounter",
-            "W2_Yanqing_00_AIPhase",
-            "W2_Yanqing_00_WeakPointState"
           ]
         },
         {
@@ -4302,9 +4260,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4324,9 +4280,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4344,6 +4298,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2084667486\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_03</a>[<span class=\"descriptionNumberColor\">Formation Core</span>]",
+          "description": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
+          "type": "Other",
+          "effectName": "Formation Core",
+          "statusName": "Formation Core",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4500,17 +4458,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
-          "type": "Other",
-          "effectName": "Formation Core",
-          "statusName": "Formation Core"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2101445105\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_02</a>[<span class=\"descriptionNumberColor\">Formation Core</span>]",
+          "description": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
+          "type": "Other",
+          "effectName": "Formation Core",
+          "statusName": "Formation Core",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4667,17 +4623,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
-          "type": "Other",
-          "effectName": "Formation Core",
-          "statusName": "Formation Core"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2051112248\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_01</a>[<span class=\"descriptionNumberColor\">Formation Core</span>]",
+          "description": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
+          "type": "Other",
+          "effectName": "Formation Core",
+          "statusName": "Formation Core",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4834,13 +4788,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
-          "type": "Other",
-          "effectName": "Formation Core",
-          "statusName": "Formation Core"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5016,9 +4964,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5027,6 +4973,10 @@ const compositeAbilityObject = {
             "MuteBreak",
             "MuteHitH"
           ],
+          "description": "Yanqing's Toughness cannot be reduced. Destroy all of Yanqing's Flying Swords to dispel that effect and cause DMG to Yanqing.",
+          "type": "Other",
+          "effectName": "Sword Formation",
+          "statusName": "Sword Formation",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -5168,13 +5118,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Yanqing's Toughness cannot be reduced. Destroy all of Yanqing's Flying Swords to dispel that effect and cause DMG to Yanqing.",
-          "type": "Other",
-          "effectName": "Sword Formation",
-          "statusName": "Sword Formation"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5183,6 +5127,13 @@ const compositeAbilityObject = {
             "MuteBreak",
             "MuteHitH"
           ],
+          "stackData": [
+            "MDF_SpeedDelta"
+          ],
+          "description": "Yanqing's Toughness cannot be reduced, and his SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedDelta</span>. Destroy all of Yanqing's Flying Swords to dispel this effect and cause DMG to Yanqing.",
+          "type": "Other",
+          "effectName": "Sword Formation",
+          "statusName": "Sword Formation",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -5354,21 +5305,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedDelta"
-          ],
-          "latentQueue": [],
-          "description": "Yanqing's Toughness cannot be reduced, and his SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedDelta</span>. Destroy all of Yanqing's Flying Swords to dispel this effect and cause DMG to Yanqing.",
-          "type": "Other",
-          "effectName": "Sword Formation",
-          "statusName": "Sword Formation"
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1328693800\">Enemy_W2_Yanqing_Ability02_DuringSkill</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1328693800\">Enemy_W2_Yanqing_Ability02_DuringSkill</a>"
         },
         {
           "name": "Modifier Construction",
@@ -5403,9 +5344,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5444,9 +5383,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5464,9 +5401,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5531,9 +5466,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5558,9 +5491,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5589,9 +5520,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5600,9 +5529,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Choice Window [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5617,9 +5544,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

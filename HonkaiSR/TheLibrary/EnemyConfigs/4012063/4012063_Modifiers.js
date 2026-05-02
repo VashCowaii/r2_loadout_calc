@@ -74,9 +74,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -100,13 +98,14 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__323182003\">Monster_W4_HearsePart_Soul_B</a>[<span class=\"descriptionNumberColor\">Conquer</span>]",
+      "description": "\"Mydeimos, Lance of Fury\" conquered %CasterName's soul and will take <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span> more DMG from %CasterName's attacks. After being defeated by targets, dispel \"Conquered\" on %CasterName.",
+      "type": "Other",
+      "statusName": "Conquer",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -181,14 +180,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "\"Mydeimos, Lance of Fury\" conquered %CasterName's soul and will take <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span> more DMG from %CasterName's attacks. After being defeated by targets, dispel \"Conquered\" on %CasterName.",
-      "type": "Other",
-      "statusName": "Conquer"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1774231954\">Monster_W4_HearsePart_Soul</a>[<span class=\"descriptionNumberColor\">Conquer</span>]",
+      "description": "\"The Giver, Master of Legions, Lance of Fury\" conquered %CasterName's soul and will take <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span> more DMG from %CasterName's attacks. After being defeated by targets, dispel \"Conquered\" on %CasterName.",
+      "type": "Other",
+      "statusName": "Conquer",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -263,14 +262,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "\"The Giver, Master of Legions, Lance of Fury\" conquered %CasterName's soul and will take <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span> more DMG from %CasterName's attacks. After being defeated by targets, dispel \"Conquered\" on %CasterName.",
-      "type": "Other",
-      "statusName": "Conquer"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__241895029\">Monster_W4_HearsePart_BlackBlood_Enhance</a>[<span class=\"descriptionNumberColor\">Conquered Eon</span>]",
+      "description": "Permanently reduces Max HP that can be restored by <span class=\"descriptionNumberColor\">MDF_DirtyHPRatio</span>.",
+      "type": "Other",
+      "effectName": "Conquered Eon",
+      "statusName": "Conquered Eon",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -293,15 +293,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Permanently reduces Max HP that can be restored by <span class=\"descriptionNumberColor\">MDF_DirtyHPRatio</span>.",
-      "type": "Other",
-      "effectName": "Conquered Eon",
-      "statusName": "Conquered Eon"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1382334396\">Monster_W4_HearsePart_BlackBlood</a>[<span class=\"descriptionNumberColor\">Conquered</span>]",
+      "description": "Decreases Maximum Restorable HP by <span class=\"descriptionNumberColor\">MDF_DirtyHPRatio</span>. You can reclaim a Tested Spirit by attacking the \"Conquer or Be Conquered\" corresponding to this unit.",
+      "type": "Other",
+      "effectName": "Conquered",
+      "statusName": "Conquered",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -324,11 +324,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Decreases Maximum Restorable HP by <span class=\"descriptionNumberColor\">MDF_DirtyHPRatio</span>. You can reclaim a Tested Spirit by attacking the \"Conquer or Be Conquered\" corresponding to this unit.",
-      "type": "Other",
-      "effectName": "Conquered",
-      "statusName": "Conquered"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1256,9 +1252,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

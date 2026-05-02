@@ -43,6 +43,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__703724880\">LC_23030_Sub</a>[<span class=\"descriptionNumberColor\">Firedance</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "DMG dealt by Follow-Up ATK increases by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "Follow-Up ATK DMG Boost",
+          "statusName": "Firedance",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -94,11 +98,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt by Follow-Up ATK increases by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "Follow-Up ATK DMG Boost",
-          "statusName": "Firedance"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -157,9 +157,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

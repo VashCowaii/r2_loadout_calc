@@ -12,6 +12,11 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1702970664\">Enemy_W5_Vtuber_DamageAdd</a>[<span class=\"descriptionNumberColor\">Enemy Gratuity</span>]",
       "stackType": "Replace",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Enemy Gratuity",
+      "stackLimit": 999,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -64,17 +69,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Enemy Gratuity",
-      "stackLimit": 999,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-869771857\">Enemy_W5_VtuberPart02_Charge</a>[<span class=\"descriptionNumberColor\">Enemy Popularity</span>]",
       "stackType": "Replace",
+      "description": "After being attacked, \"Enemy Popularity\" decreases and action advances. During the next action, removes \"Enemy Gratuity\" from sub-field enemy targets based on the amount of reduced \"Enemy Popularity.\"",
+      "type": "Other",
+      "effectName": "Diss",
+      "statusName": "Enemy Popularity",
+      "stackLimit": 999,
+      "addStacksPerTrigger": -1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -517,19 +523,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "After being attacked, \"Enemy Popularity\" decreases and action advances. During the next action, removes \"Enemy Gratuity\" from sub-field enemy targets based on the amount of reduced \"Enemy Popularity.\"",
-      "type": "Other",
-      "effectName": "Diss",
-      "statusName": "Enemy Popularity",
-      "stackLimit": 999,
-      "addStacksPerTrigger": -1
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-495125483\">Enemy_W5_VtuberPart02_Charge_Insert</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-495125483\">Enemy_W5_VtuberPart02_Charge_Insert</a>"
     },
     {
       "name": "Modifier Construction",
@@ -547,15 +545,11 @@ const configAbility = {
         {
           "eventTrigger": "End Broken State [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1182558090\">Enemy_W5_VtuberPart02_00</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1182558090\">Enemy_W5_VtuberPart02_00</a>"
     }
   ],
   "references": []

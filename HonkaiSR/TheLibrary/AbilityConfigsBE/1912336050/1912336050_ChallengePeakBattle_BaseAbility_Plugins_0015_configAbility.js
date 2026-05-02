@@ -18,6 +18,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1429915339\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0015_03</a>[<span class=\"descriptionNumberColor\">Logistics Boost</span>]",
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0015_ADF_2</span>.",
+      "type": "Other",
+      "statusName": "Logistics Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,14 +43,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0015_ADF_2</span>.",
-      "type": "Other",
-      "statusName": "Logistics Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1413137720\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0015_02</a>[<span class=\"descriptionNumberColor\">Logistics Boost</span>]",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0015_ADF_1</span>.",
+      "type": "Other",
+      "statusName": "Logistics Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -70,10 +73,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0015_ADF_1</span>.",
-      "type": "Other",
-      "statusName": "Logistics Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -156,9 +156,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

@@ -12,6 +12,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2005029779\">Serval_Tree03_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "ATK Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -34,15 +41,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "ATK Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -117,6 +116,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__731548834\">Serval_Eidolon6_Check</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "description": "Roaring Thunderclap and Lightning Flash deal <span class=\"descriptionNumberColor\">MAvatar_Serval_00_Rank06_ShowRatio</span> more DMG.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -178,13 +181,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Roaring Thunderclap and Lightning Flash deal <span class=\"descriptionNumberColor\">MAvatar_Serval_00_Rank06_ShowRatio</span> more DMG.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost"
+      ]
     }
   ],
   "references": []

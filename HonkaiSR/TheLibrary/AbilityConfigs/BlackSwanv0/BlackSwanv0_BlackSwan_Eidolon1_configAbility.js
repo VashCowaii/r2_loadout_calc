@@ -21,6 +21,9 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "Lightning RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "statusName": "Seven Pillars of Wisdom",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -45,10 +48,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Lightning RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "statusName": "Seven Pillars of Wisdom"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -57,6 +57,9 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "Fire RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "statusName": "Seven Pillars of Wisdom",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -81,10 +84,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Fire RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "statusName": "Seven Pillars of Wisdom"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -93,6 +93,9 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "Physical RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "statusName": "Seven Pillars of Wisdom",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -117,10 +120,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Physical RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "statusName": "Seven Pillars of Wisdom"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -129,6 +129,9 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "Wind RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "statusName": "Seven Pillars of Wisdom",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -153,10 +156,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Wind RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "statusName": "Seven Pillars of Wisdom"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1168,9 +1168,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

@@ -43,6 +43,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-940045420\">LC_23038_AuraBonus_Buff</a>[<span class=\"descriptionNumberColor\">Presage</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "Presage",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -65,39 +69,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "Presage"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-327496768\">LC_23038_AuraBonus</a>[<span class=\"descriptionNumberColor\">Presage</span>]",
           "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
           "description": "Increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Buff",
           "effectName": "CRIT DMG Boost",
@@ -121,6 +98,29 @@ const compositeAbilityObject = {
                   ]
                 }
               }
+            }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
             }
           ]
         },
@@ -271,9 +271,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

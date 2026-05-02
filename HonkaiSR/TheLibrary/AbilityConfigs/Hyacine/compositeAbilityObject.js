@@ -50,6 +50,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1998064298\">Hyacine_Maze_AddMaxHp</a>[<span class=\"descriptionNumberColor\">Day So Right, Life So Fine!</span>]",
+          "description": "Max HP increases by <span class=\"descriptionNumberColor\">_MaxHPAdd</span>.",
+          "type": "Buff",
+          "statusName": "Day So Right, Life So Fine!",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -72,10 +75,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Max HP increases by <span class=\"descriptionNumberColor\">_MaxHPAdd</span>.",
-          "type": "Buff",
-          "statusName": "Day So Right, Life So Fine!"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -148,9 +148,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -618,9 +616,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1258,6 +1254,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__593318455\">Hyacine_Ability03_MaxHP_Grow</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
+          "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> plus <span class=\"descriptionNumberColor\">MDF_MaxHPValue</span>.",
+          "type": "Buff",
+          "statusName": "After Rain",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1323,10 +1322,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> plus <span class=\"descriptionNumberColor\">MDF_MaxHPValue</span>.",
-          "type": "Buff",
-          "statusName": "After Rain"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1398,15 +1394,69 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_HaloCurrentHP",
+            "MDF_HaloMaxHPRatio",
+            "MDF_HaloMaxHPValue",
+            "MDF_ExtraMaxHPRatio"
+          ],
+          "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> plus <span class=\"descriptionNumberColor\">MDF_HaloMaxHPValue</span>.",
+          "type": "Buff",
+          "effectName": "After Rain",
+          "statusName": "After Rain",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}} - {{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"593318455\">Hyacine_Ability03_MaxHP_Grow</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
+              "aliveOnly": "False",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_CurrentHP": {
+                  "operator": "Variables[0] (_CurrenMaxtHP) || RETURN",
+                  "displayLines": "_CurrenMaxtHP",
+                  "constants": [],
+                  "variables": [
+                    "_CurrenMaxtHP"
+                  ]
+                },
+                "MDF_MaxHPRatio": {
+                  "operator": "Variables[0] (0.3) || RETURN",
+                  "displayLines": "0.3",
+                  "constants": [],
+                  "variables": [
+                    0.3
+                  ]
+                },
+                "MDF_MaxHPValue": {
+                  "operator": "Variables[0] (600) || RETURN",
+                  "displayLines": "600",
+                  "constants": [],
+                  "variables": [
+                    600
+                  ]
+                },
+                "MDF_ExtraMaxHPRatio": {
+                  "operator": "Variables[0] (0.5) || RETURN",
+                  "displayLines": "0.5",
+                  "constants": [],
+                  "variables": [
+                    0.5
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1679,69 +1729,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HaloCurrentHP",
-            "MDF_HaloMaxHPRatio",
-            "MDF_HaloMaxHPValue",
-            "MDF_ExtraMaxHPRatio"
-          ],
-          "latentQueue": [],
-          "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> plus <span class=\"descriptionNumberColor\">MDF_HaloMaxHPValue</span>.",
-          "type": "Buff",
-          "effectName": "After Rain",
-          "statusName": "After Rain",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectables}} - {{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"593318455\">Hyacine_Ability03_MaxHP_Grow</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
-              "aliveOnly": "False",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_CurrentHP": {
-                  "operator": "Variables[0] (_CurrenMaxtHP) || RETURN",
-                  "displayLines": "_CurrenMaxtHP",
-                  "constants": [],
-                  "variables": [
-                    "_CurrenMaxtHP"
-                  ]
-                },
-                "MDF_MaxHPRatio": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
-                },
-                "MDF_MaxHPValue": {
-                  "operator": "Variables[0] (600) || RETURN",
-                  "displayLines": "600",
-                  "constants": [],
-                  "variables": [
-                    600
-                  ]
-                },
-                "MDF_ExtraMaxHPRatio": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
-                }
-              }
-            }
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1132518124\">Hyacine_Passive_Effect</a>[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_DamageAddRatio"
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageAddRatioTotal</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "First Light Heals the World",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1783,19 +1783,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageAddRatio"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageAddRatioTotal</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "First Light Heals the World"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__931141896\">Hyacine_PointB2</a>",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1818,11 +1813,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1989,14 +1980,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1110430040\">Hyacine_PointB3_Effect</a>[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]",
           "stackType": "Replace",
+          "description": "Max HP increases by <span class=\"descriptionNumberColor\">_MaxHPAdd</span> and Outgoing Healing increases by <span class=\"descriptionNumberColor\">_HealHPRatioAdd</span>.",
+          "type": "Buff",
+          "statusName": "Tempestuous Halt",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2075,15 +2067,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Max HP increases by <span class=\"descriptionNumberColor\">_MaxHPAdd</span> and Outgoing Healing increases by <span class=\"descriptionNumberColor\">_HealHPRatioAdd</span>.",
-          "type": "Buff",
-          "statusName": "Tempestuous Halt"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1888501948\">Hyacine_PointB3</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "_SummonerHealCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2299,10 +2291,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_SummonerHealCount"
           ]
         }
       ],
@@ -2561,9 +2549,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2665,9 +2651,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2751,8 +2735,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__124089426\">Memosprite_HyacineServant_LoseHpPassive</a>",
-          "stackData": [],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -2789,13 +2771,14 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "ServantInherit_ModifierContinuation"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2026163190\">Memosprite_HyacineServant_Eidolon6_PenetrateRatio</a>[<span class=\"descriptionNumberColor\">O Sky, Heed My Plea</span>]",
+          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PenetrateRatio</span>.",
+          "type": "Buff",
+          "statusName": "O Sky, Heed My Plea",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2818,10 +2801,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PenetrateRatio</span>.",
-          "type": "Buff",
-          "statusName": "O Sky, Heed My Plea"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2829,7 +2809,6 @@ const compositeAbilityObject = {
           "stackData": [
             "MDF_PenetrateRatio"
           ],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -2859,6 +2838,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "Come Sit in My Courtyard",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2881,11 +2864,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "Come Sit in My Courtyard"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2914,9 +2893,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2955,6 +2932,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__492819159\">Memosprite_HyacineServant_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]",
           "stackType": "Replace",
+          "description": "The tally of healing: <span class=\"descriptionNumberColor\">MDF_HealValueTotal</span>",
+          "type": "Other",
+          "statusName": "Rainclouds, Time to Go!",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2978,12 +2958,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The tally of healing: <span class=\"descriptionNumberColor\">MDF_HealValueTotal</span>",
-          "type": "Other",
-          "statusName": "Rainclouds, Time to Go!"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3763,9 +3738,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

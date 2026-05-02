@@ -165,9 +165,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -298,6 +296,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2074412751\">Enemy_W1_Bronya_ListenSelfBreak</a>",
+          "latentQueue": [
+            "Bronya_SummonCounter",
+            "Bronya_SummonMode"
+          ],
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -332,11 +334,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Bronya_SummonCounter",
-            "Bronya_SummonMode"
           ]
         },
         {
@@ -345,6 +342,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak"
           ],
+          "description": "Bronya's Toughness cannot be reduced while there are enemies on the field.",
+          "type": "Buff",
+          "effectName": "Weakness Protected",
+          "statusName": "Weakness Protected",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -386,15 +387,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Bronya's Toughness cannot be reduced while there are enemies on the field.",
-          "type": "Buff",
-          "effectName": "Weakness Protected",
-          "statusName": "Weakness Protected"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__43109596\">Enemy_W1_Bronya_WeakPointProtectController</a>",
+          "latentQueue": [
+            "Bronya_SummonCounter",
+            "Bronya_SummonMode"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -569,11 +570,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Bronya_SummonCounter",
-            "Bronya_SummonMode"
           ]
         }
       ]
@@ -1075,9 +1071,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1157,14 +1151,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1747978880\">Enemy_W1_Bronya_Ability02</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1187,11 +1183,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1278,15 +1270,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>"
         }
       ],
       "references": []

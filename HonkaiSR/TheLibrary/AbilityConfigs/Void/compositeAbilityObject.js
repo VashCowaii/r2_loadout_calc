@@ -34,6 +34,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-926441489\">LC_20004_Main</a>[<span class=\"descriptionNumberColor\">Effect Hit Rate Boost</span>]",
+          "description": "Effect Hit Rate +<span class=\"descriptionNumberColor\">#SkillEquip_P1_StatusProbability</span>.",
+          "type": "Buff",
+          "effectName": "Effect Hit Rate Boost",
+          "statusName": "Effect Hit Rate Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -56,13 +60,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Effect Hit Rate +<span class=\"descriptionNumberColor\">#SkillEquip_P1_StatusProbability</span>.",
-          "type": "Buff",
-          "effectName": "Effect Hit Rate Boost",
-          "statusName": "Effect Hit Rate Boost"
+          ]
         }
       ],
       "isLightcone": true,

@@ -76,9 +76,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1243020063\">Modifier_Monster_W2_Feixiao_IF_EX01</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1243020063\">Modifier_Monster_W2_Feixiao_IF_EX01</a>"
     }
   ]
 }

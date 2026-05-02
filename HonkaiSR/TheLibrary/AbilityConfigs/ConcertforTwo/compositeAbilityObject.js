@@ -43,6 +43,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1373377156\">LC_21043_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "Replace",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DmgAddValue</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -78,11 +82,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DmgAddValue</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -390,9 +390,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

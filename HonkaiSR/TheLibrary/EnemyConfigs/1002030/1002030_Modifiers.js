@@ -24,14 +24,19 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "CurrentSupportNumber"
+      ],
+      "description": "Receives Support from %CasterName.",
+      "type": "Other",
+      "effectName": "Support Target",
+      "statusName": "Reinforced",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -143,30 +148,20 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "CurrentSupportNumber"
-      ],
-      "description": "Receives Support from %CasterName.",
-      "type": "Other",
-      "effectName": "Support Target",
-      "statusName": "Reinforced"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1385757632\">Enemy_W1_Soldier04_AbilityP01_Supporting</a>[<span class=\"descriptionNumberColor\">Support</span>]",
+      "description": "When a Supported friendly unit attacks any target, this unit will immediately launch a Follow-Up ATK on the target.",
+      "type": "Buff",
+      "effectName": "Provide Support",
+      "statusName": "Support",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "When a Supported friendly unit attacks any target, this unit will immediately launch a Follow-Up ATK on the target.",
-      "type": "Buff",
-      "effectName": "Provide Support",
-      "statusName": "Support"
+      ]
     }
   ],
   "references": []

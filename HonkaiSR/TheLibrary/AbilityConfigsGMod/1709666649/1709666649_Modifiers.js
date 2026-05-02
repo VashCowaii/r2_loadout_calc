@@ -190,6 +190,8 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2079541158\">MLevel_WB_3002528_Sub</a>",
       "stackType": "Replace",
+      "stackLimit": 20,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -261,9 +263,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 20,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -307,6 +307,8 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-677194305\">MLevel_WB_3002527_Sub</a>",
       "stackType": "Replace",
+      "stackLimit": 20,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -378,9 +380,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 20,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -516,6 +516,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2000244981\">MLevel_WB_3002523_Sub</a>",
       "stackType": "Multiple",
+      "stackData": [
+        "MDF_1"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -540,11 +543,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_1"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -627,6 +626,8 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1602125537\">MLevel_WB_3002503_Sub</a>",
       "stackType": "Replace",
+      "stackLimit": 10,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -662,9 +663,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 10,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -777,6 +776,8 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__77193482\">MLevel_WB_3002502_Sub</a>",
       "stackType": "Replace",
+      "stackLimit": 10,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -812,9 +813,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 10,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1533,6 +1532,8 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-768810398\">MLevel_WB_3002403_Sub</a>",
       "stackType": "Replace",
+      "stackLimit": 10,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1568,9 +1569,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 10,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2432,6 +2431,8 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-518795370\">MLevel_WB_3002201_Sub</a>",
       "stackType": "Replace",
       "functionalTurn": "AnyOneTurn",
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -2451,9 +2452,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",

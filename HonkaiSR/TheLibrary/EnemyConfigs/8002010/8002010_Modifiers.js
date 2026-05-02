@@ -11,6 +11,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1446174465\">XP_Minion02_Armor</a>[<span class=\"descriptionNumberColor\">Repulsive Force</span>]",
+      "description": "Reduces damage taken from non-Weakness Type attacks by <span class=\"descriptionNumberColor\">MDF_Resistance</span>. This effect is removed when Weakness is broken.",
+      "type": "Buff",
+      "effectName": "DMG Reduction",
+      "statusName": "Repulsive Force",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -49,11 +53,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "description": "Reduces damage taken from non-Weakness Type attacks by <span class=\"descriptionNumberColor\">MDF_Resistance</span>. This effect is removed when Weakness is broken.",
-      "type": "Buff",
-      "effectName": "DMG Reduction",
-      "statusName": "Repulsive Force"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -68,9 +68,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -78,6 +76,13 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
+      "stackData": [
+        "MDF_DamageAddedRatio"
+      ],
+      "description": "Uses Carolburst during the next action and increases DMG dealt to targets by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Defensive Position",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -112,15 +117,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "Uses Carolburst during the next action and increases DMG dealt to targets by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Defensive Position"
+      ]
     }
   ],
   "references": []

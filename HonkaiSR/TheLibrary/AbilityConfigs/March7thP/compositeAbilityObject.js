@@ -40,6 +40,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Shield"
           ],
+          "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Shield",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -85,11 +89,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
-          "type": "Buff",
-          "effectName": "Shield",
-          "statusName": "Shield"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -172,9 +172,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -339,9 +337,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -849,16 +845,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__300569468\">March7th_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
           "counter": 3,
-          "stackData": [],
-          "latentQueue": [],
           "description": "Remaining Counter attempt(s).",
           "type": "Other",
           "statusName": "Counter"
@@ -1198,9 +1190,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1739,9 +1729,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1349068502\">March7th_UltraTarget</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1349068502\">March7th_UltraTarget</a>"
         }
       ],
       "targetObjectData": {
@@ -2214,6 +2202,18 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Shield"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_HealPercentage",
+            "MDF_HealValue",
+            "MDF_ShieldPercentage",
+            "MDF_ShieldValue",
+            "MDF_AggroUp"
+          ],
+          "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Shield",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2339,20 +2339,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_HealPercentage",
-            "MDF_HealValue",
-            "MDF_ShieldPercentage",
-            "MDF_ShieldValue",
-            "MDF_AggroUp"
-          ],
-          "latentQueue": [],
-          "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
-          "type": "Buff",
-          "effectName": "Shield",
-          "statusName": "Shield"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2403,9 +2390,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2444,9 +2429,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2502,9 +2485,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

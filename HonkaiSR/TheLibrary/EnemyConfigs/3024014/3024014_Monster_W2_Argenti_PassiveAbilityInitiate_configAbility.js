@@ -82,6 +82,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2064984483\">Monster_W2_GS_Argenti_SpecialVictory_LockHP</a>",
+      "latentQueue": [
+        "AIFlag",
+        "Phase_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -158,11 +162,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag",
-        "Phase_Flag"
       ]
     }
   ]

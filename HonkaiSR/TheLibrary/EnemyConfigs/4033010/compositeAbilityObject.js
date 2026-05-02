@@ -277,6 +277,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2071311511\">Enemy_XP_Elite01_02_Charge_Enhance</a>[<span class=\"descriptionNumberColor\">Ominous Degeneration</span>]",
+          "description": "Uses \"Torrential Surge\" in the next action.",
+          "type": "Other",
+          "statusName": "Ominous Degeneration",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -287,12 +290,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Uses \"Torrential Surge\" in the next action.",
-          "type": "Other",
-          "statusName": "Ominous Degeneration"
+          ]
         }
       ]
     },
@@ -369,6 +367,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__550129180\">Enemy_XP_Elite01_02_DefenceDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "stackType": "Replace",
+          "description": "DEF decreases by <span class=\"descriptionNumberColor\">#Skill06_P1_Ratio</span>.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "DEF Reduction",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -393,13 +395,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "DEF decreases by <span class=\"descriptionNumberColor\">#Skill06_P1_Ratio</span>.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "DEF Reduction"
+          ]
         }
       ]
     },
@@ -1071,7 +1067,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2055465700\">Enemy_XP_Elite01_02_Ability02AlreadyAttacked</a>",
-          "stackData": [],
           "latentQueue": [
             "FireBallNum"
           ]
@@ -1491,18 +1486,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-381723021\">Enemy_XP_Elite01_02_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1526,9 +1517,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

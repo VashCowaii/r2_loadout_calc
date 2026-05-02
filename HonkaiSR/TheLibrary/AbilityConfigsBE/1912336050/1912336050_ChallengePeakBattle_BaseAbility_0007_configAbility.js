@@ -19,6 +19,11 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1518475395\">Modifier_ChallengePeakBattle_BaseAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder</span>]",
       "stackType": "Replace",
+      "description": "Each stack causes this unit to additionally lose HP equal to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0007_ADF_1</span> of their own Max HP after being attacked. After gaining a Shield or healing from an ally target (except this unit), both units will dispel all \"Sunder\" effect.",
+      "type": "Other",
+      "effectName": "Vulnerability",
+      "statusName": "Sunder",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -63,12 +68,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack causes this unit to additionally lose HP equal to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0007_ADF_1</span> of their own Max HP after being attacked. After gaining a Shield or healing from an ally target (except this unit), both units will dispel all \"Sunder\" effect.",
-      "type": "Other",
-      "effectName": "Vulnerability",
-      "statusName": "Sunder",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -264,9 +264,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

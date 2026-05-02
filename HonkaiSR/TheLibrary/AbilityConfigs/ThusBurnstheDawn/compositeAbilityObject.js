@@ -42,6 +42,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__237864619\">LC_23044_Sub2</a>[<span class=\"descriptionNumberColor\">Dispossession</span>]",
+          "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the target's DEF.",
+          "type": "Buff",
+          "statusName": "Dispossession",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -58,15 +61,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the target's DEF.",
-          "type": "Buff",
-          "statusName": "Dispossession"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__613021115\">LC_23044_Sub</a>[<span class=\"descriptionNumberColor\">Blazing Sun</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect is dispelled at the start of its turn.",
+          "type": "Buff",
+          "effectName": "Blazing Sun",
+          "statusName": "Blazing Sun",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -96,11 +100,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect is dispelled at the start of its turn.",
-          "type": "Buff",
-          "effectName": "Blazing Sun",
-          "statusName": "Blazing Sun"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -162,9 +162,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

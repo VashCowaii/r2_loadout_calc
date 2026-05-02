@@ -181,9 +181,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Leave Battle"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {

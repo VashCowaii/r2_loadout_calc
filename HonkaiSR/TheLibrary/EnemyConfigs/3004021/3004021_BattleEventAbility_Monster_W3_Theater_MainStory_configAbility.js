@@ -366,7 +366,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1381458312\">Enemy_W3_Theater_MainStoryUltraMark</a>",
-      "stackData": [],
       "latentQueue": [
         "AIFlag"
       ]
@@ -374,7 +373,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__824631784\">Enemy_W3_Theater_MainStoryMark</a>",
-      "stackData": [],
       "latentQueue": [
         "AIFlag"
       ]

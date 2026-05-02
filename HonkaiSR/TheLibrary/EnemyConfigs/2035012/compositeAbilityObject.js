@@ -193,9 +193,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1243020063\">Modifier_Monster_W2_Feixiao_IF_EX01</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1243020063\">Modifier_Monster_W2_Feixiao_IF_EX01</a>"
         }
       ]
     },
@@ -727,9 +725,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1695,9 +1691,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2361,9 +2355,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Update Target Selected(UI) [Anyone]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7871,13 +7863,15 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1393128044\">Monster_W2_Feixiao_IF_OnLevel</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1393128044\">Monster_W2_Feixiao_IF_OnLevel</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1186924823\">Monster_W2_Feixiao_IF_UltraConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
+          "description": "In Resonate State, removes all action bar alteration effects except for this unit's. When Weakness is Broken, all targets' actions are advanced.",
+          "type": "Other",
+          "effectName": "Resonate",
+          "statusName": "Resonate",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -8074,13 +8068,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "In Resonate State, removes all action bar alteration effects except for this unit's. When Weakness is Broken, all targets' actions are advanced.",
-          "type": "Other",
-          "effectName": "Resonate",
-          "statusName": "Resonate"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8213,9 +8201,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8290,9 +8276,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8300,6 +8284,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_AITargetHigherPriority"
           ],
+          "latentQueue": [
+            "MDF_AlreadyConnect"
+          ],
+          "description": "In Resonate State, removes all action bar alteration effects except for this unit's. When Weakness is Broken, all targets' actions are advanced.",
+          "type": "Other",
+          "effectName": "Resonate",
+          "statusName": "Resonate",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -8475,15 +8466,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_AlreadyConnect"
-          ],
-          "description": "In Resonate State, removes all action bar alteration effects except for this unit's. When Weakness is Broken, all targets' actions are advanced.",
-          "type": "Other",
-          "effectName": "Resonate",
-          "statusName": "Resonate"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8545,9 +8528,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8642,15 +8623,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1497902292\">Monster_W2_Feixiao_IF_Part2</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1497902292\">Monster_W2_Feixiao_IF_Part2</a>"
         },
         {
           "name": "Modifier Construction",
@@ -8659,9 +8636,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Ultimate Prep-Phase [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8764,9 +8739,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9117,9 +9090,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",

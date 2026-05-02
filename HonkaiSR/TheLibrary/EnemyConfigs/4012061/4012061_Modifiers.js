@@ -33,9 +33,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -46,6 +44,16 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1085270043\">Enemy_W4_HearsePart_IF_Passive</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
+      ],
+      "stackData": [
+        "MDF_BPRecoverValue",
+        "MDF_Phase01LoseHPRatio",
+        "MDF_Phase02LoseHPRatio",
+        "MDF_DamageStanceValue"
+      ],
+      "latentQueue": [
+        "_KillByHearse",
+        "ShieldBreakBonusFlag"
       ],
       "execute": [
         {
@@ -334,16 +342,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_BPRecoverValue",
-        "MDF_Phase01LoseHPRatio",
-        "MDF_Phase02LoseHPRatio",
-        "MDF_DamageStanceValue"
-      ],
-      "latentQueue": [
-        "_KillByHearse",
-        "ShieldBreakBonusFlag"
       ]
     },
     {
@@ -389,9 +387,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -455,9 +451,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -984,9 +978,7 @@ const configAbility = {
         {
           "eventTrigger": "When Modifier is Added [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1001,14 +993,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-311844030\">Enemy_W4_Nikadory_IF_AbilityEX04_TGT</a>[<span class=\"descriptionNumberColor\">Protective Formation</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio_PerLayer</span> and reduces DMG received by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce_PerLayer</span>.",
+      "type": "Buff",
+      "statusName": "Protective Formation",
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1079,16 +1074,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio_PerLayer</span> and reduces DMG received by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce_PerLayer</span>.",
-      "type": "Buff",
-      "statusName": "Protective Formation",
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__264648512\">Enemy_W4_Nikadory_IF_AbilityEX04_EMY</a>",
+      "stackData": [
+        "MDF_AllDamageReduce",
+        "MDF_AllDamageTypeAddedRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1213,12 +1207,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AllDamageReduce",
-        "MDF_AllDamageTypeAddedRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1554,9 +1543,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1779,13 +1766,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1417850551\">Enemy_W4_Nikadory_IF_Ability06Charge</a>[<span class=\"descriptionNumberColor\">Ready for Battle</span>]",
+      "stackData": [
+        "MDF_AllDamageTypeAddedRatio"
+      ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>. This state is removed when \"War Armor\" stacks are reduced to 0.",
+      "type": "Other",
+      "effectName": "Ready for Battle",
+      "statusName": "Ready for Battle",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1843,15 +1835,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AllDamageTypeAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>. This state is removed when \"War Armor\" stacks are reduced to 0.",
-      "type": "Other",
-      "effectName": "Ready for Battle",
-      "statusName": "Ready for Battle"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1884,33 +1868,23 @@ const configAbility = {
           ],
           "priorityLevel": -45
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1178138918\">Enemy_W4_Nikadory_IF_AbilityEX04</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1178138918\">Enemy_W4_Nikadory_IF_AbilityEX04</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1262027013\">Enemy_W4_Nikadory_IF_AbilityEX03</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1262027013\">Enemy_W4_Nikadory_IF_AbilityEX03</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1278804632\">Enemy_W4_Nikadory_IF_AbilityEX02</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1278804632\">Enemy_W4_Nikadory_IF_AbilityEX02</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1228471775\">Enemy_W4_Nikadory_IF_AbilityEX01</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1228471775\">Enemy_W4_Nikadory_IF_AbilityEX01</a>"
     },
     {
       "name": "Modifier Construction",
@@ -2509,9 +2483,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2560,15 +2532,11 @@ const configAbility = {
         {
           "eventTrigger": "Turn [Action-End Phase]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1367674935\">Enemy_W4_Nikadory_IF_Ability14Target</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1367674935\">Enemy_W4_Nikadory_IF_Ability14Target</a>"
     },
     {
       "name": "Modifier Construction",
@@ -2637,6 +2605,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1121673615\">Enemy_W4_Nikadory_IF_APShow_Act4</a>",
+      "latentQueue": [
+        "_KillByHearse",
+        "ShieldBreakBonusFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2690,16 +2662,15 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_KillByHearse",
-        "ShieldBreakBonusFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1071340758\">Enemy_W4_Nikadory_IF_APShow_Act3</a>",
+      "latentQueue": [
+        "_KillByHearse",
+        "ShieldBreakBonusFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2753,16 +2724,15 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_KillByHearse",
-        "ShieldBreakBonusFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1088118377\">Enemy_W4_Nikadory_IF_APShow_Act2</a>",
+      "latentQueue": [
+        "_KillByHearse",
+        "ShieldBreakBonusFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2816,16 +2786,15 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_KillByHearse",
-        "ShieldBreakBonusFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1037785520\">Enemy_W4_Nikadory_IF_APShow_Act1</a>",
+      "latentQueue": [
+        "_KillByHearse",
+        "ShieldBreakBonusFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2879,11 +2848,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_KillByHearse",
-        "ShieldBreakBonusFlag"
       ]
     },
     {
@@ -3030,15 +2994,24 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
       "stackType": "Replace",
       "modifierFlags": [],
+      "latentQueue": [
+        "MDF_Phase02LoseHPRatio",
+        "MDF_Phase01LoseHPRatio",
+        "ShieldBreakBonusFlag",
+        "_KillByHearse"
+      ],
+      "description": "Each stack of \"Glory\" increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. Consuming 1 Skill Point adds 1 stack of \"Glory.\" When attacking, reduces stacks of \"War Armor\" or \"Centirefined War Armor\" equal to the current \"Glory\" stacks.",
+      "type": "Other",
+      "statusName": "Glory",
+      "stackLimit": 999,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -3167,19 +3140,7 @@ const configAbility = {
         {
           "eventTrigger": "Extra Action/Turn [Owner]: Start "
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_Phase02LoseHPRatio",
-        "MDF_Phase01LoseHPRatio",
-        "ShieldBreakBonusFlag",
-        "_KillByHearse"
-      ],
-      "description": "Each stack of \"Glory\" increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. Consuming 1 Skill Point adds 1 stack of \"Glory.\" When attacking, reduces stacks of \"War Armor\" or \"Centirefined War Armor\" equal to the current \"Glory\" stacks.",
-      "type": "Other",
-      "statusName": "Glory",
-      "stackLimit": 999,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3363,9 +3324,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3381,20 +3340,26 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__159012087\">Enemy_W4_Nikadory_IF_Passive</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__159012087\">Enemy_W4_Nikadory_IF_Passive</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_AllDamageReduce"
+      ],
+      "latentQueue": [
+        "AIFlag"
+      ],
+      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Loses stacks of \"Centirefined War Armor\" based on the attacker's \"Glory\" stacks after being attacked. When at 0 stacks, \"Centirefined War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing a large amount of their Toughness, greatly delaying their action, restoring Skill Points to targets, and grants the attacker a certain number of stacks of \"Glory.\" After \"Centirefined War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. If \"Centirefined War Armor\" stack is 0 at the end of this unit's turn, it will be restored to maximum stacks.",
+      "type": "Other",
+      "statusName": "Centirefined War Armor",
+      "stackLimit": 999,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -3570,22 +3535,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AllDamageReduce"
-      ],
-      "latentQueue": [
-        "AIFlag"
-      ],
-      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Loses stacks of \"Centirefined War Armor\" based on the attacker's \"Glory\" stacks after being attacked. When at 0 stacks, \"Centirefined War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing a large amount of their Toughness, greatly delaying their action, restoring Skill Points to targets, and grants the attacker a certain number of stacks of \"Glory.\" After \"Centirefined War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. If \"Centirefined War Armor\" stack is 0 at the end of this unit's turn, it will be restored to maximum stacks.",
-      "type": "Other",
-      "statusName": "Centirefined War Armor",
-      "stackLimit": 999
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1685699403\">Enemy_W4_Nikadory_IF_EnhanceShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_AllDamageReduce"
+      ],
+      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Loses stacks of \"War Armor\" based on the attacker's \"Glory\" stacks after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing their Toughness, delaying their action, and restoring Skill Points to targets. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
+      "type": "Other",
+      "statusName": "War Armor",
+      "stackLimit": 999,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -3719,20 +3681,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AllDamageReduce"
-      ],
-      "latentQueue": [],
-      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Loses stacks of \"War Armor\" based on the attacker's \"Glory\" stacks after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing their Toughness, delaying their action, and restoring Skill Points to targets. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
-      "type": "Other",
-      "statusName": "War Armor",
-      "stackLimit": 999
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-698443266\">Enemy_W4_Nikadory_IF_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
       "stackType": "Replace",
+      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Loses stacks of \"War Armor\" based on the attacker's \"Glory\" stacks after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing their Toughness, delaying their action, and restoring Skill Points to targets. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
+      "type": "Other",
+      "statusName": "War Armor",
+      "stackLimit": 999,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -3866,17 +3824,27 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Loses stacks of \"War Armor\" based on the attacker's \"Glory\" stacks after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing their Toughness, delaying their action, and restoring Skill Points to targets. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
-      "type": "Other",
-      "statusName": "War Armor",
-      "stackLimit": 999
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1562180674\">Enemy_W4_Nikadory_IF_StoneShieldController</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
+      ],
+      "stackData": [
+        "MDF_MaxLayer",
+        "MDF_ActionDelayRatio",
+        "MDF_CrackedDamage",
+        "MDF_BPRecoverValue",
+        "MDF_AllDamageReduce",
+        "MDF_CrackedDamageAfter",
+        "MDF_DamageStanceValue",
+        "MDF_SuperShield_MaxLayer",
+        "MDF_SuperShield_BPRecoverValue",
+        "MDF_BraveBonusLayer",
+        "MDF_SuperShield_ActionDelayRatio",
+        "MDF_SuperShield_DamageStanceValue"
       ],
       "execute": [
         {
@@ -6076,22 +6044,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_MaxLayer",
-        "MDF_ActionDelayRatio",
-        "MDF_CrackedDamage",
-        "MDF_BPRecoverValue",
-        "MDF_AllDamageReduce",
-        "MDF_CrackedDamageAfter",
-        "MDF_DamageStanceValue",
-        "MDF_SuperShield_MaxLayer",
-        "MDF_SuperShield_BPRecoverValue",
-        "MDF_BraveBonusLayer",
-        "MDF_SuperShield_ActionDelayRatio",
-        "MDF_SuperShield_DamageStanceValue"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

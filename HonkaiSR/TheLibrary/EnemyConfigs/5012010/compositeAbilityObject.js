@@ -310,6 +310,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1125178298\">Enemy_W3_TV_03_PowerUnlockListener</a>[<span class=\"descriptionNumberColor\">Happy Smiles</span>]",
+          "description": "When this unit is attacked for the first time, the target team gains Punchline, and this unit uses \"Happiness Charm.\"",
+          "type": "Other",
+          "statusName": "Happy Smiles",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -420,12 +423,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When this unit is attacked for the first time, the target team gains Punchline, and this unit uses \"Happiness Charm.\"",
-          "type": "Other",
-          "statusName": "Happy Smiles"
+          ]
         }
       ]
     },
@@ -449,6 +447,13 @@ const compositeAbilityObject = {
             "IdleStun",
             "STAT_Stun_Effect"
           ],
+          "stackData": [
+            "MDF_ActionDelayRatio"
+          ],
+          "description": "Action delayed. Cannot take actions for a certain number of turns.",
+          "type": "Debuff",
+          "effectName": "Strong Reverberation",
+          "statusName": "Strong Reverberation",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -550,15 +555,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [
-            "MDF_ActionDelayRatio"
-          ],
-          "latentQueue": [],
-          "description": "Action delayed. Cannot take actions for a certain number of turns.",
-          "type": "Debuff",
-          "effectName": "Strong Reverberation",
-          "statusName": "Strong Reverberation"
+          ]
         }
       ],
       "references": []

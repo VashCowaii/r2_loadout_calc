@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1794469882\">Mar_7th_10_PointB3_Break_Property</a>[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Buff",
+      "effectName": "Break Effect Boost",
+      "statusName": "Tide Tamer",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,16 +44,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Buff",
-      "effectName": "Break Effect Boost",
-      "statusName": "Tide Tamer"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-110388147\">Mar_7th_10_PointB3_Kill_Property</a>[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "Tide Tamer",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -72,11 +76,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "Tide Tamer"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -220,9 +220,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

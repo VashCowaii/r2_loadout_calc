@@ -24,9 +24,7 @@ const configAbility = {
         {
           "eventTrigger": "Action Phase Start [Anyone][?]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

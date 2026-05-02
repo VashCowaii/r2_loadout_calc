@@ -19,9 +19,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__233985809\">Monster_XP_Elite02_02_RLElite_MuteDirtyHP</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__233985809\">Monster_XP_Elite02_02_RLElite_MuteDirtyHP</a>"
     }
   ]
 }

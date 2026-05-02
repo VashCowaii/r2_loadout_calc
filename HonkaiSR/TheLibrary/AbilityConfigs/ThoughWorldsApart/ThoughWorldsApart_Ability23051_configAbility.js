@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-194150391\">LC_23051_Sub</a>[<span class=\"descriptionNumberColor\">Redoubt</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Redoubt",
+      "statusName": "Redoubt",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -81,11 +85,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Redoubt",
-      "statusName": "Redoubt"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -179,9 +179,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

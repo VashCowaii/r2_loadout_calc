@@ -557,6 +557,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-913053505\">Monster_W2_HuanlongPart_01_IF_Ability04_SetDamage</a>",
+          "latentQueue": [
+            "PartDecisionFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1002,15 +1005,15 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "PartDecisionFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1389512631\">Monster_W2_HuanlongPart_IF_TurnChoise</a>",
+          "latentQueue": [
+            "PartDecisionFlag",
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1064,11 +1067,6 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "PartDecisionFlag",
-            "AIFlag"
           ]
         }
       ]
@@ -1316,9 +1314,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1416,18 +1412,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1775073303\">Monster_W2_HuanlongPart_01_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1560,9 +1552,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1660,18 +1650,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1775073303\">Monster_W2_HuanlongPart_01_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3741,9 +3727,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1775073303\">Monster_W2_HuanlongPart_01_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4081,9 +4065,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4181,18 +4163,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-268148846\">Monster_W2_HuanlongPart_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4300,9 +4278,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4400,18 +4376,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-268148846\">Monster_W2_HuanlongPart_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4464,8 +4436,6 @@ const compositeAbilityObject = {
             "AvatarBreak",
             "DisableAction"
           ],
-          "stackData": [],
-          "latentQueue": [],
           "duration": 1
         },
         {
@@ -4474,6 +4444,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Endurance"
           ],
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4484,20 +4455,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__73852059\">Monster_W2_HuanlongPart_01_Number02</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__73852059\">Monster_W2_HuanlongPart_01_Number02</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__90629678\">Monster_W2_HuanlongPart_01_Number01</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__90629678\">Monster_W2_HuanlongPart_01_Number01</a>"
         },
         {
           "name": "Modifier Construction",
@@ -4986,14 +4952,31 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_ActionDelayRatio",
+            "MDF_DamageTakenUpRatio_PerLayer"
+          ],
+          "latentQueue": [
+            "InsertFlag",
+            "Insert2Flag",
+            "Insert1Flag",
+            "Insert3Flag",
+            "TeammateInsertFlag",
+            "TeammateInsertFlag2"
+          ],
+          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
+          "duration": 1,
+          "stackLimit": 2,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Owner]",
@@ -5046,30 +5029,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ActionDelayRatio",
-            "MDF_DamageTakenUpRatio_PerLayer"
-          ],
-          "latentQueue": [
-            "InsertFlag",
-            "Insert2Flag",
-            "Insert1Flag",
-            "Insert3Flag",
-            "TeammateInsertFlag",
-            "TeammateInsertFlag2"
-          ],
-          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability",
-          "duration": 1,
-          "stackLimit": 2,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1118527556\">Monster_W2_HuanlongPart_01_RemoveActivityEffect</a>",
+          "latentQueue": [
+            "Phase3End"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -5092,10 +5059,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Phase3End"
           ]
         },
         {
@@ -5105,6 +5068,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "Will use Havoc during the next action. This status can be dispelled by abilities.",
+          "type": "Buff",
+          "effectName": "Bloom",
+          "statusName": "Bloom",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5784,11 +5751,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Will use Havoc during the next action. This status can be dispelled by abilities.",
-          "type": "Buff",
-          "effectName": "Bloom",
-          "statusName": "Bloom"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5801,6 +5764,12 @@ const compositeAbilityObject = {
             "STAT_AITargetLowerPriority",
             "MuteBreak"
           ],
+          "latentQueue": [
+            "PartDecisionFlag"
+          ],
+          "description": "When Destruction Lotus is not in Bloom, its Toughness cannot be reduced.",
+          "type": "Other",
+          "statusName": "Weakness Protected",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5824,14 +5793,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "PartDecisionFlag"
-          ],
-          "description": "When Destruction Lotus is not in Bloom, its Toughness cannot be reduced.",
-          "type": "Other",
-          "statusName": "Weakness Protected"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5839,6 +5801,18 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "DisableHealHP"
           ],
+          "latentQueue": [
+            "InsertFlag",
+            "Insert2Flag",
+            "Insert1Flag",
+            "Insert3Flag",
+            "TeammateInsertFlag",
+            "TeammateInsertFlag2"
+          ],
+          "description": "In Repose.",
+          "type": "Other",
+          "statusName": "Repose",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5911,26 +5885,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "InsertFlag",
-            "Insert2Flag",
-            "Insert1Flag",
-            "Insert3Flag",
-            "TeammateInsertFlag",
-            "TeammateInsertFlag2"
-          ],
-          "description": "In Repose.",
-          "type": "Other",
-          "statusName": "Repose",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1143427895\">Monster_W2_HuanlongPart_01_Stealth</a>",
           "modifierFlags": [
             "Stealth"
+          ],
+          "latentQueue": [
+            "TeammateInsertFlag2",
+            "TeammateInsertFlag",
+            "Insert3Flag",
+            "Insert1Flag",
+            "Insert2Flag",
+            "InsertFlag"
           ],
           "execute": [
             {
@@ -5942,20 +5911,14 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "TeammateInsertFlag2",
-            "TeammateInsertFlag",
-            "Insert3Flag",
-            "Insert1Flag",
-            "Insert2Flag",
-            "InsertFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1485253143\">Monster_W2_HuanlongPart_01_Revive</a>",
+          "stackData": [
+            "MDF_DormancyLifeTime"
+          ],
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -6341,11 +6304,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DormancyLifeTime"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6440,9 +6399,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

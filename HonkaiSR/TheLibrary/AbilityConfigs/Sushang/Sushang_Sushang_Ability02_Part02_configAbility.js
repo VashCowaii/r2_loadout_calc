@@ -992,6 +992,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-236050172\">Sushang_BP_PointB2_DMGModifier</a>",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1008,35 +1011,23 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1715450419\">Sushang_BP_BreakCheck_Before</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1715450419\">Sushang_BP_BreakCheck_Before</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1418539622\">Sushang_BP_PassiveCheck_02</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1418539622\">Sushang_BP_PassiveCheck_02</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1401762003\">Sushang_BP_PassiveCheck_01</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1401762003\">Sushang_BP_PassiveCheck_01</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__699476095\">Sushang_BP_PassiveCheck</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__699476095\">Sushang_BP_PassiveCheck</a>"
     }
   ],
   "targetObjectData": {

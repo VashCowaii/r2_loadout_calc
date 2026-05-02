@@ -443,15 +443,11 @@ const configAbility = {
           ],
           "priorityLevel": 999999
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__955806322\">M_Mar_7th_10_AbilityPreShowModifier_Target</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -480,8 +476,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__7821473\">M_Mar_7th_10_AbilityPreShowModifier_Self</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -518,9 +512,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__591989145\">M_Mar_7th_10_AchievementFlag</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__591989145\">M_Mar_7th_10_AchievementFlag</a>"
     }
   ],
   "targetObjectData": {

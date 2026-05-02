@@ -515,6 +515,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2108411860\">Standard_SPRatioDown</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Reduction</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Decreases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Energy Regeneration Rate Reduction",
+      "statusName": "Energy Regeneration Rate Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -539,16 +543,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Decreases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Energy Regeneration Rate Reduction",
-      "statusName": "Energy Regeneration Rate Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1533265365\">Standard_SPRatioUp</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Energy Regeneration Rate Boost",
+      "statusName": "Energy Regeneration Rate Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -571,17 +575,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Energy Regeneration Rate Boost",
-      "statusName": "Energy Regeneration Rate Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__4474377\">Standard_StatusResistanceDown</a>[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Effect RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Effect RES Reduction",
+      "statusName": "Effect RES Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -606,17 +610,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Effect RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Effect RES Reduction",
-      "statusName": "Effect RES Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1990889700\">Standard_StatusResistanceUp</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Effect RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Effect RES Boost",
+      "statusName": "Effect RES Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -639,16 +643,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Effect RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Effect RES Boost",
-      "statusName": "Effect RES Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__879494395\">Standard_StatusProbability</a>[<span class=\"descriptionNumberColor\">Effect Hit Rate Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Effect Hit Rate +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Effect Hit Rate Boost",
+      "statusName": "Effect Hit Rate Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -671,17 +675,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Effect Hit Rate +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Effect Hit Rate Boost",
-      "statusName": "Effect Hit Rate Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-647756354\">Standard_HealTakenRatioDown</a>[<span class=\"descriptionNumberColor\">Incoming Healing Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Incoming Healing -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Incoming Healing Reduction",
+      "statusName": "Incoming Healing Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -706,17 +710,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Incoming Healing -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Incoming Healing Reduction",
-      "statusName": "Incoming Healing Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2022562475\">Standard_HealTakenRatioUp</a>[<span class=\"descriptionNumberColor\">Incoming Healing Boost</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Incoming Healing +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Incoming Healing Boost",
+      "statusName": "Incoming Healing Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -739,16 +743,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Incoming Healing +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Incoming Healing Boost",
-      "statusName": "Incoming Healing Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__954433891\">Standard_HealRatioDown</a>[<span class=\"descriptionNumberColor\">Outgoing Healing Reduction</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Outgoing Healing -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Outgoing Healing Reduction",
+      "statusName": "Outgoing Healing Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -773,16 +777,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Outgoing Healing -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Outgoing Healing Reduction",
-      "statusName": "Outgoing Healing Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-776411742\">Standard_HealRatioUp</a>[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Outgoing Healing +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Outgoing Healing Boost",
+      "statusName": "Outgoing Healing Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -805,11 +809,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Outgoing Healing +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Outgoing Healing Boost",
-      "statusName": "Outgoing Healing Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -818,6 +818,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedDown"
       ],
+      "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Speed Reduction",
+      "statusName": "Speed Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -842,11 +846,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Speed Reduction",
-      "statusName": "Speed Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -855,6 +855,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "SPD Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -877,11 +881,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "SPD Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -917,6 +917,8 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__22618651\">Standard_ImaginaryStanceBreakResistance</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -939,15 +941,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-107751281\">Standard_QuantumStanceBreakResistance</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -970,15 +972,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__921927174\">Standard_WindStanceBreakResistance</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1001,15 +1003,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2091317506\">Standard_ThunderStanceBreakResistance</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1032,15 +1034,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-525185247\">Standard_IceStanceBreakResistance</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1063,15 +1065,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1567140260\">Standard_FireStanceBreakResistance</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1094,15 +1096,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1260087139\">Standard_StanceBreakTakenRatio</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1125,15 +1127,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-797089541\">Standard_StanceBreakResistanceAll</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "Replace",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1195,15 +1197,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1821874088\">Standard_StanceBreakResistance</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1226,14 +1228,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1910965732\">Standard_StanceBreakAddedRatio</a>[<span class=\"descriptionNumberColor\">Weakness Break Efficiency Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Weakness Break Efficiency Boost",
+      "statusName": "Weakness Break Efficiency Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1256,17 +1260,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Weakness Break Efficiency Boost",
-      "statusName": "Weakness Break Efficiency Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__179551098\">Standard_ImaginaryAbsorb</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1289,15 +1291,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-48968594\">Standard_QuantumAbsorb</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1320,15 +1322,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1173787861\">Standard_WindAbsorb</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1351,15 +1353,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-119299315\">Standard_ThunderAbsorb</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1382,15 +1384,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__213964956\">Standard_IceAbsorb</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1413,15 +1415,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1252318641\">Standard_FireAbsorb</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1444,15 +1446,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__370516022\">Standard_PhysicalAbsorb</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1475,15 +1477,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__991543017\">Standard_ImaginaryTakenRatio</a>[<span class=\"descriptionNumberColor\">Imaginary Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Imaginary DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Imaginary Vulnerability",
+      "statusName": "Imaginary Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1506,17 +1510,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Imaginary DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Imaginary Vulnerability",
-      "statusName": "Imaginary Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__60101517\">Standard_QuantumTakenRatio</a>[<span class=\"descriptionNumberColor\">Quantum Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Quantum DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Quantum Vulnerability",
+      "statusName": "Quantum Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1539,17 +1543,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Quantum DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Quantum Vulnerability",
-      "statusName": "Quantum Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1944536666\">Standard_WindTakenRatio</a>[<span class=\"descriptionNumberColor\">Wind Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Wind DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Wind Vulnerability",
+      "statusName": "Wind Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1572,17 +1576,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Wind DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Wind Vulnerability",
-      "statusName": "Wind Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__109685826\">Standard_ThunderTakenRatio</a>[<span class=\"descriptionNumberColor\">Lightning Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Lightning DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Lightning Vulnerability",
+      "statusName": "Lightning Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1605,17 +1609,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Lightning DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Lightning Vulnerability",
-      "statusName": "Lightning Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__255191535\">Standard_IceTakenRatio</a>[<span class=\"descriptionNumberColor\">Ice Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Ice DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Ice Vulnerability",
+      "statusName": "Ice Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1638,17 +1642,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Ice DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Ice Vulnerability",
-      "statusName": "Ice Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1249803144\">Standard_FireTakenRatio</a>[<span class=\"descriptionNumberColor\">Fire Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Fire DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Fire Vulnerability",
+      "statusName": "Fire Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1671,17 +1675,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Fire DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Fire Vulnerability",
-      "statusName": "Fire Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-109354427\">Standard_PhysicalTakenRatio</a>[<span class=\"descriptionNumberColor\">Physical Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Physical DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Physical Vulnerability",
+      "statusName": "Physical Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1704,17 +1708,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Physical DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Physical Vulnerability",
-      "statusName": "Physical Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-43160834\">Standard_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1737,16 +1741,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1394259979\">Standard_ImaginaryPenetrate</a>[<span class=\"descriptionNumberColor\">Imaginary RES PEN</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Imaginary RES PEN +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Imaginary RES PEN",
+      "statusName": "Imaginary RES PEN",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1769,16 +1773,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Imaginary RES PEN +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Imaginary RES PEN",
-      "statusName": "Imaginary RES PEN"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__618971177\">Standard_QuantumPenetrate</a>[<span class=\"descriptionNumberColor\">Quantum RES PEN</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Quantum RES PEN +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Quantum RES PEN",
+      "statusName": "Quantum RES PEN",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1801,16 +1805,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Quantum RES PEN +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Quantum RES PEN",
-      "statusName": "Quantum RES PEN"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-885249768\">Standard_WindPenetrate</a>[<span class=\"descriptionNumberColor\">Wind RES PEN</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Wind RES PEN +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Wind RES PEN",
+      "statusName": "Wind RES PEN",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1833,16 +1837,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Wind RES PEN +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Wind RES PEN",
-      "statusName": "Wind RES PEN"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__288500000\">Standard_ThunderPenetrate</a>[<span class=\"descriptionNumberColor\">Lightning RES PEN</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Lightning RES PEN +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Lightning RES PEN",
+      "statusName": "Lightning RES PEN",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1865,16 +1869,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Lightning RES PEN +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Lightning RES PEN",
-      "statusName": "Lightning RES PEN"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-415729513\">Standard_IcePenetrate</a>[<span class=\"descriptionNumberColor\">Ice RES PEN</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Ice RES PEN +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Ice RES PEN",
+      "statusName": "Ice RES PEN",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1897,16 +1901,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Ice RES PEN +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Ice RES PEN",
-      "statusName": "Ice RES PEN"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__801781618\">Standard_FirePenetrate</a>[<span class=\"descriptionNumberColor\">Fire RES PEN</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Fire RES PEN +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Fire RES PEN",
+      "statusName": "Fire RES PEN",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1929,16 +1933,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Fire RES PEN +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Fire RES PEN",
-      "statusName": "Fire RES PEN"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2158881\">Standard_PhysicalPenetrate</a>[<span class=\"descriptionNumberColor\">Physical RES PEN</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Physical RES PEN +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Physical RES PEN",
+      "statusName": "Physical RES PEN",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1961,17 +1965,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Physical RES PEN +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Physical RES PEN",
-      "statusName": "Physical RES PEN"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1176142950\">Standard_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Imaginary RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Imaginary RES Reduction",
+      "statusName": "Imaginary RES Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1996,17 +2000,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Imaginary RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Imaginary RES Reduction",
-      "statusName": "Imaginary RES Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__533883510\">Standard_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Quantum RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Quantum RES Reduction",
+      "statusName": "Quantum RES Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2031,17 +2035,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Quantum RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Quantum RES Reduction",
-      "statusName": "Quantum RES Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-192876579\">Standard_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Wind RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Wind RES Reduction",
+      "statusName": "Wind RES Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2066,17 +2070,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Wind RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Wind RES Reduction",
-      "statusName": "Wind RES Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1410888443\">Standard_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Lightning RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Lightning RES Reduction",
+      "statusName": "Lightning RES Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2101,17 +2105,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Lightning RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Lightning RES Reduction",
-      "statusName": "Lightning RES Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1969217848\">Standard_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Ice RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Ice RES Reduction",
+      "statusName": "Ice RES Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2136,17 +2140,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Ice RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Ice RES Reduction",
-      "statusName": "Ice RES Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1537044997\">Standard_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Fire RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Fire RES Reduction",
+      "statusName": "Fire RES Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2171,17 +2175,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Fire RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Fire RES Reduction",
-      "statusName": "Fire RES Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1887078258\">Standard_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Physical RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Physical RES Reduction",
+      "statusName": "Physical RES Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2206,17 +2210,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Physical RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Physical RES Reduction",
-      "statusName": "Physical RES Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__541957737\">Standard_AllDamageTypeResistanceDown</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "All-Type DMG RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "All-Type RES Reduction",
+      "statusName": "All-Type RES Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2241,17 +2245,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "All-Type DMG RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "All-Type RES Reduction",
-      "statusName": "All-Type RES Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-698350622\">Standard_ImaginaryResistance</a>[<span class=\"descriptionNumberColor\">Imaginary RES Boost</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Imaginary RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Imaginary RES Boost",
+      "statusName": "Imaginary RES Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2274,17 +2278,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Imaginary RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Imaginary RES Boost",
-      "statusName": "Imaginary RES Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__337755598\">Standard_QuantumResistance</a>[<span class=\"descriptionNumberColor\">Quantum RES Boost</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Quantum RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Quantum RES Boost",
+      "statusName": "Quantum RES Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2307,17 +2311,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Quantum RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Quantum RES Boost",
-      "statusName": "Quantum RES Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1512979021\">Standard_WindResistance</a>[<span class=\"descriptionNumberColor\">Wind RES Boost</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Wind RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Wind RES Boost",
+      "statusName": "Wind RES Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2340,17 +2344,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Wind RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Wind RES Boost",
-      "statusName": "Wind RES Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1519562059\">Standard_ThunderResistance</a>[<span class=\"descriptionNumberColor\">Lightning RES Boost</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Lightning RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Lightning RES Boost",
+      "statusName": "Lightning RES Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2373,17 +2377,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Lightning RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Lightning RES Boost",
-      "statusName": "Lightning RES Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1811570484\">Standard_IceResistance</a>[<span class=\"descriptionNumberColor\">Ice RES Boost</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Ice RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Ice RES Boost",
+      "statusName": "Ice RES Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2406,17 +2410,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Ice RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Ice RES Boost",
-      "statusName": "Ice RES Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1103107279\">Standard_FireResistance</a>[<span class=\"descriptionNumberColor\">Fire RES Boost</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Fire RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Fire RES Boost",
+      "statusName": "Fire RES Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2439,17 +2443,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Fire RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Fire RES Boost",
-      "statusName": "Fire RES Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__395693382\">Standard_PhysicalResistance</a>[<span class=\"descriptionNumberColor\">Physical RES Boost</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Physical RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Physical RES Boost",
+      "statusName": "Physical RES Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2472,17 +2476,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Physical RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Physical RES Boost",
-      "statusName": "Physical RES Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1897838297\">Standard_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Boost</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "All-Type RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "All-Type RES Boost",
+      "statusName": "All-Type RES Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2505,16 +2509,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "All-Type RES +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "All-Type RES Boost",
-      "statusName": "All-Type RES Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-589529710\">Standard_ImaginaryAddedRatio</a>[<span class=\"descriptionNumberColor\">Imaginary DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Imaginary DMG dealt +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Imaginary DMG Boost",
+      "statusName": "Imaginary DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2537,16 +2541,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Imaginary DMG dealt +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Imaginary DMG Boost",
-      "statusName": "Imaginary DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__881315694\">Standard_QuantumAddedRatio</a>[<span class=\"descriptionNumberColor\">Quantum DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Quantum DMG dealt +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Quantum DMG Boost",
+      "statusName": "Quantum DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2569,16 +2573,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Quantum DMG dealt +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Quantum DMG Boost",
-      "statusName": "Quantum DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__443833545\">Standard_WindAddedRatio</a>[<span class=\"descriptionNumberColor\">Wind DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Wind DMG dealt +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Wind DMG Boost",
+      "statusName": "Wind DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2601,16 +2605,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Wind DMG dealt +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Wind DMG Boost",
-      "statusName": "Wind DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1568131025\">Standard_ThunderAddedRatio</a>[<span class=\"descriptionNumberColor\">Lightning DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Lightning DMG dealt +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Lightning DMG Boost",
+      "statusName": "Lightning DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2633,16 +2637,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Lightning DMG dealt +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Lightning DMG Boost",
-      "statusName": "Lightning DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-107089616\">Standard_IceAddedRatio</a>[<span class=\"descriptionNumberColor\">Ice DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Ice DMG dealt +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Ice DMG Boost",
+      "statusName": "Ice DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2665,16 +2669,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Ice DMG dealt +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Ice DMG Boost",
-      "statusName": "Ice DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__396974031\">Standard_FireAddedRatio</a>[<span class=\"descriptionNumberColor\">Fire DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Fire DMG dealt +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Fire DMG Boost",
+      "statusName": "Fire DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2697,16 +2701,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Fire DMG dealt +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Fire DMG Boost",
-      "statusName": "Fire DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2082176038\">Standard_PhysicalAddedRatio</a>[<span class=\"descriptionNumberColor\">Physical DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Physical DMG dealt +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Physical DMG Boost",
+      "statusName": "Physical DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2729,16 +2733,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Physical DMG dealt +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Physical DMG Boost",
-      "statusName": "Physical DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1777684731\">Standard_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2761,11 +2765,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2774,6 +2774,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_Fatigue"
       ],
+      "description": "DMG dealt -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Weaken",
+      "statusName": "Weaken",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2796,11 +2800,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Weaken",
-      "statusName": "Weaken"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2866,6 +2866,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__909057422\">Standard_CriticalDamageDown</a>[<span class=\"descriptionNumberColor\">CRIT DMG Reduction</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT DMG -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "CRIT DMG Reduction",
+      "statusName": "CRIT DMG Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2890,16 +2894,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "CRIT DMG Reduction",
-      "statusName": "CRIT DMG Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__365398491\">Standard_CriticalDamageUp</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT DMG +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "CRIT DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2922,16 +2926,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "CRIT DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-424299549\">Standard_CriticalChanceDown</a>[<span class=\"descriptionNumberColor\">CRIT Rate Reduction</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT Rate -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "CRIT Reduction",
+      "statusName": "CRIT Rate Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2956,16 +2960,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT Rate -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "CRIT Reduction",
-      "statusName": "CRIT Rate Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-543542238\">Standard_CriticalChanceUp</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "CRIT Rate Boost",
+      "statusName": "CRIT Rate Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2988,17 +2992,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "CRIT Rate Boost",
-      "statusName": "CRIT Rate Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1237033920\">Standard_LevelAllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "DMG Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3021,10 +3024,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "DMG Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3062,6 +3062,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
+      "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "DEF Reduction",
+      "statusName": "DEF Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3086,17 +3090,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "DEF Reduction",
-      "statusName": "DEF Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1908508133\">Standard_DefenceDeltaUp</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "DEF +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "DEF Boost",
+      "statusName": "DEF Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3119,11 +3123,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DEF +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "DEF Boost",
-      "statusName": "DEF Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3133,6 +3133,11 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
+      "useEntitySnapshot": true,
+      "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "DEF Reduction",
+      "statusName": "DEF Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3157,18 +3162,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "DEF Reduction",
-      "statusName": "DEF Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-640702816\">Standard_DefenceRatioUp</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>",
+      "type": "Buff",
+      "effectName": "DEF Boost",
+      "statusName": "DEF Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3191,11 +3195,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>",
-      "type": "Buff",
-      "effectName": "DEF Boost",
-      "statusName": "DEF Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3204,6 +3204,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AttackDown"
       ],
+      "description": "ATK -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "ATK Reduction",
+      "statusName": "ATK Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3228,16 +3232,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "ATK -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "ATK Reduction",
-      "statusName": "ATK Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__493386269\">Standard_AttackDeltaUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "ATK Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3260,11 +3264,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "ATK Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3273,6 +3273,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AttackDown"
       ],
+      "description": "ATK -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "ATK Reduction",
+      "statusName": "ATK Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3297,16 +3301,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "ATK -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "ATK Reduction",
-      "statusName": "ATK Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1638600472\">Standard_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "ATK Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3329,11 +3333,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "ATK Boost"
+      ]
     }
   ],
   "references": []

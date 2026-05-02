@@ -143,6 +143,12 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__728153787\">Misha_EnergyCount</a>[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
       "counter": 1,
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "BasicAttack"
+      ],
+      "description": "The Ultimate's Hits Per Action.",
+      "type": "Other",
+      "statusName": "G—Gonna Be Late!",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -165,14 +171,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "BasicAttack"
-      ],
-      "latentQueue": [],
-      "description": "The Ultimate's Hits Per Action.",
-      "type": "Other",
-      "statusName": "G—Gonna Be Late!"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -385,9 +384,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

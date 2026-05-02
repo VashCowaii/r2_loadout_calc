@@ -32,6 +32,14 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-211625513\">Enemy_W2_LycanKing_Poison</a>[<span class=\"descriptionNumberColor\">\"Tumbledust\"</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_LoseHPRatio"
+      ],
+      "description": "At the start of each turn, consumes <span class=\"descriptionNumberColor\">MDF_LoseHPRatio</span> of this unit's HP.",
+      "type": "Debuff",
+      "effectName": "\"Tumbledust\"",
+      "statusName": "\"Tumbledust\"",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -95,16 +103,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_LoseHPRatio"
-      ],
-      "latentQueue": [],
-      "description": "At the start of each turn, consumes <span class=\"descriptionNumberColor\">MDF_LoseHPRatio</span> of this unit's HP.",
-      "type": "Debuff",
-      "effectName": "\"Tumbledust\"",
-      "statusName": "\"Tumbledust\""
+      ]
     }
   ]
 }

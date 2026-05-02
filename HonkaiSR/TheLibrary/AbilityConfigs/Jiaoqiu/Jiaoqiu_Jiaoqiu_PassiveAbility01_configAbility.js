@@ -80,6 +80,21 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1097387552\">Jiaoqiu_PassiveAbility</a>",
       "stackType": "ReplaceByCaster",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"453883342\">Jiaoqiu_Eidolon1_ListenDamage</a>[<span class=\"descriptionNumberColor\">Pentapathic Transference</span>]",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 1
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Action Phase Start [Owner][?]",
@@ -301,23 +316,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members with Unselectables}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"453883342\">Jiaoqiu_Eidolon1_ListenDamage</a>[<span class=\"descriptionNumberColor\">Pentapathic Transference</span>]",
-          "haloStatus": true,
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 1
-          }
         }
       ]
     }

@@ -239,6 +239,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1849445154\">Enemy_W1_Bronya_IF_02_EnhancePerTurnInit</a>",
+          "latentQueue": [
+            "AIFlag",
+            "PhaseFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Action End [Owner]",
@@ -272,16 +276,15 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag",
-            "PhaseFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-302906078\">Enemy_W1_Bronya_IF_02_ListenSelfBreak</a>",
+          "latentQueue": [
+            "AIFlag",
+            "PhaseFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -361,11 +364,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag",
-            "PhaseFlag"
           ]
         }
       ]
@@ -628,9 +626,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1928,9 +1924,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2057,6 +2051,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2074412751\">Enemy_W1_Bronya_ListenSelfBreak</a>",
+          "latentQueue": [
+            "Bronya_SummonCounter",
+            "Bronya_SummonMode"
+          ],
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -2091,11 +2089,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Bronya_SummonCounter",
-            "Bronya_SummonMode"
           ]
         },
         {
@@ -2104,6 +2097,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak"
           ],
+          "description": "Bronya's Toughness cannot be reduced while there are enemies on the field.",
+          "type": "Buff",
+          "effectName": "Weakness Protected",
+          "statusName": "Weakness Protected",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -2145,15 +2142,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Bronya's Toughness cannot be reduced while there are enemies on the field.",
-          "type": "Buff",
-          "effectName": "Weakness Protected",
-          "statusName": "Weakness Protected"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__43109596\">Enemy_W1_Bronya_WeakPointProtectController</a>",
+          "latentQueue": [
+            "Bronya_SummonCounter",
+            "Bronya_SummonMode"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2328,11 +2325,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Bronya_SummonCounter",
-            "Bronya_SummonMode"
           ]
         }
       ]
@@ -3113,14 +3105,16 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Pre-Death [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-715823219\">Enemy_W1_Bronya_IF_02_Part2EnhanceInti</a>",
           "stackType": "Refresh",
+          "latentQueue": [
+            "AIFlag",
+            "PhaseFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3169,16 +3163,24 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag",
-            "PhaseFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
+          "stackData": [
+            "MDF_SpeedDownRatio"
+          ],
+          "latentQueue": [
+            "Gepard_LimboFlag",
+            "Bronya_LimboFlag",
+            "isMainAttack",
+            "AIFlag",
+            "PhaseFlag"
+          ],
+          "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedDownRatio</span> when the character is in Support mode.",
+          "type": "Other",
+          "statusName": "Defense",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3203,20 +3205,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedDownRatio"
-          ],
-          "latentQueue": [
-            "Gepard_LimboFlag",
-            "Bronya_LimboFlag",
-            "isMainAttack",
-            "AIFlag",
-            "PhaseFlag"
-          ],
-          "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedDownRatio</span> when the character is in Support mode.",
-          "type": "Other",
-          "statusName": "Defense"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3241,14 +3230,23 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__946500704\">Enemy_W1_Bronya_IF_02_MainHaloEffect</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
           "stackType": "Replace",
+          "latentQueue": [
+            "Gepard_LimboFlag",
+            "Bronya_LimboFlag",
+            "isMainAttack",
+            "AIFlag",
+            "PhaseFlag"
+          ],
+          "description": "The character is currently in the Main attack state.",
+          "type": "Other",
+          "effectName": "Main Attack",
+          "statusName": "Charge",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -3265,24 +3263,25 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Gepard_LimboFlag",
-            "Bronya_LimboFlag",
-            "isMainAttack",
-            "AIFlag",
-            "PhaseFlag"
-          ],
-          "description": "The character is currently in the Main attack state.",
-          "type": "Other",
-          "effectName": "Main Attack",
-          "statusName": "Charge"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_SpeedUpPerLayer",
+            "MDF_AttackUpPerLayer"
+          ],
+          "latentQueue": [
+            "PhaseFlag",
+            "AIFlag"
+          ],
+          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpPerLayer</span> and ATK by <span class=\"descriptionNumberColor\">MDF_AttackUpPerLayer</span>. All stacks are lost when Weakness is broken.",
+          "type": "Buff",
+          "effectName": "Enhance",
+          "statusName": "Carried By Inertia",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -3413,20 +3412,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedUpPerLayer",
-            "MDF_AttackUpPerLayer"
-          ],
-          "latentQueue": [
-            "PhaseFlag",
-            "AIFlag"
-          ],
-          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpPerLayer</span> and ATK by <span class=\"descriptionNumberColor\">MDF_AttackUpPerLayer</span>. All stacks are lost when Weakness is broken.",
-          "type": "Buff",
-          "effectName": "Enhance",
-          "statusName": "Carried By Inertia",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3434,6 +3420,16 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackData": [
+            "MDF_SpeedUp"
+          ],
+          "latentQueue": [
+            "PhaseFlag"
+          ],
+          "description": "Greatly enhances this unit, increasing SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>. When in this state, Bronya can summon even more Silvermane Cannoneers.",
+          "type": "Buff",
+          "effectName": "Enhance",
+          "statusName": "Shared Hatred",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3456,17 +3452,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedUp"
-          ],
-          "latentQueue": [
-            "PhaseFlag"
-          ],
-          "description": "Greatly enhances this unit, increasing SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>. When in this state, Bronya can summon even more Silvermane Cannoneers.",
-          "type": "Buff",
-          "effectName": "Enhance",
-          "statusName": "Shared Hatred"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3522,9 +3508,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3604,14 +3588,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1747978880\">Enemy_W1_Bronya_Ability02</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3634,11 +3620,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3725,15 +3707,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>"
         }
       ],
       "references": []

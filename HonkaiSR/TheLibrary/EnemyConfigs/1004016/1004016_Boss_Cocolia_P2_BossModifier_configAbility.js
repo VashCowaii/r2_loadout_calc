@@ -35,9 +35,7 @@ const configAbility = {
         {
           "eventTrigger": "Action Choice Window [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

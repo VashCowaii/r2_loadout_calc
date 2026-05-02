@@ -389,9 +389,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -490,9 +488,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -811,9 +807,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -882,6 +876,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_AttachWeakness"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -926,11 +923,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1079,6 +1072,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_AttachWeakness"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1123,11 +1119,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1186,6 +1178,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_AttachWeakness"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1230,11 +1225,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1301,6 +1292,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_AttachWeakness"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1345,11 +1339,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {

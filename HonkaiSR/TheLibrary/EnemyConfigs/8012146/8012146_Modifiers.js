@@ -10,9 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1243397700\">Enemy_AML_Boss_Part1_IF_Ability01_Mark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1243397700\">Enemy_AML_Boss_Part1_IF_Ability01_Mark</a>"
     }
   ],
   "references": []

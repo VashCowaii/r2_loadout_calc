@@ -102,9 +102,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -138,6 +136,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-259584521\">Monster_W2_Yanqing_BOSS_IceDamage</a>",
+      "stackData": [
+        "MDF_IceDamageTakenUpRatio_PerLayer"
+      ],
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -228,11 +229,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_IceDamageTakenUpRatio_PerLayer"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -348,9 +345,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

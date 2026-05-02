@@ -46,6 +46,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__499178350\">Herta_Trace02_Resistance</a>",
+          "stackData": [
+            "MDF_Resistance"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -68,11 +71,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Resistance"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -107,6 +106,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-516353123\">Herta_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">It Can Still Be Optimized</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "It Can Still Be Optimized",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -129,11 +132,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "It Can Still Be Optimized"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -182,9 +181,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -509,6 +506,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1482818607\">Herta_AbilityEidolon4_DamageUp</a>",
+          "stackData": [
+            "SkillRank_Rank04_P1_DamagePercentage"
+          ],
+          "latentQueue": [
+            "Herta_Count_Insert"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -525,18 +528,23 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "SkillRank_Rank04_P1_DamagePercentage"
-          ],
-          "latentQueue": [
-            "Herta_Count_Insert"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1736222640\">Herta_AbilityEidolon2_CriticalChance</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_CriticalChance"
+          ],
+          "latentQueue": [
+            "Herta_Count_Insert"
+          ],
+          "description": "Each stack increases CRIT rate by <span class=\"descriptionNumberColor\">MDF_CriticalChance</span>, up to 5 stacks.",
+          "type": "Buff",
+          "effectName": "CRIT Rate Boost",
+          "statusName": "CRIT Rate Boost",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -570,18 +578,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_CriticalChance"
-          ],
-          "latentQueue": [
-            "Herta_Count_Insert"
-          ],
-          "description": "Each stack increases CRIT rate by <span class=\"descriptionNumberColor\">MDF_CriticalChance</span>, up to 5 stacks.",
-          "type": "Buff",
-          "effectName": "CRIT Rate Boost",
-          "statusName": "CRIT Rate Boost",
-          "addStacksPerTrigger": 1
+          ]
         }
       ],
       "targetObjectData": {
@@ -891,9 +888,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1041,6 +1036,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-429248408\">Herta_AbilityEidolon6_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_AttackAddRatio"
+          ],
+          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "ATK Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1063,20 +1065,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AttackAddRatio"
-          ],
-          "latentQueue": [],
-          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "ATK Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1926403261\">Herta_Trace03_AddDamageUp</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_AllDamageTakenRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -1093,11 +1090,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageTakenRatio"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1309,9 +1302,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1543,9 +1534,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1600,13 +1589,16 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1076207439\">Herta_Passive_Flag</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1076207439\">Herta_Passive_Flag</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-256958111\">Herta_Passive_ATK</a>",
+          "latentQueue": [
+            "Herta_Count_Insert",
+            "Herta_Count_ATK",
+            "MAvatar_Herta_Passive_CoolDown"
+          ],
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Anyone]",
@@ -1704,18 +1696,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Herta_Count_Insert",
-            "Herta_Count_ATK",
-            "MAvatar_Herta_Passive_CoolDown"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-677386583\">Herta_Passive_Charge</a>",
           "stackType": "ReplaceByCaster",
+          "stackLimit": 4,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1732,9 +1720,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 4,
-          "addStacksPerTrigger": 1
+          ]
         }
       ],
       "references": []

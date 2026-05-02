@@ -71,9 +71,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -124,25 +122,22 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1072054994\">MModifier_Monster_W3_Theater_DamageSharePhase2</a>",
-      "execute": [
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier"
-        }
-      ],
-      "stackData": [],
       "latentQueue": [
         "BreakEndFlag",
         "InsertCheck",
         "LockCount",
         "AI_HeiShengBei_SpecialAI",
         "AI_HeiShengBei_Need"
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier"
+        }
       ]
     },
     {
@@ -158,9 +153,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -237,6 +230,14 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__579019848\">MModifier_Monster_W3_TV_02_FaceLock</a>[<span class=\"descriptionNumberColor\">Tutoring</span>]",
+      "latentQueue": [
+        "AIFlag"
+      ],
+      "description": "In Tutoring mode, this unit will not change its channel when attacked.",
+      "type": "Other",
+      "effectName": "Being Tutored",
+      "statusName": "Tutoring",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -423,16 +424,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
-      ],
-      "description": "In Tutoring mode, this unit will not change its channel when attacked.",
-      "type": "Other",
-      "effectName": "Being Tutored",
-      "statusName": "Tutoring",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -451,6 +443,16 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__665202517\">MModifier_Monster_W3_TV_02_Side2</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]",
+      "latentQueue": [
+        "BreakEndFlag",
+        "InsertCheck",
+        "LockCount",
+        "AI_HeiShengBei_SpecialAI",
+        "AI_HeiShengBei_Need"
+      ],
+      "description": "Banacademic Office members can use \"Classroom Channel\" abilities. After they are attacked, they switch to \"Off-Class Channel\" mode.",
+      "type": "Other",
+      "statusName": "Classroom Channel",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -483,22 +485,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "BreakEndFlag",
-        "InsertCheck",
-        "LockCount",
-        "AI_HeiShengBei_SpecialAI",
-        "AI_HeiShengBei_Need"
-      ],
-      "description": "Banacademic Office members can use \"Classroom Channel\" abilities. After they are attacked, they switch to \"Off-Class Channel\" mode.",
-      "type": "Other",
-      "statusName": "Classroom Channel"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]",
+      "latentQueue": [
+        "AIFlag"
+      ],
+      "description": "Banacademic Office members can use \"Off-Class Channel\" abilities. After they are attacked, they will not switch channels.",
+      "type": "Other",
+      "statusName": "Off-Class Channel",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -677,14 +674,7 @@ const configAbility = {
         {
           "eventTrigger": "Being Attacked End [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
-      ],
-      "description": "Banacademic Office members can use \"Off-Class Channel\" abilities. After they are attacked, they will not switch channels.",
-      "type": "Other",
-      "statusName": "Off-Class Channel"
+      ]
     },
     {
       "name": "Modifier Construction",

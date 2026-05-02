@@ -19,6 +19,12 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1609815276\">MLevel_BattleEventAbility_Challenge_15</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases ATK by <span class=\"descriptionNumberColor\">ADF_1</span> up to 5 times.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "ATK Boost",
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -52,13 +58,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases ATK by <span class=\"descriptionNumberColor\">ADF_1</span> up to 5 times.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "ATK Boost",
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -108,9 +108,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

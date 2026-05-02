@@ -645,6 +645,17 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1152534927\">Modifier_FantasticStory_BaseAbility_2010</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_2011",
+        "DV_FantasticStory_PlusAbility_2012",
+        "DV_FantasticStory_PlusAbility_2013",
+        "DV_FantasticStory_PlusAbility_2014",
+        "DV_FantasticStory_PlusAbility_2015",
+        "DV_FantasticStory_PlusAbility_2016",
+        "DV_FantasticStory_PlusAbility_2017",
+        "DV_FantasticStory_PlusAbility_2018",
+        "DV_FantasticStory_BaseAbility_2010_TriggerFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -1177,18 +1188,6 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2011",
-        "DV_FantasticStory_PlusAbility_2012",
-        "DV_FantasticStory_PlusAbility_2013",
-        "DV_FantasticStory_PlusAbility_2014",
-        "DV_FantasticStory_PlusAbility_2015",
-        "DV_FantasticStory_PlusAbility_2016",
-        "DV_FantasticStory_PlusAbility_2017",
-        "DV_FantasticStory_PlusAbility_2018",
-        "DV_FantasticStory_BaseAbility_2010_TriggerFlag"
       ]
     },
     {
@@ -1204,6 +1203,21 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-149468610\">Modifier_FantasticStory_HPParentChild</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "DV_FantasticStory_BaseAbility_2010_TriggerFlag",
+        "DV_FantasticStory_PlusAbility_2018",
+        "DV_FantasticStory_PlusAbility_2017",
+        "DV_FantasticStory_PlusAbility_2016",
+        "DV_FantasticStory_PlusAbility_2015",
+        "DV_FantasticStory_PlusAbility_2014",
+        "DV_FantasticStory_PlusAbility_2013",
+        "DV_FantasticStory_PlusAbility_2012",
+        "DV_FantasticStory_PlusAbility_2011"
+      ],
+      "description": "After non-Elite enemy targets are defeated, receive DMG based on a certain percentage of this unit's Max HP.",
+      "type": "Buff",
+      "effectName": "Binding Obligation",
+      "statusName": "Binding Obligation",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1251,23 +1265,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_2010_TriggerFlag",
-        "DV_FantasticStory_PlusAbility_2018",
-        "DV_FantasticStory_PlusAbility_2017",
-        "DV_FantasticStory_PlusAbility_2016",
-        "DV_FantasticStory_PlusAbility_2015",
-        "DV_FantasticStory_PlusAbility_2014",
-        "DV_FantasticStory_PlusAbility_2013",
-        "DV_FantasticStory_PlusAbility_2012",
-        "DV_FantasticStory_PlusAbility_2011"
-      ],
-      "description": "After non-Elite enemy targets are defeated, receive DMG based on a certain percentage of this unit's Max HP.",
-      "type": "Buff",
-      "effectName": "Binding Obligation",
-      "statusName": "Binding Obligation"
+      ]
     }
   ]
 }

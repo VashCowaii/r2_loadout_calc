@@ -16,9 +16,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-919146628\">Constance_Eidolon6</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-919146628\">Constance_Eidolon6</a>"
     }
   ],
   "targetObjectData": {

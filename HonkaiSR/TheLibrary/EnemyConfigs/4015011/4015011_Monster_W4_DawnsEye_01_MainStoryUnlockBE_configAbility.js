@@ -158,9 +158,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

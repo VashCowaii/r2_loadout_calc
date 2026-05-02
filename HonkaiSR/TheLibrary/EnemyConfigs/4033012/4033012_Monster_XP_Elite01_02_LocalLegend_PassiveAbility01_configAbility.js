@@ -648,14 +648,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__354987416\">Enemy_XP_Elite01_02_LocalLegend_DamageAdded</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+      "type": "Buff",
+      "statusName": "DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -678,16 +679,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
-      "type": "Buff",
-      "statusName": "DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__741408749\">Enemy_XP_Elite01_02_LocalLegend_Status</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
+      ],
+      "latentQueue": [
+        "_ModifyActionDelay"
       ],
       "execute": [
         {
@@ -1081,10 +1082,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_ModifyActionDelay"
       ]
     }
   ]

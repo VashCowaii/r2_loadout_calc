@@ -77,9 +77,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-567237122\">MModifier_Monster_W3_Dinosaur_MuteHitFly</a>",
       "modifierFlags": [
         "MuteHitFly"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

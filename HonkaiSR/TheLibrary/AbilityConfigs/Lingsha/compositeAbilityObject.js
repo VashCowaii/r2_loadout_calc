@@ -225,9 +225,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -377,8 +375,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1907662117\">Lingsha_Ultimate_ModifyBEAction</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -411,8 +407,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__285427978\">Lingsha_Ability_ModifyBEAction</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -445,8 +439,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1482372912\">Lingsha_Olisten_BE_Create</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -670,9 +662,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -787,9 +777,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1369,9 +1357,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1803,6 +1789,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1203114075\">Lingsha_Eidolon6_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Arcadia Under Deep Seclusion</span>]",
+          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "All-Type RES Reduction",
+          "statusName": "Arcadia Under Deep Seclusion",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1827,17 +1817,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "All-Type RES Reduction",
-          "statusName": "Arcadia Under Deep Seclusion"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1458980452\">Lingsha_Eidolon6_Listen</a>",
-          "stackData": [],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -1865,6 +1849,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-962483629\">Lingsha_Eidolon2_BreakDamageAttackRatio</a>[<span class=\"descriptionNumberColor\">Leisure in Carmine Smokeveil</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Break Effect Boost",
+          "statusName": "Leisure in Carmine Smokeveil",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1887,19 +1878,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Break Effect Boost",
-          "statusName": "Leisure in Carmine Smokeveil"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-127930650\">Lingsha_Eidolon1_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">Bloom on Vileward Bouquet</span>]",
+          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "Bloom on Vileward Bouquet",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1917,11 +1904,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "Bloom on Vileward Bouquet"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1954,15 +1937,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1709120566\">Lingsha_Eidolon1_ListenBreak</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "Rank01_MDF_PropertyValue"
           ],
           "execute": [
             {
@@ -2006,15 +1990,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "Rank01_MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1721297245\">Lingsha_Eidolon1_Listen</a>",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2037,17 +2020,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__551246003\">Lingsha_PointB3_CD</a>[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "stackData": [],
           "latentQueue": [
             "BattleEvent_Lingsha_00_PointB3"
           ],
@@ -2061,6 +2039,10 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__210278197\">Lingsha_PointB3_OnListen</a>",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
+          ],
+          "stackData": [
+            "MDF_HPRatio",
+            "MDF_LifeTime"
           ],
           "execute": [
             {
@@ -2391,17 +2373,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HPRatio",
-            "MDF_LifeTime"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
           "stackType": "Replace",
+          "stackData": [
+            "_AttackTime"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2538,16 +2518,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "_AttackTime"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-637709984\">Lingsha_BreakDamageUp</a>[<span class=\"descriptionNumberColor\">Befog</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Break DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Befog",
+          "statusName": "Befog",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -2579,15 +2562,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Break DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Befog",
-          "statusName": "Befog"
+          ]
         }
       ],
       "references": []

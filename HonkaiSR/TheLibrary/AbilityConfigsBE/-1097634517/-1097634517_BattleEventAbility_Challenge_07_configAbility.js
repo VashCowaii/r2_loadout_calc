@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-235869909\">MLevel_BattleEventAbility_Challenge_07</a>[<span class=\"descriptionNumberColor\">Quantum Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Quantum DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
+      "type": "Debuff",
+      "effectName": "Quantum Vulnerability",
+      "statusName": "Quantum Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -41,11 +45,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Quantum DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
-      "type": "Debuff",
-      "effectName": "Quantum Vulnerability",
-      "statusName": "Quantum Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -96,9 +96,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

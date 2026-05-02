@@ -91,6 +91,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1765961654\">Enemy_W2_Xuanlu_MinionMark_4</a>",
+      "stackData": [
+        "MDF_MaxMinionCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -189,11 +192,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_MaxMinionCount"
-      ],
-      "latentQueue": []
+      ]
     }
   ]
 }

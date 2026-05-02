@@ -11,6 +11,20 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__313910489\">Memosprite_CastoriceServant_Eidolon6_StancePreview</a>",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "skillType": "Memosprite",
+        "toughnessForcedReductionPreview": {
+          "operator": "Variables[0] (CASTORICE_OBJECT_UNUSED_8) || RETURN",
+          "displayLines": "CASTORICE_OBJECT_UNUSED_8",
+          "constants": [],
+          "variables": [
+            "CASTORICE_OBJECT_UNUSED_8"
+          ]
+        },
+        "showAsForcedReduction": true
+      },
       "abilityValueChange": [
         {
           "name": "Ability Value Changes",
@@ -40,23 +54,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "skillType": "Memosprite",
-        "toughnessForcedReductionPreview": {
-          "operator": "Variables[0] (CASTORICE_OBJECT_UNUSED_8) || RETURN",
-          "displayLines": "CASTORICE_OBJECT_UNUSED_8",
-          "constants": [],
-          "variables": [
-            "CASTORICE_OBJECT_UNUSED_8"
-          ]
-        },
-        "showAsForcedReduction": true
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -87,14 +85,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1420894416\">Memosprite_CastoriceServant_Ability23Check</a>",
-      "stackData": [],
       "latentQueue": [
         "CL_PlayTimes",
         "CL_EnterBattlePlayTimes"
@@ -104,6 +99,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-256072391\">Memosprite_CastoriceServant_BP_Explode</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "CL_PlayTimes",
+        "CL_EnterBattlePlayTimes"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -204,17 +203,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "CL_PlayTimes",
-        "CL_EnterBattlePlayTimes"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1341939671\">Memosprite_CastoriceServant_Disable</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "CL_EnterBattlePlayTimes",
+        "CL_PlayTimes",
+        "CastoriceServant_BPSkill_Level"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -232,12 +231,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "CL_EnterBattlePlayTimes",
-        "CL_PlayTimes",
-        "CastoriceServant_BPSkill_Level"
       ]
     },
     {
@@ -340,14 +333,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__148040455\">Memosprite_CastoriceServant_BPCost_2</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "CastoriceServant_BPSkill_Level"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -367,16 +361,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "CastoriceServant_BPSkill_Level"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__164818074\">Memosprite_CastoriceServant_BPCost_1</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "CastoriceServant_BPSkill_Level"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -396,10 +389,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "CastoriceServant_BPSkill_Level"
       ]
     },
     {
@@ -414,14 +403,14 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2133723962\">Memosprite_CastoriceServant_InsideExplode</a>[<span class=\"descriptionNumberColor\">Back to the Black</span>]",
+      "description": "Triggers the Talent effect of \"Wings Sweep the Ruins\" the next time \"Breath Scorches the Shadow\" is used.",
+      "type": "Other",
+      "statusName": "Back to the Black",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "description": "Triggers the Talent effect of \"Wings Sweep the Ruins\" the next time \"Breath Scorches the Shadow\" is used.",
-      "type": "Other",
-      "statusName": "Back to the Black"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -433,9 +422,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -592,8 +579,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1340712313\">Memosprite_CastoriceServant_OnListenHitDamageSplit</a>",
-      "stackData": [],
-      "latentQueue": [],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -800,14 +785,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-509656395\">Memosprite_CastoriceServant_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Roar Rumbles the Realm",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -830,15 +820,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Roar Rumbles the Realm"
+      ]
     }
   ],
   "references": []

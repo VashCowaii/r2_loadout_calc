@@ -236,6 +236,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__64395692\">Sam_Ultimate_BreakDamageAddRatio</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -263,11 +266,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -298,14 +297,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__154726309\">Sam_Eidolon6_UltraDamageTypeAddRatio</a>[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Fire RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Fire RES PEN Boost",
+      "statusName": "In Finalized Morrow, I Full Bloom",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -328,11 +329,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Fire RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Fire RES PEN Boost",
-      "statusName": "In Finalized Morrow, I Full Bloom"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -439,6 +436,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AttachWeakness"
       ],
+      "description": "Implanted with extra Fire Weakness.",
+      "type": "Debuff",
+      "effectName": "Implant Weakness: Fire",
+      "statusName": "Extra Fire Weakness",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -456,18 +457,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Implanted with extra Fire Weakness.",
-      "type": "Debuff",
-      "effectName": "Implant Weakness: Fire",
-      "statusName": "Extra Fire Weakness"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "DMG Mitigation",
+      "statusName": "Chrysalid Pyronexus",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -490,15 +492,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "DMG Mitigation",
-      "statusName": "Chrysalid Pyronexus"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -506,6 +500,63 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "FireFlyRedMode"
+      ],
+      "stackData": [
+        "MDF_SpeedUP",
+        "MDF_StatusResistance",
+        "MDF_PropertyValue"
+      ],
+      "description": "When using Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">MDF_FinalDamageUP</span> and increases the Break DMG dealt by SAM to the enemy targets by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUP</span>, and Effect RES by <span class=\"descriptionNumberColor\">MDF_StatusResistance</span>.",
+      "type": "Other",
+      "effectName": "Fyrefly Type-IV: Complete Combustion",
+      "statusName": "Fyrefly Type-IV: Complete Combustion",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-340351438\">Sam_PassiveAbility_RedMode_DisableUltraSkill</a>",
+          "aliveOnly": "True",
+          "haloStatus": true
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"100735339\">Sam_PointB2_SuperBreakBonus</a>",
+          "aliveOnly": "True",
+          "haloStatus": true,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Trace Activated",
+                "conditionList": "Module β: Autoreactive Armor"
+              },
+              {
+                "name": "Compare: Ability Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
+                "compareType": ">=",
+                "value2": {
+                  "operator": "Variables[0] (2) || RETURN",
+                  "displayLines": "2",
+                  "constants": [],
+                  "variables": [
+                    2
+                  ]
+                }
+              }
+            ]
+          }
+        }
       ],
       "execute": [
         {
@@ -1384,64 +1435,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [
-        "MDF_SpeedUP",
-        "MDF_StatusResistance",
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "When using Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">MDF_FinalDamageUP</span> and increases the Break DMG dealt by SAM to the enemy targets by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUP</span>, and Effect RES by <span class=\"descriptionNumberColor\">MDF_StatusResistance</span>.",
-      "type": "Other",
-      "effectName": "Fyrefly Type-IV: Complete Combustion",
-      "statusName": "Fyrefly Type-IV: Complete Combustion",
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-340351438\">Sam_PassiveAbility_RedMode_DisableUltraSkill</a>",
-          "aliveOnly": "True",
-          "haloStatus": true
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"100735339\">Sam_PointB2_SuperBreakBonus</a>",
-          "aliveOnly": "True",
-          "haloStatus": true,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Trace Activated",
-                "conditionList": "Module β: Autoreactive Armor"
-              },
-              {
-                "name": "Compare: Ability Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Modifier Holder}}"
-                },
-                "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
-                "compareType": ">=",
-                "value2": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
-                }
-              }
-            ]
-          }
         }
       ]
     }

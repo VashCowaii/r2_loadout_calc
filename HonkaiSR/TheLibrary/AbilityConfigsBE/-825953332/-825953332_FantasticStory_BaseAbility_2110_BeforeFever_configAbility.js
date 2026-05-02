@@ -56,6 +56,9 @@ const configAbility = {
       "modifierFlags": [
         "Deathrattle"
       ],
+      "description": "When this unit's turn starts or when defeated by any unit, this unit takes a set amount of DMG based on the number of \"Shatter\" stacks.",
+      "type": "Debuff",
+      "statusName": "Shatter",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -472,10 +475,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "When this unit's turn starts or when defeated by any unit, this unit takes a set amount of DMG based on the number of \"Shatter\" stacks.",
-      "type": "Debuff",
-      "statusName": "Shatter"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -542,6 +542,17 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1473014214\">Modifier_FantasticStory_BaseAbility_2110_BeforeFever</a>",
       "stackType": "ReplaceByCaster",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1102093119\">Modifier_FantasticStory_BaseAbility_2110_BeforeFever_ForShow</a>[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Attack Start [Anyone]",
@@ -616,19 +627,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1102093119\">Modifier_FantasticStory_BaseAbility_2110_BeforeFever_ForShow</a>[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
-          "haloStatus": true
         }
       ]
     }

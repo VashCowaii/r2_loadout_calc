@@ -12,6 +12,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1660387869\">Advanced_Welt_Trace01_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Retribution</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatioFinal</span>.",
+      "type": "Buff",
+      "effectName": "Retribution",
+      "statusName": "Retribution",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -53,11 +57,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatioFinal</span>.",
-      "type": "Buff",
-      "effectName": "Retribution",
-      "statusName": "Retribution"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -174,9 +174,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -189,9 +187,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -204,9 +200,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -263,9 +257,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -276,6 +268,18 @@ const configAbility = {
         "STAT_SpeedDown",
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_WeightlessTriggerCount",
+        "MDF_ActionDelayRatio",
+        "MDF_PropertyValue",
+        "MDF_AllResDownValue",
+        "MDF_SpeedDownRatio"
+      ],
+      "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, SPD decreases by <span class=\"descriptionNumberColor\">MDF_SpeedDownRatio</span>. When receiving an attack, action is delayed by <span class=\"descriptionNumberColor\">MDF_ActionDelayRatio</span>. This effect can be triggered <span class=\"descriptionNumberColor\">MDF_WeightlessTriggerCount</span> more time(s).",
+      "type": "Debuff",
+      "effectName": "Weightless",
+      "statusName": "Weightless",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -421,25 +425,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_WeightlessTriggerCount",
-        "MDF_ActionDelayRatio",
-        "MDF_PropertyValue",
-        "MDF_AllResDownValue",
-        "MDF_SpeedDownRatio"
-      ],
-      "latentQueue": [],
-      "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, SPD decreases by <span class=\"descriptionNumberColor\">MDF_SpeedDownRatio</span>. When receiving an attack, action is delayed by <span class=\"descriptionNumberColor\">MDF_ActionDelayRatio</span>. This effect can be triggered <span class=\"descriptionNumberColor\">MDF_WeightlessTriggerCount</span> more time(s).",
-      "type": "Debuff",
-      "effectName": "Weightless",
-      "statusName": "Weightless",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1473917865\">Advanced_Welt_Trace03_AttackUp</a>[<span class=\"descriptionNumberColor\">Punishment</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Punishment",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -537,11 +532,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Punishment"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -554,23 +545,6 @@ const configAbility = {
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"-1110048549\">Advanced_Welt_Trace03_Sub</a>"
-            }
-          ]
-        }
-      ],
-      "abilityValueChange": [
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-1110048549\">Advanced_Welt_Trace03_Sub</a>"
-                }
-              ]
             }
           ]
         }
@@ -684,8 +658,23 @@ const configAbility = {
           ]
         }
       ],
-      "stackData": [],
-      "latentQueue": []
+      "abilityValueChange": [
+        {
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "whenValueChanges": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1110048549\">Advanced_Welt_Trace03_Sub</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -694,6 +683,13 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedDown"
       ],
+      "stackData": [
+        "MDF_PropertyRatio"
+      ],
+      "description": "SPD decreases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Debuff",
+      "effectName": "Slow",
+      "statusName": "Slow",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -718,15 +714,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "SPD decreases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Debuff",
-      "effectName": "Slow",
-      "statusName": "Slow"
+      ]
     }
   ],
   "references": []

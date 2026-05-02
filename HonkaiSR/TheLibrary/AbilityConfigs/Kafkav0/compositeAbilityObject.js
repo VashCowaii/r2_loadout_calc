@@ -223,9 +223,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -323,9 +321,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -433,9 +429,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -842,6 +836,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1710761460\">Kafka_PassiveDotDamage_Eidolon1</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_DotRatio"
+          ],
+          "description": "DoT taken +<span class=\"descriptionNumberColor\">MDF_DotRatio</span>.",
+          "type": "Debuff",
+          "effectName": "DoT Vulnerability",
+          "statusName": "DoT Vulnerability",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -873,15 +874,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DotRatio"
-          ],
-          "latentQueue": [],
-          "description": "DoT taken +<span class=\"descriptionNumberColor\">MDF_DotRatio</span>.",
-          "type": "Debuff",
-          "effectName": "DoT Vulnerability",
-          "statusName": "DoT Vulnerability"
+          ]
         }
       ],
       "targetObjectData": {
@@ -987,7 +980,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1926104538\">Kafka_Passive_CanAttack</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]",
-          "stackData": [],
           "latentQueue": [
             "Kafka_Listen_Rank1"
           ],
@@ -1000,6 +992,9 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-748126065\">M_Kafka_Passive</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
+          ],
+          "latentQueue": [
+            "Kafka_Listen_Rank1"
           ],
           "execute": [
             {
@@ -1171,10 +1166,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Kafka_Listen_Rank1"
           ]
         },
         {
@@ -1658,6 +1649,11 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__42937918\">Kafka_Passive_DotSpecialMark_Listen</a>",
+          "latentQueue": [
+            "Kafka_Listen_Rank1",
+            "Kafka_Listen_Rank2",
+            "Kafka_Listen_Rank6"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1774,12 +1770,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Kafka_Listen_Rank1",
-            "Kafka_Listen_Rank2",
-            "Kafka_Listen_Rank6"
           ]
         }
       ],
@@ -2478,6 +2468,11 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1192521276\">Kafka_Eidolon4</a>",
+          "latentQueue": [
+            "Kafka_Listen_Rank1",
+            "Kafka_Listen_Rank2",
+            "Kafka_Listen_Rank6"
+          ],
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -2505,12 +2500,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Kafka_Listen_Rank1",
-            "Kafka_Listen_Rank2",
-            "Kafka_Listen_Rank6"
           ]
         },
         {
@@ -2519,6 +2508,12 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Increases DoT dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Fortississimo",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2541,20 +2536,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Increases DoT dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Fortississimo"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-899885235\">Kafka_Passive_CanAttackCD</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]",
-          "stackData": [],
-          "latentQueue": [],
           "description": "The effect of Talent \"Gentle but Cruel\" cannot be triggered.",
           "type": "Other",
           "statusName": "Gentle but Cruel",

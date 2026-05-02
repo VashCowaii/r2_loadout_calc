@@ -11,6 +11,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Lightning RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Fluctuate in the Tapestry of Fates",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -156,19 +162,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Lightning RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Fluctuate in the Tapestry of Fates"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1027471092\">Aglaea_Eidolon2_Effect</a>[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
       "stackType": "Replace",
+      "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">_IgnoreDefenceRatioTotal</span> of the target's DEF.",
+      "type": "Buff",
+      "statusName": "Sail on the Raft of Eyelids",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -209,10 +211,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">_IgnoreDefenceRatioTotal</span> of the target's DEF.",
-      "type": "Buff",
-      "statusName": "Sail on the Raft of Eyelids"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -344,9 +343,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -570,14 +567,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__518821924\">Aglaea_Ability03</a>[<span class=\"descriptionNumberColor\">Supreme Stance</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Basic ATK is enhanced to \"Slash by a Thousandfold Kiss.\"",
+      "type": "Buff",
+      "effectName": "Supreme Stance",
+      "statusName": "Supreme Stance",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -765,13 +764,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Basic ATK is enhanced to \"Slash by a Thousandfold Kiss.\"",
-      "type": "Buff",
-      "effectName": "Supreme Stance",
-      "statusName": "Supreme Stance"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -858,6 +851,8 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__275138353\">Aglaea_HPAddedRatio</a>",
       "stackType": "ReplaceByCaster",
+      "stackLimit": 3,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -888,13 +883,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 3,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__755493734\">Aglaea_Ability02_ChangeSkill</a>",
+      "latentQueue": [
+        "_CasterEnergy"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -942,10 +938,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_CasterEnergy"
       ]
     },
     {
@@ -1181,6 +1173,16 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "BombDamagePercentage",
+        "_SpRecover",
+        "MDF_PropertyValue",
+        "MDF_PropertyValue2"
+      ],
+      "description": "After receiving Aglaea's attack, further takes Lightning Additional DMG equal to <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of Aglaea's ATK. Garmentmaker will prioritize this target to attack.",
+      "type": "Debuff",
+      "effectName": "Seam Stitch",
+      "statusName": "Seam Stitch",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1445,18 +1447,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "BombDamagePercentage",
-        "_SpRecover",
-        "MDF_PropertyValue",
-        "MDF_PropertyValue2"
-      ],
-      "latentQueue": [],
-      "description": "After receiving Aglaea's attack, further takes Lightning Additional DMG equal to <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of Aglaea's ATK. Garmentmaker will prioritize this target to attack.",
-      "type": "Debuff",
-      "effectName": "Seam Stitch",
-      "statusName": "Seam Stitch"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1478,14 +1469,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1374425540\">Memosprite_AglaeaServant_SummonerAddSpeed</a>[<span class=\"descriptionNumberColor\">A Body Brewed by Tears</span>]",
       "stackType": "Replace",
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">SpeedAddTotal</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "A Body Brewed by Tears",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1527,18 +1520,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">SpeedAddTotal</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "A Body Brewed by Tears"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2055277226\">Aglaea_Ability03_Servant_PointB1_AddAttack</a>[<span class=\"descriptionNumberColor\">The Myopic's Doom</span>]",
       "stackType": "Replace",
+      "description": "ATK increases by <span class=\"descriptionNumberColor\">_AttackConvert</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "The Myopic's Doom",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1651,11 +1642,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "ATK increases by <span class=\"descriptionNumberColor\">_AttackConvert</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "The Myopic's Doom"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1734,15 +1721,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__779865108\">Aglaea_Ability03Preshow</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -1770,7 +1753,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1390492215\">Aglaea_Ability02Preshow</a>",
-      "stackData": [],
       "latentQueue": [
         "_CasterEnergy"
       ],

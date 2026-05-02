@@ -668,9 +668,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -679,9 +677,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Leave Battle"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -690,9 +686,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Ultimate Prep-Phase [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1957,6 +1951,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1255636057\">Enemy_W5_Vtuber_Ability04_Bonus</a>[<span class=\"descriptionNumberColor\">Flooding Viewers</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Increases action advances and CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Flooding Viewers",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1979,14 +1979,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Increases action advances and CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Flooding Viewers"
+          ]
         }
       ]
     },
@@ -2642,9 +2635,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3162,9 +3153,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3403,9 +3392,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Exit View-Mode [Anyone]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3426,9 +3413,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3798,9 +3783,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3857,6 +3840,18 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SuperArmorBreak"
           ],
+          "stackData": [
+            "MDF_AllDamageTypeTakenRatio"
+          ],
+          "latentQueue": [
+            "MDF_Phase1",
+            "MDF_Suc",
+            "MDF_Phase2"
+          ],
+          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>. Action delayed.",
+          "type": "Debuff",
+          "effectName": "Tilted",
+          "statusName": "Tilted",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3879,19 +3874,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageTypeTakenRatio"
-          ],
-          "latentQueue": [
-            "MDF_Phase1",
-            "MDF_Suc",
-            "MDF_Phase2"
-          ],
-          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>. Action delayed.",
-          "type": "Debuff",
-          "effectName": "Tilted",
-          "statusName": "Tilted"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3899,6 +3882,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
+          "description": "Located on the sub-field.",
+          "type": "Other",
+          "statusName": "Epic showdown in progress!",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -4069,10 +4055,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Located on the sub-field.",
-          "type": "Other",
-          "statusName": "Epic showdown in progress!"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4080,6 +4063,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ListenBattleEventSkill",
             "AllowAddToGridFightBackend"
+          ],
+          "latentQueue": [
+            "MDF_SwitchField"
           ],
           "execute": [
             {
@@ -4285,16 +4271,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_SwitchField"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1739259031\">Enemy_W5_Vtuber_OutField_Part1DotMark</a>",
-          "stackData": [],
           "latentQueue": [
             "MDF_SwitchField"
           ]
@@ -4304,6 +4285,9 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-354483792\">Enemy_W5_Vtuber_ElationAbilityUser</a>",
           "modifierFlags": [
             "AllowAddToGridFightBackend"
+          ],
+          "latentQueue": [
+            "MDF_SwitchField"
           ],
           "execute": [
             {
@@ -4333,10 +4317,6 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_SwitchField"
           ]
         },
         {
@@ -4356,7 +4336,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1627710607\">Enemy_W5_Vtuber_SwitchField_InsertActionPrepare</a>",
-          "stackData": [],
           "latentQueue": [
             "MDF_SwitchField"
           ]
@@ -4364,7 +4343,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1281523660\">Enemy_W5_Vtuber_SwitchField_UltraPrepare</a>",
-          "stackData": [],
           "latentQueue": [
             "MDF_SwitchField"
           ]
@@ -4372,6 +4350,48 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__308759632\">Enemy_W5_Vtuber_SwitchField</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{@Sparxiecon: Aha Instant Battle Event}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1141771649\">Enemy_W5_Vtuber_InField</a>[<span class=\"descriptionNumberColor\">Epic showdown in progress!</span>]",
+              "haloStatus": true,
+              "includeBattleEvent": true
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{@Sparxiecon: Prime-Field Targets}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1141771649\">Enemy_W5_Vtuber_InField</a>[<span class=\"descriptionNumberColor\">Epic showdown in progress!</span>]",
+              "haloStatus": true,
+              "includeBattleEvent": true
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{@Sparxiecon: Sub-Field Targets}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1334912120\">Enemy_W5_Vtuber_OutField</a>",
+              "haloStatus": true,
+              "includeBattleEvent": true
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Currency Wars Full OffFieldList}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1334912120\">Enemy_W5_Vtuber_OutField</a>",
+              "haloStatus": true,
+              "includeBattleEvent": true
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5643,50 +5663,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{@Sparxiecon: Aha Instant Battle Event}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1141771649\">Enemy_W5_Vtuber_InField</a>[<span class=\"descriptionNumberColor\">Epic showdown in progress!</span>]",
-              "haloStatus": true,
-              "includeBattleEvent": true
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{@Sparxiecon: Prime-Field Targets}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1141771649\">Enemy_W5_Vtuber_InField</a>[<span class=\"descriptionNumberColor\">Epic showdown in progress!</span>]",
-              "haloStatus": true,
-              "includeBattleEvent": true
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{@Sparxiecon: Sub-Field Targets}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1334912120\">Enemy_W5_Vtuber_OutField</a>",
-              "haloStatus": true,
-              "includeBattleEvent": true
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Currency Wars Full OffFieldList}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1334912120\">Enemy_W5_Vtuber_OutField</a>",
-              "haloStatus": true,
-              "includeBattleEvent": true
-            }
           ]
         },
         {
@@ -6094,9 +6070,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6183,6 +6157,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__610660362\">Enemy_W5_Vtuber_Screen02</a>",
+          "latentQueue": [
+            "MDF_SwitchField"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -6358,15 +6335,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_SwitchField"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__593882743\">Enemy_W5_Vtuber_Screen01</a>",
+          "latentQueue": [
+            "MDF_SwitchField"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -6472,15 +6448,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_SwitchField"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__724622034\">Enemy_W5_Vtuber_Charge02</a>[<span class=\"descriptionNumberColor\">Live Showdown</span>]",
+          "description": "The current remaining HP percentage of the enemy on the sub-field is at <span class=\"descriptionNumberColor\">MDF_Ratio</span>. When Live Showdown ends, if all enemies in the sub-field are defeated, uses \"Commence Chat Bombing!\" on ally characters going to the sub-field, or else uses \"Bullet Comments Ready!\" on all allies.",
+          "type": "Other",
+          "statusName": "Live Showdown",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -6625,16 +6600,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The current remaining HP percentage of the enemy on the sub-field is at <span class=\"descriptionNumberColor\">MDF_Ratio</span>. When Live Showdown ends, if all enemies in the sub-field are defeated, uses \"Commence Chat Bombing!\" on ally characters going to the sub-field, or else uses \"Bullet Comments Ready!\" on all allies.",
-          "type": "Other",
-          "statusName": "Live Showdown"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__707844415\">Enemy_W5_Vtuber_Charge01</a>[<span class=\"descriptionNumberColor\">Live Showdown</span>]",
+          "description": "The current remaining HP percentage of the enemy on the sub-field is at <span class=\"descriptionNumberColor\">MDF_Ratio</span>. When Live Showdown ends, uses \"Commence Chat Bombing!\" on ally characters going to the sub-field.",
+          "type": "Other",
+          "statusName": "Live Showdown",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -6779,16 +6752,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The current remaining HP percentage of the enemy on the sub-field is at <span class=\"descriptionNumberColor\">MDF_Ratio</span>. When Live Showdown ends, uses \"Commence Chat Bombing!\" on ally characters going to the sub-field.",
-          "type": "Other",
-          "statusName": "Live Showdown"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__404660666\">Enemy_W5_Vtuber_ChargeEnd_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">Privacy Protection</span>]",
+          "description": "Decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
+          "type": "Buff",
+          "effectName": "DMG Received Reduction",
+          "statusName": "Privacy Protection",
           "execute": [
             {
               "eventTrigger": "Take Damage End [Owner]: Hit",
@@ -6843,11 +6815,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
-          "type": "Buff",
-          "effectName": "DMG Received Reduction",
-          "statusName": "Privacy Protection"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6855,6 +6823,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "EnduranceLogicOnly"
           ],
+          "description": "Immune to Crowd Control debuffs and DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
+          "type": "Buff",
+          "effectName": "DMG Received Reduction",
+          "statusName": "Privacy Protection",
           "execute": [
             {
               "eventTrigger": "Take Damage End [Owner]: Hit",
@@ -6896,15 +6868,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Immune to Crowd Control debuffs and DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
-          "type": "Buff",
-          "effectName": "DMG Received Reduction",
-          "statusName": "Privacy Protection"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-321445076\">Enemy_W5_Vtuber_Charge</a>",
+          "stackData": [
+            "MDF_AllDamageReduce"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -7220,11 +7191,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageReduce"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7266,9 +7233,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "End Broken State [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7326,14 +7291,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1092944424\">W5_Vtuber_BattleScore2</a>",
           "stackType": "Replace",
+          "latentQueue": [
+            "MDF_Phase1"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7390,16 +7356,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_Phase1"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1143277281\">W5_Vtuber_BattleScore1</a>",
           "stackType": "Replace",
+          "latentQueue": [
+            "MDF_Phase1",
+            "MDF_Suc",
+            "MDF_Phase2"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7446,12 +7413,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_Phase1",
-            "MDF_Suc",
-            "MDF_Phase2"
           ]
         },
         {
@@ -7464,9 +7425,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7478,9 +7437,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7492,9 +7449,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

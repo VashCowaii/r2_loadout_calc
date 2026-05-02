@@ -73,9 +73,7 @@ const configAbility = {
         {
           "eventTrigger": "Leave Battle"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

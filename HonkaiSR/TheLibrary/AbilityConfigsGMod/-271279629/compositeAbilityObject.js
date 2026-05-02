@@ -2539,6 +2539,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_DefenceDown"
           ],
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2563,8 +2564,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true
+          ]
         },
         {
           "name": "Modifier Construction",

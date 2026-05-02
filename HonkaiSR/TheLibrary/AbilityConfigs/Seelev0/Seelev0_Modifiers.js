@@ -15,6 +15,15 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to 2 stacks.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "SPD Boost",
+      "stackLimit": 3,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -48,17 +57,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to 2 stacks.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "SPD Boost",
-      "stackLimit": 3,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -67,6 +66,13 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "SPD Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -89,20 +95,21 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "SPD Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1401924350\">Seele_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "seele_dmg_percent",
+        "MDF_Penetrate"
+      ],
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">seele_dmg_percent</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Amplification",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -203,17 +210,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "seele_dmg_percent",
-        "MDF_Penetrate"
-      ],
-      "latentQueue": [],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">seele_dmg_percent</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Amplification",
-      "duration": 1
+      ]
     }
   ],
   "references": []

@@ -326,9 +326,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -482,9 +480,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -526,9 +522,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Enter Battle",
               "priorityLevel": -55
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -611,9 +605,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     }

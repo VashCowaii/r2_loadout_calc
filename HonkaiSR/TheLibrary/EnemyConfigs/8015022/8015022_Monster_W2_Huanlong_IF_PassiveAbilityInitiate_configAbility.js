@@ -720,9 +720,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -730,9 +728,7 @@ const configAbility = {
       "modifierFlags": [
         "MuteHitFly",
         "KeepOnDeathrattle"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

@@ -346,14 +346,16 @@ const configAbility = {
         {
           "eventTrigger": "Pre-Death [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-715823219\">Enemy_W1_Bronya_IF_02_Part2EnhanceInti</a>",
       "stackType": "Refresh",
+      "latentQueue": [
+        "AIFlag",
+        "PhaseFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -402,16 +404,24 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag",
-        "PhaseFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
+      "stackData": [
+        "MDF_SpeedDownRatio"
+      ],
+      "latentQueue": [
+        "Gepard_LimboFlag",
+        "Bronya_LimboFlag",
+        "isMainAttack",
+        "AIFlag",
+        "PhaseFlag"
+      ],
+      "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedDownRatio</span> when the character is in Support mode.",
+      "type": "Other",
+      "statusName": "Defense",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -436,20 +446,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SpeedDownRatio"
-      ],
-      "latentQueue": [
-        "Gepard_LimboFlag",
-        "Bronya_LimboFlag",
-        "isMainAttack",
-        "AIFlag",
-        "PhaseFlag"
-      ],
-      "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedDownRatio</span> when the character is in Support mode.",
-      "type": "Other",
-      "statusName": "Defense"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -474,14 +471,23 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__946500704\">Enemy_W1_Bronya_IF_02_MainHaloEffect</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
       "stackType": "Replace",
+      "latentQueue": [
+        "Gepard_LimboFlag",
+        "Bronya_LimboFlag",
+        "isMainAttack",
+        "AIFlag",
+        "PhaseFlag"
+      ],
+      "description": "The character is currently in the Main attack state.",
+      "type": "Other",
+      "effectName": "Main Attack",
+      "statusName": "Charge",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -498,24 +504,25 @@ const configAbility = {
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Gepard_LimboFlag",
-        "Bronya_LimboFlag",
-        "isMainAttack",
-        "AIFlag",
-        "PhaseFlag"
-      ],
-      "description": "The character is currently in the Main attack state.",
-      "type": "Other",
-      "effectName": "Main Attack",
-      "statusName": "Charge"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_SpeedUpPerLayer",
+        "MDF_AttackUpPerLayer"
+      ],
+      "latentQueue": [
+        "PhaseFlag",
+        "AIFlag"
+      ],
+      "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpPerLayer</span> and ATK by <span class=\"descriptionNumberColor\">MDF_AttackUpPerLayer</span>. All stacks are lost when Weakness is broken.",
+      "type": "Buff",
+      "effectName": "Enhance",
+      "statusName": "Carried By Inertia",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -646,20 +653,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SpeedUpPerLayer",
-        "MDF_AttackUpPerLayer"
-      ],
-      "latentQueue": [
-        "PhaseFlag",
-        "AIFlag"
-      ],
-      "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpPerLayer</span> and ATK by <span class=\"descriptionNumberColor\">MDF_AttackUpPerLayer</span>. All stacks are lost when Weakness is broken.",
-      "type": "Buff",
-      "effectName": "Enhance",
-      "statusName": "Carried By Inertia",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -667,6 +661,16 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "stackData": [
+        "MDF_SpeedUp"
+      ],
+      "latentQueue": [
+        "PhaseFlag"
+      ],
+      "description": "Greatly enhances this unit, increasing SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>. When in this state, Bronya can summon even more Silvermane Cannoneers.",
+      "type": "Buff",
+      "effectName": "Enhance",
+      "statusName": "Shared Hatred",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -689,17 +693,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SpeedUp"
-      ],
-      "latentQueue": [
-        "PhaseFlag"
-      ],
-      "description": "Greatly enhances this unit, increasing SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>. When in this state, Bronya can summon even more Silvermane Cannoneers.",
-      "type": "Buff",
-      "effectName": "Enhance",
-      "statusName": "Shared Hatred"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -755,9 +749,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -837,14 +829,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1747978880\">Enemy_W1_Bronya_Ability02</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -867,11 +861,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -958,15 +948,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>"
     }
   ],
   "references": []

@@ -156,6 +156,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. Can use Lupitoxin Synthesis and Slaughter Algorithm. This is dispelled when Weakness is broken.",
+          "type": "Buff",
+          "effectName": "Moon Rage",
+          "statusName": "Moon Rage",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -315,16 +319,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. Can use Lupitoxin Synthesis and Slaughter Algorithm. This is dispelled when Weakness is broken.",
-          "type": "Buff",
-          "effectName": "Moon Rage",
-          "statusName": "Moon Rage"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__824686737\">Enemy_W2_LycanMecha_RageListener</a>",
           "stackType": "Replace",
+          "latentQueue": [
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier is Added [Owner]",
@@ -380,10 +383,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
           ]
         }
       ]
@@ -2253,9 +2252,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>"
         }
       ]
     },
@@ -2594,9 +2591,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Phase Start [Anyone][?]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2655,9 +2650,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2729,9 +2722,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2742,6 +2733,11 @@ const compositeAbilityObject = {
             "STAT_CTRL",
             "AvatarBreak"
           ],
+          "useEntitySnapshot": true,
+          "description": "Unable to move until the start of this unit's next turn.",
+          "type": "Debuff",
+          "effectName": "Becomes Terrified",
+          "statusName": "Terrified",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2780,12 +2776,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "Unable to move until the start of this unit's next turn.",
-          "type": "Debuff",
-          "effectName": "Becomes Terrified",
-          "statusName": "Terrified"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2871,6 +2862,14 @@ const compositeAbilityObject = {
             "ListenBattleEventSkill",
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_LoseSP"
+          ],
+          "description": "Enters the \"Terrified\" state at the start of the second turn. Attacking the %CasterName 1 time before then can dispel \"Terror Grip.\"",
+          "type": "Debuff",
+          "effectName": "Terror Grip",
+          "statusName": "Terror Grip",
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -3029,16 +3028,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_LoseSP"
-          ],
-          "latentQueue": [],
-          "description": "Enters the \"Terrified\" state at the start of the second turn. Attacking the %CasterName 1 time before then can dispel \"Terror Grip.\"",
-          "type": "Debuff",
-          "effectName": "Terror Grip",
-          "statusName": "Terror Grip",
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3050,8 +3040,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__74215986\">Enemy_W2_LycanMecha_Ability06_Impact</a>[<span class=\"descriptionNumberColor\">Blood Fervor</span>]",
-          "stackData": [],
-          "latentQueue": [],
           "description": "The Bloodlust stacks needed to enter the Moon Rage status are reduced.",
           "type": "Buff",
           "effectName": "Bloodlust limit reduced",
@@ -3060,6 +3048,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1246058342\">Enemy_W2_LycanMecha_BattleCry</a>",
+          "latentQueue": [
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -3084,15 +3075,14 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -45
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-645995038\">Enemy_W2_LycanMecha_BattleCryTag</a>",
+          "latentQueue": [
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Losing Modifier [Owner]",
@@ -3109,10 +3099,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
           ]
         }
       ],

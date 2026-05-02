@@ -326,9 +326,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -337,9 +335,7 @@ const configAbility = {
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

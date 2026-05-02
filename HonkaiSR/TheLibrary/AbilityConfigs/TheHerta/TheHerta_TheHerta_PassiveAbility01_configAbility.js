@@ -418,6 +418,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1890012800\">TheHerta_Trace02_Bonus</a>[<span class=\"descriptionNumberColor\">Message From Beyond the Veil</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Message From Beyond the Veil",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -440,10 +443,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Message From Beyond the Veil"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -541,6 +541,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-450886652\">TheHerta_Trace02</a>",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": [
+        "Skill21_Layer_Max"
+      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -624,18 +630,11 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "Skill21_Layer_Max"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2011497788\">TheHerta_UltraBoost</a>",
-      "stackData": [],
       "latentQueue": [
         "Skill21_Layer_Max"
       ],
@@ -658,6 +657,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-910560068\">TheHerta_Passive_MagicMark_Caster</a>",
+      "latentQueue": [
+        "Skill21_Layer_Max"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -906,10 +908,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Skill21_Layer_Max"
       ]
     },
     {
@@ -917,6 +915,9 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__887606439\">TheHerta_Passive_MagicMark_Unselectable</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
+      ],
+      "latentQueue": [
+        "Skill21_Layer_Max"
       ],
       "execute": [
         {
@@ -1011,10 +1012,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Skill21_Layer_Max"
       ]
     },
     {
@@ -1023,12 +1020,6 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
-      "execute": [
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier"
-        }
-      ],
-      "stackData": [],
       "latentQueue": [
         "Skill21_Layer_Max"
       ],
@@ -1041,6 +1032,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-682623552\">TheHerta_BPdamageNumber_UIconfig</a>",
           "haloStatus": true
+        }
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier"
         }
       ]
     },
@@ -1300,13 +1296,24 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__220694751\">TheHerta_Trace01_Regen_CD</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__220694751\">TheHerta_Trace01_Regen_CD</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-400553795\">TheHerta_Trace01</a>",
+      "stackData": [
+        "MDF_PropertyValue",
+        "MDF_MaxCount",
+        "MDF_MinCount",
+        "MDF_AddLayer",
+        "MDF_MaxLayer",
+        "MDF_MaxLayer_PointB3",
+        "MDF_Ratio_PointB3",
+        "MDF_BounceLayer"
+      ],
+      "latentQueue": [
+        "Skill21_Layer_Max"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1877,19 +1884,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_MaxCount",
-        "MDF_MinCount",
-        "MDF_AddLayer",
-        "MDF_MaxLayer",
-        "MDF_MaxLayer_PointB3",
-        "MDF_Ratio_PointB3",
-        "MDF_BounceLayer"
-      ],
-      "latentQueue": [
-        "Skill21_Layer_Max"
       ]
     },
     {
@@ -1899,6 +1893,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2664689\">TheHerta_MageNum</a>",
+      "latentQueue": [
+        "Skill21_Layer_Max"
+      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -1964,16 +1961,11 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Skill21_Layer_Max"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1935947210\">TheHerta_Passive_PreShow_Ability21_All</a>",
-      "stackData": [],
       "latentQueue": [
         "Skill21_Layer_Max"
       ]
@@ -1981,6 +1973,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__734755482\">TheHerta_Passive_PreShow_Ability21</a>",
+      "latentQueue": [
+        "Skill21_Layer_Max"
+      ],
       "execute": [
         {
           "eventTrigger": "Update Target Selected(UI) [Owner]",
@@ -2152,16 +2147,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Skill21_Layer_Max"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-57316235\">TheHerta_Passive_PreShow</a>",
-      "stackData": [],
       "latentQueue": [
         "Skill21_Layer_Max"
       ],
@@ -2212,6 +2202,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__611803002\">TheHerta_SKL21_Listen</a>",
+      "latentQueue": [
+        "Skill21_Layer_Max"
+      ],
       "variableValueChange": [
         {
           "name": "Variable Value Changes",
@@ -2302,10 +2295,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Skill21_Layer_Max"
       ]
     },
     {
@@ -2537,6 +2526,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1280907269\">TheHerta_PointB2_Listen</a>",
+      "latentQueue": [
+        "Skill21_Layer_Max"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2823,10 +2815,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Skill21_Layer_Max"
       ]
     },
     {
@@ -2903,6 +2891,9 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1544367051\">TheHerta_Herta</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
+      ],
+      "stackData": [
+        "Cur_Count"
       ],
       "execute": [
         {
@@ -3021,15 +3012,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "Cur_Count"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-614684164\">TheHerta_ExtraMark</a>",
+      "latentQueue": [
+        "Skill21_Layer_Max"
+      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -3162,10 +3152,6 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Skill21_Layer_Max"
       ]
     }
   ],

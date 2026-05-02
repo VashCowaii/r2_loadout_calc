@@ -142,13 +142,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1116970838\">Constance_InsertCD</a>[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]",
+      "description": "Talent's Follow-Up ATK cannot be triggered yet.",
+      "type": "Other",
+      "statusName": "Who's Afraid of Constance?",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -197,12 +198,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Talent's Follow-Up ATK cannot be triggered yet.",
-      "type": "Other",
-      "statusName": "Who's Afraid of Constance?"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -373,6 +369,13 @@ const configAbility = {
         "STAT_AttachWeakness",
         "STAT_DefenceDown"
       ],
+      "stackData": [
+        "MDF_PropertyRatio"
+      ],
+      "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. Gains Weaknesses of all Dance Partners' Types.",
+      "type": "Debuff",
+      "effectName": "Wilt",
+      "statusName": "Wilt",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -619,15 +622,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. Gains Weaknesses of all Dance Partners' Types.",
-      "type": "Debuff",
-      "effectName": "Wilt",
-      "statusName": "Wilt"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -644,6 +639,45 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-2139860773\">Constance_Aura</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Toughness Reduction taken by enemy targets that are not Weakness Broken can also be converted to Super Break DMG.",
+      "type": "Buff",
+      "statusName": "Lick... Enkindled Betrayal",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1701170235\">Constance_Aura_OnEnemy</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
+          "aliveOnly": "False",
+          "haloStatus": true
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-152934148\">Constance_Aura_OnTeam</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
+          "refModifier": "<a class=\"gModGreen\" id=\"1782063048\">MReference_StanceBreakAddedRatio</a>",
+          "aliveOnly": "False",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+              "displayLines": "MDF_PropertyValue",
+              "constants": [],
+              "variables": [
+                "MDF_PropertyValue"
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -742,46 +776,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Toughness Reduction taken by enemy targets that are not Weakness Broken can also be converted to Super Break DMG.",
-      "type": "Buff",
-      "statusName": "Lick... Enkindled Betrayal",
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1701170235\">Constance_Aura_OnEnemy</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
-          "aliveOnly": "False",
-          "haloStatus": true
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-152934148\">Constance_Aura_OnTeam</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
-          "refModifier": "<a class=\"gModGreen\" id=\"1782063048\">MReference_StanceBreakAddedRatio</a>",
-          "aliveOnly": "False",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-              "displayLines": "MDF_PropertyValue",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue"
-              ]
-            }
-          }
         }
       ]
     }

@@ -202,32 +202,28 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-635495816\">Enemy_W4_FireProwler_01_Activated02</a>[<span class=\"descriptionNumberColor\">Mutual Sacrifice</span>]",
+      "description": "When \"%CasterName\" uses \"Fading Fate,\" also use \"Fading Fate\" at the same time.",
+      "type": "Other",
+      "effectName": "Simultaneously use \"Fading Fate\"",
+      "statusName": "Mutual Sacrifice",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "When \"%CasterName\" uses \"Fading Fate,\" also use \"Fading Fate\" at the same time.",
-      "type": "Other",
-      "effectName": "Simultaneously use \"Fading Fate\"",
-      "statusName": "Mutual Sacrifice"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-585162959\">Enemy_W4_FireProwler_01_Activated01</a>[<span class=\"descriptionNumberColor\">Mutual Sacrifice</span>]",
+      "description": "When \"%CasterName\" uses \"Demise's Storm\", also use \"Demise's Storm\" at the same time.",
+      "type": "Other",
+      "effectName": "Simultaneously use \"Demise's Storm\"",
+      "statusName": "Mutual Sacrifice",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "When \"%CasterName\" uses \"Demise's Storm\", also use \"Demise's Storm\" at the same time.",
-      "type": "Other",
-      "effectName": "Simultaneously use \"Demise's Storm\"",
-      "statusName": "Mutual Sacrifice"
+      ]
     }
   ]
 }

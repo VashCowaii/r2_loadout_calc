@@ -29,6 +29,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AttackDown"
       ],
+      "description": "Reduces ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Horror-Struck",
+      "statusName": "Horror-Struck",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -53,11 +57,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Reduces ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Horror-Struck",
-      "statusName": "Horror-Struck"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -116,9 +116,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

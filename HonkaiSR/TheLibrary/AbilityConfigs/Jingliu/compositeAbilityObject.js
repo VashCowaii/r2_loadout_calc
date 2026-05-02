@@ -63,6 +63,11 @@ const compositeAbilityObject = {
             "STAT_CTRL_Frozen",
             "STAT_CTRL"
           ],
+          "useEntitySnapshot": true,
+          "description": "Cannot take action for a certain number of turns and takes Ice Additional DMG at the beginning of each turn.",
+          "type": "Debuff",
+          "effectName": "Frozen",
+          "statusName": "Frozen",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -192,12 +197,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "Cannot take action for a certain number of turns and takes Ice Additional DMG at the beginning of each turn.",
-          "type": "Debuff",
-          "effectName": "Frozen",
-          "statusName": "Frozen"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -348,9 +348,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1236,9 +1234,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2137,6 +2133,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-44910835\">Advanced_Jingliu_MoonMad</a>[<span class=\"descriptionNumberColor\">Moonlight</span>]",
           "stackType": "Replace",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "Moonlight",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2204,11 +2204,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "Moonlight"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2288,13 +2284,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1354140510\">Advanced_Jingliu_Passive_CriticalUp</a>[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
+          "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_CriticalRatio</span>.",
+          "type": "Buff",
+          "effectName": "CRIT Rate Boost",
+          "statusName": "Spectral Transmigration",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2317,15 +2315,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_CriticalRatio</span>.",
-          "type": "Buff",
-          "effectName": "CRIT Rate Boost",
-          "statusName": "Spectral Transmigration"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__291641534\">Advanced_Jingliu_Trace_B1_Resist</a>[<span class=\"descriptionNumberColor\">Deathrealm</span>]",
+          "description": "Effect RES increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, and Ultimate DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
+          "type": "Buff",
+          "effectName": "Effect RES Boost",
+          "statusName": "Deathrealm",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -2379,11 +2377,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Effect RES increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, and Ultimate DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
-          "type": "Buff",
-          "effectName": "Effect RES Boost",
-          "statusName": "Deathrealm"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2443,6 +2437,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__596888368\">AdvancedJingliu_PointB3</a>[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Next attack ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of target's DEF.",
+          "type": "Buff",
+          "statusName": "Frost Wraith",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -2497,15 +2494,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Next attack ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of target's DEF.",
-          "type": "Buff",
-          "statusName": "Frost Wraith"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1784507575\">AdvancedJingliu_Attack_Transfer</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "SkillP01_P1_HpConsumption",
+            "SkillP01_P2_HpConsumption"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2859,16 +2857,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "SkillP01_P1_HpConsumption",
-            "SkillP01_P2_HpConsumption"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-9916760\">Advanced_Jingliu_Eidolon6</a>[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]",
+          "stackData": [
+            "MDF_IcePenetrate"
+          ],
+          "description": "Ice RES PEN increases by <span class=\"descriptionNumberColor\">MDF_IcePenetrate</span>.",
+          "type": "Buff",
+          "effectName": "Ice RES PEN",
+          "statusName": "Eclipse Hollows Corporeal Husk",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2891,19 +2891,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_IcePenetrate"
-          ],
-          "latentQueue": [],
-          "description": "Ice RES PEN increases by <span class=\"descriptionNumberColor\">MDF_IcePenetrate</span>.",
-          "type": "Buff",
-          "effectName": "Ice RES PEN",
-          "statusName": "Eclipse Hollows Corporeal Husk"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__57193716\">Advanced_Jingliu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Increases DMG dealt by the next Enhanced Skill by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Crescent Shadows Qixing Dipper",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -2944,19 +2942,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by the next Enhanced Skill by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Crescent Shadows Qixing Dipper"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1838091998\">Advanced_Jingliu_Eidolon1_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "Moon Crashes Tianguan Gate",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2979,15 +2977,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "Moon Crashes Tianguan Gate"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3297,9 +3287,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4578,14 +4566,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__970052184\">Advanced_Jingliu_Transfer_PreShow</a>",
-          "stackData": [],
           "latentQueue": [
             "LoseHPTrigger",
             "BeingAttack"

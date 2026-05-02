@@ -210,14 +210,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-449226911\">Rogue_Scoring_Event_TV_Count_Modifier</a>",
       "stackType": "Replace",
+      "stackLimit": 15,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -249,9 +249,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 15,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -270,6 +268,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-533767533\">MModifier_Monster_W3_TV_Side2</a>[<span class=\"descriptionNumberColor\">Fright Channel</span>]",
+      "description": "Mr. Domescreen can use the \"Startling Broadcast\" ability. After it has been attacked, switches to the Surprise Channel state.",
+      "type": "Other",
+      "statusName": "Fright Channel",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -330,16 +331,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Mr. Domescreen can use the \"Startling Broadcast\" ability. After it has been attacked, switches to the Surprise Channel state.",
-      "type": "Other",
-      "statusName": "Fright Channel"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-516989914\">MModifier_Monster_W3_TV_Side1</a>[<span class=\"descriptionNumberColor\">Surprise Channel</span>]",
+      "description": "Mr. Domescreen can use the \"Surprise Variety Show\" ability. After it has been attacked, switches to the Fright Channel state.",
+      "type": "Other",
+      "statusName": "Surprise Channel",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -400,12 +399,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Mr. Domescreen can use the \"Surprise Variety Show\" ability. After it has been attacked, switches to the Fright Channel state.",
-      "type": "Other",
-      "statusName": "Surprise Channel"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -415,9 +409,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -426,14 +418,15 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-823586997\">Enemy_W3_TV_Flop</a>",
       "stackType": "Replace",
+      "latentQueue": [
+        "FaceChangeFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -529,10 +522,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "FaceChangeFlag"
       ]
     }
   ],

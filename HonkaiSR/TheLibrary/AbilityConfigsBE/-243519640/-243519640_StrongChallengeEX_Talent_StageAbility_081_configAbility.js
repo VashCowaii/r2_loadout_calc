@@ -19,6 +19,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1435721852\">MStrongChallengeEX_Talent_StageAbility_PLY_081_Extra</a>[<span class=\"descriptionNumberColor\">Whirlwind Turn</span>]",
       "stackType": "Replace",
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
+      "type": "Buff",
+      "statusName": "Whirlwind Turn",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -41,10 +44,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
-      "type": "Buff",
-      "statusName": "Whirlwind Turn"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -229,9 +229,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

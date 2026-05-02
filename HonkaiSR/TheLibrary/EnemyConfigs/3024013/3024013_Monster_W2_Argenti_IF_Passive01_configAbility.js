@@ -124,6 +124,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__278285473\">Enemy_W2_Argenti_IF_EnterCombatAlert</a>",
+      "latentQueue": [
+        "Monster_IF_InsertCount",
+        "Monster_IF_InsertCameraFlag",
+        "Monster_IF_InsertCount02",
+        "Monster_IF_InsertCameraFlag02"
+      ],
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -144,18 +150,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Monster_IF_InsertCount",
-        "Monster_IF_InsertCameraFlag",
-        "Monster_IF_InsertCount02",
-        "Monster_IF_InsertCameraFlag02"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1109870649\">Enemy_W2_Argenti_IF_PowerCollecterController</a>",
+      "latentQueue": [
+        "Monster_IF_InsertCount",
+        "Monster_IF_InsertCameraFlag",
+        "Monster_IF_InsertCount02",
+        "Monster_IF_InsertCameraFlag02"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -219,18 +224,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Monster_IF_InsertCount",
-        "Monster_IF_InsertCameraFlag",
-        "Monster_IF_InsertCount02",
-        "Monster_IF_InsertCameraFlag02"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2120668767\">Enemy_W2_Argenti_IF_AIController</a>",
+      "latentQueue": [
+        "Monster_IF_InsertCount",
+        "Monster_IF_InsertCameraFlag",
+        "Monster_IF_InsertCount02",
+        "Monster_IF_InsertCameraFlag02"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -362,13 +366,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Monster_IF_InsertCount",
-        "Monster_IF_InsertCameraFlag",
-        "Monster_IF_InsertCount02",
-        "Monster_IF_InsertCameraFlag02"
       ]
     }
   ]

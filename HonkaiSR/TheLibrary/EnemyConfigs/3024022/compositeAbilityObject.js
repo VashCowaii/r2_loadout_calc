@@ -2147,9 +2147,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2257,9 +2255,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2364,9 +2360,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2508,22 +2502,28 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__671626404\">Monster_W3_Sam_MainEnd</a>",
           "modifierFlags": [
             "DisableAction"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1431346612\">Monster_W3_Sam_TakenDamage</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "stackData": [
+            "MDF_DamageTakenUpRatio_PerLayer"
+          ],
+          "latentQueue": [
+            "AIFlag"
+          ],
+          "description": "Takes <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span> more DMG. This effect expires when Sam recovers from Weakness Break state.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2552,17 +2552,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageTakenUpRatio_PerLayer"
-          ],
-          "latentQueue": [
-            "AIFlag"
-          ],
-          "description": "Takes <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span> more DMG. This effect expires when Sam recovers from Weakness Break state.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2623,9 +2613,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2634,9 +2622,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Enter Battle"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3400,6 +3386,14 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1797892283\">Monster_W3_Sam_BurningBP</a>[<span class=\"descriptionNumberColor\">Molten Core</span>]",
+          "stackData": [
+            "MDF_HealDownRatio",
+            "MDF_DamageUpRatio"
+          ],
+          "description": "When an ally consumes Combusted Skill Points, loses HP and additionally deals a set amount of Fire DMG equal to <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span> of the original DMG. When they receive healing from sources other than oneself, the amount of HP restored is massively reduced.",
+          "type": "Other",
+          "effectName": "Molten Core",
+          "statusName": "Molten Core",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -3650,21 +3644,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HealDownRatio",
-            "MDF_DamageUpRatio"
-          ],
-          "latentQueue": [],
-          "description": "When an ally consumes Combusted Skill Points, loses HP and additionally deals a set amount of Fire DMG equal to <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span> of the original DMG. When they receive healing from sources other than oneself, the amount of HP restored is massively reduced.",
-          "type": "Other",
-          "effectName": "Molten Core",
-          "statusName": "Molten Core"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1568615261\">Monster_W3_Sam_FireAccelerate</a>",
           "stackType": "Replace",
+          "stackLimit": 4,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3694,9 +3681,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 4,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3704,6 +3689,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak"
           ],
+          "latentQueue": [
+            "InsertCheck",
+            "InsertSpecial"
+          ],
+          "description": "Sam's Toughness cannot be reduced before entering the Secondary Combustion state.",
+          "type": "Other",
+          "statusName": "Weakness Protected",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3727,15 +3719,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "InsertCheck",
-            "InsertSpecial"
-          ],
-          "description": "Sam's Toughness cannot be reduced before entering the Secondary Combustion state.",
-          "type": "Other",
-          "statusName": "Weakness Protected"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3746,6 +3730,16 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Burn"
           ],
+          "useEntitySnapshot": true,
+          "stackLimit": 5,
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+            "displayLines": "ModifierStackLayer",
+            "constants": [],
+            "variables": [
+              "ModifierStackLayer"
+            ]
+          },
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3906,17 +3900,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackLimit": 5,
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4009,13 +3993,20 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-909732184\">Monster_W3_Sam_Enhance</a>[<span class=\"descriptionNumberColor\">Secondary Combustion</span>]",
+          "stackData": [
+            "MDF_DamagePercentage",
+            "MDF_SpeedUpRatio",
+            "MDF_ChangeHPRatio"
+          ],
+          "description": "All attacks consume HP. Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span> and gains an additional action. <span class=\"descriptionNumberColor\">MDF_CurrentPoint</span> point(s) of Molten Energy remain before the Secondary Combustion state expires.",
+          "type": "Other",
+          "effectName": "Secondary Combustion",
+          "statusName": "Secondary Combustion",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4556,17 +4547,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamagePercentage",
-            "MDF_SpeedUpRatio",
-            "MDF_ChangeHPRatio"
-          ],
-          "latentQueue": [],
-          "description": "All attacks consume HP. Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span> and gains an additional action. <span class=\"descriptionNumberColor\">MDF_CurrentPoint</span> point(s) of Molten Energy remain before the Secondary Combustion state expires.",
-          "type": "Other",
-          "effectName": "Secondary Combustion",
-          "statusName": "Secondary Combustion"
+          ]
         }
       ],
       "references": []

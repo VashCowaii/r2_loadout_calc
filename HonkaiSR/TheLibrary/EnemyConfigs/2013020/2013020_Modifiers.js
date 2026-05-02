@@ -16,17 +16,15 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "AttackSign"
       ],
+      "description": "Locked on by %CasterName as the attack target.",
+      "type": "Other",
+      "effectName": "Lock On",
+      "statusName": "Lock On",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Locked on by %CasterName as the attack target.",
-      "type": "Other",
-      "effectName": "Lock On",
-      "statusName": "Lock On"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -35,6 +33,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1870683085\">Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect</a>[<span class=\"descriptionNumberColor\">Preparing Heaven's Fall</span>]",
+      "description": "About to use Heaven's Fall.",
+      "type": "Other",
+      "effectName": "Preparing Heaven's Fall",
+      "statusName": "Preparing Heaven's Fall",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -62,13 +64,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "About to use Heaven's Fall.",
-      "type": "Other",
-      "effectName": "Preparing Heaven's Fall",
-      "statusName": "Preparing Heaven's Fall"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -547,9 +543,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

@@ -191,6 +191,16 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1116070545\">Feixiao_DamageProperty</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyRatio"
+      ],
+      "latentQueue": [
+        "IsUnCountedInsert"
+      ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Thunderhunt",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -213,17 +223,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [
-        "IsUnCountedInsert"
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Thunderhunt"
+      ]
     }
   ],
   "targetObjectData": {

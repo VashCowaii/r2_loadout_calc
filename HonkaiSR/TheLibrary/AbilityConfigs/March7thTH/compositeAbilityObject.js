@@ -70,9 +70,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -332,9 +330,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -361,6 +357,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1794469882\">Mar_7th_10_PointB3_Break_Property</a>[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "effectName": "Break Effect Boost",
+          "statusName": "Tide Tamer",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -383,16 +383,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "effectName": "Break Effect Boost",
-          "statusName": "Tide Tamer"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-110388147\">Mar_7th_10_PointB3_Kill_Property</a>[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "Tide Tamer",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -415,11 +415,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "Tide Tamer"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -563,9 +559,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -719,9 +713,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -774,9 +766,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -835,9 +825,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -905,9 +893,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1361,6 +1347,50 @@ const compositeAbilityObject = {
               ]
             }
           ],
+          "modifierFunctions": [
+            {
+              "name": "CharacterFunctions",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1630889366\">Mar_7th_10_GetEnhance</a>",
+              "parse": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "EnergyBar_CurEnergy",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (EnergyBar_MaxEnergy) || RETURN",
+                      "displayLines": "EnergyBar_MaxEnergy",
+                      "constants": [],
+                      "variables": [
+                        "EnergyBar_MaxEnergy"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyRatio": {
+                          "operator": "Variables[0] (0.8) || RETURN",
+                          "displayLines": "0.8",
+                          "constants": [],
+                          "variables": [
+                            0.8
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
           "variableValueChange": [
             {
               "name": "Variable Value Changes",
@@ -1427,53 +1457,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "modifierFunctions": [
-            {
-              "name": "CharacterFunctions",
-              "functionName": "<a class=\"gTempYellow\" id=\"fun__1630889366\">Mar_7th_10_GetEnhance</a>",
-              "parse": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "EnergyBar_CurEnergy",
-                    "compareType": ">=",
-                    "value2": {
-                      "operator": "Variables[0] (EnergyBar_MaxEnergy) || RETURN",
-                      "displayLines": "EnergyBar_MaxEnergy",
-                      "constants": [],
-                      "variables": [
-                        "EnergyBar_MaxEnergy"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
-                      "valuePerStack": {
-                        "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (0.8) || RETURN",
-                          "displayLines": "0.8",
-                          "constants": [],
-                          "variables": [
-                            0.8
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1560,6 +1544,15 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1546960372\">Mar_7th_10_Ability03_Enhance_Normal</a>[<span class=\"descriptionNumberColor\">March 7th, the Apex Heroine</span>]",
+          "stackData": [
+            "MDF_Value",
+            "MDF_Chance",
+            "MDF_PropertyRatio"
+          ],
+          "description": "Increases the next Enhanced Basic ATK's initial Hits Per Action by <span class=\"descriptionNumberColor\">MDF_Value</span>. The fixed chance of additionally dealing DMG increases by <span class=\"descriptionNumberColor\">MDF_Chance</span>.",
+          "type": "Other",
+          "effectName": "Enhanced Basic Attack Boost",
+          "statusName": "March 7th, the Apex Heroine",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1721,17 +1714,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Ultimate Prep-Phase [Anyone]"
             }
-          ],
-          "stackData": [
-            "MDF_Value",
-            "MDF_Chance",
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [],
-          "description": "Increases the next Enhanced Basic ATK's initial Hits Per Action by <span class=\"descriptionNumberColor\">MDF_Value</span>. The fixed chance of additionally dealing DMG increases by <span class=\"descriptionNumberColor\">MDF_Chance</span>.",
-          "type": "Other",
-          "effectName": "Enhanced Basic Attack Boost",
-          "statusName": "March 7th, the Apex Heroine"
+          ]
         }
       ],
       "targetObjectData": {
@@ -2243,15 +2226,11 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": 999999
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__955806322\">M_Mar_7th_10_AbilityPreShowModifier_Target</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -2280,8 +2259,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__7821473\">M_Mar_7th_10_AbilityPreShowModifier_Self</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -2318,9 +2295,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__591989145\">M_Mar_7th_10_AchievementFlag</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__591989145\">M_Mar_7th_10_AchievementFlag</a>"
         }
       ],
       "targetObjectData": {
@@ -2974,7 +2949,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__218557064\">M_Mar_7th_10_Ability11_Preshow</a>",
-          "stackData": [],
           "latentQueue": [
             "_have_gain_sp"
           ],
@@ -3545,7 +3519,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1857978623\">M_Mar_7th_10_Ability01_Preshow</a>",
-          "stackData": [],
           "latentQueue": [
             "_target_stance_before_attack"
           ],
@@ -3767,13 +3740,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1941685711\">Mar_7th_10_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]",
+          "latentQueue": [
+            "_target_stance_before_attack"
+          ],
+          "description": "The \"Blade Dances on Waves' Fight\" effect cannot be triggered yet.",
+          "type": "Other",
+          "statusName": "Blade Dances on Waves' Fight",
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -3781,14 +3758,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_target_stance_before_attack"
-          ],
-          "description": "The \"Blade Dances on Waves' Fight\" effect cannot be triggered yet.",
-          "type": "Other",
-          "statusName": "Blade Dances on Waves' Fight"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3923,6 +3893,14 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__754306422\">Mar_7th_10_Enhance_Visual</a>",
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
+            "casterFilter": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -3939,19 +3917,17 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
-            "casterFilter": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            }
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2055743569\">Mar_7th_10_Enhance</a>",
+          "stackData": [
+            "MDF_PropertyRatio"
+          ],
+          "latentQueue": [
+            "_has_enhanced_this_turn"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4057,12 +4033,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [
-            "_has_enhanced_this_turn"
           ]
         },
         {
@@ -4072,6 +4042,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "When Shifu is on the field, increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "My Sword Stirs Starlight",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4094,11 +4068,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When Shifu is on the field, increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "My Sword Stirs Starlight"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4107,33 +4077,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
           "stackData": [
             "MDF_PropertyRatio"
           ],
-          "latentQueue": [],
           "description": "Increases SPD of %CasterName's Shifu by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
           "type": "Buff",
           "statusName": "Master, It's Tea Time!",
@@ -4144,7 +4090,30 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             }
-          }
+          },
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
+                    "displayLines": "MDF_PropertyRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyRatio"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4157,6 +4126,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "After using an attack or Ultimate, %CasterName gains a max of 1 Charge point each time.",
+          "type": "Other",
+          "effectName": "Become Shifu",
+          "statusName": "Shifu",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4427,13 +4400,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "After using an attack or Ultimate, %CasterName gains a max of 1 Charge point each time.",
-          "type": "Other",
-          "effectName": "Become Shifu",
-          "statusName": "Shifu"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4447,7 +4414,6 @@ const compositeAbilityObject = {
             "MDF_PropertyRatio",
             "MDF_Count"
           ],
-          "latentQueue": [],
           "description": "When Charge equals to <span class=\"descriptionNumberColor\">MDF_Count</span> or more, immediately takes action and simultaneously increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. Additionally, Basic ATK gets Enhanced.",
           "type": "Other",
           "statusName": "Charge"

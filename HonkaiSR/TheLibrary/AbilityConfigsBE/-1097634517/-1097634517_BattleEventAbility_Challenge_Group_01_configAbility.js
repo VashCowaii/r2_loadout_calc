@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-322246439\">MLevel_BattleEventAbility_Challenge_Group_01</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases the next attack's DMG by <span class=\"descriptionNumberColor\">ADF_1</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -44,11 +48,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "description": "Increases the next attack's DMG by <span class=\"descriptionNumberColor\">ADF_1</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -90,9 +90,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

@@ -17,6 +17,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1572993167\">LC_21036_Sub_Ultra</a>[<span class=\"descriptionNumberColor\">Childishness</span>]",
+      "description": "Increases Ultimate DMG by <span class=\"descriptionNumberColor\">#SkillEquip_P1_DamageAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "Ultimate DMG Boost",
+      "statusName": "Childishness",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -44,15 +48,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Ultimate DMG by <span class=\"descriptionNumberColor\">#SkillEquip_P1_DamageAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "Ultimate DMG Boost",
-      "statusName": "Childishness"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1677530678\">LC_21036_Sub_Ability</a>[<span class=\"descriptionNumberColor\">Childishness</span>]",
+      "description": "Increases Skill DMG by <span class=\"descriptionNumberColor\">#SkillEquip_P1_DamageAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "Skill DMG Boost",
+      "statusName": "Childishness",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -80,15 +84,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Skill DMG by <span class=\"descriptionNumberColor\">#SkillEquip_P1_DamageAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "Skill DMG Boost",
-      "statusName": "Childishness"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1012793214\">LC_21036_Sub_Normal</a>[<span class=\"descriptionNumberColor\">Childishness</span>]",
+      "description": "Increases Basic ATK DMG by <span class=\"descriptionNumberColor\">#SkillEquip_P1_DamageAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "Basic ATK DMG Boost",
+      "statusName": "Childishness",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -116,11 +120,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Basic ATK DMG by <span class=\"descriptionNumberColor\">#SkillEquip_P1_DamageAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "Basic ATK DMG Boost",
-      "statusName": "Childishness"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -265,9 +265,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

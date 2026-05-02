@@ -274,13 +274,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1507922859\">Monster_W1_CocoliaP1_RL_LowHP</a>",
+      "stackData": [
+        "MDF_LowHPRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -444,11 +445,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_LowHPRatio"
-      ],
-      "latentQueue": []
+      ]
     }
   ]
 }

@@ -15,6 +15,10 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "AttackSign"
       ],
+      "description": "Locked on by all \"Mirage Fizzle Kids\" as an attack target.",
+      "type": "Other",
+      "effectName": "Aggravate",
+      "statusName": "Shadow of the Grand Fair",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -38,13 +42,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Locked on by all \"Mirage Fizzle Kids\" as an attack target.",
-      "type": "Other",
-      "effectName": "Aggravate",
-      "statusName": "Shadow of the Grand Fair"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -86,9 +84,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1270842428\">Enemy_SW_Minion01_03_CommandMarkLevel</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -96,6 +92,10 @@ const configAbility = {
       "modifierFlags": [
         "MuteSpeed"
       ],
+      "description": "Before \"Mirage Rush\" state is dispelled, other \"Mirage Fizzle Kids\" will prioritize attacking the locked-on target. This state is dispelled when this unit is Broken or receives a killing blow.",
+      "type": "Other",
+      "effectName": "Charge",
+      "statusName": "Mirage Rush",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -234,13 +234,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Before \"Mirage Rush\" state is dispelled, other \"Mirage Fizzle Kids\" will prioritize attacking the locked-on target. This state is dispelled when this unit is Broken or receives a killing blow.",
-      "type": "Other",
-      "effectName": "Charge",
-      "statusName": "Mirage Rush"
+      ]
     },
     {
       "name": "Modifier Construction",

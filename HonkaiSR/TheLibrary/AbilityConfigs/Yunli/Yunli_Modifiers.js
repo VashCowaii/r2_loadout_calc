@@ -16,6 +16,10 @@ const configAbility = {
         "Endurance",
         "RemoveWhenCasterDead"
       ],
+      "description": "Resists Crowd Control debuffs received and reduces DMG received by <span class=\"descriptionNumberColor\">MAvatar_Yunli_00_DamageResistance_Value01</span>.",
+      "type": "Buff",
+      "effectName": "Resists Crowd Control debuffs",
+      "statusName": "Demon Quell",
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo",
@@ -67,11 +71,7 @@ const configAbility = {
         {
           "eventTrigger": "Debuff Immunity[?]"
         }
-      ],
-      "description": "Resists Crowd Control debuffs received and reduces DMG received by <span class=\"descriptionNumberColor\">MAvatar_Yunli_00_DamageResistance_Value01</span>.",
-      "type": "Buff",
-      "effectName": "Resists Crowd Control debuffs",
-      "statusName": "Demon Quell"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -90,6 +90,13 @@ const configAbility = {
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
+      "latentQueue": [
+        "OnInsertAbort_Flg"
+      ],
+      "description": "When triggering Talent's Counter effect, launches the Counter \"Intuit: Cull\" instead.",
+      "type": "Buff",
+      "effectName": "Parry",
+      "statusName": "Parry",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -822,15 +829,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "OnInsertAbort_Flg"
-      ],
-      "description": "When triggering Talent's Counter effect, launches the Counter \"Intuit: Cull\" instead.",
-      "type": "Buff",
-      "effectName": "Parry",
-      "statusName": "Parry"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -848,6 +847,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__183026830\">Yunli_Ability03_ForBidUltra</a>",
+      "latentQueue": [
+        "OnInsertAbort_Flg"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -865,10 +867,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "OnInsertAbort_Flg"
       ]
     },
     {
@@ -905,6 +903,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__325536063\">Yunli_Eidolon6</a>",
+      "stackData": [
+        "MDF_CritChance",
+        "MDF_PhysicalPenetrateRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -940,17 +942,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_CritChance",
-        "MDF_PhysicalPenetrateRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__359091301\">Yunli_Eidolon4</a>[<span class=\"descriptionNumberColor\">Artisan's Ironsong</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_ProbabilityValue"
+      ],
+      "description": "Increases Effect RES by <span class=\"descriptionNumberColor\">MDF_ProbabilityValue</span>.",
+      "type": "Buff",
+      "effectName": "Effect RES Boost",
+      "statusName": "Artisan's Ironsong",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -973,19 +977,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ProbabilityValue"
-      ],
-      "latentQueue": [],
-      "description": "Increases Effect RES by <span class=\"descriptionNumberColor\">MDF_ProbabilityValue</span>.",
-      "type": "Buff",
-      "effectName": "Effect RES Boost",
-      "statusName": "Artisan's Ironsong"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__258425587\">Yunli_Eidolon2</a>",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1013,16 +1012,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__275203206\">Yunli_Eidolon1</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1048,11 +1046,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1091,6 +1085,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1693627544\">Yunli_Blocking_Effect</a>",
+      "latentQueue": [
+        "MDF_IsBattleEvent"
+      ],
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -1123,15 +1120,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_IsBattleEvent"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1896809372\">Yunli_Blocking_CritDamage</a>[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]",
+      "latentQueue": [
+        "OnInsertAbort_Flg"
+      ],
+      "description": "Increases CRIT DMG dealt by the next Counter by <span class=\"descriptionNumberColor\">MDF_CriticalDamage</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "Earthbind, Etherbreak",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1189,20 +1189,16 @@ const configAbility = {
         {
           "eventTrigger": "Attack DMG End [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "OnInsertAbort_Flg"
-      ],
-      "description": "Increases CRIT DMG dealt by the next Counter by <span class=\"descriptionNumberColor\">MDF_CriticalDamage</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "Earthbind, Etherbreak"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1909212480\">Yunli_Trace03_Sub</a>[<span class=\"descriptionNumberColor\">True Sunder</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_ProbabilityValue</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "True Sunder",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1225,16 +1221,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_ProbabilityValue</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "True Sunder"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-762526263\">Yunli_Trace03</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_ProbabilityValue2"
+      ],
       "execute": [
         {
           "eventTrigger": "Attacker Finalizes DMG Data",
@@ -1271,11 +1266,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ProbabilityValue2"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1309,6 +1300,7 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1898161246\">Yunli_AddRegardAsAttackType</a>",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1338,10 +1330,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1428,22 +1417,17 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1386061477\">Yunli_SuperCounter_Achevement</a>",
-      "stackType": "Replace",
-      "stackData": [],
-      "latentQueue": []
+      "stackType": "Replace"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-77264210\">Yunli_SuperCounter_Mark</a>",
       "stackType": "Replace",
-      "stackData": [],
       "latentQueue": [
         "OnInsertAbort_Flg",
         "MDF_TurnEndSwitch_Blocking",

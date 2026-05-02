@@ -255,9 +255,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -624,6 +622,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_ElationPoint"
+          ],
+          "description": "When a target with \"Fealty\" is attacked, the DMG from this attack will be transferred to the Security Doggo, and causes the target team to gain Punchline.",
+          "type": "Buff",
+          "effectName": "Fealty",
+          "statusName": "Fealty",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -780,15 +785,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ElationPoint"
-          ],
-          "latentQueue": [],
-          "description": "When a target with \"Fealty\" is attacked, the DMG from this attack will be transferred to the Security Doggo, and causes the target team to gain Punchline.",
-          "type": "Buff",
-          "effectName": "Fealty",
-          "statusName": "Fealty"
+          ]
         }
       ],
       "references": []

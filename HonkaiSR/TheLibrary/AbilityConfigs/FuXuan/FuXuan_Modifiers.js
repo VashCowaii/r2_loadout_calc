@@ -127,6 +127,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]",
+      "description": "When struck with a killing blow, instead of becoming downed, the character immediately restores HP equal to <span class=\"descriptionNumberColor\">MDF_HealPercentage</span> of Max HP.",
+      "type": "Buff",
+      "effectName": "Optimus Felix",
+      "statusName": "Optimus Felix",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -184,11 +188,7 @@ const configAbility = {
           ],
           "priorityLevel": -70
         }
-      ],
-      "description": "When struck with a killing blow, instead of becoming downed, the character immediately restores HP equal to <span class=\"descriptionNumberColor\">MDF_HealPercentage</span> of Max HP.",
-      "type": "Buff",
-      "effectName": "Optimus Felix",
-      "statusName": "Optimus Felix"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -341,6 +341,10 @@ const configAbility = {
       "modifierFlags": [
         "EnduranceEnemyOnly"
       ],
+      "description": "This status can be consumed to resist Crowd Control debuffs.",
+      "type": "Buff",
+      "effectName": "Resist Crowd Control debuffs",
+      "statusName": "Liuren, the Sexagenary",
       "execute": [
         {
           "eventTrigger": "Debuff Immunity[?]",
@@ -364,18 +368,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "This status can be consumed to resist Crowd Control debuffs.",
-      "type": "Buff",
-      "effectName": "Resist Crowd Control debuffs",
-      "statusName": "Liuren, the Sexagenary"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1862182829\">FuXuan_Eidolon6</a>[<span class=\"descriptionNumberColor\">Total HP lost</span>]",
       "stackType": "Replace",
+      "description": "Allies have lost <span class=\"descriptionNumberColor\">MDF_FinalDamage</span> HP in total.",
+      "type": "Other",
+      "statusName": "Total HP lost",
       "execute": [
         {
           "eventTrigger": "HP Change [Anyone]",
@@ -591,17 +592,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Allies have lost <span class=\"descriptionNumberColor\">MDF_FinalDamage</span> HP in total.",
-      "type": "Other",
-      "statusName": "Total HP lost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "Skill02_P2_DamageResistance"
+      ],
+      "description": "Receive DMG distributed by other teammates.",
+      "type": "Buff",
+      "statusName": "Matrix of Prescience",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1096,14 +1098,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "Skill02_P2_DamageResistance"
-      ],
-      "latentQueue": [],
-      "description": "Receive DMG distributed by other teammates.",
-      "type": "Buff",
-      "statusName": "Matrix of Prescience"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1441,14 +1436,24 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-281320728\">FuXuan_JianZhi_Eidolon1</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_MaxHPUpRatio",
+        "MDF_CritChanceUpRatio",
+        "MDF_CritDamageUpRatio"
+      ],
+      "latentQueue": [
+        "GDF_BPSkill_LifeTime"
+      ],
+      "description": "Increases Max HP by <span class=\"descriptionNumberColor\">MDF_MaxHPUpRatio</span>, CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CritChanceUpRatio</span>, and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CritDamageUpRatio</span>.",
+      "type": "Buff",
+      "effectName": "Increases Max HP, CRIT Rate, and CRIT DMG",
+      "statusName": "Knowledge",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1535,24 +1540,23 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_MaxHPUpRatio",
-        "MDF_CritChanceUpRatio",
-        "MDF_CritDamageUpRatio"
-      ],
-      "latentQueue": [
-        "GDF_BPSkill_LifeTime"
-      ],
-      "description": "Increases Max HP by <span class=\"descriptionNumberColor\">MDF_MaxHPUpRatio</span>, CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CritChanceUpRatio</span>, and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CritDamageUpRatio</span>.",
-      "type": "Buff",
-      "effectName": "Increases Max HP, CRIT Rate, and CRIT DMG",
-      "statusName": "Knowledge"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1745888668\">FuXuan_JianZhi</a>[<span class=\"descriptionNumberColor\">Knowledge</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_MaxHPUpRatio",
+        "MDF_CritChanceUpRatio"
+      ],
+      "latentQueue": [
+        "GDF_BPSkill_LifeTime"
+      ],
+      "description": "Max HP +<span class=\"descriptionNumberColor\">MDF_MaxHPUpRatio</span>, CRIT Rate +<span class=\"descriptionNumberColor\">MDF_CritChanceUpRatio</span>.",
+      "type": "Buff",
+      "effectName": "Increases Max HP and CRIT Rate",
+      "statusName": "Knowledge",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1623,23 +1627,21 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_MaxHPUpRatio",
-        "MDF_CritChanceUpRatio"
-      ],
-      "latentQueue": [
-        "GDF_BPSkill_LifeTime"
-      ],
-      "description": "Max HP +<span class=\"descriptionNumberColor\">MDF_MaxHPUpRatio</span>, CRIT Rate +<span class=\"descriptionNumberColor\">MDF_CritChanceUpRatio</span>.",
-      "type": "Buff",
-      "effectName": "Increases Max HP and CRIT Rate",
-      "statusName": "Knowledge"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_DamageResistanceRatio"
+      ],
+      "latentQueue": [
+        "HitFlag"
+      ],
+      "description": "Reduces DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageResistanceRatio</span>.",
+      "type": "Buff",
+      "statusName": "Misfortune Avoidance",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1662,16 +1664,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageResistanceRatio"
-      ],
-      "latentQueue": [
-        "HitFlag"
-      ],
-      "description": "Reduces DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageResistanceRatio</span>.",
-      "type": "Buff",
-      "statusName": "Misfortune Avoidance"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1680,6 +1673,17 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_SplitPercentage",
+        "Skill02_P2_DamageResistance",
+        "AddSP"
+      ],
+      "latentQueue": [
+        "GDF_BPSkill_LifeTime"
+      ],
+      "description": "Distribute to Fu Xuan <span class=\"descriptionNumberColor\">MDF_SplitPercentage</span> of the DMG this unit receives (before this DMG is mitigated by any Shields).",
+      "type": "Buff",
+      "statusName": "Matrix of Prescience",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1805,18 +1809,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SplitPercentage",
-        "Skill02_P2_DamageResistance",
-        "AddSP"
-      ],
-      "latentQueue": [
-        "GDF_BPSkill_LifeTime"
-      ],
-      "description": "Distribute to Fu Xuan <span class=\"descriptionNumberColor\">MDF_SplitPercentage</span> of the DMG this unit receives (before this DMG is mitigated by any Shields).",
-      "type": "Buff",
-      "statusName": "Matrix of Prescience"
+      ]
     }
   ],
   "references": []

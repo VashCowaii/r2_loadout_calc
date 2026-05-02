@@ -403,9 +403,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -463,9 +461,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -542,9 +538,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -641,9 +635,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -696,13 +688,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2112363426\">Memosprite_EvernightServant_HitAnimControl</a>",
+      "latentQueue": [
+        "_Partner_Size"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -764,16 +757,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_Partner_Size"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__339933329\">Memosprite_EvernightServant_Ability11_StancePreshow</a>",
-      "stackData": [],
       "latentQueue": [
         "_Partner_Size"
       ]
@@ -781,8 +769,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1232599773\">Memosprite_EvernightServant_PassiveBonus_Aura</a>",
-      "stackData": [],
-      "latentQueue": [],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -808,6 +794,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1971728394\">Memosprite_EvernightServant_Ability11_LoseHPPreshow</a>",
+      "latentQueue": [
+        "_Partner_Size"
+      ],
       "execute": [
         {
           "eventTrigger": "Update Target Selected(UI) [Owner]",
@@ -853,15 +842,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_Partner_Size"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1842559180\">Memosprite_EvernightServant_TryKill</a>",
+      "latentQueue": [
+        "_Partner_Size"
+      ],
       "execute": [
         {
           "eventTrigger": "Action Completed [Anyone]",
@@ -916,10 +904,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_Partner_Size"
       ]
     }
   ],

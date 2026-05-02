@@ -192,8 +192,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-236603905\">Sparxie_Ability02_Taunt_Sub</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "removalDependencies": {
         "name": "Removal Dependency",
         "dependancyName": "<a class=\"gModGreen\" id=\"-227453258\">Sparxie_Ability02_Taunt</a>"
@@ -207,9 +205,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Sparxie: EBA Target}}"
       },
-      "targetRestrictionFor": "EnemySelect",
-      "stackData": [],
-      "latentQueue": []
+      "targetRestrictionFor": "EnemySelect"
     }
   ],
   "targetObjectData": {

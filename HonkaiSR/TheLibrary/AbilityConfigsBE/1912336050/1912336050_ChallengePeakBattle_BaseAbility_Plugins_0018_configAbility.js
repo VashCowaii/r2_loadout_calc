@@ -18,6 +18,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1313154338\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0018_03</a>[<span class=\"descriptionNumberColor\">Hallowed Abjuration</span>]",
+      "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0018_ADF_2</span>.",
+      "type": "Other",
+      "statusName": "Hallowed Abjuration",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,14 +43,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0018_ADF_2</span>.",
-      "type": "Other",
-      "statusName": "Hallowed Abjuration"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1296376719\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0018_02</a>[<span class=\"descriptionNumberColor\">Hallowed Abjuration</span>]",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0018_ADF_1</span>.",
+      "type": "Other",
+      "statusName": "Hallowed Abjuration",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -70,10 +73,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0018_ADF_1</span>.",
-      "type": "Other",
-      "statusName": "Hallowed Abjuration"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -179,9 +179,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

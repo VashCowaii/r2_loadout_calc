@@ -104,9 +104,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -131,9 +129,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-707210254\">M_Player_AutoUseUltraAbility</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-707210254\">M_Player_AutoUseUltraAbility</a>"
         }
       ],
       "targetObjectData": {
@@ -202,6 +198,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1618202918\">PlayerWarrior_SkilTree02_BreakDefUp</a>[<span class=\"descriptionNumberColor\">Tenacity</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MDF_Max_Layer</span> stack(s).",
+          "type": "Buff",
+          "effectName": "DEF Boost",
+          "statusName": "Tenacity",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -235,18 +237,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MDF_Max_Layer</span> stack(s).",
-          "type": "Buff",
-          "effectName": "DEF Boost",
-          "statusName": "Tenacity",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-417743675\">PlayerWarrior_Passive_BreakAtkUp</a>[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MDF_Max_Layer</span> stack(s).",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Perfect Pickoff",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -280,13 +282,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MDF_Max_Layer</span> stack(s).",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Perfect Pickoff",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -463,9 +459,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -499,9 +493,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -597,9 +589,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1177,6 +1167,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_Burst"
           ],
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1208,8 +1199,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1230,9 +1220,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1282,9 +1270,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

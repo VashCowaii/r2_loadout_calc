@@ -22,6 +22,10 @@ const configAbility = {
         "Deathrattle",
         "RemoveWhenCasterDead"
       ],
+      "description": "Increases the received Basic ATK and Ultimate DMG by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>. After this unit gets defeated, deals a set amount of DMG to all enemies.",
+      "type": "Debuff",
+      "effectName": "Memory Imprint",
+      "statusName": "Memory Imprint",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -170,11 +174,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases the received Basic ATK and Ultimate DMG by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>. After this unit gets defeated, deals a set amount of DMG to all enemies.",
-      "type": "Debuff",
-      "effectName": "Memory Imprint",
-      "statusName": "Memory Imprint"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -309,9 +309,7 @@ const configAbility = {
           ],
           "priorityLevel": -45
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

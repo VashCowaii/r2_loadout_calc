@@ -114,6 +114,13 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_Rank06_Damage"
+      ],
+      "description": "On a hit, receives an extra Quantum DMG from Seele.",
+      "type": "Debuff",
+      "effectName": "Butterfly Flurry",
+      "statusName": "Butterfly Flurry",
       "execute": [
         {
           "eventTrigger": "Being Attacked End [Owner]",
@@ -141,15 +148,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Rank06_Damage"
-      ],
-      "latentQueue": [],
-      "description": "On a hit, receives an extra Quantum DMG from Seele.",
-      "type": "Debuff",
-      "effectName": "Butterfly Flurry",
-      "statusName": "Butterfly Flurry"
+      ]
     }
   ],
   "targetObjectData": {

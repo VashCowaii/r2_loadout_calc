@@ -15,6 +15,14 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_PropertyValue",
+        "MDF_PropertyValue2"
+      ],
+      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue3</span>.",
+      "type": "Buff",
+      "effectName": "Nocturne",
+      "statusName": "Nocturne",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -111,16 +119,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_PropertyValue2"
-      ],
-      "latentQueue": [],
-      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue3</span>.",
-      "type": "Buff",
-      "effectName": "Nocturne",
-      "statusName": "Nocturne"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -219,14 +218,21 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1668382571\">Sparkle_PointB3_Mark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1668382571\">Sparkle_PointB3_Mark</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1017813291\">Sparkle_PassiveAbility_AllDamageAddedRatio02</a>[<span class=\"descriptionNumberColor\">Red Herring</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue2",
+        "MDF_PropertyValue3",
+        "MDF_DefenceAddedRatio2"
+      ],
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Red Herring",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -528,17 +534,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue2",
-        "MDF_PropertyValue3",
-        "MDF_DefenceAddedRatio2"
-      ],
-      "latentQueue": [],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Red Herring"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -585,6 +581,16 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1766946532\">Sparkle_Ability02_CritDmgAddedRatio02</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
       "stackType": "Replace",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "stackData": [
+        "MDF_PropertyValueConvert2",
+        "MDF_PropertyValueBase2"
+      ],
+      "latentQueue": [
+        "MDF_PassiveLayer02"
+      ],
+      "description": "Increase CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
+      "type": "Buff",
+      "statusName": "Dreamdiver",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -620,22 +626,20 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValueConvert2",
-        "MDF_PropertyValueBase2"
-      ],
-      "latentQueue": [
-        "MDF_PassiveLayer02"
-      ],
-      "description": "Increase CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
-      "type": "Buff",
-      "statusName": "Dreamdiver"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValueConvert",
+        "MDF_PropertyValueBase"
+      ],
+      "description": "Increase CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "Dreamdiver",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -722,16 +726,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValueConvert",
-        "MDF_PropertyValueBase"
-      ],
-      "latentQueue": [],
-      "description": "Increase CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "Dreamdiver"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -752,6 +747,17 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
+      "stackData": [
+        "MDF_PropertyValue",
+        "MDF_PropertyValue2"
+      ],
+      "latentQueue": [
+        "MDF_PassiveLayer02"
+      ],
+      "description": "Additionally enhances the DMG Boost effect provided by each stack of Sparkle's talent by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Cipher",
+      "statusName": "Cipher",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -797,18 +803,7 @@ const configAbility = {
         {
           "eventTrigger": "Ability Use [Anyone]: End"
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_PropertyValue2"
-      ],
-      "latentQueue": [
-        "MDF_PassiveLayer02"
-      ],
-      "description": "Additionally enhances the DMG Boost effect provided by each stack of Sparkle's talent by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Cipher",
-      "statusName": "Cipher"
+      ]
     }
   ],
   "references": []

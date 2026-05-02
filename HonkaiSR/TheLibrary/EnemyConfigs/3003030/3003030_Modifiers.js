@@ -164,9 +164,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -175,38 +173,37 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1127149087\">Monster_W3_Figure_02_ChainMark4</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1127149087\">Monster_W3_Figure_02_ChainMark4</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1110371468\">Monster_W3_Figure_02_ChainMark3</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1110371468\">Monster_W3_Figure_02_ChainMark3</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1093593849\">Monster_W3_Figure_02_ChainMark2</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1093593849\">Monster_W3_Figure_02_ChainMark2</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1076816230\">Monster_W3_Figure_02_ChainMark1</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1076816230\">Monster_W3_Figure_02_ChainMark1</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-596409662\">Monster_W3_Figure_02_IsAiming</a>[<span class=\"descriptionNumberColor\">Shackle-Bearing Messenger</span>]",
       "stackType": "Replace",
+      "latentQueue": [
+        "MarkCount"
+      ],
+      "description": "About to use Desmios Evangelion. The current DMG level is <span class=\"descriptionNumberColor\">MDF_DangerLevel</span>.",
+      "type": "Other",
+      "effectName": "Target Locked On",
+      "statusName": "Shackle-Bearing Messenger",
+      "stackLimit": 4,
+      "addStacksPerTrigger": -1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -394,17 +391,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MarkCount"
-      ],
-      "description": "About to use Desmios Evangelion. The current DMG level is <span class=\"descriptionNumberColor\">MDF_DangerLevel</span>.",
-      "type": "Other",
-      "effectName": "Target Locked On",
-      "statusName": "Shackle-Bearing Messenger",
-      "stackLimit": 4,
-      "addStacksPerTrigger": -1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -414,6 +401,14 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "AttackSign"
       ],
+      "latentQueue": [
+        "MarkCount",
+        "MDF_DangerLevel"
+      ],
+      "description": "%CasterName will focus attacks on this target.",
+      "type": "Other",
+      "effectName": "Target Locked On",
+      "statusName": "Target Locked On",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -557,16 +552,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MarkCount",
-        "MDF_DangerLevel"
-      ],
-      "description": "%CasterName will focus attacks on this target.",
-      "type": "Other",
-      "effectName": "Target Locked On",
-      "statusName": "Target Locked On"
+      ]
     }
   ],
   "references": []

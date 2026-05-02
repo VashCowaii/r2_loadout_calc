@@ -12,6 +12,14 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_ShowValue1"
+      ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -45,16 +53,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ShowValue1"
-      ],
-      "latentQueue": [],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost",
-      "addStacksPerTrigger": 1
+      ]
     }
   ],
   "references": []

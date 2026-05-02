@@ -617,6 +617,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_ShowValue"
+          ],
+          "latentQueue": [
+            "Insert_Flag",
+            "DeathPart_AppearSkill_Flag"
+          ],
           "execute": [
             {
               "eventTrigger": "Update Target Selected(UI) [Anyone]",
@@ -704,13 +711,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ShowValue"
-          ],
-          "latentQueue": [
-            "Insert_Flag",
-            "DeathPart_AppearSkill_Flag"
           ]
         },
         {
@@ -719,6 +719,13 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "MDF_ShowValue"
+          ],
+          "latentQueue": [
+            "Insert_Flag",
+            "DeathPart_AppearSkill_Flag"
           ],
           "execute": [
             {
@@ -791,13 +798,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ShowValue"
-          ],
-          "latentQueue": [
-            "Insert_Flag",
-            "DeathPart_AppearSkill_Flag"
           ]
         }
       ]
@@ -818,6 +818,12 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Deathrattle",
             "KeepOnDeathrattle"
+          ],
+          "stackData": [
+            "MDF_ShowValue"
+          ],
+          "latentQueue": [
+            "Insert_Flag"
           ],
           "execute": [
             {
@@ -1071,24 +1077,6 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_CreatFlag",
-                      "value": 0
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
@@ -1136,17 +1124,32 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [
-            "MDF_ShowValue"
-          ],
-          "latentQueue": [
-            "Insert_Flag"
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_CreatFlag",
+                      "value": 0
+                    }
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__488990783\">W3_DeathPart_Sgin_Modifier</a>",
           "stackType": "Multiple",
+          "latentQueue": [
+            "Insert_Flag"
+          ],
           "execute": [
             {
               "eventTrigger": "Update Target Selected(UI) [Anyone]",
@@ -1174,10 +1177,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Insert_Flag"
           ]
         }
       ],

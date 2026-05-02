@@ -13,6 +13,13 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1013692489\">Himeko_FireTakenRatio</a>[<span class=\"descriptionNumberColor\">Fire Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Fire DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Fire Vulnerability",
+      "statusName": "Fire Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -35,15 +42,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Fire DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Fire Vulnerability",
-      "statusName": "Fire Vulnerability"
+      ]
     }
   ],
   "references": []

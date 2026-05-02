@@ -11,6 +11,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-630308982\">Monster_AML_Boss_IF_BattleAlert</a>",
+      "latentQueue": [
+        "SkillEX03_P4_ActionDelayRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: End",
@@ -559,35 +562,23 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "SkillEX03_P4_ActionDelayRatio"
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1886072709\">Enemy_AML_Boss_IF_AbilityEX04</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1886072709\">Enemy_AML_Boss_IF_AbilityEX04</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1802184614\">Enemy_AML_Boss_IF_AbilityEX03</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1802184614\">Enemy_AML_Boss_IF_AbilityEX03</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1785406995\">Enemy_AML_Boss_IF_AbilityEX02</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1785406995\">Enemy_AML_Boss_IF_AbilityEX02</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1835739852\">Enemy_AML_Boss_IF_AbilityEX01</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1835739852\">Enemy_AML_Boss_IF_AbilityEX01</a>"
     },
     {
       "name": "Modifier Construction",
@@ -611,6 +602,12 @@ const configAbility = {
         "AvatarBreak",
         "STAT_CTRL"
       ],
+      "useEntitySnapshot": true,
+      "description": "Action delayed and SPD reduced. Takes Quantum Additional DMG at the start of the next turn.<br>This Additional DMG is increased whenever the target under the Snarelock status is attacked, up to 5 stacks. This status is considered to be both Quantum Entanglement and Imprisonment.",
+      "type": "Debuff",
+      "effectName": "Snarelock",
+      "statusName": "Snarelock",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -984,13 +981,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Action delayed and SPD reduced. Takes Quantum Additional DMG at the start of the next turn.<br>This Additional DMG is increased whenever the target under the Snarelock status is attacked, up to 5 stacks. This status is considered to be both Quantum Entanglement and Imprisonment.",
-      "type": "Debuff",
-      "effectName": "Snarelock",
-      "statusName": "Snarelock",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1220,164 +1211,6 @@ const configAbility = {
       "modifierFlags": [
         "ForceStanceDamage"
       ],
-      "execute": [
-        {
-          "eventTrigger": "When Constructing Modifier",
-          "execute": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "ReleaseFlag",
-              "value": 0
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"190249038\">Enemy_AML_Boss_IF_Enhance_Imaginary_SpecialMark</a>"
-            }
-          ]
-        },
-        {
-          "eventTrigger": "When Modifier Destroyed/Removed",
-          "execute": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"190249038\">Enemy_AML_Boss_IF_Enhance_Imaginary_SpecialMark</a>"
-            }
-          ]
-        },
-        {
-          "eventTrigger": "Deal Damage Start [Owner]: Hit",
-          "execute": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Is Weak to Attacker",
-                    "weakTo": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "invertCondition": true
-                  },
-                  {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"216530002\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part3</a>[<span class=\"descriptionNumberColor\">Imaginary Mark</span>]"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Adjust Target Stats",
-                  "modifiedValuesArray": [
-                    {
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "eventTrigger": "Deal Damage End [Owner]: Hit",
-          "execute": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"216530002\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part3</a>[<span class=\"descriptionNumberColor\">Imaginary Mark</span>]"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "ReleaseFlag",
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier",
-          "execute": [
-            {
-              "name": "Stack Target Stat Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
-              "value": {
-                "operator": "Variables[0] (MDF_StanceBreakAddedRatio) || RETURN",
-                "displayLines": "MDF_StanceBreakAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_StanceBreakAddedRatio"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "eventTrigger": "Attack DMG End [Owner]",
-          "execute": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Modifier Holder}}"
-                },
-                "value1": "ReleaseFlag",
-                "compareType": "=",
-                "value2": 1
-              },
-              "passed": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        }
-      ],
       "useEntitySnapshot": true,
       "description": "This unit can deal Toughness Reduction to targets with Imaginary Mark with increased Weakness Break Efficiency. After attacking a target with Imaginary Mark, Imaginary Infusion is dispelled. Having both Quantum Infusion and Imaginary Infusion states at the same time triggers Ruinous Collision with a high chance of being inflicted with the Snarelock state.",
       "type": "Other",
@@ -1417,14 +1250,7 @@ const configAbility = {
           ]
         },
         "toughnessForcedReductionPreview": 1
-      }
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-291765317\">Enemy_AML_Boss_IF_Enhance_Quantum</a>[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]",
-      "modifierFlags": [
-        "ForceStanceDamage"
-      ],
+      },
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1440,7 +1266,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-1048097414\">Enemy_AML_Boss_IF_Enhance_Quantum_SpecialMark</a>"
+              "modifier": "<a class=\"gModGreen\" id=\"190249038\">Enemy_AML_Boss_IF_Enhance_Imaginary_SpecialMark</a>"
             }
           ]
         },
@@ -1453,7 +1279,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-1048097414\">Enemy_AML_Boss_IF_Enhance_Quantum_SpecialMark</a>"
+              "modifier": "<a class=\"gModGreen\" id=\"190249038\">Enemy_AML_Boss_IF_Enhance_Imaginary_SpecialMark</a>"
             }
           ]
         },
@@ -1486,7 +1312,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "<a class=\"gModGreen\" id=\"182974764\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part1</a>[<span class=\"descriptionNumberColor\">Quantum Mark</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"216530002\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part3</a>[<span class=\"descriptionNumberColor\">Imaginary Mark</span>]"
                       }
                     ]
                   }
@@ -1524,7 +1350,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "<a class=\"gModGreen\" id=\"182974764\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part1</a>[<span class=\"descriptionNumberColor\">Quantum Mark</span>]"
+                        "modifier": "<a class=\"gModGreen\" id=\"216530002\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part3</a>[<span class=\"descriptionNumberColor\">Imaginary Mark</span>]"
                       }
                     ]
                   }
@@ -1582,6 +1408,13 @@ const configAbility = {
             }
           ]
         }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-291765317\">Enemy_AML_Boss_IF_Enhance_Quantum</a>[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]",
+      "modifierFlags": [
+        "ForceStanceDamage"
       ],
       "useEntitySnapshot": true,
       "description": "This unit can deal Toughness Reduction to targets with Quantum Mark with increased Weakness Break Efficiency. After attacking a target with Quantum Mark, Quantum Infusion is dispelled. Having both Quantum Infusion and Imaginary Infusion states at the same time triggers Ruinous Collision with a high chance of being inflicted with the Snarelock state.",
@@ -1622,13 +1455,174 @@ const configAbility = {
           ]
         },
         "toughnessForcedReductionPreview": 1
-      }
+      },
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "ReleaseFlag",
+              "value": 0
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1048097414\">Enemy_AML_Boss_IF_Enhance_Quantum_SpecialMark</a>"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1048097414\">Enemy_AML_Boss_IF_Enhance_Quantum_SpecialMark</a>"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Deal Damage Start [Owner]: Hit",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Is Weak to Attacker",
+                    "weakTo": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"182974764\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part1</a>[<span class=\"descriptionNumberColor\">Quantum Mark</span>]"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Adjust Target Stats",
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Deal Damage End [Owner]: Hit",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"182974764\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part1</a>[<span class=\"descriptionNumberColor\">Quantum Mark</span>]"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "ReleaseFlag",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (MDF_StanceBreakAddedRatio) || RETURN",
+                "displayLines": "MDF_StanceBreakAddedRatio",
+                "constants": [],
+                "variables": [
+                  "MDF_StanceBreakAddedRatio"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Attack DMG End [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "ReleaseFlag",
+                "compareType": "=",
+                "value2": 1
+              },
+              "passed": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__739623542\">Enemy_AML_Boss_IF_DamageTakenUp</a>",
       "modifierFlags": [
         "MuteHitH"
+      ],
+      "stackData": [
+        "MDF_PropertyValue"
       ],
       "execute": [
         {
@@ -1713,11 +1707,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1813,9 +1803,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2051,9 +2039,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2155,9 +2141,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2234,9 +2218,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2313,9 +2295,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2392,9 +2372,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2444,6 +2422,10 @@ const configAbility = {
       "modifierFlags": [
         "Endurance"
       ],
+      "latentQueue": [
+        "SkillEX03_P4_ActionDelayRatio"
+      ],
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2566,16 +2548,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "SkillEX03_P4_ActionDelayRatio"
-      ],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2081849040\">Enemy_AML_Boss_IF_Part_Revive</a>",
+      "stackData": [
+        "MDF_PartReviveDelay"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -2695,11 +2675,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PartReviveDelay"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2709,6 +2685,10 @@ const configAbility = {
         "MuteSpeed",
         "Endurance"
       ],
+      "useEntitySnapshot": true,
+      "description": "Cannot be targeted until Disaster's Right Hand, Dawn's Left Hand, and Antimatter Engine have all been destroyed.",
+      "type": "Buff",
+      "statusName": "Vestige Valor",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2738,13 +2718,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Cannot be targeted until Disaster's Right Hand, Dawn's Left Hand, and Antimatter Engine have all been destroyed.",
-      "type": "Buff",
-      "statusName": "Vestige Valor"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2766,9 +2740,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

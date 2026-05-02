@@ -26,6 +26,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1888721625\">LC_21041_Sub_Attack</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "description": "Increases ATK by <span class=\"descriptionNumberColor\">#SkillEquip_P5_AttackRatio</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "ATK Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -48,16 +52,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases ATK by <span class=\"descriptionNumberColor\">#SkillEquip_P5_AttackRatio</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "ATK Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-672411958\">LC_21041_Sub</a>[<span class=\"descriptionNumberColor\">Trick</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P1_DamageAddedRatio</span>, up to <span class=\"descriptionNumberColor\">#SkillEquip_P2_MaxLayer</span> stack(s).",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Trick",
+          "stackLimit": 0,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -91,13 +97,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P1_DamageAddedRatio</span>, up to <span class=\"descriptionNumberColor\">#SkillEquip_P2_MaxLayer</span> stack(s).",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Trick",
-          "stackLimit": 0,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -205,9 +205,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

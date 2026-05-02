@@ -138,6 +138,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__513595051\">Enemy_W1_Gepard_IF_03_ListenSelfBreak</a>",
+      "latentQueue": [
+        "AIFlag",
+        "PhaseFlag",
+        "isMainAttack"
+      ],
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -233,17 +238,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag",
-        "PhaseFlag",
-        "isMainAttack"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1123298870\">Enemy_W1_Gepard_IF_03_Command</a>",
+      "latentQueue": [
+        "AIFlag",
+        "PhaseFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -275,11 +278,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag",
-        "PhaseFlag"
       ]
     }
   ]

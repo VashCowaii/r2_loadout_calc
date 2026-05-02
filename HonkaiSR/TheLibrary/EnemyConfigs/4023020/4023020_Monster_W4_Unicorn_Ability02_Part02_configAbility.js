@@ -1133,21 +1133,15 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1034438552\">Monster_W4_Unicorn_Ability02_Target03</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1034438552\">Monster_W4_Unicorn_Ability02_Target03</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1017660933\">Monster_W4_Unicorn_Ability02_Target02</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1017660933\">Monster_W4_Unicorn_Ability02_Target02</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1000883314\">Monster_W4_Unicorn_Ability02_Target01</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1000883314\">Monster_W4_Unicorn_Ability02_Target01</a>"
     }
   ]
 }

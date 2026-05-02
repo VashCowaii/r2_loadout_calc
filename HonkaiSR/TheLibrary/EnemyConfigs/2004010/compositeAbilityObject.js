@@ -1468,7 +1468,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1137001600\">Monster_W2_Kafka_TargetFilter</a>",
-          "stackData": [],
           "latentQueue": [
             "DisPelCount"
           ]
@@ -1476,7 +1475,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2066030702\">Monster_W2_Kafka_AIChange</a>",
-          "stackData": [],
           "latentQueue": [
             "DisPelCount"
           ]
@@ -1547,9 +1545,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1658,9 +1654,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1677,6 +1671,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-879407781\">Monster_W2_Kafka_CharmTargetMark</a>",
+          "latentQueue": [
+            "PursuitCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1684,10 +1681,6 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "PursuitCheck"
           ]
         },
         {
@@ -1735,6 +1728,10 @@ const compositeAbilityObject = {
             "AvatarBreak",
             "RemoveWhenCasterDead"
           ],
+          "description": "Makes a single target unable to take action. Target will use Basic ATK to attack a random ally of theirs. If an ability is cast on the target to remove a debuff, the Dominated status will be removed first.",
+          "type": "Debuff",
+          "effectName": "Dominated",
+          "statusName": "Dominated",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1879,11 +1876,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Makes a single target unable to take action. Target will use Basic ATK to attack a random ally of theirs. If an ability is cast on the target to remove a debuff, the Dominated status will be removed first.",
-          "type": "Debuff",
-          "effectName": "Dominated",
-          "statusName": "Dominated"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1935,13 +1928,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1959,10 +1951,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2047,6 +2036,12 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1082518094\">Monster_W2_Kafka_Pursuit</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
+          ],
+          "stackData": [
+            "MDF_Count"
+          ],
+          "latentQueue": [
+            "DisPelCount"
           ],
           "execute": [
             {
@@ -2278,12 +2273,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Count"
-          ],
-          "latentQueue": [
-            "DisPelCount"
           ]
         }
       ],

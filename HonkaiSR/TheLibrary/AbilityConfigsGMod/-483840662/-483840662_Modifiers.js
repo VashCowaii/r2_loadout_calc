@@ -214,6 +214,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1031496924\">Standard_Windfury</a>",
       "stackType": "ReplaceByCaster",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1621,8 +1622,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1641,6 +1641,23 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__585519814\">Standard_SetActionDelayOnTurnEnd</a>",
       "stackType": "Multiple",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
+        "skillType": [
+          "Basic ATK",
+          "Skill",
+          "Memosprite"
+        ],
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": "[object Object](Set AV)"
+        }
+      },
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -1664,46 +1681,12 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "target": {
-          "name": "Target Name",
-          "target": "{{Modifier Holder}}"
-        },
-        "skillType": [
-          "Basic ATK",
-          "Skill",
-          "Memosprite"
-        ],
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": "[object Object](Set AV)"
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__564198756\">Standard_ModifyActionDelayOnTurnEnd</a>",
       "stackType": "Multiple",
-      "execute": [
-        {
-          "eventTrigger": "Turn End [Anyone]",
-          "execute": [
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "advanceType": "Set",
-              "multiAdd": "(0 - MDF_DelayCost)"
-            },
-            "Modifier Deletes Itself"
-          ]
-        }
-      ],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -1729,7 +1712,24 @@ const configAbility = {
             ]
           }
         }
-      }
+      },
+      "execute": [
+        {
+          "eventTrigger": "Turn End [Anyone]",
+          "execute": [
+            {
+              "name": "Action Advance/Delay",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "advanceType": "Set",
+              "multiAdd": "(0 - MDF_DelayCost)"
+            },
+            "Modifier Deletes Itself"
+          ]
+        }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1895,6 +1895,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AttachWeakness"
       ],
+      "description": "Additionally implanted Imaginary Weakness.",
+      "type": "Debuff",
+      "effectName": "Implant Imaginary Weakness",
+      "statusName": "Additional Imaginary Weakness",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1959,11 +1963,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Additionally implanted Imaginary Weakness.",
-      "type": "Debuff",
-      "effectName": "Implant Imaginary Weakness",
-      "statusName": "Additional Imaginary Weakness"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1972,6 +1972,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AttachWeakness"
       ],
+      "description": "Additionally implanted Quantum Weakness.",
+      "type": "Debuff",
+      "effectName": "Implant Quantum Weakness",
+      "statusName": "Additional Quantum Weakness",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2036,11 +2040,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Additionally implanted Quantum Weakness.",
-      "type": "Debuff",
-      "effectName": "Implant Quantum Weakness",
-      "statusName": "Additional Quantum Weakness"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2049,6 +2049,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AttachWeakness"
       ],
+      "description": "Additionally implanted Lightning Weakness.",
+      "type": "Debuff",
+      "effectName": "Implant Lightning Weakness",
+      "statusName": "Additional Lightning Weakness",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2113,11 +2117,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Additionally implanted Lightning Weakness.",
-      "type": "Debuff",
-      "effectName": "Implant Lightning Weakness",
-      "statusName": "Additional Lightning Weakness"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2126,6 +2126,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AttachWeakness"
       ],
+      "description": "Additionally implanted Physical Weakness.",
+      "type": "Debuff",
+      "effectName": "Implant Physical Weakness",
+      "statusName": "Additional Physical Weakness",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2190,11 +2194,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Additionally implanted Physical Weakness.",
-      "type": "Debuff",
-      "effectName": "Implant Physical Weakness",
-      "statusName": "Additional Physical Weakness"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2203,6 +2203,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AttachWeakness"
       ],
+      "description": "Additionally implanted Wind Weakness.",
+      "type": "Debuff",
+      "effectName": "Implant Wind Weakness",
+      "statusName": "Additional Wind Weakness",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2267,11 +2271,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Additionally implanted Wind Weakness.",
-      "type": "Debuff",
-      "effectName": "Implant Wind Weakness",
-      "statusName": "Additional Wind Weakness"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2280,6 +2280,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AttachWeakness"
       ],
+      "description": "Additionally implanted Ice Weakness.",
+      "type": "Debuff",
+      "effectName": "Implant Ice Weakness",
+      "statusName": "Additional Ice Weakness",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2344,11 +2348,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Additionally implanted Ice Weakness.",
-      "type": "Debuff",
-      "effectName": "Implant Ice Weakness",
-      "statusName": "Additional Ice Weakness"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2357,6 +2357,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AttachWeakness"
       ],
+      "description": "Additionally implanted Fire Weakness.",
+      "type": "Debuff",
+      "effectName": "Implant Fire Weakness",
+      "statusName": "Additional Fire Weakness",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2421,11 +2425,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Additionally implanted Fire Weakness.",
-      "type": "Debuff",
-      "effectName": "Implant Fire Weakness",
-      "statusName": "Additional Fire Weakness"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2438,6 +2438,12 @@ const configAbility = {
         "DisableAction",
         "STAT_CTRL"
       ],
+      "useEntitySnapshot": true,
+      "description": "Action delayed and receives Additional Quantum DMG at the start of the next turn.<br>This Additional DMG is increased when Entangled enemies are attacked. This effect can stack up to 5 times.",
+      "type": "Debuff",
+      "effectName": "Entanglement",
+      "statusName": "Entanglement",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2809,13 +2815,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Action delayed and receives Additional Quantum DMG at the start of the next turn.<br>This Additional DMG is increased when Entangled enemies are attacked. This effect can stack up to 5 times.",
-      "type": "Debuff",
-      "effectName": "Entanglement",
-      "statusName": "Entanglement",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2828,6 +2828,10 @@ const configAbility = {
         "STAT_CTRL",
         "STAT_SpeedDown"
       ],
+      "description": "Action is delayed and SPD is reduced.",
+      "type": "Debuff",
+      "effectName": "Imprisonment",
+      "statusName": "Imprisonment",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2883,11 +2887,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Action is delayed and SPD is reduced.",
-      "type": "Debuff",
-      "effectName": "Imprisonment",
-      "statusName": "Imprisonment"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2898,6 +2898,13 @@ const configAbility = {
         "STAT_DOT",
         "STAT_DOT_Electric"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Lightning DMG at the beginning of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Shock",
+      "statusName": "Shock",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2984,14 +2991,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Lightning DMG at the beginning of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Shock",
-      "statusName": "Shock",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3002,6 +3002,13 @@ const configAbility = {
         "STAT_DOT",
         "STAT_DOT_Poison"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Wind DMG at the beginning of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Wind Shear",
+      "statusName": "Wind Shear",
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -3085,14 +3092,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Wind DMG at the beginning of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Wind Shear",
-      "statusName": "Wind Shear",
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3103,6 +3103,13 @@ const configAbility = {
         "STAT_DOT",
         "STAT_DOT_Burn"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Fire DMG at the beginning of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Burn",
+      "statusName": "Burn",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -3193,14 +3200,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Fire DMG at the beginning of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Burn",
-      "statusName": "Burn",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3212,6 +3212,11 @@ const configAbility = {
         "STAT_CTRL_Frozen",
         "STAT_CTRL"
       ],
+      "useEntitySnapshot": true,
+      "description": "Cannot take action for a certain number of turns and takes Ice Additional DMG at the beginning of each turn.",
+      "type": "Debuff",
+      "effectName": "Frozen",
+      "statusName": "Frozen",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -3313,12 +3318,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Cannot take action for a certain number of turns and takes Ice Additional DMG at the beginning of each turn.",
-      "type": "Debuff",
-      "effectName": "Frozen",
-      "statusName": "Frozen"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3329,6 +3329,13 @@ const configAbility = {
         "STAT_DOT",
         "STAT_DOT_Bleed"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Physical DMG at the start of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Bleed",
+      "statusName": "Bleed",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -3683,14 +3690,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Physical DMG at the start of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Bleed",
-      "statusName": "Bleed",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3722,6 +3722,8 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3736,9 +3738,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3747,6 +3747,10 @@ const configAbility = {
       "modifierFlags": [
         "Shield"
       ],
+      "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
+      "type": "Buff",
+      "effectName": "Shield",
+      "statusName": "Shield",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -3790,11 +3794,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
-      "type": "Buff",
-      "effectName": "Shield",
-      "statusName": "Shield"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3802,6 +3802,10 @@ const configAbility = {
       "modifierFlags": [
         "ListenUnStage"
       ],
+      "useEntitySnapshot": true,
+      "description": "When the summoner is defeated, the summoned objects will also be defeated.",
+      "type": "Other",
+      "statusName": "Self-Destruct",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -3846,11 +3850,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "When the summoner is defeated, the summoned objects will also be defeated.",
-      "type": "Other",
-      "statusName": "Self-Destruct"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3858,18 +3858,20 @@ const configAbility = {
       "modifierFlags": [
         "Stealth"
       ],
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1445032651\">Standard_BAN_Silence</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "Merge",
+      "description": "Missing Description",
+      "type": "Debuff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3887,9 +3889,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Debuff"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3912,6 +3912,10 @@ const configAbility = {
         "STAT_CTRL",
         "AvatarBreak"
       ],
+      "description": "Action delayed. Cannot take actions for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Strong Reverberation",
+      "statusName": "Strong Reverberation",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -4000,17 +4004,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Action delayed. Cannot take actions for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Strong Reverberation",
-      "statusName": "Strong Reverberation"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__906599448\">Standard_BlackBlood_Stackable</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -4085,13 +4087,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
+      "description": "Decreases Maximum Restorable HP by <span class=\"descriptionNumberColor\">MDF_DirtyHPRatio</span>.",
+      "type": "Debuff",
+      "effectName": "Prana-Siphoned",
+      "statusName": "Prana-Siphoned",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4114,11 +4118,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Decreases Maximum Restorable HP by <span class=\"descriptionNumberColor\">MDF_DirtyHPRatio</span>.",
-      "type": "Debuff",
-      "effectName": "Prana-Siphoned",
-      "statusName": "Prana-Siphoned"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4132,6 +4132,10 @@ const configAbility = {
         "STAT_CTRL",
         "DispelPriorityHigh"
       ],
+      "description": "Cannot be controlled. Automatically attacks a random enemy target. If the target is about to have any debuff removed by an ability, then the Outrage state will be prioritized for removal.",
+      "type": "Debuff",
+      "effectName": "Outrage",
+      "statusName": "Outrage",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -4177,15 +4181,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Cannot be controlled. Automatically attacks a random enemy target. If the target is about to have any debuff removed by an ability, then the Outrage state will be prioritized for removal.",
-      "type": "Debuff",
-      "effectName": "Outrage",
-      "statusName": "Outrage"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__646228171\">Standard_MindControl_LockHP</a>",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -4196,8 +4197,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4430,6 +4430,10 @@ const configAbility = {
         "DispelPriorityHigh",
         "Charm"
       ],
+      "description": "Makes a single target unable to take action. Target will use Basic ATK to attack a random ally of theirs. If an ability is cast on the target to remove a debuff, the Dominated status will be removed first.",
+      "type": "Debuff",
+      "effectName": "Dominated",
+      "statusName": "Dominated",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4691,11 +4695,7 @@ const configAbility = {
             "Reset Triggers: Attack"
           ]
         }
-      ],
-      "description": "Makes a single target unable to take action. Target will use Basic ATK to attack a random ally of theirs. If an ability is cast on the target to remove a debuff, the Dominated status will be removed first.",
-      "type": "Debuff",
-      "effectName": "Dominated",
-      "statusName": "Dominated"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4709,6 +4709,12 @@ const configAbility = {
         "AvatarBreak",
         "STAT_CTRL"
       ],
+      "useEntitySnapshot": true,
+      "description": "Action delayed and receives Additional Quantum DMG at the start of the next turn.<br>This Additional DMG is increased when Entangled enemies are attacked. This effect can stack up to 5 times.",
+      "type": "Debuff",
+      "effectName": "Entanglement",
+      "statusName": "Entanglement",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -5063,13 +5069,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Action delayed and receives Additional Quantum DMG at the start of the next turn.<br>This Additional DMG is increased when Entangled enemies are attacked. This effect can stack up to 5 times.",
-      "type": "Debuff",
-      "effectName": "Entanglement",
-      "statusName": "Entanglement",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -5083,6 +5083,10 @@ const configAbility = {
         "STAT_SpeedDown",
         "AvatarBreak"
       ],
+      "description": "Action is delayed and SPD is reduced.",
+      "type": "Debuff",
+      "effectName": "Imprisonment",
+      "statusName": "Imprisonment",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -5129,11 +5133,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Action is delayed and SPD is reduced.",
-      "type": "Debuff",
-      "effectName": "Imprisonment",
-      "statusName": "Imprisonment"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -5145,6 +5145,11 @@ const configAbility = {
         "STAT_CTRL_Frozen",
         "STAT_CTRL"
       ],
+      "useEntitySnapshot": true,
+      "description": "Cannot take action for a certain number of turns and takes Ice Additional DMG at the beginning of each turn.",
+      "type": "Debuff",
+      "effectName": "Frozen",
+      "statusName": "Frozen",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -5271,12 +5276,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Cannot take action for a certain number of turns and takes Ice Additional DMG at the beginning of each turn.",
-      "type": "Debuff",
-      "effectName": "Frozen",
-      "statusName": "Frozen"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -5297,6 +5297,10 @@ const configAbility = {
         "STAT_CTRL_Stun",
         "STAT_CTRL"
       ],
+      "description": "Cannot take action for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Stunned",
+      "statusName": "Stunned",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -5371,11 +5375,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Cannot take action for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Stunned",
-      "statusName": "Stunned"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -5391,15 +5391,15 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "RemoveWhenCasterUnstage"
       ],
+      "description": "Can only select %CasterName as the target to attack.",
+      "type": "Debuff",
+      "effectName": "Taunt",
+      "statusName": "Taunt",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "description": "Can only select %CasterName as the target to attack.",
-      "type": "Debuff",
-      "effectName": "Taunt",
-      "statusName": "Taunt"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -5408,6 +5408,10 @@ const configAbility = {
       "modifierFlags": [
         "BlockDamageExcludeDot"
       ],
+      "description": "Nullifies all DMG received except for DoT until after being attacked.",
+      "type": "Buff",
+      "effectName": "Barrier",
+      "statusName": "Repel",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -5452,11 +5456,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Nullifies all DMG received except for DoT until after being attacked.",
-      "type": "Buff",
-      "effectName": "Barrier",
-      "statusName": "Repel"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -5471,6 +5471,9 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__2090146765\">Standard_HOT_SP</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "useEntitySnapshot": true,
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -5493,16 +5496,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1156628335\">Standard_HOT_HPByMaxHP</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "useEntitySnapshot": true,
+      "description": "Restores a certain amount of HP at the start of each turn.",
+      "type": "Buff",
+      "effectName": "Healing Over Time",
+      "statusName": "Healing Over Time",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -5533,12 +5538,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Restores a certain amount of HP at the start of each turn.",
-      "type": "Buff",
-      "effectName": "Healing Over Time",
-      "statusName": "Healing Over Time"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -5551,6 +5551,13 @@ const configAbility = {
         "CanBeAddedToServant",
         "CanListenServantCallback"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Physical DMG at the start of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Bleed",
+      "statusName": "Bleed",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -5825,14 +5832,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Physical DMG at the start of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Bleed",
-      "statusName": "Bleed",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -5845,6 +5845,13 @@ const configAbility = {
         "CanBeAddedToServant",
         "CanListenServantCallback"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Lightning DMG at the start of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Shock",
+      "statusName": "Shock",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -5946,14 +5953,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Lightning DMG at the start of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Shock",
-      "statusName": "Shock",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -5966,6 +5966,13 @@ const configAbility = {
         "CanBeAddedToServant",
         "CanListenServantCallback"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Wind DMG at the start of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Wind Shear",
+      "statusName": "Wind Shear",
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -6045,14 +6052,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Wind DMG at the start of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Wind Shear",
-      "statusName": "Wind Shear",
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -6065,6 +6065,13 @@ const configAbility = {
         "CanBeAddedToServant",
         "CanListenServantCallback"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Fire DMG at the start of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Burn",
+      "statusName": "Burn",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -6191,14 +6198,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Fire DMG at the start of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Burn",
-      "statusName": "Burn",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -6211,6 +6211,13 @@ const configAbility = {
         "CanBeAddedToServant",
         "CanListenServantCallback"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Physical DMG at the start of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Bleed",
+      "statusName": "Bleed",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -6304,14 +6311,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Physical DMG at the start of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Bleed",
-      "statusName": "Bleed",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -6669,8 +6669,6 @@ const configAbility = {
         "OneMore",
         "LifeStepImmediately"
       ],
-      "stackData": [],
-      "latentQueue": [],
       "duration": 1
     },
     {

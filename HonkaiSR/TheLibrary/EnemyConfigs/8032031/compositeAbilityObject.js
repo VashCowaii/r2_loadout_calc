@@ -1582,6 +1582,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-96862504\">Monster_W3_AventurinePart_Odds_EnergyBar_RL</a>[<span class=\"descriptionNumberColor\">Odds</span>]",
           "stackType": "Replace",
+          "description": "Current Odds — 1:<span class=\"descriptionNumberColor\">MDF_Layer</span>. Highest Odds — 1:<span class=\"descriptionNumberColor\">MDF_MaxLayer</span>.",
+          "type": "Other",
+          "effectName": "Double Odds",
+          "statusName": "Odds",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1614,11 +1618,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Current Odds — 1:<span class=\"descriptionNumberColor\">MDF_Layer</span>. Highest Odds — 1:<span class=\"descriptionNumberColor\">MDF_MaxLayer</span>.",
-          "type": "Other",
-          "effectName": "Double Odds",
-          "statusName": "Odds"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1671,6 +1671,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
           "stackType": "Replace",
+          "latentQueue": [
+            "DiceGamblingInsertCheck_RL"
+          ],
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1921,18 +1925,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DiceGamblingInsertCheck_RL"
-          ],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-804462384\">Monster_W3_AventurinePart_OddsZero_RL</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-804462384\">Monster_W3_AventurinePart_OddsZero_RL</a>"
         },
         {
           "name": "Modifier Construction",
@@ -1971,9 +1968,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1981,6 +1976,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteSpeed"
           ],
+          "description": "When this unit is attacked by a target that has entered the Gamble, the Gamble's odds are doubled.",
+          "type": "Other",
+          "statusName": "Forever Concealed",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2012,16 +2010,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When this unit is attacked by a target that has entered the Gamble, the Gamble's odds are doubled.",
-          "type": "Other",
-          "statusName": "Forever Concealed"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__288143778\">Monster_W3_AventurinePart_DeathRattle_RL</a>[<span class=\"descriptionNumberColor\">Influx of Fortuity</span>]",
+          "description": "When this unit is attacked by a target that has entered the Gamble, this unit always generates a roll of 6, and uses Punishment of Defeat when the Gamble ends.",
+          "type": "Other",
+          "effectName": "Influx of Fortuity",
+          "statusName": "Influx of Fortuity",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2042,11 +2039,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When this unit is attacked by a target that has entered the Gamble, this unit always generates a roll of 6, and uses Punishment of Defeat when the Gamble ends.",
-          "type": "Other",
-          "effectName": "Influx of Fortuity",
-          "statusName": "Influx of Fortuity"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2056,6 +2049,9 @@ const compositeAbilityObject = {
             "Deathrattle",
             "KeepOnDeathrattle"
           ],
+          "description": "The minimum HP is 1. When attacked by a target that has entered the gamble, this unit gains a random number from 1 to 6. when its health drops to 1, this unit gains the Influx of Fortuity effect.",
+          "type": "Other",
+          "statusName": "Fickle Fortune",
           "execute": [
             {
               "eventTrigger": "Take Damage End [Owner]: Hit",
@@ -2327,12 +2323,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The minimum HP is 1. When attacked by a target that has entered the gamble, this unit gains a random number from 1 to 6. when its health drops to 1, this unit gains the Influx of Fortuity effect.",
-          "type": "Other",
-          "statusName": "Fickle Fortune"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2342,6 +2333,8 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-699513905\">Monster_W3_AventurinePart_ResultCount</a>",
           "stackType": "Replace",
+          "stackLimit": 999,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Owner]",
@@ -3882,13 +3875,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 999,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-34127136\">Monster_W3_AventurinePart_Result</a>",
+          "latentQueue": [
+            "DiceGamblingInsertCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5117,10 +5111,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DiceGamblingInsertCheck"
           ]
         },
         {
@@ -5164,7 +5154,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1604729097\">Monster_W3_AventurinePart_ResultTarget</a>",
-          "stackData": [],
           "latentQueue": [
             "DiceGamblingInsertCheck"
           ]
@@ -5175,6 +5164,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteSpeed"
           ],
+          "description": "Immune to DMG. When this unit is attacked by a target that has entered the Gamble, apply 1 random number (between 1 and 6) to the target.",
+          "type": "Other",
+          "statusName": "Fickle Fortune",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5206,12 +5198,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Immune to DMG. When this unit is attacked by a target that has entered the Gamble, apply 1 random number (between 1 and 6) to the target.",
-          "type": "Other",
-          "statusName": "Fickle Fortune"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5381,21 +5368,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__718327308\">Monster_W3_AventurinePart_Speed</a>",
+          "latentQueue": [
+            "DiceGamblingInsertCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DiceGamblingInsertCheck"
           ]
         }
       ],

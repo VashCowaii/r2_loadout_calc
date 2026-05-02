@@ -54,9 +54,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -66,6 +64,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1764090904\">Monster_XP_Elite02_01_DamageReduce</a>",
+      "stackData": [
+        "MDF_DamageReduceRatio",
+        "MDF_ConfineChance"
+      ],
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -102,12 +104,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageReduceRatio",
-        "MDF_ConfineChance"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -119,9 +116,7 @@ const configAbility = {
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -146,7 +141,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-412122860\">Monster_XP_Elite02_01_Battle_02</a>",
-      "stackData": [],
       "latentQueue": [
         "Monster_XP_Elite02_01_AIFlag"
       ]
@@ -163,6 +157,8 @@ const configAbility = {
       "modifierFlags": [
         "MuteHitH"
       ],
+      "description": "Missing Description",
+      "type": "Debuff",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -229,9 +225,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Debuff"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -239,6 +233,7 @@ const configAbility = {
       "modifierFlags": [
         "DisableAction"
       ],
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -246,10 +241,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1086,14 +1078,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1432699776\">Monster_XP_Elite02_01_EnergyLayer</a>[<span class=\"descriptionNumberColor\">Gauge Recollection</span>]",
       "stackType": "Replace",
+      "description": "Current stacks of Gauge Recollection: <span class=\"descriptionNumberColor\">ModifierLayers</span>. Loses 1 stack of Gauge Recollection after being hit.",
+      "type": "Other",
+      "statusName": "Gauge Recollection",
+      "stackLimit": 9,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1106,17 +1100,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Current stacks of Gauge Recollection: <span class=\"descriptionNumberColor\">ModifierLayers</span>. Loses 1 stack of Gauge Recollection after being hit.",
-      "type": "Other",
-      "statusName": "Gauge Recollection",
-      "stackLimit": 9
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__615554356\">Monster_XP_Elite02_01_RemoveEnergyLayer</a>",
+      "latentQueue": [
+        "Monster_XP_Elite02_01_AIFlag",
+        "ChargeFlag",
+        "Monster_XP_Elite02_01_AIFlag_02"
+      ],
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1137,19 +1131,23 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Monster_XP_Elite02_01_AIFlag",
-        "ChargeFlag",
-        "Monster_XP_Elite02_01_AIFlag_02"
-      ],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-799757302\">Monster_XP_Elite02_01_Accelerate</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "Replace",
+      "description": "Missing Description",
+      "type": "Buff",
+      "stackLimit": 10,
+      "addStacksPerTrigger": {
+        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+        "displayLines": "ModifierStackLayer",
+        "constants": [],
+        "variables": [
+          "ModifierStackLayer"
+        ]
+      },
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1179,18 +1177,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff",
-      "stackLimit": 10,
-      "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
-      }
+      ]
     }
   ],
   "references": []

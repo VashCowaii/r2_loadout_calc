@@ -986,9 +986,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3206,21 +3204,15 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1034438552\">Monster_W4_Unicorn_Ability02_Target03</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1034438552\">Monster_W4_Unicorn_Ability02_Target03</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1017660933\">Monster_W4_Unicorn_Ability02_Target02</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1017660933\">Monster_W4_Unicorn_Ability02_Target02</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1000883314\">Monster_W4_Unicorn_Ability02_Target01</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1000883314\">Monster_W4_Unicorn_Ability02_Target01</a>"
         }
       ]
     },
@@ -3505,9 +3497,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3594,9 +3584,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3631,9 +3619,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3641,9 +3627,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3700,9 +3684,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "KeepOnDeathrattle"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3712,6 +3694,10 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "KeepOnDeathrattle"
           ],
+          "description": "Locked on by %CasterName as their attack target.",
+          "type": "Other",
+          "effectName": "Target Locked On",
+          "statusName": "Lock On",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3830,13 +3816,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Locked on by %CasterName as their attack target.",
-          "type": "Other",
-          "effectName": "Target Locked On",
-          "statusName": "Lock On"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3846,6 +3826,10 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "KeepOnDeathrattle"
           ],
+          "description": "Locked on by %CasterName as their attack target.",
+          "type": "Other",
+          "effectName": "Target Locked On",
+          "statusName": "Lock On",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3964,13 +3948,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Locked on by %CasterName as their attack target.",
-          "type": "Other",
-          "effectName": "Target Locked On",
-          "statusName": "Lock On"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3992,6 +3970,21 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "RemoveWhenCasterUnstage"
           ],
+          "stackData": [
+            "_GriffinMark_SPCost",
+            "_GriffinMark_DamagePercentage",
+            "_MixedMark_LoseHpRatio",
+            "_UnicornMark_Chance",
+            "_UnicornMark_LifeTime",
+            "_UnicornMark_ActionDelayRatio",
+            "_UnicornMark_DebuffDamagePercentage",
+            "_UnicornMark_DamagePercentage"
+          ],
+          "description": "When a target gains \"Oronyx's Mark\" again, dispel all marks, and they take Quantum DMG with a high chance to be afflicted with Entanglement. When a target gains \"Aquila's Mark\" again, dispel all marks, and they receive True DMG based on <span class=\"descriptionNumberColor\">_MixedMark_LoseHpRatio</span> of their Max HP, lose Energy, and have a high chance to be afflicted with Entanglement. Using Ultimate can dispel this mark.",
+          "type": "Other",
+          "effectName": "Oronyx's Mark",
+          "statusName": "Oronyx's Mark",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4340,23 +4333,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "_GriffinMark_SPCost",
-            "_GriffinMark_DamagePercentage",
-            "_MixedMark_LoseHpRatio",
-            "_UnicornMark_Chance",
-            "_UnicornMark_LifeTime",
-            "_UnicornMark_ActionDelayRatio",
-            "_UnicornMark_DebuffDamagePercentage",
-            "_UnicornMark_DamagePercentage"
-          ],
-          "latentQueue": [],
-          "description": "When a target gains \"Oronyx's Mark\" again, dispel all marks, and they take Quantum DMG with a high chance to be afflicted with Entanglement. When a target gains \"Aquila's Mark\" again, dispel all marks, and they receive True DMG based on <span class=\"descriptionNumberColor\">_MixedMark_LoseHpRatio</span> of their Max HP, lose Energy, and have a high chance to be afflicted with Entanglement. Using Ultimate can dispel this mark.",
-          "type": "Other",
-          "effectName": "Oronyx's Mark",
-          "statusName": "Oronyx's Mark",
-          "addStacksPerTrigger": 1
+          ]
         }
       ],
       "references": []

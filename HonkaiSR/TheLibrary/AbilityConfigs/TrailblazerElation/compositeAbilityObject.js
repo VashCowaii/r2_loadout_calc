@@ -73,9 +73,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -136,9 +134,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -373,15 +369,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1076174912\">PlayerBoy_40_Ability03_Preshow</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -495,9 +487,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -592,14 +582,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1930250757\">Player_40_Trace01_Bonus</a>[<span class=\"descriptionNumberColor\">On Cloud Nine</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Elation Boost",
+          "statusName": "On Cloud Nine",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -622,11 +614,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Elation Boost",
-          "statusName": "On Cloud Nine"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -659,9 +647,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -674,38 +660,6 @@ const compositeAbilityObject = {
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-1475869784\">PlayerBoy_40_Trace01_Sub</a>"
-                }
-              ]
-            }
-          ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-1475869784\">PlayerBoy_40_Trace01_Sub</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-1475869784\">PlayerBoy_40_Trace01_Sub</a>"
-                    }
-                  ]
                 }
               ]
             }
@@ -834,8 +788,38 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [],
-          "latentQueue": []
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1475869784\">PlayerBoy_40_Trace01_Sub</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1475869784\">PlayerBoy_40_Trace01_Sub</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "targetObjectData": {
@@ -1447,6 +1431,16 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1890166672\">Player_40_Eidolon2ElationRatio</a>[<span class=\"descriptionNumberColor\">History in the Making...</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "_Rank02"
+          ],
+          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Elation Boost",
+          "statusName": "History in the Making...",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1470,17 +1464,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "_Rank02"
-          ],
-          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Elation Boost",
-          "statusName": "History in the Making..."
+          ]
         }
       ],
       "targetObjectData": {
@@ -1721,6 +1705,15 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-138559016\">Player_40_Eidolon1_Count</a>[<span class=\"descriptionNumberColor\">Believe In the Light</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "_Rank01"
+          ],
+          "description": "Each stack increases the \"Certified Banger\" gained by ally targets when the next Ultimate is used by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+          "type": "Buff",
+          "statusName": "Believe In the Light",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1745,16 +1738,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "_Rank01"
-          ],
-          "description": "Each stack increases the \"Certified Banger\" gained by ally targets when the next Ultimate is used by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-          "type": "Buff",
-          "statusName": "Believe In the Light"
+          ]
         }
       ],
       "targetObjectData": {
@@ -1926,6 +1910,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ElationEchoPoint"
           ],
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1948,13 +1933,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1521577078\">PlayerBoy_40_Maze_ElationRatio</a>[<span class=\"descriptionNumberColor\">We Are So Back!</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "We Are So Back!",
+          "statusName": "We Are So Back!",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1977,20 +1968,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "We Are So Back!",
-          "statusName": "We Are So Back!"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-557103509\">Player_40_Eidolon1_InsertActionSave</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "_Rank02",
+            "_Rank01"
+          ],
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Anyone]",
@@ -2130,18 +2118,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_Rank02",
-            "_Rank01"
-          ],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1221062210\">Player_40_Eidolon1_InsertActionSaveMark</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "_Rank01",
+            "_Rank02"
+          ],
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -2158,17 +2144,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_Rank01",
-            "_Rank02"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-831933466\">Player_40_InsertElationAbilityShow</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "_Rank01",
+            "_Rank02"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2242,11 +2227,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_Rank01",
-            "_Rank02"
           ]
         }
       ],

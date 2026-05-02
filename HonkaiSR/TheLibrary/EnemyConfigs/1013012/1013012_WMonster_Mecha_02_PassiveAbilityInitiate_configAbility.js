@@ -49,6 +49,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__639506044\">WMonster_Mecha_02_Activation_Controller</a>",
+      "latentQueue": [
+        "ActivationCountDown",
+        "ActivationMode",
+        "BeingDamageFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Take Damage End [Owner]: Hit",
@@ -104,12 +109,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "ActivationCountDown",
-        "ActivationMode",
-        "BeingDamageFlag"
       ]
     }
   ]

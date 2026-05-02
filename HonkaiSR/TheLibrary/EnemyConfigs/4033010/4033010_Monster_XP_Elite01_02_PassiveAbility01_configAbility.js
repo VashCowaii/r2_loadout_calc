@@ -264,18 +264,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-381723021\">Enemy_XP_Elite01_02_MuteHitFly</a>",
       "modifierFlags": [
         "MuteHitFly"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

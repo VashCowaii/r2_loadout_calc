@@ -70,13 +70,14 @@ const configAbility = {
         {
           "eventTrigger": "When Put in Deathstate Limbo"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1864956422\">Monster_W1_Svarog_RL_LowHP</a>",
+      "stackData": [
+        "MDF_LowHPRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -201,11 +202,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_LowHPRatio"
-      ],
-      "latentQueue": []
+      ]
     }
   ]
 }

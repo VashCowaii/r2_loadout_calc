@@ -117,9 +117,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -203,9 +201,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -307,8 +303,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1587956839\">Asta_AbilityPreShowModifier</a>",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -337,6 +331,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-89645956\">M_Asta_Passive</a>",
+          "stackData": [
+            "MDF_CostLayer",
+            "MDF_MaxCount"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -735,12 +733,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_CostLayer",
-            "MDF_MaxCount"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -819,6 +812,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -841,15 +841,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost"
+          ]
         }
       ],
       "targetObjectData": {
@@ -1203,6 +1195,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2135184996\">Asta_Passive_SPRatioUp</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Energy Regeneration Rate +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Energy Regeneration Rate Boost",
+          "statusName": "Energy Regeneration Rate Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1225,24 +1221,22 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Energy Regeneration Rate +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Energy Regeneration Rate Boost",
-          "statusName": "Energy Regeneration Rate Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1558109509\">Asta_Eidolon2Flag</a>",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
           "duration": 1
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__216386907\">Asta_TeamAttackUP</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to 5 stacks.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Charging",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1278,11 +1272,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to 5 stacks.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Charging"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1290,6 +1280,17 @@ const compositeAbilityObject = {
           "counter": 5,
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_AttackAddedRatio",
+            "MDF_DefenceAddedRatio",
+            "MDF_BuffLayer",
+            "MDF_SPRatio",
+            "MDF_CostLayer"
+          ],
+          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to 5 stacks.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Charging",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1584,24 +1585,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AttackAddedRatio",
-            "MDF_DefenceAddedRatio",
-            "MDF_BuffLayer",
-            "MDF_SPRatio",
-            "MDF_CostLayer"
-          ],
-          "latentQueue": [],
-          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to 5 stacks.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Charging"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-653161821\">Asta_FireAddedRatio</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1624,11 +1616,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

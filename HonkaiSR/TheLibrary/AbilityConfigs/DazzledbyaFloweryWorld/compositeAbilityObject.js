@@ -42,6 +42,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1225919884\">LC_23053_Sub02_Halo</a>[<span class=\"descriptionNumberColor\">Stream Promo</span>]",
+          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Elation Boost",
+          "statusName": "Stream Promo",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -64,11 +68,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Elation Boost",
-          "statusName": "Stream Promo"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -100,6 +100,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-62126263\">LC_23053_Sub02</a>[<span class=\"descriptionNumberColor\">Center of Attention</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack enables the Elation DMG dealt to ignore <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> of the target's DEF.",
+          "type": "Buff",
+          "effectName": "Ignore Defense",
+          "statusName": "Center of Attention",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -138,11 +142,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack enables the Elation DMG dealt to ignore <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> of the target's DEF.",
-          "type": "Buff",
-          "effectName": "Ignore Defense",
-          "statusName": "Center of Attention"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -511,9 +511,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

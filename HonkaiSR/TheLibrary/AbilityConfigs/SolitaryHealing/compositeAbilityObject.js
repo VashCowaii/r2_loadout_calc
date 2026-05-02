@@ -43,6 +43,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1464436876\">LC_24003_DotDamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DoT Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases DoT dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P2_DotDamageAddedRatio</span>",
+          "type": "Buff",
+          "effectName": "DoT Boost",
+          "statusName": "DoT Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -65,11 +69,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DoT dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P2_DotDamageAddedRatio</span>",
-          "type": "Buff",
-          "effectName": "DoT Boost",
-          "statusName": "DoT Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -174,9 +174,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

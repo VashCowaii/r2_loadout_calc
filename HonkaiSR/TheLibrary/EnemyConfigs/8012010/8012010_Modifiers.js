@@ -15,15 +15,31 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1771820857\">Monster_AML_Minion02_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "stackType": "Replace",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "stackData": [
+        "MDF_SpeedAddedRatio_PerLayer",
+        "MDF_MaxLayer"
+      ],
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio_PerLayer</span>. Can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "SPD Boost",
+      "duration": 1,
+      "stackLimit": 3,
+      "addStacksPerTrigger": {
+        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+        "displayLines": "ModifierStackLayer",
+        "constants": [],
+        "variables": [
+          "ModifierStackLayer"
+        ]
+      },
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -53,26 +69,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SpeedAddedRatio_PerLayer",
-        "MDF_MaxLayer"
-      ],
-      "latentQueue": [],
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio_PerLayer</span>. Can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "SPD Boost",
-      "duration": 1,
-      "stackLimit": 3,
-      "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
-      }
+      ]
     }
   ],
   "references": []

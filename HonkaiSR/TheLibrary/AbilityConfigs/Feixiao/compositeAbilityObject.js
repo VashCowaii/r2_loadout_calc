@@ -92,9 +92,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -121,6 +119,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2094330090\">Feixiao_AttackProperty</a>[<span class=\"descriptionNumberColor\">Boltcatch</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Boltcatch",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -143,11 +145,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Boltcatch"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -193,9 +191,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -317,9 +313,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -381,9 +375,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -469,9 +461,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -576,9 +566,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -802,6 +790,16 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1116070545\">Feixiao_DamageProperty</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyRatio"
+          ],
+          "latentQueue": [
+            "IsUnCountedInsert"
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Thunderhunt",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -824,17 +822,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [
-            "IsUnCountedInsert"
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Thunderhunt"
+          ]
         }
       ],
       "targetObjectData": {
@@ -1757,6 +1745,96 @@ const compositeAbilityObject = {
               ]
             }
           ],
+          "modifierFunctions": [
+            {
+              "name": "CharacterFunctions",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-432640007\">Feixiao_InsertCheck</a>",
+              "parse": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "flagName": "STAT_CTRL",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "flagName": "DisableAction",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "searchRandom": true,
+                      "maxTargets": 1,
+                      "ifTargetFound": [
+                        {
+                          "name": "Inject Ability Use",
+                          "condition": {
+                            "name": "Insert Ability Condition",
+                            "type": "AbilityOwnerInsertUnusedCount",
+                            "typeValue": 1
+                          },
+                          "abilityName": "Feixiao_Insert_SelectTarget",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
+                          "priorityTag": "CharacterAttackFromSelf",
+                          "canHitNonTargets": true,
+                          "showInActionOrder": true,
+                          "abortFlags": [
+                            "STAT_CTRL",
+                            "DisableAction"
+                          ],
+                          "allowAbilityTriggers": false
+                        }
+                      ],
+                      "noTargetFound": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"248447225\">M_Feixiao_InsertCheck</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
           "variableValueChange": [
             {
               "name": "Variable Value Changes",
@@ -1900,99 +1978,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "modifierFunctions": [
-            {
-              "name": "CharacterFunctions",
-              "functionName": "<a class=\"gTempYellow\" id=\"fun__-432640007\">Feixiao_InsertCheck</a>",
-              "parse": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "STAT_CTRL",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "DisableAction",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "ifTargetFound": [
-                        {
-                          "name": "Inject Ability Use",
-                          "condition": {
-                            "name": "Insert Ability Condition",
-                            "type": "AbilityOwnerInsertUnusedCount",
-                            "typeValue": 1
-                          },
-                          "abilityName": "Feixiao_Insert_SelectTarget",
-                          "abilitySource": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "abilityTarget": {
-                            "name": "Target Name",
-                            "target": "{{Hostile Entities(AOE)}}"
-                          },
-                          "priorityTag": "CharacterAttackFromSelf",
-                          "canHitNonTargets": true,
-                          "showInActionOrder": true,
-                          "abortFlags": [
-                            "STAT_CTRL",
-                            "DisableAction"
-                          ],
-                          "allowAbilityTriggers": false
-                        }
-                      ],
-                      "noTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"248447225\">M_Feixiao_InsertCheck</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -4010,7 +3996,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__922102305\">M_Feixiao_Ability03_StanceAddedPreshow</a>",
-          "stackData": [],
           "latentQueue": [
             "First_Break_Effect"
           ],
@@ -4054,7 +4039,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-233737306\">M_Feixiao_Ability03_ForceStance</a>",
-          "stackData": [],
           "latentQueue": [
             "First_Break_Effect"
           ],
@@ -4078,6 +4062,13 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__176878499\">M_Feixiao_UltraTarget_Mark</a>",
+          "latentQueue": [
+            "First_Break_Effect"
+          ],
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"550698929\">M_Feixiao_UltraTarget</a>"
+          },
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4134,15 +4125,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "First_Break_Effect"
-          ],
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"550698929\">M_Feixiao_UltraTarget</a>"
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4192,9 +4175,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -4474,9 +4455,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -4718,9 +4697,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4744,7 +4721,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__385618061\">M_Feixiao_UltraTarget_FadeInFlag</a>",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
           "latentQueue": [
             "First_Break_Effect"
           ],
@@ -4759,7 +4735,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_Stun_Effect"
           ],
-          "stackData": [],
           "latentQueue": [
             "First_Break_Effect"
           ]
@@ -4770,7 +4745,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_Confine_Effect"
           ],
-          "stackData": [],
           "latentQueue": [
             "First_Break_Effect"
           ]
@@ -4920,9 +4894,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5065,9 +5037,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5076,6 +5046,16 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackData": [
+            "MDF_PropertyRatio"
+          ],
+          "latentQueue": [
+            "IsUnCountedInsert"
+          ],
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "Stormward I Hear",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5098,17 +5078,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [
-            "IsUnCountedInsert"
-          ],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "Stormward I Hear"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5117,7 +5087,6 @@ const compositeAbilityObject = {
           "stackData": [
             "MDF_Count"
           ],
-          "latentQueue": [],
           "description": "In the Talent's effect, for every 1 instance of Follow-Up ATK launched by ally targets, Feixiao gains 1 point of \"Flying Aureus.\" This effect can still trigger <span class=\"descriptionNumberColor\">MDF_Count</span> time(s).",
           "type": "Other",
           "statusName": "Moonward I Wish"
@@ -5126,6 +5095,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1384650414\">Feixiao_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Skyward I Quell</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack additionally increases the Ultimate DMG dealt by an amount equal to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original DMG.",
+          "type": "Buff",
+          "statusName": "Skyward I Quell",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -5188,16 +5160,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack additionally increases the Ultimate DMG dealt by an amount equal to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original DMG.",
-          "type": "Buff",
-          "statusName": "Skyward I Quell"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
-          "stackData": [],
-          "latentQueue": [],
           "description": "The Talent's Follow-Up ATK can now be triggered.",
           "type": "Other",
           "statusName": "Thunderhunt"
@@ -5266,9 +5233,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5277,6 +5242,11 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ForceStanceDamage"
           ],
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "showAsForcedReduction": true
+          },
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5459,14 +5429,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "showAsForcedReduction": true
-          }
+          ]
         }
       ],
       "references": []

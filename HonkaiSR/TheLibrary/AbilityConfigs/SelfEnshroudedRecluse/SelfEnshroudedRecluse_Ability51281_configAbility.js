@@ -18,6 +18,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1965254951\">Relic_128_Sub1</a>[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">#SkillRelic_128_4_P2_CriticalDamage</span>.",
+      "type": "Buff",
+      "statusName": "Self-Enshrouded Recluse",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,10 +43,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">#SkillRelic_128_4_P2_CriticalDamage</span>.",
-      "type": "Buff",
-      "statusName": "Self-Enshrouded Recluse"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -199,6 +199,17 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2076563991\">Relic_128_Main</a>",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2065893036\">Relic_128_Sub</a>",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -220,19 +231,6 @@ const configAbility = {
               }
             }
           ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2065893036\">Relic_128_Sub</a>",
-          "haloStatus": true
         }
       ]
     }

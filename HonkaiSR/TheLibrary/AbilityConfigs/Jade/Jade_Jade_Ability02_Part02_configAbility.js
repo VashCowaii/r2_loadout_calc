@@ -330,6 +330,13 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__553729296\">Jade_Eidolon6_BPAbilitySelf</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "stackData": [
+        "MDF_PropertyRatio"
+      ],
+      "description": "Quantum RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. After attacking, for each enemy target hit, Jade gains 1 point of Charge and deals Additional DMG.",
+      "type": "Buff",
+      "effectName": "Debt Collector",
+      "statusName": "Debt Collector",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -422,15 +429,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "Quantum RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. After attacking, for each enemy target hit, Jade gains 1 point of Charge and deals Additional DMG.",
-      "type": "Buff",
-      "effectName": "Debt Collector",
-      "statusName": "Debt Collector"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -442,6 +441,19 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "ListenBattleEventSkill"
       ],
+      "stackData": [
+        "MDF_PropertyValue",
+        "MDF_PropertyRatio",
+        "MDF_Rank01_Flag",
+        "MDF_Rank01_HitNumb",
+        "MDF_LoseHP",
+        "MDF_Rank01_AddRateLayer",
+        "MDF_Rank01_AddRateLayer02"
+      ],
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. After using an attack, consumes a small amount of HP. For each enemy target hit, Jade gains 1 point of Charge and deals Additional DMG.",
+      "type": "Buff",
+      "effectName": "Debt Collector",
+      "statusName": "Debt Collector",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -680,27 +692,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_PropertyRatio",
-        "MDF_Rank01_Flag",
-        "MDF_Rank01_HitNumb",
-        "MDF_LoseHP",
-        "MDF_Rank01_AddRateLayer",
-        "MDF_Rank01_AddRateLayer02"
-      ],
-      "latentQueue": [],
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. After using an attack, consumes a small amount of HP. For each enemy target hit, Jade gains 1 point of Charge and deals Additional DMG.",
-      "type": "Buff",
-      "effectName": "Debt Collector",
-      "statusName": "Debt Collector"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1687174133\">Jade_BPAbilitySelf</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "After using an attack, for each enemy target hit, Jade gains 1 point of Charge and deals Additional DMG.",
+      "type": "Buff",
+      "effectName": "Debt Collector",
+      "statusName": "Debt Collector",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -753,13 +755,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "After using an attack, for each enemy target hit, Jade gains 1 point of Charge and deals Additional DMG.",
-      "type": "Buff",
-      "effectName": "Debt Collector",
-      "statusName": "Debt Collector"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -771,6 +767,18 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "ListenBattleEventSkill"
       ],
+      "stackData": [
+        "MDF_PropertyValue",
+        "MDF_Rank01_Flag",
+        "MDF_Rank01_HitNumb",
+        "MDF_LoseHP",
+        "MDF_Rank01_AddRateLayer",
+        "MDF_Rank01_AddRateLayer02"
+      ],
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. After using an attack, consumes a small amount of HP. For each enemy target hit, Jade gains 1 point of Charge and deals Additional DMG.",
+      "type": "Buff",
+      "effectName": "Debt Collector",
+      "statusName": "Debt Collector",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -974,20 +982,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_Rank01_Flag",
-        "MDF_Rank01_HitNumb",
-        "MDF_LoseHP",
-        "MDF_Rank01_AddRateLayer",
-        "MDF_Rank01_AddRateLayer02"
-      ],
-      "latentQueue": [],
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. After using an attack, consumes a small amount of HP. For each enemy target hit, Jade gains 1 point of Charge and deals Additional DMG.",
-      "type": "Buff",
-      "effectName": "Debt Collector",
-      "statusName": "Debt Collector"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1064,9 +1059,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

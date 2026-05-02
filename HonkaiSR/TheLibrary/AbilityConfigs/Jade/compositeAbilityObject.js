@@ -66,9 +66,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -105,6 +103,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-78900852\">StageAbility_Maze_Jade_Modifier</a>",
+          "stackData": [
+            "MDF_HitNumb_Maze"
+          ],
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -228,11 +229,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [
-            "MDF_HitNumb_Maze"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1068,16 +1065,12 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2083260524\">Jade_AbilityPreShowModifier</a>",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1132,6 +1125,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-479321621\">Jade_PointB1_Passive</a>",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
@@ -1235,11 +1231,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1322,9 +1314,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1924,9 +1914,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2050,20 +2038,19 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1732030848\">Jade_Ultimate_Insert</a>[<span class=\"descriptionNumberColor\">Follow-Up ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
           "stackData": [
             "MDF_PropertyRatio",
             "MDF_Count"
           ],
-          "latentQueue": [],
           "description": "Increases the multiplier for the DMG dealt by Talent's Follow-Up ATK by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. This can take effect for up to <span class=\"descriptionNumberColor\">MDF_Count</span> time(s).",
           "type": "Buff",
           "effectName": "Follow-Up ATK Boost",
-          "statusName": "Follow-Up ATK Boost"
+          "statusName": "Follow-Up ATK Boost",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
         }
       ],
       "targetObjectData": {
@@ -2449,6 +2436,13 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__553729296\">Jade_Eidolon6_BPAbilitySelf</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_PropertyRatio"
+          ],
+          "description": "Quantum RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. After attacking, for each enemy target hit, Jade gains 1 point of Charge and deals Additional DMG.",
+          "type": "Buff",
+          "effectName": "Debt Collector",
+          "statusName": "Debt Collector",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2541,15 +2535,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [],
-          "description": "Quantum RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. After attacking, for each enemy target hit, Jade gains 1 point of Charge and deals Additional DMG.",
-          "type": "Buff",
-          "effectName": "Debt Collector",
-          "statusName": "Debt Collector"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2561,6 +2547,19 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "ListenBattleEventSkill"
           ],
+          "stackData": [
+            "MDF_PropertyValue",
+            "MDF_PropertyRatio",
+            "MDF_Rank01_Flag",
+            "MDF_Rank01_HitNumb",
+            "MDF_LoseHP",
+            "MDF_Rank01_AddRateLayer",
+            "MDF_Rank01_AddRateLayer02"
+          ],
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. After using an attack, consumes a small amount of HP. For each enemy target hit, Jade gains 1 point of Charge and deals Additional DMG.",
+          "type": "Buff",
+          "effectName": "Debt Collector",
+          "statusName": "Debt Collector",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2799,27 +2798,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_PropertyRatio",
-            "MDF_Rank01_Flag",
-            "MDF_Rank01_HitNumb",
-            "MDF_LoseHP",
-            "MDF_Rank01_AddRateLayer",
-            "MDF_Rank01_AddRateLayer02"
-          ],
-          "latentQueue": [],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. After using an attack, consumes a small amount of HP. For each enemy target hit, Jade gains 1 point of Charge and deals Additional DMG.",
-          "type": "Buff",
-          "effectName": "Debt Collector",
-          "statusName": "Debt Collector"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1687174133\">Jade_BPAbilitySelf</a>[<span class=\"descriptionNumberColor\">Debt Collector</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "After using an attack, for each enemy target hit, Jade gains 1 point of Charge and deals Additional DMG.",
+          "type": "Buff",
+          "effectName": "Debt Collector",
+          "statusName": "Debt Collector",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2872,13 +2861,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "After using an attack, for each enemy target hit, Jade gains 1 point of Charge and deals Additional DMG.",
-          "type": "Buff",
-          "effectName": "Debt Collector",
-          "statusName": "Debt Collector"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2890,6 +2873,18 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "ListenBattleEventSkill"
           ],
+          "stackData": [
+            "MDF_PropertyValue",
+            "MDF_Rank01_Flag",
+            "MDF_Rank01_HitNumb",
+            "MDF_LoseHP",
+            "MDF_Rank01_AddRateLayer",
+            "MDF_Rank01_AddRateLayer02"
+          ],
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. After using an attack, consumes a small amount of HP. For each enemy target hit, Jade gains 1 point of Charge and deals Additional DMG.",
+          "type": "Buff",
+          "effectName": "Debt Collector",
+          "statusName": "Debt Collector",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3093,20 +3088,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_Rank01_Flag",
-            "MDF_Rank01_HitNumb",
-            "MDF_LoseHP",
-            "MDF_Rank01_AddRateLayer",
-            "MDF_Rank01_AddRateLayer02"
-          ],
-          "latentQueue": [],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. After using an attack, consumes a small amount of HP. For each enemy target hit, Jade gains 1 point of Charge and deals Additional DMG.",
-          "type": "Buff",
-          "effectName": "Debt Collector",
-          "statusName": "Debt Collector"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3183,9 +3165,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -3351,6 +3331,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__68476876\">Jade_Eidolon6_QuantumPenetrate</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3373,16 +3356,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1189146824\">Jade_Eidolon4_DefPenetrate</a>[<span class=\"descriptionNumberColor\">Sincerity? Put Option Only</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of enemy targets' DEF.",
+          "type": "Buff",
+          "effectName": "Sincerity? Put Option Only",
+          "statusName": "Sincerity? Put Option Only",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -3411,19 +3397,15 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of enemy targets' DEF.",
-          "type": "Buff",
-          "effectName": "Sincerity? Put Option Only",
-          "statusName": "Sincerity? Put Option Only"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-759179558\">Jade_Eidolon2_CriticalChance</a>[<span class=\"descriptionNumberColor\">Morality? Herein Authenticated</span>]",
+          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT Rate Boost",
+          "statusName": "Morality? Herein Authenticated",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3446,15 +3428,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT Rate Boost",
-          "statusName": "Morality? Herein Authenticated"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1701847025\">Jade_Eidolon1_InsertDamageRatio</a>",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -3486,11 +3467,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3622,14 +3599,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2143808418\">Jade_Passive_Rate</a>[<span class=\"descriptionNumberColor\">Pawned Asset</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue",
+            "MDF_PropertyValue2"
+          ],
+          "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Pawned Asset",
+          "statusName": "Pawned Asset",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3738,16 +3721,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_PropertyValue2"
-          ],
-          "latentQueue": [],
-          "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Pawned Asset",
-          "statusName": "Pawned Asset"
+          ]
         },
         {
           "name": "Modifier Construction",

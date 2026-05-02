@@ -321,9 +321,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -342,6 +340,15 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1102385587\">Enemy_AML_Minion04_Mark</a>[<span class=\"descriptionNumberColor\">Detonated</span>]",
           "counter": 4,
           "stackType": "Replace",
+          "useEntitySnapshot": true,
+          "stackData": [
+            "Skill01_P2_MarkDamagePercentage"
+          ],
+          "description": "Has been attached a detonator by Voidranger: Eliminator. Takes Additional DMG after being attacked.",
+          "type": "Debuff",
+          "effectName": "Detonated",
+          "statusName": "Detonated",
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -382,17 +389,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "Skill01_P2_MarkDamagePercentage"
-          ],
-          "latentQueue": [],
-          "description": "Has been attached a detonator by Voidranger: Eliminator. Takes Additional DMG after being attacked.",
-          "type": "Debuff",
-          "effectName": "Detonated",
-          "statusName": "Detonated",
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -401,13 +398,15 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1434034112\">Enemy_AML_Minion04_Overheat</a>[<span class=\"descriptionNumberColor\">Overloaded</span>]",
+          "description": "Temporarily unable to attack due to Energy overload.",
+          "type": "Debuff",
+          "effectName": "Overloaded",
+          "statusName": "Overloaded",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -422,13 +421,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Temporarily unable to attack due to Energy overload.",
-          "type": "Debuff",
-          "effectName": "Overloaded",
-          "statusName": "Overloaded"
+          ]
         }
       ],
       "references": []

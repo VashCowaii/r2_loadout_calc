@@ -557,9 +557,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__2027241011\">W2_Beast02_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -599,14 +597,16 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Extra Action/Turn [Owner]: Start "
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1532177993\">Monster_W2_Beast02_Weak</a>[<span class=\"descriptionNumberColor\">Exhaustion</span>]",
           "stackType": "Replace",
+          "description": "Malefic Ape's Gusto has been exhausted.",
+          "type": "Other",
+          "effectName": "Exhaustion",
+          "statusName": "Exhaustion",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -614,18 +614,16 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Attack DMG End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Malefic Ape's Gusto has been exhausted.",
-          "type": "Other",
-          "effectName": "Exhaustion",
-          "statusName": "Exhaustion"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__908537899\">Monster_W2_Beast02_Bullet</a>[<span class=\"descriptionNumberColor\">Gusto</span>]",
           "stackType": "Replace",
+          "description": "Malefic Ape's current Gusto amount.",
+          "type": "Other",
+          "effectName": "Regenerate Gusto",
+          "statusName": "Gusto",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -656,13 +654,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Attack DMG End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Malefic Ape's current Gusto amount.",
-          "type": "Other",
-          "effectName": "Regenerate Gusto",
-          "statusName": "Gusto"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -672,6 +664,10 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "RemoveWhenOwnerUnselectable"
           ],
+          "description": "Marked by %CasterName for Monitoring.",
+          "type": "Other",
+          "effectName": "Monitor",
+          "statusName": "Monitor",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -716,13 +712,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Marked by %CasterName for Monitoring.",
-          "type": "Other",
-          "effectName": "Monitor",
-          "statusName": "Monitor"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -733,6 +723,11 @@ const compositeAbilityObject = {
             "BlockDamageExcludeDot",
             "MuteBreak"
           ],
+          "useEntitySnapshot": true,
+          "description": "Nullifies all DMG received except DoTs. This status is dispelled after being attacked.",
+          "type": "Buff",
+          "effectName": "Barrier",
+          "statusName": "Barrier",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -776,17 +771,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "Nullifies all DMG received except DoTs. This status is dispelled after being attacked.",
-          "type": "Buff",
-          "effectName": "Barrier",
-          "statusName": "Barrier"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1692594642\">Monster_Standard_Layer_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_DamageAddedRatio",
+            "MDF_MaxLayer"
+          ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span> for up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stacks.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -820,17 +819,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageAddedRatio",
-            "MDF_MaxLayer"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span> for up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stacks.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1133,9 +1122,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

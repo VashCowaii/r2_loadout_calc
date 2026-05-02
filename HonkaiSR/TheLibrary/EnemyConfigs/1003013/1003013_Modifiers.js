@@ -120,9 +120,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -178,9 +176,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -189,6 +185,10 @@ const configAbility = {
         "MuteHitH",
         "ListenBattleEventSkill"
       ],
+      "description": "Uses a Powerful Counter on the attacker after being attacked.",
+      "type": "Buff",
+      "effectName": "Counter",
+      "statusName": "Counter",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -519,13 +519,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Uses a Powerful Counter on the attacker after being attacked.",
-      "type": "Buff",
-      "effectName": "Counter",
-      "statusName": "Counter"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -566,13 +560,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1997793398\">Monster_W1_Soldier03_ShieldControl</a>",
+      "latentQueue": [
+        "W1_Soldier03_00_SummonCounter",
+        "W1_Soldier03_00_AICounter"
+      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -772,11 +768,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "W1_Soldier03_00_SummonCounter",
-        "W1_Soldier03_00_AICounter"
       ]
     }
   ],

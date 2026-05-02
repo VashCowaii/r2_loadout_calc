@@ -288,9 +288,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -315,6 +313,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-772982810\">MFarmRelic_104314_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "Replace",
+          "description": "Each ally summon increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>, current number of summons: <span class=\"descriptionNumberColor\">MDF_SummonCount</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -338,11 +340,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each ally summon increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>, current number of summons: <span class=\"descriptionNumberColor\">MDF_SummonCount</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -548,9 +546,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -575,6 +571,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__741582093\">MFarmRelic_104313_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "Replace",
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">DamageAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MaxLayer</span> stack(s).",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "stackLimit": 10,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -608,13 +610,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">DamageAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MaxLayer</span> stack(s).",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "stackLimit": 10,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -683,9 +679,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -821,9 +815,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -893,9 +885,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1006,9 +996,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1033,6 +1021,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases DMG received by <span class=\"descriptionNumberColor\">MDF_1</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_2</span> time(s).",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1078,12 +1071,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG received by <span class=\"descriptionNumberColor\">MDF_1</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_2</span> time(s).",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1305,9 +1293,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1331,6 +1317,21 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__789627689\">MFarmRelic_104308_Sub</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            "skillType": [
+              "Ultimate"
+            ],
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": -0.15
+            }
+          },
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1381,22 +1382,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Player Team All}}"
-            },
-            "skillType": [
-              "Ultimate"
-            ],
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": -0.15
-            }
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1428,9 +1414,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1573,9 +1557,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1659,9 +1641,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1732,9 +1712,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1840,9 +1818,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1941,9 +1917,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2014,9 +1988,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2087,9 +2059,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2110,6 +2080,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "Reduces all DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Upon defeat, a certain percentage of %CasterName's Max HP will be lost.",
+          "type": "Buff",
+          "effectName": "Fate's Convergence",
+          "statusName": "Fate's Convergence",
           "execute": [
             {
               "eventTrigger": "When Put in Deathstate Limbo",
@@ -2153,15 +2127,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Reduces all DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Upon defeat, a certain percentage of %CasterName's Max HP will be lost.",
-          "type": "Buff",
-          "effectName": "Fate's Convergence",
-          "statusName": "Fate's Convergence"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-858410577\">Standard_EliteField_Elite</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
+          "stackData": [
+            "MDF_AllDamageReduce",
+            "MDF_DamageByRatio"
+          ],
+          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Causes other enemy targets to obtain \"Fate's Convergence.\"",
+          "type": "Buff",
+          "effectName": "Binding Obligation",
+          "statusName": "Binding Obligation",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2254,16 +2232,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageReduce",
-            "MDF_DamageByRatio"
-          ],
-          "latentQueue": [],
-          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Causes other enemy targets to obtain \"Fate's Convergence.\"",
-          "type": "Buff",
-          "effectName": "Binding Obligation",
-          "statusName": "Binding Obligation"
+          ]
         }
       ],
       "references": []

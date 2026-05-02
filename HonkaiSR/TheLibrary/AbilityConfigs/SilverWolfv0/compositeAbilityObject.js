@@ -105,9 +105,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -208,9 +206,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -266,9 +262,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -352,9 +346,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -70
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1159,9 +1151,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1190,9 +1180,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1238,9 +1226,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2415,6 +2401,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_DefenceDown"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "DEF Reduction",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2439,20 +2432,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "DEF Reduction"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1573930598\">Silwolf_Eidolon2_StatusResistanceDown</a>[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Effect RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Effect RES Reduction",
+          "statusName": "Effect RES Reduction",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2477,21 +2469,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Effect RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Effect RES Reduction",
-          "statusName": "Effect RES Reduction"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__50824187\">Silwolf_BPAbility_AllDamageTypeResistanceDown</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "All-Type DMG RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "All-Type RES Reduction",
+          "statusName": "All-Type RES Reduction",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2516,15 +2507,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "All-Type DMG RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "All-Type RES Reduction",
-          "statusName": "All-Type RES Reduction"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2533,6 +2516,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedDown"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Slow",
+          "statusName": "Type-3 Bug",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2557,15 +2547,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Slow",
-          "statusName": "Type-3 Bug"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2574,6 +2556,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_DefenceDown"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "Type-2 Bug",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2598,15 +2587,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "Type-2 Bug"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2615,6 +2596,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_AttackDown"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "ATK -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "ATK Reduction",
+          "statusName": "Type-1 Bug",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2639,15 +2627,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "ATK -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "ATK Reduction",
-          "statusName": "Type-1 Bug"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2712,6 +2692,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_AttachWeakness"
           ],
+          "description": "Extra Weakness implanted. Corresponding RES is lowered by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Implant a Weakness",
+          "statusName": "Extra Weakness",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2741,11 +2725,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Extra Weakness implanted. Corresponding RES is lowered by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Implant a Weakness",
-          "statusName": "Extra Weakness"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2754,6 +2734,16 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_AttachWeakness"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "_BPFlag"
+          ],
+          "description": "Extra Weakness implanted. Corresponding RES is lowered by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Implant a Weakness",
+          "statusName": "Extra Weakness",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2800,17 +2790,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "_BPFlag"
-          ],
-          "description": "Extra Weakness implanted. Corresponding RES is lowered by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Implant a Weakness",
-          "statusName": "Extra Weakness"
+          ]
         }
       ],
       "references": []

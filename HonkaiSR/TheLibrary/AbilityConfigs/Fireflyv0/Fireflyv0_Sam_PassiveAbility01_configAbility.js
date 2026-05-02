@@ -170,9 +170,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -226,14 +224,43 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__390294012\">Sam_Ability02_DelayReduce</a>",
       "stackType": "ReplaceByCaster",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
+        "skillType": [
+          "Skill"
+        ],
+        "conditions": {
+          "name": "Has Modifier",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
+          "invertCondition": true
+        },
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": {
+            "operator": "Variables[0] (0.25) || INVERT || RETURN",
+            "displayLines": "-0.25",
+            "constants": [],
+            "variables": [
+              0.25
+            ]
+          }
+        }
+      },
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -267,47 +294,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "target": {
-          "name": "Target Name",
-          "target": "{{Modifier Holder}}"
-        },
-        "skillType": [
-          "Skill"
-        ],
-        "conditions": {
-          "name": "Has Modifier",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
-          "invertCondition": true
-        },
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": {
-            "operator": "Variables[0] (0.25) || INVERT || RETURN",
-            "displayLines": "-0.25",
-            "constants": [],
-            "variables": [
-              0.25
-            ]
-          }
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1454050150\">Sam_Ability21_AddWeaknessPreShow</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -354,8 +346,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1713306799\">Sam_Ability21_StanceDamagePreShow_NoFire</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -421,8 +411,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1595550658\">Sam_Ability21_StanceDamagePreShow_Fire</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -478,8 +466,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1576215372\">Sam_Ability11_StanceDamagePreShow_NoFire</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -533,8 +519,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-342359297\">Sam_Ability11_StanceDamagePreShow_Fire</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -644,16 +628,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1214391345\">Sam_UltraPreShow</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -1143,9 +1123,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

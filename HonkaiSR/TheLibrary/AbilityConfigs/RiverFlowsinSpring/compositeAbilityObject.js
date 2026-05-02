@@ -29,6 +29,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">#SkillEquip_P1_SpeedAddedRatio</span>, and DMG dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P2_DamageAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "SPD and DMG Boost",
+          "statusName": "SPD Boost, and DMG Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -67,11 +71,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">#SkillEquip_P1_SpeedAddedRatio</span>, and DMG dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P2_DamageAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "SPD and DMG Boost",
-          "statusName": "SPD Boost, and DMG Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -176,9 +176,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

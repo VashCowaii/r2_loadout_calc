@@ -41,9 +41,7 @@ const configAbility = {
         {
           "eventTrigger": "Custom Event"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

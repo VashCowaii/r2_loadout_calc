@@ -77,9 +77,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -117,6 +115,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__350752129\">Archer_Trace03_CriticalDMG</a>[<span class=\"descriptionNumberColor\">Guardian</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "Guardian",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -139,11 +141,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "Guardian"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -219,9 +217,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -312,9 +308,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -358,9 +352,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -821,6 +813,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1962762500\">Archer_Eidolon6_Ability02IgnoreDef</a>",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -848,15 +843,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__816189388\">Archer_Eidolon4_Ability03AddUltraDamage</a>",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -884,11 +878,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1836,9 +1826,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -3049,6 +3037,13 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1612899858\">Archer_BonusTrigger</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
+          "latentQueue": [
+            "MDF_AlreadyInBonusAction"
+          ],
+          "description": "After using Skill, if there are sufficient Skill Points to use it again, the turn will not end.",
+          "type": "Other",
+          "effectName": "Circuit Connection",
+          "statusName": "Circuit Connection",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3287,19 +3282,17 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_AlreadyInBonusAction"
-          ],
-          "description": "After using Skill, if there are sufficient Skill Points to use it again, the turn will not end.",
-          "type": "Other",
-          "effectName": "Circuit Connection",
-          "statusName": "Circuit Connection"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-130031811\">Archer_BonusAbility02Ready</a>",
+          "latentQueue": [
+            "MDF_AlreadyInBonusAction",
+            "MDF_InBonus",
+            "MDF_Flag_HaveOtherAction",
+            "MDF_IsWindfurySkill"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3343,13 +3336,6 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Update Target Selected(UI) [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_AlreadyInBonusAction",
-            "MDF_InBonus",
-            "MDF_Flag_HaveOtherAction",
-            "MDF_IsWindfurySkill"
           ]
         },
         {
@@ -3357,6 +3343,17 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__308886295\">Archer_BPAbility_AddDamagePercentage</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "MDF_AlreadyInBonusAction",
+            "MDF_IsWindfurySkill"
+          ],
+          "description": "Each stack increases DMG dealt by Skill by <span class=\"descriptionNumberColor\">#Skill02_P2_ExtraDamage</span>.",
+          "type": "Buff",
+          "effectName": "Enhanced Skill",
+          "statusName": "Circuit Connection",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3405,18 +3402,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "MDF_AlreadyInBonusAction",
-            "MDF_IsWindfurySkill"
-          ],
-          "description": "Each stack increases DMG dealt by Skill by <span class=\"descriptionNumberColor\">#Skill02_P2_ExtraDamage</span>.",
-          "type": "Buff",
-          "effectName": "Enhanced Skill",
-          "statusName": "Circuit Connection"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3425,6 +3411,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_AttachWeakness"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Additionally implanted Quantum Weakness. Quantum RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Implanted Quantum Weakness",
+          "statusName": "The Unfulfilled Happiness",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3447,20 +3440,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Additionally implanted Quantum Weakness. Quantum RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Implanted Quantum Weakness",
-          "statusName": "The Unfulfilled Happiness"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__496562314\">Archer_Insert_Target</a>",
-          "stackData": [],
           "latentQueue": [
             "MDF_InsertUsed",
             "MDF_HasMainTarget",

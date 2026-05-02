@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2102222782\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0014_03</a>[<span class=\"descriptionNumberColor\">Add Insult to Injury</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0014_ADF_1</span>. This effect can stack up to <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0014_ADF_3</span> time(s).",
+      "type": "Other",
+      "statusName": "Add Insult to Injury",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -48,11 +52,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0014_ADF_1</span>. This effect can stack up to <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0014_ADF_3</span> time(s).",
-      "type": "Other",
-      "statusName": "Add Insult to Injury",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -257,9 +257,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

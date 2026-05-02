@@ -562,6 +562,9 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AITargetHigherPriority"
       ],
+      "latentQueue": [
+        "InsertCheck"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -809,10 +812,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "InsertCheck"
       ]
     }
   ]

@@ -429,6 +429,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__985901670\">Modifier_BattleEventAbility_Challenge_Month_18</a>",
+      "stackData": [
+        "BattleEvent_P1_ADF",
+        "BattleEvent_P2_ADF",
+        "BattleEvent_P3_ADF"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -599,13 +604,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "BattleEvent_P1_ADF",
-        "BattleEvent_P2_ADF",
-        "BattleEvent_P3_ADF"
-      ],
-      "latentQueue": []
+      ]
     }
   ]
 }

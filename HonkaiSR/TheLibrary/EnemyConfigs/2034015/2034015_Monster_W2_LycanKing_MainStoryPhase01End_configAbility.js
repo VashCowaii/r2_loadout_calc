@@ -110,9 +110,7 @@ const configAbility = {
         {
           "eventTrigger": "Locked HP Floor Reached [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

@@ -30,9 +30,7 @@ const configAbility = {
         {
           "eventTrigger": "Ultimate Prep-Phase [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -58,9 +56,7 @@ const configAbility = {
         {
           "eventTrigger": "Attack DMG End [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -70,6 +66,13 @@ const configAbility = {
         "KeepOnDeathrattle",
         "RemoveWhenOwnerUnselectable"
       ],
+      "latentQueue": [
+        "Beast02RL_Num_Flag"
+      ],
+      "description": "Marked by %CasterName for Monitoring.",
+      "type": "Other",
+      "effectName": "Monitor",
+      "statusName": "Monitor",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -114,19 +117,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Beast02RL_Num_Flag"
-      ],
-      "description": "Marked by %CasterName for Monitoring.",
-      "type": "Other",
-      "effectName": "Monitor",
-      "statusName": "Monitor"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1589154351\">Enemy_W2_Beast02_RLElite_BreakListener</a>",
+      "latentQueue": [
+        "Beast02RL_Num_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo"
@@ -230,15 +228,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Beast02RL_Num_Flag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__16551050\">Enemy_W2_Beast02_RLElite_ActionCheck</a>",
+      "latentQueue": [
+        "Beast02RL_Num_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -288,16 +285,20 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Beast02RL_Num_Flag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__329970269\">Enemy_W2_Beast02_RLElite_GennkiMark</a>[<span class=\"descriptionNumberColor\">Gather Courage</span>]",
       "stackType": "Replace",
+      "latentQueue": [
+        "Beast02RL_Num_Flag"
+      ],
+      "description": "<span class=\"descriptionNumberColor\">MDF_PropertyValue</span> stacks of Gusto accumulated.",
+      "type": "Other",
+      "effectName": "Gather Courage",
+      "statusName": "Gather Courage",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -314,16 +315,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Beast02RL_Num_Flag"
-      ],
-      "description": "<span class=\"descriptionNumberColor\">MDF_PropertyValue</span> stacks of Gusto accumulated.",
-      "type": "Other",
-      "effectName": "Gather Courage",
-      "statusName": "Gather Courage",
-      "addStacksPerTrigger": 1
+      ]
     }
   ],
   "references": []

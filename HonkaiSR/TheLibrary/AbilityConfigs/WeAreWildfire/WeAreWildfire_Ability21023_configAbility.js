@@ -19,6 +19,10 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-531007870\">LC_21023_Sub</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "DMG taken -<span class=\"descriptionNumberColor\">#SkillEquip_P2_DamageReduce</span>.",
+      "type": "Buff",
+      "effectName": "DMG Mitigation",
+      "statusName": "DMG Mitigation",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -41,11 +45,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG taken -<span class=\"descriptionNumberColor\">#SkillEquip_P2_DamageReduce</span>.",
-      "type": "Buff",
-      "effectName": "DMG Mitigation",
-      "statusName": "DMG Mitigation"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -120,9 +120,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

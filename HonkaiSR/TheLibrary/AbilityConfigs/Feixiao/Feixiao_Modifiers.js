@@ -47,9 +47,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -73,7 +71,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__385618061\">M_Feixiao_UltraTarget_FadeInFlag</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
       "latentQueue": [
         "First_Break_Effect"
       ],
@@ -88,7 +85,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_Stun_Effect"
       ],
-      "stackData": [],
       "latentQueue": [
         "First_Break_Effect"
       ]
@@ -99,7 +95,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_Confine_Effect"
       ],
-      "stackData": [],
       "latentQueue": [
         "First_Break_Effect"
       ]
@@ -249,9 +244,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -394,9 +387,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -405,6 +396,16 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "stackData": [
+        "MDF_PropertyRatio"
+      ],
+      "latentQueue": [
+        "IsUnCountedInsert"
+      ],
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "Stormward I Hear",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -427,17 +428,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [
-        "IsUnCountedInsert"
-      ],
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "Stormward I Hear"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -446,7 +437,6 @@ const configAbility = {
       "stackData": [
         "MDF_Count"
       ],
-      "latentQueue": [],
       "description": "In the Talent's effect, for every 1 instance of Follow-Up ATK launched by ally targets, Feixiao gains 1 point of \"Flying Aureus.\" This effect can still trigger <span class=\"descriptionNumberColor\">MDF_Count</span> time(s).",
       "type": "Other",
       "statusName": "Moonward I Wish"
@@ -455,6 +445,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1384650414\">Feixiao_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Skyward I Quell</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack additionally increases the Ultimate DMG dealt by an amount equal to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original DMG.",
+      "type": "Buff",
+      "statusName": "Skyward I Quell",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -517,16 +510,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack additionally increases the Ultimate DMG dealt by an amount equal to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original DMG.",
-      "type": "Buff",
-      "statusName": "Skyward I Quell"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "The Talent's Follow-Up ATK can now be triggered.",
       "type": "Other",
       "statusName": "Thunderhunt"
@@ -595,9 +583,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -606,6 +592,11 @@ const configAbility = {
       "modifierFlags": [
         "ForceStanceDamage"
       ],
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "showAsForcedReduction": true
+      },
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -788,14 +779,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "showAsForcedReduction": true
-      }
+      ]
     }
   ],
   "references": []

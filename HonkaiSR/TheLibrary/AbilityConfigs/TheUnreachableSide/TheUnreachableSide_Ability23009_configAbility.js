@@ -17,6 +17,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1249262228\">LC_23009_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P3_DamageAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -39,11 +43,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P3_DamageAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -122,9 +122,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

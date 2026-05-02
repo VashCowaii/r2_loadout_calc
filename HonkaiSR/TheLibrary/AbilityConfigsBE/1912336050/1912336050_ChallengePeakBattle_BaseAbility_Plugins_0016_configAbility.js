@@ -18,6 +18,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__628193560\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0016_03</a>[<span class=\"descriptionNumberColor\">Cathartic Applause</span>]",
+      "description": "Gains <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0016_ADF_2</span> Punchline(s) at the start of each turn.",
+      "type": "Other",
+      "statusName": "Cathartic Applause",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -36,14 +39,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Gains <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0016_ADF_2</span> Punchline(s) at the start of each turn.",
-      "type": "Other",
-      "statusName": "Cathartic Applause"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__644971179\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0016_02</a>[<span class=\"descriptionNumberColor\">Cathartic Applause</span>]",
+      "description": "Elation DMG dealt ignores <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0016_ADF_1</span> of the target's DEF.",
+      "type": "Other",
+      "statusName": "Cathartic Applause",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -71,10 +74,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Elation DMG dealt ignores <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0016_ADF_1</span> of the target's DEF.",
-      "type": "Other",
-      "statusName": "Cathartic Applause"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -160,9 +160,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

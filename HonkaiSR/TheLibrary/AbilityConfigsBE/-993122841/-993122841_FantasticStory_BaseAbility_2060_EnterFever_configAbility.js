@@ -70,6 +70,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1747401547\">Modifier_FantasticStory_BaseAbility_2060_EnterFever</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "DV_FantasticStory_BaseAbility_2060_EnterFever_P1_Value"
+      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -302,10 +305,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_2060_EnterFever_P1_Value"
       ]
     }
   ]

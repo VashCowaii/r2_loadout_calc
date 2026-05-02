@@ -11,6 +11,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1815988112\">M_Anaxa_StartFreeBP</a>",
+      "removalDependencies": {
+        "name": "Removal Dependency",
+        "dependancyName": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>"
+      },
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -42,16 +46,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "removalDependencies": {
-        "name": "Removal Dependency",
-        "dependancyName": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>"
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1540917869\">M_Anaxa_PrepareFreeBP</a>",
       "stackType": "ReplaceByCaster",
+      "stackLimit": 99999,
       "execute": [
         {
           "eventTrigger": "Turn Start [Anyone]",
@@ -121,10 +122,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "stackLimit": 99999
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -133,6 +131,7 @@ const configAbility = {
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
+      "stackLimit": 99999,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -297,10 +296,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "stackLimit": 99999
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -310,6 +306,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AttachWeakness"
       ],
+      "description": "Physical, Fire, Ice, Lightning, Wind, Quantum, and Imaginary Weaknesses are added at the same time.",
+      "type": "Debuff",
+      "effectName": "Sublimation",
+      "statusName": "Sublimation",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -551,13 +551,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Physical, Fire, Ice, Lightning, Wind, Quantum, and Imaginary Weaknesses are added at the same time.",
-      "type": "Debuff",
-      "effectName": "Sublimation",
-      "statusName": "Sublimation"
+      ]
     }
   ],
   "references": []

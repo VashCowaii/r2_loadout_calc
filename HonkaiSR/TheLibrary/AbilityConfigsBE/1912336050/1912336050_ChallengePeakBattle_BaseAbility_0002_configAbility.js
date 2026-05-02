@@ -89,6 +89,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__888777643\">Modifier_ChallengePeakBattle_BaseAbility_0002_02</a>[<span class=\"descriptionNumberColor\">Tempering</span>]",
+      "description": "For every 1% HP lost, reduces CRIT DMG dealt by allies by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0002_ADF_1</span>.",
+      "type": "Other",
+      "statusName": "Tempering",
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -113,10 +116,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "For every 1% HP lost, reduces CRIT DMG dealt by allies by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0002_ADF_1</span>.",
-      "type": "Other",
-      "statusName": "Tempering"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -158,9 +158,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

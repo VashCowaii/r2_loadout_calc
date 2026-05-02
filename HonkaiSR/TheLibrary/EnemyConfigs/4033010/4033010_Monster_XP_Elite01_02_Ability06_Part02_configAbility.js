@@ -40,6 +40,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__550129180\">Enemy_XP_Elite01_02_DefenceDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
       "stackType": "Replace",
+      "description": "DEF decreases by <span class=\"descriptionNumberColor\">#Skill06_P1_Ratio</span>.",
+      "type": "Debuff",
+      "effectName": "DEF Reduction",
+      "statusName": "DEF Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -64,13 +68,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "DEF decreases by <span class=\"descriptionNumberColor\">#Skill06_P1_Ratio</span>.",
-      "type": "Debuff",
-      "effectName": "DEF Reduction",
-      "statusName": "DEF Reduction"
+      ]
     }
   ]
 }

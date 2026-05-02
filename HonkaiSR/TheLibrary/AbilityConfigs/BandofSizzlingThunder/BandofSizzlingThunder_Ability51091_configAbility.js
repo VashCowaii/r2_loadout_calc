@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1034849217\">Relic_109_Sub</a>[<span class=\"descriptionNumberColor\">Band of Sizzling Thunder</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "ATK +<span class=\"descriptionNumberColor\">#SkillRelic_109_4_P1_AttackAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Band of Sizzling Thunder",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,11 +44,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "ATK +<span class=\"descriptionNumberColor\">#SkillRelic_109_4_P1_AttackAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Band of Sizzling Thunder"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -80,9 +80,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

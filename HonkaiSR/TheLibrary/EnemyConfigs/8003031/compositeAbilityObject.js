@@ -976,6 +976,17 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__783092667\">Monster_XP_Elite02_DebuffEnhanceEffect</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Missing Description",
+          "type": "Debuff",
+          "stackLimit": 10,
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+            "displayLines": "ModifierStackLayer",
+            "constants": [],
+            "variables": [
+              "ModifierStackLayer"
+            ]
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1007,18 +1018,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Missing Description",
-          "type": "Debuff",
-          "stackLimit": 10,
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1453,9 +1453,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1504,9 +1502,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1570,9 +1566,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1584,9 +1578,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Put in Deathstate Limbo"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1603,7 +1595,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2041430190\">Monster_XP_Elite02_Ability07_Mark</a>",
-          "stackData": [],
           "latentQueue": [
             "Monster_XP_Elite02_00_Achievement"
           ]
@@ -1647,9 +1638,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1708,6 +1697,18 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__906589272\">Monster_XP_Elite02_Edict_Failure</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "Replace",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Missing Description",
+          "type": "Debuff",
+          "duration": 1,
+          "stackLimit": 5,
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+            "displayLines": "ModifierStackLayer",
+            "constants": [],
+            "variables": [
+              "ModifierStackLayer"
+            ]
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1769,24 +1770,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Missing Description",
-          "type": "Debuff",
-          "duration": 1,
-          "stackLimit": 5,
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__762896637\">Monster_XP_Elite02_Edict_Success</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "Replace",
+          "description": "Missing Description",
+          "type": "Buff",
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1809,14 +1801,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Missing Description",
-          "type": "Buff",
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1954502860\">Monster_XP_Elite02_EdictInsert</a>[<span class=\"descriptionNumberColor\">Retribution Warning</span>]",
+          "description": "Character(s) will be punished accordingly at the end of the turn.",
+          "type": "Other",
+          "statusName": "Retribution Warning",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -1908,14 +1900,16 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "description": "Character(s) will be punished accordingly at the end of the turn.",
-          "type": "Other",
-          "statusName": "Retribution Warning"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-668499328\">Monster_XP_Elite02_Edict03</a>[<span class=\"descriptionNumberColor\">Ban</span>]",
+          "description": "Whoever uses Skills will be attacked 1 time.",
+          "type": "Debuff",
+          "effectName": "Skill Punishment",
+          "statusName": "Ban",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -2038,18 +2032,16 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Extra Action/Turn [Owner]: Start "
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Whoever uses Skills will be attacked 1 time.",
-          "type": "Debuff",
-          "effectName": "Skill Punishment",
-          "statusName": "Ban",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-651721709\">Monster_XP_Elite02_Edict02</a>[<span class=\"descriptionNumberColor\">Ban</span>]",
+          "description": "Whoever uses Basic ATK will be attacked 1 time.",
+          "type": "Debuff",
+          "effectName": "Basic ATK Punishment",
+          "statusName": "Ban",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -2172,18 +2164,16 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Extra Action/Turn [Owner]: Start "
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Whoever uses Basic ATK will be attacked 1 time.",
-          "type": "Debuff",
-          "effectName": "Basic ATK Punishment",
-          "statusName": "Ban",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-634944090\">Monster_XP_Elite02_Edict01</a>[<span class=\"descriptionNumberColor\">Ban</span>]",
+          "description": "Whoever attacks %CasterName will be attacked 1 time.",
+          "type": "Debuff",
+          "effectName": "ATK Punishment",
+          "statusName": "Ban",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -2251,14 +2241,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Whoever attacks %CasterName will be attacked 1 time.",
-          "type": "Debuff",
-          "effectName": "ATK Punishment",
-          "statusName": "Ban",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2466,9 +2449,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

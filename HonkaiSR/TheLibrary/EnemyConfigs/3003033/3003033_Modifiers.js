@@ -12,6 +12,11 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__787345585\">Monster_W3_Figure_02_RLElite_ChargeLayer_DamageUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackUPRatio</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "ATK Boost",
+      "addStacksPerTrigger": -1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -41,16 +46,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackUPRatio</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "ATK Boost",
-      "addStacksPerTrigger": -1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-826240284\">Monster_W3_Figure_02_RLElite_ChargeLayer</a>",
+      "stackData": [
+        "#Skill04_P1_DamageUPLayer",
+        "#Skill04_P2_DamageUPRatio"
+      ],
+      "latentQueue": [
+        "MarkCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -133,13 +140,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "#Skill04_P1_DamageUPLayer",
-        "#Skill04_P2_DamageUPRatio"
-      ],
-      "latentQueue": [
-        "MarkCount"
       ]
     },
     {
@@ -149,33 +149,23 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-473087873\">Monster_W3_Figure_02_RLElite_ChainMark4</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-473087873\">Monster_W3_Figure_02_RLElite_ChainMark4</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-523420730\">Monster_W3_Figure_02_RLElite_ChainMark3</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-523420730\">Monster_W3_Figure_02_RLElite_ChainMark3</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-506643111\">Monster_W3_Figure_02_RLElite_ChainMark2</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-506643111\">Monster_W3_Figure_02_RLElite_ChainMark2</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-556975968\">Monster_W3_Figure_02_RLElite_ChainMark1</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-556975968\">Monster_W3_Figure_02_RLElite_ChainMark1</a>"
     },
     {
       "name": "Modifier Construction",
@@ -205,6 +195,15 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2034637668\">Monster_W3_Figure_02_RLElite_IsAiming</a>[<span class=\"descriptionNumberColor\">Shackle-Bearing Messenger</span>]",
       "stackType": "Replace",
+      "latentQueue": [
+        "MarkCount"
+      ],
+      "description": "About to use Desmios Evangelion. The current DMG level is <span class=\"descriptionNumberColor\">MDF_DangerLevel</span>.",
+      "type": "Other",
+      "effectName": "Target Locked On",
+      "statusName": "Shackle-Bearing Messenger",
+      "stackLimit": 4,
+      "addStacksPerTrigger": -1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -537,17 +536,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MarkCount"
-      ],
-      "description": "About to use Desmios Evangelion. The current DMG level is <span class=\"descriptionNumberColor\">MDF_DangerLevel</span>.",
-      "type": "Other",
-      "effectName": "Target Locked On",
-      "statusName": "Shackle-Bearing Messenger",
-      "stackLimit": 4,
-      "addStacksPerTrigger": -1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -558,6 +547,15 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "AttackSign"
       ],
+      "latentQueue": [
+        "MarkCount",
+        "MDF_DangerLevel",
+        "End_Flag"
+      ],
+      "description": "Locked on by %CasterName as their attack target.",
+      "type": "Other",
+      "effectName": "Target Locked On",
+      "statusName": "Target Locked On",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -701,17 +699,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MarkCount",
-        "MDF_DangerLevel",
-        "End_Flag"
-      ],
-      "description": "Locked on by %CasterName as their attack target.",
-      "type": "Other",
-      "effectName": "Target Locked On",
-      "statusName": "Target Locked On"
+      ]
     }
   ],
   "references": []

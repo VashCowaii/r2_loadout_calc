@@ -19,6 +19,11 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1769154752\">MFarmRelic_104309_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases DMG received by <span class=\"descriptionNumberColor\">MDF_1</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_2</span> time(s).",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Vulnerability",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -64,12 +69,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases DMG received by <span class=\"descriptionNumberColor\">MDF_1</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_2</span> time(s).",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Vulnerability",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -291,9 +291,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

@@ -217,6 +217,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-604897731\">Enemy_W2_Cocolia_IF_Frenzy</a>[<span class=\"descriptionNumberColor\">Nightmare of Battlegrounds</span>]",
+      "description": "Each stack increases DMG received by <span class=\"descriptionNumberColor\">MDF_TokenDMGAddRatioPerLayer</span>.",
+      "type": "Other",
+      "statusName": "Nightmare of Battlegrounds",
+      "stackLimit": 4,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -246,12 +251,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases DMG received by <span class=\"descriptionNumberColor\">MDF_TokenDMGAddRatioPerLayer</span>.",
-      "type": "Other",
-      "statusName": "Nightmare of Battlegrounds",
-      "stackLimit": 4,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -586,9 +586,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-641086431\">Standard_SuperArmorBreak_Mark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-641086431\">Standard_SuperArmorBreak_Mark</a>"
     },
     {
       "name": "Modifier Construction",
@@ -597,6 +595,10 @@ const configAbility = {
         "STAT_SuperArmorBreak",
         "STAT_AITargetKeepActionDelay"
       ],
+      "description": "Currently, %CasterName is in the \"Safeguard Breach\" state, this unit's DMG received increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
+      "type": "Debuff",
+      "effectName": "Safeguard Breach",
+      "statusName": "Safeguard Breach",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -654,11 +656,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Currently, %CasterName is in the \"Safeguard Breach\" state, this unit's DMG received increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
-      "type": "Debuff",
-      "effectName": "Safeguard Breach",
-      "statusName": "Safeguard Breach"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -673,6 +671,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SuperArmor"
       ],
+      "description": "Currently, %CasterName is in the \"Steadfast Safeguard\" state, this unit's DMG received decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeResistance</span>.",
+      "type": "Buff",
+      "effectName": "Steadfast Safeguard",
+      "statusName": "Steadfast Safeguard",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -940,11 +942,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Currently, %CasterName is in the \"Steadfast Safeguard\" state, this unit's DMG received decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeResistance</span>.",
-      "type": "Buff",
-      "effectName": "Steadfast Safeguard",
-      "statusName": "Steadfast Safeguard"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -953,6 +951,10 @@ const configAbility = {
         "STAT_SuperArmorBreak",
         "STAT_AITargetKeepActionDelay"
       ],
+      "description": "Takes <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span> more DMG. Dispels this effect when recovering from Weakness Break state.",
+      "type": "Other",
+      "effectName": "Safeguard Breach",
+      "statusName": "Safeguard Breach",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1010,11 +1012,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Takes <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span> more DMG. Dispels this effect when recovering from Weakness Break state.",
-      "type": "Other",
-      "effectName": "Safeguard Breach",
-      "statusName": "Safeguard Breach"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1023,6 +1021,10 @@ const configAbility = {
         "MuteHitH",
         "STAT_SuperArmor"
       ],
+      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeResistance</span>. This effect is removed when Weakness is Broken. When Weakness Broken, this unit has its action additionally delayed and takes increased DMG.",
+      "type": "Other",
+      "effectName": "Steadfast Safeguard",
+      "statusName": "Steadfast Safeguard",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1251,11 +1253,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeResistance</span>. This effect is removed when Weakness is Broken. When Weakness Broken, this unit has its action additionally delayed and takes increased DMG.",
-      "type": "Other",
-      "effectName": "Steadfast Safeguard",
-      "statusName": "Steadfast Safeguard"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2244,6 +2242,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__51921734\">MStrongChallengeEX_BEMark_ExtraElationBE</a>",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2267,23 +2268,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-329109669\">MStrongChallengeEX_BEMark_HP</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-329109669\">MStrongChallengeEX_BEMark_HP</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
     },
     {
       "name": "Modifier Construction",
@@ -2291,21 +2284,15 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-597945988\">MStrongChallengeEX_BEMark_ActionDelay</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__812754161\">MStrongChallengeEX_BEMark_BP</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__812754161\">MStrongChallengeEX_BEMark_BP</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__709278328\">MStrongChallengeEX_BEMark_SP</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__709278328\">MStrongChallengeEX_BEMark_SP</a>"
     }
   ],
   "references": []

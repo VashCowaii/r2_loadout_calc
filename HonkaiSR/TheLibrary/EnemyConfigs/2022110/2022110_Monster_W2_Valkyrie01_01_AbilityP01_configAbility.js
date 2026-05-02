@@ -28,6 +28,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1604945835\">Enemy_W2_Valkyrie01_01_AbilityP01_ComboAttack</a>[<span class=\"descriptionNumberColor\">Maddened</span>]",
+      "description": "Attack changes to Sawing Evil: Sever.",
+      "type": "Buff",
+      "effectName": "Maddened",
+      "statusName": "Maddened",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -35,13 +39,7 @@ const configAbility = {
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Attack changes to Sawing Evil: Sever.",
-      "type": "Buff",
-      "effectName": "Maddened",
-      "statusName": "Maddened"
+      ]
     }
   ]
 }

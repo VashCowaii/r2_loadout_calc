@@ -15,6 +15,13 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue3</span>.",
+      "type": "Buff",
+      "effectName": "Nocturne",
+      "statusName": "Nocturne",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -49,15 +56,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue3</span>.",
-      "type": "Buff",
-      "effectName": "Nocturne",
-      "statusName": "Nocturne"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -203,6 +202,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1471334562\">Advanced_Sparkle_PassiveAbility_AllDamageAddedRatio02</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -383,11 +386,7 @@ const configAbility = {
         {
           "eventTrigger": "When Modifier is Added [Anyone]"
         }
-      ],
-      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -398,7 +397,6 @@ const configAbility = {
         "MDF_PropertyValue3",
         "MDF_DefenceAddedRatio2"
       ],
-      "latentQueue": [],
       "description": "The DMG taken by all enemies increases.",
       "type": "Buff",
       "statusName": "Figment",
@@ -486,6 +484,14 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__980417237\">Advanced_Sparkle_Ability02_CritDmgAddedRatio02</a>",
       "stackType": "Replace",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "stackData": [
+        "MDF_PropertyValueConvert2",
+        "MDF_PropertyValueBase2",
+        "MDF_AllDamageTypePenetrate"
+      ],
+      "latentQueue": [
+        "MDF_PassiveLayer02"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -521,20 +527,21 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValueConvert2",
-        "MDF_PropertyValueBase2",
-        "MDF_AllDamageTypePenetrate"
-      ],
-      "latentQueue": [
-        "MDF_PassiveLayer02"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__930084380\">Advanced_Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValueConvert",
+        "MDF_PropertyValueBase",
+        "MDF_AllDamageTypePenetrate"
+      ],
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "Dreamdiver",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -628,17 +635,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValueConvert",
-        "MDF_PropertyValueBase",
-        "MDF_AllDamageTypePenetrate"
-      ],
-      "latentQueue": [],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "Dreamdiver"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -659,6 +656,17 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
+      "stackData": [
+        "MDF_PropertyValue",
+        "MDF_PropertyValue2"
+      ],
+      "latentQueue": [
+        "MDF_PassiveLayer02"
+      ],
+      "description": "Each stack of the Vulnerability effect provided by Sparkle's Talent additionally increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Cipher",
+      "statusName": "Cipher",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -697,22 +705,14 @@ const configAbility = {
         {
           "eventTrigger": "Ability Use [Anyone]: End"
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_PropertyValue2"
-      ],
-      "latentQueue": [
-        "MDF_PassiveLayer02"
-      ],
-      "description": "Each stack of the Vulnerability effect provided by Sparkle's Talent additionally increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Cipher",
-      "statusName": "Cipher"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1010036084\">Advanced_Sparkle_PointB2_FreeAbility</a>[<span class=\"descriptionNumberColor\">Artificial Flower</span>]",
+      "description": "The next use of Skill does not consume any Skill Points.",
+      "type": "Buff",
+      "statusName": "Artificial Flower",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -765,17 +765,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "The next use of Skill does not consume any Skill Points.",
-      "type": "Buff",
-      "statusName": "Artificial Flower"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1887140599\">Advanced_Sparkle_Ability03ExtraBP</a>[<span class=\"descriptionNumberColor\">The Hero with a Thousand Faces</span>]",
       "stackType": "Replace",
+      "latentQueue": [
+        "MDF_PassiveLayer02"
+      ],
+      "description": "After an ally's turn ends, if the current Skill Points are not at maximum, immediately recovers Skill Points for the team.",
+      "type": "Buff",
+      "statusName": "The Hero with a Thousand Faces",
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -893,14 +894,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_PassiveLayer02"
-      ],
-      "description": "After an ally's turn ends, if the current Skill Points are not at maximum, immediately recovers Skill Points for the team.",
-      "type": "Buff",
-      "statusName": "The Hero with a Thousand Faces"
+      ]
     }
   ],
   "references": []

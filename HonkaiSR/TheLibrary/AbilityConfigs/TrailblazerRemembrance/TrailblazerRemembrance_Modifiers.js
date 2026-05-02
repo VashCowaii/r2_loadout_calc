@@ -11,6 +11,14 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-915997562\">PlayerBoy_30_UltraState_Sub</a>",
+      "removalDependencies": {
+        "name": "Removal Dependency",
+        "dependancyName": "<a class=\"gModGreen\" id=\"-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
+        "casterFilter": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        }
+      },
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -58,20 +66,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "removalDependencies": {
-        "name": "Removal Dependency",
-        "dependancyName": "<a class=\"gModGreen\" id=\"-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
-        "casterFilter": {
-          "name": "Target Name",
-          "target": "{{Caster}}"
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "When Mem is on the field, Basic ATK is enhanced to \"Together, We Script Tomorrow!\"",
+      "type": "Other",
+      "effectName": "Epic",
+      "statusName": "Epic",
+      "stackLimit": 2,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -274,15 +280,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "When Mem is on the field, Basic ATK is enhanced to \"Together, We Script Tomorrow!\"",
-      "type": "Other",
-      "effectName": "Epic",
-      "statusName": "Epic",
-      "stackLimit": 2,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -290,7 +288,6 @@ const configAbility = {
       "stackData": [
         "ServantID"
       ],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -404,9 +401,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

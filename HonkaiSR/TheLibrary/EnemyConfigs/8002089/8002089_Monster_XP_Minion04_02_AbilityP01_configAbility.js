@@ -35,8 +35,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2118515591\">Enemy_XP_Minion04_02_Introduce</a>[<span class=\"descriptionNumberColor\">T—Taking Revenge</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "When a friendly unit is attacked, Trotter of Destruction will attack all targets. The attack count is equal to the number of the targets attacked.",
       "type": "Other",
       "effectName": "T—Taking Revenge",
@@ -114,9 +112,7 @@ const configAbility = {
           ],
           "priorityLevel": -55
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

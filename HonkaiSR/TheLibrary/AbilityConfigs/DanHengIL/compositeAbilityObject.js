@@ -73,9 +73,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -111,6 +109,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-223874388\">DanHengIL_Trace02_Resistance</a>",
+          "stackData": [
+            "MDF_Resistance"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -133,11 +134,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Resistance"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -229,9 +226,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -368,9 +363,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -497,6 +490,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1587455609\">DanHengIL_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
+          "type": "Buff",
+          "statusName": "Righteous Heart",
+          "duration": 1,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -537,12 +535,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
-          "type": "Buff",
-          "statusName": "Righteous Heart",
-          "duration": 1,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -866,15 +859,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-247396096\">Ability03PreShowModifier</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1464,9 +1453,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1340732042\">DanHengIL_Ability03Target</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1340732042\">DanHengIL_Ability03Target</a>"
         }
       ],
       "targetObjectData": {
@@ -1787,9 +1774,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1877,9 +1862,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1955,9 +1938,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2033,9 +2014,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -3549,9 +3528,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-216777096\">DanHengIL_Ability12Target</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-216777096\">DanHengIL_Ability12Target</a>"
         }
       ],
       "targetObjectData": {
@@ -4101,6 +4078,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-330148584\">DanHengIL_Eidolon6_ImaginaryPenetrate</a>[<span class=\"descriptionNumberColor\">Reign, Returned</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increase Imaginary RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> for this character's next Fulgurant Leap attack.",
+          "type": "Buff",
+          "effectName": "Imaginary RES PEN",
+          "statusName": "Reign, Returned",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -4156,13 +4139,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increase Imaginary RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> for this character's next Fulgurant Leap attack.",
-          "type": "Buff",
-          "effectName": "Imaginary RES PEN",
-          "statusName": "Reign, Returned",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4236,9 +4213,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4334,14 +4309,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1955464894\">DanHengIL_Ability02_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Outroar</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_AddCriticalDamage",
+            "MDF_MaxLayer"
+          ],
+          "description": "Each stack increases CRIT DMG dealt by <span class=\"descriptionNumberColor\">MDF_AddCriticalDamage</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
+          "type": "Buff",
+          "statusName": "Outroar",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4375,33 +4356,23 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AddCriticalDamage",
-            "MDF_MaxLayer"
-          ],
-          "latentQueue": [],
-          "description": "Each stack increases CRIT DMG dealt by <span class=\"descriptionNumberColor\">MDF_AddCriticalDamage</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
-          "type": "Buff",
-          "statusName": "Outroar",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
           "stackData": [
             "MDF_BPExChange",
             "MDF_MaxLayer"
           ],
-          "latentQueue": [],
           "description": "Can be used to offset Dan Heng • Imbibitor Lunae's consumption of skill points. A maximum of <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> Squama Sacrosancta can be possessed at any given time. Consuming Squama Sacrosancta is considered equivalent to consuming Skill Points.",
           "type": "Other",
-          "statusName": "Squama Sacrosancta"
+          "statusName": "Squama Sacrosancta",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
         }
       ],
       "references": []

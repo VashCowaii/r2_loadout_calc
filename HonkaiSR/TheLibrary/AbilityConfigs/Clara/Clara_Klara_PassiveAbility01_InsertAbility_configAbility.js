@@ -249,6 +249,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1077895558\">Klara_Trace03</a>",
+      "stackData": [
+        "MDF_AllDamageTypeAddRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -265,11 +268,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AllDamageTypeAddRatio"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

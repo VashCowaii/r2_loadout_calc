@@ -12,6 +12,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1319656232\">Hook_BPAbilityAlter_Enable</a>[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]",
       "counter": 1,
+      "description": "Enhances the next Skill and changes it to a Blast attack.",
+      "type": "Other",
+      "effectName": "Enhanced Skill",
+      "statusName": "Enhanced Skill",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -61,13 +65,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Enhances the next Skill and changes it to a Blast attack.",
-      "type": "Other",
-      "effectName": "Enhanced Skill",
-      "statusName": "Enhanced Skill"
+      ]
     }
   ],
   "references": []

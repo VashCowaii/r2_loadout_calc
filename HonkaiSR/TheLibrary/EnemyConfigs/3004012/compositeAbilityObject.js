@@ -507,9 +507,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -726,6 +724,14 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1389138668\">Enemy_W3_DollElite_Standard_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "stackData": [
+            "MDF_ExploreDamageUpRatio"
+          ],
+          "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_ExploreDamageUpRatio</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -748,16 +754,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ExploreDamageUpRatio"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_ExploreDamageUpRatio</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability",
-          "duration": 1
+          ]
         }
       ]
     },
@@ -1543,9 +1540,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2365,15 +2360,11 @@ const compositeAbilityObject = {
                 "Mark Entity as Non-Target(Unselectable)"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-942301720\">Monster_W3_FigureBoss_New_SummonMonster</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-942301720\">Monster_W3_FigureBoss_New_SummonMonster</a>"
         }
       ]
     },
@@ -2807,9 +2798,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2826,6 +2815,11 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-843842211\">W3_FigureBoss_BattleScore2</a>",
+          "latentQueue": [
+            "BreakEndFlag",
+            "InsertCheck",
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2872,12 +2866,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "BreakEndFlag",
-            "InsertCheck",
-            "AIFlag"
           ]
         },
         {
@@ -3052,9 +3040,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3104,9 +3090,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3209,13 +3193,25 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
+          "stackData": [
+            "MDF_BreakDelayRatio",
+            "MDF_ChosenOneSpeedUp",
+            "MDF_ExploreDamagePercentage",
+            "MDF_ExploreDelayRatio",
+            "MDF_ExploreDamageUpRatio"
+          ],
+          "latentQueue": [
+            "BreakEndFlag"
+          ],
+          "description": "An extra action can be taken every turn with a slight increase in SPD.",
+          "type": "Buff",
+          "effectName": "Impresario",
+          "statusName": "Impresario",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3655,21 +3651,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_BreakDelayRatio",
-            "MDF_ChosenOneSpeedUp",
-            "MDF_ExploreDamagePercentage",
-            "MDF_ExploreDelayRatio",
-            "MDF_ExploreDamageUpRatio"
-          ],
-          "latentQueue": [
-            "BreakEndFlag"
-          ],
-          "description": "An extra action can be taken every turn with a slight increase in SPD.",
-          "type": "Buff",
-          "effectName": "Impresario",
-          "statusName": "Impresario"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3824,21 +3806,24 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1336534629\">Enemy_W3_DollElite_Commnon_Basic</a>[<span class=\"descriptionNumberColor\">\"Puppets of the Order\"</span>]",
+          "description": "Puppets controlled by Order. Can become Impresario.",
+          "type": "Other",
+          "effectName": "\"Puppets of the Order\"",
+          "statusName": "\"Puppets of the Order\"",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Puppets controlled by Order. Can become Impresario.",
-          "type": "Other",
-          "effectName": "\"Puppets of the Order\"",
-          "statusName": "\"Puppets of the Order\""
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1198317781\">Enemy_W3_DollElite_Commnon_Part2Break</a>",
+          "latentQueue": [
+            "BreakEndFlag",
+            "InsertCheck",
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -3852,12 +3837,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "BreakEndFlag",
-            "InsertCheck",
-            "AIFlag"
           ]
         },
         {
@@ -3866,6 +3845,9 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "latentQueue": [
+            "BreakEndFlag"
           ],
           "execute": [
             {
@@ -3896,10 +3878,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "BreakEndFlag"
           ]
         },
         {
@@ -4215,9 +4193,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4229,9 +4205,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Exit View-Mode [Anyone]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4762,9 +4736,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -91
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

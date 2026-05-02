@@ -45,8 +45,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__696981361\">YaoGuang_Eidolon6</a>",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -129,8 +127,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__713758980\">YaoGuang_Eidolon1</a>",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -206,9 +202,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -283,9 +277,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -582,9 +574,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -643,9 +633,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -55
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -705,6 +693,27 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__338049014\">YaoGuang_Passive</a>",
           "stackType": "ReplaceByCaster",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"953455438\">G_YaoGuang_Passive_ToMember</a>",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.2) || RETURN",
+                  "displayLines": "0.2",
+                  "constants": [],
+                  "variables": [
+                    0.2
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "Action Phase Start [Owner][?]",
@@ -769,29 +778,6 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"953455438\">G_YaoGuang_Passive_ToMember</a>",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
-                }
-              }
             }
           ]
         }
@@ -1320,9 +1306,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1561,6 +1545,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-986503251\">G_YaoGuang_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">Ferried Along the Astral Arc</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Elation DMG merrymakes by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Ferried Along the Astral Arc",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1583,14 +1573,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Elation DMG merrymakes by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Ferried Along the Astral Arc"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1599,6 +1582,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "Elation increases by <span class=\"descriptionNumberColor\">#SkillRank_Rank02_P1</span> and SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Blind Arrows Guided by Feathers",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1637,15 +1623,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Elation increases by <span class=\"descriptionNumberColor\">#SkillRank_Rank02_P1</span> and SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Blind Arrows Guided by Feathers"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-848491430\">G_YaoGuang_Eidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Chuckle Chimes Where Jade Falls</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Elation DMG dealt ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the target's DEF.",
+          "type": "Buff",
+          "statusName": "Chuckle Chimes Where Jade Falls",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1673,14 +1662,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Elation DMG dealt ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the target's DEF.",
-          "type": "Buff",
-          "statusName": "Chuckle Chimes Where Jade Falls"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1768,6 +1750,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__179366080\">G_YaoGuang_Ability04_AllDamageTypeTaken</a>[<span class=\"descriptionNumberColor\">Woe's Whisper</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Woe's Whisper",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1790,20 +1779,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Woe's Whisper"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2059745464\">G_YaoGuang_Ability03_AllDamageTypePenetrate</a>[<span class=\"descriptionNumberColor\">Hexagram of Feathered Fortune</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "All-Type RES PEN Boost",
+          "statusName": "Hexagram of Feathered Fortune",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1826,20 +1814,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "All-Type RES PEN Boost",
-          "statusName": "Hexagram of Feathered Fortune"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1266011188\">G_YaoGuang_Ability02_ToMember</a>[<span class=\"descriptionNumberColor\">Decalight Unveils All</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Elation Boost",
+          "statusName": "Decalight Unveils All",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1895,17 +1879,61 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Elation Boost",
-          "statusName": "Decalight Unveils All"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1968939868\">G_YaoGuang_Ability02_ToSelf</a>[<span class=\"descriptionNumberColor\">Decalight Unveils All</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue3</span>.",
+          "type": "Buff",
+          "effectName": "Elation Boost",
+          "statusName": "Decalight Unveils All",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}.[[removeBattleEvents]] - {{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1266011188\">G_YaoGuang_Ability02_ToMember</a>[<span class=\"descriptionNumberColor\">Decalight Unveils All</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
+                  "displayLines": "MDF_PropertyValue3",
+                  "constants": [],
+                  "variables": [
+                    "MDF_PropertyValue3"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"113477249\">G_YaoGuang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Blind Arrows Guided by Feathers</span>]",
+              "haloStatus": true,
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 2
+              },
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.12) || RETURN",
+                  "displayLines": "0.12",
+                  "constants": [],
+                  "variables": [
+                    0.12
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2102,62 +2130,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue3</span>.",
-          "type": "Buff",
-          "effectName": "Elation Boost",
-          "statusName": "Decalight Unveils All",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectables}}.[[removeBattleEvents]] - {{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1266011188\">G_YaoGuang_Ability02_ToMember</a>[<span class=\"descriptionNumberColor\">Decalight Unveils All</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
-                  "displayLines": "MDF_PropertyValue3",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue3"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"113477249\">G_YaoGuang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Blind Arrows Guided by Feathers</span>]",
-              "haloStatus": true,
-              "conditions": {
-                "name": "Eidolon Activated",
-                "eidolon": 2
-              },
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
-                }
-              }
-            }
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__953455438\">G_YaoGuang_Passive_ToMember</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Anyone]: Any",
@@ -2494,11 +2475,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

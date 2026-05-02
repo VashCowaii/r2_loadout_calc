@@ -57,9 +57,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -123,9 +121,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -187,13 +183,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1061433740\">Monster_W4_Pollux_StoryMode_SpecailAbility05</a>",
+      "latentQueue": [
+        "StoryMode",
+        "_StorySkill05"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -229,11 +227,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "StoryMode",
-        "_StorySkill05"
       ]
     },
     {
@@ -244,6 +237,17 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DOT"
       ],
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_DamagePercentage",
+        "MDF_DamageHpAddedRatio"
+      ],
+      "description": "Receives DMG at the start of the turn. The higher the target's current HP percentage, the more DMG they receive. This DMG is \"Non-fatal.\"",
+      "type": "Debuff",
+      "effectName": "DoT",
+      "statusName": "Hastened Death",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -345,19 +349,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_DamagePercentage",
-        "MDF_DamageHpAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "Receives DMG at the start of the turn. The higher the target's current HP percentage, the more DMG they receive. This DMG is \"Non-fatal.\"",
-      "type": "Debuff",
-      "effectName": "DoT",
-      "statusName": "Hastened Death",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -385,6 +377,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-289587260\">Monster_W4_Pollux_StoryMode_LockHP</a>",
+      "latentQueue": [
+        "_StorySimulationSpeed",
+        "AIFlag",
+        "StoryMode"
+      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -475,17 +472,14 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_StorySimulationSpeed",
-        "AIFlag",
-        "StoryMode"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-720682465\">Monster_W4_Pollux_PartController_LockHP</a>",
+      "latentQueue": [
+        "_WorldLevel"
+      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -549,10 +543,6 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_WorldLevel"
       ]
     },
     {
@@ -588,6 +578,18 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "RemoveWhenCasterUnstage"
       ],
+      "stackData": [
+        "_HpLimitRatio",
+        "_FatigueRatio"
+      ],
+      "latentQueue": [
+        "AIFlag",
+        "_WorldLevel"
+      ],
+      "description": "When this target deals DMG to enemy targets, decreases DMG received by enemy targets by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Restore HP to an ally target until it reaches <span class=\"descriptionNumberColor\">MDF_ShowValue2</span> to dispel this effect.",
+      "type": "Other",
+      "effectName": "DMG Reduction",
+      "statusName": "Indulging Slumber",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -820,19 +822,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "_HpLimitRatio",
-        "_FatigueRatio"
-      ],
-      "latentQueue": [
-        "AIFlag",
-        "_WorldLevel"
-      ],
-      "description": "When this target deals DMG to enemy targets, decreases DMG received by enemy targets by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Restore HP to an ally target until it reaches <span class=\"descriptionNumberColor\">MDF_ShowValue2</span> to dispel this effect.",
-      "type": "Other",
-      "effectName": "DMG Reduction",
-      "statusName": "Indulging Slumber"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -841,6 +831,10 @@ const configAbility = {
       "modifierFlags": [
         "Endurance"
       ],
+      "description": "\"The Living Shan't Flee\" enhances to \"The Dead Shan't Avoid.\"",
+      "type": "Other",
+      "effectName": "Enhance",
+      "statusName": "Overdue Obituary",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1004,22 +998,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "\"The Living Shan't Flee\" enhances to \"The Dead Shan't Avoid.\"",
-      "type": "Other",
-      "effectName": "Enhance",
-      "statusName": "Overdue Obituary"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__276281376\">Monster_W4_Pollux_Main_DisableAction</a>",
       "modifierFlags": [
         "DisableAction"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1027,8 +1013,6 @@ const configAbility = {
       "modifierFlags": [
         "DisableAction"
       ],
-      "stackData": [],
-      "latentQueue": [],
       "duration": 1
     },
     {
@@ -1096,9 +1080,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2154,6 +2136,9 @@ const configAbility = {
         "MuteBreak",
         "Endurance"
       ],
+      "description": "Before \"Pollux\" takes their next action, their Toughness cannot be reduced and is immune to action delay effects inflicted by targets.",
+      "type": "Other",
+      "statusName": "Weakness Protected",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2212,10 +2197,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Before \"Pollux\" takes their next action, their Toughness cannot be reduced and is immune to action delay effects inflicted by targets.",
-      "type": "Other",
-      "statusName": "Weakness Protected"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2223,6 +2205,18 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
+      "stackData": [
+        "MDF_ShowValue1",
+        "MDF_SpeedUpRatio"
+      ],
+      "latentQueue": [
+        "AIFlag",
+        "_WorldLevel"
+      ],
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Attacks against \"Pollux\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
+      "type": "Other",
+      "effectName": "Enhance",
+      "statusName": "Fragrance of Death",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2655,24 +2649,11 @@ const configAbility = {
         {
           "eventTrigger": "Pre-Death [Owner]"
         }
-      ],
-      "stackData": [
-        "MDF_ShowValue1",
-        "MDF_SpeedUpRatio"
-      ],
-      "latentQueue": [
-        "AIFlag",
-        "_WorldLevel"
-      ],
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Attacks against \"Pollux\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
-      "type": "Other",
-      "effectName": "Enhance",
-      "statusName": "Fragrance of Death"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2086497725\">Monster_W4_Pollux_EnergyBar</a>",
-      "stackData": [],
       "latentQueue": [
         "StoryMode",
         "_StorySkill05"
@@ -2681,7 +2662,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-977406110\">Monster_W4_Pollux_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]",
-      "stackData": [],
       "latentQueue": [
         "_WorldLevel",
         "AIFlag"
@@ -2692,13 +2672,14 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__599310144\">Monster_W4_Pollux_FX_Ground</a>",
+      "latentQueue": [
+        "IsNeedFade"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2728,10 +2709,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "IsNeedFade"
       ]
     },
     {
@@ -2742,6 +2719,17 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DOT"
       ],
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_DamagePercentage",
+        "MDF_DamageHpAddedRatio"
+      ],
+      "description": "Receives DMG at the start of the turn. The higher the target's current HP percentage, the more DMG they receive.",
+      "type": "Debuff",
+      "effectName": "DoT",
+      "statusName": "Hastened Death",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -2854,19 +2842,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_DamagePercentage",
-        "MDF_DamageHpAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "Receives DMG at the start of the turn. The higher the target's current HP percentage, the more DMG they receive.",
-      "type": "Debuff",
-      "effectName": "DoT",
-      "statusName": "Hastened Death",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2934,9 +2910,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3095,9 +3069,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3208,9 +3180,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3219,6 +3189,10 @@ const configAbility = {
       "modifierFlags": [
         "Endurance"
       ],
+      "description": "\"The Living Shan't Flee\" enhances to \"The Dead Shan't Avoid.\"",
+      "type": "Other",
+      "effectName": "Enhance",
+      "statusName": "Overdue Obituary",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -3259,35 +3233,23 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "\"The Living Shan't Flee\" enhances to \"The Dead Shan't Avoid.\"",
-      "type": "Other",
-      "effectName": "Enhance",
-      "statusName": "Overdue Obituary"
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1339116785\">Enemy_W4_Pollux_IF_AbilityEX04</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1339116785\">Enemy_W4_Pollux_IF_AbilityEX04</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1389449642\">Enemy_W4_Pollux_IF_AbilityEX03</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1389449642\">Enemy_W4_Pollux_IF_AbilityEX03</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1372672023\">Enemy_W4_Pollux_IF_AbilityEX02</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1372672023\">Enemy_W4_Pollux_IF_AbilityEX02</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1423004880\">Enemy_W4_Pollux_IF_AbilityEX01</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1423004880\">Enemy_W4_Pollux_IF_AbilityEX01</a>"
     },
     {
       "name": "Modifier Construction",
@@ -3404,15 +3366,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-740454395\">Enemy_W4_Pollux_IF_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "When ally targets' HP reduces, accumulates \"Desperate Bubble.\" When \"Desperate Bubble\" reaches the limit, this unit enters the \"Fragrance of Death\" state.",
       "type": "Other",
       "statusName": "Dream of Demise"
@@ -3449,9 +3407,7 @@ const configAbility = {
           ],
           "priorityLevel": -45
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3523,9 +3479,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4161,6 +4115,17 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
+      "stackData": [
+        "MDF_ShowValue1",
+        "MDF_SpeedUpRatio"
+      ],
+      "latentQueue": [
+        "AIFlag"
+      ],
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Attacks against \"Guide of Withering and Decay\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
+      "type": "Other",
+      "effectName": "Enhance",
+      "statusName": "Fragrance of Death",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -4391,22 +4356,24 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ShowValue1",
-        "MDF_SpeedUpRatio"
-      ],
-      "latentQueue": [
-        "AIFlag"
-      ],
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Attacks against \"Guide of Withering and Decay\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
-      "type": "Other",
-      "effectName": "Enhance",
-      "statusName": "Fragrance of Death"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1989762066\">Enemy_W4_PolluxPart_IF_Link</a>",
+      "latentQueue": [
+        "AIFlag"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2030876773\">Enemy_W4_PolluxPart_IF_Shield</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]"
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -4497,20 +4464,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
-      ],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2030876773\">Enemy_W4_PolluxPart_IF_Shield</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]"
-        }
       ]
     },
     {
@@ -4550,6 +4503,16 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1112261788\">Enemy_W4_PolluxPart_IF_Reflex</a>[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]",
+      "stackData": [
+        "MDF_ReflexDamageValue"
+      ],
+      "latentQueue": [
+        "StunCheck"
+      ],
+      "description": "After attacking this target, the attacker will receive minor Quantum \"Atrophy DMG.\"",
+      "type": "Other",
+      "effectName": "Corrosive Retaliation",
+      "statusName": "Corrosive Retaliation",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -4752,17 +4715,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ReflexDamageValue"
-      ],
-      "latentQueue": [
-        "StunCheck"
-      ],
-      "description": "After attacking this target, the attacker will receive minor Quantum \"Atrophy DMG.\"",
-      "type": "Other",
-      "effectName": "Corrosive Retaliation",
-      "statusName": "Corrosive Retaliation"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4771,6 +4724,9 @@ const configAbility = {
         "STAT_SuperArmorBreak",
         "STAT_AITargetKeepActionDelay"
       ],
+      "description": "\"Guide of Withering and Decay\" is currently in \"Safeguard Breach\" state, this unit's DMG received increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
+      "type": "Debuff",
+      "statusName": "Physical Falter",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -4882,15 +4838,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "\"Guide of Withering and Decay\" is currently in \"Safeguard Breach\" state, this unit's DMG received increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
-      "type": "Debuff",
-      "statusName": "Physical Falter"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2031085573\">Enemy_W4_PolluxPart_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Physical Enhancement</span>]",
       "modifierFlags": [],
+      "description": "\"Guide of Withering and Decay\" is currently in \"Steadfast Safeguard\" state, this unit's DMG received decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
+      "type": "Buff",
+      "statusName": "Physical Enhancement",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -5119,14 +5075,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "\"Guide of Withering and Decay\" is currently in \"Steadfast Safeguard\" state, this unit's DMG received decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
-      "type": "Buff",
-      "statusName": "Physical Enhancement"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1636257193\">Enemy_W4_PolluxPart_IF_MinionsSuperArmorController</a>",
+      "stackData": [
+        "MDF_MinionsSuperArmor_AllDamageReduce",
+        "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
+        "MDF_SetActionDelayValue"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -5267,13 +5225,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_MinionsSuperArmor_AllDamageReduce",
-        "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
-        "MDF_SetActionDelayValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -5398,9 +5350,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -6127,9 +6077,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -6137,6 +6085,9 @@ const configAbility = {
       "modifierFlags": [
         "STAT_Fatigue"
       ],
+      "description": "Target has accumulated \"HP Overload.\" Heal <span class=\"descriptionNumberColor\">MDF_NegativeBlood</span> HP to remove this state. DMG dealt is reduced by <span class=\"descriptionNumberColor\">MDF_FatigueRatio</span>, and Weakness Break Efficiency is reduced by <span class=\"descriptionNumberColor\">MDF_StanceBreakDownRatio</span>. When its duration ends, the target will receive fatal damage. Remaining duration: <span class=\"descriptionNumberColor\">MDF_LifetimeDisplay</span> turn(s).",
+      "type": "Other",
+      "statusName": "Death Rattle",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -6641,14 +6592,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Target has accumulated \"HP Overload.\" Heal <span class=\"descriptionNumberColor\">MDF_NegativeBlood</span> HP to remove this state. DMG dealt is reduced by <span class=\"descriptionNumberColor\">MDF_FatigueRatio</span>, and Weakness Break Efficiency is reduced by <span class=\"descriptionNumberColor\">MDF_StanceBreakDownRatio</span>. When its duration ends, the target will receive fatal damage. Remaining duration: <span class=\"descriptionNumberColor\">MDF_LifetimeDisplay</span> turn(s).",
-      "type": "Other",
-      "statusName": "Death Rattle"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>",
+      "latentQueue": [
+        "MDF_LifetimeDisplay"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6656,15 +6607,15 @@ const configAbility = {
             "Allow NEGATIVE HP"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_LifetimeDisplay"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__267358493\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target</a>[<span class=\"descriptionNumberColor\">Overloadable</span>]",
+      "description": "Target's HP cannot be reduced below 1, and any excess damage beyond an amount of their current HP will be converted to \"HP Overload.\" When receiving healing, prioritizes restoring their \"HP Overload.\"",
+      "type": "Other",
+      "effectName": "Overloadable",
+      "statusName": "Overloadable",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -6874,15 +6825,53 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Target's HP cannot be reduced below 1, and any excess damage beyond an amount of their current HP will be converted to \"HP Overload.\" When receiving healing, prioritizes restoring their \"HP Overload.\"",
-      "type": "Other",
-      "effectName": "Overloadable",
-      "statusName": "Overloadable"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2037214572\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Controller</a>",
+      "stackData": [
+        "MDF_NegativeBlood_Target_DeathCountDown",
+        "MDF_NegativeBlood_Target_FatigueRatio",
+        "MDF_NegativeBlood_Target_StanceBreakDownRatio"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"267358493\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target</a>[<span class=\"descriptionNumberColor\">Overloadable</span>]",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_NegativeBlood_DeathCountDown": {
+              "operator": "Variables[0] (MDF_NegativeBlood_Target_DeathCountDown) || RETURN",
+              "displayLines": "MDF_NegativeBlood_Target_DeathCountDown",
+              "constants": [],
+              "variables": [
+                "MDF_NegativeBlood_Target_DeathCountDown"
+              ]
+            },
+            "MDF_NegativeBlood_FatigueRatio": {
+              "operator": "Variables[0] (MDF_NegativeBlood_Target_FatigueRatio) || RETURN",
+              "displayLines": "MDF_NegativeBlood_Target_FatigueRatio",
+              "constants": [],
+              "variables": [
+                "MDF_NegativeBlood_Target_FatigueRatio"
+              ]
+            },
+            "MDF_NegativeBlood_StanceBreakDownRatio": {
+              "operator": "Variables[0] (MDF_NegativeBlood_Target_StanceBreakDownRatio) || RETURN",
+              "displayLines": "MDF_NegativeBlood_Target_StanceBreakDownRatio",
+              "constants": [],
+              "variables": [
+                "MDF_NegativeBlood_Target_StanceBreakDownRatio"
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -6924,54 +6913,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_NegativeBlood_Target_DeathCountDown",
-        "MDF_NegativeBlood_Target_FatigueRatio",
-        "MDF_NegativeBlood_Target_StanceBreakDownRatio"
-      ],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"267358493\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target</a>[<span class=\"descriptionNumberColor\">Overloadable</span>]",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_NegativeBlood_DeathCountDown": {
-              "operator": "Variables[0] (MDF_NegativeBlood_Target_DeathCountDown) || RETURN",
-              "displayLines": "MDF_NegativeBlood_Target_DeathCountDown",
-              "constants": [],
-              "variables": [
-                "MDF_NegativeBlood_Target_DeathCountDown"
-              ]
-            },
-            "MDF_NegativeBlood_FatigueRatio": {
-              "operator": "Variables[0] (MDF_NegativeBlood_Target_FatigueRatio) || RETURN",
-              "displayLines": "MDF_NegativeBlood_Target_FatigueRatio",
-              "constants": [],
-              "variables": [
-                "MDF_NegativeBlood_Target_FatigueRatio"
-              ]
-            },
-            "MDF_NegativeBlood_StanceBreakDownRatio": {
-              "operator": "Variables[0] (MDF_NegativeBlood_Target_StanceBreakDownRatio) || RETURN",
-              "displayLines": "MDF_NegativeBlood_Target_StanceBreakDownRatio",
-              "constants": [],
-              "variables": [
-                "MDF_NegativeBlood_Target_StanceBreakDownRatio"
-              ]
-            }
-          }
-        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-822435931\">Enemy_W4_Pollux_IF_UltraReadyMark</a>",
+      "latentQueue": [
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -6979,10 +6928,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
       ]
     }
   ],

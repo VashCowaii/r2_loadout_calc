@@ -176,9 +176,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -186,7 +184,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteHitFly"
           ],
-          "stackData": [],
           "latentQueue": [
             "SummonSequence"
           ]
@@ -194,6 +191,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
+          "latentQueue": [
+            "SummonSequence"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]"
@@ -201,10 +201,6 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Choice Window [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "SummonSequence"
           ]
         }
       ]
@@ -1850,6 +1846,11 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__639506044\">WMonster_Mecha_02_Activation_Controller</a>",
+          "latentQueue": [
+            "ActivationCountDown",
+            "ActivationMode",
+            "BeingDamageFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Take Damage End [Owner]: Hit",
@@ -1905,12 +1906,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "ActivationCountDown",
-            "ActivationMode",
-            "BeingDamageFlag"
           ]
         }
       ]
@@ -2010,9 +2005,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

@@ -17,6 +17,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1849329719\">Relic_130_Sub2</a>[<span class=\"descriptionNumberColor\">Diviner of Distant Reach</span>]",
+      "description": "Elation increases by <span class=\"descriptionNumberColor\">#SkillRelic_130_4_P5_ElationDamageAddedRatioBase</span>.",
+      "type": "Buff",
+      "effectName": "Elation Boost",
+      "statusName": "Diviner of Distant Reach",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -39,11 +43,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Elation increases by <span class=\"descriptionNumberColor\">#SkillRelic_130_4_P5_ElationDamageAddedRatioBase</span>.",
-      "type": "Buff",
-      "effectName": "Elation Boost",
-      "statusName": "Diviner of Distant Reach"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -65,6 +65,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1373432449\">Relic_130_Sub</a>[<span class=\"descriptionNumberColor\">Diviner of Distant Reach</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_1</span>.",
+      "type": "Buff",
+      "statusName": "Diviner of Distant Reach",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -87,10 +90,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_1</span>.",
-      "type": "Buff",
-      "statusName": "Diviner of Distant Reach"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -245,9 +245,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

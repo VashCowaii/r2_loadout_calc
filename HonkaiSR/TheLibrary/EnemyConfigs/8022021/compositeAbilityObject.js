@@ -2826,6 +2826,11 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__346528323\">Monster_SW_Boss_01_MainBattleLockHP</a>",
+          "latentQueue": [
+            "BreakEndFlag",
+            "InsertCheck",
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2849,12 +2854,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "BreakEndFlag",
-            "InsertCheck",
-            "AIFlag"
           ]
         }
       ]
@@ -2985,18 +2984,14 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "End Broken State [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1783095716\">Monster_SW_Boss_01_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3903,9 +3898,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3937,18 +3930,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1206413856\">Monster_SW_Minion01_01_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3967,6 +3956,9 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1014902925\">Enemy_SW_Boss_01_IF_Ability05_WeaknessProtect</a>",
           "modifierFlags": [
             "MuteBreak"
+          ],
+          "latentQueue": [
+            "performAccFlag"
           ],
           "execute": [
             {
@@ -3991,10 +3983,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "performAccFlag"
           ]
         },
         {
@@ -4033,9 +4021,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4127,9 +4113,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4210,9 +4194,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4777,9 +4759,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4808,9 +4788,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4940,6 +4918,18 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-103304753\">Enemy_SW_Boss_01_IF_MinionsEnhancement</a>[<span class=\"descriptionNumberColor\">Growth Hormones</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_AttackAddedRatio"
+          ],
+          "latentQueue": [
+            "CurrentSummonCount"
+          ],
+          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>.",
+          "type": "Other",
+          "effectName": "Growth Hormones",
+          "statusName": "Growth Hormones",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5080,19 +5070,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AttackAddedRatio"
-          ],
-          "latentQueue": [
-            "CurrentSummonCount"
-          ],
-          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>.",
-          "type": "Other",
-          "effectName": "Growth Hormones",
-          "statusName": "Growth Hormones",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5105,6 +5083,12 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RetainCountZero"
           ],
+          "stackData": [
+            "MDF_DamageReduce"
+          ],
+          "description": "Lose 1 Insect Egg when attacked by \"Entomon Eulogy\" or \"Decay Eulogy.\"",
+          "type": "Other",
+          "statusName": "Insect Egg",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5203,18 +5187,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageReduce"
-          ],
-          "latentQueue": [],
-          "description": "Lose 1 Insect Egg when attacked by \"Entomon Eulogy\" or \"Decay Eulogy.\"",
-          "type": "Other",
-          "statusName": "Insect Egg"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-77514845\">Enemy_SW_Boss_01_IF_SwarmArmorController</a>",
+          "stackData": [
+            "MDF_Armor_DamageReduce",
+            "MDF_Armor_CountNormal"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -5347,16 +5328,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Armor_DamageReduce",
-            "MDF_Armor_CountNormal"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__654310441\">Enemy_SW_Boss_01_IF_StanceDamageController</a>",
+          "stackData": [
+            "MDF_ExplodeDamageTakenRatio",
+            "MDF_ExplodeStanceDamage"
+          ],
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -5432,12 +5412,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ExplodeDamageTakenRatio",
-            "MDF_ExplodeStanceDamage"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5473,33 +5448,23 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1900288072\">Enemy_SW_Boss_01_IF_AbilityEX04</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1900288072\">Enemy_SW_Boss_01_IF_AbilityEX04</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2017731405\">Enemy_SW_Boss_01_IF_AbilityEX03</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__2017731405\">Enemy_SW_Boss_01_IF_AbilityEX03</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2000953786\">Enemy_SW_Boss_01_IF_AbilityEX02</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__2000953786\">Enemy_SW_Boss_01_IF_AbilityEX02</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1984176167\">Enemy_SW_Boss_01_IF_AbilityEX01</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1984176167\">Enemy_SW_Boss_01_IF_AbilityEX01</a>"
         },
         {
           "name": "Modifier Construction",
@@ -5520,9 +5485,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "End Broken State [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5554,9 +5517,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5638,9 +5599,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5722,9 +5681,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5806,9 +5763,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5980,9 +5935,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "End Broken State [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6067,9 +6020,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

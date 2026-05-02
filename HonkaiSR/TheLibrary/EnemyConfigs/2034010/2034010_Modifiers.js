@@ -10,9 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__268414254\">W2_LycanKing_BattleScore2Mark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__268414254\">W2_LycanKing_BattleScore2Mark</a>"
     },
     {
       "name": "Modifier Construction",
@@ -33,13 +31,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-518764402\">W2_LycanKing_BattleScore1</a>",
+      "latentQueue": [
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -91,10 +90,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
       ]
     },
     {
@@ -102,6 +97,9 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-2068184553\">Enemy_W2_LycanKing_RageEffect</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
+      ],
+      "latentQueue": [
+        "AIFlag"
       ],
       "execute": [
         {
@@ -273,16 +271,21 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__563066245\">Enemy_W2_LycanKing_BloodRageMark</a>[<span class=\"descriptionNumberColor\">Irate</span>]",
       "stackType": "Replace",
+      "latentQueue": [
+        "MDF_BloodRageCountRemain",
+        "MDF_BloodRageCountBefore"
+      ],
+      "description": "Hoolay currently possesses <span class=\"descriptionNumberColor\">MDF_Layer</span> stack(s) of Irate.",
+      "type": "Other",
+      "effectName": "Irate",
+      "statusName": "Irate",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -329,22 +332,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_BloodRageCountRemain",
-        "MDF_BloodRageCountBefore"
-      ],
-      "description": "Hoolay currently possesses <span class=\"descriptionNumberColor\">MDF_Layer</span> stack(s) of Irate.",
-      "type": "Other",
-      "effectName": "Irate",
-      "statusName": "Irate",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__435779874\">Monster_W2_LycanKing_RefreshEnergyBar</a>",
       "stackType": "Replace",
+      "latentQueue": [
+        "MDF_BloodRageCountRemain",
+        "MDF_BloodRageCountBefore"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -377,17 +374,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_BloodRageCountRemain",
-        "MDF_BloodRageCountBefore"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-717129648\">Enemy_W2_LycanKing_RageStatusEnhanceSelf</a>[<span class=\"descriptionNumberColor\">Lupine Lord's Majesty</span>]",
       "stackType": "Replace",
+      "description": "Hoolay's SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddRatioPerLayer</span> due to the presence of Sableclaw Wolftrooper and Eclipse Wolftrooper on the field.",
+      "type": "Buff",
+      "effectName": "Lupine Lord's Majesty",
+      "statusName": "Lupine Lord's Majesty",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -411,29 +408,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Hoolay's SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddRatioPerLayer</span> due to the presence of Sableclaw Wolftrooper and Eclipse Wolftrooper on the field.",
-      "type": "Buff",
-      "effectName": "Lupine Lord's Majesty",
-      "statusName": "Lupine Lord's Majesty",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1729331430\">Enemy_W2_LycanKing_RageStatusEnhance</a>[<span class=\"descriptionNumberColor\">Lupine Lord's Majesty</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "execute": [
-        {
-          "eventTrigger": "When Modifier Destroyed/Removed"
-        },
-        {
-          "eventTrigger": "Deal Damage End [Owner]: Hit"
-        },
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier"
-        }
       ],
       "stackData": [
         "MDF_SpeedAddRatio"
@@ -444,11 +425,25 @@ const configAbility = {
       "description": "When entering Moon Rage, the effect of Moon Rage will be Enhanced.",
       "type": "Buff",
       "effectName": "Lupitoxin",
-      "statusName": "Lupine Lord's Majesty"
+      "statusName": "Lupine Lord's Majesty",
+      "execute": [
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed"
+        },
+        {
+          "eventTrigger": "Deal Damage End [Owner]: Hit"
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier"
+        }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__545997619\">Monster_W2_LycanKing_Revive</a>",
+      "latentQueue": [
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -576,10 +571,6 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
       ]
     }
   ],

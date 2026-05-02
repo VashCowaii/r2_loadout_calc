@@ -172,6 +172,13 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1045772852\">Fugue_Eidolon6</a>[<span class=\"descriptionNumberColor\">Clairvoyance of Boom and Doom</span>]",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Weakness Break Efficiency Boost",
+      "statusName": "Clairvoyance of Boom and Doom",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -194,15 +201,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Weakness Break Efficiency Boost",
-      "statusName": "Clairvoyance of Boom and Doom"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -252,9 +251,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -426,6 +423,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__264764178\">Fugue_PointB3_Sub02</a>",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_PropertyRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -539,29 +539,24 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__490649964\">Fugue_PointB3_Sub</a>[<span class=\"descriptionNumberColor\">Phecda Primordia</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_BreakDamageAdd"
+      ],
+      "description": "Each stack increases Break Effect by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. This effect can stack up to <span class=\"descriptionNumberColor\">#SkillTree_PointB3_P3_Layer</span> time(s).",
+      "type": "Buff",
+      "effectName": "Break Effect Boost",
+      "statusName": "Phecda Primordia",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [
-        "MDF_BreakDamageAdd"
-      ],
-      "latentQueue": [],
-      "description": "Each stack increases Break Effect by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. This effect can stack up to <span class=\"descriptionNumberColor\">#SkillTree_PointB3_P3_Layer</span> time(s).",
-      "type": "Buff",
-      "effectName": "Break Effect Boost",
-      "statusName": "Phecda Primordia"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -784,14 +779,19 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1748420043\">Fugue_PointB2_Sub</a>[<span class=\"descriptionNumberColor\">Sylvan Enigma</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyRatio_BreakDamageSelf"
+      ],
+      "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio_BreakDamageSelf</span>.",
+      "type": "Buff",
+      "effectName": "Break Effect Boost",
+      "statusName": "Sylvan Enigma",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -814,15 +814,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio_BreakDamageSelf"
-      ],
-      "latentQueue": [],
-      "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio_BreakDamageSelf</span>.",
-      "type": "Buff",
-      "effectName": "Break Effect Boost",
-      "statusName": "Sylvan Enigma"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -855,9 +847,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -986,15 +976,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-825933762\">Fugue_PassiveAbility_OnListenBreakModifier</a>",
-      "stackData": [],
-      "latentQueue": [],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",

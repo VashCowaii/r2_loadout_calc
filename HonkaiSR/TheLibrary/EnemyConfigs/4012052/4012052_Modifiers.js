@@ -14,6 +14,9 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
+      "latentQueue": [
+        "AISequence"
+      ],
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -119,10 +122,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AISequence"
       ]
     },
     {
@@ -131,6 +130,9 @@ const configAbility = {
       "modifierFlags": [
         "Deathrattle",
         "KeepOnDeathrattle"
+      ],
+      "latentQueue": [
+        "AISequence"
       ],
       "execute": [
         {
@@ -157,15 +159,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AISequence"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1597331632\">Enemy_W4_Mascot_LocalLegend_ListenCorrectInteract</a>",
+      "stackData": [
+        "MDF_SuccessDamageRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -389,11 +390,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SuccessDamageRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -442,9 +439,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -482,15 +477,16 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-348410444\">Enemy_W4_Mascot_MuteBreak</a>",
       "modifierFlags": [
         "MuteBreak"
+      ],
+      "stackData": [
+        "MDF_AllDamageReduce"
       ],
       "execute": [
         {
@@ -514,18 +510,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AllDamageReduce"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1866632092\">Enemy_W4_Mascot_BlockDamage</a>",
-      "modifierFlags": [],
-      "stackData": [],
-      "latentQueue": []
+      "modifierFlags": []
     },
     {
       "name": "Modifier Construction",
@@ -551,9 +541,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -672,13 +660,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__407991733\">Enemy_W4_Mascot_ListenCorrectInteract</a>",
+      "stackData": [
+        "MDF_SuccessDamageRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1333,11 +1322,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SuccessDamageRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1369,6 +1354,9 @@ const configAbility = {
         "MuteHitFly",
         "MuteBreak"
       ],
+      "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
+      "type": "Other",
+      "statusName": "Brainteaser",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1486,12 +1474,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
-      "type": "Other",
-      "statusName": "Brainteaser"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1523,6 +1506,9 @@ const configAbility = {
         "MuteHitFly",
         "MuteBreak"
       ],
+      "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
+      "type": "Other",
+      "statusName": "Brainteaser",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1646,12 +1632,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
-      "type": "Other",
-      "statusName": "Brainteaser"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1683,6 +1664,9 @@ const configAbility = {
         "MuteHitFly",
         "MuteBreak"
       ],
+      "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
+      "type": "Other",
+      "statusName": "Brainteaser",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1806,12 +1790,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
-      "type": "Other",
-      "statusName": "Brainteaser"
+      ]
     }
   ],
   "references": []

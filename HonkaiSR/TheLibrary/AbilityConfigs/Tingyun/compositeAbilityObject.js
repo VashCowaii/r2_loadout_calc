@@ -56,9 +56,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -117,8 +115,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-894890999\">Ability02PreShowModifier</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -258,6 +254,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__132060184\">TingYun_Ability03DamageUp</a>[<span class=\"descriptionNumberColor\">Amidst the Rejoicing Clouds</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_DamageAddedRatio"
+          ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Amidst the Rejoicing Clouds",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -280,15 +283,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageAddedRatio"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Amidst the Rejoicing Clouds"
+          ]
         }
       ],
       "targetObjectData": {
@@ -1056,9 +1051,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1123,6 +1116,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackData": [
+            "Tingyun_SpeedUP_Ratio"
+          ],
+          "description": "SPD +<span class=\"descriptionNumberColor\">Tingyun_SpeedUP_Ratio</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "Nourished Joviality",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1145,15 +1145,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "Tingyun_SpeedUP_Ratio"
-          ],
-          "latentQueue": [],
-          "description": "SPD +<span class=\"descriptionNumberColor\">Tingyun_SpeedUP_Ratio</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "Nourished Joviality"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1163,6 +1155,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_Rank01_SpeedUp_01</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1185,11 +1181,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_Rank01_SpeedUp_01</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1532,15 +1524,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-888637681\">TingYun_Passive_LeiLing_Eidolon4</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
+          ],
+          "stackData": [
+            "MDF_Passive_DamagePercentage",
+            "MDF_Passive_DamagePercentageSelf",
+            "MDF_Rank01_SpeedUp",
+            "MDF_Rank02_SPAdd",
+            "MDF_Rank04_DamagePercentage",
+            "MDF_AttackDelta"
           ],
           "execute": [
             {
@@ -1795,22 +1793,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Passive_DamagePercentage",
-            "MDF_Passive_DamagePercentageSelf",
-            "MDF_Rank01_SpeedUp",
-            "MDF_Rank02_SPAdd",
-            "MDF_Rank04_DamagePercentage",
-            "MDF_AttackDelta"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-922192919\">TingYun_Passive_LeiLing_Eidolon2</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
+          ],
+          "stackData": [
+            "MDF_Passive_DamagePercentage",
+            "MDF_Passive_DamagePercentageSelf",
+            "MDF_Rank01_SpeedUp",
+            "MDF_Rank02_SPAdd",
+            "MDF_AttackDelta"
           ],
           "execute": [
             {
@@ -2064,21 +2060,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Passive_DamagePercentage",
-            "MDF_Passive_DamagePercentageSelf",
-            "MDF_Rank01_SpeedUp",
-            "MDF_Rank02_SPAdd",
-            "MDF_AttackDelta"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-972525776\">TingYun_Passive_LeiLing_Eidolon1</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
+          ],
+          "stackData": [
+            "MDF_Passive_DamagePercentage",
+            "MDF_Passive_DamagePercentageSelf",
+            "MDF_Rank01_SpeedUp",
+            "MDF_AttackDelta"
           ],
           "execute": [
             {
@@ -2277,20 +2271,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Passive_DamagePercentage",
-            "MDF_Passive_DamagePercentageSelf",
-            "MDF_Rank01_SpeedUp",
-            "MDF_AttackDelta"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1351488572\">TingYun_Passive_LeiLing</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
+          ],
+          "stackData": [
+            "MDF_Passive_DamagePercentage",
+            "MDF_Passive_DamagePercentageSelf",
+            "MDF_AttackDelta"
           ],
           "execute": [
             {
@@ -2456,13 +2448,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Passive_DamagePercentage",
-            "MDF_Passive_DamagePercentageSelf",
-            "MDF_AttackDelta"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2497,6 +2483,15 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
+          "stackData": [
+            "MDF_AttackDelta",
+            "MDF_Rank01_SpeedUp",
+            "MDF_Rank01_Count"
+          ],
+          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackDelta</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Benediction",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2622,17 +2617,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AttackDelta",
-            "MDF_Rank01_SpeedUp",
-            "MDF_Rank01_Count"
-          ],
-          "latentQueue": [],
-          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackDelta</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Benediction"
+          ]
         }
       ],
       "references": []

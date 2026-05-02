@@ -12,6 +12,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__294496269\">Yanqing_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_CriticalBoost"
+      ],
+      "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_CriticalBoost</span>.",
+      "type": "Buff",
+      "effectName": "CRIT Rate Boost",
+      "statusName": "Amidst the Raining Bliss",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -59,15 +66,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_CriticalBoost"
-      ],
-      "latentQueue": [],
-      "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_CriticalBoost</span>.",
-      "type": "Buff",
-      "effectName": "CRIT Rate Boost",
-      "statusName": "Amidst the Raining Bliss"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -82,6 +81,15 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_CriticalBoost",
+        "MDF_CriticaDamage",
+        "MDF_AddCriticalDamage"
+      ],
+      "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CriticalBoost</span> and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_ALLCriticalDamage</span>.",
+      "type": "Buff",
+      "effectName": "CRIT Rate Boost",
+      "statusName": "Soulsteel Sync",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -428,21 +436,17 @@ const configAbility = {
         {
           "eventTrigger": "When Modifier is Added [Owner]"
         }
-      ],
-      "stackData": [
-        "MDF_CriticalBoost",
-        "MDF_CriticaDamage",
-        "MDF_AddCriticalDamage"
-      ],
-      "latentQueue": [],
-      "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CriticalBoost</span> and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_ALLCriticalDamage</span>.",
-      "type": "Buff",
-      "effectName": "CRIT Rate Boost",
-      "statusName": "Soulsteel Sync"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1507574257\">Yanqing_PassiveAbility_Modifier</a>",
+      "stackData": [
+        "MDF_CriticalBoost",
+        "MDF_CriticaDamage",
+        "MDF_StatusResistance",
+        "MDF_AddSPRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -501,14 +505,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_CriticalBoost",
-        "MDF_CriticaDamage",
-        "MDF_StatusResistance",
-        "MDF_AddSPRatio"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

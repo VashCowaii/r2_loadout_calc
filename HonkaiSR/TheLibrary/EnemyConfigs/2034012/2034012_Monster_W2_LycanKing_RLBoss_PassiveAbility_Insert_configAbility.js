@@ -275,6 +275,13 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2108197417\">Enemy_W2_Lycan_Part3SummonSpeed</a>",
+      "stackData": [
+        "MDF_SpeedPhase3"
+      ],
+      "latentQueue": [
+        "PhaseFlag",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -297,13 +304,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SpeedPhase3"
-      ],
-      "latentQueue": [
-        "PhaseFlag",
-        "AIFlag"
       ]
     }
   ]

@@ -24,6 +24,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1125178298\">Enemy_W3_TV_03_PowerUnlockListener</a>[<span class=\"descriptionNumberColor\">Happy Smiles</span>]",
+      "description": "When this unit is attacked for the first time, the target team gains Punchline, and this unit uses \"Happiness Charm.\"",
+      "type": "Other",
+      "statusName": "Happy Smiles",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -134,12 +137,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "When this unit is attacked for the first time, the target team gains Punchline, and this unit uses \"Happiness Charm.\"",
-      "type": "Other",
-      "statusName": "Happy Smiles"
+      ]
     }
   ]
 }

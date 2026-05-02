@@ -27,6 +27,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-950302126\">Relic_117_Sub</a>[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "The 4-piece set's CRIT Rate and CRIT DMG Boost effect are increased.",
+          "type": "Other",
+          "statusName": "Pioneer Diver of Dead Waters",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -49,10 +52,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "The 4-piece set's CRIT Rate and CRIT DMG Boost effect are increased.",
-          "type": "Other",
-          "statusName": "Pioneer Diver of Dead Waters"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -222,9 +222,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,
@@ -326,9 +324,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

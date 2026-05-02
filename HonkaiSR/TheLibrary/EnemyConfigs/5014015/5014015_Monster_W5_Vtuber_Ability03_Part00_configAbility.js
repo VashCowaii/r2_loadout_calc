@@ -101,9 +101,7 @@ const configAbility = {
         {
           "eventTrigger": "Exit View-Mode [Anyone]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -124,9 +122,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

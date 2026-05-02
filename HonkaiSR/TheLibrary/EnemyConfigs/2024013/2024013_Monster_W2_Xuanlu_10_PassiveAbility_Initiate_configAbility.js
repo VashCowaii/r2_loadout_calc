@@ -103,9 +103,7 @@ const configAbility = {
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -115,9 +113,7 @@ const configAbility = {
           "eventTrigger": "Enter Battle",
           "priorityLevel": 999999
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -135,9 +131,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -629,9 +623,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

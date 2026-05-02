@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1051243622\">Modifier_ChallengePeakBattle_BaseAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting</span>]",
       "stackType": "Replace",
+      "description": "Gain 1 stack when attacked. When stacks reach <span class=\"descriptionNumberColor\">ChallengePeakBattle_0008_ADF_1</span>, take action immediately. Stack count resets at the start of turn.",
+      "type": "Other",
+      "statusName": "Taunting",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -62,11 +66,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Gain 1 stack when attacked. When stacks reach <span class=\"descriptionNumberColor\">ChallengePeakBattle_0008_ADF_1</span>, take action immediately. Stack count resets at the start of turn.",
-      "type": "Other",
-      "statusName": "Taunting",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -129,6 +129,55 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1034466003\">Modifier_ChallengePeakBattle_BaseAbility_0008_02</a>",
       "stackType": "Replace",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
+        "conditions": {
+          "name": "AND",
+          "conditionList": [
+            {
+              "name": "Compare: Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "value1": null,
+              "compareType": ">=",
+              "value2": {
+                "operator": "Variables[0] (ChallengePeakBattle_0008_ADF_1) || Constants[0] (1) || SUB || RETURN",
+                "displayLines": "(ChallengePeakBattle_0008_ADF_1 - 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "ChallengePeakBattle_0008_ADF_1"
+                ]
+              },
+              "valueType": "Layer"
+            },
+            {
+              "name": "Compare: Target",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player's Aim Target List}}"
+              },
+              "target2": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              }
+            }
+          ]
+        },
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": -1
+        }
+      },
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -209,56 +258,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "target": {
-          "name": "Target Name",
-          "target": "{{Modifier Holder}}"
-        },
-        "conditions": {
-          "name": "AND",
-          "conditionList": [
-            {
-              "name": "Compare: Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "value1": null,
-              "compareType": ">=",
-              "value2": {
-                "operator": "Variables[0] (ChallengePeakBattle_0008_ADF_1) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(ChallengePeakBattle_0008_ADF_1 - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "ChallengePeakBattle_0008_ADF_1"
-                ]
-              },
-              "valueType": "Layer"
-            },
-            {
-              "name": "Compare: Target",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Player's Aim Target List}}"
-              },
-              "target2": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              }
-            }
-          ]
-        },
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": -1
-        }
-      },
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -331,9 +331,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

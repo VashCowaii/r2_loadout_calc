@@ -35,8 +35,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__606850892\">Enemy_XP_Minion04_03_Introduce</a>[<span class=\"descriptionNumberColor\">C—Cure You</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "When a friendly unit is attacked by a target, Trotter of Abundance consumes its own HP to heal the attacked friendly unit.",
       "type": "Other",
       "effectName": "C—Cure You",
@@ -132,9 +130,7 @@ const configAbility = {
           ],
           "priorityLevel": -55
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

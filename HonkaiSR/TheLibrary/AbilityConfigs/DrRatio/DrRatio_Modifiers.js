@@ -50,6 +50,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1351658038\">Dr_Ratio_Eidolon6_AllDamageTypeAddedRatio</a>",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": [
+        "_Dr_Ratio_00_EnergyBar_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -77,17 +83,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "_Dr_Ratio_00_EnergyBar_Flag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1222801493\">Dr_Ratio_PointB3_Modifier</a>",
+      "stackData": [
+        "MDF_PropertyValue",
+        "MDF_PropertyValueMax",
+        "MDF_PointB3DebuffCount"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -265,13 +270,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_PropertyValueMax",
-        "MDF_PointB3DebuffCount"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -337,6 +336,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-253275642\">Dr_Ratio_Insert_Flag</a>",
+      "latentQueue": [
+        "_Dr_RatioAttack",
+        "_Dr_Ratio_00_EnergyBar_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -385,11 +388,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_Dr_RatioAttack",
-        "_Dr_Ratio_00_EnergyBar_Flag"
       ]
     },
     {
@@ -425,6 +423,19 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1828934114\">Dr_Ratio_Ability03_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Summation</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue01",
+        "MDF_PropertyValue02"
+      ],
+      "latentQueue": [
+        "_Dr_RatioAttack",
+        "_Dr_Ratio_00_EnergyBar_Flag",
+        "_SkillTree_SkillFlag"
+      ],
+      "description": "Every stack increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue01</span> and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue02</span>.",
+      "type": "Buff",
+      "statusName": "Summation",
+      "stackLimit": 20,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -500,20 +511,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue01",
-        "MDF_PropertyValue02"
-      ],
-      "latentQueue": [
-        "_Dr_RatioAttack",
-        "_Dr_Ratio_00_EnergyBar_Flag",
-        "_SkillTree_SkillFlag"
-      ],
-      "description": "Every stack increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue01</span> and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue02</span>.",
-      "type": "Buff",
-      "statusName": "Summation",
-      "stackLimit": 20
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -523,6 +521,17 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "ListenBattleEventSkill"
       ],
+      "stackData": [
+        "MDF_Skill03_InsertMaxCount"
+      ],
+      "latentQueue": [
+        "_Dr_RatioAttack",
+        "_Dr_Ratio_00_EnergyBar_Flag"
+      ],
+      "description": "After a target with \"Wiseman's Folly\" is attacked by Dr. Ratio's teammate(s), Dr. Ratio immediately launches a Follow-Up ATK once against this target. This effect can be triggered for a maximum of <span class=\"descriptionNumberColor\">MDF_Skill03_InsertMaxCount</span> times.",
+      "type": "Other",
+      "effectName": "Wiseman's Folly",
+      "statusName": "Wiseman's Folly",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -985,18 +994,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Skill03_InsertMaxCount"
-      ],
-      "latentQueue": [
-        "_Dr_RatioAttack",
-        "_Dr_Ratio_00_EnergyBar_Flag"
-      ],
-      "description": "After a target with \"Wiseman's Folly\" is attacked by Dr. Ratio's teammate(s), Dr. Ratio immediately launches a Follow-Up ATK once against this target. This effect can be triggered for a maximum of <span class=\"descriptionNumberColor\">MDF_Skill03_InsertMaxCount</span> times.",
-      "type": "Other",
-      "effectName": "Wiseman's Folly",
-      "statusName": "Wiseman's Folly"
+      ]
     }
   ],
   "references": []

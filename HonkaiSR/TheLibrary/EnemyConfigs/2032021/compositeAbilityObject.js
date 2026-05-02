@@ -218,9 +218,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-847453897\">Monster_Monster_W2_Lycan_01_BattlePerform_DisAbleAction</a>",
           "modifierFlags": [
             "DisableAction"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -238,9 +236,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Being Attacked End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -536,15 +532,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1757173024\">Enemy_W2_Lycan_01_MainStoryModuEnhance</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1757173024\">Enemy_W2_Lycan_01_MainStoryModuEnhance</a>"
         }
       ]
     },
@@ -623,9 +615,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -821,9 +811,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -853,9 +841,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Phase Start [Anyone][?]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -917,6 +903,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1949316860\">Enemy_W2_Lycan_01_RageStatusEnhance</a>[<span class=\"descriptionNumberColor\">Moon Rage</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Enters the Moon Rage state and can take an extra action every turn. After attacking a target, restores this unit's HP. This state will be removed when this unit is Weakness Broken.",
+          "type": "Buff",
+          "effectName": "Mending Attack",
+          "statusName": "Moon Rage",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1036,16 +1026,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Enters the Moon Rage state and can take an extra action every turn. After attacking a target, restores this unit's HP. This state will be removed when this unit is Weakness Broken.",
-          "type": "Buff",
-          "effectName": "Mending Attack",
-          "statusName": "Moon Rage"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1326641454\">Enemy_W2_Lycan_01_RageStatus</a>[<span class=\"descriptionNumberColor\">Moon Rage</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. After attacking an allied target, restores this unit's HP. This state will be removed when this unit is Weakness Broken.",
+          "type": "Buff",
+          "effectName": "Mending Attack",
+          "statusName": "Moon Rage",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1173,11 +1163,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. After attacking an allied target, restores this unit's HP. This state will be removed when this unit is Weakness Broken.",
-          "type": "Buff",
-          "effectName": "Mending Attack",
-          "statusName": "Moon Rage"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1269,9 +1255,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },

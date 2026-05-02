@@ -226,9 +226,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -285,9 +283,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -506,9 +502,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -551,15 +545,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__913171010\">Gallagher_PointB2_PreshowModifier</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -579,16 +569,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1477793302\">Gallagher_Eidolon2_Modifier</a>",
-          "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": []
+          "stackType": "ReplaceByCaster"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-237144299\">Gallagher_PointB3_Modifier</a>",
-          "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": []
+          "stackType": "ReplaceByCaster"
         }
       ],
       "targetObjectData": {
@@ -1237,24 +1223,6 @@ const compositeAbilityObject = {
               "priorityLevel": -80
             }
           ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-1349711870\">Gallagher_CheckBreakDamageAddedRatioChange</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
@@ -1333,13 +1301,33 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [],
-          "latentQueue": []
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1349711870\">Gallagher_CheckBreakDamageAddedRatioChange</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1678215353\">MWGallagher_Ability11_AttackDownModifier</a>[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "ATK decreases by <span class=\"descriptionNumberColor\">#Skill11_P2_AttackDownPercentage</span>.",
+          "type": "Debuff",
+          "effectName": "ATK Reduction",
+          "statusName": "ATK Reduction",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1362,13 +1350,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "ATK decreases by <span class=\"descriptionNumberColor\">#Skill11_P2_AttackDownPercentage</span>.",
-          "type": "Debuff",
-          "effectName": "ATK Reduction",
-          "statusName": "ATK Reduction"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1443,9 +1425,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1454,6 +1434,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "PointB3_Active"
+          ],
+          "description": "Increases the received Break DMG by <span class=\"descriptionNumberColor\">MDF_BreakDamagTaken</span>. And every time this unit gets attacked by characters, the attacker will restore <span class=\"descriptionNumberColor\">#SkillP01_P2_HealAmount</span> HP.",
+          "type": "Debuff",
+          "effectName": "Besotted",
+          "statusName": "Besotted",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -1590,20 +1577,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "PointB3_Active"
-          ],
-          "latentQueue": [],
-          "description": "Increases the received Break DMG by <span class=\"descriptionNumberColor\">MDF_BreakDamagTaken</span>. And every time this unit gets attacked by characters, the attacker will restore <span class=\"descriptionNumberColor\">#SkillP01_P2_HealAmount</span> HP.",
-          "type": "Debuff",
-          "effectName": "Besotted",
-          "statusName": "Besotted"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1872837497\">MWGallagher_Ability02_StatusResModifier</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Effect RES Boost",
+          "statusName": "Effect RES Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1626,15 +1612,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Effect RES Boost",
-          "statusName": "Effect RES Boost"
+          ]
         },
         {
           "name": "Modifier Construction",

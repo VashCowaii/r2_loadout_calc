@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__5448581\">LC_23028_Sub</a>[<span class=\"descriptionNumberColor\">Promise</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "The DMG dealt by Ultimate or Follow-Up ATK ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the target's DEF.",
+      "type": "Buff",
+      "effectName": "Promise",
+      "statusName": "Promise",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -46,11 +50,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "The DMG dealt by Ultimate or Follow-Up ATK ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the target's DEF.",
-      "type": "Buff",
-      "effectName": "Promise",
-      "statusName": "Promise"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -269,9 +269,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

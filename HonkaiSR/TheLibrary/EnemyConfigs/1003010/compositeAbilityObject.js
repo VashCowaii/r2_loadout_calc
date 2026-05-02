@@ -1839,9 +1839,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1897,9 +1895,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1908,6 +1904,10 @@ const compositeAbilityObject = {
             "MuteHitH",
             "ListenBattleEventSkill"
           ],
+          "description": "Uses a Powerful Counter on the attacker after being attacked.",
+          "type": "Buff",
+          "effectName": "Counter",
+          "statusName": "Counter",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2238,13 +2238,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Uses a Powerful Counter on the attacker after being attacked.",
-          "type": "Buff",
-          "effectName": "Counter",
-          "statusName": "Counter"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2285,13 +2279,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1997793398\">Monster_W1_Soldier03_ShieldControl</a>",
+          "latentQueue": [
+            "W1_Soldier03_00_SummonCounter",
+            "W1_Soldier03_00_AICounter"
+          ],
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -2491,11 +2487,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W1_Soldier03_00_SummonCounter",
-            "W1_Soldier03_00_AICounter"
           ]
         }
       ],

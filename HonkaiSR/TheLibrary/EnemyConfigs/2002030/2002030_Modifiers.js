@@ -17,6 +17,10 @@ const configAbility = {
         "STAT_CTRL",
         "AvatarBreak"
       ],
+      "description": "Action delayed. Cannot take actions for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Strong Reverberation",
+      "statusName": "Strong Reverberation",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -96,15 +100,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Action delayed. Cannot take actions for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Strong Reverberation",
-      "statusName": "Strong Reverberation"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_Shake_ActionDelayRatio"
+      ],
+      "description": "After receiving an attack, enters Strong Reverberation, then dispels Reverberation.",
+      "type": "Debuff",
+      "effectName": "Reverberation",
+      "statusName": "Reverberation",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -135,16 +143,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_Shake_ActionDelayRatio"
-      ],
-      "latentQueue": [],
-      "description": "After receiving an attack, enters Strong Reverberation, then dispels Reverberation.",
-      "type": "Debuff",
-      "effectName": "Reverberation",
-      "statusName": "Reverberation"
+      ]
     }
   ],
   "references": []

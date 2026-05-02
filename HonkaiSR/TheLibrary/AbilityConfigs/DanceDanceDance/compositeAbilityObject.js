@@ -26,6 +26,28 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1509850067\">LC_21018_Main</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            "skillType": [
+              "Ultimate"
+            ],
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": {
+                "operator": "Variables[0] (0.16) || INVERT || RETURN",
+                "displayLines": "-0.16",
+                "constants": [],
+                "variables": [
+                  0.16
+                ]
+              }
+            }
+          },
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -50,31 +72,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Player Team All}}"
-            },
-            "skillType": [
-              "Ultimate"
-            ],
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": {
-                "operator": "Variables[0] (0.16) || INVERT || RETURN",
-                "displayLines": "-0.16",
-                "constants": [],
-                "variables": [
-                  0.16
-                ]
-              }
-            }
-          }
+          ]
         }
       ],
       "isLightcone": true,

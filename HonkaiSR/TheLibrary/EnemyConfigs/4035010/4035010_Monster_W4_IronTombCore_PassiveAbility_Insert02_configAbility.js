@@ -494,6 +494,14 @@ const configAbility = {
       "modifierFlags": [
         "DisableAction"
       ],
+      "latentQueue": [
+        "_IsWeek",
+        "_PhaseCheck",
+        "_Trigger1",
+        "_Trigger2",
+        "AIFlag",
+        "_WorldLevel"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -546,15 +554,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_IsWeek",
-        "_PhaseCheck",
-        "_Trigger1",
-        "_Trigger2",
-        "AIFlag",
-        "_WorldLevel"
       ]
     }
   ]

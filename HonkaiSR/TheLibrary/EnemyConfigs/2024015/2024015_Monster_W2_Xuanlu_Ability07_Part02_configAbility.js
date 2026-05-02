@@ -44,6 +44,13 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
+      "stackData": [
+        "MDF_DefenceAddedRatio"
+      ],
+      "description": "DEF increases. Toughness cannot be reduced.",
+      "type": "Buff",
+      "effectName": "DEF Boost",
+      "statusName": "Hardy Leaf Sheath",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -83,15 +90,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DefenceAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "DEF increases. Toughness cannot be reduced.",
-      "type": "Buff",
-      "effectName": "DEF Boost",
-      "statusName": "Hardy Leaf Sheath"
+      ]
     }
   ]
 }

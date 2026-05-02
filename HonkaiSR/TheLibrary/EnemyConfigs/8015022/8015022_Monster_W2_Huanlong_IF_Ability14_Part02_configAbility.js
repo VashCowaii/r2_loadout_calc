@@ -805,6 +805,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1034588590\">Monster_W2_Huanlong_IF_Ability14_SetDamage</a>",
+      "latentQueue": [
+        "BreakFlag",
+        "_AliveFlower_Count"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -920,11 +924,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "BreakFlag",
-        "_AliveFlower_Count"
       ]
     }
   ]

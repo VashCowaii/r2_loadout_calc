@@ -35,6 +35,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1794214494\">Advanced_Welt_Ultimate_ExtraSP</a>",
+      "stackData": [
+        "MDF_AddValue"
+      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -66,11 +69,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AddValue"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

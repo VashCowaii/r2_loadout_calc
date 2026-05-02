@@ -43,6 +43,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1255032527\">LC_23031_Sub</a>[<span class=\"descriptionNumberColor\">Luminflux</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack allows the Ultimate DMG dealt to ignore <span class=\"descriptionNumberColor\">#SkillEquip_P2_DefenceDown</span> of the target's DEF. This effect has a max of <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
+          "type": "Buff",
+          "effectName": "Luminflux",
+          "statusName": "Luminflux",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -111,13 +117,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack allows the Ultimate DMG dealt to ignore <span class=\"descriptionNumberColor\">#SkillEquip_P2_DefenceDown</span> of the target's DEF. This effect has a max of <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
-          "type": "Buff",
-          "effectName": "Luminflux",
-          "statusName": "Luminflux",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -169,9 +169,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

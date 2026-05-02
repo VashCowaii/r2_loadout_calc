@@ -853,9 +853,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2458,9 +2456,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-618537723\">Enemy_Monster_W3_Theater_Part02Recover</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-618537723\">Enemy_Monster_W3_Theater_Part02Recover</a>"
         }
       ]
     },
@@ -3489,9 +3485,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3503,9 +3497,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Exit View-Mode [Anyone]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3933,9 +3925,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Weakness Break [Anyone]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4257,9 +4247,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4589,9 +4577,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4610,14 +4596,13 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1877150008\">Enemy_W3_Theater_IF_ImmuneDebuff</a>",
           "modifierFlags": [
             "ImmuneDebuff"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1090299931\">MModifier_W3_Theater_IF_UltraDamageReduce</a>",
           "stackType": "Replace",
+          "stackLimit": 5,
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -4657,13 +4642,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 5
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-685472168\">MModifier_W3_Theater_IF_UltraDamageReduce_TriggerFlag</a>",
-          "stackData": [],
           "latentQueue": [
             "AIFlag"
           ]
@@ -4739,9 +4722,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4751,6 +4732,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__890205763\">Enemy_W3_Theater_IF_BattleEvent</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_BEBreakDamageReduce"
+          ],
+          "latentQueue": [
+            "BreakEndFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -5073,18 +5060,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_BEBreakDamageReduce"
-          ],
-          "latentQueue": [
-            "BreakEndFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__168509453\">Enemy_W3_Theater_IF_DuringChangePhase</a>",
-          "stackData": [],
           "latentQueue": [
             "InsertCheck"
           ]
@@ -5092,7 +5072,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-831498858\">MModifier_Monster_W3_Theater_IF_Part2</a>",
-          "stackData": [],
           "latentQueue": [
             "BreakEndFlag",
             "InsertCheck"
@@ -5104,14 +5083,19 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2083560746\">MModifier_W3_Theater_IF_HourglassTrigger_Flop</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-2083560746\">MModifier_W3_Theater_IF_HourglassTrigger_Flop</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-396183840\">Enemy_W3_Dinosaur_02_IF_StanceBreakRatioUp</a>[<span class=\"descriptionNumberColor\">Weakness Break Efficiency Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Weakness Break Efficiency Boost",
+          "statusName": "Weakness Break Efficiency Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5134,45 +5118,27 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Weakness Break Efficiency Boost",
-          "statusName": "Weakness Break Efficiency Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1371722317\">MModifier_Monster_W3_Theater_IF_DuringAbility</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1371722317\">MModifier_Monster_W3_Theater_IF_DuringAbility</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-831657031\">Enemy_W3_Theater_IF_AbilityEX04</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-831657031\">Enemy_W3_Theater_IF_AbilityEX04</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-814879412\">Enemy_W3_Theater_IF_AbilityEX03</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-814879412\">Enemy_W3_Theater_IF_AbilityEX03</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-798101793\">Enemy_W3_Theater_IF_AbilityEX02</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-798101793\">Enemy_W3_Theater_IF_AbilityEX02</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-781324174\">Enemy_W3_Theater_IF_AbilityEX01</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-781324174\">Enemy_W3_Theater_IF_AbilityEX01</a>"
         },
         {
           "name": "Modifier Construction",
@@ -5300,6 +5266,10 @@ const compositeAbilityObject = {
             "STAT_SuperArmorBreak",
             "STAT_AITargetKeepActionDelay"
           ],
+          "description": "When Blaznana Monkey Trick is in the \"Safeguard Breach\" state, increases this unit's DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
+          "type": "Debuff",
+          "effectName": "Prolonged Class",
+          "statusName": "Prolonged Class",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5357,16 +5327,22 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When Blaznana Monkey Trick is in the \"Safeguard Breach\" state, increases this unit's DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
-          "type": "Debuff",
-          "effectName": "Prolonged Class",
-          "statusName": "Prolonged Class"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1242309858\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Homework In-Class</span>]",
           "modifierFlags": [],
+          "stackData": [
+            "MDF_AllDamageReduce"
+          ],
+          "latentQueue": [
+            "BreakEndFlag"
+          ],
+          "description": "When Blaznana Monkey Trick is in the \"Steadfast Safeguard\" state, reduces this unit's DMG received by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
+          "type": "Buff",
+          "effectName": "Homework In-Class",
+          "statusName": "Homework In-Class",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -5595,21 +5571,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageReduce"
-          ],
-          "latentQueue": [
-            "BreakEndFlag"
-          ],
-          "description": "When Blaznana Monkey Trick is in the \"Steadfast Safeguard\" state, reduces this unit's DMG received by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
-          "type": "Buff",
-          "effectName": "Homework In-Class",
-          "statusName": "Homework In-Class"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1954613914\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmorController</a>",
+          "stackData": [
+            "MDF_MinionsSuperArmor_AllDamageReduce",
+            "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
+            "MDF_SetActionDelayValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5769,17 +5740,22 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MinionsSuperArmor_AllDamageReduce",
-            "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
-            "MDF_SetActionDelayValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1013818127\">MModifier_Monster_W3_Theater_IF_HourglassCharge</a>[<span class=\"descriptionNumberColor\">Regular Examination</span>]",
+          "stackData": [
+            "MDF_DamageStanceValue_Dinosaur",
+            "MDF_DamageStanceValue_TV",
+            "MDF_DamageStanceValue_Mecha",
+            "MDF_DamageStanceValue_Clock",
+            "MDF_DamageStanceValue_2",
+            "MDF_DamageStanceValue_All"
+          ],
+          "description": "When enemy units in the \"Classroom Channel\" state are switched to \"Off-Class Channel\" via either Breaking their Weaknesses or accumulating the tally, reduces the Toughness of \"Blaznana Monkey Trick\". When all enemy units are Weakness Broken, attacking any enemy units can reduce the Toughness of \"Blaznana Monkey Trick\" by a minor amount. When \"Blaznana Monkey Trick\" is Weakness Broken, all enemy targets will be Broken, and the \"Blaznana Monkey Trick\" will enter the \"Safeguard Breach\" state.",
+          "type": "Other",
+          "statusName": "Regular Examination",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -6227,19 +6203,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageStanceValue_Dinosaur",
-            "MDF_DamageStanceValue_TV",
-            "MDF_DamageStanceValue_Mecha",
-            "MDF_DamageStanceValue_Clock",
-            "MDF_DamageStanceValue_2",
-            "MDF_DamageStanceValue_All"
-          ],
-          "latentQueue": [],
-          "description": "When enemy units in the \"Classroom Channel\" state are switched to \"Off-Class Channel\" via either Breaking their Weaknesses or accumulating the tally, reduces the Toughness of \"Blaznana Monkey Trick\". When all enemy units are Weakness Broken, attacking any enemy units can reduce the Toughness of \"Blaznana Monkey Trick\" by a minor amount. When \"Blaznana Monkey Trick\" is Weakness Broken, all enemy targets will be Broken, and the \"Blaznana Monkey Trick\" will enter the \"Safeguard Breach\" state.",
-          "type": "Other",
-          "statusName": "Regular Examination"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6511,9 +6475,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6776,9 +6738,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7047,9 +7007,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7315,14 +7273,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-521198824\">MModifier_Monster_W3_Theater_IF_Flop</a>",
           "stackType": "Replace",
+          "latentQueue": [
+            "FaceChangeFlag",
+            "DoingFlop"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7427,11 +7387,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "FaceChangeFlag",
-            "DoingFlop"
           ]
         },
         {
@@ -7557,6 +7512,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1218613881\">MModifier_Monster_W3_Theater_IF_Side_Noise_Count</a>",
+          "latentQueue": [
+            "Negative_Count"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -7655,15 +7613,15 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Negative_Count"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2042117256\">MModifier_Monster_W3_Theater_IF_Side_Negative_Count</a>",
+          "latentQueue": [
+            "BreakEndFlag",
+            "InsertCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -8180,16 +8138,19 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "BreakEndFlag",
-            "InsertCheck"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-373657900\">MModifier_Monster_W3_Theater_IF_Side_Negative</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]",
+          "latentQueue": [
+            "DoingFlop",
+            "FaceChangeFlag",
+            "AIFlag"
+          ],
+          "description": "\"Banacademic Office\" members can use \"Classroom Channel\" abilities. When the tally reaches the maximum, switches to \"Off-Class Channel\" and enters the Weakness Broken state.",
+          "type": "Other",
+          "statusName": "Classroom Channel",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -8243,20 +8204,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]",
           "latentQueue": [
             "DoingFlop",
             "FaceChangeFlag",
             "AIFlag"
           ],
-          "description": "\"Banacademic Office\" members can use \"Classroom Channel\" abilities. When the tally reaches the maximum, switches to \"Off-Class Channel\" and enters the Weakness Broken state.",
+          "description": "Banacademic Office members can use \"Off-Class Channel\" abilities. After they are attacked, they will not switch channels.",
           "type": "Other",
-          "statusName": "Classroom Channel"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]",
+          "statusName": "Off-Class Channel",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -8466,16 +8426,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DoingFlop",
-            "FaceChangeFlag",
-            "AIFlag"
-          ],
-          "description": "Banacademic Office members can use \"Off-Class Channel\" abilities. After they are attacked, they will not switch channels.",
-          "type": "Other",
-          "statusName": "Off-Class Channel"
+          ]
         }
       ],
       "references": []

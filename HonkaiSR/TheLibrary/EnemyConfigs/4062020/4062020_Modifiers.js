@@ -18,6 +18,12 @@ const configAbility = {
         "CanBeAddedToServant",
         "CanListenServantCallback"
       ],
+      "useEntitySnapshot": true,
+      "description": "Take a set amount of <span class=\"descriptionNumberColor\">MDF_DamageValue</span> Imaginary DMG at the beginning of the turn.",
+      "type": "Debuff",
+      "effectName": "Hemotort Corruption",
+      "statusName": "Hemotort Corruption",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -85,17 +91,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Take a set amount of <span class=\"descriptionNumberColor\">MDF_DamageValue</span> Imaginary DMG at the beginning of the turn.",
-      "type": "Debuff",
-      "effectName": "Hemotort Corruption",
-      "statusName": "Hemotort Corruption",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1221492183\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_DamageCalculator</a>",
+      "useEntitySnapshot": true,
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -237,25 +238,27 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-689374795\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_Attacked</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-689374795\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_Attacked</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1779981114\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_BeHit</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1779981114\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_BeHit</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-771052398\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_Enhance</a>[<span class=\"descriptionNumberColor\">Hemotort Stain</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_GoldBloodDOTDamageRatio"
+      ],
+      "description": "After attacking, applies \"Hemotort Corruption\" based on the amount of DMG taken (not offset by Shield) to the selected characters.",
+      "type": "Other",
+      "effectName": "Hemotort Stain",
+      "statusName": "Hemotort Stain",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -374,15 +377,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_GoldBloodDOTDamageRatio"
-      ],
-      "latentQueue": [],
-      "description": "After attacking, applies \"Hemotort Corruption\" based on the amount of DMG taken (not offset by Shield) to the selected characters.",
-      "type": "Other",
-      "effectName": "Hemotort Stain",
-      "statusName": "Hemotort Stain"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -417,9 +412,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

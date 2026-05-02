@@ -15,6 +15,7 @@ const configAbility = {
       "modifierFlags": [
         "ElationEchoPoint"
       ],
+      "duration": 2,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -37,13 +38,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "duration": 2
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1521577078\">PlayerBoy_40_Maze_ElationRatio</a>[<span class=\"descriptionNumberColor\">We Are So Back!</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "We Are So Back!",
+      "statusName": "We Are So Back!",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -66,20 +73,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "We Are So Back!",
-      "statusName": "We Are So Back!"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-557103509\">Player_40_Eidolon1_InsertActionSave</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "_Rank02",
+        "_Rank01"
+      ],
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -219,18 +223,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_Rank02",
-        "_Rank01"
-      ],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1221062210\">Player_40_Eidolon1_InsertActionSaveMark</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "_Rank01",
+        "_Rank02"
+      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -247,17 +249,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_Rank01",
-        "_Rank02"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-831933466\">Player_40_InsertElationAbilityShow</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "_Rank01",
+        "_Rank02"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -331,11 +332,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_Rank01",
-        "_Rank02"
       ]
     }
   ],

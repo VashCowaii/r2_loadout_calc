@@ -169,6 +169,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1403833352\">Enemy_W3_Sunday_03_TalkSentenceTriggerController</a>",
+      "latentQueue": [
+        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -207,11 +211,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-        "AIFlag"
       ]
     }
   ]

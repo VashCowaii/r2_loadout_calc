@@ -117,6 +117,17 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1422965526\">BlackSwan_Eidolon6</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"2050002598\">BlackSwan_Eidolon6_SubOnEnemy</a>",
+              "haloStatus": true
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier is Added [Anyone]",
@@ -266,19 +277,6 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}}.[[removeBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"2050002598\">BlackSwan_Eidolon6_SubOnEnemy</a>",
-              "haloStatus": true
             }
           ]
         }
@@ -522,9 +520,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -554,6 +550,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "Lightning RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "statusName": "Seven Pillars of Wisdom",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -578,10 +577,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Lightning RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "statusName": "Seven Pillars of Wisdom"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -590,6 +586,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "Fire RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "statusName": "Seven Pillars of Wisdom",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -614,10 +613,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Fire RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "statusName": "Seven Pillars of Wisdom"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -626,6 +622,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "Physical RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "statusName": "Seven Pillars of Wisdom",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -650,10 +649,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Physical RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "statusName": "Seven Pillars of Wisdom"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -662,6 +658,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "Wind RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "statusName": "Seven Pillars of Wisdom",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -686,10 +685,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Wind RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "statusName": "Seven Pillars of Wisdom"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1701,9 +1697,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1868,9 +1862,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2586,9 +2578,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2908,7 +2898,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1849837561\">M_BlackSwan_Maze_Flag</a>",
-          "stackData": [],
           "latentQueue": [
             "MazeSkill_Triggered",
             "_can_continue"
@@ -3006,9 +2995,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -55
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -3207,9 +3194,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3600,9 +3585,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -4331,6 +4314,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_DefenceDown"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "Decadence, False Twilight",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4355,15 +4345,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "Decadence, False Twilight"
+          ]
         }
       ],
       "targetObjectData": {
@@ -4783,9 +4765,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "KeepOnDeathrattle"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4795,7 +4775,6 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "KeepOnDeathrattle"
           ],
-          "stackData": [],
           "latentQueue": [
             "MazeSkill_Triggered",
             "_can_continue"
@@ -4882,6 +4861,18 @@ const compositeAbilityObject = {
             "RetainCountZero",
             "KeepOnDeathrattle"
           ],
+          "stackData": [
+            "MDF_PropertyValue",
+            "MDF_ResistanceDown",
+            "MDF_Count",
+            "SecondLayer",
+            "ThirdLayer"
+          ],
+          "description": "The DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> during this unit's turn. While in Arcana state, this unit is also considered to be simultaneously inflicted with Wind Shear, Bleed, Burn, and Shock. Additionally, after Arcana causes DMG at the start of each turn, its stacks do not reset. This effect can trigger <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s).",
+          "type": "Debuff",
+          "effectName": "Epiphany",
+          "statusName": "Epiphany",
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5012,20 +5003,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_ResistanceDown",
-            "MDF_Count",
-            "SecondLayer",
-            "ThirdLayer"
-          ],
-          "latentQueue": [],
-          "description": "The DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> during this unit's turn. While in Arcana state, this unit is also considered to be simultaneously inflicted with Wind Shear, Bleed, Burn, and Shock. Additionally, after Arcana causes DMG at the start of each turn, its stacks do not reset. This effect can trigger <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s).",
-          "type": "Debuff",
-          "effectName": "Epiphany",
-          "statusName": "Epiphany",
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5094,6 +5072,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1900357632\">M_BlackSwan_DOT_DefenceIgnore</a>",
           "stackType": "ReplaceByCaster",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -5125,8 +5104,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5137,6 +5115,20 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "DynamicInjectLoop"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "Basic_DamagePercentage",
+            "ExtraLayer_DamagePercentage",
+            "SecondLayer",
+            "Spread_DamagePercentage",
+            "ThirdLayer",
+            "DefenceIgnore",
+            "Cast_By_Level"
+          ],
+          "description": "Takes Wind DMG at the start of each turn. Being afflicted with Arcana will also be considered as suffering from Wind Shear. This state stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> times.",
+          "type": "Debuff",
+          "effectName": "Arcana",
+          "statusName": "Arcana",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -6293,22 +6285,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "Basic_DamagePercentage",
-            "ExtraLayer_DamagePercentage",
-            "SecondLayer",
-            "Spread_DamagePercentage",
-            "ThirdLayer",
-            "DefenceIgnore",
-            "Cast_By_Level"
-          ],
-          "latentQueue": [],
-          "description": "Takes Wind DMG at the start of each turn. Being afflicted with Arcana will also be considered as suffering from Wind Shear. This state stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> times.",
-          "type": "Debuff",
-          "effectName": "Arcana",
-          "statusName": "Arcana"
+          ]
         }
       ],
       "references": []

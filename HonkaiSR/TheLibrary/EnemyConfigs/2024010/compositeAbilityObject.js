@@ -143,9 +143,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -187,9 +185,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -581,9 +577,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -664,6 +658,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak"
           ],
+          "stackData": [
+            "MDF_DefenceAddedRatio"
+          ],
+          "description": "DEF increases. Toughness cannot be reduced.",
+          "type": "Buff",
+          "effectName": "DEF Boost",
+          "statusName": "Hardy Leaf Sheath",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -703,15 +704,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DefenceAddedRatio"
-          ],
-          "latentQueue": [],
-          "description": "DEF increases. Toughness cannot be reduced.",
-          "type": "Buff",
-          "effectName": "DEF Boost",
-          "statusName": "Hardy Leaf Sheath"
+          ]
         }
       ]
     },
@@ -975,6 +968,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1765961654\">Enemy_W2_Xuanlu_MinionMark_4</a>",
+          "stackData": [
+            "MDF_MaxMinionCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1073,11 +1069,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxMinionCount"
-          ],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1204,6 +1196,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1849849749\">Enemy_W2_Xuanlu_MinionMark_3</a>",
+          "stackData": [
+            "MDF_MaxMinionCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1302,11 +1297,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxMinionCount"
-          ],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1444,6 +1435,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1866627368\">Enemy_W2_Xuanlu_MinionMark_2</a>",
+          "stackData": [
+            "MDF_MaxMinionCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1542,11 +1536,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxMinionCount"
-          ],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1673,6 +1663,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1816294511\">Enemy_W2_Xuanlu_MinionMark_1</a>",
+          "stackData": [
+            "MDF_MaxMinionCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1771,11 +1764,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxMinionCount"
-          ],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1935,9 +1924,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1979,9 +1966,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2089,9 +2074,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2115,15 +2098,14 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-561335331\">Enemy_W2_Xuanlu_SecondPhase</a>",
+          "latentQueue": [
+            "AIFlag",
+            "TurnFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag",
-            "TurnFlag"
           ]
         },
         {
@@ -2237,9 +2219,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2308,9 +2288,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2457,9 +2435,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

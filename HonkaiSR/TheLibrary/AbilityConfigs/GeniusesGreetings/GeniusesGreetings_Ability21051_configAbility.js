@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-833650413\">LC_21051_Sub</a>[<span class=\"descriptionNumberColor\">Basic ATK DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Basic ATK DMG increases by <span class=\"descriptionNumberColor\">#SkillEquip_P2_DamageAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "Basic ATK DMG Boost",
+      "statusName": "Basic ATK DMG Boost",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -45,11 +49,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Basic ATK DMG increases by <span class=\"descriptionNumberColor\">#SkillEquip_P2_DamageAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "Basic ATK DMG Boost",
-      "statusName": "Basic ATK DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -101,9 +101,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

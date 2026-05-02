@@ -45,6 +45,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-943382250\">Modifier_ChallengePeakBattle_ExtremeAbility_0013_02</a>[<span class=\"descriptionNumberColor\">Depowered++</span>]",
+      "description": "Decreases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0013_ADF_2</span> outside this unit's turn.",
+      "type": "Other",
+      "statusName": "Depowered++",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -297,10 +300,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "description": "Decreases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0013_ADF_2</span> outside this unit's turn.",
-      "type": "Other",
-      "statusName": "Depowered++"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -379,9 +379,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

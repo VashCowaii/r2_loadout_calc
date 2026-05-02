@@ -12,6 +12,144 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
       "stackType": "ReplaceByCaster",
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_PropertyRatio",
+        "MDF_BasicDamagePercentage",
+        "MDF_PointB3_P1_Basic",
+        "MDF_PointB3_P2_Delta",
+        "MDF_PointB3_P3_Ratio",
+        "MDF_PointB3_P4_Max",
+        "MDF_Rank04_P2_ExtraDamagePercentage"
+      ],
+      "description": "For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_DamagePercentage</span> of the original DMG.",
+      "type": "Buff",
+      "effectName": "Mem's Support",
+      "statusName": "Mem's Support",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}.[[getMemosprite]] | {{Modifier Holder}}.[[getSummoner]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>",
+          "refModifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
+          "aliveOnly": "False",
+          "haloStatus": true,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Eidolon Activated",
+                "eidolon": 1
+              },
+              {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Target Exists",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}.[[getMemosprite]]"
+                    }
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}.[[getMemosprite]]"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
+                  }
+                ],
+                "invertCondition": true
+              },
+              {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Target Exists",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}.[[getSummoner]]"
+                    }
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}.[[getSummoner]]"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
+                  }
+                ],
+                "invertCondition": true
+              }
+            ]
+          },
+          "duration": -1,
+          "valuePerStack": {
+            "MDF_PropertyRatio": {
+              "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
+              "displayLines": "MDF_PropertyRatio",
+              "constants": [],
+              "variables": [
+                "MDF_PropertyRatio"
+              ]
+            },
+            "MDF_BasicDamagePercentage": {
+              "operator": "Variables[0] (MDF_BasicDamagePercentage) || RETURN",
+              "displayLines": "MDF_BasicDamagePercentage",
+              "constants": [],
+              "variables": [
+                "MDF_BasicDamagePercentage"
+              ]
+            },
+            "MDF_PointB3_P1_Basic": {
+              "operator": "Variables[0] (MDF_PointB3_P1_Basic) || RETURN",
+              "displayLines": "MDF_PointB3_P1_Basic",
+              "constants": [],
+              "variables": [
+                "MDF_PointB3_P1_Basic"
+              ]
+            },
+            "MDF_PointB3_P2_Delta": {
+              "operator": "Variables[0] (MDF_PointB3_P2_Delta) || RETURN",
+              "displayLines": "MDF_PointB3_P2_Delta",
+              "constants": [],
+              "variables": [
+                "MDF_PointB3_P2_Delta"
+              ]
+            },
+            "MDF_PointB3_P3_Ratio": {
+              "operator": "Variables[0] (MDF_PointB3_P3_Ratio) || RETURN",
+              "displayLines": "MDF_PointB3_P3_Ratio",
+              "constants": [],
+              "variables": [
+                "MDF_PointB3_P3_Ratio"
+              ]
+            },
+            "MDF_PointB3_P4_Max": {
+              "operator": "Variables[0] (MDF_PointB3_P4_Max) || RETURN",
+              "displayLines": "MDF_PointB3_P4_Max",
+              "constants": [],
+              "variables": [
+                "MDF_PointB3_P4_Max"
+              ]
+            },
+            "MDF_Eidolon4_P2_ExtraDamagePercentage": {
+              "operator": "Variables[0] (MDF_Eidolon4_P2_ExtraDamagePercentage) || RETURN",
+              "displayLines": "MDF_Eidolon4_P2_ExtraDamagePercentage",
+              "constants": [],
+              "variables": [
+                "MDF_Eidolon4_P2_ExtraDamagePercentage"
+              ]
+            },
+            "Is_Copy": 1
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -369,151 +507,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_PropertyRatio",
-        "MDF_BasicDamagePercentage",
-        "MDF_PointB3_P1_Basic",
-        "MDF_PointB3_P2_Delta",
-        "MDF_PointB3_P3_Ratio",
-        "MDF_PointB3_P4_Max",
-        "MDF_Rank04_P2_ExtraDamagePercentage"
-      ],
-      "latentQueue": [],
-      "description": "For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_DamagePercentage</span> of the original DMG.",
-      "type": "Buff",
-      "effectName": "Mem's Support",
-      "statusName": "Mem's Support",
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}.[[getMemosprite]] | {{Modifier Holder}}.[[getSummoner]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>",
-          "refModifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
-          "aliveOnly": "False",
-          "haloStatus": true,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Eidolon Activated",
-                "eidolon": 1
-              },
-              {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Target Exists",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}.[[getMemosprite]]"
-                    }
-                  },
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}.[[getMemosprite]]"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
-                  }
-                ],
-                "invertCondition": true
-              },
-              {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Target Exists",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}.[[getSummoner]]"
-                    }
-                  },
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}.[[getSummoner]]"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
-                  }
-                ],
-                "invertCondition": true
-              }
-            ]
-          },
-          "duration": -1,
-          "valuePerStack": {
-            "MDF_PropertyRatio": {
-              "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-              "displayLines": "MDF_PropertyRatio",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyRatio"
-              ]
-            },
-            "MDF_BasicDamagePercentage": {
-              "operator": "Variables[0] (MDF_BasicDamagePercentage) || RETURN",
-              "displayLines": "MDF_BasicDamagePercentage",
-              "constants": [],
-              "variables": [
-                "MDF_BasicDamagePercentage"
-              ]
-            },
-            "MDF_PointB3_P1_Basic": {
-              "operator": "Variables[0] (MDF_PointB3_P1_Basic) || RETURN",
-              "displayLines": "MDF_PointB3_P1_Basic",
-              "constants": [],
-              "variables": [
-                "MDF_PointB3_P1_Basic"
-              ]
-            },
-            "MDF_PointB3_P2_Delta": {
-              "operator": "Variables[0] (MDF_PointB3_P2_Delta) || RETURN",
-              "displayLines": "MDF_PointB3_P2_Delta",
-              "constants": [],
-              "variables": [
-                "MDF_PointB3_P2_Delta"
-              ]
-            },
-            "MDF_PointB3_P3_Ratio": {
-              "operator": "Variables[0] (MDF_PointB3_P3_Ratio) || RETURN",
-              "displayLines": "MDF_PointB3_P3_Ratio",
-              "constants": [],
-              "variables": [
-                "MDF_PointB3_P3_Ratio"
-              ]
-            },
-            "MDF_PointB3_P4_Max": {
-              "operator": "Variables[0] (MDF_PointB3_P4_Max) || RETURN",
-              "displayLines": "MDF_PointB3_P4_Max",
-              "constants": [],
-              "variables": [
-                "MDF_PointB3_P4_Max"
-              ]
-            },
-            "MDF_Eidolon4_P2_ExtraDamagePercentage": {
-              "operator": "Variables[0] (MDF_Eidolon4_P2_ExtraDamagePercentage) || RETURN",
-              "displayLines": "MDF_Eidolon4_P2_ExtraDamagePercentage",
-              "constants": [],
-              "variables": [
-                "MDF_Eidolon4_P2_ExtraDamagePercentage"
-              ]
-            },
-            "Is_Copy": 1
-          }
-        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1895406948\">Memosprite_PlayerBoyServant_30_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyConvert",
+        "MDF_PropertyBase"
+      ],
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Buff",
+      "statusName": "Friends! Together!",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -559,15 +565,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyConvert",
-        "MDF_PropertyBase"
-      ],
-      "latentQueue": [],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Buff",
-      "statusName": "Friends! Together!"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -682,9 +680,7 @@ const configAbility = {
         {
           "eventTrigger": "Extra Action/Turn [Owner]: Start "
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -695,7 +691,6 @@ const configAbility = {
       "stackData": [
         "MDF_Max"
       ],
-      "latentQueue": [],
       "description": "When Charge reaches <span class=\"descriptionNumberColor\">MDF_Max</span>, Mem immediately takes action and can use \"Lemme! Help You!\".",
       "type": "Other",
       "statusName": "Charge"

@@ -109,9 +109,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "End Broken State [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     }

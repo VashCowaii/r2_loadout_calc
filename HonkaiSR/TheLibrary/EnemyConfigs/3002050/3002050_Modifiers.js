@@ -60,13 +60,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1961481854\">Monster_W3_Junk_AttachWeaknessIce</a>",
+      "latentQueue": [
+        "Unlock_Flag",
+        "WeaknessCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -84,16 +86,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Unlock_Flag",
-        "WeaknessCount"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1811165940\">Monster_W3_Junk_AttachWeaknessQuantum</a>",
+      "latentQueue": [
+        "Unlock_Flag",
+        "WeaknessCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -111,16 +112,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Unlock_Flag",
-        "WeaknessCount"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1608631584\">Monster_W3_Junk_AttachWeaknessImaginary</a>",
+      "latentQueue": [
+        "Unlock_Flag",
+        "WeaknessCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -138,16 +138,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Unlock_Flag",
-        "WeaknessCount"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1565920593\">Monster_W3_Junk_AttachWeaknessThunder</a>",
+      "latentQueue": [
+        "Unlock_Flag",
+        "WeaknessCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -165,16 +164,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Unlock_Flag",
-        "WeaknessCount"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2033100009\">Monster_W3_Junk_AttachWeaknessWind</a>",
+      "latentQueue": [
+        "Unlock_Flag",
+        "WeaknessCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -192,16 +190,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Unlock_Flag",
-        "WeaknessCount"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1961937355\">Monster_W3_Junk_AttachWeaknessFire</a>",
+      "latentQueue": [
+        "Unlock_Flag",
+        "WeaknessCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -219,16 +216,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Unlock_Flag",
-        "WeaknessCount"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__90925210\">Monster_W3_Junk_AttachWeaknessPhysical</a>",
+      "latentQueue": [
+        "Unlock_Flag",
+        "WeaknessCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -246,16 +242,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Unlock_Flag",
-        "WeaknessCount"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__945585904\">Monster_W3_Junk_AttackListenerForPuzzle</a>",
+      "latentQueue": [
+        "WeaknessCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -522,16 +516,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "WeaknessCount"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1796573830\">Monster_W3_Junk_AttackAddRatio1</a>[<span class=\"descriptionNumberColor\">The Can's Battle Pose</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddRatioCurrent</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "The Can's Battle Pose",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -620,15 +617,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddRatioCurrent</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "The Can's Battle Pose"
+      ]
     }
   ],
   "references": []

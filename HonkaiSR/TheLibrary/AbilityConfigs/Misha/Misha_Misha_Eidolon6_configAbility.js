@@ -18,6 +18,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1472142053\">Misha_Eidolon6_RecoverBP</a>[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Allies recover <span class=\"descriptionNumberColor\">MDF_Value</span> Skill Point(s) after the next time they use a Skill.",
+      "type": "Buff",
+      "statusName": "Estrangement of Dream",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -46,15 +49,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Allies recover <span class=\"descriptionNumberColor\">MDF_Value</span> Skill Point(s) after the next time they use a Skill.",
-      "type": "Buff",
-      "statusName": "Estrangement of Dream"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-186724559\">Misha_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Estrangement of Dream",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -83,12 +88,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Estrangement of Dream",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -145,9 +145,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

@@ -331,13 +331,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2111915075\">Enemy_W4_DawnsEye_Ability4P2Effect</a>",
+      "latentQueue": [
+        "WeatherPhase02Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -351,10 +352,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "WeatherPhase02Flag"
       ]
     },
     {
@@ -364,9 +361,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

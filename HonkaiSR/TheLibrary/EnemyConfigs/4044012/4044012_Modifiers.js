@@ -71,6 +71,19 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2001837227\">Monster_W4_Theoroi_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Corporeal</span>]",
       "stackType": "Replace",
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_DamageTakenUpRatio_PerLayer"
+      ],
+      "latentQueue": [
+        "MainCount",
+        "AIFlag"
+      ],
+      "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
+      "type": "Debuff",
+      "effectName": "Corporeal",
+      "statusName": "Corporeal",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -100,20 +113,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_DamageTakenUpRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "MainCount",
-        "AIFlag"
-      ],
-      "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
-      "type": "Debuff",
-      "effectName": "Corporeal",
-      "statusName": "Corporeal",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -176,9 +176,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -227,9 +225,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -302,13 +298,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1719897551\">Monster_W4_Theoroi_Ability16_Self</a>",
+      "latentQueue": [
+        "MainCount"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -341,16 +338,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MainCount"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1955128164\">Monster_W4_Theoroi_Ability16_EntangleMark</a>",
-      "stackData": [],
       "latentQueue": [
         "MainCount"
       ]
@@ -361,14 +353,13 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "latentQueue": [
+        "MainCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MainCount"
       ]
     },
     {
@@ -376,36 +367,28 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1115695489\">Monster_W4_Theoroi_Ability13_Mark</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-356060077\">Monster_W4_Theoroi_Ability12_Self</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1299511648\">Monster_W4_Theoroi_Ability04_AlreadyAttack</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1233101616\">Monster_W4_Theoroi_Ability01_Mark</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -500,9 +483,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1860207563\">Monster_W4_Theoroi_LastSummon</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1860207563\">Monster_W4_Theoroi_LastSummon</a>"
     },
     {
       "name": "Modifier Construction",
@@ -546,6 +527,13 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-86387576\">Monster_W4_Theoroi_ReloadControl</a>",
+      "stackData": [
+        "MDF_DamageUpRatio"
+      ],
+      "latentQueue": [
+        "MainCount",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -569,19 +557,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio"
-      ],
-      "latentQueue": [
-        "MainCount",
-        "AIFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1562887426\">Monster_W4_Theoroi_ReloadEffect</a>",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -611,12 +596,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -625,7 +605,6 @@ const configAbility = {
       "stackData": [
         "MDF_PropertyValue"
       ],
-      "latentQueue": [],
       "description": "Each stack increases \"Query: Prime Mover's Outcome\" DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, and additionally inflicts Entanglement on <span class=\"descriptionNumberColor\">MDF_Count</span> target(s).",
       "type": "Buff",
       "effectName": "Infinite Recursion",
@@ -668,6 +647,17 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1039726651\">Monster_W4_Theoroi_Destruction_Self</a>[<span class=\"descriptionNumberColor\">Loading: Mythos</span>]",
+      "stackData": [
+        "MDF_MaxEntityCount"
+      ],
+      "latentQueue": [
+        "MainCount",
+        "AIFlag"
+      ],
+      "description": "Use \"Query: Prime Mover's Outcome\" after <span class=\"descriptionNumberColor\">MDF_EntityCountRemain</span> more instance(s) of any of the following: enemy target defeats, ally character knock-downs, or memosprite disappearances.",
+      "type": "Other",
+      "effectName": "Loading: Mythos",
+      "statusName": "Loading: Mythos",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -935,22 +925,24 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_MaxEntityCount"
-      ],
-      "latentQueue": [
-        "MainCount",
-        "AIFlag"
-      ],
-      "description": "Use \"Query: Prime Mover's Outcome\" after <span class=\"descriptionNumberColor\">MDF_EntityCountRemain</span> more instance(s) of any of the following: enemy target defeats, ally character knock-downs, or memosprite disappearances.",
-      "type": "Other",
-      "effectName": "Loading: Mythos",
-      "statusName": "Loading: Mythos"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__688363638\">Monster_W4_Theoroi_Destruction</a>[<span class=\"descriptionNumberColor\">Retribution of \"Law\"</span>]",
+      "stackData": [
+        "MDF_LoseHPRatio"
+      ],
+      "latentQueue": [
+        "AIFlag",
+        "MainCount",
+        "MDF_InsertCheck",
+        "EntityCountRemain"
+      ],
+      "description": "Lose <span class=\"descriptionNumberColor\">MDF_LoseHPRatio</span> HP after each action.",
+      "type": "Other",
+      "effectName": "Retribution of \"Law\"",
+      "statusName": "Retribution of \"Law\"",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1000,24 +992,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_LoseHPRatio"
-      ],
-      "latentQueue": [
-        "AIFlag",
-        "MainCount",
-        "MDF_InsertCheck",
-        "EntityCountRemain"
-      ],
-      "description": "Lose <span class=\"descriptionNumberColor\">MDF_LoseHPRatio</span> HP after each action.",
-      "type": "Other",
-      "effectName": "Retribution of \"Law\"",
-      "statusName": "Retribution of \"Law\""
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2105282223\">Monster_W4_Theoroi_Reversion</a>[<span class=\"descriptionNumberColor\">Antinomy</span>]",
+      "stackData": [
+        "MDF_CostHPRatio"
+      ],
+      "description": "Ultimate is activated. Using Ultimate consumes HP equal to <span class=\"descriptionNumberColor\">MDF_CostHPRatio</span> of this unit's Max HP, this DMG prioritizes Shield effect reduction and is Non-fatal. If Ultimate is not used during the effect duration, Energy will be regenerated to <span class=\"descriptionNumberColor\">MDF_CurrentSpecialSP</span> points when the effect ends.",
+      "type": "Other",
+      "effectName": "Antinomy",
+      "statusName": "Antinomy",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1320,20 +1307,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_CostHPRatio"
-      ],
-      "latentQueue": [],
-      "description": "Ultimate is activated. Using Ultimate consumes HP equal to <span class=\"descriptionNumberColor\">MDF_CostHPRatio</span> of this unit's Max HP, this DMG prioritizes Shield effect reduction and is Non-fatal. If Ultimate is not used during the effect duration, Energy will be regenerated to <span class=\"descriptionNumberColor\">MDF_CurrentSpecialSP</span> points when the effect ends.",
-      "type": "Other",
-      "effectName": "Antinomy",
-      "statusName": "Antinomy",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-303636173\">Monster_W4_Theoroi_Creation</a>[<span class=\"descriptionNumberColor\">Potential Realization</span>]",
+      "stackData": [
+        "MDF_DamageUpRatio",
+        "MDF_HPHealRatio"
+      ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>, HP is restored by <span class=\"descriptionNumberColor\">MDF_HPHealRatio</span> at the start of turn.",
+      "type": "Buff",
+      "effectName": "Potential Realization",
+      "statusName": "Potential Realization",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1383,21 +1369,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio",
-        "MDF_HPHealRatio"
-      ],
-      "latentQueue": [],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>, HP is restored by <span class=\"descriptionNumberColor\">MDF_HPHealRatio</span> at the start of turn.",
-      "type": "Buff",
-      "effectName": "Potential Realization",
-      "statusName": "Potential Realization"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1628585625\">Monster_W4_Theoroi_Summon</a>",
       "stackType": "Replace",
+      "stackLimit": 4,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1411,13 +1390,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 4,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__584971105\">Monster_W4_Theoroi_Part2</a>",
+      "latentQueue": [
+        "MainCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1608,15 +1588,15 @@ const configAbility = {
         {
           "eventTrigger": "Pre-Death [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MainCount"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__534638248\">Monster_W4_Theoroi_Part1</a>[<span class=\"descriptionNumberColor\">To Logos</span>]",
+      "description": "Use \"SET Proof_Method=Black_Tide\" after <span class=\"descriptionNumberColor\">MDF_CurrentCountRemain</span> more instances of either of the following: enemy target generations or ally memosprite summons.",
+      "type": "Other",
+      "effectName": "To Logos",
+      "statusName": "To Logos",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1944,13 +1924,7 @@ const configAbility = {
         {
           "eventTrigger": "Pre-Death [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Use \"SET Proof_Method=Black_Tide\" after <span class=\"descriptionNumberColor\">MDF_CurrentCountRemain</span> more instances of either of the following: enemy target generations or ally memosprite summons.",
-      "type": "Other",
-      "effectName": "To Logos",
-      "statusName": "To Logos"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2000,9 +1974,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",

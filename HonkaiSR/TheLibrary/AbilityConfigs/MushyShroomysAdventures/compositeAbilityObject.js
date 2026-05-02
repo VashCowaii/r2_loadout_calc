@@ -43,6 +43,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1545116875\">LC_21064_Sub</a>[<span class=\"descriptionNumberColor\">Elation DMG Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Elation DMG taken increases by <span class=\"descriptionNumberColor\">#SkillEquip_P2_ElationDamageTakenRatio</span>.",
+          "type": "Debuff",
+          "effectName": "Elation DMG Vulnerability",
+          "statusName": "Elation DMG Vulnerability",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -74,11 +78,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Elation DMG taken increases by <span class=\"descriptionNumberColor\">#SkillEquip_P2_ElationDamageTakenRatio</span>.",
-          "type": "Debuff",
-          "effectName": "Elation DMG Vulnerability",
-          "statusName": "Elation DMG Vulnerability"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -114,9 +114,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

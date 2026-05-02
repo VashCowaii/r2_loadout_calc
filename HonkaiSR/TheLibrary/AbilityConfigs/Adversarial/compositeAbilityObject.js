@@ -30,6 +30,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -52,11 +56,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -93,9 +93,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

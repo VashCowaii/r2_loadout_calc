@@ -234,9 +234,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Enter Battle",
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -295,9 +293,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -353,9 +349,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -411,9 +405,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -469,9 +461,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -527,9 +517,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -585,9 +573,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -643,9 +629,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -720,6 +704,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-936105590\">Modifier_BattleEventAbility_ChallengePeakBattle_Rage</a>[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
           "stackType": "Replace",
+          "description": "Increases the final DMG dealt by each stack by <span class=\"descriptionNumberColor\">BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio</span>.",
+          "type": "Other",
+          "statusName": "Middlegame Mayhem",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -751,16 +738,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases the final DMG dealt by each stack by <span class=\"descriptionNumberColor\">BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio</span>.",
-          "type": "Other",
-          "statusName": "Middlegame Mayhem"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1148970670\">Modifier_BattleEventAbility_ChallengePeakBattle_CountDown</a>",
           "modifierFlags": [
             "STAT_TurnCountAccumulator"
+          ],
+          "stackData": [
+            "BattleEventTurnLeftParam",
+            "BattleEventTurnLeftParam2",
+            "BattleEventTurnLeftParam3"
           ],
           "execute": [
             {
@@ -1055,13 +1044,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "BattleEventTurnLeftParam",
-            "BattleEventTurnLeftParam2",
-            "BattleEventTurnLeftParam3"
-          ],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1246,9 +1229,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1272,6 +1253,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1313154338\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0018_03</a>[<span class=\"descriptionNumberColor\">Hallowed Abjuration</span>]",
+          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0018_ADF_2</span>.",
+          "type": "Other",
+          "statusName": "Hallowed Abjuration",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1294,14 +1278,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0018_ADF_2</span>.",
-          "type": "Other",
-          "statusName": "Hallowed Abjuration"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1296376719\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0018_02</a>[<span class=\"descriptionNumberColor\">Hallowed Abjuration</span>]",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0018_ADF_1</span>.",
+          "type": "Other",
+          "statusName": "Hallowed Abjuration",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1324,10 +1308,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0018_ADF_1</span>.",
-          "type": "Other",
-          "statusName": "Hallowed Abjuration"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1433,9 +1414,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1459,6 +1438,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1547663194\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0017_02</a>[<span class=\"descriptionNumberColor\">Devastating Sweep</span>]",
+          "description": "Increases Break DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0017_ADF_1</span>. Each time the wearer enters the Weakness Broken state, all allies' actions advance by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0017_ADF_2</span>.",
+          "type": "Other",
+          "statusName": "Devastating Sweep",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -1504,10 +1486,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases Break DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0017_ADF_1</span>. Each time the wearer enters the Weakness Broken state, all allies' actions advance by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0017_ADF_2</span>.",
-          "type": "Other",
-          "statusName": "Devastating Sweep"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1557,9 +1536,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1583,6 +1560,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__628193560\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0016_03</a>[<span class=\"descriptionNumberColor\">Cathartic Applause</span>]",
+          "description": "Gains <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0016_ADF_2</span> Punchline(s) at the start of each turn.",
+          "type": "Other",
+          "statusName": "Cathartic Applause",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -1601,14 +1581,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Gains <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0016_ADF_2</span> Punchline(s) at the start of each turn.",
-          "type": "Other",
-          "statusName": "Cathartic Applause"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__644971179\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0016_02</a>[<span class=\"descriptionNumberColor\">Cathartic Applause</span>]",
+          "description": "Elation DMG dealt ignores <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0016_ADF_1</span> of the target's DEF.",
+          "type": "Other",
+          "statusName": "Cathartic Applause",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1636,10 +1616,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Elation DMG dealt ignores <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0016_ADF_1</span> of the target's DEF.",
-          "type": "Other",
-          "statusName": "Cathartic Applause"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1725,9 +1702,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1751,6 +1726,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1429915339\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0015_03</a>[<span class=\"descriptionNumberColor\">Logistics Boost</span>]",
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0015_ADF_2</span>.",
+          "type": "Other",
+          "statusName": "Logistics Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1773,14 +1751,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0015_ADF_2</span>.",
-          "type": "Other",
-          "statusName": "Logistics Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1413137720\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0015_02</a>[<span class=\"descriptionNumberColor\">Logistics Boost</span>]",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0015_ADF_1</span>.",
+          "type": "Other",
+          "statusName": "Logistics Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1803,10 +1781,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0015_ADF_1</span>.",
-          "type": "Other",
-          "statusName": "Logistics Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1889,9 +1864,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1916,6 +1889,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2102222782\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0014_03</a>[<span class=\"descriptionNumberColor\">Add Insult to Injury</span>]",
           "stackType": "Replace",
+          "description": "Each stack increases DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0014_ADF_1</span>. This effect can stack up to <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0014_ADF_3</span> time(s).",
+          "type": "Other",
+          "statusName": "Add Insult to Injury",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1945,11 +1922,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0014_ADF_1</span>. This effect can stack up to <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0014_ADF_3</span> time(s).",
-          "type": "Other",
-          "statusName": "Add Insult to Injury",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2154,9 +2127,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2180,6 +2151,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1779059478\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0013_02</a>[<span class=\"descriptionNumberColor\">Beaming with Joy</span>]",
+          "description": "Elation stat increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0013_ADF_1</span>.",
+          "type": "Other",
+          "statusName": "Beaming with Joy",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2202,10 +2176,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Elation stat increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0013_ADF_1</span>.",
-          "type": "Other",
-          "statusName": "Beaming with Joy"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2298,9 +2269,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2324,6 +2293,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-160874884\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0012_03</a>[<span class=\"descriptionNumberColor\">Thrilling Delight</span>]",
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0012_ADF_2</span>.",
+          "type": "Other",
+          "statusName": "Thrilling Delight",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2346,14 +2318,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0012_ADF_2</span>.",
-          "type": "Other",
-          "statusName": "Thrilling Delight"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-144097265\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0012_02</a>[<span class=\"descriptionNumberColor\">Thrilling Delight</span>]",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0012_ADF_1</span>.",
+          "type": "Other",
+          "statusName": "Thrilling Delight",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2376,10 +2348,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0012_ADF_1</span>.",
-          "type": "Other",
-          "statusName": "Thrilling Delight"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2539,9 +2508,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2565,6 +2532,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1374245116\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0011_02</a>[<span class=\"descriptionNumberColor\">Tears Behind Smiles</span>]",
+          "description": "Increases Final DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, but cannot take CRIT Hits.",
+          "type": "Other",
+          "statusName": "Tears Behind Smiles",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -2586,10 +2556,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases Final DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, but cannot take CRIT Hits.",
-          "type": "Other",
-          "statusName": "Tears Behind Smiles"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2648,9 +2615,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2675,6 +2640,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1130750663\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0010_02</a>[<span class=\"descriptionNumberColor\">Elation Instant</span>]",
           "stackType": "Replace",
+          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Other",
+          "statusName": "Elation Instant",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2804,10 +2772,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Other",
-          "statusName": "Elation Instant"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2902,9 +2867,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2956,6 +2919,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1236507091\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0009_02</a>[<span class=\"descriptionNumberColor\">Seize the Moment</span>]",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0009_ADF_1</span>. After using an attack, applies a Weakness of this unit's Type to the enemy target. This effect is removed when the enemy target recovers from the Weakness Break state.",
+          "type": "Other",
+          "statusName": "Seize the Moment",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3501,10 +3467,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0009_ADF_1</span>. After using an attack, applies a Weakness of this unit's Type to the enemy target. This effect is removed when the enemy target recovers from the Weakness Break state.",
-          "type": "Other",
-          "statusName": "Seize the Moment"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3551,9 +3514,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3635,6 +3596,11 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1560321548\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_04</a>",
+          "stackData": [
+            "ChallengePeakBattle_Plugins_0008_ADF_1",
+            "ChallengePeakBattle_Plugins_0008_ADF_2",
+            "ChallengePeakBattle_Plugins_0008_ADF_3"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3676,18 +3642,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "ChallengePeakBattle_Plugins_0008_ADF_1",
-            "ChallengePeakBattle_Plugins_0008_ADF_2",
-            "ChallengePeakBattle_Plugins_0008_ADF_3"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1577099167\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03</a>[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "ChallengePeakBattle_Plugins_0008_ADF_1",
+            "ChallengePeakBattle_Plugins_0008_ADF_2"
+          ],
+          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0008_ADF_2</span>.",
+          "type": "Other",
+          "effectName": "ATK Boost",
+          "statusName": "Impassioned Spirits",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3717,21 +3686,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "ChallengePeakBattle_Plugins_0008_ADF_1",
-            "ChallengePeakBattle_Plugins_0008_ADF_2"
-          ],
-          "latentQueue": [],
-          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0008_ADF_2</span>.",
-          "type": "Other",
-          "effectName": "ATK Boost",
-          "statusName": "Impassioned Spirits",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1593876786\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_02</a>[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
+          "description": "Increases ATK by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0008_ADF_1</span>.",
+          "type": "Other",
+          "statusName": "Impassioned Spirits",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3754,10 +3716,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases ATK by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0008_ADF_1</span>.",
-          "type": "Other",
-          "statusName": "Impassioned Spirits"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3908,9 +3867,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3934,6 +3891,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1588986863\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_04</a>[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
+          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0007_ADF_1</span>.",
+          "type": "Other",
+          "statusName": "No Break No Rise",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3956,15 +3916,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0007_ADF_1</span>.",
-          "type": "Other",
-          "statusName": "No Break No Rise"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1538654006\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_03</a>[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
           "stackType": "Replace",
+          "description": "Each stack increases the Break DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0007_ADF_2</span>. This effect can stack up to <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0007_ADF_3</span> time(s).",
+          "type": "Other",
+          "statusName": "No Break No Rise",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -4007,11 +3968,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases the Break DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0007_ADF_2</span>. This effect can stack up to <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0007_ADF_3</span> time(s).",
-          "type": "Other",
-          "statusName": "No Break No Rise",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4179,9 +4136,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4263,6 +4218,11 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__720269094\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_04</a>",
+          "stackData": [
+            "ChallengePeakBattle_Plugins_0006_ADF_1",
+            "ChallengePeakBattle_Plugins_0006_ADF_2",
+            "ChallengePeakBattle_Plugins_0006_ADF_3"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4304,18 +4264,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "ChallengePeakBattle_Plugins_0006_ADF_1",
-            "ChallengePeakBattle_Plugins_0006_ADF_2",
-            "ChallengePeakBattle_Plugins_0006_ADF_3"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__770601951\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03</a>[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "ChallengePeakBattle_Plugins_0006_ADF_1",
+            "ChallengePeakBattle_Plugins_0006_ADF_2"
+          ],
+          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0006_ADF_2</span>.",
+          "type": "Other",
+          "effectName": "SPD Boost",
+          "statusName": "Fluid Dash",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4345,21 +4308,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "ChallengePeakBattle_Plugins_0006_ADF_1",
-            "ChallengePeakBattle_Plugins_0006_ADF_2"
-          ],
-          "latentQueue": [],
-          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0006_ADF_2</span>.",
-          "type": "Other",
-          "effectName": "SPD Boost",
-          "statusName": "Fluid Dash",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__753824332\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_02</a>[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
+          "description": "All-Type RES PEN for DoT dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0006_ADF_1</span>.",
+          "type": "Other",
+          "statusName": "Fluid Dash",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -4387,10 +4343,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "All-Type RES PEN for DoT dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0006_ADF_1</span>.",
-          "type": "Other",
-          "statusName": "Fluid Dash"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4517,9 +4470,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4601,6 +4552,11 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-63462919\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_04</a>",
+          "stackData": [
+            "ChallengePeakBattle_Plugins_0005_ADF_1",
+            "ChallengePeakBattle_Plugins_0005_ADF_2",
+            "ChallengePeakBattle_Plugins_0005_ADF_3"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4642,18 +4598,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "ChallengePeakBattle_Plugins_0005_ADF_1",
-            "ChallengePeakBattle_Plugins_0005_ADF_2",
-            "ChallengePeakBattle_Plugins_0005_ADF_3"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-46685300\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_03</a>[<span class=\"descriptionNumberColor\">Power Surge</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "ChallengePeakBattle_Plugins_0005_ADF_1",
+            "ChallengePeakBattle_Plugins_0005_ADF_2"
+          ],
+          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0005_ADF_2</span>.",
+          "type": "Other",
+          "effectName": "ATK Boost",
+          "statusName": "Power Surge",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4683,21 +4642,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "ChallengePeakBattle_Plugins_0005_ADF_1",
-            "ChallengePeakBattle_Plugins_0005_ADF_2"
-          ],
-          "latentQueue": [],
-          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0005_ADF_2</span>.",
-          "type": "Other",
-          "effectName": "ATK Boost",
-          "statusName": "Power Surge",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-29907681\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0005_02</a>[<span class=\"descriptionNumberColor\">Power Surge</span>]",
+          "description": "Basic ATK, Skill, and Ultimate DMG dealt increase by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0005_ADF_1</span>.",
+          "type": "Other",
+          "statusName": "Power Surge",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -4727,10 +4679,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Basic ATK, Skill, and Ultimate DMG dealt increase by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0005_ADF_1</span>.",
-          "type": "Other",
-          "statusName": "Power Surge"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4857,9 +4806,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4911,6 +4858,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-485013702\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_02</a>[<span class=\"descriptionNumberColor\">Sanguine Vitality</span>]",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0004_ADF_1</span>.",
+          "type": "Other",
+          "statusName": "Sanguine Vitality",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4933,10 +4883,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0004_ADF_1</span>.",
-          "type": "Other",
-          "statusName": "Sanguine Vitality"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5041,9 +4988,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5068,6 +5013,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1147866258\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0003_03</a>[<span class=\"descriptionNumberColor\">Hammer and Anvil</span>]",
           "stackType": "Replace",
+          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0003_ADF_1</span> and All-Type RES PEN increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0003_ADF_2</span>.",
+          "type": "Other",
+          "statusName": "Hammer and Anvil",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5106,10 +5054,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0003_ADF_1</span> and All-Type RES PEN increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0003_ADF_2</span>.",
-          "type": "Other",
-          "statusName": "Hammer and Anvil"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5336,9 +5281,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5404,6 +5347,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1527327304\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_02</a>[<span class=\"descriptionNumberColor\">Infantry and Cavalry</span>]",
+          "description": "Ignores <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0002_ADF_1</span> of the target's DEF when using Ultimate. After Ultimate deals DMG, the next Skill ignores <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0002_ADF_2</span> of the target's DEF.",
+          "type": "Other",
+          "statusName": "Infantry and Cavalry",
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Any",
@@ -5555,10 +5501,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Ignores <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0002_ADF_1</span> of the target's DEF when using Ultimate. After Ultimate deals DMG, the next Skill ignores <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0002_ADF_2</span> of the target's DEF.",
-          "type": "Other",
-          "statusName": "Infantry and Cavalry"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5613,9 +5556,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5658,6 +5599,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-963813829\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001_02</a>[<span class=\"descriptionNumberColor\">Think Outside the Box</span>]",
           "stackType": "Replace",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0001_ADF_1</span>.",
+          "type": "Other",
+          "statusName": "Think Outside the Box",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5680,14 +5624,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0001_ADF_1</span>.",
-          "type": "Other",
-          "statusName": "Think Outside the Box"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2049883012\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001</a>",
+          "latentQueue": [
+            "_TeamLight_Num",
+            "_MDF_Layer"
+          ],
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -5834,11 +5779,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_TeamLight_Num",
-            "_MDF_Layer"
           ]
         }
       ]
@@ -5863,6 +5803,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1614669524\">Modifier_ChallengePeakBattle_EnhancedAbility_0017_02</a>[<span class=\"descriptionNumberColor\">Stability+</span>]",
+          "description": "DMG dealt decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0017_ADF_1</span> and DMG received decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0017_ADF_2</span>.",
+          "type": "Other",
+          "statusName": "Stability+",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5901,10 +5844,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0017_ADF_1</span> and DMG received decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0017_ADF_2</span>.",
-          "type": "Other",
-          "statusName": "Stability+"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5959,9 +5899,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5985,6 +5923,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-920276419\">Modifier_ChallengePeakBattle_BaseAbility_0017_02</a>[<span class=\"descriptionNumberColor\">Stability</span>]",
+          "description": "DMG dealt decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0017_ADF_1</span> and DMG received decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0017_ADF_2</span>.",
+          "type": "Other",
+          "statusName": "Stability",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6023,10 +5964,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0017_ADF_1</span> and DMG received decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0017_ADF_2</span>.",
-          "type": "Other",
-          "statusName": "Stability"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6081,9 +6019,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6115,6 +6051,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-546541489\">Modifier_ChallengePeakBattle_EnhancedAbility_0016_04</a>[<span class=\"descriptionNumberColor\">Equilibrium+</span>]",
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0016_ADF_4</span>.",
+          "type": "Other",
+          "statusName": "Equilibrium+",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6137,14 +6076,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0016_ADF_4</span>.",
-          "type": "Other",
-          "statusName": "Equilibrium+"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-596874346\">Modifier_ChallengePeakBattle_EnhancedAbility_0016_03</a>[<span class=\"descriptionNumberColor\">Equilibrium+</span>]",
+          "description": "SPD decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0016_ADF_2</span>.",
+          "type": "Other",
+          "statusName": "Equilibrium+",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6167,10 +6106,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0016_ADF_2</span>.",
-          "type": "Other",
-          "statusName": "Equilibrium+"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6350,9 +6286,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6384,6 +6318,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1945821486\">Modifier_ChallengePeakBattle_BaseAbility_0016_04</a>[<span class=\"descriptionNumberColor\">Equilibrium</span>]",
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0016_ADF_4</span>.",
+          "type": "Other",
+          "statusName": "Equilibrium",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6406,14 +6343,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0016_ADF_4</span>.",
-          "type": "Other",
-          "statusName": "Equilibrium"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2029709581\">Modifier_ChallengePeakBattle_BaseAbility_0016_03</a>[<span class=\"descriptionNumberColor\">Equilibrium</span>]",
+          "description": "SPD decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0016_ADF_2</span>.",
+          "type": "Other",
+          "statusName": "Equilibrium",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6436,10 +6373,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0016_ADF_2</span>.",
-          "type": "Other",
-          "statusName": "Equilibrium"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6619,9 +6553,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6646,6 +6578,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1480313555\">Modifier_ChallengePeakBattle_BaseAbility_0015_02</a>[<span class=\"descriptionNumberColor\">Honing the Blade</span>]",
           "stackType": "Replace",
+          "description": "Each stack reduces CRIT DMG by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0015_ADF_2</span>. Each time any ally consumes 1 Skill Point, 1 stack of this effect is removed.",
+          "type": "Other",
+          "statusName": "Honing the Blade",
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6873,11 +6809,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack reduces CRIT DMG by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0015_ADF_2</span>. Each time any ally consumes 1 Skill Point, 1 stack of this effect is removed.",
-          "type": "Other",
-          "statusName": "Honing the Blade",
-          "addStacksPerTrigger": -1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6948,9 +6880,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6975,6 +6905,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1706325911\">Modifier_ChallengePeakBattle_ExtremeAbility_0014_02</a>[<span class=\"descriptionNumberColor\">Confinement++</span>]",
           "stackType": "Replace",
+          "description": "Each stack decreases DMG dealt by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0014_ADF_2</span>, and 1 stack is removed after each Ultimate used.",
+          "type": "Other",
+          "statusName": "Confinement++",
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7175,11 +7109,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack decreases DMG dealt by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0014_ADF_2</span>, and 1 stack is removed after each Ultimate used.",
-          "type": "Other",
-          "statusName": "Confinement++",
-          "addStacksPerTrigger": -1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7250,9 +7180,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7277,6 +7205,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1953155713\">Modifier_ChallengePeakBattle_EnhancedAbility_0014_02</a>[<span class=\"descriptionNumberColor\">Confinement+</span>]",
           "stackType": "Replace",
+          "description": "Each stack decreases DMG dealt by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0014_ADF_2</span>, and 1 stack is removed after each Ultimate used.",
+          "type": "Other",
+          "statusName": "Confinement+",
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7477,11 +7409,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack decreases DMG dealt by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0014_ADF_2</span>, and 1 stack is removed after each Ultimate used.",
-          "type": "Other",
-          "statusName": "Confinement+",
-          "addStacksPerTrigger": -1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7552,9 +7480,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7579,6 +7505,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1350070322\">Modifier_ChallengePeakBattle_BaseAbility_0014_02</a>[<span class=\"descriptionNumberColor\">Confinement</span>]",
           "stackType": "Replace",
+          "description": "Each stack decreases DMG dealt by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0014_ADF_2</span>, and 1 stack is removed after each Ultimate used.",
+          "type": "Other",
+          "statusName": "Confinement",
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7779,11 +7709,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack decreases DMG dealt by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0014_ADF_2</span>, and 1 stack is removed after each Ultimate used.",
-          "type": "Other",
-          "statusName": "Confinement",
-          "addStacksPerTrigger": -1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7854,9 +7780,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7907,6 +7831,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-943382250\">Modifier_ChallengePeakBattle_ExtremeAbility_0013_02</a>[<span class=\"descriptionNumberColor\">Depowered++</span>]",
+          "description": "Decreases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0013_ADF_2</span> outside this unit's turn.",
+          "type": "Other",
+          "statusName": "Depowered++",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -8159,10 +8086,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "description": "Decreases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0013_ADF_2</span> outside this unit's turn.",
-          "type": "Other",
-          "statusName": "Depowered++"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8241,9 +8165,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8294,6 +8216,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-416709080\">Modifier_ChallengePeakBattle_EnhancedAbility_0013_02</a>[<span class=\"descriptionNumberColor\">Depowered+</span>]",
+          "description": "Decreases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0013_ADF_2</span> outside this unit's turn.",
+          "type": "Other",
+          "statusName": "Depowered+",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -8546,10 +8471,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "description": "Decreases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0013_ADF_2</span> outside this unit's turn.",
-          "type": "Other",
-          "statusName": "Depowered+"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8628,9 +8550,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8681,6 +8601,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1693779391\">Modifier_ChallengePeakBattle_BaseAbility_0013_02</a>[<span class=\"descriptionNumberColor\">Depowered</span>]",
+          "description": "Decreases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0013_ADF_2</span> outside this unit's turn.",
+          "type": "Other",
+          "statusName": "Depowered",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -8933,10 +8856,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "description": "Decreases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0013_ADF_2</span> outside this unit's turn.",
-          "type": "Other",
-          "statusName": "Depowered"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9015,9 +8935,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9042,6 +8960,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1351261938\">Modifier_ChallengePeakBattle_EnhancedAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement+</span>]",
           "stackType": "Replace",
+          "description": "Each stack reduces DMG received by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_1</span> and CRIT DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_3</span>, stackable up to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_2</span> time(s). Stacks are cleared at the start of turn or when entering the Weakness Break state.",
+          "type": "Other",
+          "statusName": "Unending Refinement+",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -9086,11 +9008,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack reduces DMG received by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_1</span> and CRIT DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_3</span>, stackable up to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_2</span> time(s). Stacks are cleared at the start of turn or when entering the Weakness Break state.",
-          "type": "Other",
-          "statusName": "Unending Refinement+",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9367,9 +9285,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9394,6 +9310,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-558919625\">Modifier_ChallengePeakBattle_BaseAbility_0012_03</a>[<span class=\"descriptionNumberColor\">Unending Refinement</span>]",
           "stackType": "Replace",
+          "description": "Each stack reduces DMG received by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_1</span> and CRIT DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_3</span>, stackable up to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_2</span> time(s). Stacks are cleared at the start of turn or when entering the Weakness Break state.",
+          "type": "Other",
+          "statusName": "Unending Refinement",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -9438,11 +9358,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack reduces DMG received by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_1</span> and CRIT DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_3</span>, stackable up to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0012_ADF_2</span> time(s). Stacks are cleared at the start of turn or when entering the Weakness Break state.",
-          "type": "Other",
-          "statusName": "Unending Refinement",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9719,9 +9635,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9821,9 +9735,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9923,9 +9835,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -11580,9 +11490,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -11606,6 +11514,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__574373263\">Modifier_ChallengePeakBattle_ExtremeAbility_0009_02</a>[<span class=\"descriptionNumberColor\">Interference++</span>]",
+          "description": "After using an attack, randomly inflicts <span class=\"descriptionNumberColor\">ChallengePeakBattle_0009_ADF_1</span> or <span class=\"descriptionNumberColor\">ChallengePeakBattle_0009_ADF_2</span> action delay on the target.",
+          "type": "Other",
+          "statusName": "Interference++",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -11650,10 +11561,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After using an attack, randomly inflicts <span class=\"descriptionNumberColor\">ChallengePeakBattle_0009_ADF_1</span> or <span class=\"descriptionNumberColor\">ChallengePeakBattle_0009_ADF_2</span> action delay on the target.",
-          "type": "Other",
-          "statusName": "Interference++"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -11703,9 +11611,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -11729,6 +11635,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__141969773\">Modifier_ChallengePeakBattle_EnhancedAbility_0009_02</a>[<span class=\"descriptionNumberColor\">Interference+</span>]",
+          "description": "After using an attack, randomly inflicts <span class=\"descriptionNumberColor\">ChallengePeakBattle_0009_ADF_1</span> or <span class=\"descriptionNumberColor\">ChallengePeakBattle_0009_ADF_2</span> action delay on the target.",
+          "type": "Other",
+          "statusName": "Interference+",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -11773,10 +11682,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After using an attack, randomly inflicts <span class=\"descriptionNumberColor\">ChallengePeakBattle_0009_ADF_1</span> or <span class=\"descriptionNumberColor\">ChallengePeakBattle_0009_ADF_2</span> action delay on the target.",
-          "type": "Other",
-          "statusName": "Interference+"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -11826,9 +11732,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -11852,6 +11756,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__954434320\">Modifier_ChallengePeakBattle_BaseAbility_0009_02</a>[<span class=\"descriptionNumberColor\">Interference</span>]",
+          "description": "After using an attack, randomly inflicts <span class=\"descriptionNumberColor\">ChallengePeakBattle_0009_ADF_1</span> or <span class=\"descriptionNumberColor\">ChallengePeakBattle_0009_ADF_2</span> action delay on the target.",
+          "type": "Other",
+          "statusName": "Interference",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -11896,10 +11803,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After using an attack, randomly inflicts <span class=\"descriptionNumberColor\">ChallengePeakBattle_0009_ADF_1</span> or <span class=\"descriptionNumberColor\">ChallengePeakBattle_0009_ADF_2</span> action delay on the target.",
-          "type": "Other",
-          "statusName": "Interference"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -11949,9 +11853,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -11976,6 +11878,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2147319581\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting+</span>]",
           "stackType": "Replace",
+          "description": "Gain 1 stack when attacked. When stacks reach <span class=\"descriptionNumberColor\">ChallengePeakBattle_0008_ADF_1</span>, take action immediately. Stack count resets at the start of turn.",
+          "type": "Other",
+          "statusName": "Taunting+",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -12019,11 +11925,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Gain 1 stack when attacked. When stacks reach <span class=\"descriptionNumberColor\">ChallengePeakBattle_0008_ADF_1</span>, take action immediately. Stack count resets at the start of turn.",
-          "type": "Other",
-          "statusName": "Taunting+",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -12086,6 +11988,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2130870096\">Modifier_ChallengePeakBattle_EnhancedAbility_0008_02</a>",
           "stackType": "Replace",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -12166,8 +12069,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -12240,9 +12142,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -12267,6 +12167,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1051243622\">Modifier_ChallengePeakBattle_BaseAbility_0008_03</a>[<span class=\"descriptionNumberColor\">Taunting</span>]",
           "stackType": "Replace",
+          "description": "Gain 1 stack when attacked. When stacks reach <span class=\"descriptionNumberColor\">ChallengePeakBattle_0008_ADF_1</span>, take action immediately. Stack count resets at the start of turn.",
+          "type": "Other",
+          "statusName": "Taunting",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -12310,11 +12214,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Gain 1 stack when attacked. When stacks reach <span class=\"descriptionNumberColor\">ChallengePeakBattle_0008_ADF_1</span>, take action immediately. Stack count resets at the start of turn.",
-          "type": "Other",
-          "statusName": "Taunting",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -12377,6 +12277,55 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1034466003\">Modifier_ChallengePeakBattle_BaseAbility_0008_02</a>",
           "stackType": "Replace",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "conditions": {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Compare: Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "value1": null,
+                  "compareType": ">=",
+                  "value2": {
+                    "operator": "Variables[0] (ChallengePeakBattle_0008_ADF_1) || Constants[0] (1) || SUB || RETURN",
+                    "displayLines": "(ChallengePeakBattle_0008_ADF_1 - 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "ChallengePeakBattle_0008_ADF_1"
+                    ]
+                  },
+                  "valueType": "Layer"
+                },
+                {
+                  "name": "Compare: Target",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player's Aim Target List}}"
+                  },
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
+                }
+              ]
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": -1
+            }
+          },
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -12457,56 +12406,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "conditions": {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Compare: Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "value1": null,
-                  "compareType": ">=",
-                  "value2": {
-                    "operator": "Variables[0] (ChallengePeakBattle_0008_ADF_1) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(ChallengePeakBattle_0008_ADF_1 - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "ChallengePeakBattle_0008_ADF_1"
-                    ]
-                  },
-                  "valueType": "Layer"
-                },
-                {
-                  "name": "Compare: Target",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Player's Aim Target List}}"
-                  },
-                  "target2": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  }
-                }
-              ]
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": -1
-            }
-          },
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -12579,9 +12479,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -12606,6 +12504,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-576579558\">Modifier_ChallengePeakBattle_ExtremeAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder++</span>]",
           "stackType": "Replace",
+          "description": "Each stack causes this unit to additionally lose HP equal to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0007_ADF_1</span> of their own Max HP after being attacked. After gaining a Shield or healing from an ally target (except this unit), both units will dispel all \"Sunder++\" effect.",
+          "type": "Other",
+          "effectName": "Vulnerability",
+          "statusName": "Sunder++",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -12650,12 +12553,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack causes this unit to additionally lose HP equal to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0007_ADF_1</span> of their own Max HP after being attacked. After gaining a Shield or healing from an ally target (except this unit), both units will dispel all \"Sunder++\" effect.",
-          "type": "Other",
-          "effectName": "Vulnerability",
-          "statusName": "Sunder++",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -12851,9 +12749,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -12878,6 +12774,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1259367356\">Modifier_ChallengePeakBattle_EnhancedAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder+</span>]",
           "stackType": "Replace",
+          "description": "Each stack causes this unit to additionally lose HP equal to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0007_ADF_1</span> of their own Max HP after being attacked. After gaining a Shield or healing from an ally target (except this unit), both units will dispel all \"Sunder+\" effect.",
+          "type": "Other",
+          "effectName": "Vulnerability",
+          "statusName": "Sunder+",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -12922,12 +12823,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack causes this unit to additionally lose HP equal to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0007_ADF_1</span> of their own Max HP after being attacked. After gaining a Shield or healing from an ally target (except this unit), both units will dispel all \"Sunder+\" effect.",
-          "type": "Other",
-          "effectName": "Vulnerability",
-          "statusName": "Sunder+",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -13123,9 +13019,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -13150,6 +13044,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1518475395\">Modifier_ChallengePeakBattle_BaseAbility_0007_03</a>[<span class=\"descriptionNumberColor\">Sunder</span>]",
           "stackType": "Replace",
+          "description": "Each stack causes this unit to additionally lose HP equal to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0007_ADF_1</span> of their own Max HP after being attacked. After gaining a Shield or healing from an ally target (except this unit), both units will dispel all \"Sunder\" effect.",
+          "type": "Other",
+          "effectName": "Vulnerability",
+          "statusName": "Sunder",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -13194,12 +13093,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack causes this unit to additionally lose HP equal to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0007_ADF_1</span> of their own Max HP after being attacked. After gaining a Shield or healing from an ally target (except this unit), both units will dispel all \"Sunder\" effect.",
-          "type": "Other",
-          "effectName": "Vulnerability",
-          "statusName": "Sunder",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -13395,9 +13289,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -13422,6 +13314,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1445876003\">Modifier_ChallengePeakBattle_ExtremeAbility_0006_03</a>[<span class=\"descriptionNumberColor\">Anguish++</span>]",
           "stackType": "Replace",
+          "description": "Each stack increases DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0006_ADF_2</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Anguish++",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -13451,12 +13348,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0006_ADF_2</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Anguish++",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -13589,9 +13481,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -13616,6 +13506,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-342039619\">Modifier_ChallengePeakBattle_EnhancedAbility_0006_03</a>[<span class=\"descriptionNumberColor\">Anguish+</span>]",
           "stackType": "Replace",
+          "description": "Each stack increases DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0006_ADF_2</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Anguish+",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -13645,12 +13540,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0006_ADF_2</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Anguish+",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -13783,9 +13673,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -13810,6 +13698,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__82931580\">Modifier_ChallengePeakBattle_BaseAbility_0006_03</a>[<span class=\"descriptionNumberColor\">Anguish</span>]",
           "stackType": "Replace",
+          "description": "Each stack increases DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0006_ADF_2</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Anguish",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -13839,12 +13732,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0006_ADF_2</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Anguish",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -13977,9 +13865,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -14006,6 +13892,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "description": "After each time an attack is received, reduces the attacker's Energy by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0005_ADF_1</span> points. The attacker's Energy will not be reduced if it is maxed. When defeated, regenerates <span class=\"descriptionNumberColor\">ChallengePeakBattle_0005_ADF_2</span> Energy for the attacker.",
+          "type": "Other",
+          "statusName": "Energy Absorption++",
           "execute": [
             {
               "eventTrigger": "Pre-Death [Owner]",
@@ -14121,10 +14010,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After each time an attack is received, reduces the attacker's Energy by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0005_ADF_1</span> points. The attacker's Energy will not be reduced if it is maxed. When defeated, regenerates <span class=\"descriptionNumberColor\">ChallengePeakBattle_0005_ADF_2</span> Energy for the attacker.",
-          "type": "Other",
-          "statusName": "Energy Absorption++"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14174,9 +14060,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -14203,6 +14087,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "description": "After each time an attack is received, reduces the attacker's Energy by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0005_ADF_1</span> points. The attacker's Energy will not be reduced if it is maxed. When defeated, regenerates <span class=\"descriptionNumberColor\">ChallengePeakBattle_0005_ADF_2</span> Energy for the attacker.",
+          "type": "Other",
+          "statusName": "Energy Absorption+",
           "execute": [
             {
               "eventTrigger": "Pre-Death [Owner]",
@@ -14318,10 +14205,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After each time an attack is received, reduces the attacker's Energy by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0005_ADF_1</span> points. The attacker's Energy will not be reduced if it is maxed. When defeated, regenerates <span class=\"descriptionNumberColor\">ChallengePeakBattle_0005_ADF_2</span> Energy for the attacker.",
-          "type": "Other",
-          "statusName": "Energy Absorption+"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14371,9 +14255,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -14400,6 +14282,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "description": "After each time an attack is received, reduces the attacker's Energy by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0005_ADF_1</span> points. The attacker's Energy will not be reduced if it is maxed. When defeated, regenerates <span class=\"descriptionNumberColor\">ChallengePeakBattle_0005_ADF_2</span> Energy for the attacker.",
+          "type": "Other",
+          "statusName": "Energy Absorption",
           "execute": [
             {
               "eventTrigger": "Pre-Death [Owner]",
@@ -14515,10 +14400,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After each time an attack is received, reduces the attacker's Energy by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0005_ADF_1</span> points. The attacker's Energy will not be reduced if it is maxed. When defeated, regenerates <span class=\"descriptionNumberColor\">ChallengePeakBattle_0005_ADF_2</span> Energy for the attacker.",
-          "type": "Other",
-          "statusName": "Energy Absorption"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14568,9 +14450,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -14607,6 +14487,9 @@ const compositeAbilityObject = {
             "MuteBreak",
             "STAT_AITargetLowerPriority"
           ],
+          "description": "Will not have HP and Toughness reduced, and increases Effect RES by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0004_ADF_1</span>. When all elite enemy targets are eliminated, this unit will also be eliminated.",
+          "type": "Other",
+          "statusName": "Under Protection",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -14662,10 +14545,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Will not have HP and Toughness reduced, and increases Effect RES by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0004_ADF_1</span>. When all elite enemy targets are eliminated, this unit will also be eliminated.",
-          "type": "Other",
-          "statusName": "Under Protection"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14843,9 +14723,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -14869,6 +14747,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-577906191\">Modifier_ChallengePeakBattle_ExtremeAbility_0003_02</a>[<span class=\"descriptionNumberColor\">Inversion++</span>]",
+          "description": "Each time after being attacked, the attacker will lose HP equal to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0003_ADF_1</span> of their own Max HP. This effect is Non-fatal.",
+          "type": "Other",
+          "statusName": "Inversion++",
           "execute": [
             {
               "eventTrigger": "Being Attacked End [Owner]",
@@ -14902,10 +14783,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each time after being attacked, the attacker will lose HP equal to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0003_ADF_1</span> of their own Max HP. This effect is Non-fatal.",
-          "type": "Other",
-          "statusName": "Inversion++"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14948,9 +14826,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -14974,6 +14850,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1805296405\">Modifier_ChallengePeakBattle_EnhancedAbility_0003_02</a>[<span class=\"descriptionNumberColor\">Inversion+</span>]",
+          "description": "Each time after being attacked, the attacker will lose HP equal to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0003_ADF_1</span> of their own Max HP. This effect is Non-fatal.",
+          "type": "Other",
+          "statusName": "Inversion+",
           "execute": [
             {
               "eventTrigger": "Being Attacked End [Owner]",
@@ -15007,10 +14886,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each time after being attacked, the attacker will lose HP equal to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0003_ADF_1</span> of their own Max HP. This effect is Non-fatal.",
-          "type": "Other",
-          "statusName": "Inversion+"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -15053,9 +14929,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -15079,6 +14953,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1303856730\">Modifier_ChallengePeakBattle_BaseAbility_0003_02</a>[<span class=\"descriptionNumberColor\">Inversion</span>]",
+          "description": "Each time after being attacked, the attacker will lose HP equal to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0003_ADF_1</span> of their own Max HP. This effect is Non-fatal.",
+          "type": "Other",
+          "statusName": "Inversion",
           "execute": [
             {
               "eventTrigger": "Being Attacked End [Owner]",
@@ -15112,10 +14989,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each time after being attacked, the attacker will lose HP equal to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0003_ADF_1</span> of their own Max HP. This effect is Non-fatal.",
-          "type": "Other",
-          "statusName": "Inversion"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -15158,9 +15032,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -15255,6 +15127,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__888777643\">Modifier_ChallengePeakBattle_BaseAbility_0002_02</a>[<span class=\"descriptionNumberColor\">Tempering</span>]",
+          "description": "For every 1% HP lost, reduces CRIT DMG dealt by allies by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0002_ADF_1</span>.",
+          "type": "Other",
+          "statusName": "Tempering",
           "execute": [
             {
               "eventTrigger": "HP Change [Owner]",
@@ -15279,10 +15154,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "For every 1% HP lost, reduces CRIT DMG dealt by allies by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0002_ADF_1</span>.",
-          "type": "Other",
-          "statusName": "Tempering"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -15324,9 +15196,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -15351,6 +15221,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__391969588\">Modifier_ChallengePeakBattle_ExtremeAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor++</span>]",
           "stackType": "Replace",
+          "description": "Each stack reduces DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0001_ADF_2</span>. Loses 1 stack of \"Resilient Armor++\" each time Toughness is reduced to 0.",
+          "type": "Other",
+          "statusName": "Resilient Armor++",
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "Being Toughness Bar Reset [Owner]",
@@ -15433,11 +15307,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack reduces DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0001_ADF_2</span>. Loses 1 stack of \"Resilient Armor++\" each time Toughness is reduced to 0.",
-          "type": "Other",
-          "statusName": "Resilient Armor++",
-          "addStacksPerTrigger": -1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -15595,9 +15465,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -15622,6 +15490,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-681980542\">Modifier_ChallengePeakBattle_EnhancedAbility_0001_03</a>[<span class=\"descriptionNumberColor\">Resilient Armor+</span>]",
           "stackType": "Replace",
+          "description": "Each stack reduces DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0001_ADF_2</span>. Loses 1 stack of \"Resilient Armor+\" each time Toughness is reduced to 0.",
+          "type": "Other",
+          "statusName": "Resilient Armor+",
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "Being Toughness Bar Reset [Owner]",
@@ -15704,11 +15576,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack reduces DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0001_ADF_2</span>. Loses 1 stack of \"Resilient Armor+\" each time Toughness is reduced to 0.",
-          "type": "Other",
-          "statusName": "Resilient Armor+",
-          "addStacksPerTrigger": -1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -15866,9 +15734,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -15893,6 +15759,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1656944184\">Modifier_ChallengePeakBattle_BaseAbility_0001_02</a>[<span class=\"descriptionNumberColor\">Resilient Armor</span>]",
           "stackType": "Replace",
+          "description": "Each stack reduces DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0001_ADF_2</span>. Loses 1 stack of \"Resilient Armor\" each time Toughness is reduced to 0.",
+          "type": "Other",
+          "statusName": "Resilient Armor",
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "Being Toughness Bar Reset [Owner]",
@@ -15975,11 +15845,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack reduces DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0001_ADF_2</span>. Loses 1 stack of \"Resilient Armor\" each time Toughness is reduced to 0.",
-          "type": "Other",
-          "statusName": "Resilient Armor",
-          "addStacksPerTrigger": -1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -16045,9 +15911,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },

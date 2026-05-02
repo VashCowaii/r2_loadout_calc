@@ -1387,9 +1387,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2635,7 +2633,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-231482417\">Enemy_W4_FireProwler_Ability06_Target</a>",
-          "stackData": [],
           "latentQueue": [
             "Skill01_AssistCount",
             "Skill02_AssistCount"
@@ -3596,9 +3593,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3607,9 +3602,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8325,7 +8318,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-231482417\">Enemy_W4_FireProwler_Ability06_Target</a>",
-          "stackData": [],
           "latentQueue": [
             "Skill01_AssistCount",
             "Skill02_AssistCount"
@@ -8749,9 +8741,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9655,9 +9645,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9666,9 +9654,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9906,32 +9892,28 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-635495816\">Enemy_W4_FireProwler_01_Activated02</a>[<span class=\"descriptionNumberColor\">Mutual Sacrifice</span>]",
+          "description": "When \"%CasterName\" uses \"Fading Fate,\" also use \"Fading Fate\" at the same time.",
+          "type": "Other",
+          "effectName": "Simultaneously use \"Fading Fate\"",
+          "statusName": "Mutual Sacrifice",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When \"%CasterName\" uses \"Fading Fate,\" also use \"Fading Fate\" at the same time.",
-          "type": "Other",
-          "effectName": "Simultaneously use \"Fading Fate\"",
-          "statusName": "Mutual Sacrifice"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-585162959\">Enemy_W4_FireProwler_01_Activated01</a>[<span class=\"descriptionNumberColor\">Mutual Sacrifice</span>]",
+          "description": "When \"%CasterName\" uses \"Demise's Storm\", also use \"Demise's Storm\" at the same time.",
+          "type": "Other",
+          "effectName": "Simultaneously use \"Demise's Storm\"",
+          "statusName": "Mutual Sacrifice",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When \"%CasterName\" uses \"Demise's Storm\", also use \"Demise's Storm\" at the same time.",
-          "type": "Other",
-          "effectName": "Simultaneously use \"Demise's Storm\"",
-          "statusName": "Mutual Sacrifice"
+          ]
         }
       ]
     },
@@ -12599,9 +12581,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -12731,9 +12711,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -12742,9 +12720,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Leave Battle"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -12896,9 +12872,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -12937,13 +12911,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1617419184\">Enemy_W4_FireProwler_IF_Charge_Ability031</a>[<span class=\"descriptionNumberColor\">Dying Sobs</span>]",
+          "description": "Uses \"But Suffering is Essential\" in the next action.",
+          "type": "Other",
+          "effectName": "Dying Sobs",
+          "statusName": "Dying Sobs",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -12977,13 +12953,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Uses \"But Suffering is Essential\" in the next action.",
-          "type": "Other",
-          "effectName": "Dying Sobs",
-          "statusName": "Dying Sobs"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -12991,6 +12961,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteHitH",
             "STAT_SuperArmor"
+          ],
+          "stackData": [
+            "MDF_AllDamageTypeResistance"
           ],
           "execute": [
             {
@@ -13245,11 +13218,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageTypeResistance"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -13317,33 +13286,23 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2037202426\">Enemy_W4_FireProwler_IF_AbilityEX04</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-2037202426\">Enemy_W4_FireProwler_IF_AbilityEX04</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1986869569\">Enemy_W4_FireProwler_IF_AbilityEX03</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1986869569\">Enemy_W4_FireProwler_IF_AbilityEX03</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2003647188\">Enemy_W4_FireProwler_IF_AbilityEX02</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-2003647188\">Enemy_W4_FireProwler_IF_AbilityEX02</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1953314331\">Enemy_W4_FireProwler_IF_AbilityEX01</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1953314331\">Enemy_W4_FireProwler_IF_AbilityEX01</a>"
         },
         {
           "name": "Modifier Construction",
@@ -13428,14 +13387,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1209794480\">Enemy_W4_FireProwler_01_IF_Bonus_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceButKeepLifeTime",
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "duration": 1,
+          "stackLimit": 5,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -13465,13 +13428,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "duration": 1,
-          "stackLimit": 5
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -13637,6 +13594,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "description": "After launching an attack, it is absorbed by \"%CasterName\" to grant 1 stack of \"Calamity Power.\" When an ally target defeats a target, immediately grants 1 extra turn and increases DMG dealt.",
+          "type": "Other",
+          "statusName": "Complete Vessel",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -13690,12 +13650,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "After launching an attack, it is absorbed by \"%CasterName\" to grant 1 stack of \"Calamity Power.\" When an ally target defeats a target, immediately grants 1 extra turn and increases DMG dealt.",
-          "type": "Other",
-          "statusName": "Complete Vessel"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -13703,7 +13658,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
-          "stackData": [],
           "latentQueue": [
             "AIFlag"
           ]
@@ -13769,9 +13723,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14295,13 +14247,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__948149510\">Enemy_W4_FireProwler_IF_NormalState</a>",
+          "stackData": [
+            "MDF_CurrentStance"
+          ],
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -14378,15 +14331,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_CurrentStance"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2128816741\">Enemy_W4_FireProwler_01_IF_Activated03</a>",
+          "stackData": [
+            "SummonIndex",
+            "MDF_ActionDelay1_Weight",
+            "MDF_ActionDelay1",
+            "MDF_ActionDelay2_Weight",
+            "MDF_ActionDelay2",
+            "MDF_ActionDelay3_Weight",
+            "MDF_ActionDelay3"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -14457,49 +14415,36 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [
-            "SummonIndex",
-            "MDF_ActionDelay1_Weight",
-            "MDF_ActionDelay1",
-            "MDF_ActionDelay2_Weight",
-            "MDF_ActionDelay2",
-            "MDF_ActionDelay3_Weight",
-            "MDF_ActionDelay3"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2112039122\">Enemy_W4_FireProwler_01_IF_Activated02</a>[<span class=\"descriptionNumberColor\">Mutual Sacrifice</span>]",
+          "description": "When \"%CasterName\" uses \"Fading Fate,\" also use \"Fading Fate\" at the same time.",
+          "type": "Other",
+          "effectName": "Simultaneously use \"Fading Fate\"",
+          "statusName": "Mutual Sacrifice",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When \"%CasterName\" uses \"Fading Fate,\" also use \"Fading Fate\" at the same time.",
-          "type": "Other",
-          "effectName": "Simultaneously use \"Fading Fate\"",
-          "statusName": "Mutual Sacrifice"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2095261503\">Enemy_W4_FireProwler_01_IF_Activated01</a>[<span class=\"descriptionNumberColor\">Mutual Sacrifice</span>]",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            }
-          ],
-          "stackData": [],
           "latentQueue": [
             "AIFlag"
           ],
           "description": "When \"%CasterName\" uses \"Demise's Storm,\" also use \"Demise's Storm\" at the same time.",
           "type": "Other",
           "effectName": "Simultaneously use \"Demise's Storm\"",
-          "statusName": "Mutual Sacrifice"
+          "statusName": "Mutual Sacrifice",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14752,9 +14697,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14803,9 +14746,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14904,9 +14845,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14918,6 +14857,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Deathrattle"
           ],
+          "stackData": [
+            "MDF_LoseHPRatio"
+          ],
+          "description": "After receiving a killing blow, if \"%CasterName\" is in the \"Shackle Shatter\" state, be instantly resummoned and enter the \"Shackled\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
+          "type": "Other",
+          "effectName": "Shackled",
+          "statusName": "Shackled",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -15044,24 +14990,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_LoseHPRatio"
-          ],
-          "latentQueue": [],
-          "description": "After receiving a killing blow, if \"%CasterName\" is in the \"Shackle Shatter\" state, be instantly resummoned and enter the \"Shackled\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
-          "type": "Other",
-          "effectName": "Shackled",
-          "statusName": "Shackled"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-122367820\">Enemy_W4_FireProwler_IF_DuringAbility</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -15089,33 +15025,31 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__31704267\">Enemy_W4_FireProwler_IF_Limit_EffectBody</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            }
-          ],
-          "stackData": [],
           "latentQueue": [
             "LMCountDown",
             "InsertFlag_LMin",
             "InsertFlag_LMout",
             "AIFlag",
             "SkillFlag"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            }
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__920196339\">Enemy_W4_FireProwler_IF_Limit_EnvirEffect</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            }
-          ],
-          "stackData": [],
           "latentQueue": [
             "LMCountDown",
             "InsertFlag_LMin",
             "InsertFlag_LMout"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            }
           ]
         },
         {
@@ -15253,6 +15187,20 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-557758203\">Enemy_W4_FireProwler_IF_Limit</a>[<span class=\"descriptionNumberColor\">Shackle Shatter</span>]",
+          "stackData": [
+            "MDF_AttackAddedRatio",
+            "MDF_SpeedAddedRatio",
+            "MDF_LM_DamageStanceValue"
+          ],
+          "latentQueue": [
+            "LMCountDown",
+            "InsertFlag_LMin",
+            "InsertFlag_LMout"
+          ],
+          "description": "Alternates between using \"Dying Sobs\" and \"But Suffering is Essential.\" \"Dying Sobs\" summons \"Long-Shattered Vessel\" and enters Charging state, and \"But Suffering is Essential\" deals Powerful Attacks. \"Calamity Power\" stacks increases the Hits Per Action of Powerful Attacks. After destroying \"Long-Shattered Vessel,\" Toughness and \"Calamity Power\" stacks can be reduced. In the second phase, \"Silent Sorrow\" and \"Cry Not for the Discarded\" will be used, and \"Calamity Power\" stacks increases.",
+          "type": "Other",
+          "effectName": "Shackle Shatter",
+          "statusName": "Shackle Shatter",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -15641,21 +15589,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AttackAddedRatio",
-            "MDF_SpeedAddedRatio",
-            "MDF_LM_DamageStanceValue"
-          ],
-          "latentQueue": [
-            "LMCountDown",
-            "InsertFlag_LMin",
-            "InsertFlag_LMout"
-          ],
-          "description": "Alternates between using \"Dying Sobs\" and \"But Suffering is Essential.\" \"Dying Sobs\" summons \"Long-Shattered Vessel\" and enters Charging state, and \"But Suffering is Essential\" deals Powerful Attacks. \"Calamity Power\" stacks increases the Hits Per Action of Powerful Attacks. After destroying \"Long-Shattered Vessel,\" Toughness and \"Calamity Power\" stacks can be reduced. In the second phase, \"Silent Sorrow\" and \"Cry Not for the Discarded\" will be used, and \"Calamity Power\" stacks increases.",
-          "type": "Other",
-          "effectName": "Shackle Shatter",
-          "statusName": "Shackle Shatter"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -15806,9 +15740,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -16031,9 +15963,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -16124,9 +16054,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -16316,9 +16244,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -16336,15 +16262,11 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1787963468\">Enemy_W4_FireProwler_FantasticStory</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1787963468\">Enemy_W4_FireProwler_FantasticStory</a>"
         },
         {
           "name": "Modifier Construction",
@@ -16504,6 +16426,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Each stack reduces DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. 1 stack is lost after 1 \"Long-Shattered Vessel\" is defeated.",
+          "type": "Buff",
+          "statusName": "DMG Reduction",
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -16591,15 +16520,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Each stack reduces DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. 1 stack is lost after 1 \"Long-Shattered Vessel\" is defeated.",
-          "type": "Buff",
-          "statusName": "DMG Reduction",
-          "addStacksPerTrigger": -1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -16608,6 +16529,10 @@ const compositeAbilityObject = {
             "Deathrattle",
             "KeepOnDeathrattle"
           ],
+          "description": "After receiving a killing blow, if \"%CasterName\"'s \"Calamity Power\" stacks are not 0, be instantly resummoned and enter the \"Enfettered\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
+          "type": "Other",
+          "effectName": "Enfettered",
+          "statusName": "Enfettered",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -16687,13 +16612,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "After receiving a killing blow, if \"%CasterName\"'s \"Calamity Power\" stacks are not 0, be instantly resummoned and enter the \"Enfettered\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
-          "type": "Other",
-          "effectName": "Enfettered",
-          "statusName": "Enfettered"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -16704,13 +16623,16 @@ const compositeAbilityObject = {
           ],
           "stackData": [
             "MDF_RallyHP"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1070811154\">Enemy_W4_FireProwler_RallyHP</a>[<span class=\"descriptionNumberColor\">Entangled By Agony</span>]",
           "stackType": "Replace",
+          "description": "After absorbing \"Long-Shattered Vessel,\" restores the HP consumed to summon the current \"Long-Shattered Vessel.\" After \"Long-Shattered Vessel\" is defeated, this unit cannot restore the HP consumed used to summon the current \"Long-Shattered Vessel\" again.",
+          "type": "Other",
+          "statusName": "Entangled By Agony",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -16789,11 +16711,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After absorbing \"Long-Shattered Vessel,\" restores the HP consumed to summon the current \"Long-Shattered Vessel.\" After \"Long-Shattered Vessel\" is defeated, this unit cannot restore the HP consumed used to summon the current \"Long-Shattered Vessel\" again.",
-          "type": "Other",
-          "statusName": "Entangled By Agony",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -16921,16 +16839,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__33624492\">Enemy_W4_FireProwler_TimePower</a>[<span class=\"descriptionNumberColor\">Calamity Power</span>]",
           "stackType": "Replace",
-          "stackData": [],
-          "latentQueue": [],
           "description": "When using certain abilities, consume all \"Calamity Power\" stacks to increase Hits Per Action.",
           "type": "Other",
           "statusName": "Calamity Power",
@@ -16939,6 +16853,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__911157260\">Enemy_W4_FireProwler_TimePowerListener</a>",
+          "stackData": [
+            "MDF_MaxCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -17387,15 +17304,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxCount"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1169574682\">Enemy_W4_FireProwler_Charge</a>[<span class=\"descriptionNumberColor\">Silent Sorrow</span>]",
+          "description": "Use \"Cry Not For The Discarded\" during the next action.",
+          "type": "Other",
+          "effectName": "Silent Sorrow",
+          "statusName": "Silent Sorrow",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -17552,13 +17469,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Use \"Cry Not For The Discarded\" during the next action.",
-          "type": "Other",
-          "effectName": "Silent Sorrow",
-          "statusName": "Silent Sorrow"
+          ]
         }
       ],
       "references": []

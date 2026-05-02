@@ -21,6 +21,9 @@ const configAbility = {
       "modifierFlags": [
         "RetainCountZero"
       ],
+      "description": "When ally memosprites (aside from Mem) take action, Trailblazer regenerates <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> Energy. This effect can trigger <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s).",
+      "type": "Other",
+      "statusName": "Gleaner of the Past",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -69,10 +72,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "When ally memosprites (aside from Mem) take action, Trailblazer regenerates <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> Energy. This effect can trigger <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s).",
-      "type": "Other",
-      "statusName": "Gleaner of the Past"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -271,9 +271,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

@@ -20,6 +20,26 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__508816016\">Modifier_FantasticStory_BaseAbility_2060_Plus10AddOn</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_2065",
+        "DV_FantasticStory_PlusAbility_2061",
+        "DV_FantasticStory_PlusAbility_2062",
+        "DV_FantasticStory_PlusAbility_2067",
+        "DV_FantasticStory_PlusAbility_2068",
+        "DV_FantasticStory_PlusAbility_2069",
+        "DV_FantasticStory_PlusAbility_2070"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-610383487\">Modifier_FantasticStory_BaseAbility_2060_Plus10AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Commotion</span>]",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Anyone]",
@@ -158,27 +178,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2065",
-        "DV_FantasticStory_PlusAbility_2061",
-        "DV_FantasticStory_PlusAbility_2062",
-        "DV_FantasticStory_PlusAbility_2067",
-        "DV_FantasticStory_PlusAbility_2068",
-        "DV_FantasticStory_PlusAbility_2069",
-        "DV_FantasticStory_PlusAbility_2070"
-      ],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-610383487\">Modifier_FantasticStory_BaseAbility_2060_Plus10AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Commotion</span>]",
-          "haloStatus": true
-        }
       ]
     },
     {
@@ -193,6 +192,25 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-905270004\">Modifier_FantasticStory_BaseAbility_2060_Plus9AddOn</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_2065",
+        "DV_FantasticStory_PlusAbility_2061",
+        "DV_FantasticStory_PlusAbility_2062",
+        "DV_FantasticStory_PlusAbility_2067",
+        "DV_FantasticStory_PlusAbility_2068",
+        "DV_FantasticStory_PlusAbility_2069"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"170129893\">Modifier_FantasticStory_BaseAbility_2060_Plus9AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Streets Abuzz</span>]",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Anyone]: Any",
@@ -381,26 +399,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2065",
-        "DV_FantasticStory_PlusAbility_2061",
-        "DV_FantasticStory_PlusAbility_2062",
-        "DV_FantasticStory_PlusAbility_2067",
-        "DV_FantasticStory_PlusAbility_2068",
-        "DV_FantasticStory_PlusAbility_2069"
-      ],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"170129893\">Modifier_FantasticStory_BaseAbility_2060_Plus9AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Streets Abuzz</span>]",
-          "haloStatus": true
-        }
       ]
     },
     {
@@ -415,6 +413,24 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1135541973\">Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_2065",
+        "DV_FantasticStory_PlusAbility_2061",
+        "DV_FantasticStory_PlusAbility_2062",
+        "DV_FantasticStory_PlusAbility_2067",
+        "DV_FantasticStory_PlusAbility_2068"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1198694676\">Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Epiphany</span>]",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Anyone]",
@@ -548,25 +564,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2065",
-        "DV_FantasticStory_PlusAbility_2061",
-        "DV_FantasticStory_PlusAbility_2062",
-        "DV_FantasticStory_PlusAbility_2067",
-        "DV_FantasticStory_PlusAbility_2068"
-      ],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1198694676\">Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Epiphany</span>]",
-          "haloStatus": true
-        }
       ]
     },
     {
@@ -581,6 +578,23 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1529724462\">Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_2065",
+        "DV_FantasticStory_PlusAbility_2061",
+        "DV_FantasticStory_PlusAbility_2062",
+        "DV_FantasticStory_PlusAbility_2067"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1785697589\">Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Memory</span>]",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Anyone]: Any",
@@ -705,24 +719,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2065",
-        "DV_FantasticStory_PlusAbility_2061",
-        "DV_FantasticStory_PlusAbility_2062",
-        "DV_FantasticStory_PlusAbility_2067"
-      ],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1785697589\">Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Memory</span>]",
-          "haloStatus": true
-        }
       ]
     },
     {
@@ -734,6 +730,22 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1835466532\">Modifier_FantasticStory_BaseAbility_2060_Plus2065</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_2065",
+        "DV_FantasticStory_PlusAbility_2061",
+        "DV_FantasticStory_PlusAbility_2062"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"178355252\">Modifier_FantasticStory_BaseAbility_2065_Plus5_ForShow</a>",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Attack Start [Anyone]",
@@ -967,23 +979,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2065",
-        "DV_FantasticStory_PlusAbility_2061",
-        "DV_FantasticStory_PlusAbility_2062"
-      ],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"178355252\">Modifier_FantasticStory_BaseAbility_2065_Plus5_ForShow</a>",
-          "haloStatus": true
-        }
       ]
     },
     {
@@ -995,6 +990,17 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1535721214\">Modifier_FantasticStory_BaseAbility_2060_Plus3AddOn</a>",
       "stackType": "ReplaceByCaster",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-704281529\">Modifier_FantasticStory_BaseAbility_2060_Plus3AddOn_ForShow</a>",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Attack Start [Anyone]",
@@ -1228,17 +1234,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-704281529\">Modifier_FantasticStory_BaseAbility_2060_Plus3AddOn_ForShow</a>",
-          "haloStatus": true
-        }
       ]
     },
     {
@@ -1253,6 +1248,22 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1465286557\">Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_2065",
+        "DV_FantasticStory_PlusAbility_2061",
+        "DV_FantasticStory_PlusAbility_2062"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"155042142\">Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Universality</span>]",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Anyone]",
@@ -1386,23 +1397,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2065",
-        "DV_FantasticStory_PlusAbility_2061",
-        "DV_FantasticStory_PlusAbility_2062"
-      ],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"155042142\">Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Universality</span>]",
-          "haloStatus": true
-        }
       ]
     },
     {
@@ -1417,6 +1411,21 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1964611804\">Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_2065",
+        "DV_FantasticStory_PlusAbility_2061"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"278893341\">Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Radiance</span>]",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage End [Anyone]: Any",
@@ -1604,28 +1613,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2065",
-        "DV_FantasticStory_PlusAbility_2061"
-      ],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"278893341\">Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Radiance</span>]",
-          "haloStatus": true
-        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-337102689\">Modifier_FantasticStory_BaseAbility_2060_Plus10_Sub</a>[<span class=\"descriptionNumberColor\">Commotion</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2070_ADF_1</span>. When all \"Resound\" is consumed in an attack, recover 1 Skill Point.",
+      "type": "Buff",
+      "statusName": "Commotion",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1648,15 +1644,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2070_ADF_1</span>. When all \"Resound\" is consumed in an attack, recover 1 Skill Point.",
-      "type": "Buff",
-      "statusName": "Commotion"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1319097683\">Modifier_FantasticStory_BaseAbility_2060_Plus9_Sub</a>[<span class=\"descriptionNumberColor\">Streets Abuzz</span>]",
       "stackType": "Replace",
+      "description": "Follow-Up ATK DMG increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2069_ADF_1</span>. After using a Follow-Up ATK, applies <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2069_ADF_2</span> stack(s) of \"Resound\" to all allies.",
+      "type": "Buff",
+      "statusName": "Streets Abuzz",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1771,15 +1767,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Follow-Up ATK DMG increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2069_ADF_1</span>. After using a Follow-Up ATK, applies <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2069_ADF_2</span> stack(s) of \"Resound\" to all allies.",
-      "type": "Buff",
-      "statusName": "Streets Abuzz"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1428129204\">Modifier_FantasticStory_BaseAbility_2060_Plus8_Sub</a>[<span class=\"descriptionNumberColor\">Epiphany</span>]",
       "stackType": "Replace",
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2068_ADF_1</span>. After using a Skill, applies <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2068_ADF_2</span> stacks of \"Resound\" to all allies.",
+      "type": "Buff",
+      "statusName": "Epiphany",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1839,15 +1835,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2068_ADF_1</span>. After using a Skill, applies <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2068_ADF_2</span> stacks of \"Resound\" to all allies.",
-      "type": "Buff",
-      "statusName": "Epiphany"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__412492093\">Modifier_FantasticStory_BaseAbility_2060_Plus7_Sub</a>[<span class=\"descriptionNumberColor\">Memory</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases DoT taken by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2067_ADF_2</span>.",
+      "type": "Debuff",
+      "statusName": "Memory",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -1879,15 +1875,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DoT taken by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2067_ADF_2</span>.",
-      "type": "Debuff",
-      "statusName": "Memory"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1211620586\">Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub_PLY</a>[<span class=\"descriptionNumberColor\">Reminiscence</span>]",
       "stackType": "Replace",
+      "description": "Increases each stack's DMG dealt by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2066_ADF_1</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Reminiscence",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1917,12 +1915,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases each stack's DMG dealt by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2066_ADF_1</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Reminiscence",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1982,6 +1975,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1773154335\">Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub</a>[<span class=\"descriptionNumberColor\">Paradox</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Break DMG taken increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2065_ADF_2</span>.",
+      "type": "Debuff",
+      "statusName": "Paradox",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -2013,10 +2009,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Break DMG taken increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2065_ADF_2</span>.",
-      "type": "Debuff",
-      "statusName": "Paradox"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2025,6 +2018,208 @@ const configAbility = {
       "modifierFlags": [
         "ForceStanceDamage"
       ],
+      "stackData": [
+        "DV_FantasticStory_PlusAbility_2065_ADF_1"
+      ],
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_2065"
+      ],
+      "description": "Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2065_ADF_1</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
+      "type": "Buff",
+      "statusName": "Paradox",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "conditions": {
+          "name": "OR",
+          "conditionList": [
+            {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Has Element",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "DamageType": {
+                    "name": "Damage Type Source",
+                    "sourceType": "Fire"
+                  }
+                },
+                {
+                  "name": "Has Weakness",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "DamageType": "Fire",
+                  "invertCondition": true
+                }
+              ]
+            },
+            {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Has Element",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "DamageType": {
+                    "name": "Damage Type Source",
+                    "sourceType": "Ice"
+                  }
+                },
+                {
+                  "name": "Has Weakness",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "DamageType": "Ice",
+                  "invertCondition": true
+                }
+              ]
+            },
+            {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Has Element",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "DamageType": {
+                    "name": "Damage Type Source",
+                    "sourceType": "Imaginary"
+                  }
+                },
+                {
+                  "name": "Has Weakness",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "DamageType": "Imaginary",
+                  "invertCondition": true
+                }
+              ]
+            },
+            {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Has Element",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "DamageType": {
+                    "name": "Damage Type Source",
+                    "sourceType": "Quantum"
+                  }
+                },
+                {
+                  "name": "Has Weakness",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "DamageType": "Quantum",
+                  "invertCondition": true
+                }
+              ]
+            },
+            {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Has Element",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "DamageType": {
+                    "name": "Damage Type Source",
+                    "sourceType": "Physical"
+                  }
+                },
+                {
+                  "name": "Has Weakness",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "DamageType": "Physical",
+                  "invertCondition": true
+                }
+              ]
+            },
+            {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Has Element",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "DamageType": {
+                    "name": "Damage Type Source",
+                    "sourceType": "Thunder"
+                  }
+                },
+                {
+                  "name": "Has Weakness",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "DamageType": "Thunder",
+                  "invertCondition": true
+                }
+              ]
+            },
+            {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Has Element",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "DamageType": {
+                    "name": "Damage Type Source",
+                    "sourceType": "Wind"
+                  }
+                },
+                {
+                  "name": "Has Weakness",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "DamageType": "Wind",
+                  "invertCondition": true
+                }
+              ]
+            }
+          ]
+        },
+        "toughnessForcedReductionPreview": {
+          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2065_ADF_1) || RETURN",
+          "displayLines": "DV_FantasticStory_PlusAbility_2065_ADF_1",
+          "constants": [],
+          "variables": [
+            "DV_FantasticStory_PlusAbility_2065_ADF_1"
+          ]
+        },
+        "showAsForcedReduction": true
+      },
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -2311,214 +2506,21 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "DV_FantasticStory_PlusAbility_2065_ADF_1"
-      ],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2065"
-      ],
-      "description": "Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2065_ADF_1</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
-      "type": "Buff",
-      "statusName": "Paradox",
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "conditions": {
-          "name": "OR",
-          "conditionList": [
-            {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Has Element",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Fire"
-                  }
-                },
-                {
-                  "name": "Has Weakness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "DamageType": "Fire",
-                  "invertCondition": true
-                }
-              ]
-            },
-            {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Has Element",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Ice"
-                  }
-                },
-                {
-                  "name": "Has Weakness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "DamageType": "Ice",
-                  "invertCondition": true
-                }
-              ]
-            },
-            {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Has Element",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Imaginary"
-                  }
-                },
-                {
-                  "name": "Has Weakness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "DamageType": "Imaginary",
-                  "invertCondition": true
-                }
-              ]
-            },
-            {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Has Element",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Quantum"
-                  }
-                },
-                {
-                  "name": "Has Weakness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "DamageType": "Quantum",
-                  "invertCondition": true
-                }
-              ]
-            },
-            {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Has Element",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Physical"
-                  }
-                },
-                {
-                  "name": "Has Weakness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "DamageType": "Physical",
-                  "invertCondition": true
-                }
-              ]
-            },
-            {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Has Element",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Thunder"
-                  }
-                },
-                {
-                  "name": "Has Weakness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "DamageType": "Thunder",
-                  "invertCondition": true
-                }
-              ]
-            },
-            {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Has Element",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Wind"
-                  }
-                },
-                {
-                  "name": "Has Weakness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "DamageType": "Wind",
-                  "invertCondition": true
-                }
-              ]
-            }
-          ]
-        },
-        "toughnessForcedReductionPreview": {
-          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2065_ADF_1) || RETURN",
-          "displayLines": "DV_FantasticStory_PlusAbility_2065_ADF_1",
-          "constants": [],
-          "variables": [
-            "DV_FantasticStory_PlusAbility_2065_ADF_1"
-          ]
-        },
-        "showAsForcedReduction": true
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__906922784\">Modifier_FantasticStory_BaseAbility_2060_plus4_sub</a>[<span class=\"descriptionNumberColor\">Divine Score</span>]",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "DV_FantasticStory_BaseAbility_TriggerFlag",
+        "DV_FantasticStory_PlusAbility_2062",
+        "DV_FantasticStory_PlusAbility_2064"
+      ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2064_ADF_1</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Divine Score",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2541,22 +2543,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_TriggerFlag",
-        "DV_FantasticStory_PlusAbility_2062",
-        "DV_FantasticStory_PlusAbility_2064"
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2064_ADF_1</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Divine Score"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__391899273\">Modifier_FantasticStory_BaseAbility_2060_plus3_sub</a>[<span class=\"descriptionNumberColor\">Potential</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DMG dealt by using Ultimate increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2063_ADF_1</span>.",
+      "type": "Buff",
+      "statusName": "Potential",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -2582,15 +2577,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt by using Ultimate increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2063_ADF_1</span>.",
-      "type": "Buff",
-      "statusName": "Potential"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__514411026\">Modifier_FantasticStory_BaseAbility_2060_plus2_sub</a>[<span class=\"descriptionNumberColor\">Universality</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2062_ADF_1</span>. When all \"Resound\" is consumed in an attack, recover 1 Skill Point.",
+      "type": "Buff",
+      "statusName": "Universality",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2613,10 +2608,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2062_ADF_1</span>. When all \"Resound\" is consumed in an attack, recover 1 Skill Point.",
-      "type": "Buff",
-      "statusName": "Universality"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2694,6 +2686,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1883595095\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_BirdAtkCount</a>[<span class=\"descriptionNumberColor\">\"Resound\"</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "<span class=\"descriptionNumberColor\">_Current_Layer</span> stack(s) of \"Resound\" have been accumulated. Consume all \"Resound\" stacks when entering Surging Grit or having accumulated <span class=\"descriptionNumberColor\">DV_FantasticStory_BaseAbility_2060_EnterFever_P1_Value</span> or more stacks during Surging Grit. Every \"Resound\" stack deals 1 instance of a set amount of DMG to a random enemy target.",
+      "type": "Buff",
+      "statusName": "\"Resound\"",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2706,12 +2701,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "<span class=\"descriptionNumberColor\">_Current_Layer</span> stack(s) of \"Resound\" have been accumulated. Consume all \"Resound\" stacks when entering Surging Grit or having accumulated <span class=\"descriptionNumberColor\">DV_FantasticStory_BaseAbility_2060_EnterFever_P1_Value</span> or more stacks during Surging Grit. Every \"Resound\" stack deals 1 instance of a set amount of DMG to a random enemy target.",
-      "type": "Buff",
-      "statusName": "\"Resound\""
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2720,7 +2710,6 @@ const configAbility = {
       "stackData": [
         "DV_Ratio"
       ],
-      "latentQueue": [],
       "description": "After using Ultimate to attack enemy targets, every enemy target attacked additionally accumulates <span class=\"descriptionNumberColor\">DV_Ratio</span> Grit Value.",
       "type": "Buff",
       "statusName": "Grit Mechanics"
@@ -2729,8 +2718,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1271014269\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_ForShow</a>[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "description": "Accumulate 1 stack of \"Resound\" when defeated.",
       "type": "Debuff",
       "effectName": "Vulnerability",
@@ -2740,6 +2727,16 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1981060014\">Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "DV_Ratio_Get"
+      ],
+      "latentQueue": [
+        "DV_FantasticStory_BaseAbility_2060_EnterFever_P1_Value"
+      ],
+      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">DV_Ratio_Get</span>. When defeated, additionally accumulate 1 stack of \"Resound.\"",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Surging Grit",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2762,110 +2759,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "DV_Ratio_Get"
-      ],
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_2060_EnterFever_P1_Value"
-      ],
-      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">DV_Ratio_Get</span>. When defeated, additionally accumulate 1 stack of \"Resound.\"",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Surging Grit"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
-      "execute": [
-        {
-          "eventTrigger": "When Modifier Destroyed/Removed",
-          "execute": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "DV_FantasticStory_BaseAbility_CountSum",
-              "value": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTemp) || RETURN",
-                "displayLines": "DV_FantasticStory_BaseAbility_CountSumTemp",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_CountSumTemp"
-                ]
-              }
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1211620586\">Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub_PLY</a>[<span class=\"descriptionNumberColor\">Reminiscence</span>]"
-            },
-            {
-              "name": "Update Surging Grit[PF]",
-              "current": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_CountSum"
-                ]
-              },
-              "max": {
-                "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                "displayLines": "DV_EnterFeverValue",
-                "constants": [],
-                "variables": [
-                  "DV_EnterFeverValue"
-                ]
-              },
-              "delta": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_CountSum"
-                ]
-              },
-              "type": "FeverBack"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier",
-          "execute": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "DV_FantasticStory_PlusAbility_2067",
-                "compareType": "=",
-                "value2": 1
-              },
-              "passed": [
-                {
-                  "name": "Skill Points Modification",
-                  "adjustmentValue": {
-                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2067_ADF_1) || RETURN",
-                    "displayLines": "DV_FantasticStory_PlusAbility_2067_ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_PlusAbility_2067_ADF_1"
-                    ]
-                  },
-                  "adjustmentType": "+"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "stackData": [],
       "latentQueue": [
         "DV_FantasticStory_BaseAbility_TriggerFlag"
       ],
@@ -3020,6 +2918,94 @@ const configAbility = {
             "value2": 1
           }
         }
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "DV_FantasticStory_BaseAbility_CountSum",
+              "value": {
+                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTemp) || RETURN",
+                "displayLines": "DV_FantasticStory_BaseAbility_CountSumTemp",
+                "constants": [],
+                "variables": [
+                  "DV_FantasticStory_BaseAbility_CountSumTemp"
+                ]
+              }
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1211620586\">Modifier_FantasticStory_BaseAbility_2060_Plus6_Sub_PLY</a>[<span class=\"descriptionNumberColor\">Reminiscence</span>]"
+            },
+            {
+              "name": "Update Surging Grit[PF]",
+              "current": {
+                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
+                "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
+                "constants": [],
+                "variables": [
+                  "DV_FantasticStory_BaseAbility_CountSum"
+                ]
+              },
+              "max": {
+                "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
+                "displayLines": "DV_EnterFeverValue",
+                "constants": [],
+                "variables": [
+                  "DV_EnterFeverValue"
+                ]
+              },
+              "delta": {
+                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
+                "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
+                "constants": [],
+                "variables": [
+                  "DV_FantasticStory_BaseAbility_CountSum"
+                ]
+              },
+              "type": "FeverBack"
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "DV_FantasticStory_PlusAbility_2067",
+                "compareType": "=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "Skill Points Modification",
+                  "adjustmentValue": {
+                    "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2067_ADF_1) || RETURN",
+                    "displayLines": "DV_FantasticStory_PlusAbility_2067_ADF_1",
+                    "constants": [],
+                    "variables": [
+                      "DV_FantasticStory_PlusAbility_2067_ADF_1"
+                    ]
+                  },
+                  "adjustmentType": "+"
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -3110,9 +3096,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

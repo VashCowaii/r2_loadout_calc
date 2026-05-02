@@ -226,9 +226,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>"
     }
   ]
 }

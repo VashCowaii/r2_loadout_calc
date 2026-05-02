@@ -122,6 +122,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__685276198\">Modifier_BattleEventAbility_Challenge_Month_35_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
+      "description": "Max HP increases by <span class=\"descriptionNumberColor\">DV_HPAddedRatio</span>.",
+      "type": "Buff",
+      "statusName": "Memory Imprint",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -425,10 +428,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Max HP increases by <span class=\"descriptionNumberColor\">DV_HPAddedRatio</span>.",
-      "type": "Buff",
-      "statusName": "Memory Imprint"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -449,14 +449,23 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__868164147\">Modifier_BattleEventAbility_Challenge_Month_35</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "BattleEvent_P1_ADF",
+        "BattleEvent_P2_ADF",
+        "BattleEvent_P3_ADF",
+        "BattleEvent_P4_ADF",
+        "BattleEvent_P5_ADF",
+        "BattleEvent_P6_ADF",
+        "BattleEvent_P7_ADF",
+        "BattleEvent_P8_ADF",
+        "BattleEvent_P9_ADF"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -791,19 +800,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [
-        "BattleEvent_P1_ADF",
-        "BattleEvent_P2_ADF",
-        "BattleEvent_P3_ADF",
-        "BattleEvent_P4_ADF",
-        "BattleEvent_P5_ADF",
-        "BattleEvent_P6_ADF",
-        "BattleEvent_P7_ADF",
-        "BattleEvent_P8_ADF",
-        "BattleEvent_P9_ADF"
-      ],
-      "latentQueue": []
+      ]
     }
   ]
 }

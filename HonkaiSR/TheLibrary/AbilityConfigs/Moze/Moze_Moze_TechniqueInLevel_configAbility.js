@@ -26,6 +26,11 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2094982629\">Moze_TechniqueUsage_DamageUpModifier</a>[<span class=\"descriptionNumberColor\">Bated Wings</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Bated Wings",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -48,12 +53,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Bated Wings",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -110,9 +110,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

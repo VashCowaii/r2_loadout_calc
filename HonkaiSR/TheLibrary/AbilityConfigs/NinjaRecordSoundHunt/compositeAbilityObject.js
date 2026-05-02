@@ -43,6 +43,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-927960305\">LC_22003_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases CRIT DMG by <span class=\"descriptionNumberColor\">#SkillEquip_P2_CriticalDamage</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "CRIT DMG Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -65,11 +69,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases CRIT DMG by <span class=\"descriptionNumberColor\">#SkillEquip_P2_CriticalDamage</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "CRIT DMG Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -186,9 +186,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

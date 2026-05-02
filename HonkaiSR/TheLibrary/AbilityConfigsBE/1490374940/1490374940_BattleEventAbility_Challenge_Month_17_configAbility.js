@@ -21,6 +21,10 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "When receiving DMG, all other enemy targets receive DMG equal to <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span> of the original DMG.",
+      "type": "Debuff",
+      "effectName": "Memory Imprint",
+      "statusName": "Memory Imprint",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -70,11 +74,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "When receiving DMG, all other enemy targets receive DMG equal to <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span> of the original DMG.",
-      "type": "Debuff",
-      "effectName": "Memory Imprint",
-      "statusName": "Memory Imprint"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -217,9 +217,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

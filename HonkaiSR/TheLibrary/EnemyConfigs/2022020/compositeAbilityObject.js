@@ -600,9 +600,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -619,6 +617,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1599810700\">Monster_W2_Abomi02_EffectControl</a>",
+          "latentQueue": [
+            "IsInDeathRattle"
+          ],
           "variableValueChange": [
             {
               "name": "Variable Value Changes",
@@ -645,16 +646,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "IsInDeathRattle"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1875575825\">Monster_W2_Abomi02_Mark</a>[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
           "stackType": "Multiple",
+          "description": "Upon receiving a killing blow, the Disciples of Sanctus Medicus: Internal Alchemist deals DMG 1 time to targets that are inflicted with Spur of Thunderwoe by them.",
+          "type": "Debuff",
+          "effectName": "Thunderwoe Strike",
+          "statusName": "Spur of Thunderwoe",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -687,18 +688,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Upon receiving a killing blow, the Disciples of Sanctus Medicus: Internal Alchemist deals DMG 1 time to targets that are inflicted with Spur of Thunderwoe by them.",
-          "type": "Debuff",
-          "effectName": "Thunderwoe Strike",
-          "statusName": "Spur of Thunderwoe"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1723051927\">Monster_W2_Abomi02_TargetList</a>[<span class=\"descriptionNumberColor\">Core Formation</span>]",
           "stackType": "Replace",
+          "description": "Upon receiving a killing blow, the unit deals DMG 1 time to targets that are afflicted with Spur of Thunderwoe by them.<br>The current targets who have Spur of Thunderwoe on them are: %DynamicTargetName.",
+          "type": "Buff",
+          "effectName": "Core Formation",
+          "statusName": "Core Formation",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -880,13 +879,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Upon receiving a killing blow, the unit deals DMG 1 time to targets that are afflicted with Spur of Thunderwoe by them.<br>The current targets who have Spur of Thunderwoe on them are: %DynamicTargetName.",
-          "type": "Buff",
-          "effectName": "Core Formation",
-          "statusName": "Core Formation"
+          ]
         }
       ],
       "references": []

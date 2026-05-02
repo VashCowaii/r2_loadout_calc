@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1656944184\">Modifier_ChallengePeakBattle_BaseAbility_0001_02</a>[<span class=\"descriptionNumberColor\">Resilient Armor</span>]",
       "stackType": "Replace",
+      "description": "Each stack reduces DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0001_ADF_2</span>. Loses 1 stack of \"Resilient Armor\" each time Toughness is reduced to 0.",
+      "type": "Other",
+      "statusName": "Resilient Armor",
+      "addStacksPerTrigger": -1,
       "execute": [
         {
           "eventTrigger": "Being Toughness Bar Reset [Owner]",
@@ -101,11 +105,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack reduces DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0001_ADF_2</span>. Loses 1 stack of \"Resilient Armor\" each time Toughness is reduced to 0.",
-      "type": "Other",
-      "statusName": "Resilient Armor",
-      "addStacksPerTrigger": -1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -171,9 +171,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

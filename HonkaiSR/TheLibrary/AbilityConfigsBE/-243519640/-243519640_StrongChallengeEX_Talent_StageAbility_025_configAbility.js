@@ -19,6 +19,30 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1158886449\">MStrongChallengeEX_Talent_StageAbility_PLY_025</a>",
       "stackType": "ReplaceByCaster",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "skillType": "Ultimate",
+        "conditions": {
+          "name": "Is Weak to Attacker",
+          "weakTo": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          }
+        },
+        "toughnessReductionPreview": {
+          "operator": "Variables[0] (MDF_Ultra_DefaultStanceBreakRatio) || RETURN",
+          "displayLines": "MDF_Ultra_DefaultStanceBreakRatio",
+          "constants": [],
+          "variables": [
+            "MDF_Ultra_DefaultStanceBreakRatio"
+          ]
+        }
+      },
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -46,31 +70,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "skillType": "Ultimate",
-        "conditions": {
-          "name": "Is Weak to Attacker",
-          "weakTo": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "target": {
-            "name": "Target Name",
-            "target": "{{Parameter Target}}"
-          }
-        },
-        "toughnessReductionPreview": {
-          "operator": "Variables[0] (MDF_Ultra_DefaultStanceBreakRatio) || RETURN",
-          "displayLines": "MDF_Ultra_DefaultStanceBreakRatio",
-          "constants": [],
-          "variables": [
-            "MDF_Ultra_DefaultStanceBreakRatio"
-          ]
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -112,9 +112,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

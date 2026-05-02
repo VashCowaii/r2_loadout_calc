@@ -122,9 +122,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -157,9 +155,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -916,6 +912,16 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Electric"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "Modifier_Electric_DamagePercentage"
+          ],
+          "description": "Takes Lightning DMG at the start of each turn for a certain number of turns. This effect can be stacked.",
+          "type": "Debuff",
+          "effectName": "Carousal of Revelry",
+          "statusName": "Carousal of Revelry",
+          "stackLimit": 1,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -1020,18 +1026,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "Modifier_Electric_DamagePercentage"
-          ],
-          "latentQueue": [],
-          "description": "Takes Lightning DMG at the start of each turn for a certain number of turns. This effect can be stacked.",
-          "type": "Debuff",
-          "effectName": "Carousal of Revelry",
-          "statusName": "Carousal of Revelry",
-          "stackLimit": 1,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1042,6 +1037,16 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Poison"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "Modifier_Poison_DamagePercentage"
+          ],
+          "description": "Takes Wind DMG at the start of each turn for a certain number of turns. This effect can be stacked.",
+          "type": "Debuff",
+          "effectName": "Carousal of Wantonness",
+          "statusName": "Carousal of Wantonness",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -1121,18 +1126,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "Modifier_Poison_DamagePercentage"
-          ],
-          "latentQueue": [],
-          "description": "Takes Wind DMG at the start of each turn for a certain number of turns. This effect can be stacked.",
-          "type": "Debuff",
-          "effectName": "Carousal of Wantonness",
-          "statusName": "Carousal of Wantonness",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1140,6 +1134,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "description": "About to use \"Wash Away All Sins For You\"",
+          "type": "Other",
+          "effectName": "Target Locked On",
+          "statusName": "My Cup Runneth Over",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1268,13 +1266,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "About to use \"Wash Away All Sins For You\"",
-          "type": "Other",
-          "effectName": "Target Locked On",
-          "statusName": "My Cup Runneth Over"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1284,6 +1276,10 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
+          "description": "%CasterName will focus attacks on this target.",
+          "type": "Other",
+          "effectName": "Target Locked On",
+          "statusName": "Target Locked On",
           "execute": [
             {
               "eventTrigger": "When Losing Modifier [Owner]",
@@ -1305,13 +1301,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "%CasterName will focus attacks on this target.",
-          "type": "Other",
-          "effectName": "Target Locked On",
-          "statusName": "Target Locked On"
+          ]
         }
       ],
       "references": []

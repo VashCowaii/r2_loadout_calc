@@ -892,6 +892,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1318648029\">Monster_W4_Manta_LocalLegend_Locking</a>",
+          "latentQueue": [
+            "InsertCheck02"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -912,10 +915,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "InsertCheck02"
           ]
         }
       ]
@@ -1322,9 +1321,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1590,9 +1587,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2022,6 +2017,14 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_DefenceDown"
           ],
+          "stackData": [
+            "MDF_PropertyValue",
+            "MDF_PropertyValue2"
+          ],
+          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
+          "type": "Debuff",
+          "effectName": "Inebriated Daze",
+          "statusName": "Inebriated Daze",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2060,16 +2063,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_PropertyValue2"
-          ],
-          "latentQueue": [],
-          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
-          "type": "Debuff",
-          "effectName": "Inebriated Daze",
-          "statusName": "Inebriated Daze"
+          ]
         }
       ]
     },
@@ -2229,9 +2223,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Leave Battle"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2240,9 +2232,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2296,13 +2286,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1347964205\">Enemy_W4_Manta_LocalLegend_Charge</a>[<span class=\"descriptionNumberColor\">Yearning for a Shared Dance</span>]",
+          "description": "Uses \"Embrace From the Waves\" in every action. Dispelled when Weakness is broken.",
+          "type": "Other",
+          "effectName": "Yearning for a Shared Dance",
+          "statusName": "Yearning for a Shared Dance",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2346,13 +2338,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Uses \"Embrace From the Waves\" in every action. Dispelled when Weakness is broken.",
-          "type": "Other",
-          "effectName": "Yearning for a Shared Dance",
-          "statusName": "Yearning for a Shared Dance"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2364,6 +2350,12 @@ const compositeAbilityObject = {
             "CanBeAddedToServant",
             "CanListenServantCallback"
           ],
+          "useEntitySnapshot": true,
+          "description": "At the start of the turn, receives Ice DoT equal to a percentage of this unit's Max HP. This DoT is stackable.",
+          "type": "Debuff",
+          "effectName": "Glacial Erosion",
+          "statusName": "Glacial Erosion",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -2506,13 +2498,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "At the start of the turn, receives Ice DoT equal to a percentage of this unit's Max HP. This DoT is stackable.",
-          "type": "Debuff",
-          "effectName": "Glacial Erosion",
-          "statusName": "Glacial Erosion",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2524,6 +2510,12 @@ const compositeAbilityObject = {
             "CanBeAddedToServant",
             "CanListenServantCallback"
           ],
+          "useEntitySnapshot": true,
+          "description": "At the start of the turn, receives Ice DoT equal to a percentage of this unit's Max HP. This DoT is stackable.",
+          "type": "Debuff",
+          "effectName": "Glacial Erosion",
+          "statusName": "Glacial Erosion",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -2666,13 +2658,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "At the start of the turn, receives Ice DoT equal to a percentage of this unit's Max HP. This DoT is stackable.",
-          "type": "Debuff",
-          "effectName": "Glacial Erosion",
-          "statusName": "Glacial Erosion",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2684,6 +2670,12 @@ const compositeAbilityObject = {
             "CanBeAddedToServant",
             "CanListenServantCallback"
           ],
+          "useEntitySnapshot": true,
+          "description": "At the start of the turn, receives Ice DoT equal to a percentage of this unit's Max HP. This DoT is stackable.",
+          "type": "Debuff",
+          "effectName": "Glacial Erosion",
+          "statusName": "Glacial Erosion",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -2816,13 +2808,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "At the start of the turn, receives Ice DoT equal to a percentage of this unit's Max HP. This DoT is stackable.",
-          "type": "Debuff",
-          "effectName": "Glacial Erosion",
-          "statusName": "Glacial Erosion",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2831,9 +2817,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Ultimate Prep-Phase [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2842,6 +2826,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1575455810\">Enemy_W4_Manta_LocalLegend_Statues</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
+          "stackData": [
+            "MDF_MaxLayer"
+          ],
+          "description": "After receiving a certain number of attacks from the targets, immediately uses \"Psychedelic Elegy.\"",
+          "type": "Other",
+          "statusName": "Respite By The Waters",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3301,14 +3291,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxLayer"
-          ],
-          "latentQueue": [],
-          "description": "After receiving a certain number of attacks from the targets, immediately uses \"Psychedelic Elegy.\"",
-          "type": "Other",
-          "statusName": "Respite By The Waters"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3416,9 +3399,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3444,6 +3425,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1829701863\">W4_Manta_BattleScore1</a>",
+          "latentQueue": [
+            "Manta_Passive"
+          ],
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Owner]",
@@ -3472,10 +3456,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Manta_Passive"
           ]
         },
         {
@@ -3487,6 +3467,11 @@ const compositeAbilityObject = {
             "CanBeAddedToServant",
             "CanListenServantCallback"
           ],
+          "useEntitySnapshot": true,
+          "description": "<span class=\"descriptionNumberColor\">MDF_TotalDamageValue</span> DMG is taken in the form of DoT over a certain number of turns. Wind Shear, Burn, Shock, and Bleed DoTs are received at the start of every turn. Immediately dispelled for this unit when \"Revel in Destruction\" state ends, negating this DoT.",
+          "type": "Debuff",
+          "effectName": "Black Tide Fever",
+          "statusName": "Black Tide Fever",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4186,12 +4171,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "<span class=\"descriptionNumberColor\">MDF_TotalDamageValue</span> DMG is taken in the form of DoT over a certain number of turns. Wind Shear, Burn, Shock, and Bleed DoTs are received at the start of every turn. Immediately dispelled for this unit when \"Revel in Destruction\" state ends, negating this DoT.",
-          "type": "Debuff",
-          "effectName": "Black Tide Fever",
-          "statusName": "Black Tide Fever"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4202,6 +4182,11 @@ const compositeAbilityObject = {
             "CanBeAddedToServant",
             "CanListenServantCallback"
           ],
+          "useEntitySnapshot": true,
+          "description": "<span class=\"descriptionNumberColor\">MDF_TotalDamageValue</span> DMG is taken in the form of DoT over a certain number of turns. Wind Shear, Burn, Shock, and Bleed DoTs are received at the start of every turn. Immediately dispelled for this unit when HP is fully restored, negating this DoT.",
+          "type": "Debuff",
+          "effectName": "Black Tide Fever",
+          "statusName": "Black Tide Fever",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5052,12 +5037,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "<span class=\"descriptionNumberColor\">MDF_TotalDamageValue</span> DMG is taken in the form of DoT over a certain number of turns. Wind Shear, Burn, Shock, and Bleed DoTs are received at the start of every turn. Immediately dispelled for this unit when HP is fully restored, negating this DoT.",
-          "type": "Debuff",
-          "effectName": "Black Tide Fever",
-          "statusName": "Black Tide Fever"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5071,6 +5051,11 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1053900391\">Enemy_W4_Manta_Virus_Transfer</a>",
+          "stackData": [
+            "MDF_TransferRatio",
+            "MDF_LifeTime",
+            "MDF_TriggerRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -5400,17 +5385,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_TransferRatio",
-            "MDF_LifeTime",
-            "MDF_TriggerRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1741196770\">Enemy_W4_Manta_Charge</a>[<span class=\"descriptionNumberColor\">Yearning for a Shared Dance</span>]",
+          "description": "Uses \"Embrace From the Waves\" in every action. Dispelled when Weakness is broken.",
+          "type": "Other",
+          "effectName": "Yearning for a Shared Dance",
+          "statusName": "Yearning for a Shared Dance",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5462,17 +5445,15 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Uses \"Embrace From the Waves\" in every action. Dispelled when Weakness is broken.",
-          "type": "Other",
-          "effectName": "Yearning for a Shared Dance",
-          "statusName": "Yearning for a Shared Dance"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__233383223\">Enemy_W4_Manta_PassiveUp_Sub</a>[<span class=\"descriptionNumberColor\">Revel in Destruction</span>]",
+          "description": "Number of hits to advance action decreases. When taking DMG or using certain abilities to deal DMG, some DMG will be taken in the form of \"Black Tide Fever\" over a specific number of turns. When the \"Revel in Destruction\" countdown's turn begins, all enemy units will have their \"Revel in Destruction\" state dispelled.",
+          "type": "Other",
+          "effectName": "Revel in Destruction",
+          "statusName": "Revel in Destruction",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5572,11 +5553,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Number of hits to advance action decreases. When taking DMG or using certain abilities to deal DMG, some DMG will be taken in the form of \"Black Tide Fever\" over a specific number of turns. When the \"Revel in Destruction\" countdown's turn begins, all enemy units will have their \"Revel in Destruction\" state dispelled.",
-          "type": "Other",
-          "effectName": "Revel in Destruction",
-          "statusName": "Revel in Destruction"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5587,7 +5564,6 @@ const compositeAbilityObject = {
             "MDF_LifeTime",
             "MDF_TriggerRatio"
           ],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -5680,7 +5656,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1079670411\">Enemy_W4_Manta_Passive_Insert_Mark</a>",
-          "stackData": [],
           "latentQueue": [
             "Manta_Passive"
           ]
@@ -5760,6 +5735,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_MaxLayer"
+          ],
+          "description": "Advances action after taking a certain number of attacks from Basic ATK, Skill, Ultimate, or Memosprite Skill.",
+          "type": "Other",
+          "statusName": "Respite By The Waters",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -6457,15 +6439,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxLayer"
-          ],
-          "latentQueue": [],
-          "description": "Advances action after taking a certain number of attacks from Basic ATK, Skill, Ultimate, or Memosprite Skill.",
-          "type": "Other",
-          "statusName": "Respite By The Waters",
-          "addStacksPerTrigger": 1
+          ]
         }
       ],
       "references": []

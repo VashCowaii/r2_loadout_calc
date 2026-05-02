@@ -927,8 +927,7 @@ const compositeAbilityObject = {
             "MDF_Skill01",
             "MDF_Skill01_Adjoin",
             "MDF_Skill02"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1205,9 +1204,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1306,9 +1303,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1317,6 +1312,9 @@ const compositeAbilityObject = {
             "KeepOnDeathrattle",
             "MuteSpeed"
           ],
+          "description": "Resists Crowd Control debuffs. When \"%DynamicTargetName\" uses \"Demise's Storm\" or \"Fading Fate\" again, if this unit was summoned by this attack and is in the \"Mutual Sacrifice\" state, then this unit will attack together with \"%DynamicTargetName\".",
+          "type": "Other",
+          "statusName": "Futility",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1399,12 +1397,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Resists Crowd Control debuffs. When \"%DynamicTargetName\" uses \"Demise's Storm\" or \"Fading Fate\" again, if this unit was summoned by this attack and is in the \"Mutual Sacrifice\" state, then this unit will attack together with \"%DynamicTargetName\".",
-          "type": "Other",
-          "statusName": "Futility"
+          ]
         }
       ],
       "references": []

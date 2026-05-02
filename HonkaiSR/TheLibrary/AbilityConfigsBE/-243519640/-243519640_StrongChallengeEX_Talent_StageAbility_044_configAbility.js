@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2044111722\">MStrongChallengeEX_Talent_StageAbility_TGT_044</a>[<span class=\"descriptionNumberColor\">Teach By Banaxample</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CriticalDamage</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+      "type": "Buff",
+      "statusName": "Teach By Banaxample",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -70,11 +74,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CriticalDamage</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-      "type": "Buff",
-      "statusName": "Teach By Banaxample",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -295,9 +295,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

@@ -18,6 +18,12 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1796724281\">LC_22005_Sub</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">#SkillEquip_P2_AttackAddedRatio</span>. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "ATK Boost",
+      "stackLimit": 3,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -51,13 +57,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">#SkillEquip_P2_AttackAddedRatio</span>. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "ATK Boost",
-      "stackLimit": 3,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -103,9 +103,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

@@ -143,9 +143,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -253,9 +251,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__2044612477\">Enemy_XP_Elite01_MuteHitFly</a>",
       "modifierFlags": [
         "MuteHitFly"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -264,9 +260,7 @@ const configAbility = {
         {
           "eventTrigger": "Action Choice Window [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

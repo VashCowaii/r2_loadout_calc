@@ -26,6 +26,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1578671258\">Relic_123_Sub3</a>[<span class=\"descriptionNumberColor\">Hero of Triumphant Song</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "Hero of Triumphant Song",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -48,11 +52,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "Hero of Triumphant Song"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -302,9 +302,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

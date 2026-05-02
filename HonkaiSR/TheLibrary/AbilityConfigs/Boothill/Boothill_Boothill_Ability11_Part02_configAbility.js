@@ -590,7 +590,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1599304772\">M_Boothill_Ability11_StancePreview</a>",
-      "stackData": [],
       "latentQueue": [
         "_enhance_before_attack",
         "Skill11_Bonus_Check"

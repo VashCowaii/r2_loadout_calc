@@ -55,6 +55,9 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
+      "stackData": [
+        "MDF_SPValue"
+      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: End",
@@ -194,11 +197,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SPValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -281,9 +280,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -329,9 +326,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -349,9 +344,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

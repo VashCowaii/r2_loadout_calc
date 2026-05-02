@@ -80,6 +80,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1761388509\">Enemy_W5_Ranger_Main_Ultra</a>[<span class=\"descriptionNumberColor\">Ultimate Daybreak</span>]",
+      "description": "Cannot be knocked down. Ultimate DMG greatly increases.",
+      "type": "Buff",
+      "effectName": "Ultimate Daybreak",
+      "statusName": "Ultimate Daybreak",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -132,13 +136,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Cannot be knocked down. Ultimate DMG greatly increases.",
-      "type": "Buff",
-      "effectName": "Ultimate Daybreak",
-      "statusName": "Ultimate Daybreak"
+      ]
     }
   ]
 }

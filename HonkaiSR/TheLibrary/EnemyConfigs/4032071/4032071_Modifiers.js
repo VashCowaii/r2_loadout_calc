@@ -20,9 +20,7 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -30,6 +28,9 @@ const configAbility = {
       "modifierFlags": [
         "MuteHitH"
       ],
+      "description": "\"Anti-Creator\" will use \"Yield Not to Tyranny\" in the next action. This state can be dispelled after receiving a killing blow.",
+      "type": "Other",
+      "statusName": "Rebellious",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -76,12 +77,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "\"Anti-Creator\" will use \"Yield Not to Tyranny\" in the next action. This state can be dispelled after receiving a killing blow.",
-      "type": "Other",
-      "statusName": "Rebellious"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -126,9 +122,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

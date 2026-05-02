@@ -409,6 +409,16 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
+      "stackData": [
+        "MDF_PropertyRatio"
+      ],
+      "latentQueue": [
+        "_delta_ntime"
+      ],
+      "description": "Reduces DEF by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Debuff",
+      "effectName": "DEF Reduction",
+      "statusName": "Yearning of Youth",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -433,22 +443,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [
-        "_delta_ntime"
-      ],
-      "description": "Reduces DEF by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Debuff",
-      "effectName": "DEF Reduction",
-      "statusName": "Yearning of Youth"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-874080613\">Misha_Ability03_StatusProbabilityUp</a>[<span class=\"descriptionNumberColor\">Interlock</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyRatio"
+      ],
+      "description": "Increases Effect Hit Rate by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Buff",
+      "effectName": "Effect Hit Rate Boost",
+      "statusName": "Interlock",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -477,15 +484,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "Increases Effect Hit Rate by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Buff",
-      "effectName": "Effect Hit Rate Boost",
-      "statusName": "Interlock"
+      ]
     }
   ],
   "targetObjectData": {

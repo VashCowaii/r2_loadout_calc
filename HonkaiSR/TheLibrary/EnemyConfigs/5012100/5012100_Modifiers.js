@@ -62,9 +62,7 @@ const configAbility = {
           ],
           "priorityLevel": 100
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -98,6 +96,10 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
+      "description": "When receiving a killing blow, uses \"First Kiss ❤ Sunny Skies.\" At the start of the turn, enters the \"Rainy Day\" state.",
+      "type": "Other",
+      "effectName": "Sunny Day",
+      "statusName": "Sunny Day",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -109,11 +111,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "When receiving a killing blow, uses \"First Kiss ❤ Sunny Skies.\" At the start of the turn, enters the \"Rainy Day\" state.",
-      "type": "Other",
-      "effectName": "Sunny Day",
-      "statusName": "Sunny Day"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -121,6 +119,10 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
+      "description": "Uses \"Gentle Rains ❤ How I Miss You\" when receiving a killing blow.",
+      "type": "Other",
+      "effectName": "Rainy Day",
+      "statusName": "Rainy Day",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -141,13 +143,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Uses \"Gentle Rains ❤ How I Miss You\" when receiving a killing blow.",
-      "type": "Other",
-      "effectName": "Rainy Day",
-      "statusName": "Rainy Day"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -375,9 +371,7 @@ const configAbility = {
         {
           "eventTrigger": "Enter Battle"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

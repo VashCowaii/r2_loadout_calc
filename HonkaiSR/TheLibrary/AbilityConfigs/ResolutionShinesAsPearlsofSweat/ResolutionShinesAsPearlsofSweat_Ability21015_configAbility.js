@@ -20,6 +20,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
+      "description": "DEF -<span class=\"descriptionNumberColor\">#SkillEquip_P2_DefenceDown</span>.",
+      "type": "Debuff",
+      "effectName": "DEF Reduction",
+      "statusName": "Ensnarement",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -42,11 +46,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DEF -<span class=\"descriptionNumberColor\">#SkillEquip_P2_DefenceDown</span>.",
-      "type": "Debuff",
-      "effectName": "DEF Reduction",
-      "statusName": "Ensnarement"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -98,9 +98,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

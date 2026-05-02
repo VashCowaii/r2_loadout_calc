@@ -806,9 +806,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -835,9 +833,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1038,9 +1034,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1210,6 +1204,27 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__664482430\">JingYuan_Ability03_PreShow</a>",
           "stackType": "ReplaceByCaster",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Self-Made Battle-Events}}"
+            },
+            "skillType": [
+              "Ultimate"
+            ],
+            "conditions": {
+              "name": "Compare: Variable",
+              "value1": "_AddLayer",
+              "compareType": ">",
+              "value2": 0
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": "(10 * _AddLayer)(SPD Change)"
+            }
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1322,9 +1337,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1804998877\">JingYuan_Ability02_PreShow</a>",
+          "stackType": "ReplaceByCaster",
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1333,7 +1351,7 @@ const compositeAbilityObject = {
               "target": "{{Caster's Self-Made Battle-Events}}"
             },
             "skillType": [
-              "Ultimate"
+              "Skill"
             ],
             "conditions": {
               "name": "Compare: Variable",
@@ -1345,12 +1363,7 @@ const compositeAbilityObject = {
               "name": "Delay/Advance Preview",
               "previewValue": "(10 * _AddLayer)(SPD Change)"
             }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1804998877\">JingYuan_Ability02_PreShow</a>",
-          "stackType": "ReplaceByCaster",
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1463,30 +1476,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Self-Made Battle-Events}}"
-            },
-            "skillType": [
-              "Skill"
-            ],
-            "conditions": {
-              "name": "Compare: Variable",
-              "value1": "_AddLayer",
-              "compareType": ">",
-              "value2": 0
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": "(10 * _AddLayer)(SPD Change)"
-            }
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1534,15 +1524,11 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2008282890\">JingYuan_ListenFlag</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-2008282890\">JingYuan_ListenFlag</a>"
         }
       ],
       "targetObjectData": {
@@ -2408,6 +2394,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-110303717\">JingYuan_Tree03_CriticalChanceUp</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT Rate Boost",
+          "statusName": "CRIT Rate Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2430,20 +2423,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT Rate Boost",
-          "statusName": "CRIT Rate Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1778616310\">JingYuan_CriticalDamageUp</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "ATKCountSum"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2466,12 +2457,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "ATKCountSum"
           ]
         },
         {
@@ -2479,6 +2464,13 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__767237660\">JingYuan_Eidolon6_AllDamageTypeTakenRatio</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "ATKCountSum"
+          ],
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2513,19 +2505,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "ATKCountSum"
-          ],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1088669628\">JingYuan_Eidolon2_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">Dharma Corpora</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_DamageAddedRatio"
+          ],
+          "latentQueue": [
+            "ATKCountSum"
+          ],
+          "description": "Jing Yuan's Basic ATK, Skill, and Ultimate deal <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span> increased DMG.",
+          "type": "Buff",
+          "statusName": "Dharma Corpora",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -2555,16 +2549,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageAddedRatio"
-          ],
-          "latentQueue": [
-            "ATKCountSum"
-          ],
-          "description": "Jing Yuan's Basic ATK, Skill, and Ultimate deal <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span> increased DMG.",
-          "type": "Buff",
-          "statusName": "Dharma Corpora"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2573,6 +2558,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2607,12 +2596,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2644,9 +2628,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2661,8 +2643,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
           "description": "Lightning-Lord's Hits Per Action.",
           "type": "Other",
           "statusName": "Prana Extirpated",
@@ -2674,8 +2654,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "stackData": [
             "ATKCount"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

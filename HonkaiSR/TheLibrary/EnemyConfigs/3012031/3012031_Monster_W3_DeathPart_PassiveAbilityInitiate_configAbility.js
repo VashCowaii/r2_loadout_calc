@@ -170,6 +170,13 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_ShowValue"
+      ],
+      "latentQueue": [
+        "Insert_Flag",
+        "DeathPart_AppearSkill_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "Update Target Selected(UI) [Anyone]",
@@ -257,13 +264,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ShowValue"
-      ],
-      "latentQueue": [
-        "Insert_Flag",
-        "DeathPart_AppearSkill_Flag"
       ]
     },
     {
@@ -272,6 +272,13 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
+      ],
+      "stackData": [
+        "MDF_ShowValue"
+      ],
+      "latentQueue": [
+        "Insert_Flag",
+        "DeathPart_AppearSkill_Flag"
       ],
       "execute": [
         {
@@ -344,13 +351,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ShowValue"
-      ],
-      "latentQueue": [
-        "Insert_Flag",
-        "DeathPart_AppearSkill_Flag"
       ]
     }
   ]

@@ -18,6 +18,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1547663194\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0017_02</a>[<span class=\"descriptionNumberColor\">Devastating Sweep</span>]",
+      "description": "Increases Break DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0017_ADF_1</span>. Each time the wearer enters the Weakness Broken state, all allies' actions advance by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0017_ADF_2</span>.",
+      "type": "Other",
+      "statusName": "Devastating Sweep",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -63,10 +66,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Break DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0017_ADF_1</span>. Each time the wearer enters the Weakness Broken state, all allies' actions advance by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0017_ADF_2</span>.",
-      "type": "Other",
-      "statusName": "Devastating Sweep"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -116,9 +116,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

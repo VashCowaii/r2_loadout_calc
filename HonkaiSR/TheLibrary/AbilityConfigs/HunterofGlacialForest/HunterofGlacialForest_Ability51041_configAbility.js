@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1571582832\">Relic_104_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Hunter of Glacial Forest</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT DMG +<span class=\"descriptionNumberColor\">#SkillRelic_104_4_P1_CriticalDamage</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "Hunter of Glacial Forest",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,11 +44,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG +<span class=\"descriptionNumberColor\">#SkillRelic_104_4_P1_CriticalDamage</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "Hunter of Glacial Forest"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -80,9 +80,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

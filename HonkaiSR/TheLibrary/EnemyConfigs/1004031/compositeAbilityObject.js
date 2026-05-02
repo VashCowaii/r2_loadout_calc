@@ -112,6 +112,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2074412751\">Enemy_W1_Bronya_ListenSelfBreak</a>",
+          "latentQueue": [
+            "Bronya_SummonCounter",
+            "Bronya_SummonMode"
+          ],
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -137,11 +141,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Bronya_SummonCounter",
-            "Bronya_SummonMode"
           ]
         },
         {
@@ -150,6 +149,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak"
           ],
+          "description": "Bronya's Toughness cannot be reduced while there are enemies on the field.",
+          "type": "Buff",
+          "effectName": "Weakness Protected",
+          "statusName": "Weakness Protected",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -191,11 +194,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Bronya's Toughness cannot be reduced while there are enemies on the field.",
-          "type": "Buff",
-          "effectName": "Weakness Protected",
-          "statusName": "Weakness Protected"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -637,6 +636,13 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-409658375\">Enemy_W1_Bronya_RL_Ability02_PowerUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "stackData": [
+            "MDF_DamageAddedRatio"
+          ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -662,15 +668,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageAddedRatio"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost"
+          ]
         }
       ]
     },

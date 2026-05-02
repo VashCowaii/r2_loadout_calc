@@ -20,9 +20,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1441620046\">Monster_W4_IronTombCore_QATest_NoEnding</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1441620046\">Monster_W4_IronTombCore_QATest_NoEnding</a>"
     }
   ]
 }

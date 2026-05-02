@@ -589,7 +589,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1891120358\">Topaz_Ability02_SpecialMarkAdder</a>",
-      "stackData": [],
       "latentQueue": [
         "_damageStart"
       ],
@@ -609,6 +608,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-934416652\">M_Topaz_BPAbility_AddRegardAsAttackType</a>",
+      "latentQueue": [
+        "_damageStart"
+      ],
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -651,12 +654,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_damageStart"
-      ],
-      "duration": 1
+      ]
     }
   ],
   "targetObjectData": {

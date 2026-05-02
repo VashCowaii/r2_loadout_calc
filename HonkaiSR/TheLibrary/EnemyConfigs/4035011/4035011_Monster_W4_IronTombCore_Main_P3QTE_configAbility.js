@@ -28,9 +28,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1833350337\">Enemy_W4_IronTombCore_Main_P3QTETest</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1833350337\">Enemy_W4_IronTombCore_Main_P3QTETest</a>"
     }
   ]
 }

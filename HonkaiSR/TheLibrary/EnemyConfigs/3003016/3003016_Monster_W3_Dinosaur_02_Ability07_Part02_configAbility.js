@@ -546,7 +546,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-206422488\">Enemy_W3_Dinosaur_02_Ability08_TVMark</a>",
-      "stackData": [],
       "latentQueue": [
         "AIFlag"
       ]

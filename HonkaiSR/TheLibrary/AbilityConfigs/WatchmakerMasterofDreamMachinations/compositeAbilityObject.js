@@ -26,6 +26,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-663861721\">Relic_118_Sub</a>[<span class=\"descriptionNumberColor\">Watchmaker, Master of Dream Machinations</span>]",
           "stackType": "Replace",
+          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">#SkillRelic_118_4_P1_BreakDamageAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "Break Effect Boost",
+          "statusName": "Watchmaker, Master of Dream Machinations",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -48,11 +52,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">#SkillRelic_118_4_P1_BreakDamageAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "Break Effect Boost",
-          "statusName": "Watchmaker, Master of Dream Machinations"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -105,9 +105,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

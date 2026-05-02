@@ -18,6 +18,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1107420759\">MStrongChallengeEX_Talent_StageAbility_PLY_056</a>[<span class=\"descriptionNumberColor\">Bold Leader</span>]",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>.",
+      "type": "Buff",
+      "statusName": "Bold Leader",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,10 +43,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>.",
-      "type": "Buff",
-      "statusName": "Bold Leader"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -190,9 +190,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

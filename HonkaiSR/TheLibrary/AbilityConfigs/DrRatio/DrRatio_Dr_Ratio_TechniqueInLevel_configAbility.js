@@ -29,6 +29,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedDown"
       ],
+      "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "SPD Reduction",
+      "statusName": "SPD Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -53,11 +57,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "SPD Reduction",
-      "statusName": "SPD Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -116,9 +116,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

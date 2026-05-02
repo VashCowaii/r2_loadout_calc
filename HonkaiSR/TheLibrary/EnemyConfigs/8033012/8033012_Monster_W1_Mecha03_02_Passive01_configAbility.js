@@ -76,9 +76,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1791558255\">Monster_W1_Mecha03_02_MuteHitFly</a>",
       "modifierFlags": [
         "MuteHitFly"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -127,9 +125,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

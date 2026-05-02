@@ -729,9 +729,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -839,9 +837,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__2044612477\">Enemy_XP_Elite01_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -850,9 +846,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Choice Window [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2584,9 +2578,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2694,9 +2686,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__2044612477\">Enemy_XP_Elite01_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2705,9 +2695,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Choice Window [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2730,6 +2718,22 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Burn"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_DamagePercentage_Layer"
+          ],
+          "description": "Takes Fire DMG at the beginning of each turn for a certain number of turns.",
+          "type": "Debuff",
+          "effectName": "Enkindle",
+          "statusName": "Enkindle",
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+            "displayLines": "ModifierStackLayer",
+            "constants": [],
+            "variables": [
+              "ModifierStackLayer"
+            ]
+          },
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2845,29 +2849,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_DamagePercentage_Layer"
-          ],
-          "latentQueue": [],
-          "description": "Takes Fire DMG at the beginning of each turn for a certain number of turns.",
-          "type": "Debuff",
-          "effectName": "Enkindle",
-          "statusName": "Enkindle",
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1077360781\">XP_Elite_Fire_Ability07_AttackUp_Modifier</a>[<span class=\"descriptionNumberColor\">Molten</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "Modifier_AttackAddedRatio"
+          ],
+          "description": "Increases ATK by <span class=\"descriptionNumberColor\">Modifier_AttackAddedRatio</span>. This effect can stack.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Molten",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2901,22 +2897,22 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "Modifier_AttackAddedRatio"
-          ],
-          "latentQueue": [],
-          "description": "Increases ATK by <span class=\"descriptionNumberColor\">Modifier_AttackAddedRatio</span>. This effect can stack.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Molten",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1090456915\">XP_Fire_Elite_Burning_Modifier_2</a>[<span class=\"descriptionNumberColor\">Spontaneous Combustion</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "Modifier_StanceWeakAddedRatio",
+            "Modifier_Stance"
+          ],
+          "description": "Blaze Out of Space's attack mode is enhanced.",
+          "type": "Other",
+          "effectName": "Spontaneous Combustion",
+          "statusName": "Spontaneous Combustion",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2964,18 +2960,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "Modifier_StanceWeakAddedRatio",
-            "Modifier_Stance"
-          ],
-          "latentQueue": [],
-          "description": "Blaze Out of Space's attack mode is enhanced.",
-          "type": "Other",
-          "effectName": "Spontaneous Combustion",
-          "statusName": "Spontaneous Combustion",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2984,6 +2969,8 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3097,9 +3084,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3137,9 +3122,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3158,9 +3141,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

@@ -20,6 +20,9 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Torture",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -42,10 +45,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Torture"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -221,9 +221,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

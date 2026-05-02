@@ -92,6 +92,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1764225041\">Advanced_Kafka_Eidolon4</a>",
+      "latentQueue": [
+        "Kafka_Listen_Rank1",
+        "Kafka_Listen_Rank2",
+        "Kafka_Listen_Rank6"
+      ],
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -119,18 +124,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Kafka_Listen_Rank1",
-        "Kafka_Listen_Rank2",
-        "Kafka_Listen_Rank6"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1537350177\">Advanced_Kafka_PassiveDotDamage_Eidolon1</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_DotRatio"
+      ],
+      "description": "DoT taken increases by <span class=\"descriptionNumberColor\">MDF_DotRatio</span>.",
+      "type": "Debuff",
+      "effectName": "DoT Vulnerability",
+      "statusName": "DoT Vulnerability",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -162,15 +168,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DotRatio"
-      ],
-      "latentQueue": [],
-      "description": "DoT taken increases by <span class=\"descriptionNumberColor\">MDF_DotRatio</span>.",
-      "type": "Debuff",
-      "effectName": "DoT Vulnerability",
-      "statusName": "DoT Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -178,6 +176,10 @@ const configAbility = {
       "stackType": "RetainGlobalLatestUnique",
       "modifierFlags": [
         "RemoveWhenCasterDead"
+      ],
+      "latentQueue": [
+        "Kafka_Listen_Rank1",
+        "Kafka_Listen_Rank6"
       ],
       "execute": [
         {
@@ -220,11 +222,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Kafka_Listen_Rank1",
-        "Kafka_Listen_Rank6"
       ]
     }
   ],

@@ -18,6 +18,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-160874884\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0012_03</a>[<span class=\"descriptionNumberColor\">Thrilling Delight</span>]",
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0012_ADF_2</span>.",
+      "type": "Other",
+      "statusName": "Thrilling Delight",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,14 +43,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0012_ADF_2</span>.",
-      "type": "Other",
-      "statusName": "Thrilling Delight"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-144097265\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0012_02</a>[<span class=\"descriptionNumberColor\">Thrilling Delight</span>]",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0012_ADF_1</span>.",
+      "type": "Other",
+      "statusName": "Thrilling Delight",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -70,10 +73,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0012_ADF_1</span>.",
-      "type": "Other",
-      "statusName": "Thrilling Delight"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -233,9 +233,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

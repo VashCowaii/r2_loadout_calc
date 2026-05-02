@@ -739,6 +739,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_AITargetHigherPriority"
           ],
+          "latentQueue": [
+            "InsertCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -986,10 +989,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "InsertCheck"
           ]
         }
       ]
@@ -1951,9 +1950,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-247858425\">Monster_W4_Claymore_LocalLegend_LasterSummon</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-247858425\">Monster_W4_Claymore_LocalLegend_LasterSummon</a>"
         }
       ]
     },
@@ -3258,6 +3255,22 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1956673523\">MModifier_Monster_W4_Claymore_LocalLegend03_Ability03_Aim</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
+          "description": "Charging. Dispelled upon Weakness Break.",
+          "type": "Other",
+          "effectName": "Charging",
+          "statusName": "Charging",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{EVENT[RoT] Light Praetor: Light Characters}}.[[addMemosprite]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1690906483\">MModifier_Monster_W4_Claymore_Ability03_Target</a>",
+              "aliveOnly": "True",
+              "haloStatus": true
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3359,24 +3372,6 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Charging. Dispelled upon Weakness Break.",
-          "type": "Other",
-          "effectName": "Charging",
-          "statusName": "Charging",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{EVENT[RoT] Light Praetor: Light Characters}}.[[addMemosprite]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1690906483\">MModifier_Monster_W4_Claymore_Ability03_Target</a>",
-              "aliveOnly": "True",
-              "haloStatus": true
             }
           ]
         },
@@ -3513,13 +3508,14 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1663989605\">Monster_W4_Claymore_LocalLegend03_PartController_LockHP</a>",
+          "latentQueue": [
+            "InsertCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -3771,10 +3767,6 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "InsertCheck"
           ]
         },
         {
@@ -3826,9 +3818,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3874,13 +3864,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1110903121\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_Monster_Display</a>[<span class=\"descriptionNumberColor\">HP Count</span>]",
+          "stackData": [
+            "MDF_EntityScore"
+          ],
+          "latentQueue": [
+            "FirstRound"
+          ],
+          "description": "Target is immediately knocked down after receiving <span class=\"descriptionNumberColor\">MDF_EntityScore</span> attack(s).",
+          "type": "Other",
+          "statusName": "HP Count",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -4049,27 +4046,6 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "_EntityScore",
-              "from": "ContextOwner",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "maxValue": 100,
-                  "includeMaxValueInRange": true,
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-1159891085\">Modifier_SpecialBattleAbility_DeathCountDown_Monster_CalNumber</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
@@ -4114,21 +4090,31 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [
-            "MDF_EntityScore"
-          ],
-          "latentQueue": [
-            "FirstRound"
-          ],
-          "description": "Target is immediately knocked down after receiving <span class=\"descriptionNumberColor\">MDF_EntityScore</span> attack(s).",
-          "type": "Other",
-          "statusName": "HP Count"
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "_EntityScore",
+              "from": "ContextOwner",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "maxValue": 100,
+                  "includeMaxValueInRange": true,
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1159891085\">Modifier_SpecialBattleAbility_DeathCountDown_Monster_CalNumber</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__809636038\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_DeadFlag</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__809636038\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_DeadFlag</a>"
         },
         {
           "name": "Modifier Construction",
@@ -4198,6 +4184,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1311672660\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_Display</a>[<span class=\"descriptionNumberColor\">HP Count</span>]",
+          "description": "Target is immediately knocked down after receiving <span class=\"descriptionNumberColor\">MDF_EntityScore</span> attack(s).",
+          "type": "Other",
+          "statusName": "HP Count",
           "execute": [
             {
               "eventTrigger": "Turn Start [Anyone]",
@@ -4545,6 +4534,123 @@ const compositeAbilityObject = {
               ]
             }
           ],
+          "modifierFunctions": [
+            {
+              "name": "CharacterFunctions",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__354133831\">WModifier_SpecialBattleAbility_DeathCountDown_CalNumber</a>",
+              "parse": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_EntityScore",
+                  "value": {
+                    "operator": "Variables[0] (_EntityScore) || RETURN",
+                    "displayLines": "_EntityScore",
+                    "constants": [],
+                    "variables": [
+                      "_EntityScore"
+                    ]
+                  }
+                },
+                {
+                  "name": "Update Hit-Count Energy Bar",
+                  "Left": {
+                    "operator": "Variables[0] (MDF_EntityScore) || RETURN",
+                    "displayLines": "MDF_EntityScore",
+                    "constants": [],
+                    "variables": [
+                      "MDF_EntityScore"
+                    ]
+                  },
+                  "Past": {
+                    "operator": "Variables[0] (MDF_LastEntityScore) || RETURN",
+                    "displayLines": "MDF_LastEntityScore",
+                    "constants": [],
+                    "variables": [
+                      "MDF_LastEntityScore"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_LastEntityScore",
+                  "value": {
+                    "operator": "Variables[0] (_EntityScore) || RETURN",
+                    "displayLines": "_EntityScore",
+                    "constants": [],
+                    "variables": [
+                      "_EntityScore"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Entity Type",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "type": "Character"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Copy",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Level Entity}}"
+                      },
+                      "variable": "_MonsterChangeCnt",
+                      "target2": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variable2": "MDF_LevelMinEntityScore",
+                      "scope": "ContextModifier"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "_EntityScore",
+                        "compareType": "<",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_LevelMinEntityScore) || RETURN",
+                          "displayLines": "MDF_LevelMinEntityScore",
+                          "constants": [],
+                          "variables": [
+                            "MDF_LevelMinEntityScore"
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Level Entity}}"
+                          },
+                          "scope": "TargetEntity",
+                          "variableName": "_MonsterChangeCnt",
+                          "value": {
+                            "operator": "Variables[0] (_EntityScore) || RETURN",
+                            "displayLines": "_EntityScore",
+                            "constants": [],
+                            "variables": [
+                              "_EntityScore"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
           "variableValueChange": [
             {
               "name": "Variable Value Changes",
@@ -4831,127 +4937,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "modifierFunctions": [
-            {
-              "name": "CharacterFunctions",
-              "functionName": "<a class=\"gTempYellow\" id=\"fun__354133831\">WModifier_SpecialBattleAbility_DeathCountDown_CalNumber</a>",
-              "parse": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_EntityScore",
-                  "value": {
-                    "operator": "Variables[0] (_EntityScore) || RETURN",
-                    "displayLines": "_EntityScore",
-                    "constants": [],
-                    "variables": [
-                      "_EntityScore"
-                    ]
-                  }
-                },
-                {
-                  "name": "Update Hit-Count Energy Bar",
-                  "Left": {
-                    "operator": "Variables[0] (MDF_EntityScore) || RETURN",
-                    "displayLines": "MDF_EntityScore",
-                    "constants": [],
-                    "variables": [
-                      "MDF_EntityScore"
-                    ]
-                  },
-                  "Past": {
-                    "operator": "Variables[0] (MDF_LastEntityScore) || RETURN",
-                    "displayLines": "MDF_LastEntityScore",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LastEntityScore"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_LastEntityScore",
-                  "value": {
-                    "operator": "Variables[0] (_EntityScore) || RETURN",
-                    "displayLines": "_EntityScore",
-                    "constants": [],
-                    "variables": [
-                      "_EntityScore"
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Entity Type",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "type": "Character"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Copy",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "variable": "_MonsterChangeCnt",
-                      "target2": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variable2": "MDF_LevelMinEntityScore",
-                      "scope": "ContextModifier"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "_EntityScore",
-                        "compareType": "<",
-                        "value2": {
-                          "operator": "Variables[0] (MDF_LevelMinEntityScore) || RETURN",
-                          "displayLines": "MDF_LevelMinEntityScore",
-                          "constants": [],
-                          "variables": [
-                            "MDF_LevelMinEntityScore"
-                          ]
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Level Entity}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "_MonsterChangeCnt",
-                          "value": {
-                            "operator": "Variables[0] (_EntityScore) || RETURN",
-                            "displayLines": "_EntityScore",
-                            "constants": [],
-                            "variables": [
-                              "_EntityScore"
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "description": "Target is immediately knocked down after receiving <span class=\"descriptionNumberColor\">MDF_EntityScore</span> attack(s).",
-          "type": "Other",
-          "statusName": "HP Count"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5325,9 +5311,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5489,13 +5473,27 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-55819136\">MModifier_Monster_W4_Claymore_LocalLegend_Ability03_Aim</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
+          "description": "Charging. Dispelled upon Weakness Break.",
+          "type": "Other",
+          "effectName": "Charging",
+          "statusName": "Charging",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1071596347\">Enemy_AML_Elite01_Aim</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
+              "aliveOnly": "True",
+              "haloStatus": true
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5584,24 +5582,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Charging. Dispelled upon Weakness Break.",
-          "type": "Other",
-          "effectName": "Charging",
-          "statusName": "Charging",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1071596347\">Enemy_AML_Elite01_Aim</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
-              "aliveOnly": "True",
-              "haloStatus": true
-            }
           ]
         },
         {
@@ -5611,7 +5591,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__544728190\">MModifier_Monster_W4_Claymore_LocalLegend_Part3</a>",
-          "stackData": [],
           "latentQueue": [
             "FirstRound"
           ]
@@ -5629,9 +5608,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5813,9 +5790,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

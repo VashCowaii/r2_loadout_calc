@@ -15,6 +15,13 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "TeamAction"
       ],
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "%CasterName will focus attacks on this target.",
+      "type": "Other",
+      "effectName": "Lock On",
+      "statusName": "Lock On",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -44,15 +51,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "%CasterName will focus attacks on this target.",
-      "type": "Other",
-      "effectName": "Lock On",
-      "statusName": "Lock On"
+      ]
     }
   ],
   "references": []

@@ -74,6 +74,11 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "When fully charged, triggers Talent \"Victory Rush.\"",
+      "type": "Other",
+      "statusName": "Charge",
+      "stackLimit": 3,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -197,20 +202,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "When fully charged, triggers Talent \"Victory Rush.\"",
-      "type": "Other",
-      "statusName": "Charge",
-      "stackLimit": 3,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__65829546\">Himeko_Passive_PursuitCD</a>[<span class=\"descriptionNumberColor\">Victory Rush</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Talent \"Victory Rush\" cannot be triggered.",
+      "type": "Other",
+      "statusName": "Victory Rush",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -225,11 +227,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Talent \"Victory Rush\" cannot be triggered.",
-      "type": "Other",
-      "statusName": "Victory Rush",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -939,9 +937,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

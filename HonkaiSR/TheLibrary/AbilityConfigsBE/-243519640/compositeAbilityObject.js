@@ -297,9 +297,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -414,9 +412,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -527,6 +523,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__136363146\">MStrongChallengeEX_Talent_StageAbility_PLY_087_2</a>",
+          "stackData": [
+            "MDF_CritDamageAddedRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -549,11 +548,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_CritDamageAddedRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -650,9 +645,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -677,6 +670,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1807253580\">MStrongChallengeEX_Talent_StageAbility_TGT_086</a>[<span class=\"descriptionNumberColor\">Collapse on Sight</span>]",
           "stackType": "Replace",
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio</span>.",
+          "type": "Buff",
+          "statusName": "Collapse on Sight",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -699,10 +695,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio</span>.",
-          "type": "Buff",
-          "statusName": "Collapse on Sight"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -884,9 +877,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1000,9 +991,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1027,6 +1016,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1773698342\">MStrongChallengeEX_Talent_StageAbility_TGT_084</a>[<span class=\"descriptionNumberColor\">Montane Gush</span>]",
           "stackType": "Replace",
+          "description": "CRIT DMG dealt by Skill increases by <span class=\"descriptionNumberColor\">MDF_BPCrit_DamageAddedRatio</span>.",
+          "type": "Buff",
+          "statusName": "Montane Gush",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1054,10 +1046,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG dealt by Skill increases by <span class=\"descriptionNumberColor\">MDF_BPCrit_DamageAddedRatio</span>.",
-          "type": "Buff",
-          "statusName": "Montane Gush"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1158,9 +1147,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1346,9 +1333,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1451,9 +1436,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1478,6 +1461,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1435721852\">MStrongChallengeEX_Talent_StageAbility_PLY_081_Extra</a>[<span class=\"descriptionNumberColor\">Whirlwind Turn</span>]",
           "stackType": "Replace",
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
+          "type": "Buff",
+          "statusName": "Whirlwind Turn",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1500,10 +1486,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
-          "type": "Buff",
-          "statusName": "Whirlwind Turn"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1688,9 +1671,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1714,6 +1695,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1376108138\">MStrongChallengeEX_Talent_StageAbility_PLY_080</a>[<span class=\"descriptionNumberColor\">Past Life: Shadowed Reverie</span>]",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Past Life: Shadowed Reverie",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1736,10 +1720,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Past Life: Shadowed Reverie"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1962,9 +1943,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1989,6 +1968,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-675587525\">MStrongChallengeEX_Talent_StageAbility_PLY_079_Extra</a>[<span class=\"descriptionNumberColor\">Unto Apotheosis</span>]",
           "stackType": "Replace",
+          "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> time(s).",
+          "type": "Buff",
+          "statusName": "Unto Apotheosis",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2018,11 +2001,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> time(s).",
-          "type": "Buff",
-          "statusName": "Unto Apotheosis",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2149,9 +2128,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2233,9 +2210,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2259,6 +2234,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1291381400\">MStrongChallengeEX_Talent_StageAbility_PLY_077</a>[<span class=\"descriptionNumberColor\">Shatterstrike</span>]",
+          "description": "Increases Break DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue5</span>.",
+          "type": "Buff",
+          "statusName": "Shatterstrike",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -2360,58 +2338,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases Break DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue5</span>.",
-          "type": "Buff",
-          "statusName": "Shatterstrike"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-703429744\">MStrongChallengeEX_Talent_StageAbility_LE_077</a>",
-          "execute": [
-            {
-              "eventTrigger": "Weakness Break [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_BreakCount",
-                      "value": 1,
-                      "max": {
-                        "operator": "Variables[0] (#ADF_3) || RETURN",
-                        "displayLines": "#ADF_3",
-                        "constants": [],
-                        "variables": [
-                          "#ADF_3"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -2455,6 +2386,48 @@ const compositeAbilityObject = {
                   ]
                 }
               }
+            }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Weakness Break [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Added Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "MDF_BreakCount",
+                      "value": 1,
+                      "max": {
+                        "operator": "Variables[0] (#ADF_3) || RETURN",
+                        "displayLines": "#ADF_3",
+                        "constants": [],
+                        "variables": [
+                          "#ADF_3"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -2589,9 +2562,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2748,9 +2719,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2822,6 +2791,52 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1341714257\">MStrongChallengeEX_Talent_StageAbility_PLY_074</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "conditions": {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Is Weak to Attacker",
+                  "weakTo": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
+                },
+                {
+                  "name": "Compare: Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "value1": "StageAbility_MST_074_DotCount",
+                  "compareType": ">=",
+                  "value2": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  },
+                  "contextScope": "ContextCaster"
+                }
+              ]
+            },
+            "toughnessReductionPreview": {
+              "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
+              "displayLines": "MDF_PropertyValue2",
+              "constants": [],
+              "variables": [
+                "MDF_PropertyValue2"
+              ]
+            }
+          },
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -2871,53 +2886,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "conditions": {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Is Weak to Attacker",
-                  "weakTo": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  }
-                },
-                {
-                  "name": "Compare: Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "value1": "StageAbility_MST_074_DotCount",
-                  "compareType": ">=",
-                  "value2": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  },
-                  "contextScope": "ContextCaster"
-                }
-              ]
-            },
-            "toughnessReductionPreview": {
-              "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-              "displayLines": "MDF_PropertyValue2",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue2"
-              ]
-            }
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2999,9 +2968,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3026,6 +2993,29 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2128146912\">MStrongChallengeEX_Talent_StageAbility_TGT_073</a>",
           "stackType": "ReplaceByCaster",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "conditions": {
+              "name": "Is Weak to Attacker",
+              "weakTo": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            },
+            "toughnessReductionPreview": {
+              "operator": "Variables[0] (MDF_DefaultStanceBreakRatio) || RETURN",
+              "displayLines": "MDF_DefaultStanceBreakRatio",
+              "constants": [],
+              "variables": [
+                "MDF_DefaultStanceBreakRatio"
+              ]
+            }
+          },
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -3063,30 +3053,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "conditions": {
-              "name": "Is Weak to Attacker",
-              "weakTo": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            "toughnessReductionPreview": {
-              "operator": "Variables[0] (MDF_DefaultStanceBreakRatio) || RETURN",
-              "displayLines": "MDF_DefaultStanceBreakRatio",
-              "constants": [],
-              "variables": [
-                "MDF_DefaultStanceBreakRatio"
-              ]
-            }
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3186,9 +3153,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3305,9 +3270,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3575,9 +3538,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3788,9 +3749,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3919,9 +3878,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4079,9 +4036,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4106,6 +4061,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2061183531\">MStrongChallengeEX_Talent_StageAbility_TGT_067</a>[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">MDF_DefaultStanceBreakRatio</span> and increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CriticalDamage</span>.",
+          "type": "Buff",
+          "statusName": "Unstoppable Momentum",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4144,14 +4102,49 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">MDF_DefaultStanceBreakRatio</span> and increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CriticalDamage</span>.",
-          "type": "Buff",
-          "statusName": "Unstoppable Momentum"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1291234305\">MStrongChallengeEX_Talent_StageAbility_PLY_067</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "skillType": "Ultimate",
+            "conditions": {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Is Weak to Attacker",
+                  "weakTo": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
+                },
+                {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2061183531\">MStrongChallengeEX_Talent_StageAbility_TGT_067</a>[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
+                  "invertCondition": true
+                }
+              ]
+            },
+            "toughnessReductionPreview": {
+              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+              "displayLines": "MDF_PropertyValue",
+              "constants": [],
+              "variables": [
+                "MDF_PropertyValue"
+              ]
+            }
+          },
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -4202,45 +4195,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "skillType": "Ultimate",
-            "conditions": {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Is Weak to Attacker",
-                  "weakTo": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  }
-                },
-                {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2061183531\">MStrongChallengeEX_Talent_StageAbility_TGT_067</a>[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
-                  "invertCondition": true
-                }
-              ]
-            },
-            "toughnessReductionPreview": {
-              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-              "displayLines": "MDF_PropertyValue",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue"
-              ]
-            }
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4303,9 +4258,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4467,9 +4420,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4564,9 +4515,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4591,6 +4540,29 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2111516388\">MStrongChallengeEX_Talent_StageAbility_TGT_064</a>",
           "stackType": "ReplaceByCaster",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "conditions": {
+              "name": "Is Weak to Attacker",
+              "weakTo": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            },
+            "toughnessReductionPreview": {
+              "operator": "Variables[0] (MDF_DefaultStanceBreakRatio) || RETURN",
+              "displayLines": "MDF_DefaultStanceBreakRatio",
+              "constants": [],
+              "variables": [
+                "MDF_DefaultStanceBreakRatio"
+              ]
+            }
+          },
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -4628,30 +4600,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "conditions": {
-              "name": "Is Weak to Attacker",
-              "weakTo": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            "toughnessReductionPreview": {
-              "operator": "Variables[0] (MDF_DefaultStanceBreakRatio) || RETURN",
-              "displayLines": "MDF_DefaultStanceBreakRatio",
-              "constants": [],
-              "variables": [
-                "MDF_DefaultStanceBreakRatio"
-              ]
-            }
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4751,9 +4700,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4992,9 +4939,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5019,6 +4964,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1341567162\">MStrongChallengeEX_Talent_StageAbility_PLY_062</a>",
           "stackType": "ReplaceByCaster",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5052,8 +4998,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5126,9 +5071,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5284,9 +5227,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5415,9 +5356,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5549,9 +5488,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5675,9 +5612,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5805,9 +5740,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5831,6 +5764,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1107420759\">MStrongChallengeEX_Talent_StageAbility_PLY_056</a>[<span class=\"descriptionNumberColor\">Bold Leader</span>]",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>.",
+          "type": "Buff",
+          "statusName": "Bold Leader",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5853,10 +5789,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>.",
-          "type": "Buff",
-          "statusName": "Bold Leader"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6003,9 +5936,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6136,9 +6067,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6279,9 +6208,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6305,28 +6232,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1308834030\">MStrongChallengeEX_Talent_StageAbility_SVT_053</a>",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "Adjust Target Stats",
-                  "modifiedValuesArray": [
-                    {
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
-                      "value": "MDF_DefaultStanceBreakRatio"
-                    },
-                    {
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                      "value": "(-1 * MDF_IgnoreDefenceRatioTotal)"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -6349,7 +6254,29 @@ const compositeAbilityObject = {
                 "MDF_DefaultStanceBreakRatio"
               ]
             }
-          }
+          },
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "Adjust Target Stats",
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
+                      "value": "MDF_DefaultStanceBreakRatio"
+                    },
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "(-1 * MDF_IgnoreDefenceRatioTotal)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6412,9 +6339,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6527,9 +6452,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6741,9 +6664,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6836,9 +6757,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6966,9 +6885,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7077,9 +6994,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7182,9 +7097,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7273,9 +7186,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7504,9 +7415,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7531,6 +7440,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2044111722\">MStrongChallengeEX_Talent_StageAbility_TGT_044</a>[<span class=\"descriptionNumberColor\">Teach By Banaxample</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CriticalDamage</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+          "type": "Buff",
+          "statusName": "Teach By Banaxample",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7582,11 +7495,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CriticalDamage</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-          "type": "Buff",
-          "statusName": "Teach By Banaxample",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7807,9 +7716,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7929,9 +7836,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8030,9 +7935,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8143,9 +8046,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8278,9 +8179,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8519,9 +8418,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8686,9 +8583,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8773,9 +8668,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8892,9 +8785,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9053,9 +8944,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9179,9 +9068,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9469,9 +9356,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9583,9 +9468,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9674,9 +9557,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9905,9 +9786,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9932,6 +9811,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__254716271\">MStrongChallengeEX_Talent_StageAbility_TGT_029</a>[<span class=\"descriptionNumberColor\">Cheat Sheet</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
+          "type": "Buff",
+          "statusName": "Cheat Sheet",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -9983,11 +9866,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
-          "type": "Buff",
-          "statusName": "Cheat Sheet",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -10208,9 +10087,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10298,9 +10175,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10395,9 +10270,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10519,9 +10392,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10546,6 +10417,30 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1158886449\">MStrongChallengeEX_Talent_StageAbility_PLY_025</a>",
           "stackType": "ReplaceByCaster",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "skillType": "Ultimate",
+            "conditions": {
+              "name": "Is Weak to Attacker",
+              "weakTo": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            },
+            "toughnessReductionPreview": {
+              "operator": "Variables[0] (MDF_Ultra_DefaultStanceBreakRatio) || RETURN",
+              "displayLines": "MDF_Ultra_DefaultStanceBreakRatio",
+              "constants": [],
+              "variables": [
+                "MDF_Ultra_DefaultStanceBreakRatio"
+              ]
+            }
+          },
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -10573,31 +10468,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "skillType": "Ultimate",
-            "conditions": {
-              "name": "Is Weak to Attacker",
-              "weakTo": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            "toughnessReductionPreview": {
-              "operator": "Variables[0] (MDF_Ultra_DefaultStanceBreakRatio) || RETURN",
-              "displayLines": "MDF_Ultra_DefaultStanceBreakRatio",
-              "constants": [],
-              "variables": [
-                "MDF_Ultra_DefaultStanceBreakRatio"
-              ]
-            }
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -10639,9 +10510,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10844,9 +10713,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -11000,9 +10867,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -11147,9 +11012,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -11539,9 +11402,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -11673,9 +11534,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -11914,9 +11773,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -12081,9 +11938,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -12215,9 +12070,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -12337,9 +12190,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -13033,9 +12884,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -13120,9 +12969,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -13235,9 +13082,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -13525,9 +13370,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -13815,9 +13658,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -13903,6 +13744,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1359820035\">MStrongChallengeEX_Talent_StageAbility_LE_010</a>[<span class=\"descriptionNumberColor\">Moment of Termination</span>]",
+          "description": "Ultimate deals <span class=\"descriptionNumberColor\">#ADF_1</span> more DMG.",
+          "type": "Buff",
+          "statusName": "Moment of Termination",
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -13935,12 +13779,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Ultimate deals <span class=\"descriptionNumberColor\">#ADF_1</span> more DMG.",
-          "type": "Buff",
-          "statusName": "Moment of Termination"
+          ]
         }
       ]
     },
@@ -13968,6 +13807,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1257384877\">MStrongChallengeEX_Talent_StageAbility_PLY_009</a>[<span class=\"descriptionNumberColor\">Ashen Battleground</span>]",
+          "description": "Increases DMG dealt by Basic ATK and Skill by <span class=\"descriptionNumberColor\">#ADF_1</span>.",
+          "type": "Buff",
+          "statusName": "Ashen Battleground",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -14022,10 +13864,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Attack Start [Owner]"
             }
-          ],
-          "description": "Increases DMG dealt by Basic ATK and Skill by <span class=\"descriptionNumberColor\">#ADF_1</span>.",
-          "type": "Buff",
-          "statusName": "Ashen Battleground"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14062,9 +13901,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -14092,6 +13929,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Sundered Paradise",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -14117,10 +13957,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Sundered Paradise"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14129,6 +13966,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1240607258\">MStrongChallengeEX_Talent_StageAbility_PLY_008</a>[<span class=\"descriptionNumberColor\">Sundered Paradise</span>]",
+          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Sundered Paradise",
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Any",
@@ -14301,10 +14141,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Sundered Paradise"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14375,9 +14212,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -14853,9 +14688,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -14940,9 +14773,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -15042,9 +14873,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -15072,6 +14901,198 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ForceStanceDamage"
           ],
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "conditions": {
+              "name": "OR",
+              "conditionList": [
+                {
+                  "name": "AND",
+                  "conditionList": [
+                    {
+                      "name": "Has Element",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "DamageType": {
+                        "name": "Damage Type Source",
+                        "sourceType": "Fire"
+                      }
+                    },
+                    {
+                      "name": "Has Weakness",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "DamageType": "Fire",
+                      "invertCondition": true
+                    }
+                  ]
+                },
+                {
+                  "name": "AND",
+                  "conditionList": [
+                    {
+                      "name": "Has Element",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "DamageType": {
+                        "name": "Damage Type Source",
+                        "sourceType": "Thunder"
+                      }
+                    },
+                    {
+                      "name": "Has Weakness",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "DamageType": "Thunder",
+                      "invertCondition": true
+                    }
+                  ]
+                },
+                {
+                  "name": "AND",
+                  "conditionList": [
+                    {
+                      "name": "Has Element",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "DamageType": {
+                        "name": "Damage Type Source",
+                        "sourceType": "Physical"
+                      }
+                    },
+                    {
+                      "name": "Has Weakness",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "DamageType": "Physical",
+                      "invertCondition": true
+                    }
+                  ]
+                },
+                {
+                  "name": "AND",
+                  "conditionList": [
+                    {
+                      "name": "Has Element",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "DamageType": {
+                        "name": "Damage Type Source",
+                        "sourceType": "Wind"
+                      }
+                    },
+                    {
+                      "name": "Has Weakness",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "DamageType": "Wind",
+                      "invertCondition": true
+                    }
+                  ]
+                },
+                {
+                  "name": "AND",
+                  "conditionList": [
+                    {
+                      "name": "Has Element",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "DamageType": {
+                        "name": "Damage Type Source",
+                        "sourceType": "Quantum"
+                      }
+                    },
+                    {
+                      "name": "Has Weakness",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "DamageType": "Quantum",
+                      "invertCondition": true
+                    }
+                  ]
+                },
+                {
+                  "name": "AND",
+                  "conditionList": [
+                    {
+                      "name": "Has Element",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "DamageType": {
+                        "name": "Damage Type Source",
+                        "sourceType": "Ice"
+                      }
+                    },
+                    {
+                      "name": "Has Weakness",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "DamageType": "Ice",
+                      "invertCondition": true
+                    }
+                  ]
+                },
+                {
+                  "name": "AND",
+                  "conditionList": [
+                    {
+                      "name": "Has Element",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "DamageType": {
+                        "name": "Damage Type Source",
+                        "sourceType": "Imaginary"
+                      }
+                    },
+                    {
+                      "name": "Has Weakness",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "DamageType": "Imaginary",
+                      "invertCondition": true
+                    }
+                  ]
+                }
+              ]
+            },
+            "toughnessForcedReductionPreview": {
+              "operator": "Variables[0] (#ADF_1) || RETURN",
+              "displayLines": "#ADF_1",
+              "constants": [],
+              "variables": [
+                "#ADF_1"
+              ]
+            }
+          },
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -15361,199 +15382,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "conditions": {
-              "name": "OR",
-              "conditionList": [
-                {
-                  "name": "AND",
-                  "conditionList": [
-                    {
-                      "name": "Has Element",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Fire"
-                      }
-                    },
-                    {
-                      "name": "Has Weakness",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "DamageType": "Fire",
-                      "invertCondition": true
-                    }
-                  ]
-                },
-                {
-                  "name": "AND",
-                  "conditionList": [
-                    {
-                      "name": "Has Element",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Thunder"
-                      }
-                    },
-                    {
-                      "name": "Has Weakness",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "DamageType": "Thunder",
-                      "invertCondition": true
-                    }
-                  ]
-                },
-                {
-                  "name": "AND",
-                  "conditionList": [
-                    {
-                      "name": "Has Element",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Physical"
-                      }
-                    },
-                    {
-                      "name": "Has Weakness",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "DamageType": "Physical",
-                      "invertCondition": true
-                    }
-                  ]
-                },
-                {
-                  "name": "AND",
-                  "conditionList": [
-                    {
-                      "name": "Has Element",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Wind"
-                      }
-                    },
-                    {
-                      "name": "Has Weakness",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "DamageType": "Wind",
-                      "invertCondition": true
-                    }
-                  ]
-                },
-                {
-                  "name": "AND",
-                  "conditionList": [
-                    {
-                      "name": "Has Element",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Quantum"
-                      }
-                    },
-                    {
-                      "name": "Has Weakness",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "DamageType": "Quantum",
-                      "invertCondition": true
-                    }
-                  ]
-                },
-                {
-                  "name": "AND",
-                  "conditionList": [
-                    {
-                      "name": "Has Element",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Ice"
-                      }
-                    },
-                    {
-                      "name": "Has Weakness",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "DamageType": "Ice",
-                      "invertCondition": true
-                    }
-                  ]
-                },
-                {
-                  "name": "AND",
-                  "conditionList": [
-                    {
-                      "name": "Has Element",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Imaginary"
-                      }
-                    },
-                    {
-                      "name": "Has Weakness",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "DamageType": "Imaginary",
-                      "invertCondition": true
-                    }
-                  ]
-                }
-              ]
-            },
-            "toughnessForcedReductionPreview": {
-              "operator": "Variables[0] (#ADF_1) || RETURN",
-              "displayLines": "#ADF_1",
-              "constants": [],
-              "variables": [
-                "#ADF_1"
-              ]
-            }
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -15600,9 +15429,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -15720,9 +15547,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -15872,9 +15697,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -16052,9 +15875,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -16074,8 +15895,7 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "stackData": [
             "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -16128,6 +15948,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1349202594\">MStrongChallengeEX_Talent_StageAbility_BOSS_007_Trigger</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue",
+            "MDF_LifeTime",
+            "MDF_MaxLayer"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -16194,13 +16019,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_LifeTime",
-            "MDF_MaxLayer"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

@@ -24,9 +24,7 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "KeepOnDeathrattle"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -36,7 +34,6 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "KeepOnDeathrattle"
       ],
-      "stackData": [],
       "latentQueue": [
         "MazeSkill_Triggered",
         "_can_continue"
@@ -123,6 +120,18 @@ const configAbility = {
         "RetainCountZero",
         "KeepOnDeathrattle"
       ],
+      "stackData": [
+        "MDF_PropertyValue",
+        "MDF_ResistanceDown",
+        "MDF_Count",
+        "SecondLayer",
+        "ThirdLayer"
+      ],
+      "description": "The DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> during this unit's turn. While in Arcana state, this unit is also considered to be simultaneously inflicted with Wind Shear, Bleed, Burn, and Shock. Additionally, after Arcana causes DMG at the start of each turn, its stacks do not reset. This effect can trigger <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s).",
+      "type": "Debuff",
+      "effectName": "Epiphany",
+      "statusName": "Epiphany",
+      "duration": 2,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -253,20 +262,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_ResistanceDown",
-        "MDF_Count",
-        "SecondLayer",
-        "ThirdLayer"
-      ],
-      "latentQueue": [],
-      "description": "The DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> during this unit's turn. While in Arcana state, this unit is also considered to be simultaneously inflicted with Wind Shear, Bleed, Burn, and Shock. Additionally, after Arcana causes DMG at the start of each turn, its stacks do not reset. This effect can trigger <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s).",
-      "type": "Debuff",
-      "effectName": "Epiphany",
-      "statusName": "Epiphany",
-      "duration": 2
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -335,6 +331,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1900357632\">M_BlackSwan_DOT_DefenceIgnore</a>",
       "stackType": "ReplaceByCaster",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -366,8 +363,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -378,6 +374,20 @@ const configAbility = {
         "STAT_DOT",
         "DynamicInjectLoop"
       ],
+      "useEntitySnapshot": true,
+      "stackData": [
+        "Basic_DamagePercentage",
+        "ExtraLayer_DamagePercentage",
+        "SecondLayer",
+        "Spread_DamagePercentage",
+        "ThirdLayer",
+        "DefenceIgnore",
+        "Cast_By_Level"
+      ],
+      "description": "Takes Wind DMG at the start of each turn. Being afflicted with Arcana will also be considered as suffering from Wind Shear. This state stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> times.",
+      "type": "Debuff",
+      "effectName": "Arcana",
+      "statusName": "Arcana",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1534,22 +1544,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "Basic_DamagePercentage",
-        "ExtraLayer_DamagePercentage",
-        "SecondLayer",
-        "Spread_DamagePercentage",
-        "ThirdLayer",
-        "DefenceIgnore",
-        "Cast_By_Level"
-      ],
-      "latentQueue": [],
-      "description": "Takes Wind DMG at the start of each turn. Being afflicted with Arcana will also be considered as suffering from Wind Shear. This state stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> times.",
-      "type": "Debuff",
-      "effectName": "Arcana",
-      "statusName": "Arcana"
+      ]
     }
   ],
   "references": []

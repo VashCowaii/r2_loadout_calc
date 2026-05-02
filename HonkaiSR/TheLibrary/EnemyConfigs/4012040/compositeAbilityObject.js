@@ -660,9 +660,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -734,6 +732,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1276555812\">MModifier_Monster_AML_Minion03_01_StoneShieldEnhance</a>[<span class=\"descriptionNumberColor\">Indomitable</span>]",
+          "description": "Increases max \"War Armor\" stacks. Dispelled when %CasterName's \"War Armor\" is broken.",
+          "type": "Buff",
+          "effectName": "Max \"War Armor\" Boost",
+          "statusName": "Indomitable",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -866,80 +868,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases max \"War Armor\" stacks. Dispelled when %CasterName's \"War Armor\" is broken.",
-          "type": "Buff",
-          "effectName": "Max \"War Armor\" Boost",
-          "statusName": "Indomitable"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1735610792\">MModifier_Monster_AML_Minion03_01_Halo</a>[<span class=\"descriptionNumberColor\">War Song</span>]",
           "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "Being Attacked Completed [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-                        "compareType": "=",
-                        "value2": 0,
-                        "valueType": "Layer"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
           "stackData": [
             "MDF_DamagePercentage",
             "MDF_AddMaxLayer",
             "MDF_SetMaxLayer"
           ],
-          "latentQueue": [],
           "description": "Increases max \"War Armor\" stacks for enemy units aside from this unit. Dispelled when this unit's \"Armor\" is destroyed.",
           "type": "Buff",
           "effectName": "The Warsong Begins",
@@ -1071,6 +1010,64 @@ const compositeAbilityObject = {
                 }
               }
             }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "Being Attacked Completed [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
+                        "compareType": "=",
+                        "value2": 0,
+                        "valueType": "Layer"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -1124,9 +1121,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -45
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

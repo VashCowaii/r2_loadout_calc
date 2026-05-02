@@ -31,9 +31,7 @@ const configAbility = {
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

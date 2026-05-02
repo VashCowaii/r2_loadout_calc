@@ -257,9 +257,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -357,9 +355,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -367,9 +363,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteHitFly",
             "KeepOnDeathrattle"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -387,6 +381,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1471440713\">Monster_W2_HuanlongPart_Heal</a>[<span class=\"descriptionNumberColor\">Vigor</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_HealRatio"
+          ],
+          "description": "Every action taken restores <span class=\"descriptionNumberColor\">MDF_HealRatio</span> HP.",
+          "type": "Buff",
+          "effectName": "Vigor",
+          "statusName": "Vigor",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -439,15 +440,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HealRatio"
-          ],
-          "latentQueue": [],
-          "description": "Every action taken restores <span class=\"descriptionNumberColor\">MDF_HealRatio</span> HP.",
-          "type": "Buff",
-          "effectName": "Vigor",
-          "statusName": "Vigor"
+          ]
         }
       ],
       "references": []

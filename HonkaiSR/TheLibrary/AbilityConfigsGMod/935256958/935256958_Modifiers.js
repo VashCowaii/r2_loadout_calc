@@ -15,6 +15,8 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "stackLimit": 3,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -48,14 +50,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 3,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-753898483\">MWNormalAttack_Ultimate_Concentrate</a>",
       "stackType": "ReplaceByCaster",
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -78,9 +80,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -283,6 +283,8 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1796707595\">MWZaika_Passive_UltraDamageUp</a>",
       "stackType": "ReplaceByCaster",
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -324,9 +326,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -421,6 +421,15 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "stackLimit": 6,
+      "addStacksPerTrigger": {
+        "operator": "Variables[0] (StackModifierLayers) || RETURN",
+        "displayLines": "StackModifierLayers",
+        "constants": [],
+        "variables": [
+          "StackModifierLayers"
+        ]
+      },
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -487,16 +496,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 6,
-      "addStacksPerTrigger": {
-        "operator": "Variables[0] (StackModifierLayers) || RETURN",
-        "displayLines": "StackModifierLayers",
-        "constants": [],
-        "variables": [
-          "StackModifierLayers"
-        ]
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -504,6 +504,7 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [],
+      "useEntitySnapshot": true,
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -590,8 +591,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -599,6 +599,7 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [],
+      "useEntitySnapshot": true,
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -685,14 +686,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-686469537\">WB_IceShield_IceBlast_Modifier</a>",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [],
+      "useEntitySnapshot": true,
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -720,8 +721,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -730,6 +730,7 @@ const configAbility = {
       "modifierFlags": [
         "Shield"
       ],
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -793,8 +794,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -833,6 +833,7 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-317978227\">MWTuiTiao_Passive_Electric</a>",
+      "useEntitySnapshot": true,
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -871,8 +872,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "useEntitySnapshot": true
+      ]
     },
     {
       "name": "Modifier Construction",

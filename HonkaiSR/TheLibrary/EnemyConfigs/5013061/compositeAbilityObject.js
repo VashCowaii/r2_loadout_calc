@@ -268,6 +268,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1761388509\">Enemy_W5_Ranger_Main_Ultra</a>[<span class=\"descriptionNumberColor\">Ultimate Daybreak</span>]",
+          "description": "Cannot be knocked down. Ultimate DMG greatly increases.",
+          "type": "Buff",
+          "effectName": "Ultimate Daybreak",
+          "statusName": "Ultimate Daybreak",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -320,13 +324,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Cannot be knocked down. Ultimate DMG greatly increases.",
-          "type": "Buff",
-          "effectName": "Ultimate Daybreak",
-          "statusName": "Ultimate Daybreak"
+          ]
         }
       ]
     },
@@ -640,9 +638,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -827,9 +823,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1534116188\">Enemy_W5_Ranger_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2205,6 +2199,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-810912311\">Standard_Resistance_Physical</a>",
+          "latentQueue": [
+            "MaxChargeValue"
+          ],
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Anyone]",
@@ -2294,15 +2291,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MaxChargeValue"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1406200933\">Standard_Resistance_Imaginary</a>",
+          "latentQueue": [
+            "MaxChargeValue"
+          ],
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Anyone]",
@@ -2392,15 +2388,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MaxChargeValue"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__338359600\">Standard_Resistance_Fire</a>",
+          "latentQueue": [
+            "MaxChargeValue"
+          ],
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Anyone]",
@@ -2490,15 +2485,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MaxChargeValue"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-460724503\">Standard_Resistance_Quantum</a>",
+          "latentQueue": [
+            "MaxChargeValue"
+          ],
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Anyone]",
@@ -2588,10 +2582,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MaxChargeValue"
           ]
         },
         {
@@ -2624,18 +2614,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1534116188\">Enemy_W5_Ranger_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2726,9 +2712,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2791,14 +2775,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1643569913\">Enemy_W5_Ranger_Main_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_DamageUp"
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUp</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2821,21 +2811,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUp"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUp</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-680453013\">Enemy_W5_Ranger_Main_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_SpeedUp"
+          ],
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2858,16 +2847,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedUp"
-          ],
-          "latentQueue": [],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2894,9 +2874,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3039,9 +3017,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3161,9 +3137,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3223,6 +3197,10 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-258343603\">Enemy_W5_Ranger_Debuff</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_AllDamageTypeTakenRatio",
+            "MDF_ResistanceDelta"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3391,12 +3369,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageTypeTakenRatio",
-            "MDF_ResistanceDelta"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3436,6 +3409,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak",
             "Endurance"
+          ],
+          "stackData": [
+            "MDF_MaxCharge",
+            "MDF_HitCharge"
           ],
           "execute": [
             {
@@ -4501,12 +4478,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxCharge",
-            "MDF_HitCharge"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

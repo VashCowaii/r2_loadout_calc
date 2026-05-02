@@ -34,13 +34,15 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1681589484\">Enemy_W1_CocoliaP2_Ability08_Charge</a>[<span class=\"descriptionNumberColor\">The Creation's Prelude</span>]",
+      "description": "The next attack will cause Last Choir of Genesis to all targets.",
+      "type": "Other",
+      "effectName": "The Creation's Prelude",
+      "statusName": "The Creation's Prelude",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -100,13 +102,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "The next attack will cause Last Choir of Genesis to all targets.",
-      "type": "Other",
-      "effectName": "The Creation's Prelude",
-      "statusName": "The Creation's Prelude"
+      ]
     }
   ]
 }

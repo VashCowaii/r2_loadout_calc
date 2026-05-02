@@ -424,15 +424,14 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-760485774\">Enemy_W3_Sunday_P3_DisableHeadLookAt</a>",
+      "latentQueue": [
+        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-        "AIFlag"
       ]
     }
   ]

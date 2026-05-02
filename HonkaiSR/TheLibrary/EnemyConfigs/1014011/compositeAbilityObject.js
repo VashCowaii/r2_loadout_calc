@@ -523,9 +523,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1760667361\">Monster_W1_Svarog_RL_Mark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1760667361\">Monster_W1_Svarog_RL_Mark</a>"
         }
       ]
     },
@@ -1076,9 +1074,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1745,9 +1741,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1814,9 +1808,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2106,13 +2098,14 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Put in Deathstate Limbo"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1864956422\">Monster_W1_Svarog_RL_LowHP</a>",
+          "stackData": [
+            "MDF_LowHPRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "HP Change [Owner]",
@@ -2237,11 +2230,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_LowHPRatio"
-          ],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2468,9 +2457,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3043,9 +3030,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3112,9 +3097,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3440,9 +3423,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3451,9 +3432,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3561,9 +3540,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3581,6 +3558,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__764270214\">Monster_W1_SvarogPart_RL_CountDown</a>[<span class=\"descriptionNumberColor\">Overload Countdown</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Auxiliary Robot Arm Unit initiates Overload countdown. After the countdown ends, cast Overload Warning.",
+          "type": "Other",
+          "statusName": "Overload Countdown",
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3613,15 +3594,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Auxiliary Robot Arm Unit initiates Overload countdown. After the countdown ends, cast Overload Warning.",
-          "type": "Other",
-          "statusName": "Overload Countdown",
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__670022041\">Monster_W1_SvarogPart_RL_ListenBreak_Modifier</a>",
+          "latentQueue": [
+            "CanUseSkill03"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -3674,10 +3654,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "CanUseSkill03"
           ]
         },
         {
@@ -3698,13 +3674,14 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>",
+          "stackData": [
+            "Modifier_DamagePercentage"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -3736,11 +3713,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [
-            "Modifier_DamagePercentage"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3870,9 +3843,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3933,6 +3904,11 @@ const compositeAbilityObject = {
             "MuteSpeed",
             "STAT_ForceControl"
           ],
+          "useEntitySnapshot": true,
+          "description": "Restrained. Cannot take action.",
+          "type": "Debuff",
+          "effectName": "Restrain",
+          "statusName": "Restrain",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4028,14 +4004,7 @@ const compositeAbilityObject = {
                 "Mark Entity as Non-Target(Unselectable)"
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Restrained. Cannot take action.",
-          "type": "Debuff",
-          "effectName": "Restrain",
-          "statusName": "Restrain"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4177,15 +4146,16 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1666707889\">Monster_W1_Svarog_RL_Part_ListenHP_Modifier</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "PassiveSkill02_P2_HPRatio"
           ],
           "execute": [
             {
@@ -4458,11 +4428,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "PassiveSkill02_P2_HPRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4472,6 +4438,23 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_DefenceDown"
           ],
+          "stackData": [
+            "MDF_DefenceAddedRatio_PerLayer"
+          ],
+          "description": "Reduces DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio_PerLayer</span>. This effect can stack.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "DEF Reduction",
+          "duration": 3,
+          "stackLimit": 10,
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+            "displayLines": "ModifierStackLayer",
+            "constants": [],
+            "variables": [
+              "ModifierStackLayer"
+            ]
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4503,17 +4486,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "stackType": "Replace",
           "stackData": [
-            "MDF_DefenceAddedRatio_PerLayer"
+            "MDF_DamageUpRatio_PerLayer"
           ],
-          "latentQueue": [],
-          "description": "Reduces DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio_PerLayer</span>. This effect can stack.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "DEF Reduction",
-          "duration": 3,
-          "stackLimit": 10,
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
           "addStacksPerTrigger": {
             "operator": "Variables[0] (ModifierStackLayer) || RETURN",
             "displayLines": "ModifierStackLayer",
@@ -4521,12 +4506,7 @@ const compositeAbilityObject = {
             "variables": [
               "ModifierStackLayer"
             ]
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-          "stackType": "Replace",
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4556,23 +4536,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUpRatio_PerLayer"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4608,30 +4572,31 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1854522558\">Svarog_Ability07_AllDamageUp_Modifier</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
           "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">Modifier_AllDamageUp</span>. This effect can stack.",
           "type": "Buff",
           "effectName": "DMG Boost",
           "statusName": "Amplification",
-          "addStacksPerTrigger": 1
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-818415302\">Svarog_Part_ListenBreak_Modifier</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "latentQueue": [
+            "CanUseSkill03"
           ],
           "execute": [
             {
@@ -4707,10 +4672,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "CanUseSkill03"
           ]
         },
         {
@@ -4731,9 +4692,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4863,9 +4822,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4911,9 +4868,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4973,6 +4928,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1496711585\">Svarog_Kaboom_Modifier</a>[<span class=\"descriptionNumberColor\">Overheat</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Received Toughness DMG increases by <span class=\"descriptionNumberColor\">MDF_StanceBreakTakenRatio</span>, and received damage increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
+          "type": "Debuff",
+          "effectName": "Overheat",
+          "statusName": "Overheat",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5011,17 +4970,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Received Toughness DMG increases by <span class=\"descriptionNumberColor\">MDF_StanceBreakTakenRatio</span>, and received damage increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
-          "type": "Debuff",
-          "effectName": "Overheat",
-          "statusName": "Overheat"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__17783365\">Svarog_Part_ListenHP_Modifier</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "PassiveSkill02_P2_HPRatio",
+            "PassiveSkill02_P3_StanceBreakTakenRatio",
+            "PassiveSkill02_P4_MDF_AllDamageTypeTakenRatio",
+            "PassiveSkill02_P5_LifeTime"
           ],
           "execute": [
             {
@@ -5056,14 +5017,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "PassiveSkill02_P2_HPRatio",
-            "PassiveSkill02_P3_StanceBreakTakenRatio",
-            "PassiveSkill02_P4_MDF_AllDamageTypeTakenRatio",
-            "PassiveSkill02_P5_LifeTime"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5094,6 +5048,13 @@ const compositeAbilityObject = {
             "STAT_CTRL",
             "AlwaysSuccess",
             "STAT_ForceControl"
+          ],
+          "stackData": [
+            "Modifier_Frozen_DamagePercentage"
+          ],
+          "latentQueue": [
+            "CanUseSkill03",
+            "PartCanUseSkill03"
           ],
           "execute": [
             {
@@ -5191,13 +5152,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "Modifier_Frozen_DamagePercentage"
-          ],
-          "latentQueue": [
-            "CanUseSkill03",
-            "PartCanUseSkill03"
           ]
         },
         {
@@ -5207,6 +5161,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_DefenceDown"
           ],
+          "description": "For a certain number of turns, DEF is reduced by <span class=\"descriptionNumberColor\">Modifier_DefenceAddedRatio</span>, and takes Physical DMG at the beginning of each turn.",
+          "type": "Debuff",
+          "effectName": "Grievous",
+          "statusName": "Grievous",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -5257,11 +5215,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "For a certain number of turns, DEF is reduced by <span class=\"descriptionNumberColor\">Modifier_DefenceAddedRatio</span>, and takes Physical DMG at the beginning of each turn.",
-          "type": "Debuff",
-          "effectName": "Grievous",
-          "statusName": "Grievous"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5273,6 +5227,11 @@ const compositeAbilityObject = {
             "MuteSpeed",
             "STAT_ForceControl"
           ],
+          "useEntitySnapshot": true,
+          "description": "Restrained. Cannot take action.",
+          "type": "Debuff",
+          "effectName": "Restrain",
+          "statusName": "Restrain",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5368,14 +5327,7 @@ const compositeAbilityObject = {
                 "Mark Entity as Non-Target(Unselectable)"
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Restrained. Cannot take action.",
-          "type": "Debuff",
-          "effectName": "Restrain",
-          "statusName": "Restrain"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5384,9 +5336,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Ability Use [Owner]: End"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5394,7 +5344,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "DisableAction"
           ],
-          "stackData": [],
           "latentQueue": [
             "Svarog_SpecialVictory_Flag",
             "DecisionFlag"
@@ -5420,6 +5369,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-770745937\">Monster_W1_SvarogPart_CountDown</a>[<span class=\"descriptionNumberColor\">Overload Countdown</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Auxiliary Robot Arm Unit initiates Overload countdown. After the countdown ends, cast Overload Warning.",
+          "type": "Other",
+          "statusName": "Overload Countdown",
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5452,11 +5405,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Auxiliary Robot Arm Unit initiates Overload countdown. After the countdown ends, cast Overload Warning.",
-          "type": "Other",
-          "statusName": "Overload Countdown",
-          "duration": 2
+          ]
         }
       ],
       "references": []

@@ -61,6 +61,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__407459594\">Modifier_BattleEventAbility_Challenge_Month_40_Sub_PLY</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "Replace",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">BattleEvent_P1_ADF</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -83,16 +87,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">BattleEvent_P1_ADF</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__817684195\">Modifier_BattleEventAbility_Challenge_Month_40</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "BattleEvent_P1_ADF",
+        "BattleEvent_P2_ADF",
+        "BattleEvent_P3_ADF",
+        "BattleEvent_P4_ADF",
+        "BattleEvent_P5_ADF"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -558,15 +565,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "BattleEvent_P1_ADF",
-        "BattleEvent_P2_ADF",
-        "BattleEvent_P3_ADF",
-        "BattleEvent_P4_ADF",
-        "BattleEvent_P5_ADF"
-      ],
-      "latentQueue": []
+      ]
     }
   ]
 }

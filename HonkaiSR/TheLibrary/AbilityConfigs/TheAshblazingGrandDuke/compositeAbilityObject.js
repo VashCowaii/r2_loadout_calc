@@ -27,6 +27,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1551453236\">Relic_115_Sub</a>[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">#SkillRelic_115_4_P1_AttackAddedRatio</span>, up to <span class=\"descriptionNumberColor\">#SkillRelic_115_4_P2_MaxLayer</span> stack(s).",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "The Ashblazing Grand Duke",
+          "stackLimit": 6,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -60,13 +66,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">#SkillRelic_115_4_P1_AttackAddedRatio</span>, up to <span class=\"descriptionNumberColor\">#SkillRelic_115_4_P2_MaxLayer</span> stack(s).",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "The Ashblazing Grand Duke",
-          "stackLimit": 6,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -257,9 +257,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,
@@ -325,9 +323,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

@@ -90,13 +90,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1857615455\">Jingliu_Passive_CriticalUp</a>[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
+      "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_CriticalRatio</span>.",
+      "type": "Buff",
+      "effectName": "CRIT Rate Boost",
+      "statusName": "Spectral Transmigration",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -119,15 +121,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_CriticalRatio</span>.",
-      "type": "Buff",
-      "effectName": "CRIT Rate Boost",
-      "statusName": "Spectral Transmigration"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-89851365\">Jingliu_Trace_B1_Resist</a>[<span class=\"descriptionNumberColor\">Deathrealm</span>]",
+      "description": "Increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Effect RES Boost",
+      "statusName": "Deathrealm",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -150,11 +152,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Effect RES Boost",
-      "statusName": "Deathrealm"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -332,6 +330,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__828232276\">MWJingliu_Attack_Transfer_AddATK</a>[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
+      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackDelta1</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Spectral Transmigration",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -365,16 +367,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackDelta1</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Spectral Transmigration"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-62616171\">MWJingliu_PointB3</a>[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Ultimate deals <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> more DMG.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Frost Wraith",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -407,16 +409,20 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Ultimate deals <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> more DMG.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Frost Wraith"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1566484434\">MWJingliu_Attack_Transfer</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "SkillP01_P1_HpConsumption",
+        "SkillP01_P3_ATKRatioUp",
+        "SkillP01_P2_HpConsumption",
+        "SkillP01_P4_JingliuAttackBase",
+        "SkillRank_Rank04_P1_DamageUpRatio",
+        "SkillRank_Rank04_P2_DamageUpLimit"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1032,20 +1038,22 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "SkillP01_P1_HpConsumption",
-        "SkillP01_P3_ATKRatioUp",
-        "SkillP01_P2_HpConsumption",
-        "SkillP01_P4_JingliuAttackBase",
-        "SkillRank_Rank04_P1_DamageUpRatio",
-        "SkillRank_Rank04_P2_DamageUpLimit"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1827977639\">Jingliu_Eidolon6</a>[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]",
+      "stackData": [
+        "MDF_CriticalDamage"
+      ],
+      "latentQueue": [
+        "SkillRank_Rank04_P2_DamageUpLimit",
+        "SkillRank_Rank04_P1_DamageUpRatio"
+      ],
+      "description": "CRIT DMG +<span class=\"descriptionNumberColor\">MDF_CriticalDamage</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "Eclipse Hollows Corporeal Husk",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1068,22 +1076,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_CriticalDamage"
-      ],
-      "latentQueue": [
-        "SkillRank_Rank04_P2_DamageUpLimit",
-        "SkillRank_Rank04_P1_DamageUpRatio"
-      ],
-      "description": "CRIT DMG +<span class=\"descriptionNumberColor\">MDF_CriticalDamage</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "Eclipse Hollows Corporeal Husk"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1760867163\">Jingliu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Increases DMG dealt by the next Enhanced Skill by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Crescent Shadows Qixing Dipper",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1124,19 +1127,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Increases DMG dealt by the next Enhanced Skill by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Crescent Shadows Qixing Dipper"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1949094753\">Jingliu_Eidolon1_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "CRIT DMG +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "Moon Crashes Tianguan Gate",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1159,15 +1162,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "CRIT DMG +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "Moon Crashes Tianguan Gate"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1497,9 +1492,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2011,15 +2004,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1865477749\">Jingliu_Transfer_PreShow</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -2047,7 +2036,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-582112064\">Jingliu_AbilityPreShow</a>",
-      "stackData": [],
       "latentQueue": [
         "SkillRank_Rank04_P2_DamageUpLimit",
         "SkillRank_Rank04_P1_DamageUpRatio"
@@ -2079,25 +2067,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1713327141\">Jingliu_Trace02_ModifyAction</a>",
       "stackType": "Multiple",
-      "execute": [
-        {
-          "eventTrigger": "Turn End [Anyone]",
-          "execute": [
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "advanceType": "Advance",
-              "multiAdd": "-0.1"
-            },
-            "Modifier Deletes Itself"
-          ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -2119,7 +2088,24 @@ const configAbility = {
             ]
           }
         }
-      }
+      },
+      "execute": [
+        {
+          "eventTrigger": "Turn End [Anyone]",
+          "execute": [
+            {
+              "name": "Action Advance/Delay",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "advanceType": "Advance",
+              "multiAdd": "-0.1"
+            },
+            "Modifier Deletes Itself"
+          ]
+        }
+      ]
     }
   ],
   "references": []

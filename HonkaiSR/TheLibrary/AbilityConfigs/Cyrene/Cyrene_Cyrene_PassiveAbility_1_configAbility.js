@@ -156,6 +156,28 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1846097202\">Cyrene_PassiveAbility</a>",
       "stackType": "ReplaceByCaster",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"619883840\">Cyrene_Passive_Sub</a>[<span class=\"descriptionNumberColor\">Hearts Gather as One</span>]",
+          "aliveOnly": "True",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_DamageIncrease": {
+              "operator": "Variables[0] (0.2) || RETURN",
+              "displayLines": "0.2",
+              "constants": [],
+              "variables": [
+                0.2
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -890,30 +912,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"619883840\">Cyrene_Passive_Sub</a>[<span class=\"descriptionNumberColor\">Hearts Gather as One</span>]",
-          "aliveOnly": "True",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_DamageIncrease": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
-            }
-          }
-        }
       ]
     },
     {
@@ -963,9 +961,7 @@ const configAbility = {
             "Deleted bullshit"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

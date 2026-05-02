@@ -107,13 +107,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1664082780\">Klara_PassiveAbility01_ListenCounter</a>",
+      "stackData": [
+        "MDF_Chance"
+      ],
       "execute": [
         {
           "eventTrigger": "Being Attacked Start [Owner]",
@@ -157,11 +158,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Chance"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

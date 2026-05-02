@@ -344,6 +344,10 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "latentQueue": [
+        "ADF_AttackGap",
+        "ADF_FirstHit"
+      ],
       "execute": [
         {
           "eventTrigger": "Taking Toughness DMG [Owner]: Start",
@@ -403,18 +407,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "ADF_AttackGap",
-        "ADF_FirstHit"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "After using Talent's Follow-Up ATK <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s), the Skill Point recovery effect from \"Lament, Lost Soul\" can be triggered again.",
       "type": "Other",
       "statusName": "Lament, Lost Soul"
@@ -423,6 +420,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-380368106\">Constance_Eidolon4_Property</a>[<span class=\"descriptionNumberColor\">Pity Its Heart Gnawed by Worms</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Pity Its Heart Gnawed by Worms",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -445,15 +449,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Pity Its Heart Gnawed by Worms"
+      ]
     }
   ],
   "targetObjectData": {

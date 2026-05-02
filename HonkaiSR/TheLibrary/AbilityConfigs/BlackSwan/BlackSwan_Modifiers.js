@@ -15,9 +15,7 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "KeepOnDeathrattle"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -87,34 +85,10 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "execute": [
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier",
-          "execute": [
-            {
-              "name": "Stack Target Stat Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-              "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
-              }
-            }
-          ]
-        }
-      ],
       "stackData": [
         "MDF_PropertyValue",
         "MDF_Chance"
       ],
-      "latentQueue": [],
       "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. When enemy targets are inflicted with \"Arcana,\" there is a <span class=\"descriptionNumberColor\">MDF_Chance</span> fixed chance to additionally increase the number of \"Arcana\" stacked this time by 1. And the number of \"Arcana\" stacks will not be halved after dealing DMG at the start of the turn.",
       "type": "Debuff",
       "effectName": "Epiphany",
@@ -142,6 +116,29 @@ const configAbility = {
               ]
             }
           }
+        }
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                "displayLines": "MDF_PropertyValue",
+                "constants": [],
+                "variables": [
+                  "MDF_PropertyValue"
+                ]
+              }
+            }
+          ]
         }
       ]
     },
@@ -196,6 +193,22 @@ const configAbility = {
         "STAT_DOT",
         "DynamicInjectLoop"
       ],
+      "useEntitySnapshot": true,
+      "stackData": [
+        "Basic_DamagePercentage",
+        "ExtraLayer_DamagePercentage",
+        "Spread_DamagePercentage",
+        "ThresholdLayer",
+        "DefenceIgnore"
+      ],
+      "latentQueue": [
+        "MazeSkill_Triggered",
+        "_can_continue"
+      ],
+      "description": "Takes Wind DMG at the start of each turn. While in the \"Arcana\" state, will also be considered as suffering from Wind Shear, Bleed, Burn, and Shock.",
+      "type": "Debuff",
+      "effectName": "Arcana",
+      "statusName": "Arcana",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -883,23 +896,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "Basic_DamagePercentage",
-        "ExtraLayer_DamagePercentage",
-        "Spread_DamagePercentage",
-        "ThresholdLayer",
-        "DefenceIgnore"
-      ],
-      "latentQueue": [
-        "MazeSkill_Triggered",
-        "_can_continue"
-      ],
-      "description": "Takes Wind DMG at the start of each turn. While in the \"Arcana\" state, will also be considered as suffering from Wind Shear, Bleed, Burn, and Shock.",
-      "type": "Debuff",
-      "effectName": "Arcana",
-      "statusName": "Arcana"
+      ]
     }
   ],
   "references": []

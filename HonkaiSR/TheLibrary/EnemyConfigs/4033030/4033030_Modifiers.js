@@ -62,9 +62,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -107,13 +105,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__170082228\">Enemy_W4_Griffin_01_Ability03_Enhance</a>[<span class=\"descriptionNumberColor\">The Dead Winds Cometh</span>]",
+      "description": "Uses \"Carol of Heat Death\" in the next action.",
+      "type": "Other",
+      "effectName": "Enhance",
+      "statusName": "The Dead Winds Cometh",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -166,13 +166,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Uses \"Carol of Heat Death\" in the next action.",
-      "type": "Other",
-      "effectName": "Enhance",
-      "statusName": "The Dead Winds Cometh"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -181,6 +175,9 @@ const configAbility = {
         "MuteSpeed",
         "KeepOnDeathrattle"
       ],
+      "description": "\"Archer of the Dark Sun\" does not actively take action, and will only attack after the \"Dark Sun Gryphon\" that summoned this unit attacks. If this unit is under Crowd Control debuffs or Weakness Broken state at this point, this changes to dispelling the Crowd Control debuffs or Weakness Broken state on this unit.",
+      "type": "Other",
+      "statusName": "Chaotic Order",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -391,12 +388,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "\"Archer of the Dark Sun\" does not actively take action, and will only attack after the \"Dark Sun Gryphon\" that summoned this unit attacks. If this unit is under Crowd Control debuffs or Weakness Broken state at this point, this changes to dispelling the Crowd Control debuffs or Weakness Broken state on this unit.",
-      "type": "Other",
-      "statusName": "Chaotic Order"
+      ]
     },
     {
       "name": "Modifier Construction",

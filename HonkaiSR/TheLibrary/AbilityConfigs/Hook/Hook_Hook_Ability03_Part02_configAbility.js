@@ -175,6 +175,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__372814598\">Hook_Eidolon1_AddDamageRatio</a>",
+      "stackData": [
+        "MDF_AddRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -200,11 +203,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AddRatio"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

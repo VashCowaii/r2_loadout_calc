@@ -12,6 +12,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-769743474\">Sparxie_Eidolon6</a>[<span class=\"descriptionNumberColor\">#BuiltDifferent #GoingExtinct</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "All-Type RES PEN Boost",
+      "statusName": "#BuiltDifferent #GoingExtinct",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -34,20 +41,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "All-Type RES PEN Boost",
-      "statusName": "#BuiltDifferent #GoingExtinct"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2009365349\">Sparxie_Eidolon4_Sub</a>[<span class=\"descriptionNumberColor\">#LockedIn #FaceCard</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Elation Boost",
+      "statusName": "#LockedIn #FaceCard",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -70,11 +73,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Elation Boost",
-      "statusName": "#LockedIn #FaceCard"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -121,14 +120,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__510555115\">Sparxie_Eidolon2_CriticalDamage</a>[<span class=\"descriptionNumberColor\">#AudienceKnows</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "#AudienceKnows",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -158,15 +158,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "#AudienceKnows"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__366587908\">Sparxie_Eidolon1_Sub02</a>[<span class=\"descriptionNumberColor\">#GoingViral #WhoIsShe</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "All-Type RES PEN Boost",
+      "statusName": "#GoingViral #WhoIsShe",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -189,11 +190,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "All-Type RES PEN Boost",
-      "statusName": "#GoingViral #WhoIsShe"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -389,9 +386,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -400,6 +395,7 @@ const configAbility = {
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -516,13 +512,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1349114975\">Sparxie_Trace03_Sub02</a>[<span class=\"descriptionNumberColor\">Frenzy! Palette of Truth and Lies</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Frenzy! Palette of Truth and Lies",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -545,10 +543,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Frenzy! Palette of Truth and Lies"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -725,9 +720,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -890,6 +883,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1914794720\">Sparxie_Trace01_Bonus</a>[<span class=\"descriptionNumberColor\">Sweet! Punchline Signing</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Elation Boost",
+      "statusName": "Sweet! Punchline Signing",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -912,11 +909,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Elation Boost",
-      "statusName": "Sweet! Punchline Signing"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -929,38 +922,6 @@ const configAbility = {
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"-333844863\">Sparxie_Trace01_Sub</a>"
-            }
-          ]
-        }
-      ],
-      "abilityValueChange": [
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-333844863\">Sparxie_Trace01_Sub</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-333844863\">Sparxie_Trace01_Sub</a>"
-                }
-              ]
             }
           ]
         }
@@ -1084,13 +1045,47 @@ const configAbility = {
           ]
         }
       ],
-      "stackData": [],
-      "latentQueue": []
+      "abilityValueChange": [
+        {
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "whenValueChanges": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-333844863\">Sparxie_Trace01_Sub</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "whenValueChanges": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-333844863\">Sparxie_Trace01_Sub</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__153929564\">Sparxie_EnergyPoint</a>[<span class=\"descriptionNumberColor\">Thrill</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Can be used to offset Sparxie's consumption of Skill Points. Consuming \"Thrill\" is considered as consuming Skill Points.",
+      "type": "Other",
+      "statusName": "Thrill",
+      "stackLimit": 9999,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1114,11 +1109,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Can be used to offset Sparxie's consumption of Skill Points. Consuming \"Thrill\" is considered as consuming Skill Points.",
-      "type": "Other",
-      "statusName": "Thrill",
-      "stackLimit": 9999
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1514,9 +1505,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1587,9 +1576,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1616,9 +1603,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

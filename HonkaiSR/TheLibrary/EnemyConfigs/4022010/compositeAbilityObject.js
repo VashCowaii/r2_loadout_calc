@@ -312,9 +312,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -330,9 +328,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1157837417\">Monster_W4_Harpy_Ability02_Mark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1157837417\">Monster_W4_Harpy_Ability02_Mark</a>"
         }
       ],
       "references": []

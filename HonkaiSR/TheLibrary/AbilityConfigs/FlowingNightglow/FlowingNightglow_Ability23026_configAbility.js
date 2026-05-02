@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-36956856\">LC_23026_Sub3</a>[<span class=\"descriptionNumberColor\">Cadenza</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">SkillEquip_P3_DmgAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Cadenza",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,16 +44,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">SkillEquip_P3_DmgAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Cadenza"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-20179237\">LC_23026_Sub2</a>[<span class=\"descriptionNumberColor\">Cadenza</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "ATK increases by <span class=\"descriptionNumberColor\">#SkillEquip_P4_AtkAddedRatio</span> and DMG dealt increases by <span class=\"descriptionNumberColor\">#SkillEquip_P3_DmgAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "ATK and DMG Boost",
+      "statusName": "Cadenza",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -156,16 +160,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "ATK increases by <span class=\"descriptionNumberColor\">#SkillEquip_P4_AtkAddedRatio</span> and DMG dealt increases by <span class=\"descriptionNumberColor\">#SkillEquip_P3_DmgAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "ATK and DMG Boost",
-      "statusName": "Cadenza"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1072168277\">LC_23026_Sub</a>[<span class=\"descriptionNumberColor\">Cantillation</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">_CurrentSPRatio</span>.",
+      "type": "Buff",
+      "effectName": "Energy Regeneration Rate Boost",
+      "statusName": "Cantillation",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -207,11 +211,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">_CurrentSPRatio</span>.",
-      "type": "Buff",
-      "effectName": "Energy Regeneration Rate Boost",
-      "statusName": "Cantillation"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -304,9 +304,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

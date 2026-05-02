@@ -83,9 +83,7 @@ const configAbility = {
         {
           "eventTrigger": "Update Target Selected(UI) [Anyone]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

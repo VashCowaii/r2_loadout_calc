@@ -1121,6 +1121,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__540941563\">Enemy_W2_LycanKing_RageStatusPhase2</a>[<span class=\"descriptionNumberColor\">Eclipse's Wrath</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. While in this state, Hoolay gains Irate and can use Barrenness of Earth Gouged and Lupine Chase Calls Bloody Gleam. This state will be removed when this unit is Weakness Broken.",
+      "type": "Buff",
+      "effectName": "Enters the Eclipse's Wrath state",
+      "statusName": "Eclipse's Wrath",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1249,16 +1253,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. While in this state, Hoolay gains Irate and can use Barrenness of Earth Gouged and Lupine Chase Calls Bloody Gleam. This state will be removed when this unit is Weakness Broken.",
-      "type": "Buff",
-      "effectName": "Enters the Eclipse's Wrath state",
-      "statusName": "Eclipse's Wrath"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__224849748\">Enemy_W2_LycanKing_RageStatus</a>[<span class=\"descriptionNumberColor\">Eclipse's Ire</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. While in this state, Hoolay gains Irate and can use Lupine Chase Calls Bloody Gleam. This state will be removed when this unit is Weakness Broken.",
+      "type": "Buff",
+      "effectName": "Enters the Eclipse's Ire state",
+      "statusName": "Eclipse's Ire",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1433,11 +1437,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. While in this state, Hoolay gains Irate and can use Lupine Chase Calls Bloody Gleam. This state will be removed when this unit is Weakness Broken.",
-      "type": "Buff",
-      "effectName": "Enters the Eclipse's Ire state",
-      "statusName": "Eclipse's Ire"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1895,9 +1895,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

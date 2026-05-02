@@ -43,6 +43,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__474890872\">LC_23049_Sub</a>[<span class=\"descriptionNumberColor\">Noctis</span>]",
           "stackType": "Replace",
+          "description": "When the wearer's memosprite disappears, regenerates <span class=\"descriptionNumberColor\">MDF_PropertyValue_3</span> Energy for the wearer.",
+          "type": "Other",
+          "effectName": "Noctis",
+          "statusName": "Noctis",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -222,11 +226,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When the wearer's memosprite disappears, regenerates <span class=\"descriptionNumberColor\">MDF_PropertyValue_3</span> Energy for the wearer.",
-          "type": "Other",
-          "effectName": "Noctis",
-          "statusName": "Noctis"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -235,6 +235,12 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the target's DEF.",
+          "type": "Buff",
+          "statusName": "Sleepless",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -251,14 +257,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the target's DEF.",
-          "type": "Buff",
-          "statusName": "Sleepless"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -267,6 +266,12 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_Show"
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_Show</span>.",
+          "type": "Buff",
+          "statusName": "Sleepless",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -289,14 +294,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Show"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_Show</span>.",
-          "type": "Buff",
-          "statusName": "Sleepless"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -479,9 +477,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

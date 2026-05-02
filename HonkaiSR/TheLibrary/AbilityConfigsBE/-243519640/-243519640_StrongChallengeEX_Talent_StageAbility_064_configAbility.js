@@ -19,6 +19,29 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2111516388\">MStrongChallengeEX_Talent_StageAbility_TGT_064</a>",
       "stackType": "ReplaceByCaster",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "conditions": {
+          "name": "Is Weak to Attacker",
+          "weakTo": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          }
+        },
+        "toughnessReductionPreview": {
+          "operator": "Variables[0] (MDF_DefaultStanceBreakRatio) || RETURN",
+          "displayLines": "MDF_DefaultStanceBreakRatio",
+          "constants": [],
+          "variables": [
+            "MDF_DefaultStanceBreakRatio"
+          ]
+        }
+      },
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -56,30 +79,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "conditions": {
-          "name": "Is Weak to Attacker",
-          "weakTo": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "target": {
-            "name": "Target Name",
-            "target": "{{Parameter Target}}"
-          }
-        },
-        "toughnessReductionPreview": {
-          "operator": "Variables[0] (MDF_DefaultStanceBreakRatio) || RETURN",
-          "displayLines": "MDF_DefaultStanceBreakRatio",
-          "constants": [],
-          "variables": [
-            "MDF_DefaultStanceBreakRatio"
-          ]
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -179,9 +179,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

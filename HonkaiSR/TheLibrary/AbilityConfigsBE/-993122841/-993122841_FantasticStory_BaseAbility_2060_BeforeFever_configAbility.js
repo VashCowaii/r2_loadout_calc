@@ -19,6 +19,17 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__931941990\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever</a>",
       "stackType": "ReplaceByCaster",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1271014269\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_ForShow</a>[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -109,19 +120,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1271014269\">Modifier_FantasticStory_BaseAbility_2060_BeforeFever_ForShow</a>[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
-          "haloStatus": true
         }
       ]
     }

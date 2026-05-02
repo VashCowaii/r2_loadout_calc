@@ -687,27 +687,19 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>"
     },
     {
       "name": "Modifier Construction",

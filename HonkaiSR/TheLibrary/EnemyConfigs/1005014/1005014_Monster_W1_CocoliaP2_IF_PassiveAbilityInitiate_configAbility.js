@@ -149,6 +149,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__896717086\">Enemy_W1_CocoliaP2_IF_AbilityShow</a>",
+      "latentQueue": [
+        "Cocolia_AICounter"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -168,10 +171,6 @@ const configAbility = {
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Cocolia_AICounter"
       ]
     },
     {
@@ -262,9 +261,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -327,9 +324,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

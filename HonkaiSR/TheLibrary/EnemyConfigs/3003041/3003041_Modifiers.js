@@ -122,13 +122,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-25601954\">Monster_W3_Figure_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Holy Night</span>]",
+      "description": "About to use \"Sleep In Heavenly Peace\"",
+      "type": "Other",
+      "effectName": "Charging",
+      "statusName": "Holy Night",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -139,13 +141,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "About to use \"Sleep In Heavenly Peace\"",
-      "type": "Other",
-      "effectName": "Charging",
-      "statusName": "Holy Night"
+      ]
     }
   ],
   "references": []

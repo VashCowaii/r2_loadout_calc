@@ -84,6 +84,9 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "latentQueue": [
+        "DanHengPT_IsFreeAction"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -115,15 +118,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DanHengPT_IsFreeAction"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1272476867\">DanHengPT_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
+      "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the enemy target's DEF.",
+      "type": "Buff",
+      "statusName": "One Dream to Enfold All Wilds",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -140,14 +142,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the enemy target's DEF.",
-      "type": "Buff",
-      "statusName": "One Dream to Enfold All Wilds"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1040309000\">DanHengPT_Eidolon6_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
+      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "statusName": "One Dream to Enfold All Wilds",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -170,10 +172,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "statusName": "One Dream to Enfold All Wilds"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -222,6 +221,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-452137321\">DanHengPT_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">By Oath, This Vessel Is I</span>]",
+      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "By Oath, This Vessel Is I",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -244,15 +246,22 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "By Oath, This Vessel Is I"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2035403394\">DanHengPT_Eidolon1</a>[<span class=\"descriptionNumberColor\">Shed Scales of Old</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": [
+        "DanHengPT_IsFreeAction"
+      ],
+      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "All-Type RES PEN Boost",
+      "statusName": "Shed Scales of Old",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -275,17 +284,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "DanHengPT_IsFreeAction"
-      ],
-      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "All-Type RES PEN Boost",
-      "statusName": "Shed Scales of Old"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -294,6 +293,10 @@ const configAbility = {
       "modifierFlags": [
         "Shield"
       ],
+      "description": "Gains a Shield that can offset DMG. Before the Shield gets depleted or the effect disappears, enemy attacks will not reduce the HP of the unit with the Shield.",
+      "type": "Buff",
+      "effectName": "Shield",
+      "statusName": "Shield",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -360,11 +363,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Gains a Shield that can offset DMG. Before the Shield gets depleted or the effect disappears, enemy attacks will not reduce the HP of the unit with the Shield.",
-      "type": "Buff",
-      "effectName": "Shield",
-      "statusName": "Shield"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -373,6 +372,16 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_AttackDelta"
+      ],
+      "latentQueue": [
+        "DanHengPT_Skill02_Flag"
+      ],
+      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackDelta</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Empyreanity",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -395,17 +404,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AttackDelta"
-      ],
-      "latentQueue": [
-        "DanHengPT_Skill02_Flag"
-      ],
-      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackDelta</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Empyreanity"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -413,6 +412,149 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
+      ],
+      "stackData": [
+        "MDF_PointB2_P3_DelayUp",
+        "MDF_PointB2_P2_AddSP",
+        "MDF_Rank04_AllDamageReduceRatio",
+        "MDF_Rank06_AllDamageTypeTakenRatio",
+        "MDF_Rank06_DefPentRatio"
+      ],
+      "latentQueue": [
+        "DanHengPT_Skill02_Flag"
+      ],
+      "description": "\"Souldragon\" holder.",
+      "type": "Other",
+      "effectName": "Becomes the Bondmate",
+      "statusName": "Bondmate",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Souldragon}}"
+        },
+        "conditions": {
+          "name": "AND",
+          "conditionList": [
+            {
+              "name": "Compare: Target",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Attack Source}}"
+              },
+              "target2": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              }
+            },
+            {
+              "name": "Action is an Attack",
+              "useActiveAbility": true
+            },
+            {
+              "name": "Trace Activated",
+              "conditionList": "Sylvanity",
+              "target": {
+                "name": "Target Name",
+                "target": "{{DHPT}}"
+              }
+            }
+          ]
+        },
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": {
+            "operator": "Constants[0] (0) || Variables[0] (MDF_PointB2_P3_DelayUp) || SUB || RETURN",
+            "displayLines": "(0 - MDF_PointB2_P3_DelayUp)",
+            "constants": [
+              0
+            ],
+            "variables": [
+              "MDF_PointB2_P3_DelayUp"
+            ]
+          }
+        }
+      },
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-452137321\">DanHengPT_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">By Oath, This Vessel Is I</span>]",
+          "aliveOnly": "False",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "MDF_Rank04_AllDamageReduceRatio",
+            "compareType": ">",
+            "value2": 0
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (MDF_Rank04_AllDamageReduceRatio) || RETURN",
+              "displayLines": "MDF_Rank04_AllDamageReduceRatio",
+              "constants": [],
+              "variables": [
+                "MDF_Rank04_AllDamageReduceRatio"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1272476867\">DanHengPT_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
+          "aliveOnly": "False",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "MDF_Rank06_DefPentRatio",
+            "compareType": ">",
+            "value2": 0
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (MDF_Rank06_DefPentRatio) || RETURN",
+              "displayLines": "MDF_Rank06_DefPentRatio",
+              "constants": [],
+              "variables": [
+                "MDF_Rank06_DefPentRatio"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1040309000\">DanHengPT_Eidolon6_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
+          "aliveOnly": "False",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "MDF_Rank06_AllDamageTypeTakenRatio",
+            "compareType": ">",
+            "value2": 0
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (MDF_Rank06_AllDamageTypeTakenRatio) || RETURN",
+              "displayLines": "MDF_Rank06_AllDamageTypeTakenRatio",
+              "constants": [],
+              "variables": [
+                "MDF_Rank06_AllDamageTypeTakenRatio"
+              ]
+            }
+          }
+        }
       ],
       "execute": [
         {
@@ -588,149 +730,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PointB2_P3_DelayUp",
-        "MDF_PointB2_P2_AddSP",
-        "MDF_Rank04_AllDamageReduceRatio",
-        "MDF_Rank06_AllDamageTypeTakenRatio",
-        "MDF_Rank06_DefPentRatio"
-      ],
-      "latentQueue": [
-        "DanHengPT_Skill02_Flag"
-      ],
-      "description": "\"Souldragon\" holder.",
-      "type": "Other",
-      "effectName": "Becomes the Bondmate",
-      "statusName": "Bondmate",
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "target": {
-          "name": "Target Name",
-          "target": "{{Souldragon}}"
-        },
-        "conditions": {
-          "name": "AND",
-          "conditionList": [
-            {
-              "name": "Compare: Target",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Attack Source}}"
-              },
-              "target2": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              }
-            },
-            {
-              "name": "Action is an Attack",
-              "useActiveAbility": true
-            },
-            {
-              "name": "Trace Activated",
-              "conditionList": "Sylvanity",
-              "target": {
-                "name": "Target Name",
-                "target": "{{DHPT}}"
-              }
-            }
-          ]
-        },
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": {
-            "operator": "Constants[0] (0) || Variables[0] (MDF_PointB2_P3_DelayUp) || SUB || RETURN",
-            "displayLines": "(0 - MDF_PointB2_P3_DelayUp)",
-            "constants": [
-              0
-            ],
-            "variables": [
-              "MDF_PointB2_P3_DelayUp"
-            ]
-          }
-        }
-      },
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-452137321\">DanHengPT_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">By Oath, This Vessel Is I</span>]",
-          "aliveOnly": "False",
-          "haloStatus": true,
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "MDF_Rank04_AllDamageReduceRatio",
-            "compareType": ">",
-            "value2": 0
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_Rank04_AllDamageReduceRatio) || RETURN",
-              "displayLines": "MDF_Rank04_AllDamageReduceRatio",
-              "constants": [],
-              "variables": [
-                "MDF_Rank04_AllDamageReduceRatio"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1272476867\">DanHengPT_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
-          "aliveOnly": "False",
-          "haloStatus": true,
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "MDF_Rank06_DefPentRatio",
-            "compareType": ">",
-            "value2": 0
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_Rank06_DefPentRatio) || RETURN",
-              "displayLines": "MDF_Rank06_DefPentRatio",
-              "constants": [],
-              "variables": [
-                "MDF_Rank06_DefPentRatio"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1040309000\">DanHengPT_Eidolon6_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
-          "aliveOnly": "False",
-          "haloStatus": true,
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "MDF_Rank06_AllDamageTypeTakenRatio",
-            "compareType": ">",
-            "value2": 0
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_Rank06_AllDamageTypeTakenRatio) || RETURN",
-              "displayLines": "MDF_Rank06_AllDamageTypeTakenRatio",
-              "constants": [],
-              "variables": [
-                "MDF_Rank06_AllDamageTypeTakenRatio"
-              ]
-            }
-          }
-        }
       ]
     },
     {
@@ -741,6 +740,12 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1300423082\">DanHengPT_BoostEnergy</a>",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_IsStack"
+      ],
+      "latentQueue": [
+        "DanHengPT_IsFreeAction"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -829,12 +834,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_IsStack"
-      ],
-      "latentQueue": [
-        "DanHengPT_IsFreeAction"
       ]
     }
   ],

@@ -964,8 +964,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1012536598\">Advanced_BlackSwan_Eidolon1</a>",
-      "stackData": [],
-      "latentQueue": [],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",

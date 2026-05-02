@@ -330,6 +330,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "DMG Mitigation",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -591,15 +594,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "DMG Mitigation"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2083575949\">Standard_AllDamageAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "DMG Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -622,10 +625,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "DMG Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -715,6 +715,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-213110193\">Standard_FastAction_Permanent</a>[<span class=\"descriptionNumberColor\">Stormride</span>]",
           "stackType": "Replace",
+          "description": "Targets affected by \"Stormride\" will immediately take action after the turn ends. Turns triggered by \"Stormride\" cannot be triggered again. This effect is dispelled after being inflicted with Weakness Break.",
+          "type": "Buff",
+          "effectName": "Stormride",
+          "statusName": "Stormride",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -877,17 +881,17 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "description": "Targets affected by \"Stormride\" will immediately take action after the turn ends. Turns triggered by \"Stormride\" cannot be triggered again. This effect is dispelled after being inflicted with Weakness Break.",
-          "type": "Buff",
-          "effectName": "Stormride",
-          "statusName": "Stormride"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__35393434\">Standard_FastAction</a>[<span class=\"descriptionNumberColor\">Stormride</span>]",
           "counter": 1,
           "stackType": "Replace",
+          "description": "Consuming 1 stack of \"Stormride\" can cause the target to immediately take action at the end of the turn. This effect cannot be triggered in the turn triggered by the effect of \"Stormride.\" This state is dispelled after becoming Weakness Broken.",
+          "type": "Buff",
+          "effectName": "Stormride",
+          "statusName": "Stormride",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1112,11 +1116,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "description": "Consuming 1 stack of \"Stormride\" can cause the target to immediately take action at the end of the turn. This effect cannot be triggered in the turn triggered by the effect of \"Stormride.\" This state is dispelled after becoming Weakness Broken.",
-          "type": "Buff",
-          "effectName": "Stormride",
-          "statusName": "Stormride"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1124,6 +1124,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SuperArmorBreak"
           ],
+          "description": "DMG taken increases. This effect is removed and DMG taken decreases when this unit recovers from being Weakness Broken.",
+          "type": "Other",
+          "effectName": "Safeguard Broken",
+          "statusName": "Safeguard Broken",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1181,11 +1185,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG taken increases. This effect is removed and DMG taken decreases when this unit recovers from being Weakness Broken.",
-          "type": "Other",
-          "effectName": "Safeguard Broken",
-          "statusName": "Safeguard Broken"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1194,6 +1194,10 @@ const compositeAbilityObject = {
             "MuteHitH",
             "STAT_SuperArmor"
           ],
+          "description": "DMG taken decreases. This effect is removed when Weakness is Broken. This unit's action will be delayed further when it is Weakness Broken and also takes increased DMG.",
+          "type": "Other",
+          "effectName": "Safeguard",
+          "statusName": "Safeguard",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1447,11 +1451,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG taken decreases. This effect is removed when Weakness is Broken. This unit's action will be delayed further when it is Weakness Broken and also takes increased DMG.",
-          "type": "Other",
-          "effectName": "Safeguard",
-          "statusName": "Safeguard"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1557,6 +1557,17 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1221123597\">Monster_RogueLightTeam_Rage</a>[<span class=\"descriptionNumberColor\">Bloody Fight</span>]",
           "stackType": "Replace",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>, but HP restored and Shield Effect received decreases by <span class=\"descriptionNumberColor\">MDF_HealDownRatio_PerLayer</span>. This effect can stack.",
+          "type": "Other",
+          "statusName": "Bloody Fight",
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+            "displayLines": "ModifierStackLayer",
+            "constants": [],
+            "variables": [
+              "ModifierStackLayer"
+            ]
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1624,10 +1635,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>, but HP restored and Shield Effect received decreases by <span class=\"descriptionNumberColor\">MDF_HealDownRatio_PerLayer</span>. This effect can stack.",
-          "type": "Other",
-          "statusName": "Bloody Fight",
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2068031350\">Monster_RogueBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">Berserk</span>]",
+          "stackType": "Replace",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Berserk",
           "addStacksPerTrigger": {
             "operator": "Variables[0] (ModifierStackLayer) || RETURN",
             "displayLines": "ModifierStackLayer",
@@ -1635,12 +1652,7 @@ const compositeAbilityObject = {
             "variables": [
               "ModifierStackLayer"
             ]
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2068031350\">Monster_RogueBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">Berserk</span>]",
-          "stackType": "Replace",
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1670,19 +1682,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Berserk",
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1725,6 +1725,18 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2140377444\">Monster_RogueElite_DamageUp</a>[<span class=\"descriptionNumberColor\">Berserk</span>]",
           "stackType": "Replace",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Berserk",
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+            "displayLines": "ModifierStackLayer",
+            "constants": [],
+            "variables": [
+              "ModifierStackLayer"
+            ]
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1754,19 +1766,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Berserk",
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1860,6 +1860,7 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1554000099\">Monster_Blood_Link_Revive</a>",
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1900,8 +1901,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1971,6 +1971,10 @@ const compositeAbilityObject = {
             "BlockDamageExcludeDot",
             "MuteBreak"
           ],
+          "description": "Nullifies all DMG received except for DoT until after being attacked.",
+          "type": "Buff",
+          "effectName": "Barrier",
+          "statusName": "Barrier",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2014,11 +2018,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Nullifies all DMG received except for DoT until after being attacked.",
-          "type": "Buff",
-          "effectName": "Barrier",
-          "statusName": "Barrier"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2034,6 +2034,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedDown"
           ],
+          "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Slow",
+          "statusName": "Slow",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2058,11 +2062,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Slow",
-          "statusName": "Slow"
+          ]
         }
       ],
       "references": []

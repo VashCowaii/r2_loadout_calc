@@ -26,9 +26,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -382,9 +380,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -397,6 +393,12 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Solitude, Drifting, In Murk",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -419,14 +421,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Solitude, Drifting, In Murk"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -434,6 +429,14 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "stackData": [
+        "MDF_PropertyValue",
+        "MDF_PropertyValue_2"
+      ],
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_Show</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "You, Parting, Beyond Reach",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -476,16 +479,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_PropertyValue_2"
-      ],
-      "latentQueue": [],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_Show</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "You, Parting, Beyond Reach"
+      ]
     }
   ],
   "references": []

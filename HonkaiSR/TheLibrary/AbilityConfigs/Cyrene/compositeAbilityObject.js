@@ -75,9 +75,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1723137724\">Cyrene_Passive_FemaleMaster</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1723137724\">Cyrene_Passive_FemaleMaster</a>"
         }
       ],
       "targetObjectData": {
@@ -103,9 +101,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1722328499\">Cyrene_Passive_MaleMaster</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1722328499\">Cyrene_Passive_MaleMaster</a>"
         }
       ],
       "targetObjectData": {
@@ -183,9 +179,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -365,6 +359,28 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1846097202\">Cyrene_PassiveAbility</a>",
           "stackType": "ReplaceByCaster",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"619883840\">Cyrene_Passive_Sub</a>[<span class=\"descriptionNumberColor\">Hearts Gather as One</span>]",
+              "aliveOnly": "True",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_DamageIncrease": {
+                  "operator": "Variables[0] (0.2) || RETURN",
+                  "displayLines": "0.2",
+                  "constants": [],
+                  "variables": [
+                    0.2
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -1099,30 +1115,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"619883840\">Cyrene_Passive_Sub</a>[<span class=\"descriptionNumberColor\">Hearts Gather as One</span>]",
-              "aliveOnly": "True",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_DamageIncrease": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
-                }
-              }
-            }
           ]
         },
         {
@@ -1172,9 +1164,7 @@ const compositeAbilityObject = {
                 "Deleted bullshit"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1815,9 +1805,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2076,6 +2064,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
+          "type": "Buff",
+          "statusName": "Causality in Trichotomy",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2098,15 +2089,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
-          "type": "Buff",
-          "statusName": "Causality in Trichotomy"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__810472054\">Cyrene_PointB3_Sub2</a>[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]",
           "stackType": "Replace",
+          "description": "Ice RES PEN increases by <span class=\"descriptionNumberColor\">_AddValue</span>.",
+          "type": "Buff",
+          "statusName": "Causality in Trichotomy",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2143,10 +2134,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Ice RES PEN increases by <span class=\"descriptionNumberColor\">_AddValue</span>.",
-          "type": "Buff",
-          "statusName": "Causality in Trichotomy"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2234,13 +2222,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__619883840\">Cyrene_Passive_Sub</a>[<span class=\"descriptionNumberColor\">Hearts Gather as One</span>]",
+          "stackData": [
+            "MDF_DamageIncrease"
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
+          "type": "Buff",
+          "statusName": "Hearts Gather as One",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2263,14 +2255,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageIncrease"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
-          "type": "Buff",
-          "statusName": "Hearts Gather as One"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2304,6 +2289,30 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1470142416\">Cyrene_Ability03</a>[<span class=\"descriptionNumberColor\">Ripples of Past Reverie</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [],
+          "description": "Basic ATK is replaced with Enhanced Basic ATK, and the Zone effect from the Skill has no duration limit. Increases this unit's and Demiurge's CRIT Rate by <span class=\"descriptionNumberColor\">#Skill03_P3_CritChance</span>.",
+          "type": "Buff",
+          "statusName": "Ripples of Past Reverie",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}+{{Caster's Memosprite}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1765178435\">Cyrene_Ability03_Sub</a>",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_CritChance": {
+                  "operator": "Variables[0] (0.5) || RETURN",
+                  "displayLines": "0.5",
+                  "constants": [],
+                  "variables": [
+                    0.5
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2399,38 +2408,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Basic ATK is replaced with Enhanced Basic ATK, and the Zone effect from the Skill has no duration limit. Increases this unit's and Demiurge's CRIT Rate by <span class=\"descriptionNumberColor\">#Skill03_P3_CritChance</span>.",
-          "type": "Buff",
-          "statusName": "Ripples of Past Reverie",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}+{{Caster's Memosprite}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1765178435\">Cyrene_Ability03_Sub</a>",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_CritChance": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
-                }
-              }
-            }
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-556268195\">Cyrene_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_BasicDamagePercentage</span> of the original DMG.",
+          "type": "Buff",
+          "statusName": "Bloom, Elysium of Beyond",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any"
@@ -2587,16 +2573,41 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_BasicDamagePercentage</span> of the original DMG.",
-          "type": "Buff",
-          "statusName": "Bloom, Elysium of Beyond"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1356425425\">Cyrene_Ability02_Bonus_Main</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_OriginDamagePercentage"
+          ],
+          "description": "For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_BasicDamagePercentage</span> of the original DMG.",
+          "type": "Buff",
+          "statusName": "Bloom, Elysium of Beyond",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]-{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-556268195\">Cyrene_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
+              "aliveOnly": "True",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_OriginDamagePercentage": {
+                  "operator": "Variables[0] (0.24) || RETURN",
+                  "displayLines": "0.24",
+                  "constants": [],
+                  "variables": [
+                    0.24
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2764,35 +2775,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_OriginDamagePercentage"
-          ],
-          "latentQueue": [],
-          "description": "For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_BasicDamagePercentage</span> of the original DMG.",
-          "type": "Buff",
-          "statusName": "Bloom, Elysium of Beyond",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]-{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-556268195\">Cyrene_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
-              "aliveOnly": "True",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_OriginDamagePercentage": {
-                  "operator": "Variables[0] (0.24) || RETURN",
-                  "displayLines": "0.24",
-                  "constants": [],
-                  "variables": [
-                    0.24
-                  ]
-                }
-              }
-            }
           ]
         },
         {
@@ -2894,6 +2876,15 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_SPAdd"
+          ],
+          "latentQueue": [
+            "MDF_FirstTimeMax"
+          ],
+          "description": "When taking action, grants Cyrene \"Recollection.\"",
+          "type": "Other",
+          "statusName": "Future",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -3003,16 +2994,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SPAdd"
-          ],
-          "latentQueue": [
-            "MDF_FirstTimeMax"
-          ],
-          "description": "When taking action, grants Cyrene \"Recollection.\"",
-          "type": "Other",
-          "statusName": "Future"
+          ]
         }
       ],
       "references": []
@@ -3533,9 +3515,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -3614,8 +3594,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1827457473\">Memosprite_CyreneServant_PreShowForMydeimos</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -3655,8 +3633,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-839103023\">Memosprite_CyreneServant_PreShowForDanHengPT</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -3724,6 +3700,50 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "Endurance"
+          ],
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player's Aim Target List}}"
+            },
+            "skillType": [
+              "Memosprite"
+            ],
+            "conditions": {
+              "name": "Character ID",
+              "ID": 1405,
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player's Aim Target List}}"
+              },
+              "characterName": "Anaxa"
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": "0(Set AV)"
+            }
+          },
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}+{{Caster's Summoner}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"340897413\">Memosprite_CyreneServant_PassiveAbility01_HPIncrease</a>",
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.24) || RETURN",
+                  "displayLines": "0.24",
+                  "constants": [],
+                  "variables": [
+                    0.24
+                  ]
+                }
+              }
+            }
           ],
           "execute": [
             {
@@ -4118,52 +4138,6 @@ const compositeAbilityObject = {
               "name": "Variable Value Changes",
               "variableName": "CurSpecialSP",
               "from": "ContextOwner"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Player's Aim Target List}}"
-            },
-            "skillType": [
-              "Memosprite"
-            ],
-            "conditions": {
-              "name": "Character ID",
-              "ID": 1405,
-              "target": {
-                "name": "Target Name",
-                "target": "{{Player's Aim Target List}}"
-              },
-              "characterName": "Anaxa"
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": "0(Set AV)"
-            }
-          },
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}+{{Caster's Summoner}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"340897413\">Memosprite_CyreneServant_PassiveAbility01_HPIncrease</a>",
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.24) || RETURN",
-                  "displayLines": "0.24",
-                  "constants": [],
-                  "variables": [
-                    0.24
-                  ]
-                }
-              }
             }
           ]
         }
@@ -6388,6 +6362,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_DefenceDown"
           ],
+          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "statusName": "Remembrance, Sung in Ripples ♪",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6412,10 +6389,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "statusName": "Remembrance, Sung in Ripples ♪"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6449,6 +6423,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
+          "type": "Buff",
+          "statusName": "DMG Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6491,10 +6468,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
-          "type": "Buff",
-          "statusName": "DMG Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6502,6 +6476,56 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "MDF_DamageIncrease",
+            "MDF_DanHengPT_ExtraDamageCount",
+            "MDF_DamageRatio"
+          ],
+          "latentQueue": [
+            "IsInRank01Action",
+            "IsInPlayerAction"
+          ],
+          "description": "DMG dealt by \"Bondmate\" increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
+          "type": "Buff",
+          "effectName": "Ode to Earth",
+          "statusName": "Ode to Earth",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Bondmate}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"576316400\">Memosprite_CyreneServant_AmazingBonus_DanHengPT_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_DamageIncrease": {
+                  "operator": "Variables[0] (MDF_DamageIncrease) || RETURN",
+                  "displayLines": "MDF_DamageIncrease",
+                  "constants": [],
+                  "variables": [
+                    "MDF_DamageIncrease"
+                  ]
+                }
+              }
+            }
           ],
           "execute": [
             {
@@ -6618,20 +6642,23 @@ const compositeAbilityObject = {
                 }
               ]
             }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__81139284\">Memosprite_CyreneServant_AmazingBonus_Evernight</a>[<span class=\"descriptionNumberColor\">Ode to Time</span>]",
+          "stackType": "Replace",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
           ],
           "stackData": [
-            "MDF_DamageIncrease",
-            "MDF_DanHengPT_ExtraDamageCount",
-            "MDF_DamageRatio"
+            "MDF_EverNightRatio",
+            "MDF_ExtraPoint"
           ],
-          "latentQueue": [
-            "IsInRank01Action",
-            "IsInPlayerAction"
-          ],
-          "description": "DMG dealt by \"Bondmate\" increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
+          "description": "When Evey uses the Memosprite Skill \"Dream, Dissolving, as Dew,\" DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_EverNightRatio</span>. After Evernight uses Skill/Ultimate, gains <span class=\"descriptionNumberColor\">MDF_ExtraPoint</span> additional \"Memoria.\"",
           "type": "Buff",
-          "effectName": "Ode to Earth",
-          "statusName": "Ode to Earth",
+          "effectName": "Ode to Time",
+          "statusName": "Ode to Time",
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -6648,34 +6675,7 @@ const compositeAbilityObject = {
                 "target": "{{Modifier Holder}}"
               },
               "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Bondmate}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"576316400\">Memosprite_CyreneServant_AmazingBonus_DanHengPT_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_DamageIncrease": {
-                  "operator": "Variables[0] (MDF_DamageIncrease) || RETURN",
-                  "displayLines": "MDF_DamageIncrease",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageIncrease"
-                  ]
-                }
-              }
             }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__81139284\">Memosprite_CyreneServant_AmazingBonus_Evernight</a>[<span class=\"descriptionNumberColor\">Ode to Time</span>]",
-          "stackType": "Replace",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
           ],
           "execute": [
             {
@@ -6801,33 +6801,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_EverNightRatio",
-            "MDF_ExtraPoint"
-          ],
-          "latentQueue": [],
-          "description": "When Evey uses the Memosprite Skill \"Dream, Dissolving, as Dew,\" DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_EverNightRatio</span>. After Evernight uses Skill/Ultimate, gains <span class=\"descriptionNumberColor\">MDF_ExtraPoint</span> additional \"Memoria.\"",
-          "type": "Buff",
-          "effectName": "Ode to Time",
-          "statusName": "Ode to Time",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
-            }
           ]
         },
         {
@@ -6835,6 +6808,13 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__694346963\">Memosprite_CyreneServant_AmazingBonus_Phainon_Dot</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "useEntitySnapshot": true,
+          "stackLimit": 1,
+          "addStacksPerTrigger": 1,
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+          },
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -6934,18 +6914,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackLimit": 1,
-          "addStacksPerTrigger": 1,
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-277317282\">Memosprite_CyreneServant_AmazingBonus_Phainon_Sub</a>[<span class=\"descriptionNumberColor\">Eternal Ignition</span>]",
+          "description": "Khaslana will maintain the \"Divine Vessel\" state: With the blessing of companions, flames shall thoroughly illuminate the darkness.",
+          "type": "Buff",
+          "statusName": "Eternal Ignition",
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+          },
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -6975,19 +6955,45 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Khaslana will maintain the \"Divine Vessel\" state: With the blessing of companions, flames shall thoroughly illuminate the darkness.",
-          "type": "Buff",
-          "statusName": "Eternal Ignition",
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-484368069\">Memosprite_CyreneServant_AmazingBonus_Phainon</a>[<span class=\"descriptionNumberColor\">Ode to Worldbearing</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_DamageIncrease",
+            "MDF_LoseHP",
+            "MDF_Loop",
+            "MDF_DamagePercentage",
+            "MDF_EnergyNeed",
+            "MDF_PropertyRatio",
+            "MDF_PropertyRatioMax",
+            "MDF_Kindling",
+            "MDF_ChargeEnergy"
+          ],
+          "description": "Gains \"Eternal Ignition\" when transforming. While holding \"Eternal Ignition,\" increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>, and consumes HP equal to <span class=\"descriptionNumberColor\">MDF_LoseHP</span> of the current HP at the start of the extra turn. After using an attack, deals extra Fire Additional DMG to one random enemy.",
+          "type": "Buff",
+          "effectName": "Ode to Worldbearing",
+          "statusName": "Ode to Worldbearing",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7283,40 +7289,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageIncrease",
-            "MDF_LoseHP",
-            "MDF_Loop",
-            "MDF_DamagePercentage",
-            "MDF_EnergyNeed",
-            "MDF_PropertyRatio",
-            "MDF_PropertyRatioMax",
-            "MDF_Kindling",
-            "MDF_ChargeEnergy"
-          ],
-          "latentQueue": [],
-          "description": "Gains \"Eternal Ignition\" when transforming. While holding \"Eternal Ignition,\" increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>, and consumes HP equal to <span class=\"descriptionNumberColor\">MDF_LoseHP</span> of the current HP at the start of the extra turn. After using an attack, deals extra Fire Additional DMG to one random enemy.",
-          "type": "Buff",
-          "effectName": "Ode to Worldbearing",
-          "statusName": "Ode to Worldbearing",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
-            }
           ]
         },
         {
@@ -7331,6 +7303,10 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "STAT_DefenceDown"
           ],
+          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_FinalDefDown</span>.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "Ode to Trickery",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7485,11 +7461,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_FinalDefDown</span>.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "Ode to Trickery"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7497,35 +7469,11 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_DamageIncrease) || RETURN",
-                    "displayLines": "MDF_DamageIncrease",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageIncrease"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
           "stackData": [
             "MDF_DamageIncrease",
             "MDF_DefDown",
             "MDF_DefDown2"
           ],
-          "latentQueue": [],
           "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
           "type": "Buff",
           "effectName": "Ode to Trickery",
@@ -7574,11 +7522,37 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
             }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_DamageIncrease) || RETURN",
+                    "displayLines": "MDF_DamageIncrease",
+                    "constants": [],
+                    "variables": [
+                      "MDF_DamageIncrease"
+                    ]
+                  }
+                }
+              ]
+            }
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__835315990\">Memosprite_CyreneServant_AmazingBonus_Anaxa_Halo</a>[<span class=\"descriptionNumberColor\">True Knowledge</span>]",
+          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span> and Skill DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
+          "type": "Buff",
+          "statusName": "True Knowledge",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -7627,43 +7601,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span> and Skill DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
-          "type": "Buff",
-          "statusName": "True Knowledge"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1162786634\">Memosprite_CyreneServant_AmazingBonus_Anaxa_Sub</a>",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            },
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Character ID",
-                    "ID": 1415,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": "Cyrene"
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -7711,12 +7654,45 @@ const compositeAbilityObject = {
                 }
               }
             }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            },
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Character ID",
+                    "ID": 1415,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": "Cyrene"
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1645914465\">Memosprite_CyreneServant_AmazingBonus_Anaxa_HaloMain</a>",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_AnaxaCount",
+            "MDF_DamageIncrease",
+            "MDF_AttackAddRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -7789,18 +7765,39 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AnaxaCount",
-            "MDF_DamageIncrease",
-            "MDF_AttackAddRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__84592407\">Memosprite_CyreneServant_AmazingBonus_Anaxa</a>[<span class=\"descriptionNumberColor\">Ode to Reason</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_AnaxaCount",
+            "MDF_DamageIncrease",
+            "MDF_AttackAddRatio"
+          ],
+          "description": "The number of DMG instances dealt by the Skill increases by <span class=\"descriptionNumberColor\">MDF_AnaxaCount</span>.",
+          "type": "Buff",
+          "effectName": "Ode to Reason",
+          "statusName": "Ode to Reason",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -7868,34 +7865,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AnaxaCount",
-            "MDF_DamageIncrease",
-            "MDF_AttackAddRatio"
-          ],
-          "latentQueue": [],
-          "description": "The number of DMG instances dealt by the Skill increases by <span class=\"descriptionNumberColor\">MDF_AnaxaCount</span>.",
-          "type": "Buff",
-          "effectName": "Ode to Reason",
-          "statusName": "Ode to Reason",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
-            }
           ]
         },
         {
@@ -7904,6 +7873,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
+          "type": "Buff",
+          "statusName": "CRIT DMG Boost",
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>"
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7926,20 +7902,57 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
-          "type": "Buff",
-          "statusName": "CRIT DMG Boost",
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"1716749059\">Cerydra_Ability02_Target</a>"
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__609996020\">Memosprite_CyreneServant_AmazingBonus_Cerydra</a>[<span class=\"descriptionNumberColor\">Ode to Law</span>]",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "MDF_DamageIncrease",
+            "MDF_ExtraPoint"
+          ],
+          "description": "The character with \"Military Merit\" has <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span> increased CRIT DMG. After Coup de Main ends, Cerydra gains <span class=\"descriptionNumberColor\">MDF_ExtraPoint</span> Charge.",
+          "type": "Buff",
+          "effectName": "Ode to Law",
+          "statusName": "Ode to Law",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Cerydra's Promotion Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1194084175\">Memosprite_CyreneServant_AmazingBonus_Cerydra_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+              "valuePerStack": {
+                "MDF_DamageIncrease": {
+                  "operator": "Variables[0] (MDF_DamageIncrease) || RETURN",
+                  "displayLines": "MDF_DamageIncrease",
+                  "constants": [],
+                  "variables": [
+                    "MDF_DamageIncrease"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
+            }
           ],
           "execute": [
             {
@@ -8035,51 +8048,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageIncrease",
-            "MDF_ExtraPoint"
-          ],
-          "latentQueue": [],
-          "description": "The character with \"Military Merit\" has <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span> increased CRIT DMG. After Coup de Main ends, Cerydra gains <span class=\"descriptionNumberColor\">MDF_ExtraPoint</span> Charge.",
-          "type": "Buff",
-          "effectName": "Ode to Law",
-          "statusName": "Ode to Law",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Cerydra's Promotion Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1194084175\">Memosprite_CyreneServant_AmazingBonus_Cerydra_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
-              "valuePerStack": {
-                "MDF_DamageIncrease": {
-                  "operator": "Variables[0] (MDF_DamageIncrease) || RETURN",
-                  "displayLines": "MDF_DamageIncrease",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageIncrease"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
-            }
           ]
         },
         {
@@ -8088,6 +8056,12 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_SPAdd"
+          ],
+          "description": "After attacking, regenerates <span class=\"descriptionNumberColor\">MDF_SPAdd</span> Energy.",
+          "type": "Buff",
+          "statusName": "Flowing Warmth",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -8111,20 +8085,40 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SPAdd"
-          ],
-          "latentQueue": [],
-          "description": "After attacking, regenerates <span class=\"descriptionNumberColor\">MDF_SPAdd</span> Energy.",
-          "type": "Buff",
-          "statusName": "Flowing Warmth"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-716696180\">Memosprite_CyreneServant_AmazingBonus_Harscyline</a>[<span class=\"descriptionNumberColor\">Ode to Ocean</span>]",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "MDF_HarscylineRatio",
+            "MDF_DotRatio1",
+            "MDF_DotRatio2"
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_HarscylineRatio</span>. After using Basic ATK/Skill to attack enemy targets, DoT debuffs additionally produces 1 instance of DMG.",
+          "type": "Buff",
+          "effectName": "Ode to Ocean",
+          "statusName": "Ode to Ocean",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
+            }
           ],
           "execute": [
             {
@@ -8207,34 +8201,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HarscylineRatio",
-            "MDF_DotRatio1",
-            "MDF_DotRatio2"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_HarscylineRatio</span>. After using Basic ATK/Skill to attack enemy targets, DoT debuffs additionally produces 1 instance of DMG.",
-          "type": "Buff",
-          "effectName": "Ode to Ocean",
-          "statusName": "Ode to Ocean",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
-            }
           ]
         },
         {
@@ -8243,6 +8209,12 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_SPAdd"
+          ],
+          "description": "Regenerates <span class=\"descriptionNumberColor\">MDF_SPAdd</span> Energy after Aglaea or Garmentmaker attacks.",
+          "type": "Buff",
+          "statusName": "Romantic",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -8304,14 +8276,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SPAdd"
-          ],
-          "latentQueue": [],
-          "description": "Regenerates <span class=\"descriptionNumberColor\">MDF_SPAdd</span> Energy after Aglaea or Garmentmaker attacks.",
-          "type": "Buff",
-          "statusName": "Romantic"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8364,6 +8329,59 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "MDF_DamageIncrease",
+            "MDF_IgnoreDef"
+          ],
+          "description": "DMG dealt by Aglaea and Garmentmaker increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span> and ignores <span class=\"descriptionNumberColor\">MDF_IgnoreDef</span> of targets' DEF.",
+          "type": "Buff",
+          "effectName": "Ode to Romance",
+          "statusName": "Ode to Romance",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}.[[getMemosprite]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1440647410\">Memosprite_CyreneServant_AmazingBonus_Aglaea_Sub</a>",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_DamageIncrease": {
+                  "operator": "Variables[0] (MDF_DamageIncrease) || RETURN",
+                  "displayLines": "MDF_DamageIncrease",
+                  "constants": [],
+                  "variables": [
+                    "MDF_DamageIncrease"
+                  ]
+                },
+                "MDF_IgnoreDef": {
+                  "operator": "Variables[0] (MDF_IgnoreDef) || RETURN",
+                  "displayLines": "MDF_IgnoreDef",
+                  "constants": [],
+                  "variables": [
+                    "MDF_IgnoreDef"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
+            }
           ],
           "execute": [
             {
@@ -8513,60 +8531,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageIncrease",
-            "MDF_IgnoreDef"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt by Aglaea and Garmentmaker increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span> and ignores <span class=\"descriptionNumberColor\">MDF_IgnoreDef</span> of targets' DEF.",
-          "type": "Buff",
-          "effectName": "Ode to Romance",
-          "statusName": "Ode to Romance",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}.[[getMemosprite]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1440647410\">Memosprite_CyreneServant_AmazingBonus_Aglaea_Sub</a>",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_DamageIncrease": {
-                  "operator": "Variables[0] (MDF_DamageIncrease) || RETURN",
-                  "displayLines": "MDF_DamageIncrease",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageIncrease"
-                  ]
-                },
-                "MDF_IgnoreDef": {
-                  "operator": "Variables[0] (MDF_IgnoreDef) || RETURN",
-                  "displayLines": "MDF_IgnoreDef",
-                  "constants": [],
-                  "variables": [
-                    "MDF_IgnoreDef"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
-            }
           ]
         },
         {
@@ -8694,6 +8658,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Anyone]",
@@ -8847,13 +8812,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__222914634\">Memosprite_CyreneServant_AmazingBonus_Mydeimos_Sub</a>[<span class=\"descriptionNumberColor\">Ode to Strife</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_CritDamage</span>.",
+          "type": "Buff",
+          "effectName": "Ode to Strife",
+          "statusName": "Ode to Strife",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -8985,11 +8953,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_CritDamage</span>.",
-          "type": "Buff",
-          "effectName": "Ode to Strife",
-          "statusName": "Ode to Strife"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8997,6 +8961,28 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "MDF_CritDamage",
+            "MDF_ActionDelay"
+          ],
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
+            }
           ],
           "execute": [
             {
@@ -9162,12 +9148,23 @@ const compositeAbilityObject = {
                 }
               ]
             }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1569324375\">Memosprite_CyreneServant_AmazingBonus_Tribbie</a>[<span class=\"descriptionNumberColor\">Ode to Passage</span>]",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
           ],
           "stackData": [
-            "MDF_CritDamage",
-            "MDF_ActionDelay"
+            "MDF_TribbieLoopCount",
+            "MDF_IgnoreDef",
+            "MDF_TargetCount"
           ],
-          "latentQueue": [],
+          "description": "DMG dealt ignores <span class=\"descriptionNumberColor\">MDF_IgnoreDef</span> of the enemy's DEF. When Tribbie launches Follow-Up ATK and triggers the Additional DMG from Tribbie's Zone, it will further deal <span class=\"descriptionNumberColor\">MDF_TribbieLoopCount</span> instance(s) of Additional DMG.",
+          "type": "Buff",
+          "effectName": "Ode to Passage",
+          "statusName": "Ode to Passage",
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -9185,13 +9182,6 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
             }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1569324375\">Memosprite_CyreneServant_AmazingBonus_Tribbie</a>[<span class=\"descriptionNumberColor\">Ode to Passage</span>]",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
           ],
           "execute": [
             {
@@ -9285,34 +9275,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_TribbieLoopCount",
-            "MDF_IgnoreDef",
-            "MDF_TargetCount"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt ignores <span class=\"descriptionNumberColor\">MDF_IgnoreDef</span> of the enemy's DEF. When Tribbie launches Follow-Up ATK and triggers the Additional DMG from Tribbie's Zone, it will further deal <span class=\"descriptionNumberColor\">MDF_TribbieLoopCount</span> instance(s) of Additional DMG.",
-          "type": "Buff",
-          "effectName": "Ode to Passage",
-          "statusName": "Ode to Passage",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
-            }
           ]
         },
         {
@@ -9322,6 +9284,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
+          "stackLimit": 99999,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -9498,13 +9461,13 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 99999
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__874651474\">_M_Cyrene_Player_Ability01Prepare</a>",
           "stackType": "Replace",
+          "stackLimit": 99999,
           "execute": [
             {
               "eventTrigger": "Extra Turn Action Injection: Start",
@@ -9545,14 +9508,73 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "stackLimit": 99999
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__899663966\">_M_Cyrene_Player_PropertySyncer</a>",
+          "modifierFunctions": [
+            {
+              "name": "CharacterFunctions",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__445891682\">_T_AmazingBonus_Player_AttackSyncer</a>",
+              "parse": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "CasterHP",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "CasterHPConvert",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}"
+                  },
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"937032379\">Memosprite_CyreneServant_AmazingBonus_Player</a>[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Modifier-Specific Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifierName": "<a class=\"gModGreen\" id=\"937032379\">Memosprite_CyreneServant_AmazingBonus_Player</a>[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]",
+                      "variableName": "MDF_AttackAddRatio",
+                      "value": {
+                        "operator": "Variables[0] (0.16) || Variables[1] (CasterHP) || Variables[2] (CasterHPConvert) || SUB || MUL || RETURN",
+                        "displayLines": "(0.16 * (CasterHP - CasterHPConvert))",
+                        "constants": [],
+                        "variables": [
+                          0.16,
+                          "CasterHP",
+                          "CasterHPConvert"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
           "abilityValueChange": [
             {
               "name": "Ability Value Changes",
@@ -9649,68 +9671,6 @@ const compositeAbilityObject = {
                           }
                         }
                       ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "modifierFunctions": [
-            {
-              "name": "CharacterFunctions",
-              "functionName": "<a class=\"gTempYellow\" id=\"fun__445891682\">_T_AmazingBonus_Player_AttackSyncer</a>",
-              "parse": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "CasterHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                },
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "CasterHPConvert",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}}"
-                  },
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"937032379\">Memosprite_CyreneServant_AmazingBonus_Player</a>[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Modifier-Specific Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifierName": "<a class=\"gModGreen\" id=\"937032379\">Memosprite_CyreneServant_AmazingBonus_Player</a>[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]",
-                      "variableName": "MDF_AttackAddRatio",
-                      "value": {
-                        "operator": "Variables[0] (0.16) || Variables[1] (CasterHP) || Variables[2] (CasterHPConvert) || SUB || MUL || RETURN",
-                        "displayLines": "(0.16 * (CasterHP - CasterHPConvert))",
-                        "constants": [],
-                        "variables": [
-                          0.16,
-                          "CasterHP",
-                          "CasterHPConvert"
-                        ]
-                      }
                     }
                   ]
                 }
@@ -9892,6 +9852,67 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__937032379\">Memosprite_CyreneServant_AmazingBonus_Player</a>[<span class=\"descriptionNumberColor\">Ode to Genesis</span>]",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "MDF_HPTransferRatio",
+            "MDF_CritTranferRatio"
+          ],
+          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>, CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_CritAddRatio</span>. After using Enhanced Basic ATK, Demiurge immediately gains 1 extra turn and automatically uses \"Minuet of Blooms and Plumes.\"",
+          "type": "Buff",
+          "effectName": "Ode to Genesis",
+          "statusName": "Ode to Genesis",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}.[[getMemosprite]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-627276004\">Memosprite_CyreneServant_AmazingBonus_PlayerServant</a>",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_HPTransferRatio": {
+                  "operator": "Variables[0] (MDF_HPTransferRatio) || RETURN",
+                  "displayLines": "MDF_HPTransferRatio",
+                  "constants": [],
+                  "variables": [
+                    "MDF_HPTransferRatio"
+                  ]
+                },
+                "MDF_CritTranferRatio": {
+                  "operator": "Variables[0] (MDF_CritTranferRatio) || RETURN",
+                  "displayLines": "MDF_CritTranferRatio",
+                  "constants": [],
+                  "variables": [
+                    "MDF_CritTranferRatio"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"899663966\">_M_Cyrene_Player_PropertySyncer</a>"
+            }
           ],
           "execute": [
             {
@@ -10133,68 +10154,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HPTransferRatio",
-            "MDF_CritTranferRatio"
-          ],
-          "latentQueue": [],
-          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>, CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_CritAddRatio</span>. After using Enhanced Basic ATK, Demiurge immediately gains 1 extra turn and automatically uses \"Minuet of Blooms and Plumes.\"",
-          "type": "Buff",
-          "effectName": "Ode to Genesis",
-          "statusName": "Ode to Genesis",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}.[[getMemosprite]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-627276004\">Memosprite_CyreneServant_AmazingBonus_PlayerServant</a>",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_HPTransferRatio": {
-                  "operator": "Variables[0] (MDF_HPTransferRatio) || RETURN",
-                  "displayLines": "MDF_HPTransferRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_HPTransferRatio"
-                  ]
-                },
-                "MDF_CritTranferRatio": {
-                  "operator": "Variables[0] (MDF_CritTranferRatio) || RETURN",
-                  "displayLines": "MDF_CritTranferRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CritTranferRatio"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"899663966\">_M_Cyrene_Player_PropertySyncer</a>"
-            }
           ]
         },
         {
@@ -10204,6 +10163,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "The multiplier increases by <span class=\"descriptionNumberColor\">_FinalSuicideRatio</span> for the DMG dealt when triggering the ability effect of the Talent \"Wings Sweep the Ruins.\"",
+          "type": "Buff",
+          "statusName": "Ode to Life and Death",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -10300,10 +10262,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "The multiplier increases by <span class=\"descriptionNumberColor\">_FinalSuicideRatio</span> for the DMG dealt when triggering the ability effect of the Talent \"Wings Sweep the Ruins.\"",
-          "type": "Buff",
-          "statusName": "Ode to Life and Death"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -10399,9 +10358,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -10409,6 +10366,64 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "MDF_SuicideRatioBase",
+            "MDF_SuicideRatioBase2",
+            "MDF_MaxEnergy",
+            "MDF_EnergyRatio",
+            "MDF_TargetCount"
+          ],
+          "description": "Castorice's Newbud can overflow up to <span class=\"descriptionNumberColor\">MDF_MaxEnergy</span>. When summoning Netherwing, consume all overflowing \"Newbud.\" Based on the amount of overflow consumed, increases the multiplier for the DMG dealt when this summoned Netherwing triggers the ability effect of its Talent \"Wings Sweep the Ruins.\"",
+          "type": "Buff",
+          "effectName": "Ode to Life and Death",
+          "statusName": "Ode to Life and Death",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-640436779\">Memosprite_CyreneServant_AmazingBonus_Castorice_MaxSP</a>",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_ExtraRatio": {
+                  "operator": "Variables[0] (MDF_MaxEnergy) || Constants[0] (1) || SUB || RETURN",
+                  "displayLines": "(MDF_MaxEnergy - 1)",
+                  "constants": [
+                    1
+                  ],
+                  "variables": [
+                    "MDF_MaxEnergy"
+                  ]
+                },
+                "MDF_ReturnRatio": {
+                  "operator": "Variables[0] (MDF_EnergyRatio) || RETURN",
+                  "displayLines": "MDF_EnergyRatio",
+                  "constants": [],
+                  "variables": [
+                    "MDF_EnergyRatio"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
+            }
           ],
           "execute": [
             {
@@ -10551,19 +10566,26 @@ const compositeAbilityObject = {
                 }
               ]
             }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-588160151\">Memosprite_CyreneServant_AmazingBonus_Hyacine</a>[<span class=\"descriptionNumberColor\">Ode to Sky</span>]",
+          "stackType": "Replace",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
           ],
           "stackData": [
-            "MDF_SuicideRatioBase",
-            "MDF_SuicideRatioBase2",
-            "MDF_MaxEnergy",
-            "MDF_EnergyRatio",
-            "MDF_TargetCount"
+            "MDF_HyacineRatio"
           ],
-          "latentQueue": [],
-          "description": "Castorice's Newbud can overflow up to <span class=\"descriptionNumberColor\">MDF_MaxEnergy</span>. When summoning Netherwing, consume all overflowing \"Newbud.\" Based on the amount of overflow consumed, increases the multiplier for the DMG dealt when this summoned Netherwing triggers the ability effect of its Talent \"Wings Sweep the Ruins.\"",
+          "latentQueue": [
+            "IsInRank01Action",
+            "IsInPlayerAction"
+          ],
+          "description": "The amount of Hyacine's healing included in the healing tally of Little Ica's Memosprite Skill is additionally increased by an amount equal to <span class=\"descriptionNumberColor\">MDF_HyacineRatio</span> of the current healing amount. After Hyacine uses Skill/Ultimate, consumes 1 stack of \"Ode to Sky.\"",
           "type": "Buff",
-          "effectName": "Ode to Life and Death",
-          "statusName": "Ode to Life and Death",
+          "effectName": "Ode to Sky",
+          "statusName": "Ode to Sky",
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -10571,36 +10593,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-640436779\">Memosprite_CyreneServant_AmazingBonus_Castorice_MaxSP</a>",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_ExtraRatio": {
-                  "operator": "Variables[0] (MDF_MaxEnergy) || Constants[0] (1) || SUB || RETURN",
-                  "displayLines": "(MDF_MaxEnergy - 1)",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "MDF_MaxEnergy"
-                  ]
-                },
-                "MDF_ReturnRatio": {
-                  "operator": "Variables[0] (MDF_EnergyRatio) || RETURN",
-                  "displayLines": "MDF_EnergyRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_EnergyRatio"
-                  ]
-                }
-              }
+              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>",
+              "haloStatus": true
             },
             {
               "name": "Add Sub-Events/Bonuses",
@@ -10610,14 +10604,6 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
             }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-588160151\">Memosprite_CyreneServant_AmazingBonus_Hyacine</a>[<span class=\"descriptionNumberColor\">Ode to Sky</span>]",
-          "stackType": "Replace",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
           ],
           "execute": [
             {
@@ -10727,36 +10713,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HyacineRatio"
-          ],
-          "latentQueue": [
-            "IsInRank01Action",
-            "IsInPlayerAction"
-          ],
-          "description": "The amount of Hyacine's healing included in the healing tally of Little Ica's Memosprite Skill is additionally increased by an amount equal to <span class=\"descriptionNumberColor\">MDF_HyacineRatio</span> of the current healing amount. After Hyacine uses Skill/Ultimate, consumes 1 stack of \"Ode to Sky.\"",
-          "type": "Buff",
-          "effectName": "Ode to Sky",
-          "statusName": "Ode to Sky",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>",
-              "haloStatus": true
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
-            }
           ]
         },
         {
@@ -10766,46 +10722,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_IncreaseRatio) || RETURN",
-                    "displayLines": "MDF_IncreaseRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_IncreaseRatio"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
           "stackData": [
             "MDF_IncreaseRatio"
           ],
-          "latentQueue": [],
           "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_IncreaseRatio</span>.",
           "type": "Buff",
           "statusName": "This Ode, to All Lives",
@@ -10846,6 +10765,42 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"577014273\">Cyrene_UITop</a>"
             }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1085868311\">Memosprite_CyreneServant_AmazingBonus</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_IncreaseRatio) || RETURN",
+                    "displayLines": "MDF_IncreaseRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_IncreaseRatio"
+                    ]
+                  }
+                }
+              ]
+            }
           ]
         },
         {
@@ -10878,9 +10833,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -10910,9 +10863,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -10983,9 +10934,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -11018,6 +10967,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "Missing Description",
+          "type": "Debuff",
+          "statusName": "Engraved",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Anyone]",
@@ -11147,10 +11099,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Missing Description",
-          "type": "Debuff",
-          "statusName": "Engraved"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -11220,6 +11169,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
+          "description": "Upon reaching <span class=\"descriptionNumberColor\">#SkillCY14_P2_EnergyCost</span> points, immediately gains 1 extra turn and automatically uses \"Minuet of Blooms and Plumes.\"",
+          "type": "Other",
+          "effectName": "Story",
+          "statusName": "Story",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -11261,14 +11214,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "modifierFunctions": [],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Upon reaching <span class=\"descriptionNumberColor\">#SkillCY14_P2_EnergyCost</span> points, immediately gains 1 extra turn and automatically uses \"Minuet of Blooms and Plumes.\"",
-          "type": "Other",
-          "effectName": "Story",
-          "statusName": "Story"
+          ]
         },
         {
           "name": "Modifier Construction",

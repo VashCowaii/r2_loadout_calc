@@ -19,6 +19,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2061183531\">MStrongChallengeEX_Talent_StageAbility_TGT_067</a>[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">MDF_DefaultStanceBreakRatio</span> and increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CriticalDamage</span>.",
+      "type": "Buff",
+      "statusName": "Unstoppable Momentum",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -57,14 +60,49 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">MDF_DefaultStanceBreakRatio</span> and increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CriticalDamage</span>.",
-      "type": "Buff",
-      "statusName": "Unstoppable Momentum"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1291234305\">MStrongChallengeEX_Talent_StageAbility_PLY_067</a>",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "skillType": "Ultimate",
+        "conditions": {
+          "name": "AND",
+          "conditionList": [
+            {
+              "name": "Is Weak to Attacker",
+              "weakTo": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            },
+            {
+              "name": "Has Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-2061183531\">MStrongChallengeEX_Talent_StageAbility_TGT_067</a>[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
+              "invertCondition": true
+            }
+          ]
+        },
+        "toughnessReductionPreview": {
+          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+          "displayLines": "MDF_PropertyValue",
+          "constants": [],
+          "variables": [
+            "MDF_PropertyValue"
+          ]
+        }
+      },
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -115,45 +153,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "skillType": "Ultimate",
-        "conditions": {
-          "name": "AND",
-          "conditionList": [
-            {
-              "name": "Is Weak to Attacker",
-              "weakTo": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            {
-              "name": "Has Modifier",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2061183531\">MStrongChallengeEX_Talent_StageAbility_TGT_067</a>[<span class=\"descriptionNumberColor\">Unstoppable Momentum</span>]",
-              "invertCondition": true
-            }
-          ]
-        },
-        "toughnessReductionPreview": {
-          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-          "displayLines": "MDF_PropertyValue",
-          "constants": [],
-          "variables": [
-            "MDF_PropertyValue"
-          ]
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -216,9 +216,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

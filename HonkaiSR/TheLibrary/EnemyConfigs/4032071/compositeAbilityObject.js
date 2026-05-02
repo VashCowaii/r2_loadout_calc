@@ -610,9 +610,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1199,9 +1197,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1209,6 +1205,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteHitH"
           ],
+          "description": "\"Anti-Creator\" will use \"Yield Not to Tyranny\" in the next action. This state can be dispelled after receiving a killing blow.",
+          "type": "Other",
+          "statusName": "Rebellious",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1255,12 +1254,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "\"Anti-Creator\" will use \"Yield Not to Tyranny\" in the next action. This state can be dispelled after receiving a killing blow.",
-          "type": "Other",
-          "statusName": "Rebellious"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1305,9 +1299,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

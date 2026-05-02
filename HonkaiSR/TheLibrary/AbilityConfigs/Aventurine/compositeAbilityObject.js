@@ -87,9 +87,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -150,9 +148,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -213,9 +209,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1275,6 +1269,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-314126453\">Aventurine_Maze_Defence</a>[<span class=\"descriptionNumberColor\">The Red or the Black</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>",
+          "type": "Buff",
+          "effectName": "DEF Boost",
+          "statusName": "The Red or the Black",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1306,20 +1307,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>",
-          "type": "Buff",
-          "effectName": "DEF Boost",
-          "statusName": "The Red or the Black"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__462082235\">Aventurine_ResistCtrlCD</a>[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "The Talent's Crowd Control debuff resist effect cannot be triggered yet.",
+          "type": "Other",
+          "statusName": "Shot Loaded Right",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1347,10 +1343,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "The Talent's Crowd Control debuff resist effect cannot be triggered yet.",
-          "type": "Other",
-          "statusName": "Shot Loaded Right"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1404,9 +1397,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1416,28 +1407,28 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2007691702\">Aventurine_Eidolon1_Status</a>[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "Prisoner's Dilemma",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "Prisoner's Dilemma"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "After a teammate with \"Fortified Wager\" uses Follow-Up ATK, Aventurine gains 1 \"Blind Bet.\" This effect can be triggered <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> more time(s).",
+          "type": "Other",
+          "statusName": "Bingo!",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "description": "After a teammate with \"Fortified Wager\" uses Follow-Up ATK, Aventurine gains 1 \"Blind Bet.\" This effect can be triggered <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> more time(s).",
-          "type": "Other",
-          "statusName": "Bingo!"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1858,9 +1849,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1869,6 +1858,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Shield"
           ],
+          "stackData": [
+            "MDF_InitShieldValue",
+            "MDF_MaxShieldRatio",
+            "MDF_ForceShield"
+          ],
+          "type": "Buff",
+          "effectName": "Shield",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2114,15 +2110,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_InitShieldValue",
-            "MDF_MaxShieldRatio",
-            "MDF_ForceShield"
-          ],
-          "latentQueue": [],
-          "type": "Buff",
-          "effectName": "Shield"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2141,6 +2129,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>.",
+          "type": "Buff",
+          "statusName": "Stag Hunt Game",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2163,10 +2154,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>.",
-          "type": "Buff",
-          "statusName": "Stag Hunt Game"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2523,9 +2511,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1636557416\">Aventurine_Eidolon4</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1636557416\">Aventurine_Eidolon4</a>"
         },
         {
           "name": "Modifier Construction",
@@ -2535,6 +2521,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1438365222\">Aventurine_Eidolon2_ResistanceDown</a>[<span class=\"descriptionNumberColor\">Bounded Rationality</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "All-Type RES Reduction",
+          "statusName": "Bounded Rationality",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2559,20 +2552,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "All-Type RES Reduction",
-          "statusName": "Bounded Rationality"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
+          "type": "Buff",
+          "statusName": "Leverage",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2653,10 +2641,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
-          "type": "Buff",
-          "statusName": "Leverage"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2669,23 +2654,6 @@ const compositeAbilityObject = {
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-741151706\">Aventurine_Trace01_Sub</a>"
-                }
-              ]
-            }
-          ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-741151706\">Aventurine_Trace01_Sub</a>"
-                    }
-                  ]
                 }
               ]
             }
@@ -2812,13 +2780,32 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [],
-          "latentQueue": []
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-741151706\">Aventurine_Trace01_Sub</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__674084232\">Aventurine_Passive_AddDefence</a>[<span class=\"descriptionNumberColor\">Unexpected Hanging Paradox</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_DefencePercentage</span>",
+          "type": "Buff",
+          "effectName": "DEF Boost",
+          "statusName": "Unexpected Hanging Paradox",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2862,18 +2849,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_DefencePercentage</span>",
-          "type": "Buff",
-          "effectName": "DEF Boost",
-          "statusName": "Unexpected Hanging Paradox"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-839248266\">Aventurine_Ability03_CritDmgIncrease</a>[<span class=\"descriptionNumberColor\">Unnerved</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Increase the CRIT DMG dealt by allies to this unit by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "The received CRIT DMG increases",
+          "statusName": "Unnerved",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -2903,19 +2891,13 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Increase the CRIT DMG dealt by allies to this unit by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "The received CRIT DMG increases",
-          "statusName": "Unnerved"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-989533278\">Aventurine_Ability03_CoinAdd</a>",
+          "type": "Buff",
+          "effectName": "Blind Bet received: <unbreak>#1[i]</unbreak> Point(s)",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2956,72 +2938,74 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "type": "Buff",
-          "effectName": "Blind Bet received: <unbreak>#1[i]</unbreak> Point(s)"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Gains a Shield that absorbs DMG and increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. While the Shield persists or before the effect disappears, enemy attacks will not reduce the Shielded characters' HP. After these characters receive DMG, Aventurine receives 1 point of Blind Bet.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Fortified Wager: Clubs",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "description": "Gains a Shield that absorbs DMG and increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. While the Shield persists or before the effect disappears, enemy attacks will not reduce the Shielded characters' HP. After these characters receive DMG, Aventurine receives 1 point of Blind Bet.",
-          "type": "Buff",
-          "effectName": "Shield",
-          "statusName": "Fortified Wager: Clubs"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2127014376\">Aventurine_Ability02_ShieldEffect3</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Gains a Shield that absorbs DMG and increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. While the Shield persists or before the effect disappears, enemy attacks will not reduce the Shielded characters' HP. After these characters receive DMG, Aventurine receives 1 point of Blind Bet.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Fortified Wager: Diamonds",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "description": "Gains a Shield that absorbs DMG and increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. While the Shield persists or before the effect disappears, enemy attacks will not reduce the Shielded characters' HP. After these characters receive DMG, Aventurine receives 1 point of Blind Bet.",
-          "type": "Buff",
-          "effectName": "Shield",
-          "statusName": "Fortified Wager: Diamonds"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Gains a Shield that absorbs DMG and increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. While the Shield persists or before the effect disappears, enemy attacks will not reduce the Shielded characters' HP. After these characters receive DMG, Aventurine receives 1 point of Blind Bet.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Fortified Wager: Hearts",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "description": "Gains a Shield that absorbs DMG and increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. While the Shield persists or before the effect disappears, enemy attacks will not reduce the Shielded characters' HP. After these characters receive DMG, Aventurine receives 1 point of Blind Bet.",
-          "type": "Buff",
-          "effectName": "Shield",
-          "statusName": "Fortified Wager: Hearts"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Gains a Shield that absorbs DMG and increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. While the Shield persists or before the effect disappears, enemy attacks will not reduce the Shielded characters' HP. After these characters receive DMG, Aventurine receives 2 points of Blind Bet.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Fortified Wager: Spades",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "description": "Gains a Shield that absorbs DMG and increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. While the Shield persists or before the effect disappears, enemy attacks will not reduce the Shielded characters' HP. After these characters receive DMG, Aventurine receives 2 points of Blind Bet.",
-          "type": "Buff",
-          "effectName": "Shield",
-          "statusName": "Fortified Wager: Spades"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1566932811\">Aventurine_Ability02_ShieldEffect</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_CanTriggerShieldEffect",
+            "MDF_ResistanceRatio",
+            "MDF_TeammateCount",
+            "MDF_CritDmg1"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3380,14 +3364,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_CanTriggerShieldEffect",
-            "MDF_ResistanceRatio",
-            "MDF_TeammateCount",
-            "MDF_CritDmg1"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3400,6 +3377,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
+          "stackLimit": 10,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3703,10 +3681,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "stackLimit": 10
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4376,9 +4351,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -79
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

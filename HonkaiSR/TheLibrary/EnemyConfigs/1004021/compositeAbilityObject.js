@@ -697,9 +697,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -747,9 +745,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -863,6 +859,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1419162291\">Enemy_W1_Gepard_ListenSelfBreak</a>",
+          "latentQueue": [
+            "Gepard_SummonCounter",
+            "Gepard_AICounter"
+          ],
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -879,16 +879,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Gepard_SummonCounter",
-            "Gepard_AICounter"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1151984120\">Enemy_W1_Gepard_Command</a>",
+          "latentQueue": [
+            "Gepard_SummonCounter",
+            "Gepard_AICounter"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -920,11 +919,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Gepard_SummonCounter",
-            "Gepard_AICounter"
           ]
         }
       ]
@@ -945,19 +939,18 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "TeamAction"
           ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            }
-          ],
-          "stackData": [],
           "latentQueue": [
             "Gepard_SummonCounter"
           ],
           "description": "Silvermane Guards will focus their attacks on this target.",
           "type": "Debuff",
           "effectName": "Lock On",
-          "statusName": "Aggravate"
+          "statusName": "Aggravate",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -997,9 +990,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1055,9 +1046,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1168,9 +1157,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1205,13 +1192,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1932026203\">Monster_W1_Gepard_RemoveOneMore</a>",
+          "latentQueue": [
+            "Gepard_SummonCounter",
+            "Gepard_AICounter"
+          ],
           "execute": [
             {
               "eventTrigger": "Action End [Owner]",
@@ -1296,11 +1285,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Gepard_SummonCounter",
-            "Gepard_AICounter"
           ]
         },
         {
@@ -1312,6 +1296,11 @@ const compositeAbilityObject = {
             "BlockDamageExcludeDot",
             "MuteBreak"
           ],
+          "useEntitySnapshot": true,
+          "description": "Nullifies all DMG received except for DoT until after being attacked.",
+          "type": "Buff",
+          "effectName": "Barrier",
+          "statusName": "Barrier",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1355,14 +1344,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Nullifies all DMG received except for DoT until after being attacked.",
-          "type": "Buff",
-          "effectName": "Barrier",
-          "statusName": "Barrier"
+          ]
         }
       ],
       "references": []

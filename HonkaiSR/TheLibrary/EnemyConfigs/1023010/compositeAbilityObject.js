@@ -73,9 +73,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1525735107\">Monster_W1_Mecha04_01_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -180,9 +178,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -194,9 +190,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Choice Window [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -944,6 +938,14 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackData": [
+            "Modifier_AttackAddedRatio",
+            "Modifier_SpeedDelta"
+          ],
+          "description": "Increases ATK by <span class=\"descriptionNumberColor\">Modifier_AttackAddedRatio</span> and SPD by <span class=\"descriptionNumberColor\">Modifier_SpeedDelta</span> pts.",
+          "type": "Buff",
+          "effectName": "Mania",
+          "statusName": "Mania",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1004,21 +1006,31 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "Modifier_AttackAddedRatio",
-            "Modifier_SpeedDelta"
-          ],
-          "latentQueue": [],
-          "description": "Increases ATK by <span class=\"descriptionNumberColor\">Modifier_AttackAddedRatio</span> and SPD by <span class=\"descriptionNumberColor\">Modifier_SpeedDelta</span> pts.",
-          "type": "Buff",
-          "effectName": "Mania",
-          "statusName": "Mania"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1848655652\">Monster_W1_Mecha_Fire_Passive</a>[<span class=\"descriptionNumberColor\">Out of Control</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "ModifierCriticalChanceRatio_PerLayer"
+          ],
+          "latentQueue": [
+            "Monster_W1_Mecha_Fire_PassiveCounter_01"
+          ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">ModifierCriticalChanceRatio</span>. Stack up to 5 times.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Out of Control",
+          "stackLimit": 5,
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+            "displayLines": "ModifierStackLayer",
+            "constants": [],
+            "variables": [
+              "ModifierStackLayer"
+            ]
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1066,26 +1078,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "ModifierCriticalChanceRatio_PerLayer"
-          ],
-          "latentQueue": [
-            "Monster_W1_Mecha_Fire_PassiveCounter_01"
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">ModifierCriticalChanceRatio</span>. Stack up to 5 times.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Out of Control",
-          "stackLimit": 5,
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1100,9 +1093,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

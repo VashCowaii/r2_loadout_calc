@@ -41,7 +41,6 @@ const configAbility = {
       "modifierFlags": [
         "Deathrattle"
       ],
-      "stackData": [],
       "latentQueue": [
         "WeaknessCount"
       ]

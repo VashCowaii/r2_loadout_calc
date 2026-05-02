@@ -40,6 +40,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1096242682\">Yanqing_Eidolon4_IcePenetrate</a>[<span class=\"descriptionNumberColor\">Searing Sting</span>]",
+          "description": "Ice RES PEN +<span class=\"descriptionNumberColor\">MDF_IcePenetrate</span>.",
+          "type": "Buff",
+          "effectName": "Ice RES PEN",
+          "statusName": "Searing Sting",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -62,11 +66,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Ice RES PEN +<span class=\"descriptionNumberColor\">MDF_IcePenetrate</span>.",
-          "type": "Buff",
-          "effectName": "Ice RES PEN",
-          "statusName": "Searing Sting"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -182,9 +182,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -224,6 +222,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1494385561\">Yanqing_Eidolon1</a>",
+          "stackData": [
+            "MDF_DamageRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -265,11 +266,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageRatio"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -306,6 +303,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2119684740\">M_Yanqing_Tree03SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_SpeedValue</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -328,16 +330,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_SpeedValue</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__645549950\">M_Yanqing_Tree03</a>",
+          "stackData": [
+            "MDF_SpeedValue"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -386,11 +386,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedValue"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -426,6 +422,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__611994712\">M_Yanqing_Tree01</a>",
+          "stackData": [
+            "MDF_DamageRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -467,11 +466,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageRatio"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -505,6 +500,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__704251526\">Yanqing_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">The One True Sword</span>]",
+          "description": "Increases DMG dealt to enemies whose current HP percentage is higher than or equal to <span class=\"descriptionNumberColor\">MDF_HPRatio</span> by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "The One True Sword",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -543,11 +542,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt to enemies whose current HP percentage is higher than or equal to <span class=\"descriptionNumberColor\">MDF_HPRatio</span> by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "The One True Sword"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -604,9 +599,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1310,6 +1303,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__294496269\">Yanqing_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_CriticalBoost"
+          ],
+          "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_CriticalBoost</span>.",
+          "type": "Buff",
+          "effectName": "CRIT Rate Boost",
+          "statusName": "Amidst the Raining Bliss",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1357,15 +1357,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_CriticalBoost"
-          ],
-          "latentQueue": [],
-          "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_CriticalBoost</span>.",
-          "type": "Buff",
-          "effectName": "CRIT Rate Boost",
-          "statusName": "Amidst the Raining Bliss"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1380,6 +1372,15 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_CriticalBoost",
+            "MDF_CriticaDamage",
+            "MDF_AddCriticalDamage"
+          ],
+          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CriticalBoost</span> and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_ALLCriticalDamage</span>.",
+          "type": "Buff",
+          "effectName": "CRIT Rate Boost",
+          "statusName": "Soulsteel Sync",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1726,21 +1727,17 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier is Added [Owner]"
             }
-          ],
-          "stackData": [
-            "MDF_CriticalBoost",
-            "MDF_CriticaDamage",
-            "MDF_AddCriticalDamage"
-          ],
-          "latentQueue": [],
-          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CriticalBoost</span> and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_ALLCriticalDamage</span>.",
-          "type": "Buff",
-          "effectName": "CRIT Rate Boost",
-          "statusName": "Soulsteel Sync"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1507574257\">Yanqing_PassiveAbility_Modifier</a>",
+          "stackData": [
+            "MDF_CriticalBoost",
+            "MDF_CriticaDamage",
+            "MDF_StatusResistance",
+            "MDF_AddSPRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -1799,14 +1796,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_CriticalBoost",
-            "MDF_CriticaDamage",
-            "MDF_StatusResistance",
-            "MDF_AddSPRatio"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

@@ -116,7 +116,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1493708935\">Modifier_Monster_W5_Pam_Charge</a>[<span class=\"descriptionNumberColor\">Raring to Go</span>]",
       "stackType": "Replace",
-      "stackData": [],
       "latentQueue": [
         "MDF_FirstUltraSkill"
       ],

@@ -300,9 +300,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -918,6 +916,13 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1962050217\">Guinaifen_Eidolon1_StatusResistance</a>[<span class=\"descriptionNumberColor\">Slurping Noodles During Handstand</span>]",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Effect RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Effect RES Reduction",
+          "statusName": "Slurping Noodles During Handstand",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -942,15 +947,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Effect RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Effect RES Reduction",
-          "statusName": "Slurping Noodles During Handstand"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -984,9 +981,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1018,14 +1013,19 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__597170239\">Guinaifen_Oil_Sub</a>[<span class=\"descriptionNumberColor\">Firekiss</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue2"
+          ],
+          "description": "Received DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Firekiss",
+          "statusName": "Firekiss",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1071,15 +1071,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue2"
-          ],
-          "latentQueue": [],
-          "description": "Received DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Firekiss",
-          "statusName": "Firekiss"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1207,6 +1199,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1214365283\">GuiNaiFen_PassiveAbility01_Modifier</a>",
+          "stackData": [
+            "MDF_Chance",
+            "MDF_Damage",
+            "MDF_LifeTime",
+            "SpAdded2"
+          ],
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1366,14 +1364,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Chance",
-            "MDF_Damage",
-            "MDF_LifeTime",
-            "SpAdded2"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

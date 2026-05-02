@@ -18,6 +18,11 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__899015137\">LC_23015_Sub</a>[<span class=\"descriptionNumberColor\">Dragon's Call</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">#SkillEquip_P4_AttackAddedRatio</span> and Energy Regeneration Rate by <span class=\"descriptionNumberColor\">#SkillEquip_P5_SPRatio</span>, stacking up to <span class=\"descriptionNumberColor\">#SkillEquip_P3_MaxLayer</span> time(s).",
+      "type": "Buff",
+      "statusName": "Dragon's Call",
+      "stackLimit": 3,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -68,12 +73,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">#SkillEquip_P4_AttackAddedRatio</span> and Energy Regeneration Rate by <span class=\"descriptionNumberColor\">#SkillEquip_P5_SPRatio</span>, stacking up to <span class=\"descriptionNumberColor\">#SkillEquip_P3_MaxLayer</span> time(s).",
-      "type": "Buff",
-      "statusName": "Dragon's Call",
-      "stackLimit": 3,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -117,9 +117,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

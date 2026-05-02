@@ -743,9 +743,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -768,9 +766,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1578,9 +1574,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1597,6 +1591,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1881731748\">Enemy_AML_Boss_DamageTakenUp</a>",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "_IsWeeklyBoss"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1619,12 +1619,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "_IsWeeklyBoss"
           ]
         },
         {
@@ -1661,9 +1655,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1699,9 +1691,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1737,9 +1727,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1976,6 +1964,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__489144285\">Enemy_WMonster_W0_Boss_ListenAllPartDie</a>",
+          "latentQueue": [
+            "_IsWeeklyBoss"
+          ],
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -2047,15 +2038,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_IsWeeklyBoss"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1741877307\">Enemy_WMonster_W0_Boss_LockHP_1</a>",
+          "latentQueue": [
+            "_IsWeeklyBoss"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2117,10 +2107,6 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_IsWeeklyBoss"
           ]
         },
         {
@@ -2131,6 +2117,10 @@ const compositeAbilityObject = {
             "BlockDamage",
             "Endurance"
           ],
+          "useEntitySnapshot": true,
+          "description": "Cannot be targeted until Disaster's Right Hand, Dawn's Left Hand, and Antimatter Engine have all been destroyed.",
+          "type": "Buff",
+          "statusName": "Vestige Valor",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2138,25 +2128,18 @@ const compositeAbilityObject = {
                 "Mark Entity as Non-Target(Unselectable)"
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Cannot be targeted until Disaster's Right Hand, Dawn's Left Hand, and Antimatter Engine have all been destroyed.",
-          "type": "Buff",
-          "statusName": "Vestige Valor"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1605741417\">Enemy_AML_Boss_HitEffect</a>",
+          "latentQueue": [
+            "ListenAllDieController"
+          ],
           "execute": [
             {
               "eventTrigger": "Take Damage End [Owner]: Hit"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "ListenAllDieController"
           ]
         }
       ],

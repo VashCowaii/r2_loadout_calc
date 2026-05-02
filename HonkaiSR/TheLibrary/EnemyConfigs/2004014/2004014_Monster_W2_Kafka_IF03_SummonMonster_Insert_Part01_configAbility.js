@@ -289,6 +289,12 @@ const configAbility = {
         "KeepOnDeathrattle",
         "Deathrattle"
       ],
+      "stackData": [
+        "MDF_KillBonus"
+      ],
+      "latentQueue": [
+        "InsertCheck"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -396,12 +402,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_KillBonus"
-      ],
-      "latentQueue": [
-        "InsertCheck"
       ]
     }
   ]

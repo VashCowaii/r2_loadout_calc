@@ -92,9 +92,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -345,9 +343,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -374,15 +370,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-894890999\">Ability02PreShowModifier</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -434,8 +426,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1540905078\">Ability01PreShowModifier</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -487,8 +477,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-247396096\">Ability03PreShowModifier</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1657,6 +1645,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-236050172\">Sushang_BP_PointB2_DMGModifier</a>",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1673,35 +1664,23 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1715450419\">Sushang_BP_BreakCheck_Before</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1715450419\">Sushang_BP_BreakCheck_Before</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1418539622\">Sushang_BP_PassiveCheck_02</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1418539622\">Sushang_BP_PassiveCheck_02</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1401762003\">Sushang_BP_PassiveCheck_01</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1401762003\">Sushang_BP_PassiveCheck_01</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__699476095\">Sushang_BP_PassiveCheck</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__699476095\">Sushang_BP_PassiveCheck</a>"
         }
       ],
       "targetObjectData": {
@@ -1904,6 +1883,13 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__398733795\">Sushang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "DMG Mitigation",
+          "statusName": "Refine in Toil",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1926,15 +1912,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "DMG Mitigation",
-          "statusName": "Refine in Toil"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1943,6 +1921,15 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "Dancing Blade",
+          "stackLimit": 2,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1977,17 +1964,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "Dancing Blade",
-          "stackLimit": 2,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1996,6 +1973,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "Dancing Blade",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2018,15 +2002,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "Dancing Blade"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2036,7 +2012,6 @@ const compositeAbilityObject = {
             "MDF_PropertyValue",
             "MDF_Max_Layer"
           ],
-          "latentQueue": [],
           "description": "Increases Sword Stance DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> for each stack, up to <span class=\"descriptionNumberColor\">MDF_Max_Layer</span> stack(s).",
           "type": "Buff",
           "statusName": "Riposte",
@@ -2047,6 +2022,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1472874588\">Sushang_UltraBonus</a>[<span class=\"descriptionNumberColor\">Dawn Herald</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and receives 2 extra chances to trigger Sword Stance when using Skill.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Dawn Herald",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2150,21 +2132,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and receives 2 extra chances to trigger Sword Stance when using Skill.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Dawn Herald"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__420113807\">Sushang_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Guileless</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Lowers the chances of being attacked by enemies.",
+          "type": "Buff",
+          "effectName": "Aggro Chance Reduction",
+          "statusName": "Guileless",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2189,16 +2167,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Lowers the chances of being attacked by enemies.",
-          "type": "Buff",
-          "effectName": "Aggro Chance Reduction",
-          "statusName": "Guileless"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__136105164\">Sushang_LowHP_AggroDown</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_HPRatio",
+            "MDF_AggroDown"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2301,12 +2279,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HPRatio",
-            "MDF_AggroDown"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

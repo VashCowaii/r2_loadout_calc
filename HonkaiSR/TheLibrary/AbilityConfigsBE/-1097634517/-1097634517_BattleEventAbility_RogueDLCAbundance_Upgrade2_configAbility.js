@@ -18,6 +18,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1581262672\">Modifier_RogueDLCAbundance_Upgrade2_AttackUp</a>[<span class=\"descriptionNumberColor\">Formation Extrapolation: Mountain High</span>]",
+      "description": "Increases ATK by <span class=\"descriptionNumberColor\">#ADF_1</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Formation Extrapolation: Mountain High",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,11 +44,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases ATK by <span class=\"descriptionNumberColor\">#ADF_1</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Formation Extrapolation: Mountain High"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -109,9 +109,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

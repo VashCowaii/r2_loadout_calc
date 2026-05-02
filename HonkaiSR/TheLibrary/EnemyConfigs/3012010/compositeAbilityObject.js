@@ -243,6 +243,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "latentQueue": [
+            "TV_01_EliteFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Pre-Death [Owner]",
@@ -316,16 +319,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "TV_01_EliteFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__868255192\">Monster_W3_TV_01_SummonMonsterEnd</a>",
           "stackType": "Replace",
+          "latentQueue": [
+            "TV_01_EliteFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Action End [Owner]",
@@ -341,10 +343,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "TV_01_EliteFlag"
           ]
         }
       ]

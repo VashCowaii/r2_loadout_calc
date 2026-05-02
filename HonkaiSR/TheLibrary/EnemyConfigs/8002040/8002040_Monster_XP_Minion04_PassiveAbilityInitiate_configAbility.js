@@ -28,9 +28,7 @@ const configAbility = {
         {
           "eventTrigger": "Take Damage Start [Owner]: Hit"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

@@ -25,6 +25,28 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1873066358\">Relic_110_Main</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "skillType": [
+              "Ultimate"
+            ],
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": {
+                "operator": "Variables[0] (0.25) || INVERT || RETURN",
+                "displayLines": "-0.25",
+                "constants": [],
+                "variables": [
+                  0.25
+                ]
+              }
+            }
+          },
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -49,31 +71,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "skillType": [
-              "Ultimate"
-            ],
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": {
-                "operator": "Variables[0] (0.25) || INVERT || RETURN",
-                "displayLines": "-0.25",
-                "constants": [],
-                "variables": [
-                  0.25
-                ]
-              }
-            }
-          }
+          ]
         }
       ],
       "isLightcone": true,

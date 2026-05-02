@@ -35,6 +35,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__867071212\">Himeko_Eidolon2_DamageUP</a>",
+      "stackData": [
+        "MDF_HPRatio",
+        "MDF_PropertyValue"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -73,12 +77,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_HPRatio",
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

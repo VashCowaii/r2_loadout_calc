@@ -18,6 +18,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
       "stackType": "ReplaceByCaster",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -34,8 +35,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -171,9 +171,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

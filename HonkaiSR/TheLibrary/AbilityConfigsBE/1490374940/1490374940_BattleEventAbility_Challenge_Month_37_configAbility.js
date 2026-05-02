@@ -91,6 +91,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-976285872\">Modifier_BattleEventAbility_Challenge_Month_37_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">DV_DmgPercentage_get</span>. After attacking, increases <span class=\"descriptionNumberColor\">DV_Count</span> Hits Per Action to \"Memory Turbulence,\" up to a max of <span class=\"descriptionNumberColor\">DV_CountMax</span> hit(s).",
+      "type": "Buff",
+      "effectName": "Memory Imprint",
+      "statusName": "Memory Imprint",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -189,11 +193,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">DV_DmgPercentage_get</span>. After attacking, increases <span class=\"descriptionNumberColor\">DV_Count</span> Hits Per Action to \"Memory Turbulence,\" up to a max of <span class=\"descriptionNumberColor\">DV_CountMax</span> hit(s).",
-      "type": "Buff",
-      "effectName": "Memory Imprint",
-      "statusName": "Memory Imprint"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -317,6 +317,15 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__901719385\">Modifier_BattleEventAbility_Challenge_Month_37</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "DV_LifeTime",
+        "DV_DmgPercentage",
+        "DV_Count",
+        "DV_CountMax",
+        "BattleEvent_P5_ADF",
+        "BattleEvent_P6_ADF",
+        "BattleEvent_P7_ADF"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -555,17 +564,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [
-        "DV_LifeTime",
-        "DV_DmgPercentage",
-        "DV_Count",
-        "DV_CountMax",
-        "BattleEvent_P5_ADF",
-        "BattleEvent_P6_ADF",
-        "BattleEvent_P7_ADF"
-      ],
-      "latentQueue": []
+      ]
     }
   ]
 }

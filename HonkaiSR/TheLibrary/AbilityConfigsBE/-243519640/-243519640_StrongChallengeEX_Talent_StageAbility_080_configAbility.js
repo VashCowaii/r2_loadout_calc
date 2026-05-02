@@ -18,6 +18,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1376108138\">MStrongChallengeEX_Talent_StageAbility_PLY_080</a>[<span class=\"descriptionNumberColor\">Past Life: Shadowed Reverie</span>]",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Past Life: Shadowed Reverie",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,10 +43,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Past Life: Shadowed Reverie"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -266,9 +266,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

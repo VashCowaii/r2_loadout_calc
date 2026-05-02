@@ -18,6 +18,12 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1445057094\">Relic_313_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Sigonia, the Unclaimed Desolation</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases CRIT DMG dealt by <span class=\"descriptionNumberColor\">#SkillRelic_313_2_P1_CriticalDamage</span>, up to <span class=\"descriptionNumberColor\">#SkillRelic_313_2_P2_MaxLayer</span> stack(s).",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "Sigonia, the Unclaimed Desolation",
+      "stackLimit": 20,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -51,13 +57,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases CRIT DMG dealt by <span class=\"descriptionNumberColor\">#SkillRelic_313_2_P1_CriticalDamage</span>, up to <span class=\"descriptionNumberColor\">#SkillRelic_313_2_P2_MaxLayer</span> stack(s).",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "Sigonia, the Unclaimed Desolation",
-      "stackLimit": 20,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -187,9 +187,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

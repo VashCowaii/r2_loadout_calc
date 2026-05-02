@@ -48,6 +48,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1558938344\">M_Gepard_AttackConvert</a>",
+          "stackData": [
+            "MDF_ConvertRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -135,11 +138,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ConvertRatio"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -270,9 +269,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -431,9 +428,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -507,6 +502,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-179604795\">Gepard_PassiveAbility_UnDead</a>[<span class=\"descriptionNumberColor\">Unyielding Will</span>]",
           "counter": 1,
+          "description": "When struck with a killing blow, instead of becoming downed, Gepard immediately restores HP equal to <span class=\"descriptionNumberColor\">Modifier_Gepard_00_Ratio</span> of his Max HP.",
+          "type": "Buff",
+          "statusName": "Unyielding Will",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -624,12 +622,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When struck with a killing blow, instead of becoming downed, Gepard immediately restores HP equal to <span class=\"descriptionNumberColor\">Modifier_Gepard_00_Ratio</span> of his Max HP.",
-          "type": "Buff",
-          "statusName": "Unyielding Will"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -716,9 +709,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1184,6 +1175,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1307422316\">Gepard_Eidolon4_AddStatusResistance</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_AddStatusResistance"
+          ],
+          "description": "Effect RES +<span class=\"descriptionNumberColor\">MDF_AddStatusResistance</span>.",
+          "type": "Buff",
+          "statusName": "Effect RES Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1206,14 +1203,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AddStatusResistance"
-          ],
-          "latentQueue": [],
-          "description": "Effect RES +<span class=\"descriptionNumberColor\">MDF_AddStatusResistance</span>.",
-          "type": "Buff",
-          "statusName": "Effect RES Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1222,6 +1212,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedDown"
           ],
+          "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyRaito</span>.",
+          "type": "Debuff",
+          "effectName": "Slow",
+          "statusName": "Slow",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1246,15 +1240,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyRaito</span>.",
-          "type": "Debuff",
-          "effectName": "Slow",
-          "statusName": "Slow"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-367770919\">Gepard_Eidolon2_Delay</a>",
+          "stackData": [
+            "MDF_SPD",
+            "MDF_Lifetime"
+          ],
           "execute": [
             {
               "eventTrigger": "When Losing Modifier [Anyone]",
@@ -1314,17 +1308,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SPD",
-            "MDF_Lifetime"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__567771648\">Gepard_Passive02_AttackDeltaUp</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1347,11 +1339,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1360,6 +1348,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Shield"
           ],
+          "stackData": [
+            "MDF_ShowValue"
+          ],
+          "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Shield",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1405,15 +1400,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ShowValue"
-          ],
-          "latentQueue": [],
-          "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
-          "type": "Buff",
-          "effectName": "Shield",
-          "statusName": "Shield"
+          ]
         }
       ],
       "references": []

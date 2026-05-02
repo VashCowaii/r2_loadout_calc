@@ -939,9 +939,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2666,9 +2664,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Ultimate Prep-Phase [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2869,9 +2865,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2962,9 +2956,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3072,9 +3064,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3095,8 +3085,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__968355900\">Monster_W4_Serpent_01_RLBoss_Ability06Choose</a>[<span class=\"descriptionNumberColor\">Hemotort Drench</span>]",
-          "stackData": [],
-          "latentQueue": [],
           "description": "The character that has been selected by \"Name the Culprit.\"",
           "type": "Other",
           "statusName": "Hemotort Drench"
@@ -3104,6 +3092,7 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__986553475\">Monster_W4_Serpent_01_RLBoss_TriggerDamage</a>",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3129,12 +3118,14 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-227770037\">Monster_W4_Serpent_01_RLBoss_Passive</a>",
+          "stackData": [
+            "MDF_DamageUpRatio_PerLayer"
+          ],
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -3257,11 +3248,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUpRatio_PerLayer"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3282,14 +3269,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1161309154\">W4_Serpent_01_BattleScore1</a>",
           "stackType": "Replace",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3347,9 +3334,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3357,6 +3342,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "AttackSign"
           ],
+          "description": "When \"%DynamicTargetName\" uses \"Hemotort Decapitation\", they take maximum damage, and if any DMG is not offset by Shield, they will be inflicted with \"Hemotort Corruption.\"",
+          "type": "Other",
+          "effectName": "First Offense",
+          "statusName": "First Offense",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3375,13 +3364,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When \"%DynamicTargetName\" uses \"Hemotort Decapitation\", they take maximum damage, and if any DMG is not offset by Shield, they will be inflicted with \"Hemotort Corruption.\"",
-          "type": "Other",
-          "effectName": "First Offense",
-          "statusName": "First Offense"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3389,6 +3372,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "AttackSign"
           ],
+          "description": "\"%DynamicTargetName\" takes damage when using \"Hemotort Decapitation.\"",
+          "type": "Other",
+          "effectName": "Accomplice",
+          "statusName": "Accomplice",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3407,17 +3394,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "\"%DynamicTargetName\" takes damage when using \"Hemotort Decapitation.\"",
-          "type": "Other",
-          "effectName": "Accomplice",
-          "statusName": "Accomplice"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1611237649\">Enemy_W4_Serpent_01_Charge02</a>[<span class=\"descriptionNumberColor\">Penance Prep</span>]",
+          "description": "Use \"Hemotort Decapitation\" in the next action. This effect is dispelled when this unit becomes Weakness Broken.",
+          "type": "Other",
+          "effectName": "Penance Prep",
+          "statusName": "Penance Prep",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3472,13 +3457,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Use \"Hemotort Decapitation\" in the next action. This effect is dispelled when this unit becomes Weakness Broken.",
-          "type": "Other",
-          "effectName": "Penance Prep",
-          "statusName": "Penance Prep"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3499,9 +3478,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3515,6 +3492,11 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
+          "description": "Will receive <span class=\"descriptionNumberColor\">MDF_Layer</span> instances of Single Target attacks from \"%CasterName.\" If this unit has Shield, when hit by \"%CasterName's\" Single Target attacks, reduces Toughness. This effect is dispelled when \"%CasterName\" is Weakness Broken.",
+          "type": "Other",
+          "effectName": "Pursuit Target",
+          "statusName": "Pursuit Target",
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3587,19 +3569,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Will receive <span class=\"descriptionNumberColor\">MDF_Layer</span> instances of Single Target attacks from \"%CasterName.\" If this unit has Shield, when hit by \"%CasterName's\" Single Target attacks, reduces Toughness. This effect is dispelled when \"%CasterName\" is Weakness Broken.",
-          "type": "Other",
-          "effectName": "Pursuit Target",
-          "statusName": "Pursuit Target",
-          "addStacksPerTrigger": -1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1560904792\">Enemy_W4_Serpent_01_Charge01</a>[<span class=\"descriptionNumberColor\">Pursuer</span>]",
           "stackType": "Replace",
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Will launch <span class=\"descriptionNumberColor\">MDF_Count</span> instance(s) of Single Target attacks on %DynamicTargetName. This effect is dispelled when this unit's Weakness is Broken.",
+          "type": "Other",
+          "effectName": "Pursuer",
+          "statusName": "Pursuer",
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3982,14 +3962,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Will launch <span class=\"descriptionNumberColor\">MDF_Count</span> instance(s) of Single Target attacks on %DynamicTargetName. This effect is dispelled when this unit's Weakness is Broken.",
-          "type": "Other",
-          "effectName": "Pursuer",
-          "statusName": "Pursuer",
-          "addStacksPerTrigger": -1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3999,6 +3972,10 @@ const compositeAbilityObject = {
             "KeepOnDeathrattle",
             "RemoveWhenCasterDead"
           ],
+          "description": "When defeated, reduces the Toughness of \"Ichor Memosprite: Judge of Oblivion.\"",
+          "type": "Other",
+          "effectName": "Execution Squad",
+          "statusName": "Execution Squad",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4128,18 +4105,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When defeated, reduces the Toughness of \"Ichor Memosprite: Judge of Oblivion.\"",
-          "type": "Other",
-          "effectName": "Execution Squad",
-          "statusName": "Execution Squad"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__149951100\">Enemy_W4_Serpent_01_Passive_StanceDamage</a>",
           "stackType": "Multiple",
+          "stackData": [
+            "MDF_StanceDamage"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4162,11 +4136,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_StanceDamage"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4174,6 +4144,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SuperArmorBreak"
           ],
+          "description": "Takes <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span> more DMG. Dispelled when recovering from the Weakness Break state.",
+          "type": "Other",
+          "statusName": "Expedite Verdict",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4255,10 +4228,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Takes <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span> more DMG. Dispelled when recovering from the Weakness Break state.",
-          "type": "Other",
-          "statusName": "Expedite Verdict"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4266,6 +4236,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SuperArmor"
           ],
+          "stackData": [
+            "MDF_AllDamageReduce"
+          ],
+          "description": "DMG received decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. When this unit is Weakness Broken, this effect is dispelled, its action will be further delayed, and deals massive Imaginary DMG to this unit.",
+          "type": "Other",
+          "effectName": "Expedite Verdict",
+          "statusName": "Expedite Verdict",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -4304,19 +4281,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageReduce"
-          ],
-          "latentQueue": [],
-          "description": "DMG received decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. When this unit is Weakness Broken, this effect is dispelled, its action will be further delayed, and deals massive Imaginary DMG to this unit.",
-          "type": "Other",
-          "effectName": "Expedite Verdict",
-          "statusName": "Expedite Verdict"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-501224004\">Enemy_W4_Serpent_01_Passive</a>",
+          "stackData": [
+            "MDF_AllDamageReduce",
+            "MDF_ActionDelay",
+            "MDF_AllDamageTypeTakenRatio",
+            "MDF_DamagePercentage"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4495,14 +4470,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageReduce",
-            "MDF_ActionDelay",
-            "MDF_AllDamageTypeTakenRatio",
-            "MDF_DamagePercentage"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

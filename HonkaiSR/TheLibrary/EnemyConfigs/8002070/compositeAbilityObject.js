@@ -317,9 +317,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -574,9 +572,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -55
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1021,9 +1017,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1046,9 +1040,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1104,9 +1096,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -55
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1212,21 +1202,15 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__956566396\">Enemy_XP_Minion04_02_Fengrao_SelfDamage</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__956566396\">Enemy_XP_Minion04_02_Fengrao_SelfDamage</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1933857712\">Enemy_XP_Minion04_02_Fengrao_Trigger1</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1933857712\">Enemy_XP_Minion04_02_Fengrao_Trigger1</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1608084385\">Enemy_XP_Minion04_02_Fengrao_Trigger</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1608084385\">Enemy_XP_Minion04_02_Fengrao_Trigger</a>"
         }
       ]
     },
@@ -1490,8 +1474,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__606850892\">Enemy_XP_Minion04_03_Introduce</a>[<span class=\"descriptionNumberColor\">C—Cure You</span>]",
-          "stackData": [],
-          "latentQueue": [],
           "description": "When a friendly unit is attacked by a target, Trotter of Abundance consumes its own HP to heal the attacked friendly unit.",
           "type": "Other",
           "effectName": "C—Cure You",
@@ -1587,9 +1569,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -55
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1879,8 +1859,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2118515591\">Enemy_XP_Minion04_02_Introduce</a>[<span class=\"descriptionNumberColor\">T—Taking Revenge</span>]",
-          "stackData": [],
-          "latentQueue": [],
           "description": "When a friendly unit is attacked, Trotter of Destruction will attack all targets. The attack count is equal to the number of the targets attacked.",
           "type": "Other",
           "effectName": "T—Taking Revenge",
@@ -1958,9 +1936,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -55
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2246,9 +2222,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2280,9 +2254,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2418,9 +2390,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2429,9 +2399,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2447,9 +2415,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Pre-Death [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2459,9 +2425,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2471,9 +2435,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2660,9 +2622,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2769,13 +2729,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1146816007\">Enemy_XP_Minion04_02_Fengrao_Minion</a>",
+          "stackData": [
+            "_HealRatio",
+            "_LoseRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3018,18 +2980,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "_HealRatio",
-            "_LoseRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1268901097\">Enemy_XP_Minion04_02_Fengrao_BeHit</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1268901097\">Enemy_XP_Minion04_02_Fengrao_BeHit</a>"
         },
         {
           "name": "Modifier Construction",
@@ -3053,9 +3008,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3065,9 +3018,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3077,9 +3028,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3089,9 +3038,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3111,6 +3058,10 @@ const compositeAbilityObject = {
             "BlockDamageExcludeDot",
             "MuteBreak"
           ],
+          "description": "Each stack of P—Protect You can absorb DMG from 1 incoming hit. P—Protect You stacks are shared across the team.",
+          "type": "Buff",
+          "effectName": "P—Protect You",
+          "statusName": "P—Protect You",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3241,13 +3192,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Each stack of P—Protect You can absorb DMG from 1 incoming hit. P—Protect You stacks are shared across the team.",
-          "type": "Buff",
-          "effectName": "P—Protect You",
-          "statusName": "P—Protect You"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3256,9 +3201,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3347,9 +3290,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

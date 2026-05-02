@@ -26,6 +26,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1306384815\">Relic_321_Sub</a>[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Arcadia of Woven Dreams",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -48,10 +51,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Arcadia of Woven Dreams"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -154,9 +154,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

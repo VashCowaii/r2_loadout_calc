@@ -20,6 +20,13 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "stackData": [
+        "Tingyun_SpeedUP_Ratio"
+      ],
+      "description": "SPD +<span class=\"descriptionNumberColor\">Tingyun_SpeedUP_Ratio</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "Nourished Joviality",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -42,15 +49,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "Tingyun_SpeedUP_Ratio"
-      ],
-      "latentQueue": [],
-      "description": "SPD +<span class=\"descriptionNumberColor\">Tingyun_SpeedUP_Ratio</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "Nourished Joviality"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -60,6 +59,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "SPD +<span class=\"descriptionNumberColor\">MDF_Rank01_SpeedUp_01</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "SPD Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -82,11 +85,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD +<span class=\"descriptionNumberColor\">MDF_Rank01_SpeedUp_01</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "SPD Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -429,15 +428,21 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-888637681\">TingYun_Passive_LeiLing_Eidolon4</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
+      ],
+      "stackData": [
+        "MDF_Passive_DamagePercentage",
+        "MDF_Passive_DamagePercentageSelf",
+        "MDF_Rank01_SpeedUp",
+        "MDF_Rank02_SPAdd",
+        "MDF_Rank04_DamagePercentage",
+        "MDF_AttackDelta"
       ],
       "execute": [
         {
@@ -692,22 +697,20 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Passive_DamagePercentage",
-        "MDF_Passive_DamagePercentageSelf",
-        "MDF_Rank01_SpeedUp",
-        "MDF_Rank02_SPAdd",
-        "MDF_Rank04_DamagePercentage",
-        "MDF_AttackDelta"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-922192919\">TingYun_Passive_LeiLing_Eidolon2</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
+      ],
+      "stackData": [
+        "MDF_Passive_DamagePercentage",
+        "MDF_Passive_DamagePercentageSelf",
+        "MDF_Rank01_SpeedUp",
+        "MDF_Rank02_SPAdd",
+        "MDF_AttackDelta"
       ],
       "execute": [
         {
@@ -961,21 +964,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Passive_DamagePercentage",
-        "MDF_Passive_DamagePercentageSelf",
-        "MDF_Rank01_SpeedUp",
-        "MDF_Rank02_SPAdd",
-        "MDF_AttackDelta"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-972525776\">TingYun_Passive_LeiLing_Eidolon1</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
+      ],
+      "stackData": [
+        "MDF_Passive_DamagePercentage",
+        "MDF_Passive_DamagePercentageSelf",
+        "MDF_Rank01_SpeedUp",
+        "MDF_AttackDelta"
       ],
       "execute": [
         {
@@ -1174,20 +1175,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Passive_DamagePercentage",
-        "MDF_Passive_DamagePercentageSelf",
-        "MDF_Rank01_SpeedUp",
-        "MDF_AttackDelta"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1351488572\">TingYun_Passive_LeiLing</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
+      ],
+      "stackData": [
+        "MDF_Passive_DamagePercentage",
+        "MDF_Passive_DamagePercentageSelf",
+        "MDF_AttackDelta"
       ],
       "execute": [
         {
@@ -1353,13 +1352,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Passive_DamagePercentage",
-        "MDF_Passive_DamagePercentageSelf",
-        "MDF_AttackDelta"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1394,6 +1387,15 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
+      "stackData": [
+        "MDF_AttackDelta",
+        "MDF_Rank01_SpeedUp",
+        "MDF_Rank01_Count"
+      ],
+      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackDelta</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Benediction",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1519,17 +1521,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AttackDelta",
-        "MDF_Rank01_SpeedUp",
-        "MDF_Rank01_Count"
-      ],
-      "latentQueue": [],
-      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackDelta</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Benediction"
+      ]
     }
   ],
   "references": []

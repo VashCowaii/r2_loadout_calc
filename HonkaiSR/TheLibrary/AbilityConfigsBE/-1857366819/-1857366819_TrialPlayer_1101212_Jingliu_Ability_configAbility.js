@@ -20,6 +20,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-800068298\">MTrialPlayer_1101212_Jingliu_Ability</a>",
+      "stackData": [
+        "MDF_ActionTime"
+      ],
       "execute": [
         {
           "eventTrigger": "Action End [Owner]",
@@ -50,11 +53,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ActionTime"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

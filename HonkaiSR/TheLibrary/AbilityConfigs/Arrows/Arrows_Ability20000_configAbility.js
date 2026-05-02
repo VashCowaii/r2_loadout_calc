@@ -25,6 +25,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__396468451\">LC_20000_Main</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+      "description": "CRIT Rate +<span class=\"descriptionNumberColor\">#SkillEquip_P1_CriticalChance</span>.",
+      "type": "Buff",
+      "effectName": "CRIT Rate Boost",
+      "statusName": "CRIT Rate Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -47,13 +51,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "CRIT Rate +<span class=\"descriptionNumberColor\">#SkillEquip_P1_CriticalChance</span>.",
-      "type": "Buff",
-      "effectName": "CRIT Rate Boost",
-      "statusName": "CRIT Rate Boost"
+      ]
     }
   ],
   "isLightcone": true,

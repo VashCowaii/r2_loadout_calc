@@ -375,9 +375,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-721276260\">MissionBattleEvent60012_CharacterForceVisible</a>",
       "modifierFlags": [
         "STAT_ForceActionable"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

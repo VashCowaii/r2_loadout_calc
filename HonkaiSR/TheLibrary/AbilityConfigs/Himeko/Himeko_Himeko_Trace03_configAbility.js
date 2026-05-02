@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__583790079\">Himeko_CriticalChance</a>[<span class=\"descriptionNumberColor\">Benchmark</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "CRIT Rate Boost",
+      "statusName": "Benchmark",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,11 +44,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "CRIT Rate Boost",
-      "statusName": "Benchmark"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -150,9 +150,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

@@ -118,6 +118,17 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1096424693\">Advanced_BlackSwan_Eidolon6</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1750541211\">Advanced_BlackSwan_Eidolon6_SubOnEnemy</a>",
+              "haloStatus": true
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier is Added [Anyone]",
@@ -159,19 +170,6 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}}.[[removeBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1750541211\">Advanced_BlackSwan_Eidolon6_SubOnEnemy</a>",
-              "haloStatus": true
             }
           ]
         }
@@ -291,9 +289,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1266,8 +1262,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1012536598\">Advanced_BlackSwan_Eidolon1</a>",
-          "stackData": [],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -1470,9 +1464,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1698,9 +1690,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1779,8 +1769,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1991493038\">M_Advanced_BlackSwan_Trace01</a>",
-          "stackData": [],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -2122,7 +2110,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-560490418\">M_Advanced_BlackSwan_Maze_StopAddDot</a>",
-          "stackData": [],
           "latentQueue": [
             "MazeSkill_Triggered",
             "_can_continue"
@@ -2131,7 +2118,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1474232906\">M_Advanced_BlackSwan_Maze_Flag</a>",
-          "stackData": [],
           "latentQueue": [
             "MazeSkill_Triggered",
             "_can_continue"
@@ -2224,9 +2210,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -55
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2405,9 +2389,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2450,6 +2432,18 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__969774839\">M_Advanced_BlackSwan_P01_ListenAddPoison</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1015025143\">M_Advanced_BlackSwan_P01_ListenAddPoison_SubOnEnemy</a>",
+              "aliveOnly": "False",
+              "haloStatus": true
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking Modifier Instance [Anyone]",
@@ -2483,20 +2477,6 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1015025143\">M_Advanced_BlackSwan_P01_ListenAddPoison_SubOnEnemy</a>",
-              "aliveOnly": "False",
-              "haloStatus": true
             }
           ]
         }
@@ -2871,9 +2851,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "KeepOnDeathrattle"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2943,34 +2921,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
           "stackData": [
             "MDF_PropertyValue",
             "MDF_Chance"
           ],
-          "latentQueue": [],
           "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. When enemy targets are inflicted with \"Arcana,\" there is a <span class=\"descriptionNumberColor\">MDF_Chance</span> fixed chance to additionally increase the number of \"Arcana\" stacked this time by 1. And the number of \"Arcana\" stacks will not be halved after dealing DMG at the start of the turn.",
           "type": "Debuff",
           "effectName": "Epiphany",
@@ -2998,6 +2952,29 @@ const compositeAbilityObject = {
                   ]
                 }
               }
+            }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
             }
           ]
         },
@@ -3052,6 +3029,22 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "DynamicInjectLoop"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "Basic_DamagePercentage",
+            "ExtraLayer_DamagePercentage",
+            "Spread_DamagePercentage",
+            "ThresholdLayer",
+            "DefenceIgnore"
+          ],
+          "latentQueue": [
+            "MazeSkill_Triggered",
+            "_can_continue"
+          ],
+          "description": "Takes Wind DMG at the start of each turn. While in the \"Arcana\" state, will also be considered as suffering from Wind Shear, Bleed, Burn, and Shock.",
+          "type": "Debuff",
+          "effectName": "Arcana",
+          "statusName": "Arcana",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3739,23 +3732,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "Basic_DamagePercentage",
-            "ExtraLayer_DamagePercentage",
-            "Spread_DamagePercentage",
-            "ThresholdLayer",
-            "DefenceIgnore"
-          ],
-          "latentQueue": [
-            "MazeSkill_Triggered",
-            "_can_continue"
-          ],
-          "description": "Takes Wind DMG at the start of each turn. While in the \"Arcana\" state, will also be considered as suffering from Wind Shear, Bleed, Burn, and Shock.",
-          "type": "Debuff",
-          "effectName": "Arcana",
-          "statusName": "Arcana"
+          ]
         }
       ],
       "references": []

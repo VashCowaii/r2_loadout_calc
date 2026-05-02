@@ -15,6 +15,13 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "latentQueue": [
+        "Ability_IsParasitee"
+      ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_TotalRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Finale: And Then There Were None",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -51,15 +58,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Ability_IsParasitee"
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_TotalRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Finale: And Then There Were None"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -67,6 +66,10 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeResistenceDown</span>.",
+      "type": "Debuff",
+      "effectName": "All-Type RES Reduction",
+      "statusName": "Finale: And Then There Were None",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -90,11 +93,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeResistenceDown</span>.",
-      "type": "Debuff",
-      "effectName": "All-Type RES Reduction",
-      "statusName": "Finale: And Then There Were None"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -103,6 +102,13 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_AttackUp"
+      ],
+      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackUp</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Heed: Swallow Truth Whole",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -126,15 +132,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AttackUp"
-      ],
-      "latentQueue": [],
-      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackUp</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Heed: Swallow Truth Whole"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -142,6 +140,10 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenForShow</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Beware: Venture Not at Full Moon",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -325,11 +327,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenForShow</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Beware: Venture Not at Full Moon"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -337,8 +335,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [],
-      "latentQueue": [],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -384,6 +380,10 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "CRIT DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_CriticalDamage</span>. CRIT DMG dealt by Follow-Up ATK additionally increases by <span class=\"descriptionNumberColor\">MDF_InsertCriticalDamageAdd</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "First Fang",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -433,11 +433,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_CriticalDamage</span>. CRIT DMG dealt by Follow-Up ATK additionally increases by <span class=\"descriptionNumberColor\">MDF_InsertCriticalDamageAdd</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "First Fang"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -449,7 +445,6 @@ const configAbility = {
         "MDF_CriticalDamageTemp",
         "MDF_InsertCriticalDamageAddTemp"
       ],
-      "latentQueue": [],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -541,9 +536,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -714,9 +707,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -725,6 +716,9 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "The current stack count of \"Gluttony\" is <span class=\"descriptionNumberColor\">MDF_LayerForShow</span>. The next enhanced Talent's Follow-Up ATK will additionally deal up to a maximum of <span class=\"descriptionNumberColor\">MDF_ExtraInsertCountForShow</span> instance(s) of DMG.",
+      "type": "Other",
+      "statusName": "Gluttony",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -757,10 +751,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "The current stack count of \"Gluttony\" is <span class=\"descriptionNumberColor\">MDF_LayerForShow</span>. The next enhanced Talent's Follow-Up ATK will additionally deal up to a maximum of <span class=\"descriptionNumberColor\">MDF_ExtraInsertCountForShow</span> instance(s) of DMG.",
-      "type": "Other",
-      "statusName": "Gluttony"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -853,9 +844,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -943,9 +932,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -953,6 +940,9 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
+      ],
+      "latentQueue": [
+        "Ability_SPAddAlready"
       ],
       "execute": [
         {
@@ -974,10 +964,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Ability_SPAddAlready"
       ]
     },
     {
@@ -991,9 +977,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1006,9 +990,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1040,27 +1022,21 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__874485230\">Ashveil_PassiveFlag_Enhance</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1584183733\">Ashveil_PassiveFlag</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1068,7 +1044,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [],
       "latentQueue": [
         "Ability_SPAddAlready"
       ]
@@ -1206,9 +1181,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1343,9 +1316,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1527,9 +1498,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1545,6 +1514,10 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "STAT_DefenceDown"
       ],
+      "description": "While \"Bait\" is on the field, DEF decreases by <span class=\"descriptionNumberColor\">MDF_DefenceDown</span>.",
+      "type": "Debuff",
+      "effectName": "DEF Reduction",
+      "statusName": "Flog: Smite Evil",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1568,11 +1541,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "While \"Bait\" is on the field, DEF decreases by <span class=\"descriptionNumberColor\">MDF_DefenceDown</span>.",
-      "type": "Debuff",
-      "effectName": "DEF Reduction",
-      "statusName": "Flog: Smite Evil"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1583,6 +1552,63 @@ const configAbility = {
         "ListenBattleEventSkill",
         "STAT_AITargetHigherPriority"
       ],
+      "stackData": [
+        "MDF_DefenceDownTemp",
+        "MDF_AllDamageTypeResistenceDownTemp"
+      ],
+      "description": "This target is the \"Bait.\"",
+      "type": "Other",
+      "effectName": "Bait",
+      "statusName": "Bait",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"942921741\">Ashveil_Ability02_Debuff_DefenceDown</a>[<span class=\"descriptionNumberColor\">Flog: Smite Evil</span>]",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_DefenceDown": {
+              "operator": "Variables[0] (MDF_DefenceDownTemp) || RETURN",
+              "displayLines": "MDF_DefenceDownTemp",
+              "constants": [],
+              "variables": [
+                "MDF_DefenceDownTemp"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"544701936\">Ashveil_Eidolon6_AllDamageTypeResistenceDown</a>[<span class=\"descriptionNumberColor\">Finale: And Then There Were None</span>]",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
+          },
+          "valuePerStack": {
+            "MDF_AllDamageTypeResistenceDown": {
+              "operator": "Variables[0] (MDF_AllDamageTypeResistenceDownTemp) || RETURN",
+              "displayLines": "MDF_AllDamageTypeResistenceDownTemp",
+              "constants": [],
+              "variables": [
+                "MDF_AllDamageTypeResistenceDownTemp"
+              ]
+            }
+          }
+        }
+      ],
+      "copySubModifiers": true,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1992,65 +2018,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DefenceDownTemp",
-        "MDF_AllDamageTypeResistenceDownTemp"
-      ],
-      "latentQueue": [],
-      "description": "This target is the \"Bait.\"",
-      "type": "Other",
-      "effectName": "Bait",
-      "statusName": "Bait",
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"942921741\">Ashveil_Ability02_Debuff_DefenceDown</a>[<span class=\"descriptionNumberColor\">Flog: Smite Evil</span>]",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_DefenceDown": {
-              "operator": "Variables[0] (MDF_DefenceDownTemp) || RETURN",
-              "displayLines": "MDF_DefenceDownTemp",
-              "constants": [],
-              "variables": [
-                "MDF_DefenceDownTemp"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"544701936\">Ashveil_Eidolon6_AllDamageTypeResistenceDown</a>[<span class=\"descriptionNumberColor\">Finale: And Then There Were None</span>]",
-          "haloStatus": true,
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 6,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            }
-          },
-          "valuePerStack": {
-            "MDF_AllDamageTypeResistenceDown": {
-              "operator": "Variables[0] (MDF_AllDamageTypeResistenceDownTemp) || RETURN",
-              "displayLines": "MDF_AllDamageTypeResistenceDownTemp",
-              "constants": [],
-              "variables": [
-                "MDF_AllDamageTypeResistenceDownTemp"
-              ]
-            }
-          }
-        }
-      ],
-      "copySubModifiers": true
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2139,7 +2107,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__441988386\">Ashveil_SpecialMarkAdder</a>",
-      "stackData": [],
       "latentQueue": [
         "Ability_IsParasitee"
       ],

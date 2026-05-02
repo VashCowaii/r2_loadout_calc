@@ -43,6 +43,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1248014501\">LC_23036_Effect_Servant</a>[<span class=\"descriptionNumberColor\">Brocade</span>]",
           "stackType": "Replace",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">_CritDamageRatioTotal</span>.",
+          "type": "Buff",
+          "statusName": "Brocade",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -122,15 +125,53 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">_CritDamageRatioTotal</span>.",
-          "type": "Buff",
-          "statusName": "Brocade"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2056335473\">LC_23036_Effect</a>[<span class=\"descriptionNumberColor\">Brocade</span>]",
           "stackType": "Replace",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">_CritDamageRatioTotal</span>.",
+          "type": "Buff",
+          "effectName": "Brocade",
+          "statusName": "Brocade",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1248014501\">LC_23036_Effect_Servant</a>[<span class=\"descriptionNumberColor\">Brocade</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "_CritDamageRatioTotal": {
+                  "operator": "Variables[0] (_CritDamageRatioTotal) || RETURN",
+                  "displayLines": "_CritDamageRatioTotal",
+                  "constants": [],
+                  "variables": [
+                    "_CritDamageRatioTotal"
+                  ]
+                },
+                "_NormalDamageRatioTotal": {
+                  "operator": "Variables[0] (_NormalDamageRatioTotal) || RETURN",
+                  "displayLines": "_NormalDamageRatioTotal",
+                  "constants": [],
+                  "variables": [
+                    "_NormalDamageRatioTotal"
+                  ]
+                },
+                "_MaxLayerSwitch2": {
+                  "operator": "Variables[0] (_MaxLayerSwitch2) || RETURN",
+                  "displayLines": "_MaxLayerSwitch2",
+                  "constants": [],
+                  "variables": [
+                    "_MaxLayerSwitch2"
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -305,53 +346,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">_CritDamageRatioTotal</span>.",
-          "type": "Buff",
-          "effectName": "Brocade",
-          "statusName": "Brocade",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Memosprite}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1248014501\">LC_23036_Effect_Servant</a>[<span class=\"descriptionNumberColor\">Brocade</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "_CritDamageRatioTotal": {
-                  "operator": "Variables[0] (_CritDamageRatioTotal) || RETURN",
-                  "displayLines": "_CritDamageRatioTotal",
-                  "constants": [],
-                  "variables": [
-                    "_CritDamageRatioTotal"
-                  ]
-                },
-                "_NormalDamageRatioTotal": {
-                  "operator": "Variables[0] (_NormalDamageRatioTotal) || RETURN",
-                  "displayLines": "_NormalDamageRatioTotal",
-                  "constants": [],
-                  "variables": [
-                    "_NormalDamageRatioTotal"
-                  ]
-                },
-                "_MaxLayerSwitch2": {
-                  "operator": "Variables[0] (_MaxLayerSwitch2) || RETURN",
-                  "displayLines": "_MaxLayerSwitch2",
-                  "constants": [],
-                  "variables": [
-                    "_MaxLayerSwitch2"
-                  ]
-                }
-              }
-            }
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__214727884\">LC_23036_CriticalDamage</a>",
           "stackType": "Replace",
+          "stackData": [
+            "_CritDamageRatio"
+          ],
+          "latentQueue": [
+            "_MaxLayerSwitch"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -374,17 +380,22 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "_CritDamageRatio"
-          ],
-          "latentQueue": [
-            "_MaxLayerSwitch"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-768418277\">LC_23036_Listen</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}} + {{Caster's Memosprite}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"214727884\">LC_23036_CriticalDamage</a>",
+              "haloStatus": true
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Anyone]",
@@ -475,17 +486,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}} + {{Caster's Memosprite}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"214727884\">LC_23036_CriticalDamage</a>",
-              "haloStatus": true
-            }
           ]
         },
         {
@@ -534,9 +534,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Entity Created [Anyone]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

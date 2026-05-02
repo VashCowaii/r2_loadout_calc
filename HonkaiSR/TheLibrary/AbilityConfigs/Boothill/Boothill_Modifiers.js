@@ -11,6 +11,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__827570007\">Boothill_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
+      "description": "Milestonemonger's effect cannot be triggered yet.",
+      "type": "Other",
+      "statusName": "Milestonemonger",
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -18,15 +21,15 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "description": "Milestonemonger's effect cannot be triggered yet.",
-      "type": "Other",
-      "statusName": "Milestonemonger"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__455996650\">Boothill_Eidolon2_Enhance</a>[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Buff",
+      "statusName": "Milestonemonger",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -49,15 +52,26 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Buff",
-      "statusName": "Milestonemonger"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1894494257\">Boothill_SelfModification</a>[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_MaxLayer",
+        "MDF_StanceAdded",
+        "MDF_GainFromPassive"
+      ],
+      "latentQueue": [
+        "Avatar_1315_Enhance"
+      ],
+      "description": "Every stack increases the Toughness Reduction of the Enhanced Basic Attack by <span class=\"descriptionNumberColor\">MDF_StanceAdded</span>. If the target is Weakness Broken while the Enhanced Basic ATK is being used, deals additional Physical Break DMG based on the number of Pocket Trickshot stacks. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+      "type": "Other",
+      "effectName": "Pocket Trickshot",
+      "statusName": "Pocket Trickshot",
+      "stackLimit": 4,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -230,21 +244,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_MaxLayer",
-        "MDF_StanceAdded",
-        "MDF_GainFromPassive"
-      ],
-      "latentQueue": [
-        "Avatar_1315_Enhance"
-      ],
-      "description": "Every stack increases the Toughness Reduction of the Enhanced Basic Attack by <span class=\"descriptionNumberColor\">MDF_StanceAdded</span>. If the target is Weakness Broken while the Enhanced Basic ATK is being used, deals additional Physical Break DMG based on the number of Pocket Trickshot stacks. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-      "type": "Other",
-      "effectName": "Pocket Trickshot",
-      "statusName": "Pocket Trickshot",
-      "stackLimit": 4,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -253,6 +253,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AttachWeakness"
       ],
+      "description": "Implanted with extra Physical Weakness.",
+      "type": "Debuff",
+      "effectName": "Implant Weakness: Physical",
+      "statusName": "Extra Physical Weakness",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -270,20 +274,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Implanted with extra Physical Weakness.",
-      "type": "Debuff",
-      "effectName": "Implant Weakness: Physical",
-      "statusName": "Extra Physical Weakness"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__837506667\">M_Boothill_AutoWinDuelTag</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "stackLimit": 999,
       "addStacksPerTrigger": 1
     },
@@ -471,6 +467,13 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "KeepOnDeathrattle"
       ],
+      "stackData": [
+        "MDF_PropertyRatio"
+      ],
+      "description": "This is considered a Taunt state and only %CasterName can be selected as the attack target. Increases DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> when attacked by %CasterName.",
+      "type": "Debuff",
+      "effectName": "Standoff",
+      "statusName": "Standoff",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -705,15 +708,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "This is considered a Taunt state and only %CasterName can be selected as the attack target. Increases DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> when attacked by %CasterName.",
-      "type": "Debuff",
-      "effectName": "Standoff",
-      "statusName": "Standoff"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -723,6 +718,14 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
+      "stackData": [
+        "MDF_PropertyRatio"
+      ],
+      "description": "When getting attacked by the target in the Standoff, increases the DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. The Basic ATK becomes Enhanced.",
+      "type": "Other",
+      "effectName": "Standoff",
+      "statusName": "Standoff",
+      "duration": 2,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1153,16 +1156,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "When getting attacked by the target in the Standoff, increases the DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. The Basic ATK becomes Enhanced.",
-      "type": "Other",
-      "effectName": "Standoff",
-      "statusName": "Standoff",
-      "duration": 2
+      ]
     }
   ],
   "references": []

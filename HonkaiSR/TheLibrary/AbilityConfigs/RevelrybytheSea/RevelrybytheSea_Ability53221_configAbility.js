@@ -18,6 +18,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__294149172\">Relic_322_Sub</a>[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases DoT dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Revelry by the Sea",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -45,10 +48,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DoT dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Revelry by the Sea"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -242,9 +242,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

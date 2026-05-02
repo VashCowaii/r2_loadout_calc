@@ -398,6 +398,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1710761460\">Kafka_PassiveDotDamage_Eidolon1</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_DotRatio"
+      ],
+      "description": "DoT taken +<span class=\"descriptionNumberColor\">MDF_DotRatio</span>.",
+      "type": "Debuff",
+      "effectName": "DoT Vulnerability",
+      "statusName": "DoT Vulnerability",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -429,15 +436,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DotRatio"
-      ],
-      "latentQueue": [],
-      "description": "DoT taken +<span class=\"descriptionNumberColor\">MDF_DotRatio</span>.",
-      "type": "Debuff",
-      "effectName": "DoT Vulnerability",
-      "statusName": "DoT Vulnerability"
+      ]
     }
   ],
   "targetObjectData": {

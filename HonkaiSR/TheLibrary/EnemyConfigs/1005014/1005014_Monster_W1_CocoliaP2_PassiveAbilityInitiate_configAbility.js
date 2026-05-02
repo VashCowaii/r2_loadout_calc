@@ -123,6 +123,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1894460121\">Enemy_W1_CocoliaP2_TauntResistanceDown</a>",
+      "latentQueue": [
+        "Cocolia_AICounter",
+        "Cocolia_Tips_Taunt"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -138,11 +142,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Cocolia_AICounter",
-        "Cocolia_Tips_Taunt"
       ]
     },
     {
@@ -255,9 +254,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -267,6 +264,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__964527705\">Enemy_W1_CocoliaP2_PartController</a>",
       "counter": 1,
+      "latentQueue": [
+        "Cocolia_AICounter",
+        "Cocolia_Tips_Taunt"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -378,11 +379,6 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Cocolia_AICounter",
-        "Cocolia_Tips_Taunt"
       ]
     }
   ]

@@ -36,39 +36,10 @@ const configAbility = {
         "EnduranceLogicOnly",
         500
       ],
-      "execute": [
-        {
-          "eventTrigger": "When Modifier Destroyed/Removed",
-          "execute": [
-            {
-              "name": "Change Character UI",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Memosprite}}"
-              },
-              "icon": "11413.png"
-            }
-          ]
-        },
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier",
-          "execute": [
-            {
-              "name": "Change Character UI",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Memosprite}}"
-              },
-              "icon": "11413_02.png"
-            }
-          ]
-        }
-      ],
       "stackData": [
         "MDF_PropertyValue",
         "MDF_PropertyValue_2"
       ],
-      "latentQueue": [],
       "description": "This unit and their memosprite are immune to Crowd Control debuffs, and the DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "Darkest Riddle",
@@ -123,6 +94,34 @@ const configAbility = {
             }
           }
         }
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Change Character UI",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
+              "icon": "11413.png"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Change Character UI",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
+              "icon": "11413_02.png"
+            }
+          ]
+        }
       ]
     },
     {
@@ -131,6 +130,13 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Darkest Riddle",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -153,19 +159,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Darkest Riddle"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-967456061\">Evernight_UltraMode_Energy_0</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+      "description": "When Evernight's turn begins, she exits the \"Darkest Riddle\" state.",
+      "type": "Other",
+      "statusName": "Darkest Riddle",
       "execute": [
         {
           "eventTrigger": "Turn Start [Anyone]",
@@ -236,10 +237,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "When Evernight's turn begins, she exits the \"Darkest Riddle\" state.",
-      "type": "Other",
-      "statusName": "Darkest Riddle"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -249,6 +247,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
       "counter": 1,
+      "description": "The memosprite Evey consumes 1 Charge after it uses \"Dream, Dissolving, as Dew.\" When Evernight's turn begins, if no Charge remains, she exits the \"Darkest Riddle\" state.",
+      "type": "Other",
+      "statusName": "Darkest Riddle",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -320,12 +321,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "The memosprite Evey consumes 1 Charge after it uses \"Dream, Dissolving, as Dew.\" When Evernight's turn begins, if no Charge remains, she exits the \"Darkest Riddle\" state.",
-      "type": "Other",
-      "statusName": "Darkest Riddle"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -353,9 +349,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -367,18 +361,14 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-895132658\">Evernight_ServantTarget</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -424,6 +414,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__778280081\">Evernight_UltraMode_Bonus</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -446,11 +439,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -459,6 +448,9 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Kindle the Morn, Drop the Rain",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -481,10 +473,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Kindle the Morn, Drop the Rain"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -493,6 +482,9 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Day Gently Slips",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -571,16 +563,78 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Day Gently Slips"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1894879081\">Evernight_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "stackData": [
+        "MDF_Conv",
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": [
+        "_S02_Char_Count"
+      ],
+      "description": "While this effect persists, CRIT DMG increases for all ally memosprites.",
+      "type": "Other",
+      "statusName": "Day Gently Slips",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_Conv": {
+              "operator": "Variables[0] (MDF_CritBase) || RETURN",
+              "displayLines": "MDF_CritBase",
+              "constants": [],
+              "variables": [
+                "MDF_CritBase"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"645822293\">Evernight_Ability02_Bonus_PointB3</a>[<span class=\"descriptionNumberColor\">Kindle the Morn, Drop the Rain</span>]",
+          "haloStatus": true,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Trace Activated",
+                "conditionList": "Kindle the Morn, Drop the Rain"
+              },
+              {
+                "name": "Compare: Variable",
+                "value1": "MDF_PropertyValue",
+                "compareType": ">",
+                "value2": 0
+              }
+            ]
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+              "displayLines": "MDF_PropertyValue",
+              "constants": [],
+              "variables": [
+                "MDF_PropertyValue"
+              ]
+            }
+          }
+        }
+      ],
       "variableValueChange": [
         {
           "name": "Variable Value Changes",
@@ -782,77 +836,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Conv",
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "_S02_Char_Count"
-      ],
-      "description": "While this effect persists, CRIT DMG increases for all ally memosprites.",
-      "type": "Other",
-      "statusName": "Day Gently Slips",
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_Conv": {
-              "operator": "Variables[0] (MDF_CritBase) || RETURN",
-              "displayLines": "MDF_CritBase",
-              "constants": [],
-              "variables": [
-                "MDF_CritBase"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"645822293\">Evernight_Ability02_Bonus_PointB3</a>[<span class=\"descriptionNumberColor\">Kindle the Morn, Drop the Rain</span>]",
-          "haloStatus": true,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Trace Activated",
-                "conditionList": "Kindle the Morn, Drop the Rain"
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "MDF_PropertyValue",
-                "compareType": ">",
-                "value2": 0
-              }
-            ]
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-              "displayLines": "MDF_PropertyValue",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue"
-              ]
-            }
-          }
-        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Listen Up, the Slumber Speaks Soft",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -875,19 +870,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Listen Up, the Slumber Speaks Soft"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "With Me, This Night",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -910,11 +902,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "With Me, This Night"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -988,6 +976,16 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_PropertyValue_1",
+        "MDF_PropertyValue_2"
+      ],
+      "latentQueue": [
+        "_Evernight_PL_Layer"
+      ],
+      "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Wake Up, the Tomorrow is Yours",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1053,17 +1051,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue_1",
-        "MDF_PropertyValue_2"
-      ],
-      "latentQueue": [
-        "_Evernight_PL_Layer"
-      ],
-      "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Wake Up, the Tomorrow is Yours"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1072,6 +1060,15 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": [
+        "_Evernight_PL_Layer"
+      ],
+      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Like This, Always",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1094,22 +1091,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "_Evernight_PL_Layer"
-      ],
-      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Like This, Always"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2043260870\">Evernight_HPChange</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
+      ],
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": [
+        "_Evernight_PL_Layer"
       ],
       "execute": [
         {
@@ -1435,12 +1429,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "_Evernight_PL_Layer"
       ]
     },
     {
@@ -1449,6 +1437,12 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "CRIT Rate increases <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Dark the Night, Still the Moon",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1471,20 +1465,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "CRIT Rate increases <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Dark the Night, Still the Moon"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1910251570\">Evernight_SummonServantPreshow</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -1517,6 +1502,10 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "Dark the Night, Still the Moon",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1539,11 +1528,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "Dark the Night, Still the Moon"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1632,6 +1617,48 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__557640561\">Evernight_PointB1_Aura</a>",
+      "stackData": [
+        "MDF_PropertyValue",
+        "MDF_Cost",
+        "MDF_LifeTime"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Memosprite}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"720331211\">Evernight_PointB1_Servant</a>",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+              "displayLines": "MDF_PropertyValue",
+              "constants": [],
+              "variables": [
+                "MDF_PropertyValue"
+              ]
+            },
+            "MDF_Cost": {
+              "operator": "Variables[0] (MDF_Cost) || RETURN",
+              "displayLines": "MDF_Cost",
+              "constants": [],
+              "variables": [
+                "MDF_Cost"
+              ]
+            },
+            "MDF_LifeTime": {
+              "operator": "Variables[0] (MDF_LifeTime) || RETURN",
+              "displayLines": "MDF_LifeTime",
+              "constants": [],
+              "variables": [
+                "MDF_LifeTime"
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -1707,49 +1734,6 @@ const configAbility = {
               }
             }
           ]
-        }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_Cost",
-        "MDF_LifeTime"
-      ],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Memosprite}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"720331211\">Evernight_PointB1_Servant</a>",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-              "displayLines": "MDF_PropertyValue",
-              "constants": [],
-              "variables": [
-                "MDF_PropertyValue"
-              ]
-            },
-            "MDF_Cost": {
-              "operator": "Variables[0] (MDF_Cost) || RETURN",
-              "displayLines": "MDF_Cost",
-              "constants": [],
-              "variables": [
-                "MDF_Cost"
-              ]
-            },
-            "MDF_LifeTime": {
-              "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-              "displayLines": "MDF_LifeTime",
-              "constants": [],
-              "variables": [
-                "MDF_LifeTime"
-              ]
-            }
-          }
         }
       ]
     }

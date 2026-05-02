@@ -508,9 +508,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -611,9 +609,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -644,9 +640,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -662,9 +656,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -698,6 +690,10 @@ const compositeAbilityObject = {
             "STAT_CTRL",
             "STAT_Stun_Effect"
           ],
+          "description": "Action delayed. Cannot take actions for a certain number of turns.",
+          "type": "Debuff",
+          "effectName": "Strong Reverberation",
+          "statusName": "Strong Reverberation",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -777,15 +773,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Action delayed. Cannot take actions for a certain number of turns.",
-          "type": "Debuff",
-          "effectName": "Strong Reverberation",
-          "statusName": "Strong Reverberation"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__773544799\">Standard_Unstable_Monster</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_Shake_ActionDelayRatio"
+          ],
+          "description": "After receiving an attack, enters \"Strong Reverberation,\" then dispels \"Reverberation.\"",
+          "type": "Debuff",
+          "effectName": "Reverberation",
+          "statusName": "Reverberation",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -816,16 +816,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_Shake_ActionDelayRatio"
-          ],
-          "latentQueue": [],
-          "description": "After receiving an attack, enters \"Strong Reverberation,\" then dispels \"Reverberation.\"",
-          "type": "Debuff",
-          "effectName": "Reverberation",
-          "statusName": "Reverberation"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -880,9 +871,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

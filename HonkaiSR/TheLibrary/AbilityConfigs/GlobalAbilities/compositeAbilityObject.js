@@ -32,6 +32,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
           "stackType": "ReplaceByCaster",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -48,8 +49,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -185,9 +185,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -259,9 +257,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -355,9 +351,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -422,6 +416,14 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1136407126\">Standard_Departed_Sub</a>",
           "stackType": "ReplaceByCaster",
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
+            "casterFilter": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
+          },
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -449,15 +451,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
-            "casterFilter": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            }
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -465,6 +459,19 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "Stealth"
+          ],
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}.[[addBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>",
+              "aliveOnly": "False",
+              "haloStatus": true,
+              "includeBattleEvent": true
+            }
           ],
           "execute": [
             {
@@ -591,19 +598,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}.[[addBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>",
-              "aliveOnly": "False",
-              "haloStatus": true,
-              "includeBattleEvent": true
-            }
           ]
         },
         {
@@ -636,9 +630,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1327,14 +1319,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-205377483\">Local_SPAdd</a>",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_AddValue"
+          ],
           "execute": [
             {
               "eventTrigger": "Got a Kill [Owner]",
@@ -1372,11 +1365,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AddValue"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

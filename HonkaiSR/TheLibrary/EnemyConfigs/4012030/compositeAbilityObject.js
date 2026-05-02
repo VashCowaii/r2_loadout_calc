@@ -835,7 +835,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1417353432\">Enemy_W4_Shooter_AttackMark</a>",
-          "stackData": [],
           "latentQueue": [
             "CurrentTarget"
           ]
@@ -1583,9 +1582,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1652,9 +1649,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

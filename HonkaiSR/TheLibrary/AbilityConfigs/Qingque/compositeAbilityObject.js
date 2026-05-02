@@ -507,9 +507,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -3157,6 +3155,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__134656141\">QingQue_Eidolon4_ATK</a>[<span class=\"descriptionNumberColor\">Self-Sufficer</span>]",
+          "latentQueue": [
+            "QingQue_BPCoolDown"
+          ],
+          "description": "Launches 1 Follow-Up ATK immediately after using Basic ATK or Enhanced Basic ATK on an enemy, dealing Quantum DMG equal to 100% of Basic ATK DMG or Enhanced Basic ATK DMG.",
+          "type": "Buff",
+          "statusName": "Self-Sufficer",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -3281,14 +3285,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "QingQue_BPCoolDown"
-          ],
-          "description": "Launches 1 Follow-Up ATK immediately after using Basic ATK or Enhanced Basic ATK on an enemy, dealing Quantum DMG equal to 100% of Basic ATK DMG or Enhanced Basic ATK DMG.",
-          "type": "Buff",
-          "statusName": "Self-Sufficer"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3297,6 +3294,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackData": [
+            "MDF_SpeedUp"
+          ],
+          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_SpeedUp</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3319,32 +3323,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedUp"
-          ],
-          "latentQueue": [],
-          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_SpeedUp</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1715908114\">QingQue_Passive_Hu_01</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1715908114\">QingQue_Passive_Hu_01</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-202055066\">QingQue_Passive_Hu_Flag_Yu</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-202055066\">QingQue_Passive_Hu_Flag_Yu</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__757701155\">QingQue_Passive_Hu_Flag_Tiao</a>",
-          "stackData": [],
           "latentQueue": [
             "QingQue_BPCoolDown"
           ]
@@ -3352,7 +3343,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1600165622\">QingQue_Passive_Hu_Flag_Tong</a>",
-          "stackData": [],
           "latentQueue": [
             "QingQue_BPCoolDown"
           ]
@@ -3360,16 +3350,13 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-797865006\">QingQue_Passive_Hu_Flag_Wan</a>",
-          "stackData": [],
           "latentQueue": [
             "QingQue_BPCoolDown"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1539822909\">QingQue_Passive_Hu_Flag</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1539822909\">QingQue_Passive_Hu_Flag</a>"
         },
         {
           "name": "Modifier Construction",
@@ -3564,6 +3551,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1424511139\">QingQue_PassiveCount</a>",
+          "stackData": [
+            "MDF_PropertyValue01"
+          ],
+          "latentQueue": [
+            "QingQue_BPCoolDown"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -3932,17 +3925,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue01"
-          ],
-          "latentQueue": [
-            "QingQue_BPCoolDown"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1998273394\">QingQue_PassiveCount_Teammate</a>",
+          "stackData": [
+            "QingQue_CardCount_Teammate"
+          ],
+          "latentQueue": [
+            "QingQue_BPCoolDown"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -3981,18 +3974,19 @@ const compositeAbilityObject = {
                 "Refresh QingQue Bar-State"
               ]
             }
-          ],
-          "stackData": [
-            "QingQue_CardCount_Teammate"
-          ],
-          "latentQueue": [
-            "QingQue_BPCoolDown"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1861987598\">QingQue_PassiveCount_QingqueSelf</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "SkillRank_Rank02_P1_SPAdd"
+          ],
+          "latentQueue": [
+            "QingQue_CardCount_Teammate",
+            "QingQue_BPCoolDown"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5289,19 +5283,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "SkillRank_Rank02_P1_SPAdd"
-          ],
-          "latentQueue": [
-            "QingQue_CardCount_Teammate",
-            "QingQue_BPCoolDown"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1763556388\">QingQue_Passive_Hu</a>[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "QingQue_BPCoolDown"
+          ],
+          "description": "Basic ATK is Enhanced and increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Hidden Hand",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5337,21 +5333,23 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "QingQue_BPCoolDown"
-          ],
-          "description": "Basic ATK is Enhanced and increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Hidden Hand"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-954959718\">QingQue_BPAbility_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_DamageAddedRatio"
+          ],
+          "latentQueue": [
+            "QingQue_BPCoolDown"
+          ],
+          "description": "Each stack increases DMG by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>, up to 4 stacks.",
+          "type": "Buff",
+          "statusName": "DMG Boost",
+          "stackLimit": 4,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -5399,38 +5397,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageAddedRatio"
-          ],
-          "latentQueue": [
-            "QingQue_BPCoolDown"
-          ],
-          "description": "Each stack increases DMG by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>, up to 4 stacks.",
-          "type": "Buff",
-          "statusName": "DMG Boost",
-          "stackLimit": 4,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__823901022\">QingQue_Ability11PreShowModifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"823901022\">QingQue_Ability11PreShowModifier</a>"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
           "latentQueue": [
             "QingQue_BPCoolDown"
           ],
@@ -5459,7 +5430,22 @@ const compositeAbilityObject = {
               "name": "Delay/Advance Preview",
               "previewValue": "0.1(SPD Change)"
             }
-          }
+          },
+          "execute": [
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"823901022\">QingQue_Ability11PreShowModifier</a>"
+                }
+              ]
+            }
+          ]
         }
       ],
       "references": []

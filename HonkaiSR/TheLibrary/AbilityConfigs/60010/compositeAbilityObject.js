@@ -98,6 +98,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1307250275\">MissionBattleEvent60010_AutoUseUltraAbility</a>",
+          "latentQueue": [
+            "BattleEvent_BlackSwan"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -111,10 +114,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "BattleEvent_BlackSwan"
           ]
         },
         {
@@ -122,6 +121,12 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__2037521246\">MissionBattleEvent60010_Charge</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
+          ],
+          "stackData": [
+            "MDF_SPValue"
+          ],
+          "latentQueue": [
+            "BattleEvent_BlackSwan"
           ],
           "execute": [
             {
@@ -171,12 +176,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SPValue"
-          ],
-          "latentQueue": [
-            "BattleEvent_BlackSwan"
           ]
         },
         {
@@ -185,6 +184,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "BlockDamage",
             "Stealth"
+          ],
+          "latentQueue": [
+            "BattleEvent_BlackSwan"
           ],
           "execute": [
             {
@@ -224,15 +226,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "BattleEvent_BlackSwan"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__768878434\">Death_BattleEventAttackUPByMaxHP</a>",
+          "latentQueue": [
+            "BattleEvent_BlackSwan"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -274,15 +275,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "BattleEvent_BlackSwan"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1638411891\">Death_BattleEventShow</a>",
+          "latentQueue": [
+            "BattleEvent_BlackSwan"
+          ],
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Anyone]",
@@ -476,10 +476,6 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Ability Use [Anyone]: End"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "BattleEvent_BlackSwan"
           ]
         }
       ],

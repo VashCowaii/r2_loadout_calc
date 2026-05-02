@@ -682,9 +682,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1360,9 +1358,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1603,23 +1599,19 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-439718905\">Enemy_W4_DawnsEye_01_Ability03_Charge</a>[<span class=\"descriptionNumberColor\">The Dark Tides Cometh</span>]",
+          "description": "The next attack will inflict \"Unmaking Ashes: Godsfall\" on all allies.",
+          "type": "Other",
+          "statusName": "The Dark Tides Cometh",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The next attack will inflict \"Unmaking Ashes: Godsfall\" on all allies.",
-          "type": "Other",
-          "statusName": "The Dark Tides Cometh"
+          ]
         }
       ]
     },
@@ -2866,9 +2858,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3076,9 +3066,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3265,9 +3253,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3299,9 +3285,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3313,9 +3297,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3608,9 +3590,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3672,9 +3652,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3751,9 +3729,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Leave Battle"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3789,9 +3765,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1639987176\">Enemy_W4_DawnsEyePart_06_MuteSpeed</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4467,6 +4441,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-105944791\">Enemy_W4_DawnsEye_01_SoundController</a>",
+          "latentQueue": [
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Enter Battle"
@@ -4474,10 +4451,6 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Leave Battle"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
@@ -4617,6 +4590,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1742396906\">Modifier_Monster_W4_DawnsEye_01_B_StoryMusic</a>",
+          "latentQueue": [
+            "_IsStoryTri",
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Enter Battle"
@@ -4624,11 +4601,6 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Leave Battle"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_IsStoryTri",
-            "AIFlag"
           ]
         },
         {
@@ -4639,6 +4611,12 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "KeepOnDeathrattle"
           ],
+          "latentQueue": [
+            "AIFlag"
+          ],
+          "description": "When receiving DMG, \"Sublime, Radiant, Avatar of the Sky\" loses an equal amount of HP.",
+          "type": "Other",
+          "statusName": "All As One",
           "execute": [
             {
               "eventTrigger": "When Put in Deathstate Limbo",
@@ -5400,18 +5378,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
-          ],
-          "description": "When receiving DMG, \"Sublime, Radiant, Avatar of the Sky\" loses an equal amount of HP.",
-          "type": "Other",
-          "statusName": "All As One"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1145840580\">Modifier_Monster_W4_DawnsEye_01_B_HardLockHp</a>",
+          "stackData": [
+            "MDF_LockHp"
+          ],
+          "latentQueue": [
+            "_IsStoryTri",
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5535,13 +5513,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_LockHp"
-          ],
-          "latentQueue": [
-            "_IsStoryTri",
-            "AIFlag"
           ]
         },
         {
@@ -5640,6 +5611,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__196132555\">Enemy_W4_DawnsEye_01_MainStoryLockHP</a>",
+          "stackData": [
+            "MDF_DeathSPAdd"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5673,29 +5647,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DeathSPAdd"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-508563078\">Enemy_W4_DawnsEye_01_MainStoryDisableAction</a>",
           "modifierFlags": [
             "DisableAction"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-633741031\">Enemy_W4_DawnsEye_01_HyacineStun</a>",
           "modifierFlags": [
             "STAT_CTRL_UnOperable"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5710,14 +5676,18 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__428140510\">Enemy_W4_DawnsEye_01_BESpeed</a>",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_Speed"
+          ],
+          "latentQueue": [
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5740,12 +5710,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Speed"
-          ],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
@@ -5800,9 +5764,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5821,6 +5783,13 @@ const compositeAbilityObject = {
             "STAT_CTRL_UnOperable",
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_DeathSPAdd"
+          ],
+          "description": "Cannot be selected, cannot take action.",
+          "type": "Debuff",
+          "effectName": "Tide-Corrosion",
+          "statusName": "Tide-Corrosion",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5976,15 +5945,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DeathSPAdd"
-          ],
-          "latentQueue": [],
-          "description": "Cannot be selected, cannot take action.",
-          "type": "Debuff",
-          "effectName": "Tide-Corrosion",
-          "statusName": "Tide-Corrosion"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6000,6 +5961,11 @@ const compositeAbilityObject = {
             "CanBeAddedToServant",
             "CanListenServantCallback"
           ],
+          "useEntitySnapshot": true,
+          "description": "Restores this unit's HP by <span class=\"descriptionNumberColor\">MDF_HPDelta</span> at the start of every turn, and increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddRatio</span>.",
+          "type": "Buff",
+          "effectName": "Eagerness",
+          "statusName": "Eagerness",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -6043,12 +6009,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "Restores this unit's HP by <span class=\"descriptionNumberColor\">MDF_HPDelta</span> at the start of every turn, and increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddRatio</span>.",
-          "type": "Buff",
-          "effectName": "Eagerness",
-          "statusName": "Eagerness"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6104,6 +6065,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "CanBeAddedToServant"
           ],
+          "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_HPDelta</span>.",
+          "type": "Buff",
+          "effectName": "Flame-Chase",
+          "statusName": "Flame-Chase",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -6167,11 +6132,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_HPDelta</span>.",
-          "type": "Buff",
-          "effectName": "Flame-Chase",
-          "statusName": "Flame-Chase"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6312,9 +6273,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6356,6 +6315,14 @@ const compositeAbilityObject = {
             "CanBeAddedToServant",
             "RemoveWhenCasterDead"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_DamageValue"
+          ],
+          "description": "Maximum Restorable HP decreases by <span class=\"descriptionNumberColor\">MDF_DamageValueFinal</span>.",
+          "type": "Debuff",
+          "effectName": "Rot",
+          "statusName": "Rot",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6561,16 +6528,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -50
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_DamageValue"
-          ],
-          "latentQueue": [],
-          "description": "Maximum Restorable HP decreases by <span class=\"descriptionNumberColor\">MDF_DamageValueFinal</span>.",
-          "type": "Debuff",
-          "effectName": "Rot",
-          "statusName": "Rot"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6578,6 +6536,13 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "MDF_TotalDamageRatioAdd",
+            "MDF_TotalDamageRatioCut"
+          ],
+          "latentQueue": [
+            "AIFlag"
           ],
           "execute": [
             {
@@ -6637,13 +6602,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_TotalDamageRatioAdd",
-            "MDF_TotalDamageRatioCut"
-          ],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
@@ -6665,6 +6623,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__74735154\">Modifier_Monster_W4_DawnsEye_WheaterRognarokTrueDamage</a>[<span class=\"descriptionNumberColor\">Skygash</span>]",
+          "description": "After targets attack, deals True DMG based on \"Black Tide Sync Rate.\" This DMG is \"Non-fatal.\"",
+          "type": "Buff",
+          "statusName": "Skygash",
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -6782,15 +6743,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After targets attack, deals True DMG based on \"Black Tide Sync Rate.\" This DMG is \"Non-fatal.\"",
-          "type": "Buff",
-          "statusName": "Skygash"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2100215981\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamage</a>[<span class=\"descriptionNumberColor\">Black Tide Sync Rate</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_TotalDamageRatioAdd"
+          ],
+          "description": "The current Charge ratio of \"Eye of Twilight\" is <span class=\"descriptionNumberColor\">MDF_ChargePercentage</span>.",
+          "type": "Other",
+          "statusName": "Black Tide Sync Rate",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6883,19 +6847,80 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_TotalDamageRatioAdd"
-          ],
-          "latentQueue": [],
-          "description": "The current Charge ratio of \"Eye of Twilight\" is <span class=\"descriptionNumberColor\">MDF_ChargePercentage</span>.",
-          "type": "Other",
-          "statusName": "Black Tide Sync Rate"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1313380500\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarok</a>",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_DamageValue"
+          ],
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[Remove Backup Memosprite]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1789818614\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokSub</a>[<span class=\"descriptionNumberColor\">Rot</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_RecoverRatioAttack": {
+                  "operator": "Variables[0] (MDF_DirtyHPBase) || RETURN",
+                  "displayLines": "MDF_DirtyHPBase",
+                  "constants": [],
+                  "variables": [
+                    "MDF_DirtyHPBase"
+                  ]
+                },
+                "MDF_BaseAttack": {
+                  "operator": "Variables[0] (MDF_BaseAttack) || RETURN",
+                  "displayLines": "MDF_BaseAttack",
+                  "constants": [],
+                  "variables": [
+                    "MDF_BaseAttack"
+                  ]
+                },
+                "MDF_DamageRatioAdd": 0,
+                "MDF_DamageValueFinal": {
+                  "operator": "Variables[0] (MDF_DamageValueFinal) || RETURN",
+                  "displayLines": "MDF_DamageValueFinal",
+                  "constants": [],
+                  "variables": [
+                    "MDF_DamageValueFinal"
+                  ]
+                },
+                "MDF_DeathSPAdd": {
+                  "operator": "Variables[0] (MDF_DeathSPAdd) || RETURN",
+                  "displayLines": "MDF_DeathSPAdd",
+                  "constants": [],
+                  "variables": [
+                    "MDF_DeathSPAdd"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"74735154\">Modifier_Monster_W4_DawnsEye_WheaterRognarokTrueDamage</a>[<span class=\"descriptionNumberColor\">Skygash</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_DamagePercentage": {
+                  "operator": "Variables[0] ({[SkillP09[4]]}) || RETURN",
+                  "displayLines": "{[SkillP09[4]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP09[4]]}"
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -6974,75 +6999,6 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [
-            "MDF_DamageValue"
-          ],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[Remove Backup Memosprite]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1789818614\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokSub</a>[<span class=\"descriptionNumberColor\">Rot</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_RecoverRatioAttack": {
-                  "operator": "Variables[0] (MDF_DirtyHPBase) || RETURN",
-                  "displayLines": "MDF_DirtyHPBase",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DirtyHPBase"
-                  ]
-                },
-                "MDF_BaseAttack": {
-                  "operator": "Variables[0] (MDF_BaseAttack) || RETURN",
-                  "displayLines": "MDF_BaseAttack",
-                  "constants": [],
-                  "variables": [
-                    "MDF_BaseAttack"
-                  ]
-                },
-                "MDF_DamageRatioAdd": 0,
-                "MDF_DamageValueFinal": {
-                  "operator": "Variables[0] (MDF_DamageValueFinal) || RETURN",
-                  "displayLines": "MDF_DamageValueFinal",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageValueFinal"
-                  ]
-                },
-                "MDF_DeathSPAdd": {
-                  "operator": "Variables[0] (MDF_DeathSPAdd) || RETURN",
-                  "displayLines": "MDF_DeathSPAdd",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DeathSPAdd"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"74735154\">Modifier_Monster_W4_DawnsEye_WheaterRognarokTrueDamage</a>[<span class=\"descriptionNumberColor\">Skygash</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_DamagePercentage": {
-                  "operator": "Variables[0] ({[SkillP09[4]]}) || RETURN",
-                  "displayLines": "{[SkillP09[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP09[4]]}"
-                  ]
-                }
-              }
-            }
           ]
         },
         {
@@ -7083,6 +7039,12 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1259657295\">Enemy_W4_DawnsEye_01_BreakController</a>",
           "modifierFlags": [
             "ForceHitH"
+          ],
+          "stackData": [
+            "StanceDamage"
+          ],
+          "latentQueue": [
+            "AIFlag"
           ],
           "execute": [
             {
@@ -7453,12 +7415,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "StanceDamage"
-          ],
-          "latentQueue": [
-            "AIFlag"
           ]
         }
       ],

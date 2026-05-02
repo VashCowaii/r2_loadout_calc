@@ -15,6 +15,18 @@ const configAbility = {
       "modifierFlags": [
         "Shield"
       ],
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_HealPercentage",
+        "MDF_HealValue",
+        "MDF_ShieldPercentage",
+        "MDF_ShieldValue",
+        "MDF_AggroUp"
+      ],
+      "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
+      "type": "Buff",
+      "effectName": "Shield",
+      "statusName": "Shield",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -140,20 +152,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_HealPercentage",
-        "MDF_HealValue",
-        "MDF_ShieldPercentage",
-        "MDF_ShieldValue",
-        "MDF_AggroUp"
-      ],
-      "latentQueue": [],
-      "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
-      "type": "Buff",
-      "effectName": "Shield",
-      "statusName": "Shield"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -204,9 +203,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -245,9 +242,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -303,9 +298,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

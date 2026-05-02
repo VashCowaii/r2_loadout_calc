@@ -1147,9 +1147,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1708829325\">Enemy_W2_LycanKing_RageEffectFadeout</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1708829325\">Enemy_W2_LycanKing_RageEffectFadeout</a>"
         }
       ]
     },
@@ -1360,9 +1358,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1708829325\">Enemy_W2_LycanKing_RageEffectFadeout</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1708829325\">Enemy_W2_LycanKing_RageEffectFadeout</a>"
         }
       ]
     },
@@ -2290,9 +2286,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2304,15 +2298,11 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Update Target Selected(UI) [Anyone]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>"
         }
       ]
     },
@@ -2827,6 +2817,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-970015149\">Enemy_W2_LycanKing_IF_HintToastController</a>",
+          "latentQueue": [
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2893,10 +2886,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
@@ -3484,6 +3473,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__327803157\">Enemy_W2_LycanKing_IF_RageStatusPhase2</a>[<span class=\"descriptionNumberColor\">Full Moon's Furor</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Enters the \"Lunar Devourer\" state and gains immunity to action delay effects from targets. While in this state, Hoolay gains \"Irate\" and can use \"Lupine Chase Calls Bloody Gleam.\" This state will be removed when this unit is Weakness Broken.",
+          "type": "Buff",
+          "effectName": "Entering the \"Full Moon's Furor\" state",
+          "statusName": "Full Moon's Furor",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3653,16 +3646,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Enters the \"Lunar Devourer\" state and gains immunity to action delay effects from targets. While in this state, Hoolay gains \"Irate\" and can use \"Lupine Chase Calls Bloody Gleam.\" This state will be removed when this unit is Weakness Broken.",
-          "type": "Buff",
-          "effectName": "Entering the \"Full Moon's Furor\" state",
-          "statusName": "Full Moon's Furor"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__609854366\">Enemy_W2_LycanKing_IF_RageStatus</a>[<span class=\"descriptionNumberColor\">Full Moon's Furor</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Enters the \"Lunar Devourer\" state and gains immunity to action delay effects from targets. While in this state, Hoolay gains \"Irate\" and can use \"Lupine Chase Calls Bloody Gleam.\" This state will be removed when this unit is Weakness Broken.",
+          "type": "Buff",
+          "effectName": "Entering the \"Full Moon's Furor\" state",
+          "statusName": "Full Moon's Furor",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3845,11 +3838,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Enters the \"Lunar Devourer\" state and gains immunity to action delay effects from targets. While in this state, Hoolay gains \"Irate\" and can use \"Lupine Chase Calls Bloody Gleam.\" This state will be removed when this unit is Weakness Broken.",
-          "type": "Buff",
-          "effectName": "Entering the \"Full Moon's Furor\" state",
-          "statusName": "Full Moon's Furor"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3857,6 +3846,9 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "AIFlag"
           ],
           "execute": [
             {
@@ -4207,15 +4199,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__348054271\">Enemy_W2_LycanKing_IF_ReactionModel</a>",
+          "latentQueue": [
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4327,10 +4318,6 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
@@ -4367,9 +4354,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4378,9 +4363,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Ultimate Prep-Phase [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4579,9 +4562,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5674,15 +5655,11 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>"
         }
       ]
     },
@@ -6043,9 +6020,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>"
         }
       ]
     },
@@ -6704,15 +6679,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1708829325\">Enemy_W2_LycanKing_RageEffectFadeout</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1708829325\">Enemy_W2_LycanKing_RageEffectFadeout</a>"
         }
       ]
     },
@@ -7551,6 +7522,14 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-211625513\">Enemy_W2_LycanKing_Poison</a>[<span class=\"descriptionNumberColor\">\"Tumbledust\"</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_LoseHPRatio"
+          ],
+          "description": "At the start of each turn, consumes <span class=\"descriptionNumberColor\">MDF_LoseHPRatio</span> of this unit's HP.",
+          "type": "Debuff",
+          "effectName": "\"Tumbledust\"",
+          "statusName": "\"Tumbledust\"",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -7614,16 +7593,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_LoseHPRatio"
-          ],
-          "latentQueue": [],
-          "description": "At the start of each turn, consumes <span class=\"descriptionNumberColor\">MDF_LoseHPRatio</span> of this unit's HP.",
-          "type": "Debuff",
-          "effectName": "\"Tumbledust\"",
-          "statusName": "\"Tumbledust\""
+          ]
         }
       ]
     },
@@ -7739,9 +7709,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Locked HP Floor Reached [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8007,9 +7975,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8101,9 +8067,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8325,21 +8289,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-655371918\">Enemy_W2_LycanKing_FirstTimeRageMark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-655371918\">Enemy_W2_LycanKing_FirstTimeRageMark</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1274154445\">Enemy_W2_LycanKing_MainStoryPhase01</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1274154445\">Enemy_W2_LycanKing_MainStoryPhase01</a>"
         }
       ]
     },
@@ -9496,6 +9454,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__540941563\">Enemy_W2_LycanKing_RageStatusPhase2</a>[<span class=\"descriptionNumberColor\">Eclipse's Wrath</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. While in this state, Hoolay gains Irate and can use Barrenness of Earth Gouged and Lupine Chase Calls Bloody Gleam. This state will be removed when this unit is Weakness Broken.",
+          "type": "Buff",
+          "effectName": "Enters the Eclipse's Wrath state",
+          "statusName": "Eclipse's Wrath",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -9624,16 +9586,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. While in this state, Hoolay gains Irate and can use Barrenness of Earth Gouged and Lupine Chase Calls Bloody Gleam. This state will be removed when this unit is Weakness Broken.",
-          "type": "Buff",
-          "effectName": "Enters the Eclipse's Wrath state",
-          "statusName": "Eclipse's Wrath"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__224849748\">Enemy_W2_LycanKing_RageStatus</a>[<span class=\"descriptionNumberColor\">Eclipse's Ire</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. While in this state, Hoolay gains Irate and can use Lupine Chase Calls Bloody Gleam. This state will be removed when this unit is Weakness Broken.",
+          "type": "Buff",
+          "effectName": "Enters the Eclipse's Ire state",
+          "statusName": "Eclipse's Ire",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -9808,11 +9770,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. While in this state, Hoolay gains Irate and can use Lupine Chase Calls Bloody Gleam. This state will be removed when this unit is Weakness Broken.",
-          "type": "Buff",
-          "effectName": "Enters the Eclipse's Ire state",
-          "statusName": "Eclipse's Ire"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -10270,9 +10228,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10380,9 +10336,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10398,33 +10352,31 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1007960687\">Enemy_W2_LycanKing_IF_AbilityEX04</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1007960687\">Enemy_W2_LycanKing_IF_AbilityEX04</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__957627830\">Enemy_W2_LycanKing_IF_AbilityEX03</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__957627830\">Enemy_W2_LycanKing_IF_AbilityEX03</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__974405449\">Enemy_W2_LycanKing_IF_AbilityEX02</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__974405449\">Enemy_W2_LycanKing_IF_AbilityEX02</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__924072592\">Enemy_W2_LycanKing_IF_AbilityEX01</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__924072592\">Enemy_W2_LycanKing_IF_AbilityEX01</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1045160712\">Enemy_W2_LycanKing_IF_RageStatusEnhance</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "MDF_SpeedAddRatio"
+          ],
+          "latentQueue": [
+            "AIFlag"
           ],
           "execute": [
             {
@@ -10436,18 +10388,18 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [
-            "MDF_SpeedAddRatio"
-          ],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1148945924\">Enemy_W2_LycanKing_IF_RageControllerV2</a>",
           "stackType": "Replace",
+          "stackData": [
+            "MaxAttackCount"
+          ],
+          "latentQueue": [
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -11677,17 +11629,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MaxAttackCount"
-          ],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1959235815\">Monster_W2_LycanKing_IF_Revive</a>",
+          "latentQueue": [
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -11848,10 +11797,6 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
@@ -11873,18 +11818,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1507614101\">Enemy_W2_LycanKing_IF_MuteBreak</a>",
           "modifierFlags": [
             "MuteBreak"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -11910,9 +11851,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -12160,9 +12099,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -12181,6 +12118,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ServantInherit_ModifierContinuation"
           ],
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -12395,8 +12333,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -12406,6 +12343,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__84881984\">Enemy_W2_LycanKing_IF_ChampionHPEnhance</a>[<span class=\"descriptionNumberColor\">Last Stand</span>]",
           "stackType": "Replace",
+          "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_HPAddDelta</span> and ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackDelta</span>. This effect will be removed when the \"Going Solo\" state ends.",
+          "type": "Buff",
+          "effectName": "Last Stand",
+          "statusName": "Last Stand",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -12530,18 +12471,26 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_HPAddDelta</span> and ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackDelta</span>. This effect will be removed when the \"Going Solo\" state ends.",
-          "type": "Buff",
-          "effectName": "Last Stand",
-          "statusName": "Last Stand"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1535911464\">Enemy_W2_LycanKing_IF_ChampionEnhance</a>",
           "stackType": "Replace",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "toughnessReductionPreviewAdd": {
+              "operator": "Variables[0] (MDF_DamageStancePerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
+              "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)",
+              "constants": [],
+              "variables": [
+                "MDF_DamageStancePerLayer",
+                "MDF_Layer"
+              ]
+            }
+          },
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -12987,21 +12936,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "toughnessReductionPreviewAdd": {
-              "operator": "Variables[0] (MDF_DamageStancePerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
-              "displayLines": "(MDF_DamageStancePerLayer * MDF_Layer)",
-              "constants": [],
-              "variables": [
-                "MDF_DamageStancePerLayer",
-                "MDF_Layer"
-              ]
-            }
-          },
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -13010,6 +12945,11 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "When a target character with \"Blood Surge\" and their summon enters \"Going Solo,\" they will additionally reduce enemy Toughness and restore HP after attacking. This effect is stackable and is removed when \"Going Solo\" ends.",
+          "type": "Buff",
+          "effectName": "Blood Surge",
+          "statusName": "Blood Surge",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -13251,19 +13191,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When a target character with \"Blood Surge\" and their summon enters \"Going Solo,\" they will additionally reduce enemy Toughness and restore HP after attacking. This effect is stackable and is removed when \"Going Solo\" ends.",
-          "type": "Buff",
-          "effectName": "Blood Surge",
-          "statusName": "Blood Surge",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__729115226\">Enemy_W2_LycanKing_IF_LycanTriggerDeath</a>",
-          "stackType": "Replace",
-          "stackData": [],
-          "latentQueue": []
+          "stackType": "Replace"
         },
         {
           "name": "Modifier Construction",
@@ -13474,37 +13407,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-71943107\">Enemy_W2_LycanKing_IF_ChampionMarkHalo</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"2024649491\">Enemy_W2_LycanKing_IF_ChampionMarkController</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"848754639\">Enemy_W2_LycanKing_IF_ChampionMark</a>[<span class=\"descriptionNumberColor\">Blood Surge</span>]"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1535911464\">Enemy_W2_LycanKing_IF_ChampionEnhance</a>"
-                }
-              ]
-            }
-          ],
           "stackData": [
             "MDF_MaxLayer",
             "MDF_HealPercentage",
@@ -13512,7 +13414,6 @@ const compositeAbilityObject = {
             "MDF_DamageStancePerLayer",
             "MDF_BreakDamageAddedRatioBase"
           ],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -13565,6 +13466,37 @@ const compositeAbilityObject = {
                 }
               }
             }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2024649491\">Enemy_W2_LycanKing_IF_ChampionMarkController</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"848754639\">Enemy_W2_LycanKing_IF_ChampionMark</a>[<span class=\"descriptionNumberColor\">Blood Surge</span>]"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1535911464\">Enemy_W2_LycanKing_IF_ChampionEnhance</a>"
+                }
+              ]
+            }
           ]
         },
         {
@@ -13612,6 +13544,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1565088528\">Enemy_W2_LycanKing_IF_PickUpMarkLycanKing</a>[<span class=\"descriptionNumberColor\">Going Solo</span>]",
+          "description": "Currently in the \"Going Solo\" state. Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span> and decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageReduce</span>.",
+          "type": "Other",
+          "effectName": "Going Solo",
+          "statusName": "Going Solo",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -13718,13 +13654,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Currently in the \"Going Solo\" state. Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span> and decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageReduce</span>.",
-          "type": "Other",
-          "effectName": "Going Solo",
-          "statusName": "Going Solo"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -13824,9 +13754,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -13915,6 +13843,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "Targets in the Departed state cannot be designated as ability targets and will not appear in the Action Order.",
+          "type": "Other",
+          "effectName": "Departed",
+          "statusName": "Departed",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -14045,19 +13977,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Targets in the Departed state cannot be designated as ability targets and will not appear in the Action Order.",
-          "type": "Other",
-          "effectName": "Departed",
-          "statusName": "Departed"
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__268414254\">W2_LycanKing_BattleScore2Mark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__268414254\">W2_LycanKing_BattleScore2Mark</a>"
         },
         {
           "name": "Modifier Construction",
@@ -14078,9 +14002,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14136,9 +14058,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14316,14 +14236,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__563066245\">Enemy_W2_LycanKing_BloodRageMark</a>[<span class=\"descriptionNumberColor\">Irate</span>]",
           "stackType": "Replace",
+          "latentQueue": [
+            "MDF_BloodRageCountRemain",
+            "MDF_BloodRageCountBefore"
+          ],
+          "description": "Hoolay currently possesses <span class=\"descriptionNumberColor\">MDF_Layer</span> stack(s) of Irate.",
+          "type": "Other",
+          "effectName": "Irate",
+          "statusName": "Irate",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -14370,22 +14297,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_BloodRageCountRemain",
-            "MDF_BloodRageCountBefore"
-          ],
-          "description": "Hoolay currently possesses <span class=\"descriptionNumberColor\">MDF_Layer</span> stack(s) of Irate.",
-          "type": "Other",
-          "effectName": "Irate",
-          "statusName": "Irate",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__435779874\">Monster_W2_LycanKing_RefreshEnergyBar</a>",
           "stackType": "Replace",
+          "latentQueue": [
+            "MDF_BloodRageCountRemain",
+            "MDF_BloodRageCountBefore"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -14418,17 +14339,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_BloodRageCountRemain",
-            "MDF_BloodRageCountBefore"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-717129648\">Enemy_W2_LycanKing_RageStatusEnhanceSelf</a>[<span class=\"descriptionNumberColor\">Lupine Lord's Majesty</span>]",
           "stackType": "Replace",
+          "description": "Hoolay's SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddRatioPerLayer</span> due to the presence of Sableclaw Wolftrooper and Eclipse Wolftrooper on the field.",
+          "type": "Buff",
+          "effectName": "Lupine Lord's Majesty",
+          "statusName": "Lupine Lord's Majesty",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -14452,12 +14373,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Hoolay's SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddRatioPerLayer</span> due to the presence of Sableclaw Wolftrooper and Eclipse Wolftrooper on the field.",
-          "type": "Buff",
-          "effectName": "Lupine Lord's Majesty",
-          "statusName": "Lupine Lord's Majesty",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14465,6 +14381,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_SpeedAddRatio"
+          ],
+          "description": "When entering Moon Rage, the effect of Moon Rage will be Enhanced.",
+          "type": "Buff",
+          "effectName": "Lupitoxin",
+          "statusName": "Lupine Lord's Majesty",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -14475,15 +14398,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [
-            "MDF_SpeedAddRatio"
-          ],
-          "latentQueue": [],
-          "description": "When entering Moon Rage, the effect of Moon Rage will be Enhanced.",
-          "type": "Buff",
-          "effectName": "Lupitoxin",
-          "statusName": "Lupine Lord's Majesty"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14615,9 +14530,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

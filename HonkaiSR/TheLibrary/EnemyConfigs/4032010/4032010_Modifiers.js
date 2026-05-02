@@ -54,6 +54,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1287044096\">AML_Minion02_01_Rage</a>",
+      "stackData": [
+        "PassiveSkillInitiate_P1_AttackAddedRatio",
+        "PassiveSkillInitiate_P2_DefenceAddedRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -154,12 +158,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "PassiveSkillInitiate_P1_AttackAddedRatio",
-        "PassiveSkillInitiate_P2_DefenceAddedRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -168,9 +167,7 @@ const configAbility = {
         {
           "eventTrigger": "Leave Battle"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -179,9 +176,7 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -231,6 +226,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1714614232\">Enemy_AML_Minion02_01_RallyHP_V2_Strongth</a>[<span class=\"descriptionNumberColor\">Renewal</span>]",
+      "description": "The next attack's DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Renewal",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -311,16 +310,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "The next attack's DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Renewal"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1799178922\">Enemy_AML_Minion02_01_RallyHP_V2</a>[<span class=\"descriptionNumberColor\">Corrosion</span>]",
       "stackType": "Replace",
+      "useEntitySnapshot": true,
+      "description": "After attacking, restore a portion of Corroded HP. The more targets are attacked, the more HP is restored. When Corrosion is dispelled via restorative means, obtain \"Renewal.\"",
+      "type": "Other",
+      "statusName": "Corrosion",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -783,16 +782,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "After attacking, restore a portion of Corroded HP. The more targets are attacked, the more HP is restored. When Corrosion is dispelled via restorative means, obtain \"Renewal.\"",
-      "type": "Other",
-      "statusName": "Corrosion"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1719491347\">Enemy_AML_Minion02_01_RallyHP</a>",
       "stackType": "Replace",
+      "useEntitySnapshot": true,
       "execute": [
         {
           "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -956,12 +952,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_RallyTransferRatio",
+        "MDF_Rally_HealPercentage",
+        "MDF_Rally_HealUpRatio",
+        "MDF_Rally_Strongth_AllDamageTypeAddedRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -1145,93 +1147,6 @@ const configAbility = {
               },
               "passed": [
                 "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        }
-      ],
-      "abilityValueChange": [
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "minValue": 0,
-              "maxValue": 1,
-              "whenValueChanges": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"1966517473\">TaskList_Standard_RallyHP_ListenDirtyHPChange</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlockFlat</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "minValue": 0,
-              "maxValue": 1000000000,
-              "whenValueChanges": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"1966517473\">TaskList_Standard_RallyHP_ListenDirtyHPChange</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "minValue": 0,
-              "maxValue": 1000000000,
-              "whenValueChanges": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-1785562897\">TaskList_Standard_RallyHP_ListenMaxHPChange</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "minValue": 0,
-              "maxValue": 1000000000,
-              "whenValueChanges": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-1785562897\">TaskList_Standard_RallyHP_ListenMaxHPChange</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "minValue": 0,
-              "maxValue": 1000000000,
-              "whenValueChanges": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-1785562897\">TaskList_Standard_RallyHP_ListenMaxHPChange</a>"
-                }
               ]
             }
           ]
@@ -1497,14 +1412,93 @@ const configAbility = {
           ]
         }
       ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_RallyTransferRatio",
-        "MDF_Rally_HealPercentage",
-        "MDF_Rally_HealUpRatio",
-        "MDF_Rally_Strongth_AllDamageTypeAddedRatio"
-      ],
-      "latentQueue": []
+      "abilityValueChange": [
+        {
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "minValue": 0,
+              "maxValue": 1,
+              "whenValueChanges": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1966517473\">TaskList_Standard_RallyHP_ListenDirtyHPChange</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlockFlat</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "minValue": 0,
+              "maxValue": 1000000000,
+              "whenValueChanges": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1966517473\">TaskList_Standard_RallyHP_ListenDirtyHPChange</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "minValue": 0,
+              "maxValue": 1000000000,
+              "whenValueChanges": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1785562897\">TaskList_Standard_RallyHP_ListenMaxHPChange</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "minValue": 0,
+              "maxValue": 1000000000,
+              "whenValueChanges": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1785562897\">TaskList_Standard_RallyHP_ListenMaxHPChange</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "minValue": 0,
+              "maxValue": 1000000000,
+              "whenValueChanges": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1785562897\">TaskList_Standard_RallyHP_ListenMaxHPChange</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Modifier Construction",

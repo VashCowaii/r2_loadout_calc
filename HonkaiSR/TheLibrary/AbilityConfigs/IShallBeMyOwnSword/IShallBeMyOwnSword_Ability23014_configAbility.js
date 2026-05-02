@@ -18,6 +18,12 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-625916918\">LC_23014_Sub</a>[<span class=\"descriptionNumberColor\">Eclipse</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack will increase the DMG dealt by the next attack by <span class=\"descriptionNumberColor\">#SkillEquip_P3_DamageAddedRatio</span>, up to a maximum of <span class=\"descriptionNumberColor\">#SkillEquip_P2_MaxLayer</span> stack(s). When <span class=\"descriptionNumberColor\">#SkillEquip_P2_MaxLayer</span> stack(s) are reached, an additional attack will be delivered that ignores <span class=\"descriptionNumberColor\">#SkillEquip_P4_DefenceDown</span> of the enemy's DEF.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Eclipse",
+      "stackLimit": 3,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -108,13 +114,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack will increase the DMG dealt by the next attack by <span class=\"descriptionNumberColor\">#SkillEquip_P3_DamageAddedRatio</span>, up to a maximum of <span class=\"descriptionNumberColor\">#SkillEquip_P2_MaxLayer</span> stack(s). When <span class=\"descriptionNumberColor\">#SkillEquip_P2_MaxLayer</span> stack(s) are reached, an additional attack will be delivered that ignores <span class=\"descriptionNumberColor\">#SkillEquip_P4_DefenceDown</span> of the enemy's DEF.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Eclipse",
-      "stackLimit": 3,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -233,9 +233,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

@@ -349,9 +349,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -390,9 +388,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -407,9 +403,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -417,6 +411,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteSpeed"
           ],
+          "stackData": [
+            "MDF_Weather"
+          ],
+          "description": "\"Daythunder Raven\" enters Enhanced state. Dispelled upon being Weakness Broken.",
+          "type": "Other",
+          "effectName": "Enhance",
+          "statusName": "Wingbeats",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -694,15 +695,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Weather"
-          ],
-          "latentQueue": [],
-          "description": "\"Daythunder Raven\" enters Enhanced state. Dispelled upon being Weakness Broken.",
-          "type": "Other",
-          "effectName": "Enhance",
-          "statusName": "Wingbeats"
+          ]
         }
       ],
       "references": []

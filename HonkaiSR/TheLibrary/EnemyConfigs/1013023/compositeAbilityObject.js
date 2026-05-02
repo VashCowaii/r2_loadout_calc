@@ -1622,8 +1622,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1945457431\">Monster_W1_Mecha04_PassiveMDF</a>[<span class=\"descriptionNumberColor\">Hounding Pursuit</span>]",
-          "stackData": [],
-          "latentQueue": [],
           "description": "If \"Felling Order\" hits one target that does not currently have a Shield, immediately use \"Dismantle\" on a random target.",
           "type": "Other",
           "statusName": "Hounding Pursuit"
@@ -1777,18 +1775,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-69428728\">WMonster_Mecha_02_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1800,9 +1794,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Choice Window [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1911,9 +1903,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2021,8 +2011,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1945457431\">Monster_W1_Mecha04_PassiveMDF</a>[<span class=\"descriptionNumberColor\">Hounding Pursuit</span>]",
-          "stackData": [],
-          "latentQueue": [],
           "description": "If \"Felling Order\" hits one target that does not currently have a Shield, immediately use \"Dismantle\" on a random target.",
           "type": "Other",
           "statusName": "Hounding Pursuit"
@@ -2176,18 +2164,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-69428728\">WMonster_Mecha_02_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2199,9 +2183,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Choice Window [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2309,9 +2291,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2478,9 +2458,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3761,9 +3739,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3780,6 +3756,7 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-977376968\">Monster_W1_Mecha04_RL_AfterCharge</a>",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3814,8 +3791,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3866,9 +3842,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3877,9 +3851,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4046,9 +4018,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4065,14 +4035,20 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-136691859\">Monster_W1_Mecha04_RL_Ability12_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "stackType": "Replace",
+          "latentQueue": [
+            "Mecha04_Aim_Flag"
+          ],
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio_PerLayer</span>. This effect can stack.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4114,20 +4090,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Mecha04_Aim_Flag"
-          ],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio_PerLayer</span>. This effect can stack.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1362109025\">Monster_W1_Mecha04_RL_Part3Passive</a>[<span class=\"descriptionNumberColor\">Combat Speed-Up</span>]",
+          "stackData": [
+            "MDF_SpeedAddedRatio"
+          ],
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio</span>. SPD increases further every time Teamwork Order is used.",
+          "type": "Buff",
+          "effectName": "Combat Speed-Up",
+          "statusName": "Combat Speed-Up",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4150,15 +4124,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedAddedRatio"
-          ],
-          "latentQueue": [],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio</span>. SPD increases further every time Teamwork Order is used.",
-          "type": "Buff",
-          "effectName": "Combat Speed-Up",
-          "statusName": "Combat Speed-Up"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4297,6 +4263,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "DisableHealHP"
           ],
+          "description": "Currently cannot take action.",
+          "type": "Other",
+          "statusName": "Speedy Recovery",
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4460,11 +4430,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Currently cannot take action.",
-          "type": "Other",
-          "statusName": "Speedy Recovery",
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5539,9 +5505,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5550,15 +5514,22 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1670817312\">W1_Mecha02_AttackBonus</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [],
+          "stackData": [
+            "ModifierDamageUpValue"
+          ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">ModifierDamageUpValue</span>.",
+          "type": "Buff",
+          "effectName": "Charging",
+          "statusName": "Charging",
+          "duration": 1,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5640,17 +5611,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "ModifierDamageUpValue"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">ModifierDamageUpValue</span>.",
-          "type": "Buff",
-          "effectName": "Charging",
-          "statusName": "Charging",
-          "duration": 1,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5660,17 +5621,15 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
+          "description": "%CasterName will focus attacks on this target.",
+          "type": "Other",
+          "effectName": "Lock On",
+          "statusName": "Lock On",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "%CasterName will focus attacks on this target.",
-          "type": "Other",
-          "effectName": "Lock On",
-          "statusName": "Lock On"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5681,6 +5640,23 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Bleed"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "Modifier_Bleed_DamagePercentage",
+            "MDF_MaxLayer"
+          ],
+          "latentQueue": [
+            "Mecha04_BattleScore2_Flag",
+            "Monster_W1_Mecha04_00_InsertFlag",
+            "Mecha04_EnemySelector"
+          ],
+          "description": "For a certain number of turns, receive Physical DMG based on Max HP at the beginning of each turn, stacking up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+          "type": "Debuff",
+          "effectName": "Bleed",
+          "statusName": "Bleed",
+          "duration": 3,
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -5783,24 +5759,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "Modifier_Bleed_DamagePercentage",
-            "MDF_MaxLayer"
-          ],
-          "latentQueue": [
-            "Mecha04_BattleScore2_Flag",
-            "Monster_W1_Mecha04_00_InsertFlag",
-            "Mecha04_EnemySelector"
-          ],
-          "description": "For a certain number of turns, receive Physical DMG based on Max HP at the beginning of each turn, stacking up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-          "type": "Debuff",
-          "effectName": "Bleed",
-          "statusName": "Bleed",
-          "duration": 3,
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5851,13 +5810,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__413586706\">Enemy_W1_Mecha04_ChainSawSpeedUpAgain</a>",
+          "latentQueue": [
+            "Monster_W1_Mecha04_00_InsertFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -5873,15 +5833,14 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Monster_W1_Mecha04_00_InsertFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1520229010\">Enemy_W1_Mecha04_ChainSawSpeedUp</a>",
+          "latentQueue": [
+            "Monster_W1_Mecha04_00_InsertFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5941,15 +5900,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Monster_W1_Mecha04_00_InsertFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__86526796\">Monster_W1_Mecha04_RemoveAim</a>",
+          "latentQueue": [
+            "Mecha04_BattleScore2_Flag",
+            "Monster_W1_Mecha04_00_InsertFlag",
+            "Mecha04_EnemySelector",
+            "Mecha04_AttackCount"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -5991,13 +5952,6 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Mecha04_BattleScore2_Flag",
-            "Monster_W1_Mecha04_00_InsertFlag",
-            "Mecha04_EnemySelector",
-            "Mecha04_AttackCount"
           ]
         },
         {
@@ -6008,7 +5962,6 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
-          "stackData": [],
           "latentQueue": [
             "Mecha04_Aim_Flag"
           ],
@@ -6025,7 +5978,6 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
-          "stackData": [],
           "latentQueue": [
             "Mecha04_Aim_Flag"
           ],
@@ -6106,9 +6058,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

@@ -14,8 +14,7 @@ const configAbility = {
       "stackType": "Replace",
       "stackData": [
         "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -68,6 +67,11 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1349202594\">MStrongChallengeEX_Talent_StageAbility_BOSS_007_Trigger</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue",
+        "MDF_LifeTime",
+        "MDF_MaxLayer"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -134,13 +138,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_LifeTime",
-        "MDF_MaxLayer"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

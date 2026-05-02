@@ -356,15 +356,11 @@ const configAbility = {
             "Mark Entity as Non-Target(Unselectable)"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-848494172\">Monster_W3_FigureBoss_RLBoss_New_SummonMonster</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-848494172\">Monster_W3_FigureBoss_RLBoss_New_SummonMonster</a>"
     }
   ]
 }

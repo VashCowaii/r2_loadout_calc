@@ -18,6 +18,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-146915656\">Sam_Trace03_BreakDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
+      "type": "Buff",
+      "statusName": "Module γ: Core Overload",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -67,10 +70,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
-      "type": "Buff",
-      "statusName": "Module γ: Core Overload"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -83,53 +83,6 @@ const configAbility = {
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
-            }
-          ]
-        }
-      ],
-      "abilityValueChange": [
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
-                }
-              ]
             }
           ]
         }
@@ -255,8 +208,53 @@ const configAbility = {
           ]
         }
       ],
-      "stackData": [],
-      "latentQueue": []
+      "abilityValueChange": [
+        {
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "whenValueChanges": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "whenValueChanges": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "whenValueChanges": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "targetObjectData": {

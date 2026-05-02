@@ -388,6 +388,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-913053505\">Monster_W2_HuanlongPart_01_IF_Ability04_SetDamage</a>",
+      "latentQueue": [
+        "PartDecisionFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -833,15 +836,15 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "PartDecisionFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1389512631\">Monster_W2_HuanlongPart_IF_TurnChoise</a>",
+      "latentQueue": [
+        "PartDecisionFlag",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -895,11 +898,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "PartDecisionFlag",
-        "AIFlag"
       ]
     }
   ]

@@ -144,14 +144,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1943177047\">Advanced_Ren_Eidolon2</a>[<span class=\"descriptionNumberColor\">Grievous Penitence</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_CriticalIncrease</span>.",
+      "type": "Buff",
+      "effectName": "CRIT Rate Boost",
+      "statusName": "Grievous Penitence",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -186,15 +188,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_CriticalIncrease</span>.",
-      "type": "Buff",
-      "effectName": "CRIT Rate Boost",
-      "statusName": "Grievous Penitence"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__740947569\">Advanced_Ren_Eidolon4_Add</a>",
+      "latentQueue": [
+        "MwRen_isCharmAttack",
+        "MwRen_isAttack",
+        "MwRen_AttackStart",
+        "MwRen_isOverHalf"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -223,19 +227,24 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MwRen_isCharmAttack",
-        "MwRen_isAttack",
-        "MwRen_AttackStart",
-        "MwRen_isOverHalf"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1909621809\">Advanced_Ren_Eidolon4</a>[<span class=\"descriptionNumberColor\">Heal All Bones</span>]",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "MwRen_isOverHalf",
+        "MwRen_AttackStart",
+        "MwRen_isAttack",
+        "MwRen_isCharmAttack"
+      ],
+      "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_HPIncrease</span>.",
+      "type": "Buff",
+      "effectName": "Max HP Boost",
+      "statusName": "Heal All Bones",
+      "stackLimit": 2,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -281,25 +290,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MwRen_isOverHalf",
-        "MwRen_AttackStart",
-        "MwRen_isAttack",
-        "MwRen_isCharmAttack"
-      ],
-      "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_HPIncrease</span>.",
-      "type": "Buff",
-      "effectName": "Max HP Boost",
-      "statusName": "Heal All Bones",
-      "stackLimit": 2,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__597595429\">Advanced_Ren_Trace03</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "MwRen_isAttack"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -327,16 +326,22 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MwRen_isAttack"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__580817810\">Advanced_Ren_Trace02</a>[<span class=\"descriptionNumberColor\">Neverending Deaths</span>]",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "MwRen_isCharmAttack",
+        "MwRen_isAttack",
+        "MwRen_AttackStart",
+        "MwRen_isOverHalf"
+      ],
+      "description": "Incoming Healing increases by <span class=\"descriptionNumberColor\">#SkillTree_PointB2_P2_HealTakenRatio</span>.",
+      "type": "Buff",
+      "effectName": "Outgoing Healing Boost",
+      "statusName": "Neverending Deaths",
       "execute": [
         {
           "eventTrigger": "Receiving Heal End [Owner]",
@@ -390,41 +395,38 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MwRen_isCharmAttack",
-        "MwRen_isAttack",
-        "MwRen_AttackStart",
-        "MwRen_isOverHalf"
-      ],
-      "description": "Incoming Healing increases by <span class=\"descriptionNumberColor\">#SkillTree_PointB2_P2_HealTakenRatio</span>.",
-      "type": "Buff",
-      "effectName": "Outgoing Healing Boost",
-      "statusName": "Neverending Deaths"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-936894999\">Advanced_Ren_Ability03_Listen</a>[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "HP Loss: <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>",
+      "type": "Other",
+      "statusName": "Death Sentence",
+      "stackLimit": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "HP Loss: <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>",
-      "type": "Other",
-      "statusName": "Death Sentence",
-      "stackLimit": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2146687777\">Advanced_Ren_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "MwRen_isCharmAttack",
+        "MwRen_isAttack",
+        "MwRen_AttackStart"
+      ],
+      "description": "At maximum Charge stacks, expends all stacks and immediately deals 1 instance of Follow-Up ATK to all enemies.",
+      "type": "Other",
+      "statusName": "Charge",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -605,22 +607,21 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MwRen_isCharmAttack",
-        "MwRen_isAttack",
-        "MwRen_AttackStart"
-      ],
-      "description": "At maximum Charge stacks, expends all stacks and immediately deals 1 instance of Follow-Up ATK to all enemies.",
-      "type": "Other",
-      "statusName": "Charge",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1791240191\">Advanced_Ren_Attack</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue",
+        "MDF_PropertyValue2"
+      ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
+      "stackLimit": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -659,22 +660,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_PropertyValue2"
-      ],
-      "latentQueue": [],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost",
-      "stackLimit": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-405491517\">Advanced_Ren_Attack_Transfer</a>[<span class=\"descriptionNumberColor\">Hellscape</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Basic ATK \"Shard Sword\" is enhanced to \"Forest of Swords\" that deals Blast DMG. The chance of being targeted by enemy targets greatly increases.",
+      "type": "Other",
+      "effectName": "Enhanced Basic ATK",
+      "statusName": "Hellscape",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -765,13 +760,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Basic ATK \"Shard Sword\" is enhanced to \"Forest of Swords\" that deals Blast DMG. The chance of being targeted by enemy targets greatly increases.",
-      "type": "Other",
-      "effectName": "Enhanced Basic ATK",
-      "statusName": "Hellscape"
+      ]
     }
   ],
   "references": []

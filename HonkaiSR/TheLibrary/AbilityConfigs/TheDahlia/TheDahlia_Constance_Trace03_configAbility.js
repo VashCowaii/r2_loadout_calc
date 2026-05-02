@@ -116,6 +116,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "Outgrow the Old, Espouse the New",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -138,11 +142,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "Outgrow the Old, Espouse the New"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -735,8 +735,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2073058540\">Constance_Trace03</a>",
-      "stackData": [],
-      "latentQueue": [],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",

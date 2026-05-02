@@ -43,6 +43,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-574485103\">LC_23037_Sub2</a>[<span class=\"descriptionNumberColor\">Increases Skill DMG and Ultimate DMG</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases Skill DMG and Ultimate DMG dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P4_Ratio</span>.",
+          "type": "Buff",
+          "effectName": "Increases Skill DMG and Ultimate DMG",
+          "statusName": "Increases Skill DMG and Ultimate DMG",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -71,11 +75,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases Skill DMG and Ultimate DMG dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P4_Ratio</span>.",
-          "type": "Buff",
-          "effectName": "Increases Skill DMG and Ultimate DMG",
-          "statusName": "Increases Skill DMG and Ultimate DMG"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -231,15 +231,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1462256216\">LC_23037_Main_CheckSP</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1462256216\">LC_23037_Main_CheckSP</a>"
         },
         {
           "name": "Modifier Construction",

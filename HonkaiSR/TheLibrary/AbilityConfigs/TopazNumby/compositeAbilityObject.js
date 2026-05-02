@@ -994,9 +994,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1061,9 +1059,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1460,9 +1456,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1780,9 +1774,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1816,15 +1808,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-182734853\">Topaz_BE_ReduceDelay</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-182734853\">Topaz_BE_ReduceDelay</a>"
         },
         {
           "name": "Modifier Construction",
@@ -1851,9 +1839,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1861,8 +1847,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1927,8 +1911,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1215069030\">Topaz_Ultimate_BPAbility_ModifyBEAction</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1976,8 +1958,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__633100540\">Topaz_Ultimate_Normal_ModifyBEAction</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -2033,8 +2013,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1586235241\">Topaz_BPAbility_ModifyBEAction</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -2069,8 +2047,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1158310225\">Topaz_Normal_ModifyBEAction</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -2926,7 +2902,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1891120358\">Topaz_Ability02_SpecialMarkAdder</a>",
-          "stackData": [],
           "latentQueue": [
             "_damageStart"
           ],
@@ -2946,6 +2921,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-934416652\">M_Topaz_BPAbility_AddRegardAsAttackType</a>",
+          "latentQueue": [
+            "_damageStart"
+          ],
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2988,12 +2967,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_damageStart"
-          ],
-          "duration": 1
+          ]
         }
       ],
       "targetObjectData": {
@@ -3110,6 +3084,7 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2051023932\">M_Topaz_Normal_AddRegardAsAttackType</a>",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3152,10 +3127,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "duration": 1
+          ]
         }
       ],
       "targetObjectData": {
@@ -3498,6 +3470,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1982768595\">Topaz_BE_FiretakenRatio</a>",
           "stackType": "ReplaceByCaster",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3520,21 +3493,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1899526189\">Topaz_BE_HitEffect</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1899526189\">Topaz_BE_HitEffect</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1524167625\">Topaz_BE_UltraEnhance_Text</a>",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
           "type": "Buff",
           "effectName": "DMG multiplier, CRIT DMG Boost",
           "duration": 1
@@ -3544,6 +3512,15 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
           "counter": 1,
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "Skill03_P1_BEDamageRatio",
+            "Skill03_P2_CriticalChance",
+            "Skill03_P3_DelayRatio",
+            "Rank06_P2_PenRatio"
+          ],
+          "description": "Numby's DMG multiplier increases by <span class=\"descriptionNumberColor\">Skill03_P1_BEDamageRatio</span>, CRIT DMG increases by <span class=\"descriptionNumberColor\">Skill03_P2_CriticalChance</span>. When enemies with Proof of Debt receive attacks from allies' Basic ATK, Skill, or Ultimate, Numby's action is Advanced Forward by <span class=\"descriptionNumberColor\">Skill03_P3_DelayRatio</span>.",
+          "type": "Buff",
+          "statusName": "Windfall Bonanza!",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -3579,21 +3556,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "Skill03_P1_BEDamageRatio",
-            "Skill03_P2_CriticalChance",
-            "Skill03_P3_DelayRatio",
-            "Rank06_P2_PenRatio"
-          ],
-          "latentQueue": [],
-          "description": "Numby's DMG multiplier increases by <span class=\"descriptionNumberColor\">Skill03_P1_BEDamageRatio</span>, CRIT DMG increases by <span class=\"descriptionNumberColor\">Skill03_P2_CriticalChance</span>. When enemies with Proof of Debt receive attacks from allies' Basic ATK, Skill, or Ultimate, Numby's action is Advanced Forward by <span class=\"descriptionNumberColor\">Skill03_P3_DelayRatio</span>.",
-          "type": "Buff",
-          "statusName": "Windfall Bonanza!"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1213282515\">Topaz_BE_CriticalChance</a>",
+          "latentQueue": [
+            "_damageStart"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3641,10 +3611,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_damageStart"
           ]
         },
         {
@@ -3661,16 +3627,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-373546697\">Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn</a>",
           "stackType": "Replace",
-          "stackData": [],
-          "latentQueue": [],
           "duration": 1
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-93497222\">Topaz_BE_FindNoTargetFlag</a>",
           "stackType": "Replace",
-          "stackData": [],
-          "latentQueue": [],
           "duration": 1
         },
         {
@@ -3692,6 +3654,19 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "ListenBattleEventSkill"
           ],
+          "stackData": [
+            "MDF_PropertyValue1_DamageAdd",
+            "MDF_PropertyValue3_InsertCriticalDamageAddRatio",
+            "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
+            "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer"
+          ],
+          "latentQueue": [
+            "_damageStart"
+          ],
+          "description": "Increases Follow-Up ATK DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue1_DamageAdd</span>. Numby will target this unit as its attack target.",
+          "type": "Debuff",
+          "effectName": "Proof of Debt",
+          "statusName": "Proof of Debt",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4441,20 +4416,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue1_DamageAdd",
-            "MDF_PropertyValue3_InsertCriticalDamageAddRatio",
-            "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
-            "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer"
-          ],
-          "latentQueue": [
-            "_damageStart"
-          ],
-          "description": "Increases Follow-Up ATK DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue1_DamageAdd</span>. Numby will target this unit as its attack target.",
-          "type": "Debuff",
-          "effectName": "Proof of Debt",
-          "statusName": "Proof of Debt"
+          ]
         }
       ],
       "references": []

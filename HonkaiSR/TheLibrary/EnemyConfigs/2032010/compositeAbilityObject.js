@@ -377,9 +377,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-361184588\">Monster_Monster_W2_Lycan_BattlePerform_DisAbleAction</a>",
           "modifierFlags": [
             "DisableAction"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -397,9 +395,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Being Attacked End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -757,9 +753,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1288,9 +1282,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>"
         }
       ]
     },
@@ -1338,9 +1330,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1536,9 +1526,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1600,6 +1588,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1564570329\">Enemy_W2_Lycan_RageStatusEnhance</a>[<span class=\"descriptionNumberColor\">Moon Rage</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Enters the Moon Rage state and can take an extra action every turn. There is a high chance of inflicting Bleed on the target when attacking. This state will be removed when this unit is Weakness Broken.",
+          "type": "Buff",
+          "effectName": "Additional Bleed",
+          "statusName": "Moon Rage",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1706,16 +1698,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Enters the Moon Rage state and can take an extra action every turn. There is a high chance of inflicting Bleed on the target when attacking. This state will be removed when this unit is Weakness Broken.",
-          "type": "Buff",
-          "effectName": "Additional Bleed",
-          "statusName": "Moon Rage"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1495768773\">Enemy_W2_Lycan_RageStatus</a>[<span class=\"descriptionNumberColor\">Moon Rage</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. There is a high chance of inflicting Bleed on the target when attacking. This state will be removed when this unit is Weakness Broken.",
+          "type": "Buff",
+          "effectName": "Additional Bleed",
+          "statusName": "Moon Rage",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1830,11 +1822,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. There is a high chance of inflicting Bleed on the target when attacking. This state will be removed when this unit is Weakness Broken.",
-          "type": "Buff",
-          "effectName": "Additional Bleed",
-          "statusName": "Moon Rage"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1896,9 +1884,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1931,9 +1917,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2014,14 +1998,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1414738413\">Enemy_W2_Lycan_RagePhase1Mark</a>[<span class=\"descriptionNumberColor\">Bloodlust</span>]",
           "stackType": "Replace",
+          "description": "Apply <span class=\"descriptionNumberColor\">MDF_Layer</span> stack(s) of Bloodlust. The Bloodlust stacks and stack limits for enemy units that can enter Moon Rage will be kept consistent.",
+          "type": "Other",
+          "effectName": "Bloodlust",
+          "statusName": "Bloodlust",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2055,30 +2042,24 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Apply <span class=\"descriptionNumberColor\">MDF_Layer</span> stack(s) of Bloodlust. The Bloodlust stacks and stack limits for enemy units that can enter Moon Rage will be kept consistent.",
-          "type": "Other",
-          "effectName": "Bloodlust",
-          "statusName": "Bloodlust",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1787691973\">Enemy_W2_Lycan_RageMarkInRage</a>",
-          "stackType": "Replace",
-          "stackData": [],
-          "latentQueue": []
+          "stackType": "Replace"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1346076887\">Enemy_W2_Lycan_RageStartMark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1346076887\">Enemy_W2_Lycan_RageStartMark</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1905621078\">Enemy_W2_Lycan_RageControllerV2</a>",
           "stackType": "Replace",
+          "stackData": [
+            "MaxAttackCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3265,17 +3246,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MaxAttackCount"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1726527858\">Enemy_W2_Lycan_RageEffectMark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1726527858\">Enemy_W2_Lycan_RageEffectMark</a>"
         }
       ],
       "references": []

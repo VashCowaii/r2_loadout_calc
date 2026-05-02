@@ -67,8 +67,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1827457473\">Memosprite_CyreneServant_PreShowForMydeimos</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -108,8 +106,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-839103023\">Memosprite_CyreneServant_PreShowForDanHengPT</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -177,6 +173,50 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "Endurance"
+      ],
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Player's Aim Target List}}"
+        },
+        "skillType": [
+          "Memosprite"
+        ],
+        "conditions": {
+          "name": "Character ID",
+          "ID": 1405,
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player's Aim Target List}}"
+          },
+          "characterName": "Anaxa"
+        },
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": "0(Set AV)"
+        }
+      },
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}+{{Caster's Summoner}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"340897413\">Memosprite_CyreneServant_PassiveAbility01_HPIncrease</a>",
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (0.24) || RETURN",
+              "displayLines": "0.24",
+              "constants": [],
+              "variables": [
+                0.24
+              ]
+            }
+          }
+        }
       ],
       "execute": [
         {
@@ -571,52 +611,6 @@ const configAbility = {
           "name": "Variable Value Changes",
           "variableName": "CurSpecialSP",
           "from": "ContextOwner"
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "target": {
-          "name": "Target Name",
-          "target": "{{Player's Aim Target List}}"
-        },
-        "skillType": [
-          "Memosprite"
-        ],
-        "conditions": {
-          "name": "Character ID",
-          "ID": 1405,
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player's Aim Target List}}"
-          },
-          "characterName": "Anaxa"
-        },
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": "0(Set AV)"
-        }
-      },
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}+{{Caster's Summoner}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"340897413\">Memosprite_CyreneServant_PassiveAbility01_HPIncrease</a>",
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.24) || RETURN",
-              "displayLines": "0.24",
-              "constants": [],
-              "variables": [
-                0.24
-              ]
-            }
-          }
         }
       ]
     }

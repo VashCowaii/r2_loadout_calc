@@ -46,6 +46,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-485013702\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0004_02</a>[<span class=\"descriptionNumberColor\">Sanguine Vitality</span>]",
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0004_ADF_1</span>.",
+      "type": "Other",
+      "statusName": "Sanguine Vitality",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -68,10 +71,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0004_ADF_1</span>.",
-      "type": "Other",
-      "statusName": "Sanguine Vitality"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -176,9 +176,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

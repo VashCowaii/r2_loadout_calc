@@ -258,9 +258,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -294,9 +292,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1370,7 +1366,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2066030702\">Monster_W2_Kafka_AIChange</a>",
-          "stackData": [],
           "latentQueue": [
             "DisPelCount"
           ]
@@ -1441,9 +1436,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2871,7 +2864,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1137001600\">Monster_W2_Kafka_TargetFilter</a>",
-          "stackData": [],
           "latentQueue": [
             "DisPelCount"
           ]
@@ -2879,7 +2871,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2066030702\">Monster_W2_Kafka_AIChange</a>",
-          "stackData": [],
           "latentQueue": [
             "DisPelCount"
           ]
@@ -2950,9 +2941,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3061,9 +3050,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3084,9 +3071,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3095,13 +3080,17 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1555277593\">Monster_W2_Kafka_RL_LowHP</a>",
+          "stackData": [
+            "MDF_LowHPRatio"
+          ],
+          "latentQueue": [
+            "DisPelCount"
+          ],
           "execute": [
             {
               "eventTrigger": "HP Change [Owner]",
@@ -3198,12 +3187,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_LowHPRatio"
-          ],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
@@ -3525,9 +3508,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3546,6 +3527,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "DispelPriorityHigh"
           ],
+          "latentQueue": [
+            "ShowHint04"
+          ],
+          "description": "Cannot deal DMG to Kafka. Will become Dominated when the next \"Revelation\" occurs. Can be dispelled.",
+          "type": "Debuff",
+          "effectName": "Revelation",
+          "statusName": "Psychological Suggestion Revelation",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3560,15 +3548,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "ShowHint04"
-          ],
-          "description": "Cannot deal DMG to Kafka. Will become Dominated when the next \"Revelation\" occurs. Can be dispelled.",
-          "type": "Debuff",
-          "effectName": "Revelation",
-          "statusName": "Psychological Suggestion Revelation"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3577,12 +3557,6 @@ const compositeAbilityObject = {
             "DispelPriorityHigh",
             "RemoveWhenCasterDead"
           ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            }
-          ],
-          "stackData": [],
           "latentQueue": [
             "BattleEventFlag",
             "MindControlCount",
@@ -3592,12 +3566,22 @@ const compositeAbilityObject = {
           "description": "Triggered at the next Revelation. Can be removed before that action.",
           "type": "Debuff",
           "effectName": "Psychological Suggestion",
-          "statusName": "Psychological Suggestion"
+          "statusName": "Psychological Suggestion",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2053914629\">Monster_W2_Kafka_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "Replace",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3627,16 +3611,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
+          "stackData": [
+            "MDF_DamageUpRatio_PerLayer"
+          ],
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3686,12 +3669,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUpRatio_PerLayer"
-          ],
-          "latentQueue": [],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3792,6 +3770,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__688364152\">Monster_W2_Kafka_RL_Power</a>",
+          "stackData": [
+            "MDF_DamageUpRatio_PerLayer"
+          ],
+          "latentQueue": [
+            "DisPelCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3888,25 +3872,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUpRatio_PerLayer"
-          ],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__488971952\">Monster_W2_Kafka_RL_Ability04_Target</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__488971952\">Monster_W2_Kafka_RL_Ability04_Target</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__108137779\">Monster_W2_Kafka_RL_Pursuit</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
+          ],
+          "latentQueue": [
+            "DisPelCount"
           ],
           "execute": [
             {
@@ -4042,10 +4021,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
@@ -4100,6 +4075,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1041839558\">Monster_W2_Kafka_RL_PartController</a>",
+          "latentQueue": [
+            "DisPelCount"
+          ],
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -4234,15 +4212,14 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-879407781\">Monster_W2_Kafka_CharmTargetMark</a>",
+          "latentQueue": [
+            "PursuitCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -4250,10 +4227,6 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "PursuitCheck"
           ]
         },
         {
@@ -4301,6 +4274,10 @@ const compositeAbilityObject = {
             "AvatarBreak",
             "RemoveWhenCasterDead"
           ],
+          "description": "Makes a single target unable to take action. Target will use Basic ATK to attack a random ally of theirs. If an ability is cast on the target to remove a debuff, the Dominated status will be removed first.",
+          "type": "Debuff",
+          "effectName": "Dominated",
+          "statusName": "Dominated",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -4445,11 +4422,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Makes a single target unable to take action. Target will use Basic ATK to attack a random ally of theirs. If an ability is cast on the target to remove a debuff, the Dominated status will be removed first.",
-          "type": "Debuff",
-          "effectName": "Dominated",
-          "statusName": "Dominated"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4501,13 +4474,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4525,10 +4497,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4613,6 +4582,12 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1082518094\">Monster_W2_Kafka_Pursuit</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
+          ],
+          "stackData": [
+            "MDF_Count"
+          ],
+          "latentQueue": [
+            "DisPelCount"
           ],
           "execute": [
             {
@@ -4844,12 +4819,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Count"
-          ],
-          "latentQueue": [
-            "DisPelCount"
           ]
         }
       ],

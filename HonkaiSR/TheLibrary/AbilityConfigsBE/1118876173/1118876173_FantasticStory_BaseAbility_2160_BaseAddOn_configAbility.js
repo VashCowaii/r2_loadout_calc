@@ -36,6 +36,27 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1465238703\">Modifier_FantasticStory_BaseAbility_2160_BaseAddOn</a>",
       "stackType": "ReplaceByCaster",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1418148626\">Modifier_FantasticStory_BaseAbility_2160_BaseAddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
+          "haloStatus": true,
+          "valuePerStack": {
+            "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value": {
+              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value) || RETURN",
+              "displayLines": "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value",
+              "constants": [],
+              "variables": [
+                "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value"
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Anyone]: Any",
@@ -167,29 +188,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1418148626\">Modifier_FantasticStory_BaseAbility_2160_BaseAddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
-          "haloStatus": true,
-          "valuePerStack": {
-            "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value) || RETURN",
-              "displayLines": "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value"
-              ]
-            }
-          }
         }
       ]
     }

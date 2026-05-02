@@ -34,9 +34,7 @@ const configAbility = {
         {
           "eventTrigger": "Take Damage Start [Owner]: Hit"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -51,9 +49,7 @@ const configAbility = {
         {
           "eventTrigger": "End Broken State [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -62,9 +58,7 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

@@ -23,6 +23,8 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -56,14 +58,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-753898483\">MWNormalAttack_Ultimate_Concentrate</a>",
           "stackType": "ReplaceByCaster",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -86,9 +88,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -291,6 +291,8 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1796707595\">MWZaika_Passive_UltraDamageUp</a>",
           "stackType": "ReplaceByCaster",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -332,9 +334,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -429,6 +429,15 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackLimit": 6,
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (StackModifierLayers) || RETURN",
+            "displayLines": "StackModifierLayers",
+            "constants": [],
+            "variables": [
+              "StackModifierLayers"
+            ]
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -495,16 +504,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 6,
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (StackModifierLayers) || RETURN",
-            "displayLines": "StackModifierLayers",
-            "constants": [],
-            "variables": [
-              "StackModifierLayers"
-            ]
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -512,6 +512,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [],
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -598,8 +599,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -607,6 +607,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [],
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -693,14 +694,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-686469537\">WB_IceShield_IceBlast_Modifier</a>",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [],
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -728,8 +729,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -738,6 +738,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Shield"
           ],
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -801,8 +802,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -841,6 +841,7 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-317978227\">MWTuiTiao_Passive_Electric</a>",
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -879,8 +880,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "useEntitySnapshot": true
+          ]
         },
         {
           "name": "Modifier Construction",

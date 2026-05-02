@@ -50,6 +50,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2017566930\">Anaxa_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
+          "stackData": [
+            "MDF_PropertyRatio"
+          ],
+          "description": "DMG dealt is <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original DMG.",
+          "type": "Buff",
+          "statusName": "Everything Is in Everything",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -72,14 +78,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt is <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original DMG.",
-          "type": "Buff",
-          "statusName": "Everything Is in Everything"
+          ]
         }
       ],
       "targetObjectData": {
@@ -208,9 +207,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -272,9 +269,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -321,9 +316,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -394,9 +387,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -423,6 +414,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "statusName": "Imperative Hiatus",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -445,15 +439,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "statusName": "Imperative Hiatus"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-879409639\">Anaxa_Trace02_Sub</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "statusName": "Imperative Hiatus",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -476,10 +470,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "statusName": "Imperative Hiatus"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -829,9 +820,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1141,9 +1130,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1237,6 +1224,10 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "ListenBattleEventSkill"
           ],
+          "description": "Anaxa deals <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> increased DMG to the target. Furthermore, after using Basic ATK or Skill on the target, he uses 1 additional instance of Skill on it.",
+          "type": "Debuff",
+          "effectName": "Qualitative Disclosure",
+          "statusName": "Qualitative Disclosure",
           "execute": [
             {
               "eventTrigger": "Ability Use [Anyone]: Start",
@@ -1323,11 +1314,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Anaxa deals <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> increased DMG to the target. Furthermore, after using Basic ATK or Skill on the target, he uses 1 additional instance of Skill on it.",
-          "type": "Debuff",
-          "effectName": "Qualitative Disclosure",
-          "statusName": "Qualitative Disclosure"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1575,6 +1562,36 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-552811494\">Anaxa_Passive_Mark_Property</a>",
+              "haloStatus": true
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-353589008\">Anaxa_Passive_WeaknessListener</a>",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_WeaknessNeed": {
+                  "operator": "Variables[0] (5) || RETURN",
+                  "displayLines": "5",
+                  "constants": [],
+                  "variables": [
+                    5
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -1744,38 +1761,6 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-552811494\">Anaxa_Passive_Mark_Property</a>",
-              "haloStatus": true
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-353589008\">Anaxa_Passive_WeaknessListener</a>",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_WeaknessNeed": {
-                  "operator": "Variables[0] (5) || RETURN",
-                  "displayLines": "5",
-                  "constants": [],
-                  "variables": [
-                    5
-                  ]
-                }
-              }
             }
           ]
         }
@@ -2201,6 +2186,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__671072840\">Anaxa_BPAbility_Bonus</a>[<span class=\"descriptionNumberColor\">Blaze, Plunged to Canyon</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Blaze, Plunged to Canyon",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2224,15 +2216,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Blaze, Plunged to Canyon"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2251,9 +2235,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2304,9 +2286,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2465,6 +2445,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1815988112\">M_Anaxa_StartFreeBP</a>",
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>"
+          },
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2496,16 +2480,13 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>"
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1540917869\">M_Anaxa_PrepareFreeBP</a>",
           "stackType": "ReplaceByCaster",
+          "stackLimit": 99999,
           "execute": [
             {
               "eventTrigger": "Turn Start [Anyone]",
@@ -2575,10 +2556,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "stackLimit": 99999
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2587,6 +2565,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
+          "stackLimit": 99999,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2751,10 +2730,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "stackLimit": 99999
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2764,6 +2740,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_AttachWeakness"
           ],
+          "description": "Physical, Fire, Ice, Lightning, Wind, Quantum, and Imaginary Weaknesses are added at the same time.",
+          "type": "Debuff",
+          "effectName": "Sublimation",
+          "statusName": "Sublimation",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3005,13 +2985,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Physical, Fire, Ice, Lightning, Wind, Quantum, and Imaginary Weaknesses are added at the same time.",
-          "type": "Debuff",
-          "effectName": "Sublimation",
-          "statusName": "Sublimation"
+          ]
         }
       ],
       "references": []

@@ -1457,6 +1457,13 @@ const compositeAbilityObject = {
             "STAT_Stun_Effect",
             "STAT_CTRL"
           ],
+          "latentQueue": [
+            "Index_Caster"
+          ],
+          "description": "Cannot take action. At the start of the turn, if \"%CasterName\" is not in Charging state, \"%CasterName\" will initiate a Sweep attack.",
+          "type": "Debuff",
+          "effectName": "Revelry",
+          "statusName": "Revelry",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1484,15 +1491,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Index_Caster"
-          ],
-          "description": "Cannot take action. At the start of the turn, if \"%CasterName\" is not in Charging state, \"%CasterName\" will initiate a Sweep attack.",
-          "type": "Debuff",
-          "effectName": "Revelry",
-          "statusName": "Revelry"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1500,6 +1499,14 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1522,16 +1529,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1547,14 +1545,19 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-989097149\">MModifier_Monster_W4_Claymore_02_Ability03_AllDamageTypeTaken</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1577,15 +1580,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1593,6 +1588,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "description": "When taking the next action, uses \"Time to Rock!\" When Aha Instant is triggered or Weakness is broken and dispels Charging. After Aha Instant is triggered, grants the target team Punchline, and increases the DMG taken by this unit.",
+          "type": "Other",
+          "effectName": "Charging",
+          "statusName": "Charging",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1897,13 +1896,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When taking the next action, uses \"Time to Rock!\" When Aha Instant is triggered or Weakness is broken and dispels Charging. After Aha Instant is triggered, grants the target team Punchline, and increases the DMG taken by this unit.",
-          "type": "Other",
-          "effectName": "Charging",
-          "statusName": "Charging"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2012,9 +2005,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2035,13 +2026,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-541569260\">W4_Claymore_02_BattleScore1</a>",
+          "latentQueue": [
+            "AIFlag",
+            "MDF_Trigger"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2058,11 +2051,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag",
-            "MDF_Trigger"
           ]
         }
       ],

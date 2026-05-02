@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-252647528\">MLevel_BattleEventAbility_Challenge_06</a>[<span class=\"descriptionNumberColor\">Ice Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Ice DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
+      "type": "Debuff",
+      "effectName": "Ice Vulnerability",
+      "statusName": "Ice Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -41,11 +45,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Ice DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
-      "type": "Debuff",
-      "effectName": "Ice Vulnerability",
-      "statusName": "Ice Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -96,9 +96,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

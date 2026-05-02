@@ -26,8 +26,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__534587357\">Relic_114_AbilityPreShowModifier</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -73,6 +71,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "SPD +<span class=\"descriptionNumberColor\">#SkillRelic_114_4_P1_SpeedAddRatio</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "Messenger Traversing Hackerspace",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -95,11 +97,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD +<span class=\"descriptionNumberColor\">#SkillRelic_114_4_P1_SpeedAddRatio</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "Messenger Traversing Hackerspace"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -152,9 +150,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

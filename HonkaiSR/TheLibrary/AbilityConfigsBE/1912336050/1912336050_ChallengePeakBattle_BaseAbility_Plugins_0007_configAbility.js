@@ -18,6 +18,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1588986863\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_04</a>[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
+      "description": "Break Effect increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0007_ADF_1</span>.",
+      "type": "Other",
+      "statusName": "No Break No Rise",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,15 +43,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Break Effect increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0007_ADF_1</span>.",
-      "type": "Other",
-      "statusName": "No Break No Rise"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1538654006\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_03</a>[<span class=\"descriptionNumberColor\">No Break No Rise</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases the Break DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0007_ADF_2</span>. This effect can stack up to <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0007_ADF_3</span> time(s).",
+      "type": "Other",
+      "statusName": "No Break No Rise",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -91,11 +95,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases the Break DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0007_ADF_2</span>. This effect can stack up to <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0007_ADF_3</span> time(s).",
-      "type": "Other",
-      "statusName": "No Break No Rise",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -263,9 +263,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

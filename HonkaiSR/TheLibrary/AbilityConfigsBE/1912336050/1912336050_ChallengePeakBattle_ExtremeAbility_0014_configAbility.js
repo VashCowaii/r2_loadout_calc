@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1706325911\">Modifier_ChallengePeakBattle_ExtremeAbility_0014_02</a>[<span class=\"descriptionNumberColor\">Confinement++</span>]",
       "stackType": "Replace",
+      "description": "Each stack decreases DMG dealt by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0014_ADF_2</span>, and 1 stack is removed after each Ultimate used.",
+      "type": "Other",
+      "statusName": "Confinement++",
+      "addStacksPerTrigger": -1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -219,11 +223,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack decreases DMG dealt by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0014_ADF_2</span>, and 1 stack is removed after each Ultimate used.",
-      "type": "Other",
-      "statusName": "Confinement++",
-      "addStacksPerTrigger": -1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -294,9 +294,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

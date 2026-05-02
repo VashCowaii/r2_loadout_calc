@@ -707,18 +707,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1910872171\">Enemy_W1_WRMecha_01_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -730,9 +726,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Choice Window [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1994,18 +1988,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1910872171\">Enemy_W1_WRMecha_01_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2017,9 +2007,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Choice Window [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2036,6 +2024,15 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-557071994\">XP_Ice_Elite_Powerful_Modifier</a>[<span class=\"descriptionNumberColor\">Freezing Point</span>]",
+          "stackData": [
+            "Modifier_AllDamageTypeResistance",
+            "Modifier_StanceWeakAddedRatio",
+            "Modifier_Stance"
+          ],
+          "description": "Ice Out of Space's attack mode is enhanced.",
+          "type": "Other",
+          "effectName": "Freezing Point",
+          "statusName": "Freezing Point",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2067,17 +2064,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "Modifier_AllDamageTypeResistance",
-            "Modifier_StanceWeakAddedRatio",
-            "Modifier_Stance"
-          ],
-          "latentQueue": [],
-          "description": "Ice Out of Space's attack mode is enhanced.",
-          "type": "Other",
-          "effectName": "Freezing Point",
-          "statusName": "Freezing Point"
+          ]
         }
       ],
       "references": []

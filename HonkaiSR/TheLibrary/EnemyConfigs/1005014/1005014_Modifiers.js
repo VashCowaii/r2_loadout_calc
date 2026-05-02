@@ -11,6 +11,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2040913929\">Monster_W1_CocoliaP2_IF_IcePower</a>",
+      "stackData": [
+        "MDF_DamageUpRatio_PerLayer"
+      ],
+      "latentQueue": [
+        "Cocolia_AICounter"
+      ],
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -152,17 +158,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "Cocolia_AICounter"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__155177783\">Monster_W1_CocoliaP2_IF_BOSS_PowerUp</a>",
+      "stackData": [
+        "MDF_Cocolia_IF_BOSS_AllDamageReduce",
+        "MDF_Cocolia_IF_BOSS_AllDamageTypeAddedRatio",
+        "MDF_Cocolia_IF_BOSS_SpeedAddedRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -272,13 +277,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Cocolia_IF_BOSS_AllDamageReduce",
-        "MDF_Cocolia_IF_BOSS_AllDamageTypeAddedRatio",
-        "MDF_Cocolia_IF_BOSS_SpeedAddedRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -430,13 +429,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1386398687\">Monster_IF_BOSS_Standard_Weakness</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+      "stackData": [
+        "MDF_IF_BOSS_WeaknessDMGUpRatio"
+      ],
+      "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_IF_BOSS_WeaknessDMGUpRatio</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -479,15 +483,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_IF_BOSS_WeaknessDMGUpRatio"
-      ],
-      "latentQueue": [],
-      "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_IF_BOSS_WeaknessDMGUpRatio</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -813,9 +809,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -921,9 +915,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1119,13 +1111,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-691854564\">Enemy_W2_Cocolia_IF_WeaknessCount_Sub02</a>[<span class=\"descriptionNumberColor\">Tenacious Resolve</span>]",
+      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_TokenDamageAddRatio</span>.",
+      "type": "Debuff",
+      "statusName": "Tenacious Resolve",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1150,14 +1143,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_TokenDamageAddRatio</span>.",
-      "type": "Debuff",
-      "statusName": "Tenacious Resolve"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-641521707\">Enemy_W2_Cocolia_IF_WeaknessCount_Sub01</a>[<span class=\"descriptionNumberColor\">Tenacious Resolve</span>]",
+      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_TokenDamageReduceRatio</span>.",
+      "type": "Buff",
+      "statusName": "Tenacious Resolve",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1180,14 +1173,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_TokenDamageReduceRatio</span>.",
-      "type": "Buff",
-      "statusName": "Tenacious Resolve"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-146543153\">Enemy_W2_Cocolia_IF_WeaknessCount</a>",
+      "stackData": [
+        "MDF_TokenDamageReduceRatio",
+        "MDF_TokenDamageAddRatioPerlayer"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -1541,12 +1535,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_TokenDamageReduceRatio",
-        "MDF_TokenDamageAddRatioPerlayer"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1818,9 +1807,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2034,15 +2021,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-822615197\">Enemy_W1_CocoliaP2_IF_SplitWeakness_ShowSub</a>[<span class=\"descriptionNumberColor\">Scapegoat of Sins</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "A Weakness Type has been transferred from Annihilator of Desolation Mistral: Mother of Deception to this unit. The Weakness Type will be returned when this unit is defeated.",
       "type": "Other",
       "statusName": "Scapegoat of Sins"
@@ -2050,8 +2033,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-426543761\">Enemy_W1_CocoliaP2_IF_SplitWeakness_Show</a>[<span class=\"descriptionNumberColor\">Devious Metamorphosis</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "The Weakness Type has been transferred to Lance of the Eternal Freeze.",
       "type": "Other",
       "statusName": "Devious Metamorphosis"
@@ -2059,8 +2040,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-145483550\">Enemy_W1_CocoliaP1_IF_SplitWeakness_ShowSub</a>[<span class=\"descriptionNumberColor\">Scapegoat of Sins</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "A Weakness Type has been transferred from Annihilator of Desolation Mistral to this unit. The Weakness Type will be returned when this unit is defeated.",
       "type": "Other",
       "statusName": "Scapegoat of Sins"
@@ -2068,8 +2047,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1094163808\">Enemy_W1_CocoliaP1_IF_SplitWeakness_Show</a>[<span class=\"descriptionNumberColor\">Devious Metamorphosis</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "The Weakness Type has been transferred to Ice Edge.",
       "type": "Other",
       "statusName": "Devious Metamorphosis"
@@ -2093,9 +2070,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2116,9 +2091,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2139,9 +2112,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2162,63 +2133,49 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1623684616\">Enemy_W2_CocoliaP2_IF_SummonDieD</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1741127949\">Enemy_W2_CocoliaP2_IF_SummonDieC</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1724350330\">Enemy_W2_CocoliaP2_IF_SummonDieB</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1707572711\">Enemy_W2_CocoliaP2_IF_SummonDieA</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1230378224\">Enemy_W2_Cocolia_IF_SummonDieB</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1280711081\">Enemy_W2_Cocolia_IF_SummonDieA</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2278,14 +2235,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__515238365\">Enemy_W2_Cocolia_IF_ReduceHealTakenRatio_PLY</a>",
       "stackType": "Replace",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2319,8 +2275,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2362,6 +2317,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__222390491\">Enemy_W2_Cocolia_IF_ExtraStance</a>",
+      "stackData": [
+        "MDF_ExtraStanceRatio",
+        "MDF_StanceDMGPerTeamMate"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2453,18 +2412,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ExtraStanceRatio",
-        "MDF_StanceDMGPerTeamMate"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1225888494\">Enemy_W2_Cocolia_IF_SummonDie</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1225888494\">Enemy_W2_Cocolia_IF_SummonDie</a>"
     },
     {
       "name": "Modifier Construction",
@@ -2473,13 +2425,14 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1783900265\">Enemy_W2_Cocolia_IF_ExtraFrozenDamageRatio</a>",
+      "stackData": [
+        "MDF_ExtraFrozenDamageRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2548,11 +2501,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ExtraFrozenDamageRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2871,15 +2820,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__2038881084\">Monster_W1_CocoliaP1_IF_02_AccumulatePower</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__2038881084\">Monster_W1_CocoliaP1_IF_02_AccumulatePower</a>"
     },
     {
       "name": "Modifier Construction",
@@ -2888,9 +2833,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2910,9 +2853,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2997,9 +2938,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3008,6 +2947,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1780808632\">Enemy_W1_CocoliaP2_MarkPlayer10_Controller</a>",
+      "latentQueue": [
+        "Cocolia_AICounter",
+        "Cocolia_Tips_Taunt"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -3055,11 +2998,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Cocolia_AICounter",
-        "Cocolia_Tips_Taunt"
       ]
     },
     {
@@ -3201,13 +3139,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1361193715\">Enemy_W1_CocoliaP2_SpinSpeedController</a>",
+      "latentQueue": [
+        "Cocolia_AICounter",
+        "Cocolia_Tips_Taunt"
+      ],
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo"
@@ -3218,25 +3158,19 @@ const configAbility = {
         {
           "eventTrigger": "End Broken State [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Cocolia_AICounter",
-        "Cocolia_Tips_Taunt"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2030503230\">Enemy_W1_CocoliaP2_EnvironmentEffect_ALL</a>",
+      "latentQueue": [
+        "Cocolia_AICounter",
+        "Cocolia_Tips_Taunt"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Cocolia_AICounter",
-        "Cocolia_Tips_Taunt"
       ]
     },
     {
@@ -3246,9 +3180,7 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3257,9 +3189,7 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3324,9 +3254,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3335,23 +3263,19 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "AttackSign"
       ],
+      "description": "%CasterName will focus attacks on this target.",
+      "type": "Other",
+      "effectName": "Harbinger of Annihilation",
+      "statusName": "Harbinger of Annihilation",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "%CasterName will focus attacks on this target.",
-      "type": "Other",
-      "effectName": "Harbinger of Annihilation",
-      "statusName": "Harbinger of Annihilation"
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1444596959\">Enemy_W1_CocoliaP2_Weekly</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1444596959\">Enemy_W1_CocoliaP2_Weekly</a>"
     }
   ],
   "references": []

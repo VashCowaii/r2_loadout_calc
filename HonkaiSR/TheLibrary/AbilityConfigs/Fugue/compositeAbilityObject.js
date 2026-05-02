@@ -122,9 +122,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -308,6 +306,13 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1045772852\">Fugue_Eidolon6</a>[<span class=\"descriptionNumberColor\">Clairvoyance of Boom and Doom</span>]",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Weakness Break Efficiency Boost",
+          "statusName": "Clairvoyance of Boom and Doom",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -330,15 +335,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Weakness Break Efficiency Boost",
-          "statusName": "Clairvoyance of Boom and Doom"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -388,9 +385,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -562,6 +557,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__264764178\">Fugue_PointB3_Sub02</a>",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_PropertyRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -675,29 +673,24 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__490649964\">Fugue_PointB3_Sub</a>[<span class=\"descriptionNumberColor\">Phecda Primordia</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_BreakDamageAdd"
+          ],
+          "description": "Each stack increases Break Effect by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. This effect can stack up to <span class=\"descriptionNumberColor\">#SkillTree_PointB3_P3_Layer</span> time(s).",
+          "type": "Buff",
+          "effectName": "Break Effect Boost",
+          "statusName": "Phecda Primordia",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [
-            "MDF_BreakDamageAdd"
-          ],
-          "latentQueue": [],
-          "description": "Each stack increases Break Effect by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. This effect can stack up to <span class=\"descriptionNumberColor\">#SkillTree_PointB3_P3_Layer</span> time(s).",
-          "type": "Buff",
-          "effectName": "Break Effect Boost",
-          "statusName": "Phecda Primordia"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -920,14 +913,19 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1748420043\">Fugue_PointB2_Sub</a>[<span class=\"descriptionNumberColor\">Sylvan Enigma</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyRatio_BreakDamageSelf"
+          ],
+          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio_BreakDamageSelf</span>.",
+          "type": "Buff",
+          "effectName": "Break Effect Boost",
+          "statusName": "Sylvan Enigma",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -950,15 +948,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio_BreakDamageSelf"
-          ],
-          "latentQueue": [],
-          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio_BreakDamageSelf</span>.",
-          "type": "Buff",
-          "effectName": "Break Effect Boost",
-          "statusName": "Sylvan Enigma"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -991,9 +981,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1122,15 +1110,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-825933762\">Fugue_PassiveAbility_OnListenBreakModifier</a>",
-          "stackData": [],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -1763,6 +1747,19 @@ const compositeAbilityObject = {
             "ListenBattleEventSkill",
             "ForceStanceDamage"
           ],
+          "stackData": [
+            "MDF_BreakDamageAdd",
+            "MDF_StanceBreakAddRatio",
+            "MDF_Chance",
+            "MDF_DefenceDownRatio",
+            "MDF_BreakDamageAddedRatio",
+            "MDF_LifeTime",
+            "MDF_PropertyRatio"
+          ],
+          "description": "Break DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAddedRatio</span>, Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_StanceBreakAddRatio</span>, and Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
+          "type": "Buff",
+          "effectName": "Foxian Prayer",
+          "statusName": "Foxian Prayer",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1870,21 +1867,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_BreakDamageAdd",
-            "MDF_StanceBreakAddRatio",
-            "MDF_Chance",
-            "MDF_DefenceDownRatio",
-            "MDF_BreakDamageAddedRatio",
-            "MDF_LifeTime",
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [],
-          "description": "Break DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAddedRatio</span>, Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_StanceBreakAddRatio</span>, and Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
-          "type": "Buff",
-          "effectName": "Foxian Prayer",
-          "statusName": "Foxian Prayer"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1896,6 +1879,18 @@ const compositeAbilityObject = {
             "ListenBattleEventSkill",
             "ForceStanceDamage"
           ],
+          "stackData": [
+            "MDF_BreakDamageAdd",
+            "MDF_StanceBreakAddRatio",
+            "MDF_Chance",
+            "MDF_DefenceDownRatio",
+            "MDF_LifeTime",
+            "MDF_PropertyRatio"
+          ],
+          "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_StanceBreakAddRatio</span>. Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
+          "type": "Buff",
+          "effectName": "Foxian Prayer",
+          "statusName": "Foxian Prayer",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1963,20 +1958,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_BreakDamageAdd",
-            "MDF_StanceBreakAddRatio",
-            "MDF_Chance",
-            "MDF_DefenceDownRatio",
-            "MDF_LifeTime",
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [],
-          "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_StanceBreakAddRatio</span>. Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
-          "type": "Buff",
-          "effectName": "Foxian Prayer",
-          "statusName": "Foxian Prayer"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1988,6 +1970,17 @@ const compositeAbilityObject = {
             "ListenBattleEventSkill",
             "ForceStanceDamage"
           ],
+          "stackData": [
+            "MDF_BreakDamageAdd",
+            "MDF_Chance",
+            "MDF_DefenceDownRatio",
+            "MDF_LifeTime",
+            "MDF_PropertyRatio"
+          ],
+          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
+          "type": "Buff",
+          "effectName": "Foxian Prayer",
+          "statusName": "Foxian Prayer",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2039,24 +2032,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_BreakDamageAdd",
-            "MDF_Chance",
-            "MDF_DefenceDownRatio",
-            "MDF_LifeTime",
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [],
-          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
-          "type": "Buff",
-          "effectName": "Foxian Prayer",
-          "statusName": "Foxian Prayer"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_Chance",
+            "MDF_DefenceDownRatio",
+            "MDF_LifeTime"
+          ],
+          "description": "The Basic ATK \"Radiant Streak\" is enhanced to \"Fiery Caress\" that can deal Blast DMG. Every time an ally target with \"Foxian Prayer\" attacks, Fugue has a <span class=\"descriptionNumberColor\">MDF_Chance</span> base chance to reduce the attacked enemy target's DEF by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>, lasting for <span class=\"descriptionNumberColor\">MDF_LifeTime</span> turn(s).",
+          "type": "Other",
+          "statusName": "Torrid Scorch",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2183,16 +2172,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Chance",
-            "MDF_DefenceDownRatio",
-            "MDF_LifeTime"
-          ],
-          "latentQueue": [],
-          "description": "The Basic ATK \"Radiant Streak\" is enhanced to \"Fiery Caress\" that can deal Blast DMG. Every time an ally target with \"Foxian Prayer\" attacks, Fugue has a <span class=\"descriptionNumberColor\">MDF_Chance</span> base chance to reduce the attacked enemy target's DEF by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>, lasting for <span class=\"descriptionNumberColor\">MDF_LifeTime</span> turn(s).",
-          "type": "Other",
-          "statusName": "Torrid Scorch"
+          ]
         }
       ],
       "targetObjectData": {
@@ -2453,6 +2433,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_SuperBreakDamagePercentage"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2520,11 +2503,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SuperBreakDamagePercentage"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2533,6 +2512,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "STAT_SuperBreakBuff"
+          ],
+          "stackData": [
+            "MDF_PassiveDamage2"
           ],
           "execute": [
             {
@@ -2560,11 +2542,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": 100
             }
-          ],
-          "stackData": [
-            "MDF_PassiveDamage2"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2595,15 +2573,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__873674204\">Fugue_StancePreview</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -2626,6 +2600,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_DefenceDown"
           ],
+          "stackData": [
+            "MDF_DefenceDownRatio"
+          ],
+          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "Virtue Beckons Bliss",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -2642,21 +2623,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DefenceDownRatio"
-          ],
-          "latentQueue": [],
-          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "Virtue Beckons Bliss"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__915939939\">Fugue_Eidolon2_PreShow</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -2683,8 +2654,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__696396442\">Fugue_Eidolon6_Listen</a>",
-          "stackData": [],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -2763,6 +2732,15 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_PassiveDamage2",
+            "MDF_RedStanceRatio",
+            "MDF_MinStance"
+          ],
+          "description": "When initial Toughness is reduced to 0, \"Cloudflame Luster\" can continue to be reduced. When \"Cloudflame Luster\" is reduced to 0, the enemy will receive Weakness Break DMG again.",
+          "type": "Other",
+          "effectName": "Cloudflame Luster",
+          "statusName": "Cloudflame Luster",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2887,17 +2865,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PassiveDamage2",
-            "MDF_RedStanceRatio",
-            "MDF_MinStance"
-          ],
-          "latentQueue": [],
-          "description": "When initial Toughness is reduced to 0, \"Cloudflame Luster\" can continue to be reduced. When \"Cloudflame Luster\" is reduced to 0, the enemy will receive Weakness Break DMG again.",
-          "type": "Other",
-          "effectName": "Cloudflame Luster",
-          "statusName": "Cloudflame Luster"
+          ]
         }
       ],
       "references": []

@@ -26,6 +26,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-515052173\">Relic_121_Sub</a>[<span class=\"descriptionNumberColor\">Sacerdos' Relived Ordeal</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases CRIT DMG dealt by <span class=\"descriptionNumberColor\">#SkillRelic_121_4_P1_CriticalDamage</span>. This effect can stack up to <span class=\"descriptionNumberColor\">#SkillRelic_121_4_P3_MaxLayer</span> time(s).",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "Sacerdos' Relived Ordeal",
+          "stackLimit": 2,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -59,13 +65,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases CRIT DMG dealt by <span class=\"descriptionNumberColor\">#SkillRelic_121_4_P1_CriticalDamage</span>. This effect can stack up to <span class=\"descriptionNumberColor\">#SkillRelic_121_4_P3_MaxLayer</span> time(s).",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "Sacerdos' Relived Ordeal",
-          "stackLimit": 2,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -214,9 +214,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

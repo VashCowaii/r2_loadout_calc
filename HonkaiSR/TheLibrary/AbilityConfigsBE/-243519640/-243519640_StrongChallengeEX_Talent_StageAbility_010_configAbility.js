@@ -80,6 +80,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1359820035\">MStrongChallengeEX_Talent_StageAbility_LE_010</a>[<span class=\"descriptionNumberColor\">Moment of Termination</span>]",
+      "description": "Ultimate deals <span class=\"descriptionNumberColor\">#ADF_1</span> more DMG.",
+      "type": "Buff",
+      "statusName": "Moment of Termination",
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -112,12 +115,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Ultimate deals <span class=\"descriptionNumberColor\">#ADF_1</span> more DMG.",
-      "type": "Buff",
-      "statusName": "Moment of Termination"
+      ]
     }
   ]
 }

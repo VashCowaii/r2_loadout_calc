@@ -158,6 +158,27 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__664482430\">JingYuan_Ability03_PreShow</a>",
       "stackType": "ReplaceByCaster",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster's Self-Made Battle-Events}}"
+        },
+        "skillType": [
+          "Ultimate"
+        ],
+        "conditions": {
+          "name": "Compare: Variable",
+          "value1": "_AddLayer",
+          "compareType": ">",
+          "value2": 0
+        },
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": "(10 * _AddLayer)(SPD Change)"
+        }
+      },
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -270,9 +291,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1804998877\">JingYuan_Ability02_PreShow</a>",
+      "stackType": "ReplaceByCaster",
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -281,7 +305,7 @@ const configAbility = {
           "target": "{{Caster's Self-Made Battle-Events}}"
         },
         "skillType": [
-          "Ultimate"
+          "Skill"
         ],
         "conditions": {
           "name": "Compare: Variable",
@@ -293,12 +317,7 @@ const configAbility = {
           "name": "Delay/Advance Preview",
           "previewValue": "(10 * _AddLayer)(SPD Change)"
         }
-      }
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1804998877\">JingYuan_Ability02_PreShow</a>",
-      "stackType": "ReplaceByCaster",
+      },
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -411,30 +430,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "target": {
-          "name": "Target Name",
-          "target": "{{Caster's Self-Made Battle-Events}}"
-        },
-        "skillType": [
-          "Skill"
-        ],
-        "conditions": {
-          "name": "Compare: Variable",
-          "value1": "_AddLayer",
-          "compareType": ">",
-          "value2": 0
-        },
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": "(10 * _AddLayer)(SPD Change)"
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -482,15 +478,11 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-2008282890\">JingYuan_ListenFlag</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-2008282890\">JingYuan_ListenFlag</a>"
     }
   ],
   "targetObjectData": {

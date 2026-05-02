@@ -115,6 +115,11 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1587455609\">DanHengIL_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
+      "type": "Buff",
+      "statusName": "Righteous Heart",
+      "duration": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -155,12 +160,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
-      "type": "Buff",
-      "statusName": "Righteous Heart",
-      "duration": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -484,15 +484,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-247396096\">Ability03PreShowModifier</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",

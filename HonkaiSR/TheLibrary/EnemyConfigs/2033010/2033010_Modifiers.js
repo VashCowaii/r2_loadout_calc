@@ -53,9 +53,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -127,9 +125,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -140,6 +136,11 @@ const configAbility = {
         "STAT_CTRL",
         "AvatarBreak"
       ],
+      "useEntitySnapshot": true,
+      "description": "Unable to move until the start of this unit's next turn.",
+      "type": "Debuff",
+      "effectName": "Becomes Terrified",
+      "statusName": "Terrified",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -178,12 +179,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Unable to move until the start of this unit's next turn.",
-      "type": "Debuff",
-      "effectName": "Becomes Terrified",
-      "statusName": "Terrified"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -269,6 +265,14 @@ const configAbility = {
         "ListenBattleEventSkill",
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_LoseSP"
+      ],
+      "description": "Enters the \"Terrified\" state at the start of the second turn. Attacking the %CasterName 1 time before then can dispel \"Terror Grip.\"",
+      "type": "Debuff",
+      "effectName": "Terror Grip",
+      "statusName": "Terror Grip",
+      "duration": 2,
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -427,16 +431,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_LoseSP"
-      ],
-      "latentQueue": [],
-      "description": "Enters the \"Terrified\" state at the start of the second turn. Attacking the %CasterName 1 time before then can dispel \"Terror Grip.\"",
-      "type": "Debuff",
-      "effectName": "Terror Grip",
-      "statusName": "Terror Grip",
-      "duration": 2
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -448,8 +443,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__74215986\">Enemy_W2_LycanMecha_Ability06_Impact</a>[<span class=\"descriptionNumberColor\">Blood Fervor</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "The Bloodlust stacks needed to enter the Moon Rage status are reduced.",
       "type": "Buff",
       "effectName": "Bloodlust limit reduced",
@@ -458,6 +451,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1246058342\">Enemy_W2_LycanMecha_BattleCry</a>",
+      "latentQueue": [
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -482,15 +478,14 @@ const configAbility = {
           ],
           "priorityLevel": -45
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-645995038\">Enemy_W2_LycanMecha_BattleCryTag</a>",
+      "latentQueue": [
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Losing Modifier [Owner]",
@@ -507,10 +502,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
       ]
     }
   ],

@@ -37,9 +37,7 @@ const configAbility = {
             "Deleted bullshit"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

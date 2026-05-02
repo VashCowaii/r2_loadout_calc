@@ -46,14 +46,21 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1908212065\">Monster_Company_Coin_Avater_Effect</a>",
       "stackType": "Replace",
+      "stackLimit": 3,
+      "addStacksPerTrigger": {
+        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+        "displayLines": "ModifierStackLayer",
+        "constants": [],
+        "variables": [
+          "ModifierStackLayer"
+        ]
+      },
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -83,16 +90,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 3,
-      "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -101,6 +99,7 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__481524186\">Monster_Company_Coin_Monster_Mark</a>",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "Attack Action Completed [Owner]",
@@ -208,13 +207,25 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__141077401\">Monster_Company_Coin_Avater</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
       "stackType": "Replace",
+      "description": "Interastral Peace Corporation's employee Performance Points. Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>, stacking up to <span class=\"descriptionNumberColor\">MaxLayer</span> time(s). All Performance Points are consumed when this unit uses Basic ATK, Skill, or Ultimate. Performance Points can be seized by the attacker when this unit receives a killing blow from an Interastral Peace Corporation Employee.",
+      "type": "Buff",
+      "effectName": "Performance Points",
+      "statusName": "Performance Points",
+      "stackLimit": 3,
+      "addStacksPerTrigger": {
+        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+        "displayLines": "ModifierStackLayer",
+        "constants": [],
+        "variables": [
+          "ModifierStackLayer"
+        ]
+      },
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -498,20 +509,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Interastral Peace Corporation's employee Performance Points. Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>, stacking up to <span class=\"descriptionNumberColor\">MaxLayer</span> time(s). All Performance Points are consumed when this unit uses Basic ATK, Skill, or Ultimate. Performance Points can be seized by the attacker when this unit receives a killing blow from an Interastral Peace Corporation Employee.",
-      "type": "Buff",
-      "effectName": "Performance Points",
-      "statusName": "Performance Points",
-      "stackLimit": 3,
-      "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -664,6 +662,7 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1664994655\">Monster_Company_Coin_Elite_RemoveEffect</a>",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "Being Attacked End [Owner]",
@@ -702,8 +701,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -712,6 +710,22 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
+      "stackData": [
+        "MDF_DamageUpRatio_PerLayer"
+      ],
+      "description": "Interastral Peace Corporation's employee Performance Points. Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>, stacking up to <span class=\"descriptionNumberColor\">MaxLayer</span> time(s). All Performance Points are consumed when this unit uses an attack. Performance Points can be seized by the attacker when this unit's Weakness is Broken or this unit receives a killing blow.",
+      "type": "Buff",
+      "effectName": "Performance Points",
+      "statusName": "Performance Points",
+      "stackLimit": 3,
+      "addStacksPerTrigger": {
+        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+        "displayLines": "ModifierStackLayer",
+        "constants": [],
+        "variables": [
+          "ModifierStackLayer"
+        ]
+      },
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1300,28 +1314,12 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
-      "latentQueue": [],
-      "description": "Interastral Peace Corporation's employee Performance Points. Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>, stacking up to <span class=\"descriptionNumberColor\">MaxLayer</span> time(s). All Performance Points are consumed when this unit uses an attack. Performance Points can be seized by the attacker when this unit's Weakness is Broken or this unit receives a killing blow.",
-      "type": "Buff",
-      "effectName": "Performance Points",
-      "statusName": "Performance Points",
-      "stackLimit": 3,
-      "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1920230349\">Monster_Company_Coin_RemoveEffect</a>",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "Being Attacked End [Owner]",
@@ -1329,12 +1327,16 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1442906756\">Monster_Company_Coin_Avater_AddMark</a>",
+      "latentQueue": [
+        "MDF_AttackType",
+        "MDF_OneAttack",
+        "AlreadyAdd"
+      ],
       "execute": [
         {
           "eventTrigger": "Attack Action Completed [Anyone]",
@@ -1350,12 +1352,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_AttackType",
-        "MDF_OneAttack",
-        "AlreadyAdd"
       ]
     },
     {
@@ -1365,6 +1361,22 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
+      "stackData": [
+        "MDF_DamageUpRatio"
+      ],
+      "description": "Interastral Peace Corporation's employee Performance Points. Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>, stacking up to <span class=\"descriptionNumberColor\">MaxLayer</span> time(s). All Performance Points are consumed when this unit uses an attack. Performance Points can be seized by the attacker when this unit's Weakness is Broken or this unit receives a killing blow.",
+      "type": "Buff",
+      "effectName": "Performance Points",
+      "statusName": "Performance Points",
+      "stackLimit": 1,
+      "addStacksPerTrigger": {
+        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+        "displayLines": "ModifierStackLayer",
+        "constants": [],
+        "variables": [
+          "ModifierStackLayer"
+        ]
+      },
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1859,28 +1871,17 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio"
-      ],
-      "latentQueue": [],
-      "description": "Interastral Peace Corporation's employee Performance Points. Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>, stacking up to <span class=\"descriptionNumberColor\">MaxLayer</span> time(s). All Performance Points are consumed when this unit uses an attack. Performance Points can be seized by the attacker when this unit's Weakness is Broken or this unit receives a killing blow.",
-      "type": "Buff",
-      "effectName": "Performance Points",
-      "statusName": "Performance Points",
-      "stackLimit": 1,
-      "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__957400517\">Monster_Company_Coin_Monster_EnergyBar3</a>",
+      "latentQueue": [
+        "MDF_AttackType",
+        "MDF_OneAttack",
+        "AlreadyAdd"
+      ],
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2074,18 +2075,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__940622898\">Monster_Company_Coin_Monster_EnergyBar2</a>",
       "latentQueue": [
         "MDF_AttackType",
         "MDF_OneAttack",
         "AlreadyAdd"
       ],
-      "duration": 1
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__940622898\">Monster_Company_Coin_Monster_EnergyBar2</a>",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2271,18 +2271,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_AttackType",
-        "MDF_OneAttack",
-        "AlreadyAdd"
-      ],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1320948340\">Monster_Company_Coin_Monster_EnergyBar</a>",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -2455,23 +2449,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1080547453\">Monster_W1_Mecha03_02_Ability04After</a>",
-      "stackData": [],
-      "latentQueue": [],
       "duration": 1
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
     },
     {
       "name": "Modifier Construction",
@@ -2480,9 +2467,7 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2555,13 +2540,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1515004059\">Monster_W1_Mecha03_02_ChargeEffect</a>[<span class=\"descriptionNumberColor\">In Training</span>]",
+      "description": "Uses Work Culture Shock in the next action.",
+      "type": "Other",
+      "statusName": "In Training",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -2572,12 +2558,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Uses Work Culture Shock in the next action.",
-      "type": "Other",
-      "statusName": "In Training"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2619,9 +2600,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

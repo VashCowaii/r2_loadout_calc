@@ -21,6 +21,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "SPD Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -43,11 +47,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "SPD Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -56,6 +56,10 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "Increases DoT received by <span class=\"descriptionNumberColor\">MDF_TotalDotDamageAddRatio</span>.",
+      "type": "Debuff",
+      "effectName": "Enthrallment",
+      "statusName": "Enthrallment",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -242,11 +246,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DoT received by <span class=\"descriptionNumberColor\">MDF_TotalDotDamageAddRatio</span>.",
-      "type": "Debuff",
-      "effectName": "Enthrallment",
-      "statusName": "Enthrallment"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -354,9 +354,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

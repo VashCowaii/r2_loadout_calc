@@ -60,9 +60,7 @@ const configAbility = {
         {
           "eventTrigger": "Being Attacked End [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

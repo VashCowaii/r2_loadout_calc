@@ -140,6 +140,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2046125016\">Modifier_FantasticStory_BaseAbility_0010_plus6_ultraDmgUp</a>[<span class=\"descriptionNumberColor\">Splash</span>]",
       "stackType": "Replace",
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">DmgAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Splash",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -162,16 +166,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">DmgAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Splash"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__637313409\">Modifier_FantasticStory_BaseAbility_0010_plus3_ultraDmgUp</a>[<span class=\"descriptionNumberColor\">Rupture</span>]",
       "stackType": "Replace",
+      "description": "Ultimate deals <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0013_layerDmg</span> more DMG.",
+      "type": "Buff",
+      "effectName": "Ultimate DMG Boost",
+      "statusName": "Rupture",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -225,11 +229,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Ultimate deals <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0013_layerDmg</span> more DMG.",
-      "type": "Buff",
-      "effectName": "Ultimate DMG Boost",
-      "statusName": "Rupture"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -238,6 +238,10 @@ const configAbility = {
       "modifierFlags": [
         "Deathrattle"
       ],
+      "description": "When this unit's turn starts or when this unit is defeated, this unit and adjacent targets take a set amount of DMG based on the active number of Shatter stacks.",
+      "type": "Debuff",
+      "effectName": "Shatter",
+      "statusName": "Shatter",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -820,11 +824,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "When this unit's turn starts or when this unit is defeated, this unit and adjacent targets take a set amount of DMG based on the active number of Shatter stacks.",
-      "type": "Debuff",
-      "effectName": "Shatter",
-      "statusName": "Shatter"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1338,6 +1338,19 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-508947277\">Modifier_FantasticStory_BaseAbility_0010</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "ADF_1",
+        "ADF_2",
+        "TempHP"
+      ],
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_0011",
+        "DV_FantasticStory_PlusAbility_0012",
+        "DV_FantasticStory_PlusAbility_0013",
+        "DV_FantasticStory_PlusAbility_0014",
+        "DV_FantasticStory_PlusAbility_0016",
+        "DV_FantasticStory_PlusAbility_0018"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1686,19 +1699,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "ADF_1",
-        "ADF_2",
-        "TempHP"
-      ],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_0011",
-        "DV_FantasticStory_PlusAbility_0012",
-        "DV_FantasticStory_PlusAbility_0013",
-        "DV_FantasticStory_PlusAbility_0014",
-        "DV_FantasticStory_PlusAbility_0016",
-        "DV_FantasticStory_PlusAbility_0018"
       ]
     }
   ]

@@ -2009,9 +2009,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Being Attacked End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2111,9 +2109,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2323,6 +2319,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2064984483\">Monster_W2_GS_Argenti_SpecialVictory_LockHP</a>",
+          "latentQueue": [
+            "AIFlag",
+            "Phase_Flag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2399,11 +2399,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag",
-            "Phase_Flag"
           ]
         }
       ]
@@ -2634,9 +2629,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2744,9 +2737,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2803,6 +2794,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]",
           "stackType": "Refresh",
+          "description": "The knight's prayers completely ascended the soul. This is regarded as equal to \"Soulfreed.\"",
+          "type": "Buff",
+          "effectName": "Soul Ascension",
+          "statusName": "Soul Ascension",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2810,18 +2805,16 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The knight's prayers completely ascended the soul. This is regarded as equal to \"Soulfreed.\"",
-          "type": "Buff",
-          "effectName": "Soul Ascension",
-          "statusName": "Soul Ascension"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]",
           "stackType": "Refresh",
+          "description": "The knight's prayers bid the liberation of souls. Abilities have been enhanced.",
+          "type": "Buff",
+          "effectName": "Soulfreed",
+          "statusName": "Soulfreed",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2829,13 +2822,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The knight's prayers bid the liberation of souls. Abilities have been enhanced.",
-          "type": "Buff",
-          "effectName": "Soulfreed",
-          "statusName": "Soulfreed"
+          ]
         }
       ],
       "references": []

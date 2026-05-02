@@ -62,9 +62,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Put in Deathstate Limbo"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -111,9 +109,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__233985809\">Monster_XP_Elite02_02_RLElite_MuteDirtyHP</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__233985809\">Monster_XP_Elite02_02_RLElite_MuteDirtyHP</a>"
         }
       ]
     },
@@ -1107,9 +1103,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1173,9 +1167,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1183,6 +1175,9 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "MDF_DirtyHPAddedRatio"
           ],
           "execute": [
             {
@@ -1568,15 +1563,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DirtyHPAddedRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-773012193\">Monster_XP_Elite02_02_RLElite_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Japa</span>]",
+          "latentQueue": [
+            "AIFlag"
+          ],
+          "description": "Uses Black Prana's Snare on all targets during the next action.",
+          "type": "Buff",
+          "effectName": "Japa",
+          "statusName": "Japa",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1598,15 +1596,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
-          ],
-          "description": "Uses Black Prana's Snare on all targets during the next action.",
-          "type": "Buff",
-          "effectName": "Japa",
-          "statusName": "Japa"
+          ]
         }
       ],
       "references": []

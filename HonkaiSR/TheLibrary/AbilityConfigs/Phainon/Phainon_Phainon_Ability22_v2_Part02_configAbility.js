@@ -320,6 +320,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__423192378\">M_Phainon_Ability22_v2_TargetTimeslow</a>",
+      "latentQueue": [
+        "_delta_frame",
+        "_prev_energy"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -330,16 +334,15 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_delta_frame",
-        "_prev_energy"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__45709795\">M_Phainon_Ability22_Insert</a>",
+      "latentQueue": [
+        "_delta_frame",
+        "_prev_energy"
+      ],
       "execute": [
         {
           "eventTrigger": "Extra Turn Action Injection: Start",
@@ -360,11 +363,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_delta_frame",
-        "_prev_energy"
       ]
     }
   ],

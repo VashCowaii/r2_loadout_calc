@@ -243,9 +243,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -433,6 +431,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2053212342\">Acheron_Eidolon4_Listen</a>",
+          "latentQueue": [
+            "CurrentSP",
+            "MaxSP"
+          ],
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -466,11 +468,6 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "CurrentSP",
-            "MaxSP"
           ]
         },
         {
@@ -478,6 +475,10 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1580542257\">Acheron_Eidolon1_Listen</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "latentQueue": [
+            "CurrentSP",
+            "MaxSP"
           ],
           "execute": [
             {
@@ -514,11 +515,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "CurrentSP",
-            "MaxSP"
           ]
         },
         {
@@ -527,6 +523,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ListenBattleEventSkill",
             "RemoveWhenCasterDead"
+          ],
+          "latentQueue": [
+            "CurrentSP",
+            "MaxSP"
           ],
           "execute": [
             {
@@ -1412,104 +1412,6 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "triggerClampedChanges": true,
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"492194909\">Acheron_CheckCurrentSpecialSPChange</a>"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Trace Activated",
-                        "conditionList": "Red Oni"
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            "value1": "SpecialEnergy%",
-                            "compareType": ">=",
-                            "value2": 1
-                          },
-                          "passed": [
-                            {
-                              "name": "Define Custom Variable with Changes to Stats",
-                              "variableName": "Acheron_PointB1_ClampedAdd",
-                              "type": "ClampedAdd"
-                            },
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Variable",
-                                "value1": "Acheron_PointB1_ClampedAdd",
-                                "compareType": ">",
-                                "value2": 0
-                              },
-                              "passed": [
-                                {
-                                  "name": "Add Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Caster}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"62451815\">Acheron_UltraAbilitySpareCount_PointB1</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
-                                  "stackLimit": {
-                                    "operator": "Variables[0] (3) || RETURN",
-                                    "displayLines": "3",
-                                    "constants": [],
-                                    "variables": [
-                                      3
-                                    ]
-                                  },
-                                  "valuePerStack": {
-                                    "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (3) || RETURN",
-                                      "displayLines": "3",
-                                      "constants": [],
-                                      "variables": [
-                                        3
-                                      ]
-                                    }
-                                  },
-                                  "addStacksPerTrigger": {
-                                    "operator": "Variables[0] (Acheron_PointB1_ClampedAdd) || RETURN",
-                                    "displayLines": "Acheron_PointB1_ClampedAdd",
-                                    "constants": [],
-                                    "variables": [
-                                      "Acheron_PointB1_ClampedAdd"
-                                    ]
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "Acheron_PointB1_ClampedAdd",
-                              "value": 0
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
@@ -1759,10 +1661,103 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [],
-          "latentQueue": [
-            "CurrentSP",
-            "MaxSP"
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "triggerClampedChanges": true,
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"492194909\">Acheron_CheckCurrentSpecialSPChange</a>"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Trace Activated",
+                        "conditionList": "Red Oni"
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "value1": "SpecialEnergy%",
+                            "compareType": ">=",
+                            "value2": 1
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable with Changes to Stats",
+                              "variableName": "Acheron_PointB1_ClampedAdd",
+                              "type": "ClampedAdd"
+                            },
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Compare: Variable",
+                                "value1": "Acheron_PointB1_ClampedAdd",
+                                "compareType": ">",
+                                "value2": 0
+                              },
+                              "passed": [
+                                {
+                                  "name": "Add Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
+                                  "modifier": "<a class=\"gModGreen\" id=\"62451815\">Acheron_UltraAbilitySpareCount_PointB1</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
+                                  "stackLimit": {
+                                    "operator": "Variables[0] (3) || RETURN",
+                                    "displayLines": "3",
+                                    "constants": [],
+                                    "variables": [
+                                      3
+                                    ]
+                                  },
+                                  "valuePerStack": {
+                                    "MDF_PropertyValue": {
+                                      "operator": "Variables[0] (3) || RETURN",
+                                      "displayLines": "3",
+                                      "constants": [],
+                                      "variables": [
+                                        3
+                                      ]
+                                    }
+                                  },
+                                  "addStacksPerTrigger": {
+                                    "operator": "Variables[0] (Acheron_PointB1_ClampedAdd) || RETURN",
+                                    "displayLines": "Acheron_PointB1_ClampedAdd",
+                                    "constants": [],
+                                    "variables": [
+                                      "Acheron_PointB1_ClampedAdd"
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "Acheron_PointB1_ClampedAdd",
+                              "value": 0
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
           ]
         }
       ],
@@ -4160,6 +4155,20 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__62451815\">Acheron_UltraAbilitySpareCount_PointB1</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "MaxSP",
+            "CurrentSP",
+            "MDF_SkillUseFlag",
+            "MDF_SkillUseDubuff",
+            "OnEnterBattleFlag",
+            "OnCharacterCreateFlag"
+          ],
+          "description": "After using the Ultimate, gains Slashed Dream by an amount equal to the number of Quadrivalent Ascendance stacks. At the same time, applies a corresponding number of Crimson Knot stacks to a random enemy. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> time(s).",
+          "type": "Other",
+          "statusName": "Quadrivalent Ascendance",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4250,25 +4259,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "MaxSP",
-            "CurrentSP",
-            "MDF_SkillUseFlag",
-            "MDF_SkillUseDubuff",
-            "OnEnterBattleFlag",
-            "OnCharacterCreateFlag"
-          ],
-          "description": "After using the Ultimate, gains Slashed Dream by an amount equal to the number of Quadrivalent Ascendance stacks. At the same time, applies a corresponding number of Crimson Knot stacks to a random enemy. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> time(s).",
-          "type": "Other",
-          "statusName": "Quadrivalent Ascendance"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1886427249\">Acheron_UltraAbilitySpareCount</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Acheron obtains <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> point(s) of Slashed Dream after she uses her Ultimate, and applies <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> stack(s) of Crimson Knot on a random enemy.",
+          "type": "Other",
+          "statusName": "Quadrivalent Ascendance",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4346,14 +4347,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Acheron obtains <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> point(s) of Slashed Dream after she uses her Ultimate, and applies <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> stack(s) of Crimson Knot on a random enemy.",
-          "type": "Other",
-          "statusName": "Quadrivalent Ascendance"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4437,13 +4431,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-84702346\">Acheron_Eidolon6_AddRegardAsAbilityType</a>",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "CurrentSP",
+            "MaxSP"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -4514,18 +4513,22 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "CurrentSP",
-            "MaxSP"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1111481031\">Acheron_Eidolon4_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Vulnerability</span>]",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "MaxSP",
+            "CurrentSP"
+          ],
+          "description": "Increases Ultimate DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Ultimate DMG Vulnerability",
+          "statusName": "Ultimate DMG Vulnerability",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -4557,23 +4560,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "MaxSP",
-            "CurrentSP"
-          ],
-          "description": "Increases Ultimate DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Ultimate DMG Vulnerability",
-          "statusName": "Ultimate DMG Vulnerability"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__447524573\">Acheron_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Reduces All-Type RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, lasting till the end of the Ultimate.",
+          "type": "Debuff",
+          "effectName": "All-Type RES Reduction",
+          "statusName": "All-Type RES Reduction",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4598,15 +4597,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Reduces All-Type RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, lasting till the end of the Ultimate.",
-          "type": "Debuff",
-          "effectName": "All-Type RES Reduction",
-          "statusName": "All-Type RES Reduction"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4614,6 +4605,14 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "latentQueue": [
+            "MaxSP",
+            "CurrentSP",
+            "MDF_SkillUseFlag",
+            "MDF_SkillUseDubuff",
+            "OnEnterBattleFlag",
+            "OnCharacterCreateFlag"
           ],
           "execute": [
             {
@@ -4842,15 +4841,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MaxSP",
-            "CurrentSP",
-            "MDF_SkillUseFlag",
-            "MDF_SkillUseDubuff",
-            "OnEnterBattleFlag",
-            "OnCharacterCreateFlag"
           ]
         },
         {
@@ -4860,6 +4850,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "When removed, immediately deals Lightning DMG equal to <span class=\"descriptionNumberColor\">MDF_PropertyValue01</span> of Acheron's ATK to all enemies once. For every stack of Crimson Knot removed, this DMG multiplier additionally increases, up to a maximum of <span class=\"descriptionNumberColor\">MDF_PropertyValue02</span>.",
+          "type": "Other",
+          "effectName": "Crimson Knot",
+          "statusName": "Crimson Knot",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5036,11 +5030,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When removed, immediately deals Lightning DMG equal to <span class=\"descriptionNumberColor\">MDF_PropertyValue01</span> of Acheron's ATK to all enemies once. For every stack of Crimson Knot removed, this DMG multiplier additionally increases, up to a maximum of <span class=\"descriptionNumberColor\">MDF_PropertyValue02</span>.",
-          "type": "Other",
-          "effectName": "Crimson Knot",
-          "statusName": "Crimson Knot"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5077,9 +5067,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5110,9 +5098,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5143,9 +5129,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5176,9 +5160,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5186,6 +5168,14 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "ForceStanceDamage"
+          ],
+          "latentQueue": [
+            "MaxSP",
+            "CurrentSP",
+            "MDF_SkillUseFlag",
+            "MDF_SkillUseDubuff",
+            "OnEnterBattleFlag",
+            "OnCharacterCreateFlag"
           ],
           "execute": [
             {
@@ -5249,21 +5239,16 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Leave Battle"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MaxSP",
-            "CurrentSP",
-            "MDF_SkillUseFlag",
-            "MDF_SkillUseDubuff",
-            "OnEnterBattleFlag",
-            "OnCharacterCreateFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-535608708\">Acheron_PointB3_DamageUp</a>[<span class=\"descriptionNumberColor\">Thunder Core</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Thunder Core",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5297,11 +5282,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Thunder Core"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5386,6 +5367,14 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "ListenBattleEventSkill"
+          ],
+          "latentQueue": [
+            "MaxSP",
+            "CurrentSP",
+            "MDF_SkillUseFlag",
+            "MDF_SkillUseDubuff",
+            "OnEnterBattleFlag",
+            "OnCharacterCreateFlag"
           ],
           "execute": [
             {
@@ -5516,21 +5505,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MaxSP",
-            "CurrentSP",
-            "MDF_SkillUseFlag",
-            "MDF_SkillUseDubuff",
-            "OnEnterBattleFlag",
-            "OnCharacterCreateFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-317541958\">Acheron_BlockModifySp</a>",
           "stackType": "Replace",
+          "latentQueue": [
+            "CurrentSP",
+            "MaxSP"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5610,18 +5594,12 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "CurrentSP",
-            "MaxSP"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1065497457\">Acheron_RuondDeBonusCD</a>",
           "stackType": "Replace",
-          "stackData": [],
           "latentQueue": [
             "OnCharacterCreateFlag",
             "OnEnterBattleFlag",

@@ -157,9 +157,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1376,81 +1374,6 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 1,
-                  "whenValueChanges": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "CasterCurrentHP2",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-                    },
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "CasterMaxHP",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "CasterCurrentHP2",
-                        "compareType": "<=",
-                        "value2": {
-                          "operator": "Variables[0] (CasterCurrentHP) || RETURN",
-                          "displayLines": "CasterCurrentHP",
-                          "constants": [],
-                          "variables": [
-                            "CasterCurrentHP"
-                          ]
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Use Custom Character Function",
-                          "functionName": "<a class=\"gTempYellow\" id=\"1574082321\">Ren_CheckHPChange</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 1,
-                  "whenValueChanges": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "CasterCurrentHP",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
@@ -1547,8 +1470,81 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [],
-          "latentQueue": []
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 1,
+                  "whenValueChanges": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "variableName": "CasterCurrentHP2",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "variableName": "CasterMaxHP",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "CasterCurrentHP2",
+                        "compareType": "<=",
+                        "value2": {
+                          "operator": "Variables[0] (CasterCurrentHP) || RETURN",
+                          "displayLines": "CasterCurrentHP",
+                          "constants": [],
+                          "variables": [
+                            "CasterCurrentHP"
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Use Custom Character Function",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1574082321\">Ren_CheckHPChange</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 1,
+                  "whenValueChanges": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "variableName": "CasterCurrentHP",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "targetObjectData": {
@@ -2497,14 +2493,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1862549747\">MWRen_Eidolon2</a>[<span class=\"descriptionNumberColor\">Grievous Penitence</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_CriticalIncrease</span>.",
+          "type": "Buff",
+          "effectName": "CRIT Rate Boost",
+          "statusName": "Grievous Penitence",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2539,15 +2537,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_CriticalIncrease</span>.",
-          "type": "Buff",
-          "effectName": "CRIT Rate Boost",
-          "statusName": "Grievous Penitence"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2019393203\">MWRen_Eidolon4_Add</a>",
+          "latentQueue": [
+            "MwRen_isHeal",
+            "MwRen_isCharmAttack",
+            "MwRen_isAttack",
+            "MwRen_AttackStart",
+            "MwRen_isOverHalf"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2576,20 +2577,25 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MwRen_isHeal",
-            "MwRen_isCharmAttack",
-            "MwRen_isAttack",
-            "MwRen_AttackStart",
-            "MwRen_isOverHalf"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1963215461\">MWRen_Eidolon4</a>[<span class=\"descriptionNumberColor\">Heal All Bones</span>]",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "MwRen_isOverHalf",
+            "MwRen_AttackStart",
+            "MwRen_isAttack",
+            "MwRen_isCharmAttack",
+            "MwRen_isHeal"
+          ],
+          "description": "Max HP +<span class=\"descriptionNumberColor\">MDF_HPIncrease</span>.",
+          "type": "Buff",
+          "effectName": "Max HP Boost",
+          "statusName": "Heal All Bones",
+          "stackLimit": 2,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2635,26 +2641,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MwRen_isOverHalf",
-            "MwRen_AttackStart",
-            "MwRen_isAttack",
-            "MwRen_isCharmAttack",
-            "MwRen_isHeal"
-          ],
-          "description": "Max HP +<span class=\"descriptionNumberColor\">MDF_HPIncrease</span>.",
-          "type": "Buff",
-          "effectName": "Max HP Boost",
-          "statusName": "Heal All Bones",
-          "stackLimit": 2,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-476823607\">MWRen_Trace03</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "MwRen_isAttack"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -2682,10 +2677,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MwRen_isAttack"
           ]
         },
         {
@@ -2757,13 +2748,26 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-510378845\">MWRen_Trace01</a>[<span class=\"descriptionNumberColor\">Vita Infinita</span>]",
+          "stackData": [
+            "MDF_HealEnhanceRatio"
+          ],
+          "latentQueue": [
+            "MwRen_isHeal",
+            "MwRen_isCharmAttack",
+            "MwRen_isAttack",
+            "MwRen_AttackStart",
+            "MwRen_isOverHalf"
+          ],
+          "description": "Incoming Healing +<span class=\"descriptionNumberColor\">MDF_HealEnhanceRatio</span>.",
+          "type": "Buff",
+          "effectName": "Outgoing Healing Boost",
+          "statusName": "Vita Infinita",
+          "stackLimit": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2786,32 +2790,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HealEnhanceRatio"
-          ],
-          "latentQueue": [
-            "MwRen_isHeal",
-            "MwRen_isCharmAttack",
-            "MwRen_isAttack",
-            "MwRen_AttackStart",
-            "MwRen_isOverHalf"
-          ],
-          "description": "Incoming Healing +<span class=\"descriptionNumberColor\">MDF_HealEnhanceRatio</span>.",
-          "type": "Buff",
-          "effectName": "Outgoing Healing Boost",
-          "statusName": "Vita Infinita",
-          "stackLimit": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-870658235\">MWRen_Ability03_Listen</a>[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
           "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
           "stackData": [
             "MDF_PropertyValue"
           ],
@@ -2825,12 +2809,27 @@ const compositeAbilityObject = {
           "description": "HP Lost: <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>",
           "type": "Other",
           "statusName": "Death Sentence",
-          "stackLimit": 1
+          "stackLimit": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "MwRen_isHeal",
+            "MwRen_isCharmAttack",
+            "MwRen_isAttack",
+            "MwRen_AttackStart"
+          ],
+          "description": "At maximum Charge stacks, expends all stacks and immediately deals 1 instance of Follow-Up ATK to all enemies.",
+          "type": "Other",
+          "statusName": "Charge",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3011,23 +3010,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MwRen_isHeal",
-            "MwRen_isCharmAttack",
-            "MwRen_isAttack",
-            "MwRen_AttackStart"
-          ],
-          "description": "At maximum Charge stacks, expends all stacks and immediately deals 1 instance of Follow-Up ATK to all enemies.",
-          "type": "Other",
-          "statusName": "Charge",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1915467315\">MWRen_Attack</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "stackLimit": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3050,21 +3046,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "stackLimit": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-922781705\">MWRen_Attack_Transfer</a>[<span class=\"descriptionNumberColor\">Hellscape</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Basic ATK \"Shard Sword\" is enhanced, becoming \"Forest of Swords\" and dealing Blast DMG.",
+          "type": "Other",
+          "effectName": "Enhanced Basic ATK",
+          "statusName": "Hellscape",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3155,13 +3146,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Basic ATK \"Shard Sword\" is enhanced, becoming \"Forest of Swords\" and dealing Blast DMG.",
-          "type": "Other",
-          "effectName": "Enhanced Basic ATK",
-          "statusName": "Hellscape"
+          ]
         }
       ],
       "references": []

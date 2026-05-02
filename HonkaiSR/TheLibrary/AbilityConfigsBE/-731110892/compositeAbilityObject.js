@@ -1141,6 +1141,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ElationEchoPoint"
           ],
+          "description": "Missing Description",
+          "type": "Buff",
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1163,10 +1166,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Missing Description",
-          "type": "Buff",
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1175,6 +1175,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ElationEchoPoint"
           ],
+          "description": "Missing Description",
+          "type": "Buff",
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1197,10 +1200,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Missing Description",
-          "type": "Buff",
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2652,9 +2652,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2681,13 +2679,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-881220179\">MLevel_ElationBE_ActionStateFalse</a>",
+          "latentQueue": [
+            "ElationTime_IsNoConsume"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2710,10 +2709,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "ElationTime_IsNoConsume"
           ]
         },
         {
@@ -2843,9 +2838,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

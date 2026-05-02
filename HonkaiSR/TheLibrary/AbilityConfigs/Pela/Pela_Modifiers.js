@@ -12,6 +12,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1480389752\">Pela_StatusProbability</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -34,11 +37,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -48,6 +47,13 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "DEF Reduction",
+      "statusName": "DEF Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -72,21 +78,20 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "DEF Reduction",
-      "statusName": "DEF Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__278160139\">Pela_AbilityEidolon4_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Ice RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Ice RES Reduction",
+      "statusName": "Ice RES Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -111,21 +116,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Ice RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Ice RES Reduction",
-      "statusName": "Ice RES Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__618444549\">Pela_AbilityEidolon4_StanceBreakTaken</a>[<span class=\"descriptionNumberColor\">Ravage</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [],
+      "description": "DMG taken on Toughness +<span class=\"descriptionNumberColor\">MDF_StanceBreakTakenRatio</span>.",
+      "type": "Debuff",
+      "effectName": "Toughness Vulnerability",
+      "statusName": "Ravage",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -148,11 +149,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG taken on Toughness +<span class=\"descriptionNumberColor\">MDF_StanceBreakTakenRatio</span>.",
-      "type": "Debuff",
-      "effectName": "Toughness Vulnerability",
-      "statusName": "Ravage"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -161,6 +158,13 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "stackData": [
+        "MDF_Pela_SkillRank02_P1_AddSpeedRatio"
+      ],
+      "description": "SPD +<span class=\"descriptionNumberColor\">MDF_Pela_SkillRank02_P1_AddSpeedRatio</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "SPD Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -183,20 +187,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Pela_SkillRank02_P1_AddSpeedRatio"
-      ],
-      "latentQueue": [],
-      "description": "SPD +<span class=\"descriptionNumberColor\">MDF_Pela_SkillRank02_P1_AddSpeedRatio</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "SPD Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1505163766\">Pela_Trace03_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">Wipe Out</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_Pela_SkillTree03_DamageAddedRatio"
+      ],
+      "description": "Increases the next attack's DMG by <span class=\"descriptionNumberColor\">MDF_Pela_SkillTree03_DamageAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Wipe Out",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -219,15 +222,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Pela_SkillTree03_DamageAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "Increases the next attack's DMG by <span class=\"descriptionNumberColor\">MDF_Pela_SkillTree03_DamageAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Wipe Out"
+      ]
     }
   ],
   "references": []

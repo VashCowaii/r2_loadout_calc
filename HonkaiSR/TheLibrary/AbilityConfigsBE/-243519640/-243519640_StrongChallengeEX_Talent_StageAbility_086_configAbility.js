@@ -19,6 +19,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1807253580\">MStrongChallengeEX_Talent_StageAbility_TGT_086</a>[<span class=\"descriptionNumberColor\">Collapse on Sight</span>]",
       "stackType": "Replace",
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio</span>.",
+      "type": "Buff",
+      "statusName": "Collapse on Sight",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -41,10 +44,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio</span>.",
-      "type": "Buff",
-      "statusName": "Collapse on Sight"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -226,9 +226,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

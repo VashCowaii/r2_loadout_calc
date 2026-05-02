@@ -77,9 +77,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -109,6 +107,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -131,11 +133,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -188,9 +186,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -236,6 +232,10 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1338494483\">DanHeng_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Hidden Dragon</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Lowers the chances of being attacked by enemies.",
+          "type": "Buff",
+          "effectName": "Aggro Chance Reduction",
+          "statusName": "Hidden Dragon",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -260,16 +260,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Lowers the chances of being attacked by enemies.",
-          "type": "Buff",
-          "effectName": "Aggro Chance Reduction",
-          "statusName": "Hidden Dragon"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1715636734\">DanHeng_LowHP_AggroDown</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_HPRatio",
+            "MDF_AggroDown"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -372,12 +372,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HPRatio",
-            "MDF_AggroDown"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -412,6 +407,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1978717144\">DanHeng_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Splitting Spearhead</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Splitting Spearhead",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -434,11 +433,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Splitting Spearhead"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -487,9 +482,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -988,15 +981,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-993379801\">AbilityPreShowModifier2</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1023,8 +1012,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1621594543\">AbilityPreShowModifier</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1208,9 +1195,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1457,6 +1442,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedDown"
           ],
+          "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Slow",
+          "statusName": "Slow",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1481,15 +1470,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Slow",
-          "statusName": "Slow"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2025698986\">DanHeng_Ability02_CheckCritical_Modifier</a>",
+          "stackData": [
+            "MDF_Chance"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -1539,11 +1527,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Chance"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1720,9 +1704,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1778,6 +1760,13 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+          "stackData": [
+            "DanHeng_PassivePene"
+          ],
+          "description": "Wind RES PEN +<span class=\"descriptionNumberColor\">DanHeng_PassivePene</span>.",
+          "type": "Buff",
+          "effectName": "Wind RES PEN",
+          "statusName": "Superiority of Reach",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -2024,20 +2013,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "DanHeng_PassivePene"
-          ],
-          "latentQueue": [],
-          "description": "Wind RES PEN +<span class=\"descriptionNumberColor\">DanHeng_PassivePene</span>.",
-          "type": "Buff",
-          "effectName": "Wind RES PEN",
-          "statusName": "Superiority of Reach"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "The effect of Talent \"Superiority of Reach\" cannot be triggered.",
+          "type": "Other",
+          "statusName": "Superiority of Reach",
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2096,20 +2081,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The effect of Talent \"Superiority of Reach\" cannot be triggered.",
-          "type": "Other",
-          "statusName": "Superiority of Reach",
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-997779121\">DanHeng_Passive_BeginTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
           "description": "The effect of Talent \"Superiority of Reach\" can now be triggered.",
           "type": "Other",
           "statusName": "Superiority of Reach"

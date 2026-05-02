@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-372579296\">MLevel_BattleEventAbility_Challenge_Group_02</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">ADF_1</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -47,11 +51,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">ADF_1</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -117,9 +117,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

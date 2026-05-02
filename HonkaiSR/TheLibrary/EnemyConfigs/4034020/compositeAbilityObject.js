@@ -829,9 +829,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -848,6 +846,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__527560256\">Enemy_W4_Phainon_Part3</a>[<span class=\"descriptionNumberColor\">May You Become The First Blazing Sun</span>]",
+          "description": "Khaslana awaits the break of dawn.",
+          "type": "Other",
+          "statusName": "May You Become The First Blazing Sun",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -909,14 +910,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Khaslana awaits the break of dawn.",
-          "type": "Other",
-          "statusName": "May You Become The First Blazing Sun"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__544337875\">Enemy_W4_Phainon_Part2</a>[<span class=\"descriptionNumberColor\">May You Dispel the Sky's Gloom</span>]",
+          "description": "Khaslana looks forward to saving the world with you.",
+          "type": "Other",
+          "statusName": "May You Dispel the Sky's Gloom",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -978,14 +979,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Khaslana looks forward to saving the world with you.",
-          "type": "Other",
-          "statusName": "May You Dispel the Sky's Gloom"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__561115494\">Enemy_W4_Phainon_Part1</a>[<span class=\"descriptionNumberColor\">May You End the Evernight</span>]",
+          "description": "Khaslana awaits your return.",
+          "type": "Other",
+          "statusName": "May You End the Evernight",
           "execute": [
             {
               "eventTrigger": "AV Forcibly Changed [Global]",
@@ -1025,12 +1026,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Khaslana awaits your return.",
-          "type": "Other",
-          "statusName": "May You End the Evernight"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1067,9 +1063,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1094,9 +1088,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1162,9 +1154,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1238,13 +1228,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1700303456\">Enemy_W4_Phainon_ShowBattleCondition</a>",
+          "latentQueue": [
+            "_LockHp03",
+            "MDF_CurrentSP"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -1259,11 +1251,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_LockHp03",
-            "MDF_CurrentSP"
           ]
         }
       ],

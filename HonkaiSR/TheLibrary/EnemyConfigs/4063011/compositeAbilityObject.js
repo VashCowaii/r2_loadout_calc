@@ -1008,6 +1008,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1224800253\">W4_Serpent_BattleScore1</a>",
+          "latentQueue": [
+            "MDF_Trigger"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1024,10 +1027,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_Trigger"
           ]
         },
         {
@@ -1056,9 +1055,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1111,6 +1108,11 @@ const compositeAbilityObject = {
             "MuteHitH",
             "ListenBattleEventSkill"
           ],
+          "description": "After being hit by attacks from target units, uses \"Torque Counter\" and loses 1 stack of \"Whirl.\" During any unit's turn, each target unit can only trigger this effect once. When the \"Whirl\" stack reaches 0, the Charging state is dispelled. When Weakness is Broken, this unit loses all \"Whirl\" stacks.",
+          "type": "Other",
+          "effectName": "Whirl",
+          "statusName": "Whirl",
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1595,14 +1597,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "After being hit by attacks from target units, uses \"Torque Counter\" and loses 1 stack of \"Whirl.\" During any unit's turn, each target unit can only trigger this effect once. When the \"Whirl\" stack reaches 0, the Charging state is dispelled. When Weakness is Broken, this unit loses all \"Whirl\" stacks.",
-          "type": "Other",
-          "effectName": "Whirl",
-          "statusName": "Whirl",
-          "addStacksPerTrigger": -1
+          ]
         }
       ],
       "references": []

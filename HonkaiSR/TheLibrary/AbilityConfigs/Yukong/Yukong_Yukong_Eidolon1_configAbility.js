@@ -17,6 +17,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-65553749\">Yukong_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">Aerial Marshal</span>]",
+      "description": "SPD +<span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "Aerial Marshal",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -39,11 +43,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD +<span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "Aerial Marshal"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -100,9 +100,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

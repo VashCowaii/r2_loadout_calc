@@ -13,6 +13,10 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1227965702\">Natasha_BPAbility_DefenceRatioUp</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>",
+      "type": "Buff",
+      "effectName": "DEF Boost",
+      "statusName": "DEF Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -35,11 +39,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>",
-      "type": "Buff",
-      "effectName": "DEF Boost",
-      "statusName": "DEF Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -48,6 +48,13 @@ const configAbility = {
       "modifierFlags": [
         "STAT_Fatigue"
       ],
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Deals <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> less DMG to your team.",
+      "type": "Debuff",
+      "effectName": "Weaken",
+      "statusName": "Weaken",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -70,21 +77,22 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Deals <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> less DMG to your team.",
-      "type": "Debuff",
-      "effectName": "Weaken",
-      "statusName": "Weaken"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1462346849\">Natasha_HOT_HPByMaxHP</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_ShowValue1",
+        "MDF_ShowValue2"
+      ],
+      "description": "Restores a certain amount of HP at the start of each turn.",
+      "type": "Buff",
+      "effectName": "Healing Over Time",
+      "statusName": "Healing Over Time",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -130,17 +138,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_ShowValue1",
-        "MDF_ShowValue2"
-      ],
-      "latentQueue": [],
-      "description": "Restores a certain amount of HP at the start of each turn.",
-      "type": "Buff",
-      "effectName": "Healing Over Time",
-      "statusName": "Healing Over Time"
+      ]
     }
   ],
   "references": []

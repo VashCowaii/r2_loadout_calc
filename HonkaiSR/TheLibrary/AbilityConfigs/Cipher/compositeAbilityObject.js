@@ -286,9 +286,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -584,6 +582,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
           ],
+          "description": "<span class=\"descriptionNumberColor\">SkillP01_FinalDamage</span> DMG has been tallied.",
+          "type": "Other",
+          "statusName": "Patron",
           "execute": [
             {
               "eventTrigger": "Action Phase Start [Anyone][?]",
@@ -830,12 +831,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "<span class=\"descriptionNumberColor\">SkillP01_FinalDamage</span> DMG has been tallied.",
-          "type": "Other",
-          "statusName": "Patron"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1254,9 +1250,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1369,13 +1363,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__374199979\">Cipher_Eidolon6</a>",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1403,15 +1398,32 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-362400486\">Cipher_PointB3_Aura</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All(with Unselectable)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1113671218\">Cipher_PointB3_Debuff</a>[<span class=\"descriptionNumberColor\">Sleight of Sky</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.4) || RETURN",
+                  "displayLines": "0.4",
+                  "constants": [],
+                  "variables": [
+                    0.4
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1450,36 +1462,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All(with Unselectable)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1113671218\">Cipher_PointB3_Debuff</a>[<span class=\"descriptionNumberColor\">Sleight of Sky</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.4) || RETURN",
-                  "displayLines": "0.4",
-                  "constants": [],
-                  "variables": [
-                    0.4
-                  ]
-                }
-              }
-            }
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1663627639\">Cipher_Mark_Listen</a>",
-          "stackData": [],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -1702,14 +1689,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "_CUR_SPEED"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1732,12 +1723,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "_CUR_SPEED"
           ]
         },
         {
@@ -1866,9 +1851,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -3734,9 +3717,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3914,13 +3895,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__4491835\">Cipher_BpKuoSan_Insert_CD</a>[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]",
+          "description": "Talent's Follow-Up ATK cannot yet be triggered.",
+          "type": "Other",
+          "statusName": "The Hospitable Dolosian",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -3933,12 +3915,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Talent's Follow-Up ATK cannot yet be triggered.",
-          "type": "Other",
-          "statusName": "The Hospitable Dolosian"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3953,6 +3930,10 @@ const compositeAbilityObject = {
             "STAT_AITargetHigherPriority",
             "RemoveWhenCasterDead"
           ],
+          "description": "While the \"Patron\" state is active, a tally of the DMG dealt by ally targets will be kept by Cipher. And Cipher's Ultimate will deal True DMG based on this tally.",
+          "type": "Debuff",
+          "effectName": "Become a Patron",
+          "statusName": "Patron",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4645,13 +4626,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "While the \"Patron\" state is active, a tally of the DMG dealt by ally targets will be kept by Cipher. And Cipher's Ultimate will deal True DMG based on this tally.",
-          "type": "Debuff",
-          "effectName": "Become a Patron",
-          "statusName": "Patron"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4790,9 +4765,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__232969841\">Cipher_BpKuoSan_Insert_Hit</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__232969841\">Cipher_BpKuoSan_Insert_Hit</a>"
         },
         {
           "name": "Modifier Construction",
@@ -4835,6 +4808,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__116163492\">Cipher_BP_Bonus</a>[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Hey, Jackpot for the Taking",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4857,14 +4836,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Hey, Jackpot for the Taking"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4873,6 +4845,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_Fatigue"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "DMG dealt to allies decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Weaken",
+          "statusName": "Hey, Jackpot for the Taking",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4895,19 +4874,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt to allies decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Weaken",
-          "statusName": "Hey, Jackpot for the Taking"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1113671218\">Cipher_PointB3_Debuff</a>[<span class=\"descriptionNumberColor\">Sleight of Sky</span>]",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Sleight of Sky",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4930,15 +4908,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Sleight of Sky"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5001,6 +4971,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1467539794\">Cipher_Eidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Read the Room, Seek the Glee</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Read the Room, Seek the Glee",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5023,20 +5000,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Read the Room, Seek the Glee"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-309291538\">Cipher_Eidolon2_Debuff</a>[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "In the Fray, Nab On a Spree",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5059,15 +5035,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "In the Fray, Nab On a Spree"
+          ]
         }
       ],
       "references": []

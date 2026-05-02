@@ -50,9 +50,7 @@ const configAbility = {
           ],
           "priorityLevel": -55
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

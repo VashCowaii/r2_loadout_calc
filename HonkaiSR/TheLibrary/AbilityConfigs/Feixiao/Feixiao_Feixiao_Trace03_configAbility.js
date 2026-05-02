@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2094330090\">Feixiao_AttackProperty</a>[<span class=\"descriptionNumberColor\">Boltcatch</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Boltcatch",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,11 +44,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Boltcatch"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -90,9 +90,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

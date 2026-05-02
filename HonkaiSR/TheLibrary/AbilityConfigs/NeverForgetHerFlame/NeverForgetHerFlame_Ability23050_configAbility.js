@@ -48,6 +48,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-345651043\">LC_23050_Main</a>",
+      "stackData": [
+        "MDF_BreakRatioIncrease"
+      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -178,16 +181,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_BreakRatioIncrease"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__503983570\">LC_23050_Sub</a>[<span class=\"descriptionNumberColor\">Immolation</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Increases Break DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Break DMG Boost",
+      "statusName": "Immolation",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -210,15 +216,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Increases Break DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Break DMG Boost",
-      "statusName": "Immolation"
+      ]
     }
   ],
   "isLightcone": true,

@@ -90,9 +90,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -55
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -133,9 +131,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1010,9 +1006,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1038,6 +1032,17 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2061740004\">Cerydra_PassiveAbility</a>",
           "stackType": "ReplaceByCaster",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1635182298\">Cerydra_BonusTargetHandler</a>",
+              "haloStatus": true
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -1311,19 +1316,6 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1635182298\">Cerydra_BonusTargetHandler</a>",
-              "haloStatus": true
             }
           ]
         }
@@ -2119,38 +2111,6 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"1980210861\">Cerydra_Template_PromotionEidolon0</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"1980210861\">Cerydra_Template_PromotionEidolon0</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
@@ -2269,12 +2229,51 @@ const compositeAbilityObject = {
                 }
               ]
             }
+          ],
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1980210861\">Cerydra_Template_PromotionEidolon0</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1980210861\">Cerydra_Template_PromotionEidolon0</a>"
+                    }
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, CRIT DMG for the Skill DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>, and All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue3</span>. After using an attack, Cerydra additionally deals 1 instance of Additional DMG, with <span class=\"descriptionNumberColor\">DV_PursuedDamage_LimitCount</span> trigger count(s) remaining. Triggers Coup de Main when using Skill on enemy targets.",
+          "type": "Buff",
+          "effectName": "Peerage",
+          "statusName": "Peerage",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2559,20 +2558,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, CRIT DMG for the Skill DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>, and All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue3</span>. After using an attack, Cerydra additionally deals 1 instance of Additional DMG, with <span class=\"descriptionNumberColor\">DV_PursuedDamage_LimitCount</span> trigger count(s) remaining. Triggers Coup de Main when using Skill on enemy targets.",
-          "type": "Buff",
-          "effectName": "Peerage",
-          "statusName": "Peerage"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "#CL_HaveBuff"
+          ],
+          "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. After using an attack, Cerydra additionally deals 1 instance of Additional DMG, with <span class=\"descriptionNumberColor\">DV_PursuedDamage_LimitCount</span> trigger count(s) remaining.",
+          "type": "Buff",
+          "effectName": "Military Merit",
+          "statusName": "Military Merit",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2623,15 +2621,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "#CL_HaveBuff"
-          ],
-          "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. After using an attack, Cerydra additionally deals 1 instance of Additional DMG, with <span class=\"descriptionNumberColor\">DV_PursuedDamage_LimitCount</span> trigger count(s) remaining.",
-          "type": "Buff",
-          "effectName": "Military Merit",
-          "statusName": "Military Merit"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2755,180 +2745,6 @@ const compositeAbilityObject = {
           "stackType": "RetainGlobalLatest",
           "modifierFlags": [
             "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "ContextCaster",
-                  "variableName": "DV_CurrentPoint",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_Windfury_Flag",
-                  "value": 0
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_Windfury_Flag_Sum",
-                  "value": 0
-                },
-                {
-                  "name": "Reconstruct Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
-                  "execute": [
-                    {
-                      "name": "Define Custom Variable with Copy",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
-                      "variable": "Windfury_Flag",
-                      "target2": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variable2": "MDF_Windfury_Flag",
-                      "scope": "ContextModifier"
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_Windfury_Flag_Sum",
-                      "value": {
-                        "operator": "Variables[0] (MDF_Windfury_Flag_Sum) || Variables[1] (MDF_Windfury_Flag) || ADD || RETURN",
-                        "displayLines": "(MDF_Windfury_Flag_Sum + MDF_Windfury_Flag)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Windfury_Flag_Sum",
-                          "MDF_Windfury_Flag"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_Windfury_Flag_Sum",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "ContextModifier"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Is Part Of",
-                            "of": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            "mustBeAlive2": true
-                          },
-                          {
-                            "name": "Skill Type",
-                            "skillType": "Skill"
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Use Custom Character Function",
-                          "functionName": "<a class=\"gTempYellow\" id=\"1940085870\">Cerydra_Template_SelfHandle</a>",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "variables": {
-                            "DV_AddPoint": {
-                              "operator": "Variables[0] (DV_PointAdded_Get) || RETURN",
-                              "displayLines": "DV_PointAdded_Get",
-                              "constants": [],
-                              "variables": [
-                                "DV_PointAdded_Get"
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Skill Type",
-                            "skillType": "Basic ATK"
-                          },
-                          {
-                            "name": "Skill Type",
-                            "skillType": "Skill"
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Use Custom Character Function",
-                          "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
-                          "variables": {
-                            "DV_AddPoint": {
-                              "operator": "Variables[0] (DV_PointAdded_Get) || RETURN",
-                              "displayLines": "DV_PointAdded_Get",
-                              "constants": [],
-                              "variables": [
-                                "DV_PointAdded_Get"
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
           ],
           "stackData": [
             "DV_PointAdded_Get"
@@ -3169,35 +2985,186 @@ const compositeAbilityObject = {
               },
               "includeBattleEvent": true
             }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2088457679\">Cerydra_Ability02_Target_Lv1</a>[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2138790536\">Cerydra_Ability02_Target_Lv2</a>[<span class=\"descriptionNumberColor\">Peerage</span>]"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "scope": "ContextCaster",
+                  "variableName": "DV_CurrentPoint",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: Start",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Windfury_Flag",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Windfury_Flag_Sum",
+                  "value": 0
+                },
+                {
+                  "name": "Reconstruct Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
+                  "execute": [
+                    {
+                      "name": "Define Custom Variable with Copy",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
+                      "variable": "Windfury_Flag",
+                      "target2": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variable2": "MDF_Windfury_Flag",
+                      "scope": "ContextModifier"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Windfury_Flag_Sum",
+                      "value": {
+                        "operator": "Variables[0] (MDF_Windfury_Flag_Sum) || Variables[1] (MDF_Windfury_Flag) || ADD || RETURN",
+                        "displayLines": "(MDF_Windfury_Flag_Sum + MDF_Windfury_Flag)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Windfury_Flag_Sum",
+                          "MDF_Windfury_Flag"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_Windfury_Flag_Sum",
+                    "compareType": "=",
+                    "value2": 0,
+                    "contextScope": "ContextModifier"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Is Part Of",
+                            "of": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "mustBeAlive2": true
+                          },
+                          {
+                            "name": "Skill Type",
+                            "skillType": "Skill"
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Use Custom Character Function",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1940085870\">Cerydra_Template_SelfHandle</a>",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "variables": {
+                            "DV_AddPoint": {
+                              "operator": "Variables[0] (DV_PointAdded_Get) || RETURN",
+                              "displayLines": "DV_PointAdded_Get",
+                              "constants": [],
+                              "variables": [
+                                "DV_PointAdded_Get"
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Skill Type",
+                            "skillType": "Basic ATK"
+                          },
+                          {
+                            "name": "Skill Type",
+                            "skillType": "Skill"
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Use Custom Character Function",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1612575312\">Cerydra_Template_MaxPointHandle</a>",
+                          "variables": {
+                            "DV_AddPoint": {
+                              "operator": "Variables[0] (DV_PointAdded_Get) || RETURN",
+                              "displayLines": "DV_PointAdded_Get",
+                              "constants": [],
+                              "variables": [
+                                "DV_PointAdded_Get"
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__809988888\">Cerydra_Eidolon2_DamageAddedBonus_Self</a>[<span class=\"descriptionNumberColor\">Forge the Dreams of Many</span>]",
           "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
           "stackData": [
             "MDF_PropertyValue"
           ],
@@ -3207,12 +3174,7 @@ const compositeAbilityObject = {
           ],
           "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Buff",
-          "statusName": "Forge the Dreams of Many"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1571294173\">Cerydra_Ability02_Eidolon2_DamageAddedBonus</a>[<span class=\"descriptionNumberColor\">Forge the Dreams of Many</span>]",
-          "stackType": "ReplaceByCaster",
+          "statusName": "Forge the Dreams of Many",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3235,7 +3197,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1571294173\">Cerydra_Ability02_Eidolon2_DamageAddedBonus</a>[<span class=\"descriptionNumberColor\">Forge the Dreams of Many</span>]",
+          "stackType": "ReplaceByCaster",
           "stackData": [
             "MDF_PropertyValue"
           ],
@@ -3246,12 +3213,47 @@ const compositeAbilityObject = {
           "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Buff",
           "effectName": "DMG Boost",
-          "statusName": "Forge the Dreams of Many"
+          "statusName": "Forge the Dreams of Many",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1107046497\">Cerydra_Eidolon1</a>[<span class=\"descriptionNumberColor\">Seize the Crowns of All</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue",
+            "MDF_PropertyValue2"
+          ],
+          "latentQueue": [
+            "DV_DelayReachPromotionRank01_Flag",
+            "DV_Rank02_Effcet"
+          ],
+          "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the enemy target's DEF.",
+          "type": "Buff",
+          "effectName": "Seize the Crowns of All",
+          "statusName": "Seize the Crowns of All",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -3324,24 +3326,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_PropertyValue2"
-          ],
-          "latentQueue": [
-            "DV_DelayReachPromotionRank01_Flag",
-            "DV_Rank02_Effcet"
-          ],
-          "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the enemy target's DEF.",
-          "type": "Buff",
-          "effectName": "Seize the Crowns of All",
-          "statusName": "Seize the Crowns of All"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1564398907\">Cerydra_Eidolon6_AllDamageTypePenetrate</a>[<span class=\"descriptionNumberColor\">A Journey Set Starward</span>]",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "DV_DelayReachPromotionRank01_Flag",
+            "DV_Rank02_Effcet"
+          ],
+          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "A Journey Set Starward",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3376,20 +3373,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_DelayReachPromotionRank01_Flag",
-            "DV_Rank02_Effcet"
-          ],
-          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "A Journey Set Starward"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2146072212\">Cerydra_Ability02_AllDamageTypePenetrate</a>[<span class=\"descriptionNumberColor\">A Journey Set Starward</span>]",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "DV_DelayReachPromotionRank01_Flag",
+            "DV_Rank02_Effcet"
+          ],
+          "description": "Increases All-Type RES PEN by <span class=\"descriptionNumberColor\">#SkillRank_Rank06_P1_AllDamageTypePenetrate</span>.",
+          "type": "Buff",
+          "effectName": "A Journey Set Starward",
+          "statusName": "A Journey Set Starward",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3424,21 +3421,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_DelayReachPromotionRank01_Flag",
-            "DV_Rank02_Effcet"
-          ],
-          "description": "Increases All-Type RES PEN by <span class=\"descriptionNumberColor\">#SkillRank_Rank06_P1_AllDamageTypePenetrate</span>.",
-          "type": "Buff",
-          "effectName": "A Journey Set Starward",
-          "statusName": "A Journey Set Starward"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1787273880\">Cerydra_Pursued</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "DV_DelayReachPromotionRank01_Flag",
+            "DV_Rank02_Effcet"
+          ],
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -3578,17 +3570,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_DelayReachPromotionRank01_Flag",
-            "DV_Rank02_Effcet"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1552806020\">Cerydra_PointB3_RecoverEnergy</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "DV_DelayReachPromotionRank01_Flag",
+            "DV_Rank02_Effcet"
+          ],
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -3652,11 +3643,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_DelayReachPromotionRank01_Flag",
-            "DV_Rank02_Effcet"
           ]
         },
         {
@@ -3666,6 +3652,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">#SkillTree_PointB3_P2_Value</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "Vici",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3688,19 +3681,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">#SkillTree_PointB3_P2_Value</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "Vici"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__35466247\">Cerydra_PointB2_Self</a>",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3723,15 +3711,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1063134824\">Cerydra_PointB2</a>[<span class=\"descriptionNumberColor\">Vidi</span>]",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "DV_DelayReachPromotionRank01_Flag",
+            "DV_Rank02_Effcet"
+          ],
+          "description": "Using Ultimate grants Cerydra <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> Charge.",
+          "type": "Other",
+          "statusName": "Vidi",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -3786,22 +3780,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "DV_DelayReachPromotionRank01_Flag",
-            "DV_Rank02_Effcet"
-          ],
-          "description": "Using Ultimate grants Cerydra <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> Charge.",
-          "type": "Other",
-          "statusName": "Vidi"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1777978570\">Cerydra_PointB1_CriticalDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Veni</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
+          "type": "Buff",
+          "statusName": "Veni",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3886,10 +3873,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
-          "type": "Buff",
-          "statusName": "Veni"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3902,53 +3886,6 @@ const compositeAbilityObject = {
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"285180959\">Cerydra_PointB1_CriticalCriticalDamageAddedRatio</a>"
-                }
-              ]
-            }
-          ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"285180959\">Cerydra_PointB1_CriticalCriticalDamageAddedRatio</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"285180959\">Cerydra_PointB1_CriticalCriticalDamageAddedRatio</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"285180959\">Cerydra_PointB1_CriticalCriticalDamageAddedRatio</a>"
-                    }
-                  ]
                 }
               ]
             }
@@ -4090,8 +4027,53 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [],
-          "latentQueue": []
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"285180959\">Cerydra_PointB1_CriticalCriticalDamageAddedRatio</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"285180959\">Cerydra_PointB1_CriticalCriticalDamageAddedRatio</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"285180959\">Cerydra_PointB1_CriticalCriticalDamageAddedRatio</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "references": []

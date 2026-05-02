@@ -48,6 +48,13 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Electric"
           ],
+          "useEntitySnapshot": true,
+          "description": "Takes Lightning DMG at the beginning of each turn for a certain number of turns.",
+          "type": "Debuff",
+          "effectName": "Erode",
+          "statusName": "Erode",
+          "stackLimit": 1,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -130,14 +137,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "Takes Lightning DMG at the beginning of each turn for a certain number of turns.",
-          "type": "Debuff",
-          "effectName": "Erode",
-          "statusName": "Erode",
-          "stackLimit": 1,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -146,6 +146,12 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to <span class=\"descriptionNumberColor\">#SkillEquip_P4_MaxLayer</span> stack(s).",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -179,13 +185,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to <span class=\"descriptionNumberColor\">#SkillEquip_P4_MaxLayer</span> stack(s).",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -267,9 +267,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

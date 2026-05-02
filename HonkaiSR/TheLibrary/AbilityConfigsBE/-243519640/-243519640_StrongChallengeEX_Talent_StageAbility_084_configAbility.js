@@ -19,6 +19,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1773698342\">MStrongChallengeEX_Talent_StageAbility_TGT_084</a>[<span class=\"descriptionNumberColor\">Montane Gush</span>]",
       "stackType": "Replace",
+      "description": "CRIT DMG dealt by Skill increases by <span class=\"descriptionNumberColor\">MDF_BPCrit_DamageAddedRatio</span>.",
+      "type": "Buff",
+      "statusName": "Montane Gush",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -46,10 +49,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG dealt by Skill increases by <span class=\"descriptionNumberColor\">MDF_BPCrit_DamageAddedRatio</span>.",
-      "type": "Buff",
-      "statusName": "Montane Gush"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -150,9 +150,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

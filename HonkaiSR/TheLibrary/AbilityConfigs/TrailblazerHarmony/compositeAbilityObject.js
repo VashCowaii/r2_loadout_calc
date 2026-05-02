@@ -86,9 +86,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -694,6 +692,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1210211185\">PlayerBoy_20_Eidolon2</a>[<span class=\"descriptionNumberColor\">Jailbreaking Rainbowwalk</span>]",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Increases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Jailbreaking Rainbowwalk",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -716,14 +720,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Increases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Jailbreaking Rainbowwalk"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -756,13 +753,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1588077472\">PlayerBoy_20_PointB3_Bonus</a>",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -850,11 +848,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -865,7 +859,6 @@ const compositeAbilityObject = {
           "stackData": [
             "MDF_PropertyValue2"
           ],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -900,16 +893,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1126601177\">PlayerBoy_20_PointB2_Bonus</a>",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage End [Owner]: Hit"
-            },
-            {
-              "eventTrigger": "Attack Start [Owner]"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -924,7 +907,15 @@ const compositeAbilityObject = {
                 1
               ]
             }
-          }
+          },
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage End [Owner]: Hit"
+            },
+            {
+              "eventTrigger": "Attack Start [Owner]"
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1120,9 +1111,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1206,6 +1195,7 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "STAT_SuperBreakBuff"
           ],
+          "type": "Buff",
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Owner]"
@@ -1449,8 +1439,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": 100
             }
-          ],
-          "type": "Buff"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1460,6 +1449,10 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "STAT_SuperBreakBuff"
           ],
+          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. And after attacking enemy targets that are Weakness Broken, converts the Toughness Reduction of the attack into 1 instance of Super Break DMG.",
+          "type": "Buff",
+          "effectName": "Backup Dancer",
+          "statusName": "Backup Dancer",
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Owner]"
@@ -1694,11 +1687,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": 100
             }
-          ],
-          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. And after attacking enemy targets that are Weakness Broken, converts the Toughness Reduction of the attack into 1 instance of Super Break DMG.",
-          "type": "Buff",
-          "effectName": "Backup Dancer",
-          "statusName": "Backup Dancer"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1708,78 +1697,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": 0,
-                  "maximum": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
-                  },
-                  "assignState": "True",
-                  "priorState": "Normal",
-                  "bar#": 3
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-197410613\">PlayerBoy_20_AbilityP01_ListenBreakDamage</a>[<span class=\"descriptionNumberColor\">Backup Dancer</span>]"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Action Phase Start [Owner][?]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "LifeTime",
-                  "variableName": "MDF_HarmonyEnergy",
-                  "modifierName": "<a class=\"gModGreen\" id=\"610400910\">PlayerBoy_20_AbilityP01_ListenRedShieldModifier</a>",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (MDF_HarmonyEnergy) || RETURN",
-                    "displayLines": "MDF_HarmonyEnergy",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HarmonyEnergy"
-                    ]
-                  },
-                  "maximum": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
-                  },
-                  "assignState": "True",
-                  "priorState": "Active",
-                  "bar#": 3
-                }
-              ]
-            }
-          ],
           "stackData": [
             "MDF_LifeTime"
           ],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -1937,12 +1857,83 @@ const compositeAbilityObject = {
                 "MDF_SuperBreakDamagePercentage": 0
               }
             }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": 0,
+                  "maximum": {
+                    "operator": "Variables[0] (3) || RETURN",
+                    "displayLines": "3",
+                    "constants": [],
+                    "variables": [
+                      3
+                    ]
+                  },
+                  "assignState": "True",
+                  "priorState": "Normal",
+                  "bar#": 3
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-197410613\">PlayerBoy_20_AbilityP01_ListenBreakDamage</a>[<span class=\"descriptionNumberColor\">Backup Dancer</span>]"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Action Phase Start [Owner][?]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "LifeTime",
+                  "variableName": "MDF_HarmonyEnergy",
+                  "modifierName": "<a class=\"gModGreen\" id=\"610400910\">PlayerBoy_20_AbilityP01_ListenRedShieldModifier</a>",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (MDF_HarmonyEnergy) || RETURN",
+                    "displayLines": "MDF_HarmonyEnergy",
+                    "constants": [],
+                    "variables": [
+                      "MDF_HarmonyEnergy"
+                    ]
+                  },
+                  "maximum": {
+                    "operator": "Variables[0] (3) || RETURN",
+                    "displayLines": "3",
+                    "constants": [],
+                    "variables": [
+                      3
+                    ]
+                  },
+                  "assignState": "True",
+                  "priorState": "Active",
+                  "bar#": 3
+                }
+              ]
+            }
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1272032141\">PlayerBoy_20_Eidolon4_BreakDamageBonus</a>[<span class=\"descriptionNumberColor\">Dove in Tophat</span>]",
           "stackType": "Replace",
+          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_AddBreakDamageRatio</span>.",
+          "type": "Buff",
+          "statusName": "Dove in Tophat",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1965,10 +1956,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_AddBreakDamageRatio</span>.",
-          "type": "Buff",
-          "statusName": "Dove in Tophat"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2033,53 +2021,6 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-517215747\">PlayerBoy_20_Eidolon4_Sub</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakConverted</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-517215747\">PlayerBoy_20_Eidolon4_Sub</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-517215747\">PlayerBoy_20_Eidolon4_Sub</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
@@ -2128,13 +2069,66 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [],
-          "latentQueue": []
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-517215747\">PlayerBoy_20_Eidolon4_Sub</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakConverted</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-517215747\">PlayerBoy_20_Eidolon4_Sub</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-517215747\">PlayerBoy_20_Eidolon4_Sub</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1971132539\">PlayerBoy_20_TechniqueUsage_Bonus</a>[<span class=\"descriptionNumberColor\">Now! I'm the Band!</span>]",
           "stackType": "ReplaceByCaster",
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_BreakDamageAddedRatio"
+          ],
+          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_BreakDamageAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "Break Effect Boost",
+          "statusName": "Now! I'm the Band!",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2157,16 +2151,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_BreakDamageAddedRatio"
-          ],
-          "latentQueue": [],
-          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_BreakDamageAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "Break Effect Boost",
-          "statusName": "Now! I'm the Band!"
+          ]
         }
       ],
       "references": []

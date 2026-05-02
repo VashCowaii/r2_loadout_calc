@@ -2495,14 +2495,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__354987416\">Enemy_XP_Elite01_02_LocalLegend_DamageAdded</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+          "type": "Buff",
+          "statusName": "DMG Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2525,16 +2526,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
-          "type": "Buff",
-          "statusName": "DMG Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__741408749\">Enemy_XP_Elite01_02_LocalLegend_Status</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "_ModifyActionDelay"
           ],
           "execute": [
             {
@@ -2928,10 +2929,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_ModifyActionDelay"
           ]
         }
       ]
@@ -3019,9 +3016,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3628,6 +3623,14 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1258915271\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood_LockHP</a>",
+          "latentQueue": [
+            "MDF_LevelMaxNegativeHP",
+            "_BattleTarget_LocalLegend_S3_2_Check",
+            "_BattleTarget_LocalLegend_S3_3_Check",
+            "_BattleTarget_LocalLegend_S3_6_Check",
+            "_BattleTarget_LocalLegend_S3_1_ProgressInfo",
+            "_BattleTarget_LocalLegend_S3_5_ProgressInfo"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3656,21 +3659,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_LevelMaxNegativeHP",
-            "_BattleTarget_LocalLegend_S3_2_Check",
-            "_BattleTarget_LocalLegend_S3_3_Check",
-            "_BattleTarget_LocalLegend_S3_6_Check",
-            "_BattleTarget_LocalLegend_S3_1_ProgressInfo",
-            "_BattleTarget_LocalLegend_S3_5_ProgressInfo"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1972420771\">Enemy_XP_Elite01_02_LocalLegend_Ability03_Mark</a>[<span class=\"descriptionNumberColor\">Overloadable</span>]",
-          "stackData": [],
           "latentQueue": [
             "_BattleTarget_LocalLegend_S3_5_ProgressInfo",
             "_BattleTarget_LocalLegend_S3_1_ProgressInfo",
@@ -3747,9 +3740,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3840,9 +3831,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4008,9 +3997,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

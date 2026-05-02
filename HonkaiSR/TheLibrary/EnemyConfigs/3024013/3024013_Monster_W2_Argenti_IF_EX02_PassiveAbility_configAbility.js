@@ -59,6 +59,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1777994335\">Enemy_W2_Argenti_IF_EX02_UltraState</a>[<span class=\"descriptionNumberColor\">Medal of Elegance</span>]",
+      "description": "Cannot be selected before the next action or before all summons have been defeated. Use Undeniable Fate the next time this unit takes action.",
+      "type": "Buff",
+      "effectName": "Medal of Elegance",
+      "statusName": "Medal of Elegance",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -155,11 +159,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Cannot be selected before the next action or before all summons have been defeated. Use Undeniable Fate the next time this unit takes action.",
-      "type": "Buff",
-      "effectName": "Medal of Elegance",
-      "statusName": "Medal of Elegance"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -167,6 +167,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span> and increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue2</span>.",
+      "type": "Buff",
+      "effectName": "Golden Harvest",
+      "statusName": "Golden Harvest",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -322,15 +326,15 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span> and increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue2</span>.",
-      "type": "Buff",
-      "effectName": "Golden Harvest",
-      "statusName": "Golden Harvest"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__529665307\">Enemy_W2_Argenti_IF_EX02_DefendState</a>[<span class=\"descriptionNumberColor\">Chivalric Wrath</span>]",
+      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+      "type": "Buff",
+      "effectName": "Chivalric Wrath",
+      "statusName": "Chivalric Wrath",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -458,11 +462,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
-      "type": "Buff",
-      "effectName": "Chivalric Wrath",
-      "statusName": "Chivalric Wrath"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -647,9 +647,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

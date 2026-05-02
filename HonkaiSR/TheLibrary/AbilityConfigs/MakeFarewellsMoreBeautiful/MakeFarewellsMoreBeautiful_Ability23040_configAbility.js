@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1983557807\">LC_23040_Sub</a>[<span class=\"descriptionNumberColor\">Death Flower</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">LC_23040_PropertyValue</span> of the target's DEF.",
+      "type": "Buff",
+      "effectName": "Death Flower",
+      "statusName": "Death Flower",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -34,33 +38,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">LC_23040_PropertyValue</span> of the target's DEF.",
-      "type": "Buff",
-      "effectName": "Death Flower",
-      "statusName": "Death Flower"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-414774492\">LC_23040_Main02</a>[<span class=\"descriptionNumberColor\">Death Flower</span>]",
       "stackType": "ReplaceByCaster",
-      "execute": [
-        {
-          "eventTrigger": "Deal Damage Start [Owner]: Any",
-          "execute": [
-            {
-              "name": "Adjust Target Stats",
-              "modifiedValuesArray": [
-                {
-                  "on": "Defender",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": "-MDF_DefenceAddedRatio"
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span> of the target's DEF.",
       "type": "Buff",
       "effectName": "Death Flower",
@@ -85,6 +68,23 @@ const configAbility = {
               ]
             }
           }
+        }
+      ],
+      "execute": [
+        {
+          "eventTrigger": "Deal Damage Start [Owner]: Any",
+          "execute": [
+            {
+              "name": "Adjust Target Stats",
+              "modifiedValuesArray": [
+                {
+                  "on": "Defender",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                  "value": "-MDF_DefenceAddedRatio"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -336,9 +336,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

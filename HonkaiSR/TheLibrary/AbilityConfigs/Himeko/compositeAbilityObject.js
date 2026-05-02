@@ -57,6 +57,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__867071212\">Himeko_Eidolon2_DamageUP</a>",
+          "stackData": [
+            "MDF_HPRatio",
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -95,12 +99,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HPRatio",
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -127,6 +126,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__583790079\">Himeko_CriticalChance</a>[<span class=\"descriptionNumberColor\">Benchmark</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT Rate Boost",
+          "statusName": "Benchmark",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -149,11 +152,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT Rate Boost",
-          "statusName": "Benchmark"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -259,9 +258,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -328,9 +325,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -418,9 +413,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -556,6 +549,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -578,15 +578,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost"
+          ]
         }
       ],
       "targetObjectData": {
@@ -715,6 +707,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2144334509\">Himeko_Passive_Pursuit</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "When fully charged, triggers Talent \"Victory Rush.\"",
+          "type": "Other",
+          "statusName": "Charge",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -838,20 +835,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When fully charged, triggers Talent \"Victory Rush.\"",
-          "type": "Other",
-          "statusName": "Charge",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__65829546\">Himeko_Passive_PursuitCD</a>[<span class=\"descriptionNumberColor\">Victory Rush</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Talent \"Victory Rush\" cannot be triggered.",
+          "type": "Other",
+          "statusName": "Victory Rush",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -866,11 +860,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Talent \"Victory Rush\" cannot be triggered.",
-          "type": "Other",
-          "statusName": "Victory Rush",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1580,9 +1570,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1743,9 +1731,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2096,9 +2082,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2266,6 +2250,13 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1013692489\">Himeko_FireTakenRatio</a>[<span class=\"descriptionNumberColor\">Fire Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Fire DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Fire Vulnerability",
+          "statusName": "Fire Vulnerability",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2288,15 +2279,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Fire DMG taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Fire Vulnerability",
-          "statusName": "Fire Vulnerability"
+          ]
         }
       ],
       "references": []

@@ -93,15 +93,11 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-567237122\">MModifier_Monster_W3_Dinosaur_MuteHitFly</a>",
       "modifierFlags": [
         "MuteHitFly"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1600241954\">MModifier_Monster_W3_Dinosaur_RLElite</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1600241954\">MModifier_Monster_W3_Dinosaur_RLElite</a>"
     }
   ]
 }

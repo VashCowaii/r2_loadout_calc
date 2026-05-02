@@ -560,6 +560,9 @@ const compositeAbilityObject = {
             "ListenBattleEventSkill",
             "KeepOnDeathrattle"
           ],
+          "latentQueue": [
+            "Beast02RL_Num_Flag"
+          ],
           "execute": [
             {
               "eventTrigger": "Pre-Death [Owner]",
@@ -787,10 +790,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Beast02RL_Num_Flag"
           ]
         }
       ]
@@ -827,9 +826,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Ultimate Prep-Phase [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -855,9 +852,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Attack DMG End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -867,6 +862,13 @@ const compositeAbilityObject = {
             "KeepOnDeathrattle",
             "RemoveWhenOwnerUnselectable"
           ],
+          "latentQueue": [
+            "Beast02RL_Num_Flag"
+          ],
+          "description": "Marked by %CasterName for Monitoring.",
+          "type": "Other",
+          "effectName": "Monitor",
+          "statusName": "Monitor",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -911,19 +913,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Beast02RL_Num_Flag"
-          ],
-          "description": "Marked by %CasterName for Monitoring.",
-          "type": "Other",
-          "effectName": "Monitor",
-          "statusName": "Monitor"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1589154351\">Enemy_W2_Beast02_RLElite_BreakListener</a>",
+          "latentQueue": [
+            "Beast02RL_Num_Flag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Put in Deathstate Limbo"
@@ -1027,15 +1024,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Beast02RL_Num_Flag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__16551050\">Enemy_W2_Beast02_RLElite_ActionCheck</a>",
+          "latentQueue": [
+            "Beast02RL_Num_Flag"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -1085,16 +1081,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Beast02RL_Num_Flag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__329970269\">Enemy_W2_Beast02_RLElite_GennkiMark</a>[<span class=\"descriptionNumberColor\">Gather Courage</span>]",
           "stackType": "Replace",
+          "latentQueue": [
+            "Beast02RL_Num_Flag"
+          ],
+          "description": "<span class=\"descriptionNumberColor\">MDF_PropertyValue</span> stacks of Gusto accumulated.",
+          "type": "Other",
+          "effectName": "Gather Courage",
+          "statusName": "Gather Courage",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1111,16 +1111,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Beast02RL_Num_Flag"
-          ],
-          "description": "<span class=\"descriptionNumberColor\">MDF_PropertyValue</span> stacks of Gusto accumulated.",
-          "type": "Other",
-          "effectName": "Gather Courage",
-          "statusName": "Gather Courage",
-          "addStacksPerTrigger": 1
+          ]
         }
       ],
       "references": []

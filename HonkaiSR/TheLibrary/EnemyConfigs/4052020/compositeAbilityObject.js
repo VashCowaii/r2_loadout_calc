@@ -357,9 +357,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -368,18 +366,14 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Being Attacked End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-481167475\">Enemy_SW_Minion01_03_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -400,6 +394,10 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
+          "description": "Locked on by all \"Mirage Fizzle Kids\" as an attack target.",
+          "type": "Other",
+          "effectName": "Aggravate",
+          "statusName": "Shadow of the Grand Fair",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -423,13 +421,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Locked on by all \"Mirage Fizzle Kids\" as an attack target.",
-          "type": "Other",
-          "effectName": "Aggravate",
-          "statusName": "Shadow of the Grand Fair"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -471,9 +463,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1270842428\">Enemy_SW_Minion01_03_CommandMarkLevel</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -481,6 +471,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteSpeed"
           ],
+          "description": "Before \"Mirage Rush\" state is dispelled, other \"Mirage Fizzle Kids\" will prioritize attacking the locked-on target. This state is dispelled when this unit is Broken or receives a killing blow.",
+          "type": "Other",
+          "effectName": "Charge",
+          "statusName": "Mirage Rush",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -619,13 +613,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Before \"Mirage Rush\" state is dispelled, other \"Mirage Fizzle Kids\" will prioritize attacking the locked-on target. This state is dispelled when this unit is Broken or receives a killing blow.",
-          "type": "Other",
-          "effectName": "Charge",
-          "statusName": "Mirage Rush"
+          ]
         },
         {
           "name": "Modifier Construction",

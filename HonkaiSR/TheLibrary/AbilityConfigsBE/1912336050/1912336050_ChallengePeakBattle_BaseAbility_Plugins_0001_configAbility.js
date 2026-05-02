@@ -37,6 +37,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-963813829\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001_02</a>[<span class=\"descriptionNumberColor\">Think Outside the Box</span>]",
       "stackType": "Replace",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0001_ADF_1</span>.",
+      "type": "Other",
+      "statusName": "Think Outside the Box",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -59,14 +62,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0001_ADF_1</span>.",
-      "type": "Other",
-      "statusName": "Think Outside the Box"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2049883012\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0001</a>",
+      "latentQueue": [
+        "_TeamLight_Num",
+        "_MDF_Layer"
+      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -213,11 +217,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_TeamLight_Num",
-        "_MDF_Layer"
       ]
     }
   ]

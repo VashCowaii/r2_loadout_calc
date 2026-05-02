@@ -854,9 +854,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -955,6 +953,17 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1066119889\">Modifier_FantasticStory_BaseAbility_2210_BeforeFever</a>",
           "stackType": "ReplaceByCaster",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1855869842\">Modifier_FantasticStory_BaseAbility_2210_BeforeFever_ForShow</a>[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
+              "haloStatus": true
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -990,19 +999,6 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1855869842\">Modifier_FantasticStory_BaseAbility_2210_BeforeFever_ForShow</a>[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
-              "haloStatus": true
             }
           ]
         }
@@ -1048,6 +1044,29 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1590210347\">Modifier_FantasticStory_BaseAbility_2210_BaseAddOn</a>",
           "stackType": "ReplaceByCaster",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1871573228\">Modifier_FantasticStory_BaseAbility_2210_BaseAddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "DV_Ratio": {
+                  "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio) || Constants[0] (100) || MUL || RETURN",
+                  "displayLines": "(DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio * 100)",
+                  "constants": [
+                    100
+                  ],
+                  "variables": [
+                    "DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio"
+                  ]
+                }
+              }
+            }
+          ],
           "elationValueChange": [
             {
               "name": "Variable Value Range Conditions",
@@ -1153,31 +1172,6 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1871573228\">Modifier_FantasticStory_BaseAbility_2210_BaseAddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "DV_Ratio": {
-                  "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio) || Constants[0] (100) || MUL || RETURN",
-                  "displayLines": "(DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio * 100)",
-                  "constants": [
-                    100
-                  ],
-                  "variables": [
-                    "DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio"
-                  ]
-                }
-              }
             }
           ]
         }
@@ -1742,6 +1736,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1715895065\">Modifier_FantasticStory_BaseAbility_2210</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "DV_FantasticStory_PlusAbility_2211",
+            "DV_FantasticStory_PlusAbility_2212",
+            "DV_FantasticStory_PlusAbility_2213",
+            "DV_FantasticStory_PlusAbility_2214",
+            "DV_FantasticStory_BaseAbility_TriggerFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -2276,14 +2277,6 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_2211",
-            "DV_FantasticStory_PlusAbility_2212",
-            "DV_FantasticStory_PlusAbility_2213",
-            "DV_FantasticStory_PlusAbility_2214",
-            "DV_FantasticStory_BaseAbility_TriggerFlag"
           ]
         },
         {
@@ -2299,6 +2292,17 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-149468610\">Modifier_FantasticStory_HPParentChild</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "DV_FantasticStory_BaseAbility_TriggerFlag",
+            "DV_FantasticStory_PlusAbility_2214",
+            "DV_FantasticStory_PlusAbility_2213",
+            "DV_FantasticStory_PlusAbility_2212",
+            "DV_FantasticStory_PlusAbility_2211"
+          ],
+          "description": "After non-Elite enemy targets are defeated, receive DMG based on a certain percentage of this unit's Max HP.",
+          "type": "Buff",
+          "effectName": "Binding Obligation",
+          "statusName": "Binding Obligation",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2346,19 +2350,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_FantasticStory_BaseAbility_TriggerFlag",
-            "DV_FantasticStory_PlusAbility_2214",
-            "DV_FantasticStory_PlusAbility_2213",
-            "DV_FantasticStory_PlusAbility_2212",
-            "DV_FantasticStory_PlusAbility_2211"
-          ],
-          "description": "After non-Elite enemy targets are defeated, receive DMG based on a certain percentage of this unit's Max HP.",
-          "type": "Buff",
-          "effectName": "Binding Obligation",
-          "statusName": "Binding Obligation"
+          ]
         }
       ]
     },
@@ -2891,6 +2883,22 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1954932294\">Modifier_FantasticStory_BaseAbility_2210_Plus4AddOn</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "DV_FantasticStory_PlusAbility_2212",
+            "DV_FantasticStory_PlusAbility_2213",
+            "DV_FantasticStory_PlusAbility_2214"
+          ],
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All(with Unselectable)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"202641087\">Modifier_FantasticStory_BaseAbility_2210_Plus4AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Improvisation</span>]",
+              "haloStatus": true
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Anyone]: Any",
@@ -3023,23 +3031,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_2212",
-            "DV_FantasticStory_PlusAbility_2213",
-            "DV_FantasticStory_PlusAbility_2214"
-          ],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All(with Unselectable)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"202641087\">Modifier_FantasticStory_BaseAbility_2210_Plus4AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Improvisation</span>]",
-              "haloStatus": true
-            }
           ]
         },
         {
@@ -3054,6 +3045,30 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-51359151\">Modifier_FantasticStory_BaseAbility_2210_Plus3AddOn</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "DV_FantasticStory_PlusAbility_2212",
+            "DV_FantasticStory_PlusAbility_2213"
+          ],
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All(with Unselectable)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1718519168\">Modifier_FantasticStory_BaseAbility_2210_Plus3AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Tirade</span>]",
+              "haloStatus": true
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1476176126\">Modifier_FantasticStory_BaseAbility_2210_plus3_sub2</a>[<span class=\"descriptionNumberColor\">Tirade</span>]",
+              "haloStatus": true
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "Attack Start [Anyone]",
@@ -3270,31 +3285,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_2212",
-            "DV_FantasticStory_PlusAbility_2213"
-          ],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All(with Unselectable)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1718519168\">Modifier_FantasticStory_BaseAbility_2210_Plus3AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Tirade</span>]",
-              "haloStatus": true
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1476176126\">Modifier_FantasticStory_BaseAbility_2210_plus3_sub2</a>[<span class=\"descriptionNumberColor\">Tirade</span>]",
-              "haloStatus": true
-            }
           ]
         },
         {
@@ -3306,6 +3296,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1157326881\">Modifier_FantasticStory_BaseAbility_2210_plus2_sub2</a>[<span class=\"descriptionNumberColor\">Delirium</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "After using Basic ATK or Skill, gains <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2212_ADF_2</span> Punchline. During Surging Grit, DMG dealt increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2212_ADF_1</span>.",
+          "type": "Buff",
+          "statusName": "Delirium",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -3342,10 +3335,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After using Basic ATK or Skill, gains <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2212_ADF_2</span> Punchline. During Surging Grit, DMG dealt increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2212_ADF_1</span>.",
-          "type": "Buff",
-          "statusName": "Delirium"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3354,6 +3344,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "description": "After using Basic ATK or Skill to attack, every enemy target hit additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2212_ADF_3</span> Grit Value for allies.",
+          "type": "Buff",
+          "statusName": "Grit Mechanics_Delirium",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -3484,16 +3477,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After using Basic ATK or Skill to attack, every enemy target hit additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2212_ADF_3</span> Grit Value for allies.",
-          "type": "Buff",
-          "statusName": "Grit Mechanics_Delirium"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1858169160\">Modifier_FantasticStory_BaseAbility_2210_Plus2AddOn</a>",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
           "latentQueue": [
             "DV_FantasticStory_PlusAbility_2212"
           ],
@@ -3530,6 +3519,17 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2047403447\">Modifier_FantasticStory_BaseAbility_2210_Plus1AddOn</a>",
           "stackType": "ReplaceByCaster",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1087815718\">Modifier_FantasticStory_BaseAbility_2210_Plus1AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Euphoria</span>]",
+              "haloStatus": true
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "Skill Point Changes",
@@ -3645,17 +3645,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1087815718\">Modifier_FantasticStory_BaseAbility_2210_Plus1AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Euphoria</span>]",
-              "haloStatus": true
-            }
           ]
         },
         {
@@ -3666,6 +3655,9 @@ const compositeAbilityObject = {
             "KeepOnDeathrattle",
             "Deathrattle"
           ],
+          "description": "Increases DoT taken by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2214_ADF_1</span>. When defeated, allies gain 1 Punchline for each DoT effect this target is afflicted with.",
+          "type": "Debuff",
+          "statusName": "Improvisation",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -3725,15 +3717,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DoT taken by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2214_ADF_1</span>. When defeated, allies gain 1 Punchline for each DoT effect this target is afflicted with.",
-          "type": "Debuff",
-          "statusName": "Improvisation"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1476176126\">Modifier_FantasticStory_BaseAbility_2210_plus3_sub2</a>[<span class=\"descriptionNumberColor\">Tirade</span>]",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "DV_FantasticStory_PlusAbility_2213",
+            "DV_FantasticStory_PlusAbility_2212"
+          ],
+          "description": "After dealing Break DMG with an attack, gains <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2213_ADF_2</span> Punchline.",
+          "type": "Buff",
+          "statusName": "Tirade",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -3798,20 +3794,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_2213",
-            "DV_FantasticStory_PlusAbility_2212"
-          ],
-          "description": "After dealing Break DMG with an attack, gains <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2213_ADF_2</span> Punchline.",
-          "type": "Buff",
-          "statusName": "Tirade"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-207238664\">Modifier_FantasticStory_BaseAbility_2210_plus3_sub</a>[<span class=\"descriptionNumberColor\">Tirade</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases Break DMG taken by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2213_ADF_1</span>.",
+          "type": "Debuff",
+          "statusName": "Tirade",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -3843,10 +3834,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases Break DMG taken by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2213_ADF_1</span>.",
-          "type": "Debuff",
-          "statusName": "Tirade"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3908,6 +3896,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2084646258\">Modifier_FantasticStory_BaseAbility_2210_plus1_sub</a>[<span class=\"descriptionNumberColor\">Euphoria</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Elation DMG taken increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2211_ADF_1</span>",
+          "type": "Debuff",
+          "statusName": "Euphoria",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -3939,10 +3930,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Elation DMG taken increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2211_ADF_1</span>",
-          "type": "Debuff",
-          "statusName": "Euphoria"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3951,7 +3939,6 @@ const compositeAbilityObject = {
           "stackData": [
             "DV_Ratio"
           ],
-          "latentQueue": [],
           "description": "Each time Punchline is gained, allies will additionally accumulate <span class=\"descriptionNumberColor\">DV_Ratio</span> Grit Value.",
           "type": "Buff",
           "statusName": "Grit Mechanics"
@@ -3960,8 +3947,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1855869842\">Modifier_FantasticStory_BaseAbility_2210_BeforeFever_ForShow</a>[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
           "description": "This stage has a special Elation Skill. When entering Aha Instant, deals <span class=\"descriptionNumberColor\">DV_FantasticStory_BaseAbility_2210_BeforeFever_P1_MaxCount</span> instance(s) of Elation DMG to a random enemy target. When an enemy target is defeated, obtains <span class=\"descriptionNumberColor\">DV_FantasticStory_BaseAbility_2210_BeforeFever_P3_ElationPoint</span> Punchline point(s).",
           "type": "Buff",
           "statusName": "Concordant Truce"
@@ -3970,6 +3955,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1219408339\">Modifier_FantasticStory_BaseAbility_2210_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "DV_Ratio_Get"
+          ],
+          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">DV_Ratio_Get</span>.",
+          "type": "Debuff",
+          "statusName": "Surging Grit",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3992,72 +3983,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "DV_Ratio_Get"
-          ],
-          "latentQueue": [],
-          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">DV_Ratio_Get</span>.",
-          "type": "Debuff",
-          "statusName": "Surging Grit"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-812002117\">Modifier_FantasticStory_BaseAbility_2210_aura</a>",
           "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
-                  "value": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTemp) || RETURN",
-                    "displayLines": "DV_FantasticStory_BaseAbility_CountSumTemp",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_CountSumTemp"
-                    ]
-                  }
-                },
-                {
-                  "name": "Update Surging Grit[PF]",
-                  "current": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                    "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_CountSum"
-                    ]
-                  },
-                  "max": {
-                    "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                    "displayLines": "DV_EnterFeverValue",
-                    "constants": [],
-                    "variables": [
-                      "DV_EnterFeverValue"
-                    ]
-                  },
-                  "delta": {
-                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                    "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                    "constants": [],
-                    "variables": [
-                      "DV_FantasticStory_BaseAbility_CountSum"
-                    ]
-                  },
-                  "type": "FeverBack"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp",
-                  "value": 0
-                }
-              ]
-            }
-          ],
-          "stackData": [],
           "latentQueue": [
             "DV_FantasticStory_BaseAbility_TriggerFlag"
           ],
@@ -4153,6 +4084,58 @@ const compositeAbilityObject = {
                 "compareType": "=",
                 "value2": 1
               }
+            }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
+                  "value": {
+                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTemp) || RETURN",
+                    "displayLines": "DV_FantasticStory_BaseAbility_CountSumTemp",
+                    "constants": [],
+                    "variables": [
+                      "DV_FantasticStory_BaseAbility_CountSumTemp"
+                    ]
+                  }
+                },
+                {
+                  "name": "Update Surging Grit[PF]",
+                  "current": {
+                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
+                    "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
+                    "constants": [],
+                    "variables": [
+                      "DV_FantasticStory_BaseAbility_CountSum"
+                    ]
+                  },
+                  "max": {
+                    "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
+                    "displayLines": "DV_EnterFeverValue",
+                    "constants": [],
+                    "variables": [
+                      "DV_EnterFeverValue"
+                    ]
+                  },
+                  "delta": {
+                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
+                    "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
+                    "constants": [],
+                    "variables": [
+                      "DV_FantasticStory_BaseAbility_CountSum"
+                    ]
+                  },
+                  "type": "FeverBack"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp",
+                  "value": 0
+                }
+              ]
             }
           ]
         },
@@ -4257,9 +4240,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

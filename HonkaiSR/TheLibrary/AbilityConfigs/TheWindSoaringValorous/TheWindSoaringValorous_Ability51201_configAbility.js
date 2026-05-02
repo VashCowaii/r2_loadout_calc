@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1900399572\">Relic_120_Sub</a>[<span class=\"descriptionNumberColor\">The Wind-Soaring Valorous</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Ultimate deals <span class=\"descriptionNumberColor\">#SkillRelic_120_4_P2_DamageAddedRatio</span> more DMG.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "The Wind-Soaring Valorous",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -45,11 +49,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Ultimate deals <span class=\"descriptionNumberColor\">#SkillRelic_120_4_P2_DamageAddedRatio</span> more DMG.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "The Wind-Soaring Valorous"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -87,9 +87,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

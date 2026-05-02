@@ -606,6 +606,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-105944791\">Enemy_W4_DawnsEye_01_SoundController</a>",
+      "latentQueue": [
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle"
@@ -613,10 +616,6 @@ const configAbility = {
         {
           "eventTrigger": "Leave Battle"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
       ]
     },
     {

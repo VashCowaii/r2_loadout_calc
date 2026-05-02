@@ -15,21 +15,27 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "AttackSign"
       ],
+      "description": "%CasterName will focus attacks on this target.",
+      "type": "Other",
+      "effectName": "Lock On",
+      "statusName": "Lock On",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "%CasterName will focus attacks on this target.",
-      "type": "Other",
-      "effectName": "Lock On",
-      "statusName": "Lock On"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1705391722\">Monster_W1_Mecha03_01_Rage</a>[<span class=\"descriptionNumberColor\">Surpass</span>]",
+      "stackData": [
+        "MDF_AttackAddedRatio"
+      ],
+      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "ATK Greatly Boosted",
+      "statusName": "Surpass",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -106,16 +112,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AttackAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "ATK Greatly Boosted",
-      "statusName": "Surpass",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -127,9 +124,7 @@ const configAbility = {
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -146,6 +141,7 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-168738441\">Monster_W1_Mecha03_01_Charge</a>",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -180,12 +176,12 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-272775798\">Monster_W1_Mecha03_01_Bonus</a>",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -214,12 +210,19 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2015116315\">Monster_W1_Mecha03_01_Overheat</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+      "stackData": [
+        "MDF_DefenceAddedRatio"
+      ],
+      "description": "DEF -<span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>.",
+      "type": "Debuff",
+      "effectName": "DEF Reduction",
+      "statusName": "DEF Reduction",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Owner]",
@@ -250,22 +253,31 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DefenceAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "DEF -<span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>.",
-      "type": "Debuff",
-      "effectName": "DEF Reduction",
-      "statusName": "DEF Reduction",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1137901449\">Monster_W1_Mecha03_01_Frozen</a>[<span class=\"descriptionNumberColor\">Deep Freeze</span>]",
       "stackType": "Replace",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "stackData": [
+        "MDF_IceResistanceRatio_PerLayer",
+        "MDF_SpeedAddedDelta_PerLayer",
+        "MDF_MaxLayer"
+      ],
+      "description": "Reduces Ice RES by <span class=\"descriptionNumberColor\">MDF_IceResistanceRatio_PerLayer</span> and SPD by <span class=\"descriptionNumberColor\">MDF_SpeedAddedDelta_PerLayer</span>. Can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+      "type": "Debuff",
+      "effectName": "Deep Freeze",
+      "statusName": "Deep Freeze",
+      "stackLimit": 5,
+      "addStacksPerTrigger": {
+        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+        "displayLines": "ModifierStackLayer",
+        "constants": [],
+        "variables": [
+          "ModifierStackLayer"
+        ]
+      },
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -340,26 +352,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_IceResistanceRatio_PerLayer",
-        "MDF_SpeedAddedDelta_PerLayer",
-        "MDF_MaxLayer"
-      ],
-      "latentQueue": [],
-      "description": "Reduces Ice RES by <span class=\"descriptionNumberColor\">MDF_IceResistanceRatio_PerLayer</span> and SPD by <span class=\"descriptionNumberColor\">MDF_SpeedAddedDelta_PerLayer</span>. Can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-      "type": "Debuff",
-      "effectName": "Deep Freeze",
-      "statusName": "Deep Freeze",
-      "stackLimit": 5,
-      "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -431,13 +424,23 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__375705017\">Monster_W1_Mecha03_01_SummonMark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__375705017\">Monster_W1_Mecha03_01_SummonMark</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-800128779\">Monster_W1_Mecha03_01_AOECount</a>[<span class=\"descriptionNumberColor\">Bitterly Cold</span>]",
+      "description": "Unleashes <span class=\"descriptionNumberColor\">ModifierLayers</span> wave(s) of Blazing Freeze in the next action.",
+      "type": "Other",
+      "statusName": "Bitterly Cold",
+      "stackLimit": 4,
+      "addStacksPerTrigger": {
+        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+        "displayLines": "ModifierStackLayer",
+        "constants": [],
+        "variables": [
+          "ModifierStackLayer"
+        ]
+      },
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -450,21 +453,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Unleashes <span class=\"descriptionNumberColor\">ModifierLayers</span> wave(s) of Blazing Freeze in the next action.",
-      "type": "Other",
-      "statusName": "Bitterly Cold",
-      "stackLimit": 4,
-      "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
-      }
+      ]
     }
   ],
   "references": []

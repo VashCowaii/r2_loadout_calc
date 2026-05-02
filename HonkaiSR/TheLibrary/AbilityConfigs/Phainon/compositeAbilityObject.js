@@ -232,9 +232,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -462,9 +460,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -535,9 +531,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -869,9 +863,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -929,9 +921,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1036,9 +1026,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1132,9 +1120,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1274,6 +1260,16 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1463150719\">Phainon_PassiveAbility02</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "conditions": {
+              "name": "Skill Name",
+              "skillName": "Skill22",
+              "useActive": true
+            },
+            "multiplier": 0.25
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1553,19 +1549,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "conditions": {
-              "name": "Skill Name",
-              "skillName": "Skill22",
-              "useActive": true
-            },
-            "multiplier": 0.25
-          }
+          ]
         }
       ],
       "targetObjectData": {
@@ -2097,9 +2081,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2476,9 +2458,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -3062,13 +3042,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3121,11 +3102,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -3650,6 +3627,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__423192378\">M_Phainon_Ability22_v2_TargetTimeslow</a>",
+          "latentQueue": [
+            "_delta_frame",
+            "_prev_energy"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -3660,16 +3641,15 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_delta_frame",
-            "_prev_energy"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__45709795\">M_Phainon_Ability22_Insert</a>",
+          "latentQueue": [
+            "_delta_frame",
+            "_prev_energy"
+          ],
           "execute": [
             {
               "eventTrigger": "Extra Turn Action Injection: Start",
@@ -3690,11 +3670,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_delta_frame",
-            "_prev_energy"
           ]
         }
       ],
@@ -3940,6 +3915,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1753185453\">M_Phainon_Ability22_TargetTimeslow</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "_delta_frame",
+            "_prev_energy"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -3950,11 +3929,6 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_delta_frame",
-            "_prev_energy"
           ]
         }
       ],
@@ -4249,9 +4223,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -4448,9 +4420,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4516,9 +4486,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4565,9 +4533,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4576,14 +4542,24 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyRatio"
+          ],
+          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. Launches Counter after enemy targets finish taking actions.",
+          "type": "Buff",
+          "effectName": "Soulscorch",
+          "statusName": "Soulscorch",
+          "stackLimit": 9999,
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+          },
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4948,30 +4924,6 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "MDF_Count",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (MDF_Count) || RETURN",
-                        "displayLines": "MDF_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Count"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
@@ -5081,25 +5033,34 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [],
-          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. Launches Counter after enemy targets finish taking actions.",
-          "type": "Buff",
-          "effectName": "Soulscorch",
-          "statusName": "Soulscorch",
-          "stackLimit": 9999,
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
-          }
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "MDF_Count",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (MDF_Count) || RETURN",
+                        "displayLines": "MDF_Count",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Count"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-389259557\">M_Phainon_Ability21_Insert_Preshow</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -5352,9 +5313,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -5575,9 +5534,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -5714,6 +5671,9 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1520947056\">M_Phainon_Ability21_InsertCheck</a>",
           "modifierFlags": [
             "CustomEvent_InfiniteRefresh"
+          ],
+          "latentQueue": [
+            "_haveNotGainCountFromEnemyAction"
           ],
           "execute": [
             {
@@ -5881,16 +5841,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_haveNotGainCountFromEnemyAction"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-982733816\">Phainon_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyRatio"
+          ],
+          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+          "type": "Buff",
+          "statusName": "Shine with Valor",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5914,18 +5876,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [],
-          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-          "type": "Buff",
-          "statusName": "Shine with Valor"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1152823097\">Phainon_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Sky and Earth Churn Mortal Froth</span>]",
+          "description": "Physical RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "statusName": "Sky and Earth Churn Mortal Froth",
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5948,14 +5910,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Physical RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "statusName": "Sky and Earth Churn Mortal Froth",
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5963,6 +5918,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "Those in the Departed state cannot be designated as ability targets and will not appear in the Action Order.",
+          "type": "Other",
+          "statusName": "Ruinous Irontomb",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5973,15 +5931,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Those in the Departed state cannot be designated as ability targets and will not appear in the Action Order.",
-          "type": "Other",
-          "statusName": "Ruinous Irontomb"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__151398776\">Phainon_SPOverflow</a>[<span class=\"descriptionNumberColor\">Coreflame</span>]",
           "stackType": "Multiple",
+          "stackData": [
+            "MDF_Count"
+          ],
+          "description": "The current number of overflow \"Coreflame\" points is <span class=\"descriptionNumberColor\">MDF_Count</span>. Gains an equal amount of \"Coreflame\" when the transformation ends.",
+          "type": "Other",
+          "statusName": "Coreflame",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -6037,14 +5998,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Count"
-          ],
-          "latentQueue": [],
-          "description": "The current number of overflow \"Coreflame\" points is <span class=\"descriptionNumberColor\">MDF_Count</span>. Gains an equal amount of \"Coreflame\" when the transformation ends.",
-          "type": "Other",
-          "statusName": "Coreflame"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6053,6 +6007,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_AttachWeakness"
           ],
+          "description": "Additionally implanted Physical Weakness.",
+          "type": "Debuff",
+          "statusName": "Ruinous Irontomb",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6070,26 +6027,35 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Additionally implanted Physical Weakness.",
-          "type": "Debuff",
-          "statusName": "Ruinous Irontomb"
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1074413210\">Phainon_FinalBE_Hint</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1074413210\">Phainon_FinalBE_Hint</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__133453837\">Phainon_NormalBE_Hint</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__133453837\">Phainon_NormalBE_Hint</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1942089860\">Phainon_Ultimate_ActionBarManager</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "({{All Team Members with Unselectable Team Members(Exclude Self)}} - {{Phainon's Forced-Action Teammates}}).[[addBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
+              "haloStatus": true,
+              "includeBattleEvent": true
+            }
+          ],
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+          },
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -6431,23 +6397,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "({{All Team Members with Unselectable Team Members(Exclude Self)}} - {{Phainon's Forced-Action Teammates}}).[[addBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
-              "haloStatus": true,
-              "includeBattleEvent": true
-            }
-          ],
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6456,6 +6406,10 @@ const compositeAbilityObject = {
             "KeepOnDeathrattle",
             "ListenBattleEventSkill"
           ],
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+          },
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -7020,24 +6974,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2124559598\">Phainon_Ultimate_LimboMark</a>",
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7051,6 +7001,54 @@ const compositeAbilityObject = {
             "FormationAssetCenterWhenSingle",
             "SpecialActionState",
             "SpecialBattleArea"
+          ],
+          "stackData": [
+            "MDF_PropertyRatio",
+            "MDF_PropertyRatio2"
+          ],
+          "description": "Immune to Crowd Control debuffs. ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>, and Max HP increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio2</span>.",
+          "type": "Other",
+          "statusName": "Divine Vessel",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1662843541\">Phainon_Ultimate_VisualManager</a>"
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1152823097\">Phainon_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Sky and Earth Churn Mortal Froth</span>]",
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 2
+              },
+              "valuePerStack": {
+                "MDF_PropertyRatio": {
+                  "operator": "Variables[0] (0.2) || RETURN",
+                  "displayLines": "0.2",
+                  "constants": [],
+                  "variables": [
+                    0.2
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"529435553\">Phainon_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
+              "haloStatus": true
+            }
           ],
           "execute": [
             {
@@ -7675,55 +7673,6 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio",
-            "MDF_PropertyRatio2"
-          ],
-          "latentQueue": [],
-          "description": "Immune to Crowd Control debuffs. ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>, and Max HP increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio2</span>.",
-          "type": "Other",
-          "statusName": "Divine Vessel",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1662843541\">Phainon_Ultimate_VisualManager</a>"
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1152823097\">Phainon_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Sky and Earth Churn Mortal Froth</span>]",
-              "conditions": {
-                "name": "Eidolon Activated",
-                "eidolon": 2
-              },
-              "valuePerStack": {
-                "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"529435553\">Phainon_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
-              "haloStatus": true
             }
           ]
         }

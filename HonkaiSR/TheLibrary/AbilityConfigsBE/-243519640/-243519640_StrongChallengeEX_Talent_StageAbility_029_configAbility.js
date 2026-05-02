@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__254716271\">MStrongChallengeEX_Talent_StageAbility_TGT_029</a>[<span class=\"descriptionNumberColor\">Cheat Sheet</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
+      "type": "Buff",
+      "statusName": "Cheat Sheet",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -70,11 +74,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
-      "type": "Buff",
-      "statusName": "Cheat Sheet",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -295,9 +295,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

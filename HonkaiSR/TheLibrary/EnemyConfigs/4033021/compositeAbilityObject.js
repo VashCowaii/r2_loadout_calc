@@ -1067,6 +1067,11 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__357625087\">Monster_W4_Claymore_01_LocalLegend_Locking</a>",
+          "latentQueue": [
+            "InsertCheck03",
+            "_SelectTimes",
+            "_EnterBattle"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -1108,12 +1113,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "InsertCheck03",
-            "_SelectTimes",
-            "_EnterBattle"
           ]
         }
       ]
@@ -2913,6 +2912,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "latentQueue": [
+            "_FirstProgressInfo",
+            "_EnterBattle"
+          ],
           "execute": [
             {
               "eventTrigger": "Ability Use [Anyone]: End",
@@ -2962,18 +2965,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_FirstProgressInfo",
-            "_EnterBattle"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1804376736\">W4_Claymore_01_LocalLegend_BattleScoreMark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1804376736\">W4_Claymore_01_LocalLegend_BattleScoreMark</a>"
         },
         {
           "name": "Modifier Construction",
@@ -3004,9 +3000,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3030,14 +3024,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1358856185\">Enemy_W4_Claymore_01_LocalLegend_TargetSelectPrepare</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "_SelectTimes"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3186,10 +3181,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_SelectTimes"
           ]
         },
         {
@@ -3202,13 +3193,15 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__263808079\">Enemy_W4_Claymore_01_LocalLegend_WhiteMonst</a>",
+          "latentQueue": [
+            "_FirstProgressInfo",
+            "_EnterBattle"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -3244,16 +3237,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_FirstProgressInfo",
-            "_EnterBattle"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__735008645\">Enemy_W4_Claymore_01_LocalLegend_BlackMonst</a>",
+          "latentQueue": [
+            "_FirstProgressInfo",
+            "_EnterBattle"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -3289,11 +3281,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_FirstProgressInfo",
-            "_EnterBattle"
           ]
         },
         {
@@ -3332,13 +3319,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1386282109\">Enemy_W4_Claymore_01_LocalLegend_AllMonst</a>[<span class=\"descriptionNumberColor\">Fight in Unity</span>]",
+          "latentQueue": [
+            "_EnterBattle",
+            "InsertCheck04",
+            "_BossUI"
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span> and DMG received reduces by <span class=\"descriptionNumberColor\">MDF_ShowValue2</span>.",
+          "type": "Other",
+          "statusName": "Fight in Unity",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3401,21 +3394,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_EnterBattle",
-            "InsertCheck04",
-            "_BossUI"
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span> and DMG received reduces by <span class=\"descriptionNumberColor\">MDF_ShowValue2</span>.",
-          "type": "Other",
-          "statusName": "Fight in Unity"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1216174202\">Enemy_W4_Claymore_01_LocalLegend_AllCurse</a>",
-          "stackData": [],
           "latentQueue": [
             "_EnterBattle",
             "InsertCheck04",
@@ -3456,6 +3439,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "RemoveWhenCasterUnstage"
+          ],
+          "latentQueue": [
+            "_FirstProgressInfo",
+            "_EnterBattle"
           ],
           "execute": [
             {
@@ -3661,11 +3648,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_FirstProgressInfo",
-            "_EnterBattle"
           ]
         },
         {
@@ -3674,6 +3656,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "RemoveWhenCasterUnstage"
+          ],
+          "latentQueue": [
+            "_FirstProgressInfo",
+            "_EnterBattle"
           ],
           "execute": [
             {
@@ -3879,11 +3865,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_FirstProgressInfo",
-            "_EnterBattle"
           ]
         },
         {
@@ -3924,6 +3905,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1806977974\">Enemy_W4_Claymore_01_LocalLegend_Fatigue</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
           "stackType": "Replace",
+          "description": "When this target deals DMG to enemy targets, the DMG received by enemy targets is reduced by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. This state is removed when the \"Corrosion\" state is removed.",
+          "type": "Other",
+          "effectName": "DMG Reduction",
+          "statusName": "DMG Reduction",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -3940,11 +3925,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When this target deals DMG to enemy targets, the DMG received by enemy targets is reduced by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. This state is removed when the \"Corrosion\" state is removed.",
-          "type": "Other",
-          "effectName": "DMG Reduction",
-          "statusName": "DMG Reduction"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4605,9 +4586,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4615,6 +4594,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "DisableAction"
           ],
+          "description": "Restores a certain amount of HP and returns to battle during the next action.",
+          "type": "Other",
+          "statusName": "Indomitable Battle",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4713,17 +4696,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Restores a certain amount of HP and returns to battle during the next action.",
-          "type": "Other",
-          "statusName": "Indomitable Battle",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-180350393\">Monster_W4_Claymore_01_LocalLegend_Ability02_Perform</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-180350393\">Monster_W4_Claymore_01_LocalLegend_Ability02_Perform</a>"
         },
         {
           "name": "Modifier Construction",
@@ -4858,13 +4835,14 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1121280189\">Monster_W4_Claymore_01_LocalLegend_PartController_LockHP</a>",
+          "latentQueue": [
+            "InsertCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -5120,16 +5098,16 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "InsertCheck"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-883767978\">Monster_W4_Claymore_01_LocalLegend_DamageAdd</a>",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_DamageAdded"
+          ],
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5161,12 +5139,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageAdded"
-          ],
-          "latentQueue": [],
-          "addStacksPerTrigger": 1
+          ]
         }
       ],
       "references": []

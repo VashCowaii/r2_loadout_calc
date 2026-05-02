@@ -49,6 +49,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-936105590\">Modifier_BattleEventAbility_ChallengePeakBattle_Rage</a>[<span class=\"descriptionNumberColor\">Middlegame Mayhem</span>]",
       "stackType": "Replace",
+      "description": "Increases the final DMG dealt by each stack by <span class=\"descriptionNumberColor\">BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio</span>.",
+      "type": "Other",
+      "statusName": "Middlegame Mayhem",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -80,16 +83,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases the final DMG dealt by each stack by <span class=\"descriptionNumberColor\">BE_ChallengePeakBattle_Rage_AllDamageTypeAddedRatio</span>.",
-      "type": "Other",
-      "statusName": "Middlegame Mayhem"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1148970670\">Modifier_BattleEventAbility_ChallengePeakBattle_CountDown</a>",
       "modifierFlags": [
         "STAT_TurnCountAccumulator"
+      ],
+      "stackData": [
+        "BattleEventTurnLeftParam",
+        "BattleEventTurnLeftParam2",
+        "BattleEventTurnLeftParam3"
       ],
       "execute": [
         {
@@ -384,13 +389,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "BattleEventTurnLeftParam",
-        "BattleEventTurnLeftParam2",
-        "BattleEventTurnLeftParam3"
-      ],
-      "latentQueue": []
+      ]
     }
   ]
 }

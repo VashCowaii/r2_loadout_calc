@@ -743,15 +743,14 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>",
+      "latentQueue": [
+        "_Main_Skill06",
+        "_AvatarCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_Main_Skill06",
-        "_AvatarCount"
       ]
     }
   ]

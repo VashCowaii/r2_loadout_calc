@@ -46,6 +46,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_1</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -68,16 +72,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_1</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1892511260\">LC_24004_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_1</span>, lasting until after the next attack.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "ATK Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -100,11 +104,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_1</span>, lasting until after the next attack.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "ATK Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -199,9 +199,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

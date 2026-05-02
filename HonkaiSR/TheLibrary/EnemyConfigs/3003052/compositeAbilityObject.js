@@ -122,9 +122,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -156,9 +154,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1087,6 +1083,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "description": "About to use \"Wash Away All Sins For You.\"",
+          "type": "Other",
+          "effectName": "Target Locked On",
+          "statusName": "My Cup Runneth Over",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1215,13 +1215,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "About to use \"Wash Away All Sins For You.\"",
-          "type": "Other",
-          "effectName": "Target Locked On",
-          "statusName": "My Cup Runneth Over"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1230,6 +1224,10 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
+          "description": "Locked on by %CasterName as their attack target.",
+          "type": "Other",
+          "effectName": "Target Locked On",
+          "statusName": "Target Locked On",
           "execute": [
             {
               "eventTrigger": "When Losing Modifier [Owner]",
@@ -1251,13 +1249,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Locked on by %CasterName as their attack target.",
-          "type": "Other",
-          "effectName": "Target Locked On",
-          "statusName": "Target Locked On"
+          ]
         }
       ],
       "references": []

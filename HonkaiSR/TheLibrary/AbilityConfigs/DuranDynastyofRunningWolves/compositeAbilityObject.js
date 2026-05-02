@@ -26,6 +26,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1040962330\">Relic_315_Sub</a>[<span class=\"descriptionNumberColor\">Merit</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases DMG dealt by Follow-Up ATK by <span class=\"descriptionNumberColor\">#SkillRelic_315_2_P2_DamageAddedRatio</span>. This effect stacks up to <span class=\"descriptionNumberColor\">#SkillRelic_315_2_P1_MaxLayer</span> time(s). When <span class=\"descriptionNumberColor\">#SkillRelic_315_2_P1_MaxLayer</span> stack(s) are reached, additionally increases CRIT DMG by <span class=\"descriptionNumberColor\">#SkillRelic_315_2_P3_CriticalDamage</span>.",
+          "type": "Buff",
+          "effectName": "Merit",
+          "statusName": "Merit",
+          "stackLimit": 6,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -106,13 +112,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG dealt by Follow-Up ATK by <span class=\"descriptionNumberColor\">#SkillRelic_315_2_P2_DamageAddedRatio</span>. This effect stacks up to <span class=\"descriptionNumberColor\">#SkillRelic_315_2_P1_MaxLayer</span> time(s). When <span class=\"descriptionNumberColor\">#SkillRelic_315_2_P1_MaxLayer</span> stack(s) are reached, additionally increases CRIT DMG by <span class=\"descriptionNumberColor\">#SkillRelic_315_2_P3_CriticalDamage</span>.",
-          "type": "Buff",
-          "effectName": "Merit",
-          "statusName": "Merit",
-          "stackLimit": 6,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -285,9 +285,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

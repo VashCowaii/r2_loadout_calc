@@ -124,14 +124,20 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1792784435\">Enemy_W3_Dinosaur_02_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect can stack.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "ATK Boost",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -161,16 +167,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect can stack.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "ATK Boost",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -181,6 +178,16 @@ const configAbility = {
         "STAT_DOT",
         "STAT_DOT_Burn"
       ],
+      "useEntitySnapshot": true,
+      "stackData": [
+        "Modifier_Burn_DamagePercentage"
+      ],
+      "description": "Takes Fire DMG at the beginning of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Burn",
+      "statusName": "Burn",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -303,18 +310,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "Modifier_Burn_DamagePercentage"
-      ],
-      "latentQueue": [],
-      "description": "Takes Fire DMG at the beginning of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Burn",
-      "statusName": "Burn",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     }
   ],
   "references": []

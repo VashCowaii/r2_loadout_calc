@@ -22,6 +22,198 @@ const configAbility = {
       "modifierFlags": [
         "ForceStanceDamage"
       ],
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "conditions": {
+          "name": "OR",
+          "conditionList": [
+            {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Has Element",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "DamageType": {
+                    "name": "Damage Type Source",
+                    "sourceType": "Fire"
+                  }
+                },
+                {
+                  "name": "Has Weakness",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "DamageType": "Fire",
+                  "invertCondition": true
+                }
+              ]
+            },
+            {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Has Element",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "DamageType": {
+                    "name": "Damage Type Source",
+                    "sourceType": "Thunder"
+                  }
+                },
+                {
+                  "name": "Has Weakness",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "DamageType": "Thunder",
+                  "invertCondition": true
+                }
+              ]
+            },
+            {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Has Element",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "DamageType": {
+                    "name": "Damage Type Source",
+                    "sourceType": "Physical"
+                  }
+                },
+                {
+                  "name": "Has Weakness",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "DamageType": "Physical",
+                  "invertCondition": true
+                }
+              ]
+            },
+            {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Has Element",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "DamageType": {
+                    "name": "Damage Type Source",
+                    "sourceType": "Wind"
+                  }
+                },
+                {
+                  "name": "Has Weakness",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "DamageType": "Wind",
+                  "invertCondition": true
+                }
+              ]
+            },
+            {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Has Element",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "DamageType": {
+                    "name": "Damage Type Source",
+                    "sourceType": "Quantum"
+                  }
+                },
+                {
+                  "name": "Has Weakness",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "DamageType": "Quantum",
+                  "invertCondition": true
+                }
+              ]
+            },
+            {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Has Element",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "DamageType": {
+                    "name": "Damage Type Source",
+                    "sourceType": "Ice"
+                  }
+                },
+                {
+                  "name": "Has Weakness",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "DamageType": "Ice",
+                  "invertCondition": true
+                }
+              ]
+            },
+            {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Has Element",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "DamageType": {
+                    "name": "Damage Type Source",
+                    "sourceType": "Imaginary"
+                  }
+                },
+                {
+                  "name": "Has Weakness",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "DamageType": "Imaginary",
+                  "invertCondition": true
+                }
+              ]
+            }
+          ]
+        },
+        "toughnessForcedReductionPreview": {
+          "operator": "Variables[0] (#ADF_1) || RETURN",
+          "displayLines": "#ADF_1",
+          "constants": [],
+          "variables": [
+            "#ADF_1"
+          ]
+        }
+      },
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -311,199 +503,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "conditions": {
-          "name": "OR",
-          "conditionList": [
-            {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Has Element",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Fire"
-                  }
-                },
-                {
-                  "name": "Has Weakness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "DamageType": "Fire",
-                  "invertCondition": true
-                }
-              ]
-            },
-            {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Has Element",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Thunder"
-                  }
-                },
-                {
-                  "name": "Has Weakness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "DamageType": "Thunder",
-                  "invertCondition": true
-                }
-              ]
-            },
-            {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Has Element",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Physical"
-                  }
-                },
-                {
-                  "name": "Has Weakness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "DamageType": "Physical",
-                  "invertCondition": true
-                }
-              ]
-            },
-            {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Has Element",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Wind"
-                  }
-                },
-                {
-                  "name": "Has Weakness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "DamageType": "Wind",
-                  "invertCondition": true
-                }
-              ]
-            },
-            {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Has Element",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Quantum"
-                  }
-                },
-                {
-                  "name": "Has Weakness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "DamageType": "Quantum",
-                  "invertCondition": true
-                }
-              ]
-            },
-            {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Has Element",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Ice"
-                  }
-                },
-                {
-                  "name": "Has Weakness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "DamageType": "Ice",
-                  "invertCondition": true
-                }
-              ]
-            },
-            {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Has Element",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Imaginary"
-                  }
-                },
-                {
-                  "name": "Has Weakness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "DamageType": "Imaginary",
-                  "invertCondition": true
-                }
-              ]
-            }
-          ]
-        },
-        "toughnessForcedReductionPreview": {
-          "operator": "Variables[0] (#ADF_1) || RETURN",
-          "displayLines": "#ADF_1",
-          "constants": [],
-          "variables": [
-            "#ADF_1"
-          ]
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -550,9 +550,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

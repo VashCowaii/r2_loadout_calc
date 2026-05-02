@@ -30,9 +30,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1639987176\">Enemy_W4_DawnsEyePart_06_MuteSpeed</a>",
       "modifierFlags": [
         "MuteHitFly"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

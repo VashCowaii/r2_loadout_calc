@@ -304,9 +304,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,
@@ -358,6 +356,16 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1169158629\">LC_23042_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Tolerant</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "_LoseHPTotal"
+          ],
+          "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Tolerant",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -380,17 +388,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "_LoseHPTotal"
-          ],
-          "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Tolerant"
+          ]
         }
       ]
     }

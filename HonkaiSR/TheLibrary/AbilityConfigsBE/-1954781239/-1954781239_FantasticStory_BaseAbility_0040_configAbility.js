@@ -181,6 +181,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__355925913\">Modifier_FantasticStory_BaseAbility_0040_plus3_sub</a>[<span class=\"descriptionNumberColor\">Bonus Charge</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "After attacking enemy targets, Whimsicality additionally gains <span class=\"descriptionNumberColor\">_Extra_Count</span> point(s) of Charge.",
+      "type": "Buff",
+      "effectName": "Bonus Charge",
+      "statusName": "Bonus Charge",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -212,11 +216,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "After attacking enemy targets, Whimsicality additionally gains <span class=\"descriptionNumberColor\">_Extra_Count</span> point(s) of Charge.",
-      "type": "Buff",
-      "effectName": "Bonus Charge",
-      "statusName": "Bonus Charge"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -308,6 +308,18 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1941026382\">Modifier_FantasticStory_BaseAbility_0040</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "ADF_1",
+        "ADF_2",
+        "ADF_3",
+        "TempHP"
+      ],
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_0041",
+        "DV_FantasticStory_PlusAbility_0042",
+        "DV_FantasticStory_PlusAbility_0043",
+        "DV_FantasticStory_BaseAbility_0040_TriggerDamageFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1340,18 +1352,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "ADF_1",
-        "ADF_2",
-        "ADF_3",
-        "TempHP"
-      ],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_0041",
-        "DV_FantasticStory_PlusAbility_0042",
-        "DV_FantasticStory_PlusAbility_0043",
-        "DV_FantasticStory_BaseAbility_0040_TriggerDamageFlag"
       ]
     }
   ]

@@ -915,9 +915,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -927,7 +925,6 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
-          "stackData": [],
           "latentQueue": [
             "W2_Mecha03_BattleSore2_Flag",
             "W2_Mecha03_00_Overdrive_InsertFlag"
@@ -943,6 +940,17 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak"
           ],
+          "stackData": [
+            "MDF_SpeedUpRatio"
+          ],
+          "latentQueue": [
+            "W2_Mecha03_BattleSore2_Flag"
+          ],
+          "description": "The Aurumaton Gatekeeper's Toughness cannot be reduced. Its SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>, and it activates the ability Track Down.",
+          "type": "Buff",
+          "effectName": "Sanction Mode: Punisher",
+          "statusName": "Sanction Mode: Punisher",
+          "duration": 3,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1039,18 +1047,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedUpRatio"
-          ],
-          "latentQueue": [
-            "W2_Mecha03_BattleSore2_Flag"
-          ],
-          "description": "The Aurumaton Gatekeeper's Toughness cannot be reduced. Its SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>, and it activates the ability Track Down.",
-          "type": "Buff",
-          "effectName": "Sanction Mode: Punisher",
-          "statusName": "Sanction Mode: Punisher",
-          "duration": 3
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1058,6 +1055,17 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak"
           ],
+          "stackData": [
+            "MDF_SpeedAddedValue"
+          ],
+          "latentQueue": [
+            "W2_Mecha03_BattleSore2_Flag"
+          ],
+          "description": "The Aurumaton Gatekeeper's Toughness cannot be reduced. Its SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddedValue</span> and it activates the abilities Restraint and Enchainment.",
+          "type": "Buff",
+          "effectName": "Sanction Mode",
+          "statusName": "Sanction Mode",
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1200,18 +1208,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedAddedValue"
-          ],
-          "latentQueue": [
-            "W2_Mecha03_BattleSore2_Flag"
-          ],
-          "description": "The Aurumaton Gatekeeper's Toughness cannot be reduced. Its SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddedValue</span> and it activates the abilities Restraint and Enchainment.",
-          "type": "Buff",
-          "effectName": "Sanction Mode",
-          "statusName": "Sanction Mode",
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1404,6 +1401,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1941111631\">Enemy_W2_Mecha03_Overdrive_Accumulate_Toast</a>",
           "stackType": "ReplaceByCaster",
+          "stackLimit": 3,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1480,10 +1478,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "stackLimit": 3
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1510,6 +1505,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__618418511\">Enemy_W2_Mecha03_Overdrive_Accumulate</a>",
           "stackType": "ReplaceByCaster",
+          "stackLimit": 3,
           "execute": [
             {
               "eventTrigger": "Enter Stage[?]",
@@ -1889,10 +1885,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "stackLimit": 3
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1976,9 +1969,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2231,9 +2222,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

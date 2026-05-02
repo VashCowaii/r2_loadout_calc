@@ -155,9 +155,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -249,6 +247,21 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1097387552\">Jiaoqiu_PassiveAbility</a>",
           "stackType": "ReplaceByCaster",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"453883342\">Jiaoqiu_Eidolon1_ListenDamage</a>[<span class=\"descriptionNumberColor\">Pentapathic Transference</span>]",
+              "haloStatus": true,
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 1
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "Action Phase Start [Owner][?]",
@@ -470,23 +483,6 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectables}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"453883342\">Jiaoqiu_Eidolon1_ListenDamage</a>[<span class=\"descriptionNumberColor\">Pentapathic Transference</span>]",
-              "haloStatus": true,
-              "conditions": {
-                "name": "Eidolon Activated",
-                "eidolon": 1
-              }
             }
           ]
         }
@@ -1490,6 +1486,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1036174530\">Jiaoqiu_AbilityEidolon6_ResistDown</a>[<span class=\"descriptionNumberColor\">Nonamorphic Pyrobind</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Decreases All-Type RES by <span class=\"descriptionNumberColor\">ResistDownRatio</span>.",
+          "type": "Debuff",
+          "statusName": "Nonamorphic Pyrobind",
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1514,14 +1517,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Decreases All-Type RES by <span class=\"descriptionNumberColor\">ResistDownRatio</span>.",
-          "type": "Debuff",
-          "statusName": "Nonamorphic Pyrobind",
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1530,6 +1526,14 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_AttackDown"
           ],
+          "description": "ATK decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "ATK Reduction",
+          "statusName": "Leisure In, Luster Out",
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1554,15 +1558,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "ATK decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "ATK Reduction",
-          "statusName": "Leisure In, Luster Out",
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"-2104919447\">Jiaoqiu_Debuff_Flavor</a>[<span class=\"descriptionNumberColor\">Ashen Roast</span>]"
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1871,14 +1867,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__453883342\">Jiaoqiu_Eidolon1_ListenDamage</a>[<span class=\"descriptionNumberColor\">Pentapathic Transference</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt to enemies afflicted with Ashen Roast by <span class=\"descriptionNumberColor\">#SkillRank_Rank01_P1_ExtraRatio</span>.",
+          "type": "Buff",
+          "statusName": "Pentapathic Transference",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1909,18 +1906,82 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Increases DMG dealt to enemies afflicted with Ashen Roast by <span class=\"descriptionNumberColor\">#SkillRank_Rank01_P1_ExtraRatio</span>.",
-          "type": "Buff",
-          "statusName": "Pentapathic Transference"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1304078651\">Jiaoqiu_Aura</a>",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "Skill03_P1_DamagePercentage",
+            "Skill03_P2_Ratio",
+            "Skill03_P3_Value",
+            "Skill03_P3_Ratio",
+            "Skill03_P4_Duration"
+          ],
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1053970623\">Jiaoqiu_Ultimate_FriendForShow</a>",
+              "haloStatus": true
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"8266626\">Jiaoqiu_Aura_DebuffForShow</a>",
+              "haloStatus": true
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1256261973\">Jiaoqiu_Debuff_Ultra</a>[<span class=\"descriptionNumberColor\">Pyrograph Arcanum</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.15) || RETURN",
+                  "displayLines": "0.15",
+                  "constants": [],
+                  "variables": [
+                    0.15
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-524635455\">Jiaoqiu_Eidolon4_AttackDown</a>[<span class=\"descriptionNumberColor\">Leisure In, Luster Out</span>]",
+              "haloStatus": true,
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 4
+              },
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.15) || RETURN",
+                  "displayLines": "0.15",
+                  "constants": [],
+                  "variables": [
+                    0.15
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -2152,76 +2213,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "Skill03_P1_DamagePercentage",
-            "Skill03_P2_Ratio",
-            "Skill03_P3_Value",
-            "Skill03_P3_Ratio",
-            "Skill03_P4_Duration"
-          ],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1053970623\">Jiaoqiu_Ultimate_FriendForShow</a>",
-              "haloStatus": true
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"8266626\">Jiaoqiu_Aura_DebuffForShow</a>",
-              "haloStatus": true
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1256261973\">Jiaoqiu_Debuff_Ultra</a>[<span class=\"descriptionNumberColor\">Pyrograph Arcanum</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.15) || RETURN",
-                  "displayLines": "0.15",
-                  "constants": [],
-                  "variables": [
-                    0.15
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-524635455\">Jiaoqiu_Eidolon4_AttackDown</a>[<span class=\"descriptionNumberColor\">Leisure In, Luster Out</span>]",
-              "haloStatus": true,
-              "conditions": {
-                "name": "Eidolon Activated",
-                "eidolon": 4
-              },
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.15) || RETURN",
-                  "displayLines": "0.15",
-                  "constants": [],
-                  "variables": [
-                    0.15
-                  ]
-                }
-              }
-            }
           ]
         },
         {
@@ -2256,18 +2247,17 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1053970623\">Jiaoqiu_Ultimate_FriendForShow</a>",
           "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
           "latentQueue": [
             "Skill03_P4_Duration",
             "Skill03_P3_Ratio",
             "Skill03_P3_Value",
             "Skill03_P2_Ratio",
             "Skill03_P1_DamagePercentage"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
           ]
         },
         {
@@ -2277,7 +2267,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
-          "stackData": [],
           "latentQueue": [
             "SkillRank_Rank04_Flag"
           ]
@@ -2286,7 +2275,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__8266626\">Jiaoqiu_Aura_DebuffForShow</a>",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
           "latentQueue": [
             "Skill03_P4_Duration",
             "Skill03_P3_Ratio",
@@ -2305,6 +2293,26 @@ const compositeAbilityObject = {
             "KeepOnDeathrattle",
             "RemoveWhenCasterDead"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "DOT_Ratio",
+            "SkillRank_Rank02_P1_Ratio",
+            "SkillRank_Rank06_P3_DownRatio",
+            "MDF_PropertyValue",
+            "MDF_PropertyValue_2"
+          ],
+          "latentQueue": [
+            "Skill03_P4_Duration",
+            "Skill03_P3_Ratio",
+            "Skill03_P3_Value",
+            "Skill03_P2_Ratio",
+            "Skill03_P1_DamagePercentage",
+            "SkillRank_Rank04_Flag"
+          ],
+          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This unit can be considered as Burned. While Ashen Roast is active, takes Fire DMG at the start of each turn.",
+          "type": "Debuff",
+          "effectName": "Ashen Roast",
+          "statusName": "Ashen Roast",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2569,32 +2577,30 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1256261973\">Jiaoqiu_Debuff_Ultra</a>[<span class=\"descriptionNumberColor\">Pyrograph Arcanum</span>]",
+          "stackType": "ReplaceByCaster",
           "stackData": [
-            "DOT_Ratio",
-            "SkillRank_Rank02_P1_Ratio",
-            "SkillRank_Rank06_P3_DownRatio",
-            "MDF_PropertyValue",
-            "MDF_PropertyValue_2"
+            "MDF_PropertyValue"
           ],
           "latentQueue": [
             "Skill03_P4_Duration",
             "Skill03_P3_Ratio",
             "Skill03_P3_Value",
             "Skill03_P2_Ratio",
-            "Skill03_P1_DamagePercentage",
-            "SkillRank_Rank04_Flag"
+            "Skill03_P1_DamagePercentage"
           ],
-          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This unit can be considered as Burned. While Ashen Roast is active, takes Fire DMG at the start of each turn.",
+          "description": "Enemy targets in the Zone take <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> increased Ultimate DMG, with a <span class=\"descriptionNumberColor\">#Skill03_P2_Chance</span> base chance of being inflicted with 1 stack of Ashen Roast when taking action. While the Zone exists, this effect can trigger up to <span class=\"descriptionNumberColor\">#Skill03_P5_Value</span> time(s). And it can only trigger once per enemy turn. This effect can still trigger for <span class=\"descriptionNumberColor\">_Max_Count_Left</span> more time(s).",
           "type": "Debuff",
-          "effectName": "Ashen Roast",
-          "statusName": "Ashen Roast"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1256261973\">Jiaoqiu_Debuff_Ultra</a>[<span class=\"descriptionNumberColor\">Pyrograph Arcanum</span>]",
-          "stackType": "ReplaceByCaster",
+          "effectName": "Vulnerability",
+          "statusName": "Pyrograph Arcanum",
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"-1304078651\">Jiaoqiu_Aura</a>"
+          },
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -2902,25 +2908,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "Skill03_P4_Duration",
-            "Skill03_P3_Ratio",
-            "Skill03_P3_Value",
-            "Skill03_P2_Ratio",
-            "Skill03_P1_DamagePercentage"
-          ],
-          "description": "Enemy targets in the Zone take <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> increased Ultimate DMG, with a <span class=\"descriptionNumberColor\">#Skill03_P2_Chance</span> base chance of being inflicted with 1 stack of Ashen Roast when taking action. While the Zone exists, this effect can trigger up to <span class=\"descriptionNumberColor\">#Skill03_P5_Value</span> time(s). And it can only trigger once per enemy turn. This effect can still trigger for <span class=\"descriptionNumberColor\">_Max_Count_Left</span> more time(s).",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Pyrograph Arcanum",
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"-1304078651\">Jiaoqiu_Aura</a>"
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2930,31 +2918,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-122400477\">Jiaoqiu_Tree02_StatusProbabilityShow</a>",
           "stackType": "ReplaceByCaster",
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "maxValue": 1000000000,
-                  "whenEnteringRange": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"525838576\">Jiaoqiu_Tree02_Sub</a>"
-                    }
-                  ],
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"525838576\">Jiaoqiu_Tree02_Sub</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "modifierFunctions": [
             {
               "name": "CharacterFunctions",
@@ -3054,8 +3017,31 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [],
-          "latentQueue": []
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "maxValue": 1000000000,
+                  "whenEnteringRange": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"525838576\">Jiaoqiu_Tree02_Sub</a>"
+                    }
+                  ],
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"525838576\">Jiaoqiu_Tree02_Sub</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "references": []

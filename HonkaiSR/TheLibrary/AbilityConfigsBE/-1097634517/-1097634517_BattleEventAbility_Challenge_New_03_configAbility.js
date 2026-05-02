@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1686422512\">MLevel_BattleEventAbility_Challenge_New_03</a>[<span class=\"descriptionNumberColor\">Weakness Break Efficiency Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">ADF_1</span>, dispelled after attacking.",
+      "type": "Buff",
+      "effectName": "Weakness Break Efficiency Boost",
+      "statusName": "Weakness Break Efficiency Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -47,11 +51,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "description": "Increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">ADF_1</span>, dispelled after attacking.",
-      "type": "Buff",
-      "effectName": "Weakness Break Efficiency Boost",
-      "statusName": "Weakness Break Efficiency Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -93,9 +93,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

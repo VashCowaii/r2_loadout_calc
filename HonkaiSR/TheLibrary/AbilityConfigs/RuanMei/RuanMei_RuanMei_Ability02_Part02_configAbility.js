@@ -92,6 +92,10 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1509368163\">RuanMei_Ability02_Area_Caster</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">Skill02_P1_DamageAddedRatioFinal</span>. Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">#Skill02_P2_StanceBreakAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "Boost DMG and Weakness Break Efficiency",
+      "statusName": "Overtone",
       "variableValueChange": [
         {
           "name": "Variable Value Changes",
@@ -143,11 +147,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">Skill02_P1_DamageAddedRatioFinal</span>. Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">#Skill02_P2_StanceBreakAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "Boost DMG and Weakness Break Efficiency",
-      "statusName": "Overtone"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -375,9 +375,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

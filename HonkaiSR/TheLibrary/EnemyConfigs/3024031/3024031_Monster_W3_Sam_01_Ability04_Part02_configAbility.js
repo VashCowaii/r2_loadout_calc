@@ -311,9 +311,7 @@ const configAbility = {
         {
           "eventTrigger": "Update Target Selected(UI) [Anyone]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -334,9 +332,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

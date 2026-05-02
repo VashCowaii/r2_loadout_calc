@@ -290,9 +290,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -504,13 +502,14 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1227649077\">Enemy_W2_Valkyrie01_02_AbilityP01</a>[<span class=\"descriptionNumberColor\">Bitter Fracture</span>]",
+          "description": "When other friendly units are defeated, this unit immediately takes action and uses \"Fire of Vengeance\" once. When there are multiple \"Black Tide's Corroded Axe\" on the battlefield, only 1 \"Black Tide's Corroded Axe\"'s \"Bitter Fracture\" Talent can be triggered.",
+          "type": "Other",
+          "statusName": "Bitter Fracture",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -976,12 +975,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When other friendly units are defeated, this unit immediately takes action and uses \"Fire of Vengeance\" once. When there are multiple \"Black Tide's Corroded Axe\" on the battlefield, only 1 \"Black Tide's Corroded Axe\"'s \"Bitter Fracture\" Talent can be triggered.",
-          "type": "Other",
-          "statusName": "Bitter Fracture"
+          ]
         }
       ],
       "references": []

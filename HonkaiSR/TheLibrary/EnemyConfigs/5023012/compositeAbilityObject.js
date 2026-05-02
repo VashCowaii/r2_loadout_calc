@@ -909,9 +909,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4099,9 +4097,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4202,9 +4198,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4213,6 +4207,13 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1061041544\">Monster_XP_Elite02_03_InitHP_LV2</a>",
+          "stackData": [
+            "MDF_InitHP_LV2",
+            "MDF_InitStance_LV2"
+          ],
+          "latentQueue": [
+            "SummonMonsterNum"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4264,18 +4265,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_InitHP_LV2",
-            "MDF_InitStance_LV2"
-          ],
-          "latentQueue": [
-            "SummonMonsterNum"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1111374401\">Monster_XP_Elite02_03_InitHP_LV1</a>",
+          "stackData": [
+            "MDF_InitHP_LV1",
+            "MDF_InitStance_LV1"
+          ],
+          "latentQueue": [
+            "SummonMonsterNum"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4327,13 +4328,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_InitHP_LV1",
-            "MDF_InitStance_LV1"
-          ],
-          "latentQueue": [
-            "SummonMonsterNum"
           ]
         },
         {
@@ -4360,15 +4354,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2030183935\">Monster_XP_Elite02_03_Charge</a>[<span class=\"descriptionNumberColor\">Budding</span>]",
-          "stackData": [],
-          "latentQueue": [],
           "description": "Uses \"Euphoric Spiral\" in the next action.",
           "type": "Other",
           "effectName": "Budding",
@@ -4377,7 +4367,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1982460961\">Monster_XP_Elite02_03_PassiveAbility_Target</a>",
-          "stackData": [],
           "latentQueue": [
             "SummonMonsterNum"
           ]
@@ -4389,7 +4378,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1803637769\">Modifier_Monster_XP_Elite02_03_MainTarget</a>",
-          "stackData": [],
           "latentQueue": [
             "SameMonsterNum",
             "Skill02_AssistCount"
@@ -4403,6 +4391,7 @@ const compositeAbilityObject = {
             "Deathrattle",
             "KeepOnDeathrattle"
           ],
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Was Killed (Queued) [Owner]",
@@ -4493,10 +4482,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4504,6 +4490,17 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "Skill02_P4_BuffChance"
+          ],
+          "latentQueue": [
+            "SameMonsterNum",
+            "Skill02_AssistCount"
+          ],
+          "description": "Action delayed and loses Skill Point(s) if attacked by Joy Ascendant's ability \"Euphoric Spiral\" while possessing this effect. This effect is removed after using Basic ATK once, and has a high chance to gain additional Skill Point(s).",
+          "type": "Other",
+          "effectName": "Paramount Bliss",
+          "statusName": "Paramount Bliss",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -4553,18 +4550,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "Skill02_P4_BuffChance"
-          ],
-          "latentQueue": [
-            "SameMonsterNum",
-            "Skill02_AssistCount"
-          ],
-          "description": "Action delayed and loses Skill Point(s) if attacked by Joy Ascendant's ability \"Euphoric Spiral\" while possessing this effect. This effect is removed after using Basic ATK once, and has a high chance to gain additional Skill Point(s).",
-          "type": "Other",
-          "effectName": "Paramount Bliss",
-          "statusName": "Paramount Bliss"
+          ]
         }
       ],
       "references": []

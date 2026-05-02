@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1480313555\">Modifier_ChallengePeakBattle_BaseAbility_0015_02</a>[<span class=\"descriptionNumberColor\">Honing the Blade</span>]",
       "stackType": "Replace",
+      "description": "Each stack reduces CRIT DMG by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0015_ADF_2</span>. Each time any ally consumes 1 Skill Point, 1 stack of this effect is removed.",
+      "type": "Other",
+      "statusName": "Honing the Blade",
+      "addStacksPerTrigger": -1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -246,11 +250,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack reduces CRIT DMG by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0015_ADF_2</span>. Each time any ally consumes 1 Skill Point, 1 stack of this effect is removed.",
-      "type": "Other",
-      "statusName": "Honing the Blade",
-      "addStacksPerTrigger": -1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -321,9 +321,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

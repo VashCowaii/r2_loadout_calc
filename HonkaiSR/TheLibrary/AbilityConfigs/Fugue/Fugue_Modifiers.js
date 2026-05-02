@@ -15,6 +15,9 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_SuperBreakDamagePercentage"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -82,11 +85,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SuperBreakDamagePercentage"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -95,6 +94,9 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "STAT_SuperBreakBuff"
+      ],
+      "stackData": [
+        "MDF_PassiveDamage2"
       ],
       "execute": [
         {
@@ -122,11 +124,7 @@ const configAbility = {
           ],
           "priorityLevel": 100
         }
-      ],
-      "stackData": [
-        "MDF_PassiveDamage2"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -157,15 +155,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__873674204\">Fugue_StancePreview</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -188,6 +182,13 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
+      "stackData": [
+        "MDF_DefenceDownRatio"
+      ],
+      "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>.",
+      "type": "Debuff",
+      "effectName": "DEF Reduction",
+      "statusName": "Virtue Beckons Bliss",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -204,21 +205,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DefenceDownRatio"
-      ],
-      "latentQueue": [],
-      "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>.",
-      "type": "Debuff",
-      "effectName": "DEF Reduction",
-      "statusName": "Virtue Beckons Bliss"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__915939939\">Fugue_Eidolon2_PreShow</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -245,8 +236,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__696396442\">Fugue_Eidolon6_Listen</a>",
-      "stackData": [],
-      "latentQueue": [],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -325,6 +314,15 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_PassiveDamage2",
+        "MDF_RedStanceRatio",
+        "MDF_MinStance"
+      ],
+      "description": "When initial Toughness is reduced to 0, \"Cloudflame Luster\" can continue to be reduced. When \"Cloudflame Luster\" is reduced to 0, the enemy will receive Weakness Break DMG again.",
+      "type": "Other",
+      "effectName": "Cloudflame Luster",
+      "statusName": "Cloudflame Luster",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -449,17 +447,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PassiveDamage2",
-        "MDF_RedStanceRatio",
-        "MDF_MinStance"
-      ],
-      "latentQueue": [],
-      "description": "When initial Toughness is reduced to 0, \"Cloudflame Luster\" can continue to be reduced. When \"Cloudflame Luster\" is reduced to 0, the enemy will receive Weakness Break DMG again.",
-      "type": "Other",
-      "effectName": "Cloudflame Luster",
-      "statusName": "Cloudflame Luster"
+      ]
     }
   ],
   "references": []

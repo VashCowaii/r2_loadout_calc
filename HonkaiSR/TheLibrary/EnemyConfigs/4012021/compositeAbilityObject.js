@@ -492,9 +492,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -561,14 +559,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1075754631\">MModifier_Monster_W4_Scholar_BookKiller</a>[<span class=\"descriptionNumberColor\">Ignited Flame</span>]",
           "stackType": "Replace",
+          "useEntitySnapshot": true,
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>, and DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>.",
+          "type": "Buff",
+          "effectName": "Ignited Flame",
+          "statusName": "Ignited Flame",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -607,18 +608,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>, and DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>.",
-          "type": "Buff",
-          "effectName": "Ignited Flame",
-          "statusName": "Ignited Flame"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1310429689\">MModifier_Monster_W4_Scholar_BookKillerListener</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "stackData": [
+            "MDF_SpeedUpRatio",
+            "MDF_DamageUpRatio",
+            "MDF_LifeTime"
           ],
           "execute": [
             {
@@ -673,13 +674,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedUpRatio",
-            "MDF_DamageUpRatio",
-            "MDF_LifeTime"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -687,6 +682,14 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_SpeedUpRatio",
+            "MDF_DamageUpRatio"
+          ],
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span> and DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>. Dispelled when %CasterName's \"War Armor\" is destroyed.",
+          "type": "Buff",
+          "effectName": "Gleaned Instruction",
+          "statusName": "Gleaned Instruction",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -800,20 +803,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedUpRatio",
-            "MDF_DamageUpRatio"
-          ],
-          "latentQueue": [],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span> and DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>. Dispelled when %CasterName's \"War Armor\" is destroyed.",
-          "type": "Buff",
-          "effectName": "Gleaned Instruction",
-          "statusName": "Gleaned Instruction"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1513370696\">MModifier_Monster_W4_Scholar_BookController</a>[<span class=\"descriptionNumberColor\">Proselytize</span>]",
+          "description": "Causes %DynamicTargetName to enter the \"Gleaned Instruction\" state. Dispelled when this unit's \"War Armor\" is destroyed.",
+          "type": "Other",
+          "effectName": "Proselytize",
+          "statusName": "Proselytize",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -918,13 +916,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Causes %DynamicTargetName to enter the \"Gleaned Instruction\" state. Dispelled when this unit's \"War Armor\" is destroyed.",
-          "type": "Other",
-          "effectName": "Proselytize",
-          "statusName": "Proselytize"
+          ]
         }
       ],
       "references": []

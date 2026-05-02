@@ -371,6 +371,19 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Bleed"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_MaxLayer",
+            "Modifier_Bleed_DamagePercentage",
+            "Modifier_Bleed_MaxDamagePercentage"
+          ],
+          "description": "For a certain number of turns, receive Physical DMG based on Max HP at the beginning of each turn, stacking up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+          "type": "Debuff",
+          "effectName": "Bleed",
+          "statusName": "Bleed",
+          "duration": 3,
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -622,21 +635,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_MaxLayer",
-            "Modifier_Bleed_DamagePercentage",
-            "Modifier_Bleed_MaxDamagePercentage"
-          ],
-          "latentQueue": [],
-          "description": "For a certain number of turns, receive Physical DMG based on Max HP at the beginning of each turn, stacking up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-          "type": "Debuff",
-          "effectName": "Bleed",
-          "statusName": "Bleed",
-          "duration": 3,
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -645,6 +644,12 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "SilenceStackWhenMaxLayer"
           ],
+          "description": "Enhances ability effects, stacking up to <span class=\"descriptionNumberColor\">MDF_ShowValue</span> times.",
+          "type": "Other",
+          "effectName": "SoulGlad Revel",
+          "statusName": "SoulGlad Revel",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -702,13 +707,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Enhances ability effects, stacking up to <span class=\"descriptionNumberColor\">MDF_ShowValue</span> times.",
-          "type": "Other",
-          "effectName": "SoulGlad Revel",
-          "statusName": "SoulGlad Revel",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -796,9 +795,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -834,9 +831,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -845,6 +840,14 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -867,16 +870,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost"
+          ]
         }
       ],
       "references": []

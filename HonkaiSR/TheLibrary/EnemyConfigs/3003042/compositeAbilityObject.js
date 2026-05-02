@@ -950,9 +950,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -968,9 +966,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -988,6 +984,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1025576815\">Enemy_W3_Figure_RLElite_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "Replace",
+          "description": "For every target with Alien Dream, increase this unit's ATK by <span class=\"descriptionNumberColor\">MDF_AttackUPRatio</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "ATK Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1017,11 +1017,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "For every target with Alien Dream, increase this unit's ATK by <span class=\"descriptionNumberColor\">MDF_AttackUPRatio</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "ATK Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1225,13 +1221,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-316988116\">Monster_W3_Figure_RLElite_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Holy Night</span>]",
+          "description": "About to use \"Sleep In Heavenly Peace.\"",
+          "type": "Other",
+          "effectName": "Charging",
+          "statusName": "Holy Night",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1242,13 +1240,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "About to use \"Sleep In Heavenly Peace.\"",
-          "type": "Other",
-          "effectName": "Charging",
-          "statusName": "Holy Night"
+          ]
         }
       ],
       "references": []

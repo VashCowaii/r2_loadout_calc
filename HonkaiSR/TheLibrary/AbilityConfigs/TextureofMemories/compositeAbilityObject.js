@@ -51,6 +51,11 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Shield"
           ],
+          "useEntitySnapshot": true,
+          "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Shield",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -101,12 +106,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
-          "type": "Buff",
-          "effectName": "Shield",
-          "statusName": "Shield"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -249,9 +249,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

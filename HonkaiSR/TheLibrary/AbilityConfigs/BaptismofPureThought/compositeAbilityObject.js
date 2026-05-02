@@ -62,6 +62,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__837190525\">LC_23020_Sub</a>[<span class=\"descriptionNumberColor\">Disputation</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue1</span> and Follow-Up ATKs ignore <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> of target DEF.",
+          "type": "Buff",
+          "effectName": "Disputation",
+          "statusName": "Disputation",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -110,17 +114,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue1</span> and Follow-Up ATKs ignore <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> of target DEF.",
-          "type": "Buff",
-          "effectName": "Disputation",
-          "statusName": "Disputation"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1034410096\">LC_23020_Main</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "_DebuffCount",
+            "MDF_PropertyValue",
+            "MDF_MaxCount"
           ],
           "execute": [
             {
@@ -248,13 +253,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "_DebuffCount",
-            "MDF_PropertyValue",
-            "MDF_MaxCount"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

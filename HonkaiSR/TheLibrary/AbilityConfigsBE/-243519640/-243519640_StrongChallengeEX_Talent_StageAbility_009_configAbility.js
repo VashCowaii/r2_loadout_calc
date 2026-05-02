@@ -22,6 +22,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1257384877\">MStrongChallengeEX_Talent_StageAbility_PLY_009</a>[<span class=\"descriptionNumberColor\">Ashen Battleground</span>]",
+      "description": "Increases DMG dealt by Basic ATK and Skill by <span class=\"descriptionNumberColor\">#ADF_1</span>.",
+      "type": "Buff",
+      "statusName": "Ashen Battleground",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -76,10 +79,7 @@ const configAbility = {
         {
           "eventTrigger": "Attack Start [Owner]"
         }
-      ],
-      "description": "Increases DMG dealt by Basic ATK and Skill by <span class=\"descriptionNumberColor\">#ADF_1</span>.",
-      "type": "Buff",
-      "statusName": "Ashen Battleground"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -116,9 +116,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

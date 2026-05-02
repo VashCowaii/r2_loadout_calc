@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-922033468\">Relic_126_Sub2</a>[<span class=\"descriptionNumberColor\">Wavestrider Captain</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Wavestrider Captain",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,16 +44,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Wavestrider Captain"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1631804574\">Relic_126_Sub</a>[<span class=\"descriptionNumberColor\">Help</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Stacks up to <span class=\"descriptionNumberColor\">_MaxLayer</span> time(s). When using Ultimate, if the unit possesses <span class=\"descriptionNumberColor\">_MaxLayer</span> stacks of \"Help,\" consumes all \"Help\" and increases the wearer's ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>, lasting <span class=\"descriptionNumberColor\">#SkillRelic_126_4_P3_LifeTime</span> turn(s).",
+      "type": "Other",
+      "effectName": "Help",
+      "statusName": "Help",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -121,11 +125,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Stacks up to <span class=\"descriptionNumberColor\">_MaxLayer</span> time(s). When using Ultimate, if the unit possesses <span class=\"descriptionNumberColor\">_MaxLayer</span> stacks of \"Help,\" consumes all \"Help\" and increases the wearer's ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>, lasting <span class=\"descriptionNumberColor\">#SkillRelic_126_4_P3_LifeTime</span> turn(s).",
-      "type": "Other",
-      "effectName": "Help",
-      "statusName": "Help"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -230,9 +230,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

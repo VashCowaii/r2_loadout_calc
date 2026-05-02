@@ -290,15 +290,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1757173024\">Enemy_W2_Lycan_01_MainStoryModuEnhance</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1757173024\">Enemy_W2_Lycan_01_MainStoryModuEnhance</a>"
     }
   ]
 }

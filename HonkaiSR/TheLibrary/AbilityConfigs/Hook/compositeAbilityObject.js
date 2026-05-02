@@ -69,9 +69,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -124,9 +122,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2102269383\">M_Hook_Trace01</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__2102269383\">M_Hook_Trace01</a>"
         }
       ],
       "targetObjectData": {
@@ -284,9 +280,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -461,8 +455,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1540905078\">Ability01PreShowModifier</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -671,6 +663,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__372814598\">Hook_Eidolon1_AddDamageRatio</a>",
+          "stackData": [
+            "MDF_AddRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -696,11 +691,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AddRatio"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1389,6 +1380,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1319656232\">Hook_BPAbilityAlter_Enable</a>[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]",
           "counter": 1,
+          "description": "Enhances the next Skill and changes it to a Blast attack.",
+          "type": "Other",
+          "effectName": "Enhanced Skill",
+          "statusName": "Enhanced Skill",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1438,13 +1433,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Enhances the next Skill and changes it to a Blast attack.",
-          "type": "Other",
-          "effectName": "Enhanced Skill",
-          "statusName": "Enhanced Skill"
+          ]
         }
       ],
       "references": []

@@ -52,6 +52,15 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2070937890\">Modifier_BattleEventAbility_Challenge_Month_15_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "DamageTakenRatio"
+      ],
+      "description": "Each stack increases the received DMG by <span class=\"descriptionNumberColor\">DamageTakenRatio</span>, up to 2 stacks.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Vulnerability",
+      "stackLimit": 2,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -85,17 +94,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "DamageTakenRatio"
-      ],
-      "latentQueue": [],
-      "description": "Each stack increases the received DMG by <span class=\"descriptionNumberColor\">DamageTakenRatio</span>, up to 2 stacks.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Vulnerability",
-      "stackLimit": 2,
-      "addStacksPerTrigger": 1
+      ]
     }
   ],
   "targetObjectData": {

@@ -18,6 +18,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1779059478\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0013_02</a>[<span class=\"descriptionNumberColor\">Beaming with Joy</span>]",
+      "description": "Elation stat increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0013_ADF_1</span>.",
+      "type": "Other",
+      "statusName": "Beaming with Joy",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,10 +43,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Elation stat increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0013_ADF_1</span>.",
-      "type": "Other",
-      "statusName": "Beaming with Joy"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -136,9 +136,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

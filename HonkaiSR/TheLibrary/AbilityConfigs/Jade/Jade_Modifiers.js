@@ -12,6 +12,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__68476876\">Jade_Eidolon6_QuantumPenetrate</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -34,16 +37,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1189146824\">Jade_Eidolon4_DefPenetrate</a>[<span class=\"descriptionNumberColor\">Sincerity? Put Option Only</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of enemy targets' DEF.",
+      "type": "Buff",
+      "effectName": "Sincerity? Put Option Only",
+      "statusName": "Sincerity? Put Option Only",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -72,19 +78,15 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of enemy targets' DEF.",
-      "type": "Buff",
-      "effectName": "Sincerity? Put Option Only",
-      "statusName": "Sincerity? Put Option Only"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-759179558\">Jade_Eidolon2_CriticalChance</a>[<span class=\"descriptionNumberColor\">Morality? Herein Authenticated</span>]",
+      "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "CRIT Rate Boost",
+      "statusName": "Morality? Herein Authenticated",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -107,15 +109,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "CRIT Rate Boost",
-      "statusName": "Morality? Herein Authenticated"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1701847025\">Jade_Eidolon1_InsertDamageRatio</a>",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -147,11 +148,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -283,14 +280,20 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2143808418\">Jade_Passive_Rate</a>[<span class=\"descriptionNumberColor\">Pawned Asset</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue",
+        "MDF_PropertyValue2"
+      ],
+      "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Pawned Asset",
+      "statusName": "Pawned Asset",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -399,16 +402,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_PropertyValue2"
-      ],
-      "latentQueue": [],
-      "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Pawned Asset",
-      "statusName": "Pawned Asset"
+      ]
     },
     {
       "name": "Modifier Construction",

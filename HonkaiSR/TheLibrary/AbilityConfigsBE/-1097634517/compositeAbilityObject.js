@@ -146,6 +146,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1581262672\">Modifier_RogueDLCAbundance_Upgrade2_AttackUp</a>[<span class=\"descriptionNumberColor\">Formation Extrapolation: Mountain High</span>]",
+          "description": "Increases ATK by <span class=\"descriptionNumberColor\">#ADF_1</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Formation Extrapolation: Mountain High",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -168,11 +172,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases ATK by <span class=\"descriptionNumberColor\">#ADF_1</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Formation Extrapolation: Mountain High"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -237,9 +237,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -322,9 +320,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -514,9 +510,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -694,9 +688,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -798,9 +790,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1379,6 +1369,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__404471449\">Modifier_BattleEventAbility_RogueDLCSandworm_DamageUp</a>",
           "stackType": "ReplaceByCaster",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1412,16 +1403,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-713594228\">Modifier_BattleEventAbility_Flag</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-713594228\">Modifier_BattleEventAbility_Flag</a>"
         }
       ],
       "targetObjectData": {
@@ -1549,9 +1535,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1652,9 +1636,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1679,6 +1661,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1071238655\">Modifier_RogueDLCRuin_Upgrade1_DefenceDown</a>[<span class=\"descriptionNumberColor\">Formation Extrapolation: Extreme Helium Flash</span>]",
           "stackType": "Replace",
+          "description": "Reduces DEF by <span class=\"descriptionNumberColor\">#ADF_1</span>.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "Formation Extrapolation: Extreme Helium Flash",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1703,11 +1689,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Reduces DEF by <span class=\"descriptionNumberColor\">#ADF_1</span>.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "Formation Extrapolation: Extreme Helium Flash"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1772,9 +1754,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1833,6 +1813,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1139116212\">Modifier_BattleEventAbility_RogueDLCRuin_DamageUp</a>",
           "stackType": "ReplaceByCaster",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1866,10 +1847,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "addStacksPerTrigger": 1
+          ]
         }
       ],
       "targetObjectData": {
@@ -1973,9 +1951,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2082,9 +2058,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2203,9 +2177,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2386,9 +2358,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2484,9 +2454,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2955,9 +2923,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3027,9 +2993,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -3077,9 +3041,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3127,9 +3089,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -3177,9 +3137,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3227,9 +3185,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -3495,9 +3451,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -3741,9 +3695,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -3935,9 +3887,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4189,9 +4139,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4211,9 +4159,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4380,9 +4326,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4402,9 +4346,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4468,9 +4410,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4490,9 +4430,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4676,9 +4614,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4761,9 +4697,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4821,6 +4755,15 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2070937890\">Modifier_BattleEventAbility_Challenge_Month_15_Sub2</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "DamageTakenRatio"
+          ],
+          "description": "Each stack increases the received DMG by <span class=\"descriptionNumberColor\">DamageTakenRatio</span>, up to 2 stacks.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
+          "stackLimit": 2,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4854,17 +4797,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "DamageTakenRatio"
-          ],
-          "latentQueue": [],
-          "description": "Each stack increases the received DMG by <span class=\"descriptionNumberColor\">DamageTakenRatio</span>, up to 2 stacks.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability",
-          "stackLimit": 2,
-          "addStacksPerTrigger": 1
+          ]
         }
       ],
       "targetObjectData": {
@@ -4895,6 +4828,10 @@ const compositeAbilityObject = {
             "Deathrattle",
             "RemoveWhenCasterDead"
           ],
+          "description": "Increases the received Skill and Ultimate DMG by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>. After this unit gets defeated, inflicts all enemies with Vulnerability.",
+          "type": "Debuff",
+          "effectName": "Memory Imprint",
+          "statusName": "Memory Imprint",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5059,11 +4996,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases the received Skill and Ultimate DMG by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>. After this unit gets defeated, inflicts all enemies with Vulnerability.",
-          "type": "Debuff",
-          "effectName": "Memory Imprint",
-          "statusName": "Memory Imprint"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5178,9 +5111,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -45
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5263,6 +5194,10 @@ const compositeAbilityObject = {
             "Deathrattle",
             "RemoveWhenCasterDead"
           ],
+          "description": "Increases the received Basic ATK and Ultimate DMG by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>. After this unit gets defeated, deals a set amount of DMG to all enemies.",
+          "type": "Debuff",
+          "effectName": "Memory Imprint",
+          "statusName": "Memory Imprint",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5411,11 +5346,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases the received Basic ATK and Ultimate DMG by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>. After this unit gets defeated, deals a set amount of DMG to all enemies.",
-          "type": "Debuff",
-          "effectName": "Memory Imprint",
-          "statusName": "Memory Imprint"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5550,9 +5481,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -45
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5612,6 +5541,10 @@ const compositeAbilityObject = {
             "Deathrattle",
             "RemoveWhenCasterDead"
           ],
+          "description": "Increases received Basic ATK DMG and DoT by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>. Allies will recover Skill Points after this unit is defeated.",
+          "type": "Debuff",
+          "effectName": "Memory Imprint",
+          "statusName": "Memory Imprint",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5760,11 +5693,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases received Basic ATK DMG and DoT by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>. Allies will recover Skill Points after this unit is defeated.",
-          "type": "Debuff",
-          "effectName": "Memory Imprint",
-          "statusName": "Memory Imprint"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5879,9 +5808,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -45
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5983,9 +5910,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6117,9 +6042,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6144,6 +6067,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1406945547\">MLevel_BattleEventAbility_Challenge_Month_10_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
           "stackType": "Replace",
+          "description": "Each stack decreases DMG received by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>, up to <span class=\"descriptionNumberColor\">_MaxLayer</span> stack(s).",
+          "type": "Buff",
+          "effectName": "DMG Mitigation",
+          "statusName": "Memory Imprint",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6177,12 +6105,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack decreases DMG received by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>, up to <span class=\"descriptionNumberColor\">_MaxLayer</span> stack(s).",
-          "type": "Buff",
-          "effectName": "DMG Mitigation",
-          "statusName": "Memory Imprint",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6435,9 +6358,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6462,6 +6383,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1553026486\">MLevel_BattleEventAbility_Challenge_Month_09</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "ATK +<span class=\"descriptionNumberColor\">ADF_1</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "ATK Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6484,11 +6409,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "ATK +<span class=\"descriptionNumberColor\">ADF_1</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "ATK Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6566,9 +6487,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6596,6 +6515,12 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_DefenceDown"
           ],
+          "description": "Each stack decreases DEF by <span class=\"descriptionNumberColor\">ADF_1</span>, up to <span class=\"descriptionNumberColor\">ADF_2</span> stack(s).",
+          "type": "Debuff",
+          "effectName": "Memory Imprint",
+          "statusName": "Memory Imprint",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6629,13 +6554,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack decreases DEF by <span class=\"descriptionNumberColor\">ADF_1</span>, up to <span class=\"descriptionNumberColor\">ADF_2</span> stack(s).",
-          "type": "Debuff",
-          "effectName": "Memory Imprint",
-          "statusName": "Memory Imprint",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6743,9 +6662,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6773,6 +6690,12 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_Fatigue"
           ],
+          "description": "Each stack decreases DMG dealt by <span class=\"descriptionNumberColor\">ADF_1</span>, up to <span class=\"descriptionNumberColor\">ADF_2</span> stack(s).",
+          "type": "Debuff",
+          "effectName": "Memory Imprint",
+          "statusName": "Memory Imprint",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6806,13 +6729,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack decreases DMG dealt by <span class=\"descriptionNumberColor\">ADF_1</span>, up to <span class=\"descriptionNumberColor\">ADF_2</span> stack(s).",
-          "type": "Debuff",
-          "effectName": "Memory Imprint",
-          "statusName": "Memory Imprint",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6920,9 +6837,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6947,6 +6862,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1737580295\">MLevel_BattleEventAbility_Challenge_Month_06</a>[<span class=\"descriptionNumberColor\">Lightning Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "At the beginning of each Cycle, increases the Lightning DMG taken by all enemies by <span class=\"descriptionNumberColor\">ADF_1</span>, lasting until the enemies' next action begins.",
+          "type": "Debuff",
+          "effectName": "Lightning Vulnerability",
+          "statusName": "Lightning Vulnerability",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6975,11 +6894,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "description": "At the beginning of each Cycle, increases the Lightning DMG taken by all enemies by <span class=\"descriptionNumberColor\">ADF_1</span>, lasting until the enemies' next action begins.",
-          "type": "Debuff",
-          "effectName": "Lightning Vulnerability",
-          "statusName": "Lightning Vulnerability"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7034,9 +6949,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7061,6 +6974,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1754357914\">MLevel_BattleEventAbility_Challenge_Month_05</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "After launching attacks, consumes 1 stack of \"Memory Imprint\" and deals <span class=\"descriptionNumberColor\">ADF_1</span> of the character's ATK as Additional DMG to a random enemy target that was attacked.",
+          "type": "Buff",
+          "effectName": "Memory Imprint",
+          "statusName": "Memory Imprint",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -7112,11 +7029,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After launching attacks, consumes 1 stack of \"Memory Imprint\" and deals <span class=\"descriptionNumberColor\">ADF_1</span> of the character's ATK as Additional DMG to a random enemy target that was attacked.",
-          "type": "Buff",
-          "effectName": "Memory Imprint",
-          "statusName": "Memory Imprint"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7175,9 +7088,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7277,9 +7188,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7304,6 +7213,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1653692200\">MLevel_BattleEventAbility_Challenge_Month_03</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "In the current Cycle, receives <span class=\"descriptionNumberColor\">ADF_1</span> more DMG from Follow-Up ATKs and Ultimates.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -7336,11 +7249,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "In the current Cycle, receives <span class=\"descriptionNumberColor\">ADF_1</span> more DMG from Follow-Up ATKs and Ultimates.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7401,9 +7310,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7428,6 +7335,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1670469819\">MLevel_BattleEventAbility_Challenge_Month_02</a>[<span class=\"descriptionNumberColor\">CRIT Rate, CRIT DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">ADF_2</span> and CRIT DMG by <span class=\"descriptionNumberColor\">ADF_1</span>. Can stack up to 3 times.",
+          "type": "Buff",
+          "effectName": "CRIT Rate, CRIT DMG Boost",
+          "statusName": "CRIT Rate, CRIT DMG Boost",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7478,13 +7391,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">ADF_2</span> and CRIT DMG by <span class=\"descriptionNumberColor\">ADF_1</span>. Can stack up to 3 times.",
-          "type": "Buff",
-          "effectName": "CRIT Rate, CRIT DMG Boost",
-          "statusName": "CRIT Rate, CRIT DMG Boost",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7569,9 +7476,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7596,6 +7501,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1687247438\">MLevel_BattleEventAbility_Challenge_Month_01</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "For the current Cycle, ATK increases by <span class=\"descriptionNumberColor\">ADF_1</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "ATK Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7618,11 +7527,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "For the current Cycle, ATK increases by <span class=\"descriptionNumberColor\">ADF_1</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "ATK Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7734,9 +7639,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7761,6 +7664,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-372579296\">MLevel_BattleEventAbility_Challenge_Group_02</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">ADF_1</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7789,11 +7696,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">ADF_1</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7859,9 +7762,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7886,6 +7787,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-322246439\">MLevel_BattleEventAbility_Challenge_Group_01</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases the next attack's DMG by <span class=\"descriptionNumberColor\">ADF_1</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -7911,11 +7816,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "description": "Increases the next attack's DMG by <span class=\"descriptionNumberColor\">ADF_1</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7957,9 +7858,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8047,9 +7946,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8074,6 +7971,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1602534417\">MLevel_BattleEventAbility_Challenge_New_06</a>[<span class=\"descriptionNumberColor\">CRIT Rate and CRIT DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">ADF_1</span> and CRIT DMG by <span class=\"descriptionNumberColor\">ADF_2</span>.",
+          "type": "Buff",
+          "effectName": "CRIT Rate and CRIT DMG Boost",
+          "statusName": "CRIT Rate and CRIT DMG Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -8112,11 +8013,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">ADF_1</span> and CRIT DMG by <span class=\"descriptionNumberColor\">ADF_2</span>.",
-          "type": "Buff",
-          "effectName": "CRIT Rate and CRIT DMG Boost",
-          "statusName": "CRIT Rate and CRIT DMG Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8201,9 +8098,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8295,9 +8190,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8379,9 +8272,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8406,6 +8297,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1686422512\">MLevel_BattleEventAbility_Challenge_New_03</a>[<span class=\"descriptionNumberColor\">Weakness Break Efficiency Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">ADF_1</span>, dispelled after attacking.",
+          "type": "Buff",
+          "effectName": "Weakness Break Efficiency Boost",
+          "statusName": "Weakness Break Efficiency Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -8434,11 +8329,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "description": "Increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">ADF_1</span>, dispelled after attacking.",
-          "type": "Buff",
-          "effectName": "Weakness Break Efficiency Boost",
-          "statusName": "Weakness Break Efficiency Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8480,9 +8371,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8582,9 +8471,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8695,9 +8582,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8769,9 +8654,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8851,9 +8734,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -8933,9 +8814,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9015,9 +8894,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9097,9 +8974,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9174,9 +9049,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9250,9 +9123,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9326,9 +9197,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9402,9 +9271,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9478,9 +9345,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9505,6 +9370,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1609815276\">MLevel_BattleEventAbility_Challenge_15</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases ATK by <span class=\"descriptionNumberColor\">ADF_1</span> up to 5 times.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "ATK Boost",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -9538,13 +9409,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases ATK by <span class=\"descriptionNumberColor\">ADF_1</span> up to 5 times.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "ATK Boost",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9594,9 +9459,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9621,6 +9484,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1626592895\">MLevel_BattleEventAbility_Challenge_14</a>[<span class=\"descriptionNumberColor\">Effect Hit Rate Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases Effect Hit Rate by <span class=\"descriptionNumberColor\">ADF_1</span> up to 5 times.",
+          "type": "Buff",
+          "effectName": "Effect Hit Rate Boost",
+          "statusName": "Effect Hit Rate Boost",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -9654,13 +9523,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases Effect Hit Rate by <span class=\"descriptionNumberColor\">ADF_1</span> up to 5 times.",
-          "type": "Buff",
-          "effectName": "Effect Hit Rate Boost",
-          "statusName": "Effect Hit Rate Boost",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9710,9 +9573,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9737,6 +9598,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1576260038\">MLevel_BattleEventAbility_Challenge_13</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">ADF_1</span> pts up to 5 times.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -9770,13 +9637,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">ADF_1</span> pts up to 5 times.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9826,9 +9687,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9853,6 +9712,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1593037657\">MLevel_BattleEventAbility_Challenge_12</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases DEF by <span class=\"descriptionNumberColor\">ADF_1</span> up to 5 times.",
+          "type": "Buff",
+          "effectName": "DEF Boost",
+          "statusName": "DEF Boost",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -9886,13 +9751,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DEF by <span class=\"descriptionNumberColor\">ADF_1</span> up to 5 times.",
-          "type": "Buff",
-          "effectName": "DEF Boost",
-          "statusName": "DEF Boost",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9942,9 +9801,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -9969,6 +9826,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1542704800\">MLevel_BattleEventAbility_Challenge_11</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases CRIT Rate by <span class=\"descriptionNumberColor\">ADF_1</span>, up to 5 stacks.",
+          "type": "Buff",
+          "effectName": "CRIT Rate Boost",
+          "statusName": "CRIT Rate Boost",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -10002,13 +9865,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases CRIT Rate by <span class=\"descriptionNumberColor\">ADF_1</span>, up to 5 stacks.",
-          "type": "Buff",
-          "effectName": "CRIT Rate Boost",
-          "statusName": "CRIT Rate Boost",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -10058,9 +9915,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10085,6 +9940,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1559482419\">MLevel_BattleEventAbility_Challenge_10</a>[<span class=\"descriptionNumberColor\">Physical Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Physical DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
+          "type": "Debuff",
+          "effectName": "Physical Vulnerability",
+          "statusName": "Physical Vulnerability",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -10107,11 +9966,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Physical DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
-          "type": "Debuff",
-          "effectName": "Physical Vulnerability",
-          "statusName": "Physical Vulnerability"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -10162,9 +10017,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10189,6 +10042,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-269425147\">MLevel_BattleEventAbility_Challenge_09</a>[<span class=\"descriptionNumberColor\">Wind Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Wind DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
+          "type": "Debuff",
+          "effectName": "Wind Vulnerability",
+          "statusName": "Wind Vulnerability",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -10211,11 +10068,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Wind DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
-          "type": "Debuff",
-          "effectName": "Wind Vulnerability",
-          "statusName": "Wind Vulnerability"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -10266,9 +10119,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10293,6 +10144,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-286202766\">MLevel_BattleEventAbility_Challenge_08</a>[<span class=\"descriptionNumberColor\">Lightning Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Lightning DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
+          "type": "Debuff",
+          "effectName": "Lightning Vulnerability",
+          "statusName": "Lightning Vulnerability",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -10315,11 +10170,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Lightning DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
-          "type": "Debuff",
-          "effectName": "Lightning Vulnerability",
-          "statusName": "Lightning Vulnerability"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -10370,9 +10221,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10397,6 +10246,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-235869909\">MLevel_BattleEventAbility_Challenge_07</a>[<span class=\"descriptionNumberColor\">Quantum Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Quantum DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
+          "type": "Debuff",
+          "effectName": "Quantum Vulnerability",
+          "statusName": "Quantum Vulnerability",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -10419,11 +10272,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Quantum DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
-          "type": "Debuff",
-          "effectName": "Quantum Vulnerability",
-          "statusName": "Quantum Vulnerability"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -10474,9 +10323,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10501,6 +10348,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-252647528\">MLevel_BattleEventAbility_Challenge_06</a>[<span class=\"descriptionNumberColor\">Ice Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Ice DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
+          "type": "Debuff",
+          "effectName": "Ice Vulnerability",
+          "statusName": "Ice Vulnerability",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -10523,11 +10374,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Ice DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
-          "type": "Debuff",
-          "effectName": "Ice Vulnerability",
-          "statusName": "Ice Vulnerability"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -10578,9 +10425,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10645,9 +10490,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10712,9 +10555,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10779,9 +10620,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10846,9 +10685,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10913,9 +10750,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -11247,9 +11082,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -11344,20 +11177,26 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__947859829\">Modifier_BattleEventAbility_Challenge_Xianzhou_05_Sub2</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
+          "description": "When destroyed, re-summon 1 Entranced Ingenium: Illumination Dragonfish",
+          "type": "Other",
+          "effectName": "Memory Imprint",
+          "statusName": "Memory Imprint",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "description": "When destroyed, re-summon 1 Entranced Ingenium: Illumination Dragonfish",
-          "type": "Other",
-          "effectName": "Memory Imprint",
-          "statusName": "Memory Imprint"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__897526972\">Modifier_BattleEventAbility_Challenge_Xianzhou_05_Sub1</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>, up to <span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span> stack(s).",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Memory Imprint",
+          "stackLimit": 10,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -11391,13 +11230,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>, up to <span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span> stack(s).",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Memory Imprint",
-          "stackLimit": 10,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -11585,9 +11418,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -11779,9 +11610,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -11814,6 +11643,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-668032397\">Modifier_BattleEventAbility_Challenge_Xianzhou_03_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
           "stackType": "Replace",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">#BattleEvent_P3_ADF</span> and reduces DMG received by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>.",
+          "type": "Buff",
+          "effectName": "Memory Imprint",
+          "statusName": "Memory Imprint",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -11852,11 +11685,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">#BattleEvent_P3_ADF</span> and reduces DMG received by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>.",
-          "type": "Buff",
-          "effectName": "Memory Imprint",
-          "statusName": "Memory Imprint"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -11951,9 +11780,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -12380,9 +12207,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -12734,9 +12559,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -12806,9 +12629,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",

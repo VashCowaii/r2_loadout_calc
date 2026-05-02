@@ -27,6 +27,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__611994712\">M_Yanqing_Tree01</a>",
+      "stackData": [
+        "MDF_DamageRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -68,11 +71,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageRatio"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

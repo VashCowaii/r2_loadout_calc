@@ -17,6 +17,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-72440750\">LC_20024_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">#SkillEquip_P2_CriticalDamage</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "CRIT DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -39,11 +43,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">#SkillEquip_P2_CriticalDamage</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "CRIT DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -80,9 +80,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

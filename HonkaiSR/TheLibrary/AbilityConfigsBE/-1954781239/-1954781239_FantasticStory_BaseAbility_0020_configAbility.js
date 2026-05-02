@@ -869,6 +869,13 @@ const configAbility = {
         "STAT_DOT",
         "STAT_DOT_Poison"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Wind Shear",
+      "statusName": "Gimmick",
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -948,14 +955,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Wind Shear",
-      "statusName": "Gimmick",
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1009,6 +1009,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1454047232\">Modifier_FantasticStory_BaseAbility_0020_sub5</a>[<span class=\"descriptionNumberColor\">Gimmick</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0027_ADF_1</span>. Upon Breaking an enemy target's Weakness, applies Wind Shear to all enemies.",
+      "type": "Buff",
+      "statusName": "Gimmick",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1031,15 +1034,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0027_ADF_1</span>. Upon Breaking an enemy target's Weakness, applies Wind Shear to all enemies.",
-      "type": "Buff",
-      "statusName": "Gimmick"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1437269613\">Modifier_FantasticStory_BaseAbility_0020_sub4</a>[<span class=\"descriptionNumberColor\">Verification</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">DmgAddedRatio</span> and increases SPD by <span class=\"descriptionNumberColor\">SpdAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG and SPD Boost",
+      "statusName": "Verification",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1078,11 +1082,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">DmgAddedRatio</span> and increases SPD by <span class=\"descriptionNumberColor\">SpdAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG and SPD Boost",
-      "statusName": "Verification"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1093,6 +1093,13 @@ const configAbility = {
         "STAT_DOT",
         "STAT_DOT_Poison"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Wind Shear",
+      "statusName": "Argument",
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1172,14 +1179,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Wind Shear",
-      "statusName": "Argument",
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1279,6 +1279,13 @@ const configAbility = {
         "STAT_DOT",
         "STAT_DOT_Poison"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Wind Shear",
+      "statusName": "Rumor",
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1358,14 +1365,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Wind Shear",
-      "statusName": "Rumor",
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1897,6 +1897,22 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1872930168\">Modifier_FantasticStory_BaseAbility_0020</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "ADF_1",
+        "ADF_2",
+        "ADF_3",
+        "TempHP"
+      ],
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_0021",
+        "DV_FantasticStory_PlusAbility_0022",
+        "DV_FantasticStory_PlusAbility_0023",
+        "DV_FantasticStory_PlusAbility_0024",
+        "DV_FantasticStory_PlusAbility_0025",
+        "DV_FantasticStory_PlusAbility_0026",
+        "DV_FantasticStory_PlusAbility_0027",
+        "DV_FantasticStory_PlusAbility_0028"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2431,22 +2447,6 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [
-        "ADF_1",
-        "ADF_2",
-        "ADF_3",
-        "TempHP"
-      ],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_0021",
-        "DV_FantasticStory_PlusAbility_0022",
-        "DV_FantasticStory_PlusAbility_0023",
-        "DV_FantasticStory_PlusAbility_0024",
-        "DV_FantasticStory_PlusAbility_0025",
-        "DV_FantasticStory_PlusAbility_0026",
-        "DV_FantasticStory_PlusAbility_0027",
-        "DV_FantasticStory_PlusAbility_0028"
       ]
     }
   ]

@@ -47,6 +47,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-579247332\">M_Luocha_Trace03</a>",
+          "stackData": [
+            "MDF_Resistance"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -69,11 +72,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Resistance"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -144,9 +143,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -276,6 +273,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_Fatigue"
           ],
+          "description": "Deals <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> less DMG.",
+          "type": "Debuff",
+          "effectName": "Weaken",
+          "statusName": "Weaken",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -298,16 +299,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Deals <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> less DMG.",
-          "type": "Debuff",
-          "effectName": "Weaken",
-          "statusName": "Weaken"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1838655775\">Luocha_Passive01_HealHPSelf</a>[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "After using an attack on an enemy, restores HP to self.",
+          "type": "Other",
+          "statusName": "Cycle of Life",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -369,15 +369,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After using an attack on an enemy, restores HP to self.",
-          "type": "Other",
-          "statusName": "Cycle of Life"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1378311281\">Luocha_Passive01_HealHP</a>[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "After using an attack on an enemy, restores HP to self.",
+          "type": "Other",
+          "statusName": "Cycle of Life",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -439,41 +439,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After using an attack on an enemy, restores HP to self.",
-          "type": "Other",
-          "statusName": "Cycle of Life"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1807885982\">Luocha_Passive01_HealHPArea</a>",
           "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": 0,
-                  "maximum": 2,
-                  "priorState": "Normal",
-                  "bar#": 2
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Pre-Death [Owner]",
-              "execute": [
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": 0,
-                  "maximum": 2,
-                  "priorState": "Normal",
-                  "bar#": 2
-                }
-              ]
-            }
-          ],
           "stackData": [
             "MDF_PropertyValue",
             "MDF_PropertyRatio",
@@ -625,6 +596,32 @@ const compositeAbilityObject = {
                   ]
                 }
               }
+            }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": 0,
+                  "maximum": 2,
+                  "priorState": "Normal",
+                  "bar#": 2
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Pre-Death [Owner]",
+              "execute": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": 0,
+                  "maximum": 2,
+                  "priorState": "Normal",
+                  "bar#": 2
+                }
+              ]
             }
           ]
         }
@@ -1107,6 +1104,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-613660626\">Luocha_Passive01_QuickHealthHP</a>",
+          "stackData": [
+            "MDF_HPRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "HP Change [Anyone]",
@@ -1387,11 +1387,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HPRatio"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1998,6 +1994,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-470154310\">Luocha_Eidolon6_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Reunion With the Dust</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyRatio"
+          ],
+          "description": "All-Type DMG RES -<span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Debuff",
+          "effectName": "All-Type RES Reduction",
+          "statusName": "Reunion With the Dust",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2022,20 +2025,22 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [],
-          "description": "All-Type DMG RES -<span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Debuff",
-          "effectName": "All-Type RES Reduction",
-          "statusName": "Reunion With the Dust"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1394916865\">Luocha_Eidolon1_ATKUp</a>[<span class=\"descriptionNumberColor\">Ablution of the Quick</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyRatio"
+          ],
+          "latentQueue": [
+            "_insertCheck_"
+          ],
+          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Ablution of the Quick",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2058,17 +2063,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [
-            "_insertCheck_"
-          ],
-          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Ablution of the Quick"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2173,6 +2168,14 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-390780291\">Luocha_Passive01Modifier</a>[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PassiveLayer"
+          ],
+          "description": "When the Abyss Flower is fully stacked, Luocha can consume all the stacks to deploy a Zone against the enemy.",
+          "type": "Other",
+          "statusName": "Abyss Flower",
+          "stackLimit": 2,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2225,22 +2228,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PassiveLayer"
-          ],
-          "latentQueue": [],
-          "description": "When the Abyss Flower is fully stacked, Luocha can consume all the stacks to deploy a Zone against the enemy.",
-          "type": "Other",
-          "statusName": "Abyss Flower",
-          "stackLimit": 2,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1468187936\">Luocha_Passive01_HealHPCD</a>[<span class=\"descriptionNumberColor\">Prayer of Abyss Flower</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "stackData": [],
           "latentQueue": [
             "IsInserAbilityTrigger"
           ],
@@ -2256,6 +2249,14 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Shield"
           ],
+          "stackData": [
+            "MDF_ShieldPercentage",
+            "MDF_ShieldValue"
+          ],
+          "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Shield",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2310,21 +2311,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ShieldPercentage",
-            "MDF_ShieldValue"
-          ],
-          "latentQueue": [],
-          "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
-          "type": "Buff",
-          "effectName": "Shield",
-          "statusName": "Shield"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__774057346\">Luocha_Ability02_AddHealRatio</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_AddHealRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Heal Target Start [Owner]",
@@ -2345,15 +2340,14 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AddHealRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1784149745\">Luocha_Passive01_DisableActionInsertMark</a>",
+          "latentQueue": [
+            "IsInserAbilityTrigger"
+          ],
           "execute": [
             {
               "eventTrigger": "When Losing Modifier [Anyone]",
@@ -2410,10 +2404,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "IsInserAbilityTrigger"
           ]
         }
       ],

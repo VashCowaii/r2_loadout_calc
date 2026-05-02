@@ -26,6 +26,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-546541489\">Modifier_ChallengePeakBattle_EnhancedAbility_0016_04</a>[<span class=\"descriptionNumberColor\">Equilibrium+</span>]",
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0016_ADF_4</span>.",
+      "type": "Other",
+      "statusName": "Equilibrium+",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -48,14 +51,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0016_ADF_4</span>.",
-      "type": "Other",
-      "statusName": "Equilibrium+"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-596874346\">Modifier_ChallengePeakBattle_EnhancedAbility_0016_03</a>[<span class=\"descriptionNumberColor\">Equilibrium+</span>]",
+      "description": "SPD decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0016_ADF_2</span>.",
+      "type": "Other",
+      "statusName": "Equilibrium+",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -78,10 +81,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0016_ADF_2</span>.",
-      "type": "Other",
-      "statusName": "Equilibrium+"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -261,9 +261,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

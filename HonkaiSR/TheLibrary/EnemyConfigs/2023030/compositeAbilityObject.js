@@ -107,9 +107,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -156,9 +154,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-241662933\">Monster_XP_Elite02_02_MuteDirtyHP</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-241662933\">Monster_XP_Elite02_02_MuteDirtyHP</a>"
         }
       ]
     },
@@ -1035,9 +1031,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1055,6 +1049,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__545314015\">Monster_XP_Elite02_02_DirtyHPSpecial</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "Replace",
+          "description": "Missing Description",
+          "type": "Debuff",
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1087,15 +1084,25 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Missing Description",
-          "type": "Debuff",
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-14434436\">Monster_XP_Elite02_02_DirtyHP</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
           "stackType": "Replace",
+          "description": "Decreases Maximum Restorable HP by <span class=\"descriptionNumberColor\">MDF_DirtyHPRatio_PerLayer</span>.",
+          "type": "Debuff",
+          "effectName": "Prana-Siphoned",
+          "statusName": "Prana-Siphoned",
+          "stackLimit": 3,
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+            "displayLines": "ModifierStackLayer",
+            "constants": [],
+            "variables": [
+              "ModifierStackLayer"
+            ]
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1125,24 +1132,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Decreases Maximum Restorable HP by <span class=\"descriptionNumberColor\">MDF_DirtyHPRatio_PerLayer</span>.",
-          "type": "Debuff",
-          "effectName": "Prana-Siphoned",
-          "statusName": "Prana-Siphoned",
-          "stackLimit": 3,
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1633463751\">Monster_XP_Elite02_02_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Japa</span>]",
+          "description": "Uses Black Prana's Snare on all targets during the next action.",
+          "type": "Buff",
+          "effectName": "Japa",
+          "statusName": "Japa",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1164,13 +1162,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Uses Black Prana's Snare on all targets during the next action.",
-          "type": "Buff",
-          "effectName": "Japa",
-          "statusName": "Japa"
+          ]
         }
       ],
       "references": []

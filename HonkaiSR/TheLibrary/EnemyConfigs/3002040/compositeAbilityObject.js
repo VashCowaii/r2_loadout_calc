@@ -296,9 +296,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -325,13 +323,15 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2064893309\">Enemy_W3_Clock_Ability01_Charge</a>[<span class=\"descriptionNumberColor\">Set Alarm</span>]",
+          "description": "Uses Wake-Up Alarm for the next action.",
+          "type": "Other",
+          "effectName": "Set Alarm",
+          "statusName": "Set Alarm",
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -339,13 +339,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Uses Wake-Up Alarm for the next action.",
-          "type": "Other",
-          "effectName": "Set Alarm",
-          "statusName": "Set Alarm"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -399,9 +393,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

@@ -43,6 +43,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__919563615\">LC_23057_Sub</a>[<span class=\"descriptionNumberColor\">Guaranteed Victory</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "The effect to gain Punchlines from \"Guaranteed Victory\" cannot be triggered now. Triggers again after using Basic ATK <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s).",
+          "type": "Other",
+          "statusName": "Guaranteed Victory",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -94,10 +97,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "The effect to gain Punchlines from \"Guaranteed Victory\" cannot be triggered now. Triggers again after using Basic ATK <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s).",
-          "type": "Other",
-          "statusName": "Guaranteed Victory"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -211,9 +211,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

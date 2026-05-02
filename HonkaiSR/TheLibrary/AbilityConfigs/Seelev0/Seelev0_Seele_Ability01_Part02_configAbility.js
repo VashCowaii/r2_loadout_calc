@@ -161,18 +161,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__333617615\">Ability01PreShowModifier_AppliedRatio</a>",
       "stackType": "Multiple",
-      "execute": [
-        {
-          "eventTrigger": "Action End [Owner]",
-          "execute": [
-            "Modifier Deletes Itself"
-          ]
-        }
-      ],
       "stackData": [
         "MDF_Skill01_Delay"
       ],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -194,33 +185,23 @@ const configAbility = {
             ]
           }
         }
-      }
+      },
+      "execute": [
+        {
+          "eventTrigger": "Action End [Owner]",
+          "execute": [
+            "Modifier Deletes Itself"
+          ]
+        }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1624938404\">Seele_Trace02_ModifyAction</a>",
       "stackType": "Multiple",
-      "execute": [
-        {
-          "eventTrigger": "Turn End [Anyone]",
-          "execute": [
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "advanceType": "Advance",
-              "multiAdd": "-0.2"
-            },
-            "Modifier Deletes Itself"
-          ]
-        }
-      ],
       "stackData": [
         "MDF_DelayCost"
       ],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -242,7 +223,24 @@ const configAbility = {
             ]
           }
         }
-      }
+      },
+      "execute": [
+        {
+          "eventTrigger": "Turn End [Anyone]",
+          "execute": [
+            {
+              "name": "Action Advance/Delay",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "advanceType": "Advance",
+              "multiAdd": "-0.2"
+            },
+            "Modifier Deletes Itself"
+          ]
+        }
+      ]
     }
   ],
   "targetObjectData": {

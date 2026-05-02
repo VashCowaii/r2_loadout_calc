@@ -19,6 +19,12 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1593037657\">MLevel_BattleEventAbility_Challenge_12</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases DEF by <span class=\"descriptionNumberColor\">ADF_1</span> up to 5 times.",
+      "type": "Buff",
+      "effectName": "DEF Boost",
+      "statusName": "DEF Boost",
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -52,13 +58,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DEF by <span class=\"descriptionNumberColor\">ADF_1</span> up to 5 times.",
-      "type": "Buff",
-      "effectName": "DEF Boost",
-      "statusName": "DEF Boost",
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -108,9 +108,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

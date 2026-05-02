@@ -136,6 +136,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-429248408\">Herta_AbilityEidolon6_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_AttackAddRatio"
+      ],
+      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "ATK Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -158,20 +165,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AttackAddRatio"
-      ],
-      "latentQueue": [],
-      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "ATK Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1926403261\">Herta_Trace03_AddDamageUp</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_AllDamageTakenRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -188,11 +190,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AllDamageTakenRatio"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

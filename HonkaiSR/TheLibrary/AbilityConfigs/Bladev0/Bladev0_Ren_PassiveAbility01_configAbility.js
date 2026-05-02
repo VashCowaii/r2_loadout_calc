@@ -945,81 +945,6 @@ const configAbility = {
           ]
         }
       ],
-      "abilityValueChange": [
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "minValue": 1,
-              "whenValueChanges": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "CasterCurrentHP2",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-                },
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "CasterMaxHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "CasterCurrentHP2",
-                    "compareType": "<=",
-                    "value2": {
-                      "operator": "Variables[0] (CasterCurrentHP) || RETURN",
-                      "displayLines": "CasterCurrentHP",
-                      "constants": [],
-                      "variables": [
-                        "CasterCurrentHP"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"1574082321\">Ren_CheckHPChange</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "minValue": 1,
-              "whenValueChanges": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "CasterCurrentHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
@@ -1116,8 +1041,81 @@ const configAbility = {
           ]
         }
       ],
-      "stackData": [],
-      "latentQueue": []
+      "abilityValueChange": [
+        {
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "minValue": 1,
+              "whenValueChanges": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "CasterCurrentHP2",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "CasterMaxHP",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "CasterCurrentHP2",
+                    "compareType": "<=",
+                    "value2": {
+                      "operator": "Variables[0] (CasterCurrentHP) || RETURN",
+                      "displayLines": "CasterCurrentHP",
+                      "constants": [],
+                      "variables": [
+                        "CasterCurrentHP"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1574082321\">Ren_CheckHPChange</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "minValue": 1,
+              "whenValueChanges": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "CasterCurrentHP",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "targetObjectData": {

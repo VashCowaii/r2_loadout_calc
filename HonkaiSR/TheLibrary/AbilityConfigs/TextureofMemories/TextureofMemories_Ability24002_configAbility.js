@@ -26,6 +26,11 @@ const configAbility = {
       "modifierFlags": [
         "Shield"
       ],
+      "useEntitySnapshot": true,
+      "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
+      "type": "Buff",
+      "effectName": "Shield",
+      "statusName": "Shield",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -76,12 +81,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
-      "type": "Buff",
-      "effectName": "Shield",
-      "statusName": "Shield"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -224,9 +224,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

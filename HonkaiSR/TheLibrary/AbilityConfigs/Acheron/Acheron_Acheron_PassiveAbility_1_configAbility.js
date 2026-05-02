@@ -176,6 +176,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2053212342\">Acheron_Eidolon4_Listen</a>",
+      "latentQueue": [
+        "CurrentSP",
+        "MaxSP"
+      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -209,11 +213,6 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "CurrentSP",
-        "MaxSP"
       ]
     },
     {
@@ -221,6 +220,10 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1580542257\">Acheron_Eidolon1_Listen</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
+      ],
+      "latentQueue": [
+        "CurrentSP",
+        "MaxSP"
       ],
       "execute": [
         {
@@ -257,11 +260,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "CurrentSP",
-        "MaxSP"
       ]
     },
     {
@@ -270,6 +268,10 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill",
         "RemoveWhenCasterDead"
+      ],
+      "latentQueue": [
+        "CurrentSP",
+        "MaxSP"
       ],
       "execute": [
         {
@@ -1155,104 +1157,6 @@ const configAbility = {
           ]
         }
       ],
-      "abilityValueChange": [
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "minValue": 0,
-              "triggerClampedChanges": true,
-              "whenValueChanges": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"492194909\">Acheron_CheckCurrentSpecialSPChange</a>"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Trace Activated",
-                    "conditionList": "Red Oni"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "value1": "SpecialEnergy%",
-                        "compareType": ">=",
-                        "value2": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable with Changes to Stats",
-                          "variableName": "Acheron_PointB1_ClampedAdd",
-                          "type": "ClampedAdd"
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "value1": "Acheron_PointB1_ClampedAdd",
-                            "compareType": ">",
-                            "value2": 0
-                          },
-                          "passed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"62451815\">Acheron_UltraAbilitySpareCount_PointB1</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
-                              "stackLimit": {
-                                "operator": "Variables[0] (3) || RETURN",
-                                "displayLines": "3",
-                                "constants": [],
-                                "variables": [
-                                  3
-                                ]
-                              },
-                              "valuePerStack": {
-                                "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (3) || RETURN",
-                                  "displayLines": "3",
-                                  "constants": [],
-                                  "variables": [
-                                    3
-                                  ]
-                                }
-                              },
-                              "addStacksPerTrigger": {
-                                "operator": "Variables[0] (Acheron_PointB1_ClampedAdd) || RETURN",
-                                "displayLines": "Acheron_PointB1_ClampedAdd",
-                                "constants": [],
-                                "variables": [
-                                  "Acheron_PointB1_ClampedAdd"
-                                ]
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "Acheron_PointB1_ClampedAdd",
-                          "value": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
@@ -1502,10 +1406,103 @@ const configAbility = {
           ]
         }
       ],
-      "stackData": [],
-      "latentQueue": [
-        "CurrentSP",
-        "MaxSP"
+      "abilityValueChange": [
+        {
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "minValue": 0,
+              "triggerClampedChanges": true,
+              "whenValueChanges": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"492194909\">Acheron_CheckCurrentSpecialSPChange</a>"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Trace Activated",
+                    "conditionList": "Red Oni"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "value1": "SpecialEnergy%",
+                        "compareType": ">=",
+                        "value2": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable with Changes to Stats",
+                          "variableName": "Acheron_PointB1_ClampedAdd",
+                          "type": "ClampedAdd"
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "Acheron_PointB1_ClampedAdd",
+                            "compareType": ">",
+                            "value2": 0
+                          },
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"62451815\">Acheron_UltraAbilitySpareCount_PointB1</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
+                              "stackLimit": {
+                                "operator": "Variables[0] (3) || RETURN",
+                                "displayLines": "3",
+                                "constants": [],
+                                "variables": [
+                                  3
+                                ]
+                              },
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] (3) || RETURN",
+                                  "displayLines": "3",
+                                  "constants": [],
+                                  "variables": [
+                                    3
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": {
+                                "operator": "Variables[0] (Acheron_PointB1_ClampedAdd) || RETURN",
+                                "displayLines": "Acheron_PointB1_ClampedAdd",
+                                "constants": [],
+                                "variables": [
+                                  "Acheron_PointB1_ClampedAdd"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "Acheron_PointB1_ClampedAdd",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       ]
     }
   ],

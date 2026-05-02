@@ -209,9 +209,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -238,6 +236,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-146915656\">Sam_Trace03_BreakDamageAddedRatio_Sub</a>[<span class=\"descriptionNumberColor\">Module γ: Core Overload</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
+          "type": "Buff",
+          "statusName": "Module γ: Core Overload",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -287,10 +288,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
-          "type": "Buff",
-          "statusName": "Module γ: Core Overload"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -303,53 +301,6 @@ const compositeAbilityObject = {
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
-                }
-              ]
-            }
-          ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
-                    }
-                  ]
                 }
               ]
             }
@@ -475,8 +426,53 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [],
-          "latentQueue": []
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1503863738\">Sam_Trace03_BreakDamageAddedRatio</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "targetObjectData": {
@@ -618,9 +614,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -648,9 +642,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -753,9 +745,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -856,9 +846,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1037,9 +1025,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1093,14 +1079,43 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__390294012\">Sam_Ability02_DelayReduce</a>",
           "stackType": "ReplaceByCaster",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "skillType": [
+              "Skill"
+            ],
+            "conditions": {
+              "name": "Has Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
+              "invertCondition": true
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": {
+                "operator": "Variables[0] (0.25) || INVERT || RETURN",
+                "displayLines": "-0.25",
+                "constants": [],
+                "variables": [
+                  0.25
+                ]
+              }
+            }
+          },
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -1134,47 +1149,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "skillType": [
-              "Skill"
-            ],
-            "conditions": {
-              "name": "Has Modifier",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
-              "invertCondition": true
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": {
-                "operator": "Variables[0] (0.25) || INVERT || RETURN",
-                "displayLines": "-0.25",
-                "constants": [],
-                "variables": [
-                  0.25
-                ]
-              }
-            }
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1454050150\">Sam_Ability21_AddWeaknessPreShow</a>",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1221,8 +1201,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1713306799\">Sam_Ability21_StanceDamagePreShow_NoFire</a>",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1288,8 +1266,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1595550658\">Sam_Ability21_StanceDamagePreShow_Fire</a>",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1345,8 +1321,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1576215372\">Sam_Ability11_StanceDamagePreShow_NoFire</a>",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1400,8 +1374,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-342359297\">Sam_Ability11_StanceDamagePreShow_Fire</a>",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1511,16 +1483,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1214391345\">Sam_UltraPreShow</a>",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -2010,9 +1978,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -3503,6 +3469,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__64395692\">Sam_Ultimate_BreakDamageAddRatio</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -3530,11 +3499,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3565,14 +3530,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__154726309\">Sam_Eidolon6_UltraDamageTypeAddRatio</a>[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Fire RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Fire RES PEN Boost",
+          "statusName": "In Finalized Morrow, I Full Bloom",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3595,11 +3562,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Fire RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Fire RES PEN Boost",
-          "statusName": "In Finalized Morrow, I Full Bloom"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3706,6 +3669,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_AttachWeakness"
           ],
+          "description": "Implanted with extra Fire Weakness.",
+          "type": "Debuff",
+          "effectName": "Implant Weakness: Fire",
+          "statusName": "Extra Fire Weakness",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3723,18 +3690,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Implanted with extra Fire Weakness.",
-          "type": "Debuff",
-          "effectName": "Implant Weakness: Fire",
-          "statusName": "Extra Fire Weakness"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "DMG Mitigation",
+          "statusName": "Chrysalid Pyronexus",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3757,15 +3725,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "DMG Mitigation",
-          "statusName": "Chrysalid Pyronexus"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3773,6 +3733,63 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "FireFlyRedMode"
+          ],
+          "stackData": [
+            "MDF_SpeedUP",
+            "MDF_StatusResistance",
+            "MDF_PropertyValue"
+          ],
+          "description": "When using Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">MDF_FinalDamageUP</span> and increases the Break DMG dealt by SAM to the enemy targets by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUP</span>, and Effect RES by <span class=\"descriptionNumberColor\">MDF_StatusResistance</span>.",
+          "type": "Other",
+          "effectName": "Fyrefly Type-IV: Complete Combustion",
+          "statusName": "Fyrefly Type-IV: Complete Combustion",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-340351438\">Sam_PassiveAbility_RedMode_DisableUltraSkill</a>",
+              "aliveOnly": "True",
+              "haloStatus": true
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"100735339\">Sam_PointB2_SuperBreakBonus</a>",
+              "aliveOnly": "True",
+              "haloStatus": true,
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Trace Activated",
+                    "conditionList": "Module β: Autoreactive Armor"
+                  },
+                  {
+                    "name": "Compare: Ability Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (2) || RETURN",
+                      "displayLines": "2",
+                      "constants": [],
+                      "variables": [
+                        2
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
           ],
           "execute": [
             {
@@ -4651,64 +4668,6 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
-            }
-          ],
-          "stackData": [
-            "MDF_SpeedUP",
-            "MDF_StatusResistance",
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "When using Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">MDF_FinalDamageUP</span> and increases the Break DMG dealt by SAM to the enemy targets by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUP</span>, and Effect RES by <span class=\"descriptionNumberColor\">MDF_StatusResistance</span>.",
-          "type": "Other",
-          "effectName": "Fyrefly Type-IV: Complete Combustion",
-          "statusName": "Fyrefly Type-IV: Complete Combustion",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-340351438\">Sam_PassiveAbility_RedMode_DisableUltraSkill</a>",
-              "aliveOnly": "True",
-              "haloStatus": true
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"100735339\">Sam_PointB2_SuperBreakBonus</a>",
-              "aliveOnly": "True",
-              "haloStatus": true,
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Trace Activated",
-                    "conditionList": "Module β: Autoreactive Armor"
-                  },
-                  {
-                    "name": "Compare: Ability Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
-                    "compareType": ">=",
-                    "value2": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
-                    }
-                  }
-                ]
-              }
             }
           ]
         }

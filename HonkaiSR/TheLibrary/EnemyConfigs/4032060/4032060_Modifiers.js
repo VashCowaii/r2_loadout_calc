@@ -16,14 +16,13 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "AttackSign"
       ],
+      "latentQueue": [
+        "MDF_CharacterCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_CharacterCount"
       ]
     },
     {
@@ -32,6 +31,12 @@ const configAbility = {
       "modifierFlags": [
         "MuteHitH"
       ],
+      "latentQueue": [
+        "MDF_CharacterCount"
+      ],
+      "description": "\"Anti-Creator\" will use \"Mire Not Within Caves\" in the next action. This state can be dispelled after receiving a killing blow.",
+      "type": "Other",
+      "statusName": "Deliverance of Relief",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -78,18 +83,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_CharacterCount"
-      ],
-      "description": "\"Anti-Creator\" will use \"Mire Not Within Caves\" in the next action. This state can be dispelled after receiving a killing blow.",
-      "type": "Other",
-      "statusName": "Deliverance of Relief"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-699052579\">Enemy_W4_IronTombCorePart_Ability02_Charge</a>",
+      "latentQueue": [
+        "MDF_CharacterCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -115,15 +116,15 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_CharacterCount"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1766795751\">Enemy_W4_IronTombCorePart_PartBreak_05</a>",
+      "latentQueue": [
+        "InsertCheck",
+        "_ChangePhaseEnd"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -149,16 +150,15 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "InsertCheck",
-        "_ChangePhaseEnd"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1750018132\">Enemy_W4_IronTombCorePart_PartBreak_04</a>",
+      "latentQueue": [
+        "InsertCheck",
+        "_ChangePhaseEnd"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -184,16 +184,15 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "InsertCheck",
-        "_ChangePhaseEnd"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1733240513\">Enemy_W4_IronTombCorePart_PartBreak_03</a>",
+      "latentQueue": [
+        "InsertCheck",
+        "_ChangePhaseEnd"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -219,16 +218,15 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "InsertCheck",
-        "_ChangePhaseEnd"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1716462894\">Enemy_W4_IronTombCorePart_PartBreak_02</a>",
+      "latentQueue": [
+        "InsertCheck",
+        "_ChangePhaseEnd"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -254,16 +252,15 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "InsertCheck",
-        "_ChangePhaseEnd"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1699685275\">Enemy_W4_IronTombCorePart_PartBreak_01</a>",
+      "latentQueue": [
+        "InsertCheck",
+        "_ChangePhaseEnd"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -289,11 +286,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "InsertCheck",
-        "_ChangePhaseEnd"
       ]
     }
   ],

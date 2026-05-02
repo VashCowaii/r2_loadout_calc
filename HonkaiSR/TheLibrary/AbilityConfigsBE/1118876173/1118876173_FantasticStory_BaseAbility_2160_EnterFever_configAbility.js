@@ -103,9 +103,7 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__29425370\">Modifier_FantasticStory_BaseAbility_2160_EnterFever</a>",
-      "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": []
+      "stackType": "ReplaceByCaster"
     }
   ]
 }

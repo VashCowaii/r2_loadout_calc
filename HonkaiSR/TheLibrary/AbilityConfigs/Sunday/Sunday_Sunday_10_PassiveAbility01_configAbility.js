@@ -173,9 +173,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -404,16 +402,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2623025\">Sunday_TempAddAITag</a>",
-      "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": []
+      "stackType": "ReplaceByCaster"
     }
   ],
   "targetObjectData": {

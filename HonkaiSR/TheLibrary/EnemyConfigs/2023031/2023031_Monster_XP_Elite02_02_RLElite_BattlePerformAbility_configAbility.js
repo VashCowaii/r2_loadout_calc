@@ -39,9 +39,7 @@ const configAbility = {
         {
           "eventTrigger": "When Put in Deathstate Limbo"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

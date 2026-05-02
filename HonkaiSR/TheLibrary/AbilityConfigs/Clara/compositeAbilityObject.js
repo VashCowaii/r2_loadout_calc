@@ -105,6 +105,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2032783017\">Klara_Eidolon6_Passive</a>",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -187,11 +190,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -219,6 +218,9 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__202295497\">Klara_Eidolon4_DamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "DMG Mitigation",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -241,10 +243,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "DMG Mitigation"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -275,9 +274,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -341,6 +338,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1111450796\">Klara_Trace01</a>",
+          "stackData": [
+            "MDF_Chance"
+          ],
           "execute": [
             {
               "eventTrigger": "Being Attacked Start [Owner]",
@@ -372,11 +372,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Chance"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -462,9 +458,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -725,6 +719,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1077895558\">Klara_Trace03</a>",
+          "stackData": [
+            "MDF_AllDamageTypeAddRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -741,11 +738,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageTypeAddRatio"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -861,13 +854,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1664082780\">Klara_PassiveAbility01_ListenCounter</a>",
+          "stackData": [
+            "MDF_Chance"
+          ],
           "execute": [
             {
               "eventTrigger": "Being Attacked Start [Owner]",
@@ -911,11 +905,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Chance"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1161,6 +1151,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-632500359\">Klara_Eidolon2_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "Refresh",
+          "stackData": [
+            "MDF_AttackUP"
+          ],
+          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackUP</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "ATK Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1183,15 +1180,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AttackUP"
-          ],
-          "latentQueue": [],
-          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackUP</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "ATK Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1230,6 +1219,12 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
           "counter": 1,
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_ShowAmmo"
+          ],
+          "description": "Teammates being attacked will also trigger Counter, for which the DMG multiplier is also increased.",
+          "type": "Buff",
+          "statusName": "Enhanced Counter",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1353,14 +1348,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ShowAmmo"
-          ],
-          "latentQueue": [],
-          "description": "Teammates being attacked will also trigger Counter, for which the DMG multiplier is also increased.",
-          "type": "Buff",
-          "statusName": "Enhanced Counter"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1369,6 +1357,14 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_Burst"
           ],
+          "stackData": [
+            "MDF_AggroAddedRatio",
+            "MDF_PropertyValue"
+          ],
+          "description": "Receives less DMG with a higher chance to be attacked.",
+          "type": "Buff",
+          "effectName": "DMG Mitigation",
+          "statusName": "Promise, Not Command",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1407,16 +1403,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AggroAddedRatio",
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Receives less DMG with a higher chance to be attacked.",
-          "type": "Buff",
-          "effectName": "DMG Mitigation",
-          "statusName": "Promise, Not Command"
+          ]
         }
       ],
       "targetObjectData": {
@@ -1719,6 +1706,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-796199138\">Klara_Passive_DamageReduce</a>[<span class=\"descriptionNumberColor\">Guardian</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Guardian",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1741,14 +1734,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Guardian"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1757,6 +1743,9 @@ const compositeAbilityObject = {
             "ListenBattleEventSkill",
             "RemoveWhenCasterDead"
           ],
+          "description": "The target is Marked by Svarog.",
+          "type": "Other",
+          "statusName": "Mark of Counter",
           "execute": [
             {
               "eventTrigger": "Ability Use [Anyone]: Start",
@@ -1815,17 +1804,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The target is Marked by Svarog.",
-          "type": "Other",
-          "statusName": "Mark of Counter"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-459252663\">Klara_TechniqueUsage_AggroUP</a>[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Higher chance to be attacked.",
+          "type": "Buff",
+          "statusName": "A Small Price for Victory",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1848,14 +1838,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Higher chance to be attacked.",
-          "type": "Buff",
-          "statusName": "A Small Price for Victory"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1886,9 +1869,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

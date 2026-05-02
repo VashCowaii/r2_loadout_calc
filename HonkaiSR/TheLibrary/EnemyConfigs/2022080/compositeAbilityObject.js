@@ -242,9 +242,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -627,6 +625,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1848268909\">Enemy_W2_Xuanlu_02_Counter_RL</a>[<span class=\"descriptionNumberColor\">Retaliation</span>]",
           "stackType": "Replace",
+          "description": "When attacked by an enemy, deals DMG to that enemy.",
+          "type": "Buff",
+          "effectName": "Counter",
+          "statusName": "Retaliation",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -755,13 +757,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When attacked by an enemy, deals DMG to that enemy.",
-          "type": "Buff",
-          "effectName": "Counter",
-          "statusName": "Retaliation"
+          ]
         }
       ]
     },
@@ -812,6 +808,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2090846144\">Enemy_W2_Xuanlu_02_Counter</a>[<span class=\"descriptionNumberColor\">Retaliation</span>]",
           "stackType": "Replace",
+          "description": "When attacked by an enemy, deals DMG to that enemy.",
+          "type": "Buff",
+          "effectName": "Counter",
+          "statusName": "Retaliation",
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -940,13 +940,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When attacked by an enemy, deals DMG to that enemy.",
-          "type": "Buff",
-          "effectName": "Counter",
-          "statusName": "Retaliation"
+          ]
         }
       ]
     },
@@ -1028,6 +1022,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-924806619\">Enemy_W2_Xuanlu_02_Bonus</a>[<span class=\"descriptionNumberColor\">Engender</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_AttackAddedRatio_PerLayer"
+          ],
+          "description": "Increases ATK.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Engender",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1050,15 +1051,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AttackAddedRatio_PerLayer"
-          ],
-          "latentQueue": [],
-          "description": "Increases ATK.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Engender"
+          ]
         }
       ]
     },
@@ -1163,9 +1156,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     }

@@ -46,6 +46,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1732744103\">Saber_TechniqueUsage_Bonus</a>[<span class=\"descriptionNumberColor\">Behold, the King of Knights</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Behold, the King of Knights",
+          "statusName": "Behold, the King of Knights",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -68,11 +72,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Behold, the King of Knights",
-          "statusName": "Behold, the King of Knights"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -235,9 +235,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -536,9 +534,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1091,17 +1087,13 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1386884047\">Saber_Energy_Count</a>[<span class=\"descriptionNumberColor\">Core Resonance</span>]",
           "counter": 1,
           "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
           "description": "Currently possesses <span class=\"descriptionNumberColor\">MDF_Layer</span> point(s) of \"Core Resonance.\"",
           "type": "Other",
           "statusName": "Core Resonance"
@@ -1109,6 +1101,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1437622489\">Saber_Trace01_Bonus</a>[<span class=\"descriptionNumberColor\">Knight of the Dragon</span>]",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Knight of the Dragon",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1131,20 +1129,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Knight of the Dragon"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
           "counter": 1,
           "stackType": "ReplaceByCaster",
+          "description": "<span class=\"descriptionNumberColor\">Saber_00_EntityStockSPForShow</span> overflow Energy accumulated.",
+          "type": "Other",
+          "statusName": "Blessing of the Lake",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1190,10 +1184,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "<span class=\"descriptionNumberColor\">Saber_00_EntityStockSPForShow</span> overflow Energy accumulated.",
-          "type": "Other",
-          "statusName": "Blessing of the Lake"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1440,9 +1431,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1522,9 +1511,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1693,14 +1680,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-269544975\">Saber_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases Wind RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Increases Wind RES PEN.",
+          "statusName": "The Saga of Sixteen Winter Days",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1724,15 +1713,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases Wind RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Increases Wind RES PEN.",
-          "statusName": "The Saga of Sixteen Winter Days"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-914489393\">Saber_Eidolon4</a>[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]",
+          "description": "Wind RES PEN increases by <span class=\"descriptionNumberColor\">#SkillRank_Rank04_P1_Ratio</span>.",
+          "type": "Buff",
+          "statusName": "The Saga of Sixteen Winter Days",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1804,12 +1792,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Wind RES PEN increases by <span class=\"descriptionNumberColor\">#SkillRank_Rank04_P1_Ratio</span>.",
-          "type": "Buff",
-          "statusName": "The Saga of Sixteen Winter Days"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1855,14 +1838,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1658820893\">Saber_Eidolon6_Count</a>[<span class=\"descriptionNumberColor\">The Long Fated Night</span>]",
           "counter": 1,
+          "description": "After using Ultimate <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s), regenerates a fixed amount of <span class=\"descriptionNumberColor\">#SkillRank_Rank06_P3_Amount</span> Energy.",
+          "type": "Other",
+          "statusName": "The Long Fated Night",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -1928,12 +1912,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "After using Ultimate <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s), regenerates a fixed amount of <span class=\"descriptionNumberColor\">#SkillRank_Rank06_P3_Amount</span> Energy.",
-          "type": "Other",
-          "statusName": "The Long Fated Night"
+          ]
         }
       ],
       "targetObjectData": {
@@ -3476,9 +3455,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3537,8 +3514,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__879085567\">Saber_Ability03_CD</a>[<span class=\"descriptionNumberColor\">Mana Burst</span>]",
-          "stackData": [],
-          "latentQueue": [],
           "description": "When Saber has \"Core Resonance,\" and if using Skill and consuming \"Core Resonance\" can fully regenerate her Energy, consumes \"Mana Burst\" to cause Saber to immediately take action and recover 1 Skill Point for allies.",
           "type": "Other",
           "effectName": "Mana Burst",
@@ -3548,6 +3523,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__581836941\">Saber_Trace03_Bonus</a>[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "Crown of the Star",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3570,20 +3552,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "Crown of the Star"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-435192710\">Saber_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Dragon Reactor Core</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Dragon Reactor Core",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3606,25 +3586,22 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Dragon Reactor Core"
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1310791461\">Saber_AIFlag</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1310791461\">Saber_AIFlag</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1058966793\">Saber_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Each stack causes DMG dealt by Saber to ignore <span class=\"descriptionNumberColor\">#SkillRank_Rank02_P2_Ratio</span> of the target's DEF.",
+          "type": "Buff",
+          "statusName": "The Lost Oath of the Round Table",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -3641,19 +3618,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Each stack causes DMG dealt by Saber to ignore <span class=\"descriptionNumberColor\">#SkillRank_Rank02_P2_Ratio</span> of the target's DEF.",
-          "type": "Buff",
-          "statusName": "The Lost Oath of the Round Table"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1328926688\">Saber_Trace03_Bonus_02</a>[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Crown of the Star",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3677,14 +3653,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Crown of the Star"
+          ]
         }
       ],
       "references": []

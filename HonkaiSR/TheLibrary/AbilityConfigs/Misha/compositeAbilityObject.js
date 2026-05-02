@@ -38,6 +38,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1472142053\">Misha_Eidolon6_RecoverBP</a>[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Allies recover <span class=\"descriptionNumberColor\">MDF_Value</span> Skill Point(s) after the next time they use a Skill.",
+          "type": "Buff",
+          "statusName": "Estrangement of Dream",
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: End",
@@ -66,15 +69,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Allies recover <span class=\"descriptionNumberColor\">MDF_Value</span> Skill Point(s) after the next time they use a Skill.",
-          "type": "Buff",
-          "statusName": "Estrangement of Dream"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-186724559\">Misha_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Estrangement of Dream",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -103,12 +108,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Estrangement of Dream",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -165,9 +165,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -192,9 +190,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1823557503\">M_Misha_Eidolon2</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1823557503\">M_Misha_Eidolon2</a>"
         }
       ],
       "targetObjectData": {
@@ -262,9 +258,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -331,9 +325,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -488,6 +480,12 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__728153787\">Misha_EnergyCount</a>[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
           "counter": 1,
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "BasicAttack"
+          ],
+          "description": "The Ultimate's Hits Per Action.",
+          "type": "Other",
+          "statusName": "G—Gonna Be Late!",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -510,14 +508,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "BasicAttack"
-          ],
-          "latentQueue": [],
-          "description": "The Ultimate's Hits Per Action.",
-          "type": "Other",
-          "statusName": "G—Gonna Be Late!"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -730,9 +721,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1153,6 +1142,16 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_DefenceDown"
           ],
+          "stackData": [
+            "MDF_PropertyRatio"
+          ],
+          "latentQueue": [
+            "_delta_ntime"
+          ],
+          "description": "Reduces DEF by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "Yearning of Youth",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1177,22 +1176,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [
-            "_delta_ntime"
-          ],
-          "description": "Reduces DEF by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "Yearning of Youth"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-874080613\">Misha_Ability03_StatusProbabilityUp</a>[<span class=\"descriptionNumberColor\">Interlock</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyRatio"
+          ],
+          "description": "Increases Effect Hit Rate by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "effectName": "Effect Hit Rate Boost",
+          "statusName": "Interlock",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1221,15 +1217,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [],
-          "description": "Increases Effect Hit Rate by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "effectName": "Effect Hit Rate Boost",
-          "statusName": "Interlock"
+          ]
         }
       ],
       "targetObjectData": {

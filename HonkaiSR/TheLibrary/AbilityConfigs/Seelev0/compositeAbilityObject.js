@@ -82,9 +82,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -120,6 +118,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-268122719\">Seele_Eidolon4</a>",
+          "stackData": [
+            "MDF_AddSP"
+          ],
           "execute": [
             {
               "eventTrigger": "Got a Kill [Owner]",
@@ -142,11 +143,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AddSP"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -210,9 +207,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -258,6 +253,10 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1465401968\">Seele_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Lowers the chances of being attacked by enemies.",
+          "type": "Buff",
+          "effectName": "Aggro Chance Reduction",
+          "statusName": "Nightshade",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -282,16 +281,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Lowers the chances of being attacked by enemies.",
-          "type": "Buff",
-          "effectName": "Aggro Chance Reduction",
-          "statusName": "Nightshade"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-730910953\">Seele_LowHP_AggroDown</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_HPRatio",
+            "MDF_AggroDown"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -394,12 +393,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HPRatio",
-            "MDF_AggroDown"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -485,9 +479,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -606,6 +598,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__959272575\">Local_Seele_ListenKill</a>",
+          "stackData": [
+            "dmg_percent"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -927,17 +922,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "dmg_percent"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-894890999\">Ability02PreShowModifier</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1010,7 +999,6 @@ const compositeAbilityObject = {
           "stackData": [
             "MDF_Skill01_Delay"
           ],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1158,6 +1146,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_Rank06_Damage"
+          ],
+          "description": "On a hit, receives an extra Quantum DMG from Seele.",
+          "type": "Debuff",
+          "effectName": "Butterfly Flurry",
+          "statusName": "Butterfly Flurry",
           "execute": [
             {
               "eventTrigger": "Being Attacked End [Owner]",
@@ -1185,15 +1180,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Rank06_Damage"
-          ],
-          "latentQueue": [],
-          "description": "On a hit, receives an extra Quantum DMG from Seele.",
-          "type": "Debuff",
-          "effectName": "Butterfly Flurry",
-          "statusName": "Butterfly Flurry"
+          ]
         }
       ],
       "targetObjectData": {
@@ -1660,18 +1647,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__333617615\">Ability01PreShowModifier_AppliedRatio</a>",
           "stackType": "Multiple",
-          "execute": [
-            {
-              "eventTrigger": "Action End [Owner]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ],
           "stackData": [
             "MDF_Skill01_Delay"
           ],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1693,33 +1671,23 @@ const compositeAbilityObject = {
                 ]
               }
             }
-          }
+          },
+          "execute": [
+            {
+              "eventTrigger": "Action End [Owner]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1624938404\">Seele_Trace02_ModifyAction</a>",
           "stackType": "Multiple",
-          "execute": [
-            {
-              "eventTrigger": "Turn End [Anyone]",
-              "execute": [
-                {
-                  "name": "Action Advance/Delay",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "advanceType": "Advance",
-                  "multiAdd": "-0.2"
-                },
-                "Modifier Deletes Itself"
-              ]
-            }
-          ],
           "stackData": [
             "MDF_DelayCost"
           ],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1741,7 +1709,24 @@ const compositeAbilityObject = {
                 ]
               }
             }
-          }
+          },
+          "execute": [
+            {
+              "eventTrigger": "Turn End [Anyone]",
+              "execute": [
+                {
+                  "name": "Action Advance/Delay",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "advanceType": "Advance",
+                  "multiAdd": "-0.2"
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
         }
       ],
       "targetObjectData": {
@@ -1801,6 +1786,15 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to 2 stacks.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1834,17 +1828,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to 2 stacks.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1853,6 +1837,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1875,20 +1866,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1401924350\">Seele_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "seele_dmg_percent",
+            "MDF_Penetrate"
+          ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">seele_dmg_percent</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Amplification",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -1989,17 +1981,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "seele_dmg_percent",
-            "MDF_Penetrate"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">seele_dmg_percent</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Amplification",
-          "duration": 1
+          ]
         }
       ],
       "references": []

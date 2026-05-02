@@ -17,9 +17,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1722328499\">Cyrene_Passive_MaleMaster</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1722328499\">Cyrene_Passive_MaleMaster</a>"
     }
   ],
   "targetObjectData": {

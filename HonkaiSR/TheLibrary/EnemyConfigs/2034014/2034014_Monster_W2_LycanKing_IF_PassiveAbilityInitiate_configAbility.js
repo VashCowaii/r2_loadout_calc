@@ -315,6 +315,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-970015149\">Enemy_W2_LycanKing_IF_HintToastController</a>",
+      "latentQueue": [
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -381,10 +384,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
       ]
     },
     {
@@ -972,6 +971,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__327803157\">Enemy_W2_LycanKing_IF_RageStatusPhase2</a>[<span class=\"descriptionNumberColor\">Full Moon's Furor</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Enters the \"Lunar Devourer\" state and gains immunity to action delay effects from targets. While in this state, Hoolay gains \"Irate\" and can use \"Lupine Chase Calls Bloody Gleam.\" This state will be removed when this unit is Weakness Broken.",
+      "type": "Buff",
+      "effectName": "Entering the \"Full Moon's Furor\" state",
+      "statusName": "Full Moon's Furor",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1141,16 +1144,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Enters the \"Lunar Devourer\" state and gains immunity to action delay effects from targets. While in this state, Hoolay gains \"Irate\" and can use \"Lupine Chase Calls Bloody Gleam.\" This state will be removed when this unit is Weakness Broken.",
-      "type": "Buff",
-      "effectName": "Entering the \"Full Moon's Furor\" state",
-      "statusName": "Full Moon's Furor"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__609854366\">Enemy_W2_LycanKing_IF_RageStatus</a>[<span class=\"descriptionNumberColor\">Full Moon's Furor</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Enters the \"Lunar Devourer\" state and gains immunity to action delay effects from targets. While in this state, Hoolay gains \"Irate\" and can use \"Lupine Chase Calls Bloody Gleam.\" This state will be removed when this unit is Weakness Broken.",
+      "type": "Buff",
+      "effectName": "Entering the \"Full Moon's Furor\" state",
+      "statusName": "Full Moon's Furor",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1333,11 +1336,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Enters the \"Lunar Devourer\" state and gains immunity to action delay effects from targets. While in this state, Hoolay gains \"Irate\" and can use \"Lupine Chase Calls Bloody Gleam.\" This state will be removed when this unit is Weakness Broken.",
-      "type": "Buff",
-      "effectName": "Entering the \"Full Moon's Furor\" state",
-      "statusName": "Full Moon's Furor"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1345,6 +1344,9 @@ const configAbility = {
       "stackType": "Replace",
       "modifierFlags": [
         "KeepOnDeathrattle"
+      ],
+      "latentQueue": [
+        "AIFlag"
       ],
       "execute": [
         {
@@ -1695,15 +1697,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__348054271\">Enemy_W2_LycanKing_IF_ReactionModel</a>",
+      "latentQueue": [
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1815,10 +1816,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
       ]
     },
     {
@@ -1855,9 +1852,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1866,9 +1861,7 @@ const configAbility = {
         {
           "eventTrigger": "Ultimate Prep-Phase [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

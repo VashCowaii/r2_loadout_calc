@@ -12,6 +12,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1040154561\">Welt_Trace01_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyRatio"
+      ],
+      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -34,15 +41,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -51,6 +50,13 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedDown"
       ],
+      "stackData": [
+        "MDF_PropertyRatio"
+      ],
+      "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Debuff",
+      "effectName": "Slow",
+      "statusName": "Slow",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -75,22 +81,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Debuff",
-      "effectName": "Slow",
-      "statusName": "Slow"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-374836920\">Welt_Eidolon1_Enhance</a>[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]",
       "counter": 2,
-      "stackData": [],
-      "latentQueue": [],
       "description": "Basic ATKs and Skills deal an extra hit.",
       "type": "Other",
       "statusName": "Legacy of Honor"

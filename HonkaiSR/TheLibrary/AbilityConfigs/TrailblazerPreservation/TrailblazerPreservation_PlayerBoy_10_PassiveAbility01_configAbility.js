@@ -340,6 +340,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1396744931\">MWPlayerBoy_10_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "ATK Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -362,15 +366,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "ATK Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2110431012\">MWPlayerBoy_10_Passive</a>",
+      "latentQueue": [
+        "Rank06_Max_Layer"
+      ],
       "execute": [
         {
           "eventTrigger": "Being Attacked End [Owner]",
@@ -577,15 +580,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Rank06_Max_Layer"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1667806661\">PlayerBoy_10_PointB3</a>",
+      "latentQueue": [
+        "Rank06_Max_Layer"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -641,10 +643,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Rank06_Max_Layer"
       ]
     }
   ],

@@ -18,6 +18,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1374245116\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0011_02</a>[<span class=\"descriptionNumberColor\">Tears Behind Smiles</span>]",
+      "description": "Increases Final DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, but cannot take CRIT Hits.",
+      "type": "Other",
+      "statusName": "Tears Behind Smiles",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -39,10 +42,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Final DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, but cannot take CRIT Hits.",
-      "type": "Other",
-      "statusName": "Tears Behind Smiles"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -101,9 +101,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

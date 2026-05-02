@@ -54,6 +54,10 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUp</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Umbra Devourer",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -76,11 +80,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUp</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Umbra Devourer"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -88,6 +88,31 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
+      ],
+      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackUp</span> and DMG taken by all enemies' increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpTemp2</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Umbra Devourer",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1374108116\">LC_23056_Main_Sub2</a>[<span class=\"descriptionNumberColor\">Umbra Devourer</span>]",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_DamageTakenUp": {
+              "operator": "Variables[0] (MDF_DamageTakenUpTemp2) || RETURN",
+              "displayLines": "MDF_DamageTakenUpTemp2",
+              "constants": [],
+              "variables": [
+                "MDF_DamageTakenUpTemp2"
+              ]
+            }
+          }
+        }
       ],
       "execute": [
         {
@@ -157,31 +182,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackUp</span> and DMG taken by all enemies' increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpTemp2</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Umbra Devourer",
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1374108116\">LC_23056_Main_Sub2</a>[<span class=\"descriptionNumberColor\">Umbra Devourer</span>]",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_DamageTakenUp": {
-              "operator": "Variables[0] (MDF_DamageTakenUpTemp2) || RETURN",
-              "displayLines": "MDF_DamageTakenUpTemp2",
-              "constants": [],
-              "variables": [
-                "MDF_DamageTakenUpTemp2"
-              ]
-            }
-          }
-        }
       ]
     },
     {
@@ -189,6 +189,12 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1745730475\">LC_23056_Main</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
+      ],
+      "stackData": [
+        "MDF_InsertTargetCount",
+        "MDF_LifeTime",
+        "MDF_AttackUpTemp",
+        "MDF_DamageTakenUpTemp"
       ],
       "execute": [
         {
@@ -339,14 +345,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [
-        "MDF_InsertTargetCount",
-        "MDF_LifeTime",
-        "MDF_AttackUpTemp",
-        "MDF_DamageTakenUpTemp"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

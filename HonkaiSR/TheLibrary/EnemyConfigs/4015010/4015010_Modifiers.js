@@ -11,6 +11,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1480712068\">W4_DawnsEye_BattleScore3</a>",
+      "latentQueue": [
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -139,10 +142,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
       ]
     },
     {
@@ -171,6 +170,10 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1514267306\">W4_DawnsEye_BattleScore1</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
+      ],
+      "latentQueue": [
+        "AIFlag",
+        "PauseLevelForCameraPerform"
       ],
       "variableValueChange": [
         {
@@ -254,11 +257,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag",
-        "PauseLevelForCameraPerform"
       ]
     },
     {
@@ -268,13 +266,14 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__357250261\">Enemy_W4_DawnsEye_Part02Effect</a>",
+      "latentQueue": [
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -304,10 +303,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
       ]
     },
     {
@@ -316,9 +311,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1526533181\">Enemy_W4_DawnsEye_Ability01_HitTag</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1526533181\">Enemy_W4_DawnsEye_Ability01_HitTag</a>"
     },
     {
       "name": "Modifier Construction",
@@ -373,6 +366,13 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "latentQueue": [
+        "AIFlag",
+        "PauseLevelForCameraPerform"
+      ],
+      "description": "Currently unselectable.",
+      "type": "Other",
+      "statusName": "Marine Layer",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -452,15 +452,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag",
-        "PauseLevelForCameraPerform"
-      ],
-      "description": "Currently unselectable.",
-      "type": "Other",
-      "statusName": "Marine Layer"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -470,6 +462,17 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "KeepOnDeathrattle"
       ],
+      "stackData": [
+        "MDF_SunnyBreakCold",
+        "MDF_SunnyBreakColdRatio"
+      ],
+      "latentQueue": [
+        "AIFlag",
+        "PauseLevelForCameraPerform"
+      ],
+      "description": "When receiving DMG, \"Sublime, Radiant, Avatar of the Sky\" loses an equal amount of HP.",
+      "type": "Other",
+      "statusName": "All As One",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -1314,18 +1317,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SunnyBreakCold",
-        "MDF_SunnyBreakColdRatio"
-      ],
-      "latentQueue": [
-        "AIFlag",
-        "PauseLevelForCameraPerform"
-      ],
-      "description": "When receiving DMG, \"Sublime, Radiant, Avatar of the Sky\" loses an equal amount of HP.",
-      "type": "Other",
-      "statusName": "All As One"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1416,6 +1408,13 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_SunnyBreakCold"
+      ],
+      "latentQueue": [
+        "AIFlag",
+        "PauseLevelForCameraPerform"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1473,24 +1472,12 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [
-        "MDF_SunnyBreakCold"
-      ],
-      "latentQueue": [
-        "AIFlag",
-        "PauseLevelForCameraPerform"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1414068042\">Modifier_Monster_W4_DawnsEye_WheaterMarkAbility04</a>[<span class=\"descriptionNumberColor\">Ionization</span>]",
       "stackType": "Replace",
-      "execute": [
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier"
-        }
-      ],
       "stackData": [
         "MDF_ThunderDark"
       ],
@@ -1499,12 +1486,20 @@ const configAbility = {
       ],
       "description": "Uses \"Wrath, Rend of Eternal Sky\" in the next action and additionally deals DMG based on the number of Thunderclouds possessed. Current Thundercloud(s): <span class=\"descriptionNumberColor\">MDF_ThunderDark</span>.",
       "type": "Buff",
-      "statusName": "Ionization"
+      "statusName": "Ionization",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier"
+        }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-526594563\">Modifier_Monster_W4_DawnsEye_WheaterRainChargeBreak</a>",
       "stackType": "Replace",
+      "latentQueue": [
+        "WeatherPhase02Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -1555,10 +1550,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "WeatherPhase02Flag"
       ]
     },
     {
@@ -1970,13 +1961,35 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1923265590\">Modifier_Monster_W4_DawnsEye_WheaterRain</a>",
+      "stackData": [
+        "Weather_Thunder",
+        "Weather_ThunderChange",
+        "Weather_ThunderDamageLight",
+        "Weather_ThunderDamageDark",
+        "Weather_ThunderCount",
+        "Weather_ThunderChance",
+        "Weather_ThunderKillCount",
+        "Weather_Skill05MaxCount"
+      ],
+      "latentQueue": [
+        "AIFlag"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1586907692\">Modifier_Monster_W4_DawnsEye_WheaterRainSub</a>",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2016,30 +2029,6 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-2093876840\">Modifier_Monster_W4_DawnsEye_WheaterRainUIController</a>"
             }
           ]
-        }
-      ],
-      "stackData": [
-        "Weather_Thunder",
-        "Weather_ThunderChange",
-        "Weather_ThunderDamageLight",
-        "Weather_ThunderDamageDark",
-        "Weather_ThunderCount",
-        "Weather_ThunderChance",
-        "Weather_ThunderKillCount",
-        "Weather_Skill05MaxCount"
-      ],
-      "latentQueue": [
-        "AIFlag"
-      ],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1586907692\">Modifier_Monster_W4_DawnsEye_WheaterRainSub</a>",
-          "haloStatus": true
         }
       ]
     },
@@ -2232,6 +2221,12 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1737251406\">Enemy_W4_DawnsEye_Ability04_SunnyChargeHeat</a>[<span class=\"descriptionNumberColor\">Helium Flash</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_Skill04P1SunnyHeat"
+      ],
+      "description": "Uses \"Fury, Incineration of Dawn and Dusk\" on all targets in the next action and increases the Temperature by <span class=\"descriptionNumberColor\">MDF_Skill04P1SunnyHeat</span>.",
+      "type": "Buff",
+      "statusName": "Helium Flash",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2270,14 +2265,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Skill04P1SunnyHeat"
-      ],
-      "latentQueue": [],
-      "description": "Uses \"Fury, Incineration of Dawn and Dusk\" on all targets in the next action and increases the Temperature by <span class=\"descriptionNumberColor\">MDF_Skill04P1SunnyHeat</span>.",
-      "type": "Buff",
-      "statusName": "Helium Flash"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2346,6 +2334,9 @@ const configAbility = {
       "modifierFlags": [
         "CanBeAddedToServant"
       ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatioCurrent</span>.",
+      "type": "Buff",
+      "statusName": "DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2536,10 +2527,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatioCurrent</span>.",
-      "type": "Buff",
-      "statusName": "DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2551,6 +2539,11 @@ const configAbility = {
         "STAT_DOT_Burn",
         "CanBeAddedToServant"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Fire DMG based on the current Temperature at the start of each turn.",
+      "type": "Other",
+      "effectName": "Solar Storm",
+      "statusName": "Solar Storm",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2883,12 +2876,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Fire DMG based on the current Temperature at the start of each turn.",
-      "type": "Other",
-      "effectName": "Solar Storm",
-      "statusName": "Solar Storm"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2989,9 +2977,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3056,6 +3042,145 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1982815636\">Modifier_Monster_W4_DawnsEye_WheaterSunnyForLevel</a>",
+      "stackData": [
+        "Weather_SunnyHeatInitial",
+        "Weather_HeatDamage",
+        "Weather_HeatAddPerAction",
+        "Weather_HeatCountDown",
+        "Weather_AllDamageTypeAddedRatio"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(Exclude Netherwing)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1383289356\">Enemy_Monster_W4_DawnsEye_WheaterSunnyBurn</a>[<span class=\"descriptionNumberColor\">Solar Storm</span>]",
+          "haloStatus": true,
+          "valuePerStack": {
+            "Modifier_Burn_DamagePercentage": {
+              "operator": "Variables[0] (Weather_HeatDamage) || RETURN",
+              "displayLines": "Weather_HeatDamage",
+              "constants": [],
+              "variables": [
+                "Weather_HeatDamage"
+              ]
+            },
+            "Weather_SunnyHeat": {
+              "operator": "Variables[0] (Sunny_Temperature) || RETURN",
+              "displayLines": "Sunny_Temperature",
+              "constants": [],
+              "variables": [
+                "Sunny_Temperature"
+              ]
+            },
+            "Weather_SunnyHeatInitial": {
+              "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
+              "displayLines": "Weather_SunnyHeatInitial",
+              "constants": [],
+              "variables": [
+                "Weather_SunnyHeatInitial"
+              ]
+            },
+            "MDF_BaseAttack": {
+              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__163) || RETURN",
+              "displayLines": "ENEMIES_OBJECT_UNUSED__163",
+              "constants": [],
+              "variables": [
+                "ENEMIES_OBJECT_UNUSED__163"
+              ]
+            },
+            "MDF_AllDamageTypeAddedRatio": {
+              "operator": "Variables[0] (Weather_AllDamageTypeAddedRatio) || RETURN",
+              "displayLines": "Weather_AllDamageTypeAddedRatio",
+              "constants": [],
+              "variables": [
+                "Weather_AllDamageTypeAddedRatio"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(Exclude Netherwing)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1769039176\">Enemy_Monster_W4_DawnsEye_WheaterSunnyAllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "haloStatus": true,
+          "valuePerStack": {
+            "Weather_SunnyHeat": {
+              "operator": "Variables[0] (Sunny_Temperature) || RETURN",
+              "displayLines": "Sunny_Temperature",
+              "constants": [],
+              "variables": [
+                "Sunny_Temperature"
+              ]
+            },
+            "Weather_SunnyHeatInitial": {
+              "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
+              "displayLines": "Weather_SunnyHeatInitial",
+              "constants": [],
+              "variables": [
+                "Weather_SunnyHeatInitial"
+              ]
+            },
+            "MDF_AllDamageTypeAddedRatio": {
+              "operator": "Variables[0] (Weather_AllDamageTypeAddedRatio) || RETURN",
+              "displayLines": "Weather_AllDamageTypeAddedRatio",
+              "constants": [],
+              "variables": [
+                "Weather_AllDamageTypeAddedRatio"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Join Targets",
+            "TargetList": [
+              {
+                "name": "Target Name",
+                "target": "{{Player & Enemy Team All}}"
+              },
+              {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Unselectable Targets}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Is Entity a Battle Event/Summon",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "invertCondition": true
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1232483013\">Modifier_Monster_W4_DawnsEye_WheaterSunnyHeatAddPerAct</a>",
+          "haloStatus": true,
+          "valuePerStack": {
+            "Weather_HeatAddPerAction": {
+              "operator": "Variables[0] (Weather_HeatAddPerAction) || RETURN",
+              "displayLines": "Weather_HeatAddPerAction",
+              "constants": [],
+              "variables": [
+                "Weather_HeatAddPerAction"
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -3207,248 +3332,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "Weather_SunnyHeatInitial",
-        "Weather_HeatDamage",
-        "Weather_HeatAddPerAction",
-        "Weather_HeatCountDown",
-        "Weather_AllDamageTypeAddedRatio"
-      ],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(Exclude Netherwing)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1383289356\">Enemy_Monster_W4_DawnsEye_WheaterSunnyBurn</a>[<span class=\"descriptionNumberColor\">Solar Storm</span>]",
-          "haloStatus": true,
-          "valuePerStack": {
-            "Modifier_Burn_DamagePercentage": {
-              "operator": "Variables[0] (Weather_HeatDamage) || RETURN",
-              "displayLines": "Weather_HeatDamage",
-              "constants": [],
-              "variables": [
-                "Weather_HeatDamage"
-              ]
-            },
-            "Weather_SunnyHeat": {
-              "operator": "Variables[0] (Sunny_Temperature) || RETURN",
-              "displayLines": "Sunny_Temperature",
-              "constants": [],
-              "variables": [
-                "Sunny_Temperature"
-              ]
-            },
-            "Weather_SunnyHeatInitial": {
-              "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
-              "displayLines": "Weather_SunnyHeatInitial",
-              "constants": [],
-              "variables": [
-                "Weather_SunnyHeatInitial"
-              ]
-            },
-            "MDF_BaseAttack": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__163) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__163",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED__163"
-              ]
-            },
-            "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (Weather_AllDamageTypeAddedRatio) || RETURN",
-              "displayLines": "Weather_AllDamageTypeAddedRatio",
-              "constants": [],
-              "variables": [
-                "Weather_AllDamageTypeAddedRatio"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(Exclude Netherwing)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1769039176\">Enemy_Monster_W4_DawnsEye_WheaterSunnyAllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-          "haloStatus": true,
-          "valuePerStack": {
-            "Weather_SunnyHeat": {
-              "operator": "Variables[0] (Sunny_Temperature) || RETURN",
-              "displayLines": "Sunny_Temperature",
-              "constants": [],
-              "variables": [
-                "Sunny_Temperature"
-              ]
-            },
-            "Weather_SunnyHeatInitial": {
-              "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
-              "displayLines": "Weather_SunnyHeatInitial",
-              "constants": [],
-              "variables": [
-                "Weather_SunnyHeatInitial"
-              ]
-            },
-            "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (Weather_AllDamageTypeAddedRatio) || RETURN",
-              "displayLines": "Weather_AllDamageTypeAddedRatio",
-              "constants": [],
-              "variables": [
-                "Weather_AllDamageTypeAddedRatio"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Join Targets",
-            "TargetList": [
-              {
-                "name": "Target Name",
-                "target": "{{Player & Enemy Team All}}"
-              },
-              {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{All Unselectable Targets}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Is Entity a Battle Event/Summon",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "invertCondition": true
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1232483013\">Modifier_Monster_W4_DawnsEye_WheaterSunnyHeatAddPerAct</a>",
-          "haloStatus": true,
-          "valuePerStack": {
-            "Weather_HeatAddPerAction": {
-              "operator": "Variables[0] (Weather_HeatAddPerAction) || RETURN",
-              "displayLines": "Weather_HeatAddPerAction",
-              "constants": [],
-              "variables": [
-                "Weather_HeatAddPerAction"
-              ]
-            }
-          }
-        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-39064349\">Modifier_Monster_W4_DawnsEye_WheaterSunny</a>",
-      "execute": [
-        {
-          "eventTrigger": "When Constructing Modifier",
-          "execute": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Sunny_Temperature",
-              "value": {
-                "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
-                "displayLines": "Weather_SunnyHeatInitial",
-                "constants": [],
-                "variables": [
-                  "Weather_SunnyHeatInitial"
-                ]
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"735847061\">Modifier_Monster_W4_DawnsEye_WheaterSunnyUIController</a>",
-              "valuePerStack": {
-                "Weather_SunnyHeatInitial": {
-                  "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
-                  "displayLines": "Weather_SunnyHeatInitial",
-                  "constants": [],
-                  "variables": [
-                    "Weather_SunnyHeatInitial"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "eventTrigger": "When Modifier Destroyed/Removed",
-          "execute": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player & Enemy Team All(with Unselectable)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1383289356\">Enemy_Monster_W4_DawnsEye_WheaterSunnyBurn</a>[<span class=\"descriptionNumberColor\">Solar Storm</span>]"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player & Enemy Team All(with Unselectable)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1769039176\">Enemy_Monster_W4_DawnsEye_WheaterSunnyAllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player & Enemy Team All(with Unselectable)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"181367335\">Modifier_Monster_W4_DawnsEye_WheaterSunnySub</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player & Enemy Team All(with Unselectable)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"55187290\">Enemy_Monster_W4_DawnsEye_WheaterSunnyAllDamageTypeAddedRatioSub</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player & Enemy Team All(with Unselectable)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1232483013\">Modifier_Monster_W4_DawnsEye_WheaterSunnyHeatAddPerAct</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"735847061\">Modifier_Monster_W4_DawnsEye_WheaterSunnyUIController</a>"
-            }
-          ]
-        },
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier"
-        }
-      ],
       "stackData": [
         "Weather_SunnyChange"
       ],
-      "latentQueue": [],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -3601,11 +3492,108 @@ const configAbility = {
             }
           }
         }
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Sunny_Temperature",
+              "value": {
+                "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
+                "displayLines": "Weather_SunnyHeatInitial",
+                "constants": [],
+                "variables": [
+                  "Weather_SunnyHeatInitial"
+                ]
+              }
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"735847061\">Modifier_Monster_W4_DawnsEye_WheaterSunnyUIController</a>",
+              "valuePerStack": {
+                "Weather_SunnyHeatInitial": {
+                  "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
+                  "displayLines": "Weather_SunnyHeatInitial",
+                  "constants": [],
+                  "variables": [
+                    "Weather_SunnyHeatInitial"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player & Enemy Team All(with Unselectable)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1383289356\">Enemy_Monster_W4_DawnsEye_WheaterSunnyBurn</a>[<span class=\"descriptionNumberColor\">Solar Storm</span>]"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player & Enemy Team All(with Unselectable)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1769039176\">Enemy_Monster_W4_DawnsEye_WheaterSunnyAllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player & Enemy Team All(with Unselectable)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"181367335\">Modifier_Monster_W4_DawnsEye_WheaterSunnySub</a>"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player & Enemy Team All(with Unselectable)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"55187290\">Enemy_Monster_W4_DawnsEye_WheaterSunnyAllDamageTypeAddedRatioSub</a>"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player & Enemy Team All(with Unselectable)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1232483013\">Modifier_Monster_W4_DawnsEye_WheaterSunnyHeatAddPerAct</a>"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"735847061\">Modifier_Monster_W4_DawnsEye_WheaterSunnyUIController</a>"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier"
+        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1803162686\">Enemy_W4_DawnsEye_SoundController</a>",
+      "latentQueue": [
+        "AIFlag",
+        "PauseLevelForCameraPerform"
+      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle"
@@ -3638,25 +3626,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag",
-        "PauseLevelForCameraPerform"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-283400185\">Enemy_W4_DawnsEye_DisableLookAt</a>",
+      "latentQueue": [
+        "AIFlag",
+        "PauseLevelForCameraPerform"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn Start [Anyone]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag",
-        "PauseLevelForCameraPerform"
       ]
     },
     {
@@ -3697,6 +3679,13 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-440353918\">Enemy_W4_DawnsEye_BreakController</a>",
       "modifierFlags": [
         "ForceHitH"
+      ],
+      "stackData": [
+        "StanceDamage"
+      ],
+      "latentQueue": [
+        "AIFlag",
+        "PauseLevelForCameraPerform"
       ],
       "execute": [
         {
@@ -4163,19 +4152,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "StanceDamage"
-      ],
-      "latentQueue": [
-        "AIFlag",
-        "PauseLevelForCameraPerform"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1987146522\">Enemy_W4_DawnsEye_PartController</a>",
       "counter": 1,
+      "latentQueue": [
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -4419,10 +4404,6 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
       ]
     }
   ],

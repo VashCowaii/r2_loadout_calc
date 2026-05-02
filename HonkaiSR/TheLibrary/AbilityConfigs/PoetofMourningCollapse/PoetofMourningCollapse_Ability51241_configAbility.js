@@ -17,6 +17,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-281803576\">Relic_124_Sub</a>[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
+      "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "CRIT Rate Boost",
+      "statusName": "Poet of Mourning Collapse",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -92,11 +96,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "CRIT Rate Boost",
-      "statusName": "Poet of Mourning Collapse"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -225,9 +225,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,
