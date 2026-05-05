@@ -9,10 +9,8 @@ const compositeAbilityObject = {
     "2035012_Monster_W2_Feixiao_IF_EX03_PassiveAbility",
     "2035012_Monster_W2_Feixiao_IF_EX02_PassiveAbility",
     "2035012_Monster_W2_Feixiao_IF_EX01_PassiveAbility",
-    "2035012_BattleEventAbility_W2_Feixiao_IF",
     "2035012_Monster_W2_Feixiao_IF_PassiveAbility_Insert",
-    "2035012_BattleEvent_W2_Feixiao_IF_Part01",
-    "2035012_BattleEvent_W2_Feixiao_IF_EnterReady",
+    "2035012_Monster_W2_Feixiao_IF_Passive01",
     "2035012_Monster_W2_Feixiao_IF_AbilityP09_Part02",
     "2035012_Monster_W2_Feixiao_IF_AbilityP09_Part01",
     "2035012_Monster_W2_Feixiao_IF_Ability09_Part02",
@@ -35,7 +33,6 @@ const compositeAbilityObject = {
     "2035012_Monster_W2_Feixiao_IF_AbilityP01_Part01",
     "2035012_Monster_W2_Feixiao_IF_Ability01_Part02",
     "2035012_Monster_W2_Feixiao_IF_Ability01_Part01",
-    "2035012_Monster_W2_Feixiao_IF_Passive01",
     "2035012_Modifiers",
     "2035012_BE_BattleEvents"
   ],
@@ -194,1504 +191,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1243020063\">Modifier_Monster_W2_Feixiao_IF_EX01</a>"
-        }
-      ]
-    },
-    "2035012_BattleEventAbility_W2_Feixiao_IF": {
-      "fileName": "2035012_BattleEventAbility_W2_Feixiao_IF",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1414974048\">Modifier_W2_Feixiao_BattleEvent</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1175406165\">Modifier_W2_Feixiao_BattleEvent_BaseSpeed</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Enemy Feixiao: Self}}"
-            },
-            "value1": "BattleEventPartFlag",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Advance/Delay up to Target",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "targetRef": {
-                "name": "Target Name",
-                "target": "{{Feixiao Parts: Head}}"
-              },
-              "isStartingAV": true
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Enemy Feixiao: Self}}"
-                },
-                "value1": "BattleEventPartFlag",
-                "compareType": "=",
-                "value2": 2
-              },
-              "passed": [
-                {
-                  "name": "Advance/Delay up to Target",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "targetRef": {
-                    "name": "Target Name",
-                    "target": "{{Feixiao Parts: Claws}}"
-                  },
-                  "isStartingAV": true
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Enemy Feixiao: Self}}"
-                    },
-                    "value1": "BattleEventPartFlag",
-                    "compareType": "=",
-                    "value2": 3
-                  },
-                  "passed": [
-                    {
-                      "name": "Advance/Delay up to Target",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "targetRef": {
-                        "name": "Target Name",
-                        "target": "{{Feixiao Parts: Tail}}"
-                      },
-                      "isStartingAV": true
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Enemy Feixiao: Self}}"
-            },
-            "value1": "BattleEventPartFlag",
-            "compareType": "=",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "Action Advance/Delay",
-              "advanceType": "Set",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "set": {
-                "operator": "Variables[0] (MDF_W2_Feixiao_BattleEvent_ActionDelay) || RETURN",
-                "displayLines": "MDF_W2_Feixiao_BattleEvent_ActionDelay",
-                "constants": [],
-                "variables": [
-                  "MDF_W2_Feixiao_BattleEvent_ActionDelay"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Feixiao: Self}}"
-          },
-          "variableName": "BattleEventPartFlag",
-          "value": 0
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                {
-                  "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1262406841\">Monster_W2_Feixiao_IF_SummonMinions</a>"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "flagName": "STAT_CTRL",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>",
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "lessThanMax": 0
-                }
-              ]
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1847577011\">Monster_W2_Feixiao_AfterConnect</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  {
-                    "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                    "conditions": {
-                      "name": "AND",
-                      "conditionList": [
-                        {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1262406841\">Monster_W2_Feixiao_IF_SummonMinions</a>"
-                        },
-                        {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
-                          "invertCondition": true
-                        },
-                        {
-                          "name": "Has Flag",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "flagName": "STAT_CTRL",
-                          "invertCondition": true
-                        },
-                        {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>",
-                          "invertCondition": true
-                        }
-                      ]
-                    },
-                    "lessThanMax": 0
-                  }
-                ]
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Sequence",
-                  "Sequence": [
-                    {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    {
-                      "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-1262406841\">Monster_W2_Feixiao_IF_SummonMinions</a>"
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "STAT_CTRL",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>",
-                            "invertCondition": true
-                          }
-                        ]
-                      },
-                      "lessThanMax": 0
-                    }
-                  ]
-                },
-                "value1": "TeamCharacterCount",
-                "compareType": ">",
-                "value2": 1
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1847577011\">Monster_W2_Feixiao_AfterConnect</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      {
-                        "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                        "conditions": {
-                          "name": "AND",
-                          "conditionList": [
-                            {
-                              "name": "Has Modifier",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1262406841\">Monster_W2_Feixiao_IF_SummonMinions</a>"
-                            },
-                            {
-                              "name": "Has Flag",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "flagName": "STAT_CTRL",
-                              "invertCondition": true
-                            },
-                            {
-                              "name": "Has Modifier",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>",
-                              "invertCondition": true
-                            }
-                          ]
-                        },
-                        "lessThanMax": 0
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      {
-                        "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                        "conditions": {
-                          "name": "AND",
-                          "conditionList": [
-                            {
-                              "name": "Has Modifier",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1262406841\">Monster_W2_Feixiao_IF_SummonMinions</a>"
-                            },
-                            {
-                              "name": "Has Flag",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "flagName": "STAT_CTRL",
-                              "invertCondition": true
-                            },
-                            {
-                              "name": "Has Modifier",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>",
-                              "invertCondition": true
-                            }
-                          ]
-                        },
-                        "lessThanMax": 0
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      {
-                        "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                        "conditions": {
-                          "name": "Is Part Of Team",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "team": "Enemy Team"
-                        },
-                        "greaterThanMax": 0
-                      }
-                    ]
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1847577011\">Monster_W2_Feixiao_AfterConnect</a>"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1175406165\">Modifier_W2_Feixiao_BattleEvent_BaseSpeed</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_W2_Feixiao_BattleEvent_BaseSpeed) || RETURN",
-                    "displayLines": "MDF_W2_Feixiao_BattleEvent_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "MDF_W2_Feixiao_BattleEvent_BaseSpeed"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1414974048\">Modifier_W2_Feixiao_BattleEvent</a>",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemies by Aggro to Battle Event's Caster}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              {
-                                "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                                "conditions": {
-                                  "name": "Is Part Of Team",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "team": "Enemy Team"
-                                },
-                                "lessThanMax": 0
-                              }
-                            ]
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"734224904\">Monster_W2_Feixiao_CurrentConnect</a>"
-                        },
-                        {
-                          "name": "Find New Target",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          "searchRandom": true,
-                          "maxTargets": 1,
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"734224904\">Monster_W2_Feixiao_CurrentConnect</a>"
-                          },
-                          "ifTargetFound": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": 203204,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": null,
-                                "isCompareUniqueID": true
-                              },
-                              "passed": [
-                                {
-                                  "name": "Inject Ability Use",
-                                  "abilityName": "Monster_W2_Feixiao_IF_Ability04_Part01",
-                                  "abilitySource": {
-                                    "name": "Target Name",
-                                    "target": "{{Battle Event's Caster}}"
-                                  },
-                                  "priorityTag": "EnemyAttackFromSelf",
-                                  "canHitNonTargets": true,
-                                  "allowAbilityTriggers": false
-                                }
-                              ],
-                              "failed": [
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Enemy ID",
-                                    "ID": 203205,
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "characterName": null,
-                                    "isCompareUniqueID": true
-                                  },
-                                  "passed": [
-                                    {
-                                      "name": "Inject Ability Use",
-                                      "abilityName": "Monster_W2_Feixiao_IF_Ability05_Part01",
-                                      "abilitySource": {
-                                        "name": "Target Name",
-                                        "target": "{{Battle Event's Caster}}"
-                                      },
-                                      "priorityTag": "EnemyAttackFromSelf",
-                                      "canHitNonTargets": true,
-                                      "allowAbilityTriggers": false
-                                    }
-                                  ],
-                                  "failed": [
-                                    {
-                                      "name": "IF",
-                                      "conditions": {
-                                        "name": "Enemy ID",
-                                        "ID": 203206,
-                                        "target": {
-                                          "name": "Target Name",
-                                          "target": "{{Parameter Target}}"
-                                        },
-                                        "characterName": null,
-                                        "isCompareUniqueID": true
-                                      },
-                                      "passed": [
-                                        {
-                                          "name": "Inject Ability Use",
-                                          "abilityName": "Monster_W2_Feixiao_IF_Ability06_Part01",
-                                          "abilitySource": {
-                                            "name": "Target Name",
-                                            "target": "{{Battle Event's Caster}}"
-                                          },
-                                          "priorityTag": "EnemyAttackFromSelf",
-                                          "canHitNonTargets": true,
-                                          "allowAbilityTriggers": false
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Inject Ability Use",
-                          "abilityName": "Monster_W2_Feixiao_IF_AbilityP01_Part01",
-                          "abilitySource": {
-                            "name": "Target Name",
-                            "target": "{{Battle Event's Caster}}"
-                          },
-                          "abilityTarget": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "priorityTag": "EnemyAttackFromSelf",
-                          "canHitNonTargets": true,
-                          "allowAbilityTriggers": false
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Action Choice Window [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"969983868\">Monster_W2_Feixiao_BeforeConnect</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            {
-                              "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                              "conditions": {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                              },
-                              "greaterThanMax": 0
-                            }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": "=",
-                        "value2": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"969983868\">Monster_W2_Feixiao_BeforeConnect</a>"
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                        },
-                        {
-                          "name": "Find New Target",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          "searchRandom": true,
-                          "maxTargets": 1,
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
-                            "casterFilter": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            }
-                          },
-                          "ifTargetFound": [
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1847577011\">Monster_W2_Feixiao_AfterConnect</a>"
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Sequence",
-                              "Sequence": [
-                                {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                },
-                                {
-                                  "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                                  "conditions": {
-                                    "name": "Has Modifier",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                                  },
-                                  "lessThanMax": 0
-                                }
-                              ]
-                            },
-                            "value1": "TeamCharacterCount",
-                            "compareType": "=",
-                            "value2": 1
-                          },
-                          "passed": [
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1847577011\">Monster_W2_Feixiao_AfterConnect</a>"
-                            },
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                            },
-                            {
-                              "name": "Find New Target",
-                              "from": {
-                                "name": "Target Name",
-                                "target": "{{Enemy Team All}}"
-                              },
-                              "searchRandom": true,
-                              "maxTargets": 1,
-                              "conditions": {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
-                                "casterFilter": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                }
-                              },
-                              "ifTargetFound": [
-                                {
-                                  "name": "Remove Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ultimate Prep-Phase [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"969983868\">Monster_W2_Feixiao_BeforeConnect</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            {
-                              "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                              "conditions": {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                              },
-                              "greaterThanMax": 0
-                            }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": "=",
-                        "value2": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"969983868\">Monster_W2_Feixiao_BeforeConnect</a>"
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                        },
-                        {
-                          "name": "Find New Target",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          "searchRandom": true,
-                          "maxTargets": 1,
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
-                            "casterFilter": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            }
-                          },
-                          "ifTargetFound": [
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1847577011\">Monster_W2_Feixiao_AfterConnect</a>"
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Sequence",
-                              "Sequence": [
-                                {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                },
-                                {
-                                  "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                                  "conditions": {
-                                    "name": "Has Modifier",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                                  },
-                                  "lessThanMax": 0
-                                }
-                              ]
-                            },
-                            "value1": "TeamCharacterCount",
-                            "compareType": "=",
-                            "value2": 1
-                          },
-                          "passed": [
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1847577011\">Monster_W2_Feixiao_AfterConnect</a>"
-                            },
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                            },
-                            {
-                              "name": "Find New Target",
-                              "from": {
-                                "name": "Target Name",
-                                "target": "{{Enemy Team All}}"
-                              },
-                              "searchRandom": true,
-                              "maxTargets": 1,
-                              "conditions": {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
-                                "casterFilter": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                }
-                              },
-                              "ifTargetFound": [
-                                {
-                                  "name": "Remove Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Extra Action/Turn [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"969983868\">Monster_W2_Feixiao_BeforeConnect</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            {
-                              "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                              "conditions": {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                              },
-                              "greaterThanMax": 0
-                            }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": "=",
-                        "value2": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"969983868\">Monster_W2_Feixiao_BeforeConnect</a>"
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                        },
-                        {
-                          "name": "Find New Target",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          "searchRandom": true,
-                          "maxTargets": 1,
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
-                            "casterFilter": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            }
-                          },
-                          "ifTargetFound": [
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1847577011\">Monster_W2_Feixiao_AfterConnect</a>"
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Sequence",
-                              "Sequence": [
-                                {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                },
-                                {
-                                  "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                                  "conditions": {
-                                    "name": "Has Modifier",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                                  },
-                                  "lessThanMax": 0
-                                }
-                              ]
-                            },
-                            "value1": "TeamCharacterCount",
-                            "compareType": "=",
-                            "value2": 1
-                          },
-                          "passed": [
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1847577011\">Monster_W2_Feixiao_AfterConnect</a>"
-                            },
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                            },
-                            {
-                              "name": "Find New Target",
-                              "from": {
-                                "name": "Target Name",
-                                "target": "{{Enemy Team All}}"
-                              },
-                              "searchRandom": true,
-                              "maxTargets": 1,
-                              "conditions": {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
-                                "casterFilter": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                }
-                              },
-                              "ifTargetFound": [
-                                {
-                                  "name": "Remove Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "AV Forcibly Changed [Global]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"969983868\">Monster_W2_Feixiao_BeforeConnect</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            {
-                              "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                              "conditions": {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                              },
-                              "greaterThanMax": 0
-                            }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": "=",
-                        "value2": 0,
-                        "conditions": {
-                          "name": "Is Entity a Battle Event/Summon",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "invertCondition": true
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"969983868\">Monster_W2_Feixiao_BeforeConnect</a>"
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                        },
-                        {
-                          "name": "Find New Target",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          "searchRandom": true,
-                          "maxTargets": 1,
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
-                            "casterFilter": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            }
-                          },
-                          "ifTargetFound": [
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1847577011\">Monster_W2_Feixiao_AfterConnect</a>"
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Sequence",
-                              "Sequence": [
-                                {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                },
-                                {
-                                  "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                                  "conditions": {
-                                    "name": "Has Modifier",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                                  },
-                                  "lessThanMax": 0
-                                }
-                              ]
-                            },
-                            "value1": "TeamCharacterCount",
-                            "compareType": "=",
-                            "value2": 0,
-                            "conditions": {
-                              "name": "Is Entity a Battle Event/Summon",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "invertCondition": true
-                            }
-                          },
-                          "passed": [
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1847577011\">Monster_W2_Feixiao_AfterConnect</a>"
-                            },
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                            },
-                            {
-                              "name": "Find New Target",
-                              "from": {
-                                "name": "Target Name",
-                                "target": "{{Enemy Team All}}"
-                              },
-                              "searchRandom": true,
-                              "maxTargets": 1,
-                              "conditions": {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
-                                "casterFilter": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                }
-                              },
-                              "ifTargetFound": [
-                                {
-                                  "name": "Remove Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ]
     },
@@ -2065,12 +564,100 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2035012_BattleEvent_W2_Feixiao_IF_Part01": {
-      "fileName": "2035012_BattleEvent_W2_Feixiao_IF_Part01",
-      "abilityType": null,
+    "2035012_Monster_W2_Feixiao_IF_Passive01": {
+      "fileName": "2035012_Monster_W2_Feixiao_IF_Passive01",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
       "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1393128044\">Monster_W2_Feixiao_IF_OnLevel</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2029364550\">Monster_W2_Feixiao_IF_PartController</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-352783921\">Monster_W2_Feixiao_IF_BattleEventController</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1540195907\">Monster_W2_Feixiao_Part2Effect</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{All Unselectable Targets, All Team Members(Exclude Self)}}"
+          },
+          "conditions": {
+            "name": "Is Part Of Team",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "team": "Enemy Team"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Create Shared HP Group",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "subTarget": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1680868349\">Monster_W2_Feixiao_IF_Status</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"246004318\">Monster_W2_Feixiao_IF_BreakController</a>"
+        },
+        {
+          "name": "Set Enemy Phase"
+        },
         {
           "name": "Find New Target",
           "from": {
@@ -2078,23 +665,58 @@ const compositeAbilityObject = {
             "target": "{{Enemy Team All}}"
           },
           "conditions": {
-            "name": "Enemy ID",
-            "ID": 203501,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null,
-            "isCompareUniqueID": true
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 203204,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": null,
+                "isCompareUniqueID": true
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 203205,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": null,
+                "isCompareUniqueID": true
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 203206,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": null,
+                "isCompareUniqueID": true
+              }
+            ]
           },
-          "modifier": "<a class=\"gModGreen\" id=\"833181750\">Enemy_W2_LycanKing_IF_MuteUltra</a>"
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1262406841\">Monster_W2_Feixiao_IF_SummonMinions</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+            }
+          ]
         },
         {
           "name": "Find New Target",
@@ -2105,7 +727,7 @@ const compositeAbilityObject = {
           "maxTargets": 1,
           "conditions": {
             "name": "Enemy ID",
-            "ID": 203501,
+            "ID": 203204,
             "target": {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
@@ -2115,36 +737,262 @@ const compositeAbilityObject = {
           },
           "ifTargetFound": [
             {
-              "name": "Trigger Ability",
-              "from": {
+              "name": "Action Advance/Delay",
+              "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "inherentTarget": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "ability": "Monster_W2_Feixiao_IF_AbilityP09_Part01",
-              "isTrigger": true
+              "advanceType": "Set",
+              "multiAdd": "({[PassiveSkill02[3]]} - 1)",
+              "isStartingDelay": true
             }
           ]
         },
-        "Wait for Pending Ability Completions",
-        "Trigger: Ability End"
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 203205,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "characterName": null,
+            "isCompareUniqueID": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Action Advance/Delay",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "advanceType": "Set",
+              "multiAdd": "({[PassiveSkill02[4]]} - 1)",
+              "isStartingDelay": true
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 203206,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "characterName": null,
+            "isCompareUniqueID": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Action Advance/Delay",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "advanceType": "Set",
+              "multiAdd": "{[PassiveSkill02[5]]}",
+              "isStartingDelay": true
+            }
+          ]
+        },
+        {
+          "name": "Add Battle Event",
+          "teamName": "Neutral Team",
+          "eventID": 20023,
+          "variables": null,
+          "whenCreated": [
+            {
+              "name": "Assign Unique Name",
+              "uniqueName": "SelectTarget",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1757126586\">Monster_W2_Feixiao_IF_PickUpMessage</a>"
+            },
+            "Show BattleEvent Button"
+          ]
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Set Hit-Class"
+        },
+        {
+          "name": "Preload Battle Event(s)",
+          "eventID": [
+            20021
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HardLevel",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Create Enemies",
+              "enemyList": [
+                {
+                  "name": "Enemy Entry",
+                  "enemyID": 203302200,
+                  "locationType": "BeforeCaster"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HardLevel",
+            "compareType": "=",
+            "value2": 2
+          },
+          "passed": [
+            {
+              "name": "Create Enemies",
+              "enemyList": [
+                {
+                  "name": "Enemy Entry",
+                  "enemyID": 203302200,
+                  "locationType": "BeforeCaster"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HardLevel",
+            "compareType": "=",
+            "value2": 3
+          },
+          "passed": [
+            {
+              "name": "Create Enemies",
+              "enemyList": [
+                {
+                  "name": "Enemy Entry",
+                  "enemyID": 203302200,
+                  "locationType": "BeforeCaster"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HardLevel",
+            "compareType": "=",
+            "value2": 4
+          },
+          "passed": [
+            {
+              "name": "Create Enemies",
+              "enemyList": [
+                {
+                  "name": "Enemy Entry",
+                  "enemyID": 203302200,
+                  "locationType": "BeforeCaster"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Recently Summoned Enemies}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"72353298\">Standard_StrongChallengeEX_SuperArmorController_MultiNew</a>",
+          "valuePerStack": {
+            "MDF_IF_BOSS_BreakDelay_01": {
+              "operator": "Variables[0] ({[SkillEX06[0]]}) || RETURN",
+              "displayLines": "{[SkillEX06[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX06[0]]}"
+              ]
+            },
+            "MDF_IF_BOSS_BreakDelay_02": {
+              "operator": "Variables[0] ({[SkillEX06[1]]}) || RETURN",
+              "displayLines": "{[SkillEX06[1]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX06[1]]}"
+              ]
+            },
+            "MDF_IF_BOSS_BreakDelay_03": {
+              "operator": "Variables[0] ({[SkillEX06[2]]}) || RETURN",
+              "displayLines": "{[SkillEX06[2]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX06[2]]}"
+              ]
+            },
+            "MDF_IF_BOSS_BreakDelay_04": {
+              "operator": "Variables[0] ({[SkillEX06[3]]}) || RETURN",
+              "displayLines": "{[SkillEX06[3]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX06[3]]}"
+              ]
+            },
+            "MDF_IF_BOSS_WeaknessDMGUpRatio": {
+              "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
+              "displayLines": "{[SkillEX01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX01[1]]}"
+              ]
+            },
+            "MDF_IF_BOSS_Standard_Defence": {
+              "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
+              "displayLines": "{[SkillEX01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX01[0]]}"
+              ]
+            }
+          },
+          "casterAssign": "TargetSelf"
+        }
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
+        "primaryTarget": "{{Caster}}"
       },
-      "references": []
-    },
-    "2035012_BattleEvent_W2_Feixiao_IF_EnterReady": {
-      "fileName": "2035012_BattleEvent_W2_Feixiao_IF_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },
@@ -7419,438 +6267,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2035012_Monster_W2_Feixiao_IF_Passive01": {
-      "fileName": "2035012_Monster_W2_Feixiao_IF_Passive01",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1393128044\">Monster_W2_Feixiao_IF_OnLevel</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2029364550\">Monster_W2_Feixiao_IF_PartController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-352783921\">Monster_W2_Feixiao_IF_BattleEventController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1540195907\">Monster_W2_Feixiao_Part2Effect</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Unselectable Targets, All Team Members(Exclude Self)}}"
-          },
-          "conditions": {
-            "name": "Is Part Of Team",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "team": "Enemy Team"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Create Shared HP Group",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "subTarget": {
-                "name": "Target Name",
-                "target": "{{Parameter Target List}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1680868349\">Monster_W2_Feixiao_IF_Status</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"246004318\">Monster_W2_Feixiao_IF_BreakController</a>"
-        },
-        {
-          "name": "Set Enemy Phase"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 203204,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": null,
-                "isCompareUniqueID": true
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 203205,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": null,
-                "isCompareUniqueID": true
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 203206,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": null,
-                "isCompareUniqueID": true
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1262406841\">Monster_W2_Feixiao_IF_SummonMinions</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 203204,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null,
-            "isCompareUniqueID": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "advanceType": "Set",
-              "multiAdd": "({[PassiveSkill02[3]]} - 1)",
-              "isStartingDelay": true
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 203205,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null,
-            "isCompareUniqueID": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "advanceType": "Set",
-              "multiAdd": "({[PassiveSkill02[4]]} - 1)",
-              "isStartingDelay": true
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 203206,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null,
-            "isCompareUniqueID": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "advanceType": "Set",
-              "multiAdd": "{[PassiveSkill02[5]]}",
-              "isStartingDelay": true
-            }
-          ]
-        },
-        {
-          "name": "Add Battle Event",
-          "teamName": "Neutral Team",
-          "eventID": 20023,
-          "variables": null,
-          "whenCreated": [
-            {
-              "name": "Assign Unique Name",
-              "uniqueName": "SelectTarget",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1757126586\">Monster_W2_Feixiao_IF_PickUpMessage</a>"
-            },
-            "Show BattleEvent Button"
-          ]
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Set Hit-Class"
-        },
-        {
-          "name": "Preload Battle Event(s)",
-          "eventID": [
-            20021
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": 203302200,
-                  "locationType": "BeforeCaster"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": "=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": 203302200,
-                  "locationType": "BeforeCaster"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": "=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": 203302200,
-                  "locationType": "BeforeCaster"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": "=",
-            "value2": 4
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": 203302200,
-                  "locationType": "BeforeCaster"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Recently Summoned Enemies}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"72353298\">Standard_StrongChallengeEX_SuperArmorController_MultiNew</a>",
-          "valuePerStack": {
-            "MDF_IF_BOSS_BreakDelay_01": {
-              "operator": "Variables[0] ({[SkillEX06[0]]}) || RETURN",
-              "displayLines": "{[SkillEX06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX06[0]]}"
-              ]
-            },
-            "MDF_IF_BOSS_BreakDelay_02": {
-              "operator": "Variables[0] ({[SkillEX06[1]]}) || RETURN",
-              "displayLines": "{[SkillEX06[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX06[1]]}"
-              ]
-            },
-            "MDF_IF_BOSS_BreakDelay_03": {
-              "operator": "Variables[0] ({[SkillEX06[2]]}) || RETURN",
-              "displayLines": "{[SkillEX06[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX06[2]]}"
-              ]
-            },
-            "MDF_IF_BOSS_BreakDelay_04": {
-              "operator": "Variables[0] ({[SkillEX06[3]]}) || RETURN",
-              "displayLines": "{[SkillEX06[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX06[3]]}"
-              ]
-            },
-            "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-              "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-              "displayLines": "{[SkillEX01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[1]]}"
-              ]
-            },
-            "MDF_IF_BOSS_Standard_Defence": {
-              "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-              "displayLines": "{[SkillEX01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[0]]}"
-              ]
-            }
-          },
-          "casterAssign": "TargetSelf"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "2035012_Modifiers": {
       "fileName": "2035012_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -9111,6 +7527,20 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
+          "ID": 20023,
+          "team": "Neutral Team",
+          "eventType": "Entity Selection",
+          "abilityList": null,
+          "overridesArray": [
+            {
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+              "value": 100
+            }
+          ],
+          "hardLevelEvent": true
+        },
+        {
+          "name": "Battle Event Construction",
           "ID": 20021,
           "team": "Enemy Team",
           "eventType": "Assist",
@@ -9135,20 +7565,6 @@ const compositeAbilityObject = {
               "value": 1
             }
           ]
-        },
-        {
-          "name": "Battle Event Construction",
-          "ID": 20023,
-          "team": "Neutral Team",
-          "eventType": "Entity Selection",
-          "abilityList": null,
-          "overridesArray": [
-            {
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
-              "value": 100
-            }
-          ],
-          "hardLevelEvent": true
         }
       ],
       "references": []

@@ -381,10 +381,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__435779874\">Monster_W2_LycanKing_RefreshEnergyBar</a>",
       "stackType": "Replace",
-      "latentQueue": [
-        "MDF_BloodRageCountRemain",
-        "MDF_BloodRageCountBefore"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

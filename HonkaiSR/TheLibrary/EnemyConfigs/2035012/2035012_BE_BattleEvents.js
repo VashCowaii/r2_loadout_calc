@@ -10,6 +10,20 @@ const configAbility = {
   "parse": [
     {
       "name": "Battle Event Construction",
+      "ID": 20023,
+      "team": "Neutral Team",
+      "eventType": "Entity Selection",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    },
+    {
+      "name": "Battle Event Construction",
       "ID": 20021,
       "team": "Enemy Team",
       "eventType": "Assist",
@@ -34,20 +48,6 @@ const configAbility = {
           "value": 1
         }
       ]
-    },
-    {
-      "name": "Battle Event Construction",
-      "ID": 20023,
-      "team": "Neutral Team",
-      "eventType": "Entity Selection",
-      "abilityList": null,
-      "overridesArray": [
-        {
-          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
-          "value": 100
-        }
-      ],
-      "hardLevelEvent": true
     }
   ],
   "references": []

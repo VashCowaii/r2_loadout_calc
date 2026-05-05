@@ -3,283 +3,16 @@ const compositeAbilityObject = {
   "fullCharacterName": 3002020,
   "trimCharacterName": 3002020,
   "abilityList": [
+    "3002020_Monster_W1_Mecha01_02_PassiveAbility02",
+    "3002020_Monster_W1_Mecha01_02_Ability03_Death",
     "3002020_Monster_W1_Mecha01_02_Ability03_Insert_Part01",
     "3002020_Monster_W1_Mecha01_02_Ability02_Insert_Part01",
     "3002020_Monster_W1_Mecha01_02_Ability01_Insert_Part01",
     "3002020_Monster_W1_Mecha01_02_Ability04_Part02",
     "3002020_Monster_W1_Mecha01_02_Ability04_Part01",
-    "3002020_Monster_W1_Mecha01_02_Ability03_Death",
-    "3002020_Monster_W1_Mecha01_02_PassiveAbility02",
     "3002020_Modifiers"
   ],
   "abilityObject": {
-    "3002020_Monster_W1_Mecha01_02_Ability03_Insert_Part01": {
-      "fileName": "3002020_Monster_W1_Mecha01_02_Ability03_Insert_Part01",
-      "skillTrigger": "Skill03",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Animation Event",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "state": "Skill02",
-          "passed": [
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-590056738\">W1_Mecha01_02_BattleScore1</a>"
-                }
-              ]
-            },
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "Skill Points Modification",
-                  "adjustmentValue": {
-                    "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                    "displayLines": "{[Skill03[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[0]]}"
-                    ]
-                  },
-                  "adjustmentType": "+"
-                },
-                {
-                  "name": "Update Energy",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Player Team(Exclude Memosprites)v2}}"
-                  },
-                  "value": {
-                    "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                    "displayLines": "{[Skill03[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[1]]}"
-                    ]
-                  },
-                  "isFixed": "* ERR"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "3002020_Monster_W1_Mecha01_02_Ability02_Insert_Part01": {
-      "fileName": "3002020_Monster_W1_Mecha01_02_Ability02_Insert_Part01",
-      "skillTrigger": "Skill02",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Animation Event",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "state": "Skill02",
-          "passed": [
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "Update Energy",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Player Team(Exclude Memosprites)v2}}"
-                  },
-                  "value": {
-                    "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                    "displayLines": "{[Skill02[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[0]]}"
-                    ]
-                  },
-                  "isFixed": "* ERR"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "3002020_Monster_W1_Mecha01_02_Ability01_Insert_Part01": {
-      "fileName": "3002020_Monster_W1_Mecha01_02_Ability01_Insert_Part01",
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Animation Event",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "state": "Skill02",
-          "passed": [
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "Skill Points Modification",
-                  "adjustmentValue": {
-                    "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                    "displayLines": "{[Skill01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[0]]}"
-                    ]
-                  },
-                  "adjustmentType": "+"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "3002020_Monster_W1_Mecha01_02_Ability04_Part02": {
-      "fileName": "3002020_Monster_W1_Mecha01_02_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "3002020_Monster_W1_Mecha01_02_Ability04_Part01": {
-      "fileName": "3002020_Monster_W1_Mecha01_02_Ability04_Part01",
-      "childAbilityList": [
-        "3002020_Monster_W1_Mecha01_02_Ability04_Camera",
-        "3002020_Monster_W1_Mecha01_02_Ability04_Part01",
-        "3002020_Monster_W1_Mecha01_02_Ability04_Part02"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W1_Mecha01_02_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "3002020_Monster_W1_Mecha01_02_Ability03_Death": {
-      "fileName": "3002020_Monster_W1_Mecha01_02_Ability03_Death",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
     "3002020_Monster_W1_Mecha01_02_PassiveAbility02": {
       "fileName": "3002020_Monster_W1_Mecha01_02_PassiveAbility02",
       "skillTrigger": "PassiveSkill02",
@@ -758,6 +491,273 @@ const compositeAbilityObject = {
           ]
         }
       ]
+    },
+    "3002020_Monster_W1_Mecha01_02_Ability03_Death": {
+      "fileName": "3002020_Monster_W1_Mecha01_02_Ability03_Death",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "3002020_Monster_W1_Mecha01_02_Ability03_Insert_Part01": {
+      "fileName": "3002020_Monster_W1_Mecha01_02_Ability03_Insert_Part01",
+      "skillTrigger": "Skill03",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Animation Event",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "state": "Skill02",
+          "passed": [
+            {
+              "name": "Animation Task"
+            },
+            {
+              "name": "Animation Task",
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-590056738\">W1_Mecha01_02_BattleScore1</a>"
+                }
+              ]
+            },
+            {
+              "name": "Animation Task"
+            },
+            {
+              "name": "Animation Task",
+              "passed": [
+                {
+                  "name": "Skill Points Modification",
+                  "adjustmentValue": {
+                    "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                    "displayLines": "{[Skill03[0]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill03[0]]}"
+                    ]
+                  },
+                  "adjustmentType": "+"
+                },
+                {
+                  "name": "Update Energy",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Player Team(Exclude Memosprites)v2}}"
+                  },
+                  "value": {
+                    "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
+                    "displayLines": "{[Skill03[1]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill03[1]]}"
+                    ]
+                  },
+                  "isFixed": "* ERR"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "3002020_Monster_W1_Mecha01_02_Ability02_Insert_Part01": {
+      "fileName": "3002020_Monster_W1_Mecha01_02_Ability02_Insert_Part01",
+      "skillTrigger": "Skill02",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Animation Event",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "state": "Skill02",
+          "passed": [
+            {
+              "name": "Animation Task"
+            },
+            {
+              "name": "Animation Task"
+            },
+            {
+              "name": "Animation Task"
+            },
+            {
+              "name": "Animation Task",
+              "passed": [
+                {
+                  "name": "Update Energy",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Player Team(Exclude Memosprites)v2}}"
+                  },
+                  "value": {
+                    "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                    "displayLines": "{[Skill02[0]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill02[0]]}"
+                    ]
+                  },
+                  "isFixed": "* ERR"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "3002020_Monster_W1_Mecha01_02_Ability01_Insert_Part01": {
+      "fileName": "3002020_Monster_W1_Mecha01_02_Ability01_Insert_Part01",
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Animation Event",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "state": "Skill02",
+          "passed": [
+            {
+              "name": "Animation Task"
+            },
+            {
+              "name": "Animation Task"
+            },
+            {
+              "name": "Animation Task"
+            },
+            {
+              "name": "Animation Task",
+              "passed": [
+                {
+                  "name": "Skill Points Modification",
+                  "adjustmentValue": {
+                    "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                    "displayLines": "{[Skill01[0]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill01[0]]}"
+                    ]
+                  },
+                  "adjustmentType": "+"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "3002020_Monster_W1_Mecha01_02_Ability04_Part02": {
+      "fileName": "3002020_Monster_W1_Mecha01_02_Ability04_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+              "displayLines": "{[Skill04[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "3002020_Monster_W1_Mecha01_02_Ability04_Part01": {
+      "fileName": "3002020_Monster_W1_Mecha01_02_Ability04_Part01",
+      "childAbilityList": [
+        "3002020_Monster_W1_Mecha01_02_Ability04_Camera",
+        "3002020_Monster_W1_Mecha01_02_Ability04_Part01",
+        "3002020_Monster_W1_Mecha01_02_Ability04_Part02"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W1_Mecha01_02_Ability04_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
     },
     "3002020_Modifiers": {
       "fileName": "3002020_Modifiers",

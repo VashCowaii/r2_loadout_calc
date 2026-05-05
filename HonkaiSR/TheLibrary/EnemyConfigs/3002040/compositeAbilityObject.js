@@ -3,16 +3,58 @@ const compositeAbilityObject = {
   "fullCharacterName": 3002040,
   "trimCharacterName": 3002040,
   "abilityList": [
+    "3002040_Monster_W3_Clock_PassiveAbilityInitiate",
     "3002040_Monster_W3_Clock_Ability03_Part02",
     "3002040_Monster_W3_Clock_Ability03_Part01",
     "3002040_Monster_W3_Clock_Ability02_Part02",
     "3002040_Monster_W3_Clock_Ability02_Part01",
     "3002040_Monster_W3_Clock_Ability01_Part02",
     "3002040_Monster_W3_Clock_Ability01_Part01",
-    "3002040_Monster_W3_Clock_PassiveAbilityInitiate",
     "3002040_Modifiers"
   ],
   "abilityObject": {
+    "3002040_Monster_W3_Clock_PassiveAbilityInitiate": {
+      "fileName": "3002040_Monster_W3_Clock_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1952577261\">Enemy_W3_Clock_RemoveOneMore</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1206431544\">Enemy_W3_Clock_WatchHandController</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1206431544\">Enemy_W3_Clock_WatchHandController</a>",
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]"
+            }
+          ]
+        }
+      ]
+    },
     "3002040_Monster_W3_Clock_Ability03_Part02": {
       "fileName": "3002040_Monster_W3_Clock_Ability03_Part02",
       "abilityType": null,
@@ -257,48 +299,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
-    },
-    "3002040_Monster_W3_Clock_PassiveAbilityInitiate": {
-      "fileName": "3002040_Monster_W3_Clock_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1952577261\">Enemy_W3_Clock_RemoveOneMore</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1206431544\">Enemy_W3_Clock_WatchHandController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1206431544\">Enemy_W3_Clock_WatchHandController</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]"
-            }
-          ]
-        }
-      ]
     },
     "3002040_Modifiers": {
       "fileName": "3002040_Modifiers",

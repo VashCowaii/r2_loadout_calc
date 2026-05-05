@@ -63,10 +63,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-685472168\">MModifier_W3_Theater_IF_UltraDamageReduce_TriggerFlag</a>",
-      "latentQueue": [
-        "AIFlag"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-685472168\">MModifier_W3_Theater_IF_UltraDamageReduce_TriggerFlag</a>"
     },
     {
       "name": "Modifier Construction",
@@ -149,12 +146,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__890205763\">Enemy_W3_Theater_IF_BattleEvent</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_BEBreakDamageReduce"
-      ],
-      "latentQueue": [
-        "BreakEndFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -481,18 +472,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__168509453\">Enemy_W3_Theater_IF_DuringChangePhase</a>",
-      "latentQueue": [
-        "InsertCheck"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__168509453\">Enemy_W3_Theater_IF_DuringChangePhase</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-831498858\">MModifier_Monster_W3_Theater_IF_Part2</a>",
-      "latentQueue": [
-        "BreakEndFlag",
-        "InsertCheck"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-831498858\">MModifier_Monster_W3_Theater_IF_Part2</a>"
     },
     {
       "name": "Modifier Construction",
@@ -506,9 +490,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-396183840\">Enemy_W3_Dinosaur_02_IF_StanceBreakRatioUp</a>[<span class=\"descriptionNumberColor\">Weakness Break Efficiency Boost</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "Weakness Break Efficiency Boost",
@@ -750,12 +731,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1242309858\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Homework In-Class</span>]",
       "modifierFlags": [],
-      "stackData": [
-        "MDF_AllDamageReduce"
-      ],
-      "latentQueue": [
-        "BreakEndFlag"
-      ],
       "description": "When Blaznana Monkey Trick is in the \"Steadfast Safeguard\" state, reduces this unit's DMG received by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
       "type": "Buff",
       "effectName": "Homework In-Class",
@@ -1162,14 +1137,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1013818127\">MModifier_Monster_W3_Theater_IF_HourglassCharge</a>[<span class=\"descriptionNumberColor\">Regular Examination</span>]",
-      "stackData": [
-        "MDF_DamageStanceValue_Dinosaur",
-        "MDF_DamageStanceValue_TV",
-        "MDF_DamageStanceValue_Mecha",
-        "MDF_DamageStanceValue_Clock",
-        "MDF_DamageStanceValue_2",
-        "MDF_DamageStanceValue_All"
-      ],
       "description": "When enemy units in the \"Classroom Channel\" state are switched to \"Off-Class Channel\" via either Breaking their Weaknesses or accumulating the tally, reduces the Toughness of \"Blaznana Monkey Trick\". When all enemy units are Weakness Broken, attacking any enemy units can reduce the Toughness of \"Blaznana Monkey Trick\" by a minor amount. When \"Blaznana Monkey Trick\" is Weakness Broken, all enemy targets will be Broken, and the \"Blaznana Monkey Trick\" will enter the \"Safeguard Breach\" state.",
       "type": "Other",
       "statusName": "Regular Examination",
@@ -3035,10 +3002,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2042117256\">MModifier_Monster_W3_Theater_IF_Side_Negative_Count</a>",
-      "latentQueue": [
-        "BreakEndFlag",
-        "InsertCheck"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -3118,11 +3081,11 @@ const configAbility = {
                           "name": "Define Custom Variable",
                           "variableName": "MDF_Negative_Count_Max",
                           "value": {
-                            "operator": "Variables[0] (Negative_Count) || RETURN",
-                            "displayLines": "Negative_Count",
+                            "operator": "Variables[0] ([object Object]) || RETURN",
+                            "displayLines": "[object Object]",
                             "constants": [],
                             "variables": [
-                              "Negative_Count"
+                              {}
                             ]
                           }
                         }
@@ -3145,11 +3108,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_Negative_Count_Max",
                               "value": {
-                                "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
-                                "displayLines": "MDF_Negative_Count_Max",
+                                "operator": "Variables[0] (Negative_Count) || RETURN",
+                                "displayLines": "Negative_Count",
                                 "constants": [],
                                 "variables": [
-                                  "MDF_Negative_Count_Max"
+                                  "Negative_Count"
                                 ]
                               }
                             }
@@ -3191,11 +3154,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (BreakEndFlag) || RETURN",
-                "displayLines": "BreakEndFlag",
+                "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
+                "displayLines": "MDF_Negative_Count_Max",
                 "constants": [],
                 "variables": [
-                  "BreakEndFlag"
+                  "MDF_Negative_Count_Max"
                 ]
               },
               "assignState": "True",
@@ -3222,11 +3185,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (BreakEndFlag) || RETURN",
-                "displayLines": "BreakEndFlag",
+                "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
+                "displayLines": "MDF_Negative_Count_Max",
                 "constants": [],
                 "variables": [
-                  "BreakEndFlag"
+                  "MDF_Negative_Count_Max"
                 ]
               },
               "assignState": "False",
@@ -3311,11 +3274,11 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (BreakEndFlag) || RETURN",
-                    "displayLines": "BreakEndFlag",
+                    "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
+                    "displayLines": "MDF_Negative_Count_Max",
                     "constants": [],
                     "variables": [
-                      "BreakEndFlag"
+                      "MDF_Negative_Count_Max"
                     ]
                   },
                   "assignState": "True",
@@ -3390,11 +3353,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (BreakEndFlag) || RETURN",
-                "displayLines": "BreakEndFlag",
+                "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
+                "displayLines": "MDF_Negative_Count_Max",
                 "constants": [],
                 "variables": [
-                  "BreakEndFlag"
+                  "MDF_Negative_Count_Max"
                 ]
               },
               "assignState": "True",
@@ -3409,11 +3372,11 @@ const configAbility = {
               "scope": "ContextModifier",
               "variableName": "MDF_Negative_Count_Diff",
               "value": {
-                "operator": "Variables[0] (BreakEndFlag) || Variables[1] (MDF_Negative_Count) || SUB || RETURN",
-                "displayLines": "(BreakEndFlag - MDF_Negative_Count)",
+                "operator": "Variables[0] (MDF_Negative_Count_Max) || Variables[1] (MDF_Negative_Count) || SUB || RETURN",
+                "displayLines": "(MDF_Negative_Count_Max - MDF_Negative_Count)",
                 "constants": [],
                 "variables": [
-                  "BreakEndFlag",
+                  "MDF_Negative_Count_Max",
                   "MDF_Negative_Count"
                 ]
               }
