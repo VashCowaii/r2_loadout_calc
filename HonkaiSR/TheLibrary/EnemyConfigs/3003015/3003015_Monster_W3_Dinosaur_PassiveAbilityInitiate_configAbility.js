@@ -1,5 +1,5 @@
 const configAbility = {
-  "fileName": "3003011_Monster_W3_Dinosaur_RLElite_PassiveAbilityInitiate_IF",
+  "fileName": "3003015_Monster_W3_Dinosaur_PassiveAbilityInitiate",
   "abilityType": null,
   "energy": null,
   "toughnessList": null,
@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"-1012164682\">MModifier_Monster_W3_Dinosaur_IF</a>"
+      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -65,34 +65,6 @@ const configAbility = {
     "primaryTarget": "{{Caster}}"
   },
   "references": [
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1012164682\">MModifier_Monster_W3_Dinosaur_IF</a>",
-      "execute": [
-        {
-          "eventTrigger": "When Modifier is Added [Owner]",
-          "execute": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Modifier Was",
-                "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-              },
-              "passed": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-567237122\">MModifier_Monster_W3_Dinosaur_MuteHitFly</a>",

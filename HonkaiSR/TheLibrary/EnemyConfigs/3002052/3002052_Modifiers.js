@@ -247,9 +247,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__945585904\">Monster_W3_Junk_AttackListenerForPuzzle</a>",
-      "latentQueue": [
-        "WeaknessCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

@@ -1,25 +1,9 @@
 const configAbility = {
-  "fileName": "3003010_Monster_W3_Dinosaur_RLElite_PassiveAbilityInitiate",
+  "fileName": "3003017_Monster_W3_Dinosaur_PassiveAbilityInitiate",
   "abilityType": null,
   "energy": null,
   "toughnessList": null,
   "parse": [
-    {
-      "name": "Add Events/Bonuses",
-      "to": {
-        "name": "Target Name",
-        "target": "{{Caster}}"
-      },
-      "modifier": "<a class=\"gModGreen\" id=\"-1600241954\">MModifier_Monster_W3_Dinosaur_RLElite</a>"
-    },
-    {
-      "name": "Add Events/Bonuses",
-      "to": {
-        "name": "Target Name",
-        "target": "{{Caster}}"
-      },
-      "modifier": "<a class=\"gModGreen\" id=\"255894171\">MModifier_Monster_W3_Dinosaur_RLElite_SpeedUpListener</a>"
-    },
     {
       "name": "Add Events/Bonuses",
       "to": {
@@ -50,7 +34,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"-1125933732\">MModifier_Monster_W3_Dinosaur_Break_Listener_RL</a>"
+      "modifier": "<a class=\"gModGreen\" id=\"578972033\">MModifier_Monster_W3_Dinosaur_Break_Listener</a>"
     },
     {
       "name": "Add Events/Bonuses",
@@ -87,10 +71,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteHitFly"
       ]
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1600241954\">MModifier_Monster_W3_Dinosaur_RLElite</a>"
     }
   ]
 }

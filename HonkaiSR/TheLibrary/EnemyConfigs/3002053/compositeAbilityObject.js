@@ -3,210 +3,16 @@ const compositeAbilityObject = {
   "fullCharacterName": 3002053,
   "trimCharacterName": 3002053,
   "abilityList": [
-    "3002053_BattleEventAbility_Monster_W3_Junk_PuzzleAbility",
     "3002053_Monster_W3_Junk_ActivityTelevision",
     "3002053_Monster_W3_Junk_Insert_Part01",
+    "3002053_Monster_W3_Junk_PassiveAbility",
     "3002053_Monster_W3_Junk_Ability02_Part02",
     "3002053_Monster_W3_Junk_Ability02_Part01",
     "3002053_Monster_W3_Junk_Ability01_Part02",
     "3002053_Monster_W3_Junk_Ability01_Part01",
-    "3002053_Monster_W3_Junk_PassiveAbility",
     "3002053_Modifiers"
   ],
   "abilityObject": {
-    "3002053_BattleEventAbility_Monster_W3_Junk_PuzzleAbility": {
-      "fileName": "3002053_BattleEventAbility_Monster_W3_Junk_PuzzleAbility",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "value": "ENEMIES_OBJECT_UNUSED_11",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Trigger 0-Toughness",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-349736416\">Monster_W3_Junk_ExtraWeakness_Imaginary</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Imaginary"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__284863540\">Monster_W3_Junk_ExtraWeakness_Quantum</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Quantum"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__862965545\">Monster_W3_Junk_ExtraWeakness_Wind</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Wind"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-161542417\">Monster_W3_Junk_ExtraWeakness_Thunder</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Thunder"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1631339070\">Monster_W3_Junk_ExtraWeakness_Ice</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Ice"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__325665547\">Monster_W3_Junk_ExtraWeakness_Fire</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Fire"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2117131994\">Monster_W3_Junk_ExtraWeakness_Physical</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Physical"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "3002053_Monster_W3_Junk_ActivityTelevision": {
       "fileName": "3002053_Monster_W3_Junk_ActivityTelevision",
       "skillTrigger": "SkillP01",
@@ -310,146 +116,6 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3002053_Monster_W3_Junk_Ability02_Part02": {
-      "fileName": "3002053_Monster_W3_Junk_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1796573830\">Monster_W3_Junk_AttackAddRatio1</a>[<span class=\"descriptionNumberColor\">The Can's Battle Pose</span>]",
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            }
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3002053_Monster_W3_Junk_Ability02_Part01": {
-      "fileName": "3002053_Monster_W3_Junk_Ability02_Part01",
-      "childAbilityList": [
-        "3002053_Monster_W3_Junk_Ability02_Part01",
-        "3002053_Monster_W3_Junk_Ability02_Part02",
-        "3002053_Monster_W3_Junk_Ability02_Camera"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_Junk_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3002053_Monster_W3_Junk_Ability01_Part02": {
-      "fileName": "3002053_Monster_W3_Junk_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "3002053_Monster_W3_Junk_Ability01_Part01": {
-      "fileName": "3002053_Monster_W3_Junk_Ability01_Part01",
-      "childAbilityList": [
-        "3002053_Monster_W3_Junk_Ability01_Part01",
-        "3002053_Monster_W3_Junk_Ability01_Part02",
-        "3002053_Monster_W3_Junk_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_Junk_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
       },
       "references": []
     },
@@ -1012,6 +678,146 @@ const compositeAbilityObject = {
           ]
         }
       ]
+    },
+    "3002053_Monster_W3_Junk_Ability02_Part02": {
+      "fileName": "3002053_Monster_W3_Junk_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1796573830\">Monster_W3_Junk_AttackAddRatio1</a>[<span class=\"descriptionNumberColor\">The Can's Battle Pose</span>]",
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            }
+          }
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3002053_Monster_W3_Junk_Ability02_Part01": {
+      "fileName": "3002053_Monster_W3_Junk_Ability02_Part01",
+      "childAbilityList": [
+        "3002053_Monster_W3_Junk_Ability02_Part01",
+        "3002053_Monster_W3_Junk_Ability02_Part02",
+        "3002053_Monster_W3_Junk_Ability02_Camera"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_Junk_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3002053_Monster_W3_Junk_Ability01_Part02": {
+      "fileName": "3002053_Monster_W3_Junk_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "3002053_Monster_W3_Junk_Ability01_Part01": {
+      "fileName": "3002053_Monster_W3_Junk_Ability01_Part01",
+      "childAbilityList": [
+        "3002053_Monster_W3_Junk_Ability01_Part01",
+        "3002053_Monster_W3_Junk_Ability01_Part02",
+        "3002053_Monster_W3_Junk_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_Junk_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
     },
     "3002053_Modifiers": {
       "fileName": "3002053_Modifiers",
