@@ -351,11 +351,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1061433740\">Monster_W4_Pollux_StoryMode_SpecailAbility05</a>",
-      "latentQueue": [
-        "AIFlag",
-        "StoryMode",
-        "_StorySkill05"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -545,11 +540,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-289587260\">Monster_W4_Pollux_StoryMode_LockHP</a>",
-      "latentQueue": [
-        "_StorySimulationSpeed",
-        "AIFlag",
-        "StoryMode"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -645,9 +635,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-720682465\">Monster_W4_Pollux_PartController_LockHP</a>",
-      "latentQueue": [
-        "_WorldLevel"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -2381,11 +2368,11 @@ const configAbility = {
       ],
       "stackData": [
         "MDF_ShowValue1",
-        "MDF_SpeedUpRatio"
+        "MDF_SpeedUpRatio",
+        "MDF_DamageUpRatio"
       ],
       "latentQueue": [
-        "AIFlag",
-        "_WorldLevel"
+        "AIFlag"
       ],
       "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Attacks against \"Pollux\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
       "type": "Other",
@@ -2829,17 +2816,15 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2086497725\">Monster_W4_Pollux_EnergyBar</a>",
       "latentQueue": [
-        "AIFlag",
-        "StoryMode",
-        "_StorySkill05"
+        "AIFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-977406110\">Monster_W4_Pollux_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]",
       "latentQueue": [
-        "_WorldLevel",
-        "AIFlag"
+        "AIFlag",
+        "_WorldLevel"
       ],
       "description": "When ally targets' HP reduces, accumulates \"Desperate Bubble.\" When \"Desperate Bubble\" reaches the limit, this unit action advances and enters \"Fragrance of Death\" state in the next turn.",
       "type": "Other",
@@ -2855,7 +2840,6 @@ const configAbility = {
       "latentQueue": [
         "StoryMode",
         "_StorySetSpeed",
-        "_StorySimulationSpeed",
         "IsNeedFade",
         "AIFlag"
       ],

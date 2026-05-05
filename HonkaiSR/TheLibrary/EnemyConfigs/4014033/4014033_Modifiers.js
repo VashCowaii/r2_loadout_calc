@@ -743,10 +743,6 @@ const configAbility = {
         "_HpLimitRatio",
         "_FatigueRatio"
       ],
-      "latentQueue": [
-        "AIFlag",
-        "_WorldLevel"
-      ],
       "description": "When this target deals DMG to enemy targets, decreases DMG received by enemy targets by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Restore HP to an ally target until it reaches <span class=\"descriptionNumberColor\">MDF_ShowValue2</span> to dispel this effect.",
       "type": "Other",
       "effectName": "DMG Reduction",
@@ -2376,10 +2372,6 @@ const configAbility = {
         "MDF_ShowValue1",
         "MDF_SpeedUpRatio"
       ],
-      "latentQueue": [
-        "AIFlag",
-        "_WorldLevel"
-      ],
       "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Attacks against \"Pollux\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
       "type": "Other",
       "effectName": "Enhance",
@@ -2846,9 +2838,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__599310144\">Monster_W4_Pollux_FX_Ground</a>",
       "latentQueue": [
-        "StoryMode",
-        "_StorySetSpeed",
-        "_StorySimulationSpeed",
         "IsNeedFade",
         "AIFlag"
       ],

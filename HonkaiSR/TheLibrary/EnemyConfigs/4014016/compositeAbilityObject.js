@@ -3,12 +3,10 @@ const compositeAbilityObject = {
   "fullCharacterName": 4014016,
   "trimCharacterName": 4014016,
   "abilityList": [
-    "4014016_Monster_W4_Nikadory_Ability06_B_Part02",
-    "4014016_Monster_W4_Nikadory_Ability06_B_Part01",
     "4014016_Monster_W4_Nikadory_SpecialWin_Insert",
-    "4014016_Monster_W4_Nikadory_PassiveAbility_RLBoss_Insert",
     "4014016_Monster_W4_Nikadory_PassiveAbilityWithHearse_Insert",
     "4014016_Monster_W4_Nikadory_PassiveAbility_Insert",
+    "4014016_Monster_W4_Nikadory_Passive01",
     "4014016_Monster_W4_Nikadory_Ability14_Part02",
     "4014016_Monster_W4_Nikadory_Ability14_Part01",
     "4014016_Monster_W4_Nikadory_Ability13_Part02",
@@ -21,8 +19,8 @@ const compositeAbilityObject = {
     "4014016_Monster_W4_Nikadory_Ability10_Part01",
     "4014016_Monster_W4_Nikadory_Ability07_Part02",
     "4014016_Monster_W4_Nikadory_Ability07_Part01",
-    "4014016_Monster_W4_Nikadory_Ability06_Part02",
-    "4014016_Monster_W4_Nikadory_Ability06_Part01",
+    "4014016_Monster_W4_Nikadory_Ability06_B_Part02",
+    "4014016_Monster_W4_Nikadory_Ability06_B_Part01",
     "4014016_Monster_W4_Nikadory_Ability05_Part02",
     "4014016_Monster_W4_Nikadory_Ability05_Part01",
     "4014016_Monster_W4_Nikadory_Ability04_Part02",
@@ -33,591 +31,17 @@ const compositeAbilityObject = {
     "4014016_Monster_W4_Nikadory_Ability02_Part01",
     "4014016_Monster_W4_Nikadory_Ability01_Part02",
     "4014016_Monster_W4_Nikadory_Ability01_Part01",
-    "4014016_Monster_W4_Nikadory_Passive01",
     "4014016_Monster_W4_Nikadory_PassiveAbility_BGM",
     "4014016_Modifiers",
     "4014016_BE_BattleEvents"
   ],
   "abilityObject": {
-    "4014016_Monster_W4_Nikadory_Ability06_B_Part02": {
-      "fileName": "4014016_Monster_W4_Nikadory_Ability06_B_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_IsStoryTri",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1329925524\">Modifier_Monster_W4_Nikadory_B_HardLockHp</a>"
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Skill06Count",
-          "value": 0
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Skill06Count",
-              "value": {
-                "operator": "Variables[0] (Skill06Count) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(Skill06Count + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Skill06Count"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Skill06Damage",
-          "value": {
-            "operator": "Variables[0] ({[Skill06[0]]}) || Variables[1] (Skill06Count) || DIV || RETURN",
-            "displayLines": "({[Skill06[0]]} / Skill06Count)",
-            "constants": [],
-            "variables": [
-              "{[Skill06[0]]}",
-              "Skill06Count"
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_IsStoryTri",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Show BattleEvent Button",
-              "show": true
-            },
-            {
-              "name": "WAIT FOR",
-              "condition": {
-                "name": "Has Queued Ult"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Imaginary",
-                "Damage": {
-                  "operator": "Variables[0] (Skill06Damage) || RETURN",
-                  "displayLines": "Skill06Damage",
-                  "constants": [],
-                  "variables": [
-                    "Skill06Damage"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "EnergyGainPercent": "100%"
-              }
-            },
-            "Trigger: Attack End"
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1011587031\">Monster_W4_Nikadory_Ability05Split</a>[<span class=\"descriptionNumberColor\">Forthcoming Strife</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Currency Wars Full OffFieldList}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2087329841\">Monster_W4_Nikadory_Charge_UnselectableCheck</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1664389231\">Monster_W4_Nikadory_BattleScore1Count</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1511774920\">Monster_W4_Nikadory_EnhanceShield</a>[<span class=\"descriptionNumberColor\">Titanic Corpus</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1471859507\">Monster_W4_Nikadory_Charge</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1307575812\">Monster_W4_Nikadory_ChargeEffect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1849683412\">Monster_W4_Nikadory_WeaponEffect</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_IsStoryTri",
-            "compareType": "=",
-            "value2": 1
-          },
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-                "invertCondition": true
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-                  "stackLimit": {
-                    "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                    "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill01[0]]}",
-                      "MDF_BraveLayer"
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_DamageResistance": {
-                      "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[4]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[4]]}"
-                      ]
-                    },
-                    "MDF_CrackedEffect": {
-                      "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[1]]}"
-                      ]
-                    },
-                    "MDF_CrackedDamage": {
-                      "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[2]]}"
-                      ]
-                    }
-                  },
-                  "addStacksPerTrigger": {
-                    "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                    "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill01[0]]}",
-                      "MDF_BraveLayer"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "whenAdded": [
-        {
-          "name": "Preload Battle Event(s)",
-          "eventID": [
-            60025
-          ]
-        },
-        {
-          "name": "Add Battle Event",
-          "teamName": "Player Team",
-          "eventID": 60025,
-          "variables": null,
-          "whenCreated": [
-            "Show BattleEvent Button"
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1174103224\">Modifier_Monster_W4_Nikadory_B_HardLockHp_BFAbility02</a>",
-          "valuePerStack": {
-            "MDF_LockHp": {
-              "operator": "Variables[0] (MIN) || Constants[0] (0.9) || Variables[1] ({[Skill06[1]]}) || Constants[1] (1.2) || MUL || PARAM_2 || FUNCTION || RETURN",
-              "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(0.9, ({[Skill06[1]]} * 1.2))",
-              "constants": [
-                0.9,
-                1.2
-              ],
-              "variables": [
-                "MIN",
-                "{[Skill06[1]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1329925524\">Modifier_Monster_W4_Nikadory_B_HardLockHp</a>",
-          "valuePerStack": {
-            "MDF_LockHp": {
-              "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-              "displayLines": "{[Skill06[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[1]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4014016_Monster_W4_Nikadory_Ability06_B_Part01": {
-      "fileName": "4014016_Monster_W4_Nikadory_Ability06_B_Part01",
-      "childAbilityList": [
-        "4014016_Monster_W4_Nikadory_Ability06_Camera",
-        "4014016_Monster_W4_Nikadory_Ability06_B_Part01",
-        "4014016_Monster_W4_Nikadory_Ability06_B_Part02"
-      ],
-      "skillTrigger": "Skill06",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Nikadory_Ability06_B_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_IsStoryTri",
-            "compareType": "=",
-            "value2": 1
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
     "4014016_Monster_W4_Nikadory_SpecialWin_Insert": {
       "fileName": "4014016_Monster_W4_Nikadory_SpecialWin_Insert",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014016_Monster_W4_Nikadory_PassiveAbility_RLBoss_Insert": {
-      "fileName": "4014016_Monster_W4_Nikadory_PassiveAbility_RLBoss_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1471859507\">Monster_W4_Nikadory_Charge</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1307575812\">Monster_W4_Nikadory_ChargeEffect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1849683412\">Monster_W4_Nikadory_WeaponEffect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"261985089\">Monster_W4_Nikadory_Energy</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Currency Wars Full OffFieldList}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2087329841\">Monster_W4_Nikadory_Charge_UnselectableCheck</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1011587031\">Monster_W4_Nikadory_Ability05Split</a>[<span class=\"descriptionNumberColor\">Forthcoming Strife</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1664389231\">Monster_W4_Nikadory_BattleScore1Count</a>"
-        },
-        "Deleted bullshit",
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Create Enemies",
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                "displayLines": "SummonList_ADF_1",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_1"
-                ]
-              },
-              "locationType": "BeforeCaster"
-            }
-          ]
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 0
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 401401000,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": null
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"203278408\">Monster_W4_Nikadory_Main2_LockHP</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"810487295\">Monster_W4_Nikadory_Part2Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-208688438\">Monster_W4_Nikadory_Endurance</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"810487295\">Monster_W4_Nikadory_Part2Effect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"191148502\">Monster_W4_Hearse_LockHPNikadory</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1258691339\">Monster_W4_Nikadory_WithHearse</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "InsertCheck",
-          "value": 1
-        }
-      ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
@@ -1031,6 +455,460 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014016_Monster_W4_Nikadory_Passive01": {
+      "fileName": "4014016_Monster_W4_Nikadory_Passive01",
+      "skillTrigger": "Passive01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1727885089\">W4_Nikadory_BattleScore1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1711107470\">W4_Nikadory_BattleScore2</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Enemy Team All(with Unselectable)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": ">=",
+            "value2": 1,
+            "conditions": {
+              "name": "Enemy ID",
+              "ID": 401402,
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "characterName": null,
+              "isCompareUniqueID": true
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"810487295\">Monster_W4_Nikadory_Part2Effect</a>"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 4014016,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Victor, Acropolis, and Lord of Strife",
+                "invertCondition": true
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"191148502\">Monster_W4_Hearse_LockHPNikadory</a>"
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1258691339\">Monster_W4_Nikadory_WithHearse</a>"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 401402020,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Nikador - The Giver: Self}}"
+                },
+                "characterName": null
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"857944661\">Monster_W4_Nikadory_Main3</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Nikador - The Giver: Self}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1296909781\">Monster_W4_Hearse_Effect</a>"
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "Boss Bar Display",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "display": true
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 4014011,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Savage God, Mad King, Incarnation of Strife",
+                "isBaseCompare": true
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": 401401100,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": null,
+                    "invertCondition": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1803940540\">Monster_W4_Nikadory_Main</a>"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": 4014014,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": "Savage God, Mad King, Incarnation of Strife",
+                    "isBaseCompare": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"810487295\">Monster_W4_Nikadory_Part2Effect</a>"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Enemy ID",
+                        "ID": 4014015,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "characterName": "Savage God, Mad King, Incarnation of Strife (Complete)",
+                        "isBaseCompare": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"2056345398\">Monster_W4_Nikadory_PartController_RLBoss</a>"
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-994497740\">Monster_W4_Nikadory_RLBoss_Passive</a>",
+                          "valuePerStack": {
+                            "MDF_DamageUpRatio_PerLayer": {
+                              "operator": "Variables[0] (UnusedUnderThisBase_307) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_307",
+                              "constants": [],
+                              "variables": [
+                                "UnusedUnderThisBase_307"
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-849627116\">Monster_W4_Nikadory_PartController</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 401401000,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": null
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"841167042\">Monster_W4_Nikadory_Main2</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"965106610\">Monster_W4_Nikadory_Passive</a>",
+          "valuePerStack": {
+            "MDF_DamageResistance_PerLayer": {
+              "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[4]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[4]]}"
+              ]
+            },
+            "MDF_ActionDelayRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[1]]}"
+              ]
+            },
+            "MDF_CrackedDamage": {
+              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[2]]}"
+              ]
+            },
+            "MDF_CrackedDamageAfter": {
+              "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[5]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[5]]}"
+              ]
+            },
+            "MDF_SPAddedRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[3]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[3]]}"
+              ]
+            },
+            "MDF_EnhanceSPAddedRatio": {
+              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
+              "displayLines": "{[Skill05[3]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[3]]}"
+              ]
+            },
+            "MDF_MaxLayer": {
+              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[0]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>",
+          "valuePerStack": {
+            "MDF_MaxLayer": {
+              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[0]]}"
+              ]
+            },
+            "MDF_CrackedEffect": {
+              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[1]]}"
+              ]
+            },
+            "MDF_CrackedDamage": {
+              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[2]]}"
+              ]
+            },
+            "MDF_DamageResistance": {
+              "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[4]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[4]]}"
+              ]
+            },
+            "MDF_CrackedDamageAfter": {
+              "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[5]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[5]]}"
+              ]
+            },
+            "MDF_ModifySP": {
+              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[3]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[3]]}"
+              ]
+            }
+          }
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 4014014,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Savage God, Mad King, Incarnation of Strife",
+                "isBaseCompare": true
+              },
+              {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Enemy Team All(with Unselectable)}}"
+                },
+                "value1": "TeamCharacterCount",
+                "compareType": ">=",
+                "value2": 1,
+                "conditions": {
+                  "name": "Enemy ID",
+                  "ID": 401402,
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "characterName": null,
+                  "isCompareUniqueID": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -2902,41 +2780,37 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4014016_Monster_W4_Nikadory_Ability06_Part02": {
-      "fileName": "4014016_Monster_W4_Nikadory_Ability06_Part02",
+    "4014016_Monster_W4_Nikadory_Ability06_B_Part02": {
+      "fileName": "4014016_Monster_W4_Nikadory_Ability06_B_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
+        "Ability Start",
         {
           "name": "IF",
           "conditions": {
             "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Enemy Team All(with Unselectable)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">=",
-            "value2": 1,
-            "conditions": {
-              "name": "Enemy ID",
-              "ID": 401402,
-              "target": {
+            "value1": "_IsStoryTri",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
                 "name": "Target Name",
-                "target": "{{Parameter Target}}"
+                "target": "{{Caster's Summoner}}"
               },
-              "characterName": null,
-              "isCompareUniqueID": true
+              "modifier": "<a class=\"gModGreen\" id=\"1329925524\">Modifier_Monster_W4_Nikadory_B_HardLockHp</a>"
             }
-          }
+          ]
         },
         {
           "name": "Define Custom Variable",
           "variableName": "Skill06Count",
           "value": 0
         },
-        "Ability Start",
         {
           "name": "Find New Target",
           "from": {
@@ -2961,68 +2835,63 @@ const compositeAbilityObject = {
           ]
         },
         {
+          "name": "Define Custom Variable",
+          "variableName": "Skill06Damage",
+          "value": {
+            "operator": "Variables[0] ({[Skill06[0]]}) || Variables[1] (Skill06Count) || DIV || RETURN",
+            "displayLines": "({[Skill06[0]]} / Skill06Count)",
+            "constants": [],
+            "variables": [
+              "{[Skill06[0]]}",
+              "Skill06Count"
+            ]
+          }
+        },
+        {
           "name": "IF",
           "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1947729446\">Enemy_W4_Nikadory_FT_SpecialAction</a>"
+            "name": "Compare: Variable",
+            "value1": "_IsStoryTri",
+            "compareType": "=",
+            "value2": 1
           },
           "passed": [
             {
-              "name": "Define Custom Variable",
-              "variableName": "Skill06Damage",
-              "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_157) || Variables[1] (Skill06Count) || DIV || RETURN",
-                "displayLines": "(UnusedUnderThisBase_157 / Skill06Count)",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_157",
-                  "Skill06Count"
-                ]
+              "name": "Show BattleEvent Button",
+              "show": true
+            },
+            {
+              "name": "WAIT FOR",
+              "condition": {
+                "name": "Has Queued Ult"
               }
             }
           ],
           "failed": [
             {
-              "name": "Define Custom Variable",
-              "variableName": "Skill06Damage",
-              "value": {
-                "operator": "Variables[0] ({[Skill06[0]]}) || Variables[1] (Skill06Count) || DIV || RETURN",
-                "displayLines": "({[Skill06[0]]} / Skill06Count)",
-                "constants": [],
-                "variables": [
-                  "{[Skill06[0]]}",
-                  "Skill06Count"
-                ]
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Imaginary",
+                "Damage": {
+                  "operator": "Variables[0] (Skill06Damage) || RETURN",
+                  "displayLines": "Skill06Damage",
+                  "constants": [],
+                  "variables": [
+                    "Skill06Damage"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "EnergyGainPercent": "100%"
               }
-            }
+            },
+            "Trigger: Attack End"
           ]
         },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] (Skill06Damage) || RETURN",
-              "displayLines": "Skill06Damage",
-              "constants": [],
-              "variables": [
-                "Skill06Damage"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
         {
           "name": "Remove Events/Bonuses",
           "to": {
@@ -3080,72 +2949,6 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1511774920\">Monster_W4_Nikadory_EnhanceShield</a>[<span class=\"descriptionNumberColor\">Titanic Corpus</span>]"
         },
         {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-              "stackLimit": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[0]]}",
-                  "MDF_BraveLayer"
-                ]
-              },
-              "valuePerStack": {
-                "MDF_DamageResistance": {
-                  "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[4]]}"
-                  ]
-                },
-                "MDF_CrackedEffect": {
-                  "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[1]]}"
-                  ]
-                },
-                "MDF_CrackedDamage": {
-                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[2]]}"
-                  ]
-                }
-              },
-              "addStacksPerTrigger": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[0]]}",
-                  "MDF_BraveLayer"
-                ]
-              }
-            }
-          ]
-        },
-        {
           "name": "Remove Events/Bonuses",
           "to": {
             "name": "Target Name",
@@ -3173,35 +2976,152 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Enemy Team All(with Unselectable)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">=",
-            "value2": 1,
-            "conditions": {
-              "name": "Enemy ID",
-              "ID": 401402,
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
+            "value1": "_IsStoryTri",
+            "compareType": "=",
+            "value2": 1
+          },
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
+                "invertCondition": true
               },
-              "characterName": null,
-              "isCompareUniqueID": true
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
+                  "stackLimit": {
+                    "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
+                    "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill01[0]]}",
+                      "MDF_BraveLayer"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_DamageResistance": {
+                      "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
+                      "displayLines": "{[PassiveSkill01[4]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[PassiveSkill01[4]]}"
+                      ]
+                    },
+                    "MDF_CrackedEffect": {
+                      "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+                      "displayLines": "{[PassiveSkill01[1]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[PassiveSkill01[1]]}"
+                      ]
+                    },
+                    "MDF_CrackedDamage": {
+                      "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+                      "displayLines": "{[PassiveSkill01[2]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[PassiveSkill01[2]]}"
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": {
+                    "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
+                    "displayLines": "({[PassiveSkill01[0]]} + MDF_BraveLayer)",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill01[0]]}",
+                      "MDF_BraveLayer"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "whenAdded": [
+        {
+          "name": "Preload Battle Event(s)",
+          "eventID": [
+            60025
+          ]
+        },
+        {
+          "name": "Add Battle Event",
+          "teamName": "Player Team",
+          "eventID": 60025,
+          "variables": null,
+          "whenCreated": [
+            "Show BattleEvent Button"
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Summoner}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1174103224\">Modifier_Monster_W4_Nikadory_B_HardLockHp_BFAbility02</a>",
+          "valuePerStack": {
+            "MDF_LockHp": {
+              "operator": "Variables[0] (MIN) || Constants[0] (0.9) || Variables[1] ({[Skill06[1]]}) || Constants[1] (1.2) || MUL || PARAM_2 || FUNCTION || RETURN",
+              "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(0.9, ({[Skill06[1]]} * 1.2))",
+              "constants": [
+                0.9,
+                1.2
+              ],
+              "variables": [
+                "MIN",
+                "{[Skill06[1]]}"
+              ]
             }
           }
         },
-        "Trigger: Ability End"
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Summoner}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1329925524\">Modifier_Monster_W4_Nikadory_B_HardLockHp</a>",
+          "valuePerStack": {
+            "MDF_LockHp": {
+              "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
+              "displayLines": "{[Skill06[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill06[1]]}"
+              ]
+            }
+          }
+        }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []
     },
-    "4014016_Monster_W4_Nikadory_Ability06_Part01": {
-      "fileName": "4014016_Monster_W4_Nikadory_Ability06_Part01",
-      "abilityType": null,
+    "4014016_Monster_W4_Nikadory_Ability06_B_Part01": {
+      "fileName": "4014016_Monster_W4_Nikadory_Ability06_B_Part01",
+      "childAbilityList": [
+        "4014016_Monster_W4_Nikadory_Ability06_Camera",
+        "4014016_Monster_W4_Nikadory_Ability06_B_Part01",
+        "4014016_Monster_W4_Nikadory_Ability06_B_Part02"
+      ],
+      "skillTrigger": "Skill06",
+      "abilityType": "Skill",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -3211,12 +3131,24 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_W4_Nikadory_Ability06_Part02",
+          "ability": "Monster_W4_Nikadory_Ability06_B_Part02",
           "isTrigger": true
         },
-        "Deleted bullshit"
+        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_IsStoryTri",
+            "compareType": "=",
+            "value2": 1
+          }
+        }
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []
@@ -4790,460 +4722,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "4014016_Monster_W4_Nikadory_Passive01": {
-      "fileName": "4014016_Monster_W4_Nikadory_Passive01",
-      "skillTrigger": "Passive01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1727885089\">W4_Nikadory_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1711107470\">W4_Nikadory_BattleScore2</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Enemy Team All(with Unselectable)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">=",
-            "value2": 1,
-            "conditions": {
-              "name": "Enemy ID",
-              "ID": 401402,
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "characterName": null,
-              "isCompareUniqueID": true
-            }
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"810487295\">Monster_W4_Nikadory_Part2Effect</a>"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": 4014016,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Victor, Acropolis, and Lord of Strife",
-                "invertCondition": true
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"191148502\">Monster_W4_Hearse_LockHPNikadory</a>"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1258691339\">Monster_W4_Nikadory_WithHearse</a>"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": 401402020,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Nikador - The Giver: Self}}"
-                },
-                "characterName": null
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"857944661\">Monster_W4_Nikadory_Main3</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Nikador - The Giver: Self}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1296909781\">Monster_W4_Hearse_Effect</a>"
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "Boss Bar Display",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "display": true
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": 4014011,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Savage God, Mad King, Incarnation of Strife",
-                "isBaseCompare": true
-              },
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": 401401100,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": null,
-                    "invertCondition": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1803940540\">Monster_W4_Nikadory_Main</a>"
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": 4014014,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Savage God, Mad King, Incarnation of Strife",
-                    "isBaseCompare": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"810487295\">Monster_W4_Nikadory_Part2Effect</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": 4014015,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "characterName": "Savage God, Mad King, Incarnation of Strife (Complete)",
-                        "isBaseCompare": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"2056345398\">Monster_W4_Nikadory_PartController_RLBoss</a>"
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-994497740\">Monster_W4_Nikadory_RLBoss_Passive</a>",
-                          "valuePerStack": {
-                            "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_307) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_307",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_307"
-                              ]
-                            }
-                          }
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-849627116\">Monster_W4_Nikadory_PartController</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": 401401000,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": null
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"841167042\">Monster_W4_Nikadory_Main2</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"965106610\">Monster_W4_Nikadory_Passive</a>",
-          "valuePerStack": {
-            "MDF_DamageResistance_PerLayer": {
-              "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[4]]}"
-              ]
-            },
-            "MDF_ActionDelayRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
-            },
-            "MDF_CrackedDamage": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
-            },
-            "MDF_CrackedDamageAfter": {
-              "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[5]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[5]]}"
-              ]
-            },
-            "MDF_SPAddedRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[3]]}"
-              ]
-            },
-            "MDF_EnhanceSPAddedRatio": {
-              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-              "displayLines": "{[Skill05[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[3]]}"
-              ]
-            },
-            "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>",
-          "valuePerStack": {
-            "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
-            },
-            "MDF_CrackedEffect": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
-            },
-            "MDF_CrackedDamage": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
-            },
-            "MDF_DamageResistance": {
-              "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[4]]}"
-              ]
-            },
-            "MDF_CrackedDamageAfter": {
-              "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[5]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[5]]}"
-              ]
-            },
-            "MDF_ModifySP": {
-              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[3]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 4014014,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Savage God, Mad King, Incarnation of Strife",
-                "isBaseCompare": true
-              },
-              {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Enemy Team All(with Unselectable)}}"
-                },
-                "value1": "TeamCharacterCount",
-                "compareType": ">=",
-                "value2": 1,
-                "conditions": {
-                  "name": "Enemy ID",
-                  "ID": 401402,
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "characterName": null,
-                  "isCompareUniqueID": true
-                }
-              }
-            ]
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },

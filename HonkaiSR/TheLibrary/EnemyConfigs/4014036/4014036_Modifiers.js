@@ -188,10 +188,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1061433740\">Monster_W4_Pollux_StoryMode_SpecailAbility05</a>",
-      "latentQueue": [
-        "StoryMode",
-        "_StorySkill05"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -238,10 +234,6 @@ const configAbility = {
         "STAT_DOT"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_DamagePercentage",
-        "MDF_DamageHpAddedRatio"
-      ],
       "description": "Receives DMG at the start of the turn. The higher the target's current HP percentage, the more DMG they receive. This DMG is \"Non-fatal.\"",
       "type": "Debuff",
       "effectName": "DoT",
@@ -377,11 +369,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-289587260\">Monster_W4_Pollux_StoryMode_LockHP</a>",
-      "latentQueue": [
-        "_StorySimulationSpeed",
-        "AIFlag",
-        "StoryMode"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -477,9 +464,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-720682465\">Monster_W4_Pollux_PartController_LockHP</a>",
-      "latentQueue": [
-        "_WorldLevel"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -577,14 +561,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "RemoveWhenCasterUnstage"
-      ],
-      "stackData": [
-        "_HpLimitRatio",
-        "_FatigueRatio"
-      ],
-      "latentQueue": [
-        "AIFlag",
-        "_WorldLevel"
       ],
       "description": "When this target deals DMG to enemy targets, decreases DMG received by enemy targets by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Restore HP to an ally target until it reaches <span class=\"descriptionNumberColor\">MDF_ShowValue2</span> to dispel this effect.",
       "type": "Other",
@@ -2205,14 +2181,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "stackData": [
-        "MDF_ShowValue1",
-        "MDF_SpeedUpRatio"
-      ],
-      "latentQueue": [
-        "AIFlag",
-        "_WorldLevel"
-      ],
       "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Attacks against \"Pollux\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
       "type": "Other",
       "effectName": "Enhance",
@@ -2653,11 +2621,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__2086497725\">Monster_W4_Pollux_EnergyBar</a>",
-      "latentQueue": [
-        "StoryMode",
-        "_StorySkill05"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__2086497725\">Monster_W4_Pollux_EnergyBar</a>"
     },
     {
       "name": "Modifier Construction",
@@ -5080,11 +5044,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1636257193\">Enemy_W4_PolluxPart_IF_MinionsSuperArmorController</a>",
-      "stackData": [
-        "MDF_MinionsSuperArmor_AllDamageReduce",
-        "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
-        "MDF_SetActionDelayValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

@@ -3,23 +3,20 @@ const compositeAbilityObject = {
   "fullCharacterName": 4014033,
   "trimCharacterName": 4014033,
   "abilityList": [
-    "4014033_Monster_W4_Pollux_Ability06_B_Part02",
-    "4014033_Monster_W4_Pollux_Ability06_B_Part01",
-    "4014033_Monster_W4_Pollux_Ability05_B_Part02",
-    "4014033_Monster_W4_Pollux_Ability05_B_Part01",
+    "4014033_Monster_W4_Pollux_SpecailAbility05",
     "4014033_Monster_W4_Pollux_EndInsert_Part02",
     "4014033_Monster_W4_Pollux_EndInsert_Part01",
-    "4014033_Monster_W4_Pollux_SpecailAbility05",
+    "4014033_Monster_W4_Pollux_PassiveAbility_BGM",
     "4014033_Monster_W4_Pollux_Stun_Insert_Camera",
     "4014033_Monster_W4_Pollux_Stun_Insert",
     "4014033_Monster_W4_Pollux_StunRecover_Insert_Camera",
     "4014033_Monster_W4_Pollux_StunRecover_Insert",
     "4014033_Monster_W4_Pollux_PassiveAbility_Insert",
     "4014033_Monster_W4_Pollux_PassiveAbility_Initiate",
-    "4014033_Monster_W4_Pollux_Ability06_Part02",
-    "4014033_Monster_W4_Pollux_Ability06_Part01",
-    "4014033_Monster_W4_Pollux_Ability05_Part02",
-    "4014033_Monster_W4_Pollux_Ability05_Part01",
+    "4014033_Monster_W4_Pollux_Ability06_B_Part02",
+    "4014033_Monster_W4_Pollux_Ability06_B_Part01",
+    "4014033_Monster_W4_Pollux_Ability05_B_Part02",
+    "4014033_Monster_W4_Pollux_Ability05_B_Part01",
     "4014033_Monster_W4_Pollux_Ability04_Part02",
     "4014033_Monster_W4_Pollux_Ability04_Part01",
     "4014033_Monster_W4_Pollux_Ability03_Part02",
@@ -28,895 +25,25 @@ const compositeAbilityObject = {
     "4014033_Monster_W4_Pollux_Ability02_Part01",
     "4014033_Monster_W4_Pollux_Ability01_Part02",
     "4014033_Monster_W4_Pollux_Ability01_Part01",
-    "4014033_Monster_W4_Pollux_PassiveAbility_BGM",
     "4014033_Modifiers",
     "4014033_Functions",
     "4014033_BE_BattleEvents"
   ],
   "abilityObject": {
-    "4014033_Monster_W4_Pollux_Ability06_B_Part02": {
-      "fileName": "4014033_Monster_W4_Pollux_Ability06_B_Part02",
+    "4014033_Monster_W4_Pollux_SpecailAbility05": {
+      "fileName": "4014033_Monster_W4_Pollux_SpecailAbility05",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1292838645\">Modifier_Monster_W4_Pollux_B_HardLockHp</a>"
-        },
         {
           "name": "Define Custom Variable",
-          "variableName": "IsNeedFade",
+          "variableName": "_StorySimulationSpeed",
           "value": 1
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"599310144\">Monster_W4_Pollux_FX_Ground</a>"
-        },
-        {
-          "name": "Show BattleEvent Button",
-          "show": true
-        },
-        {
-          "name": "WAIT FOR",
-          "condition": {
-            "name": "Has Queued Ult"
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
-              "valuePerStack": {
-                "MDF_DamagePercentage": {
-                  "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[1]]}"
-                  ]
-                },
-                "MDF_DamageHpAddedRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[0]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "AIFlag",
-          "value": {
-            "operator": "Variables[0] (_TempAIFlag) || RETURN",
-            "displayLines": "_TempAIFlag",
-            "constants": [],
-            "variables": [
-              "_TempAIFlag"
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"599310144\">Monster_W4_Pollux_FX_Ground</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "IsNeedFade",
-          "value": 0
-        },
-        "Trigger: Ability End"
-      ],
-      "whenAdded": [
-        {
-          "name": "Preload Battle Event(s)",
-          "eventID": [
-            60026
-          ]
-        },
-        {
-          "name": "Add Battle Event",
-          "teamName": "Player Team",
-          "eventID": 60026,
-          "variables": null,
-          "whenCreated": [
-            "Show BattleEvent Button"
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1292838645\">Modifier_Monster_W4_Pollux_B_HardLockHp</a>",
-          "valuePerStack": {
-            "MDF_LockHp": {
-              "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[5]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[5]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4014033_Monster_W4_Pollux_Ability06_B_Part01": {
-      "fileName": "4014033_Monster_W4_Pollux_Ability06_B_Part01",
-      "childAbilityList": [
-        "4014033_Monster_W4_Pollux_Ability06_B_Part01",
-        "4014033_Monster_W4_Pollux_Ability06_B_Part02",
-        "4014033_Monster_W4_Pollux_Ability06_Camera"
-      ],
-      "skillTrigger": "Skill06",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Pollux_Ability06_B_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4014033_Monster_W4_Pollux_Ability05_B_Part02": {
-      "fileName": "4014033_Monster_W4_Pollux_Ability05_B_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1324293112\">Modifier_Monster_W4_Pollux_B_HardLockHp_BFAbility05</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
-            "invertCondition": true
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Pollux Slumber Target 1}} + {{Pollux Slumber Target 3}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_TargetCurrentHp",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_TargetCurrentHp",
-              "value": {
-                "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(_TargetCurrentHp - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_TargetCurrentHp"
-                ]
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                  "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 4)",
-                  "constants": [
-                    4
-                  ],
-                  "variables": [
-                    "_TargetCurrentHp",
-                    "_Skill05_LoseHpRatio"
-                  ]
-                },
-                "cantKill": true,
-                "dmgFormulaFinal": "Converted DMG Base",
-                "HitSplit": 0.25,
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Pollux Slumber Target 2}} + {{Pollux Slumber Target 4}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_TargetCurrentHp",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_TargetCurrentHp",
-              "value": {
-                "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(_TargetCurrentHp - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_TargetCurrentHp"
-                ]
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (4) || DIV || RETURN",
-                  "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 4)",
-                  "constants": [
-                    4
-                  ],
-                  "variables": [
-                    "_TargetCurrentHp",
-                    "_Skill05_LoseHpRatio"
-                  ]
-                },
-                "cantKill": true,
-                "dmgFormulaFinal": "Converted DMG Base",
-                "HitSplit": 0.25,
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Pollux Slumber Target 1}} + {{Pollux Slumber Target 4}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_TargetCurrentHp",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_TargetCurrentHp",
-              "value": {
-                "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(_TargetCurrentHp - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_TargetCurrentHp"
-                ]
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (3) || DIV || RETURN",
-                  "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 3)",
-                  "constants": [
-                    3
-                  ],
-                  "variables": [
-                    "_TargetCurrentHp",
-                    "_Skill05_LoseHpRatio"
-                  ]
-                },
-                "cantKill": true,
-                "dmgFormulaFinal": "Converted DMG Base",
-                "HitSplit": 0.25,
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Pollux Slumber Target 2}} + {{Pollux Slumber Target 3}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_TargetCurrentHp",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_TargetCurrentHp",
-              "value": {
-                "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(_TargetCurrentHp - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_TargetCurrentHp"
-                ]
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (3) || DIV || RETURN",
-                  "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 3)",
-                  "constants": [
-                    3
-                  ],
-                  "variables": [
-                    "_TargetCurrentHp",
-                    "_Skill05_LoseHpRatio"
-                  ]
-                },
-                "cantKill": true,
-                "dmgFormulaFinal": "Converted DMG Base",
-                "HitSplit": 0.25,
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Pollux Slumber Target 3}} + {{Pollux Slumber Target 4}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_TargetCurrentHp",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_TargetCurrentHp",
-              "value": {
-                "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(_TargetCurrentHp - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_TargetCurrentHp"
-                ]
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (2) || DIV || RETURN",
-                  "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 2)",
-                  "constants": [
-                    2
-                  ],
-                  "variables": [
-                    "_TargetCurrentHp",
-                    "_Skill05_LoseHpRatio"
-                  ]
-                },
-                "cantKill": true,
-                "dmgFormulaFinal": "Converted DMG Base",
-                "HitSplit": 0.25,
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Pollux Slumber Target 1}} + {{Pollux Slumber Target 2}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_TargetCurrentHp",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_TargetCurrentHp",
-              "value": {
-                "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(_TargetCurrentHp - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_TargetCurrentHp"
-                ]
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (2) || DIV || RETURN",
-                  "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 2)",
-                  "constants": [
-                    2
-                  ],
-                  "variables": [
-                    "_TargetCurrentHp",
-                    "_Skill05_LoseHpRatio"
-                  ]
-                },
-                "cantKill": true,
-                "dmgFormulaFinal": "Converted DMG Base",
-                "HitSplit": 0.25,
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Pollux Slumber Target 2}} + {{Pollux Slumber Target 3}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_TargetCurrentHp",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_TargetCurrentHp",
-              "value": {
-                "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(_TargetCurrentHp - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_TargetCurrentHp"
-                ]
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || RETURN",
-                  "displayLines": "(_TargetCurrentHp * _Skill05_LoseHpRatio)",
-                  "constants": [],
-                  "variables": [
-                    "_TargetCurrentHp",
-                    "_Skill05_LoseHpRatio"
-                  ]
-                },
-                "cantKill": true,
-                "dmgFormulaFinal": "Converted DMG Base",
-                "HitSplit": 0.25,
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Pollux Slumber Target 1}} + {{Pollux Slumber Target 4}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_TargetCurrentHp",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_TargetCurrentHp",
-              "value": {
-                "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(_TargetCurrentHp - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_TargetCurrentHp"
-                ]
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || RETURN",
-                  "displayLines": "(_TargetCurrentHp * _Skill05_LoseHpRatio)",
-                  "constants": [],
-                  "variables": [
-                    "_TargetCurrentHp",
-                    "_Skill05_LoseHpRatio"
-                  ]
-                },
-                "cantKill": true,
-                "dmgFormulaFinal": "Converted DMG Base",
-                "HitSplit": 0.25,
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team(Exclude Memosprites)}}"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2024056044\">Monster_W4_Pollux_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
-              "valuePerStack": {
-                "MDF_DamagePercentage": {
-                  "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[1]]}"
-                  ]
-                },
-                "MDF_DamageHpAddedRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[0]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team(Exclude Memosprites)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
-              "valuePerStack": {
-                "_HpLimitRatio": {
-                  "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
-                  "displayLines": "{[Skill05[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[4]]}"
-                  ]
-                },
-                "_FatigueRatio": {
-                  "operator": "Variables[0] ({[Skill05[5]]}) || RETURN",
-                  "displayLines": "{[Skill05[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[5]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
-              "valuePerStack": {
-                "MDF_ShowValue1": {
-                  "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                  "displayLines": "{[Skill05[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[0]]}"
-                  ]
-                },
-                "MDF_SpeedUpRatio": {
-                  "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                  "displayLines": "{[Skill05[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[0]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1324293112\">Modifier_Monster_W4_Pollux_B_HardLockHp_BFAbility05</a>",
-          "valuePerStack": {
-            "MDF_LockHp": {
-              "operator": "Variables[0] (MIN) || Constants[0] (0.9) || Variables[1] ({[PassiveSkill02[5]]}) || Constants[1] (1.2) || MUL || PARAM_2 || FUNCTION || RETURN",
-              "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(0.9, ({[PassiveSkill02[5]]} * 1.2))",
-              "constants": [
-                0.9,
-                1.2
-              ],
-              "variables": [
-                "MIN",
-                "{[PassiveSkill02[5]]}"
-              ]
-            }
-          }
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014033_Monster_W4_Pollux_Ability05_B_Part01": {
-      "fileName": "4014033_Monster_W4_Pollux_Ability05_B_Part01",
-      "childAbilityList": [
-        "4014033_Monster_W4_Pollux_Ability05_B_Part01",
-        "4014033_Monster_W4_Pollux_Ability05_B_Part02",
-        "4014033_Monster_W4_Pollux_Ability05_Camera"
-      ],
-      "skillTrigger": "Skill05",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Pollux_Ability05_B_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []
     },
@@ -971,22 +98,110 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4014033_Monster_W4_Pollux_SpecailAbility05": {
-      "fileName": "4014033_Monster_W4_Pollux_SpecailAbility05",
-      "abilityType": null,
+    "4014033_Monster_W4_Pollux_PassiveAbility_BGM": {
+      "fileName": "4014033_Monster_W4_Pollux_PassiveAbility_BGM",
+      "skillTrigger": "Passive_BGM",
+      "abilityType": "Basic ATK",
       "energy": null,
       "toughnessList": null,
-      "parse": [
+      "parse": [],
+      "whenAdded": [
         {
-          "name": "Define Custom Variable",
-          "variableName": "_StorySimulationSpeed",
-          "value": 1
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage Type",
+                "stageType": "Challenge"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "VerseSimulation"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "StrongChallengeActivity"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "RogueRelic"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "GridFightActivity"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"715173654\">Enemy_W4_Pollux_ResetStageBGM</a>"
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
-      "references": []
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__715173654\">Enemy_W4_Pollux_ResetStageBGM</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Varying Data",
+                  "target": null,
+                  "variableName": "MDF_WaveIndex",
+                  "value": "CurWaveIndex"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "New Enemy Wave: Start",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Varying Data",
+                  "target": null,
+                  "variableName": "MDF_WaveIndex2",
+                  "value": "CurWaveIndex"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_WaveIndex",
+                    "compareType": "NOT=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
+                      "displayLines": "MDF_WaveIndex2",
+                      "constants": [],
+                      "variables": [
+                        "MDF_WaveIndex2"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     "4014033_Monster_W4_Pollux_Stun_Insert_Camera": {
       "fileName": "4014033_Monster_W4_Pollux_Stun_Insert_Camera",
@@ -2556,39 +1771,20 @@ const compositeAbilityObject = {
         }
       ]
     },
-    "4014033_Monster_W4_Pollux_Ability06_Part02": {
-      "fileName": "4014033_Monster_W4_Pollux_Ability06_Part02",
+    "4014033_Monster_W4_Pollux_Ability06_B_Part02": {
+      "fileName": "4014033_Monster_W4_Pollux_Ability06_B_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         "Ability Start",
         {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "StoryMode",
-                "compareType": "=",
-                "value2": 1
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "_StorySetSpeed",
-                "compareType": "=",
-                "value2": 0
-              }
-            ]
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
           },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_StorySimulationSpeed",
-              "value": 1
-            }
-          ]
+          "modifier": "<a class=\"gModGreen\" id=\"1292838645\">Modifier_Monster_W4_Pollux_B_HardLockHp</a>"
         },
         {
           "name": "Define Custom Variable",
@@ -2604,265 +1800,15 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"599310144\">Monster_W4_Pollux_FX_Ground</a>"
         },
         {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || RETURN",
-                  "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)",
-                  "constants": [
-                    4
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill06[0]]}"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "25%"
-              }
-            }
-          ]
+          "name": "Show BattleEvent Button",
+          "show": true
         },
         {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || RETURN",
-                  "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)",
-                  "constants": [
-                    4
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill06[0]]}"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "25%"
-              }
-            }
-          ]
+          "name": "WAIT FOR",
+          "condition": {
+            "name": "Has Queued Ult"
+          }
         },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || RETURN",
-                  "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)",
-                  "constants": [
-                    4
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill06[0]]}"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "25%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]"
-              },
-              "passed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Quantum",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[1]]}) || MUL || Variables[0] (_MaxHP) || Variables[2] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || ADD || RETURN",
-                      "displayLines": "((_MaxHP * {[Skill06[1]]}) + ((_MaxHP * {[Skill06[0]]}) / 4))",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "_MaxHP",
-                        "{[Skill06[1]]}",
-                        "{[Skill06[0]]}"
-                      ]
-                    },
-                    "dmgFormulaFinal": "Converted DMG Base",
-                    "Toughness": null,
-                    "Tags": null,
-                    "behaviorTag": "DirectlyLoseHpHit",
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "25%"
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
-                  "duration": {
-                    "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-                    "displayLines": "{[Skill06[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[3]]}"
-                    ]
-                  },
-                  "baseChance": 1,
-                  "valuePerStack": {
-                    "MDF_ActionDelayRatio": {
-                      "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                      "displayLines": "{[Skill06[4]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill06[4]]}"
-                      ]
-                    },
-                    "Modifier_Entangle_DamagePercentage": {
-                      "operator": "Variables[0] ({[Skill06[5]]}) || RETURN",
-                      "displayLines": "{[Skill06[5]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill06[5]]}"
-                      ]
-                    },
-                    "Modifier_Entangle_DamageValue": 0
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Quantum",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || RETURN",
-                      "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)",
-                      "constants": [
-                        4
-                      ],
-                      "variables": [
-                        "_MaxHP",
-                        "{[Skill06[0]]}"
-                      ]
-                    },
-                    "dmgFormulaFinal": "Converted DMG Base",
-                    "Toughness": null,
-                    "Tags": null,
-                    "behaviorTag": "DirectlyLoseHpHit",
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "25%"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End",
         {
           "name": "Find New Target",
           "from": {
@@ -2940,37 +1886,57 @@ const compositeAbilityObject = {
           "variableName": "IsNeedFade",
           "value": 0
         },
+        "Trigger: Ability End"
+      ],
+      "whenAdded": [
         {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "StoryMode",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_StorySimulationSpeed",
-              "value": 0
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_StorySetSpeed",
-              "value": 1
-            }
+          "name": "Preload Battle Event(s)",
+          "eventID": [
+            60026
           ]
         },
-        "Trigger: Ability End"
+        {
+          "name": "Add Battle Event",
+          "teamName": "Player Team",
+          "eventID": 60026,
+          "variables": null,
+          "whenCreated": [
+            "Show BattleEvent Button"
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1292838645\">Modifier_Monster_W4_Pollux_B_HardLockHp</a>",
+          "valuePerStack": {
+            "MDF_LockHp": {
+              "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
+              "displayLines": "{[PassiveSkill02[5]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill02[5]]}"
+              ]
+            }
+          }
+        }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []
     },
-    "4014033_Monster_W4_Pollux_Ability06_Part01": {
-      "fileName": "4014033_Monster_W4_Pollux_Ability06_Part01",
-      "abilityType": null,
+    "4014033_Monster_W4_Pollux_Ability06_B_Part01": {
+      "fileName": "4014033_Monster_W4_Pollux_Ability06_B_Part01",
+      "childAbilityList": [
+        "4014033_Monster_W4_Pollux_Ability06_B_Part01",
+        "4014033_Monster_W4_Pollux_Ability06_B_Part02",
+        "4014033_Monster_W4_Pollux_Ability06_Camera"
+      ],
+      "skillTrigger": "Skill06",
+      "abilityType": "Basic ATK",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -2980,7 +1946,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_W4_Pollux_Ability06_Part02",
+          "ability": "Monster_W4_Pollux_Ability06_B_Part02",
           "isTrigger": true
         },
         "Deleted bullshit"
@@ -2988,59 +1954,37 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     },
-    "4014033_Monster_W4_Pollux_Ability05_Part02": {
-      "fileName": "4014033_Monster_W4_Pollux_Ability05_Part02",
+    "4014033_Monster_W4_Pollux_Ability05_B_Part02": {
+      "fileName": "4014033_Monster_W4_Pollux_Ability05_B_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         "Ability Start",
         {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1324293112\">Modifier_Monster_W4_Pollux_B_HardLockHp_BFAbility05</a>"
+        },
+        {
           "name": "IF",
           "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": ">=",
-                "value2": 2
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 4014033,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Castorice, Hand of Shadow",
-                "isBaseCompare": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 7
-            }
-          ],
-          "failed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": {
-                "operator": "Variables[0] (_TempAIFlag) || RETURN",
-                "displayLines": "_TempAIFlag",
-                "constants": [],
-                "variables": [
-                  "_TempAIFlag"
-                ]
-              }
-            }
-          ]
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+            "invertCondition": true
+          }
         },
         {
           "name": "Find New Target",
@@ -3574,54 +2518,15 @@ const compositeAbilityObject = {
         {
           "name": "IF",
           "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 4014032,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Pollux, Netherwing Husk, Ferry of Souls"
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "_WorldLevel",
-                "compareType": "<",
-                "value2": 6
-              }
-            ]
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+            "invertCondition": true
           },
           "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team(Exclude Memosprites)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
-              "valuePerStack": {
-                "_HpLimitRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_74) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_74",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_74"
-                  ]
-                },
-                "_FatigueRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_75) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_75",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_75"
-                  ]
-                }
-              }
-            }
-          ],
-          "failed": [
             {
               "name": "Add Events/Bonuses",
               "to": {
@@ -3653,54 +2558,15 @@ const compositeAbilityObject = {
         {
           "name": "IF",
           "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 4014032,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Pollux, Netherwing Husk, Ferry of Souls"
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "_WorldLevel",
-                "compareType": "<",
-                "value2": 6
-              }
-            ]
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+            "invertCondition": true
           },
           "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
-              "valuePerStack": {
-                "MDF_ShowValue1": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_82) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_82",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_82"
-                  ]
-                },
-                "MDF_SpeedUpRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_82) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_82",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_82"
-                  ]
-                }
-              }
-            }
-          ],
-          "failed": [
             {
               "name": "Add Events/Bonuses",
               "to": {
@@ -3726,95 +2592,49 @@ const compositeAbilityObject = {
                   ]
                 }
               }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 4014033,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Castorice, Hand of Shadow",
-                "isBaseCompare": true,
-                "invertCondition": true
-              }
-            ]
-          },
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "StoryMode",
-                "compareType": "=",
-                "value2": 1
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "StoryMode",
-                "compareType": "=",
-                "value2": 1
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "_StoryMsg",
-                "compareType": "=",
-                "value2": 0
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1061433740\">Monster_W4_Pollux_StoryMode_SpecailAbility05</a>"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_StorySimulationSpeed",
-              "value": 0
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_StoryMsg",
-              "value": 1
             }
           ]
         },
         "Trigger: Ability End"
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1324293112\">Modifier_Monster_W4_Pollux_B_HardLockHp_BFAbility05</a>",
+          "valuePerStack": {
+            "MDF_LockHp": {
+              "operator": "Variables[0] (MIN) || Constants[0] (0.9) || Variables[1] ({[PassiveSkill02[5]]}) || Constants[1] (1.2) || MUL || PARAM_2 || FUNCTION || RETURN",
+              "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(0.9, ({[PassiveSkill02[5]]} * 1.2))",
+              "constants": [
+                0.9,
+                1.2
+              ],
+              "variables": [
+                "MIN",
+                "{[PassiveSkill02[5]]}"
+              ]
+            }
+          }
+        }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
     },
-    "4014033_Monster_W4_Pollux_Ability05_Part01": {
-      "fileName": "4014033_Monster_W4_Pollux_Ability05_Part01",
-      "abilityType": null,
+    "4014033_Monster_W4_Pollux_Ability05_B_Part01": {
+      "fileName": "4014033_Monster_W4_Pollux_Ability05_B_Part01",
+      "childAbilityList": [
+        "4014033_Monster_W4_Pollux_Ability05_B_Part01",
+        "4014033_Monster_W4_Pollux_Ability05_B_Part02",
+        "4014033_Monster_W4_Pollux_Ability05_Camera"
+      ],
+      "skillTrigger": "Skill05",
+      "abilityType": "Basic ATK",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -3824,13 +2644,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_W4_Pollux_Ability05_Part02",
+          "ability": "Monster_W4_Pollux_Ability05_B_Part02",
           "isTrigger": true
         },
         "Deleted bullshit"
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []
     },
@@ -4858,111 +3681,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4014033_Monster_W4_Pollux_PassiveAbility_BGM": {
-      "fileName": "4014033_Monster_W4_Pollux_PassiveAbility_BGM",
-      "skillTrigger": "Passive_BGM",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage Type",
-                "stageType": "Challenge"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "VerseSimulation"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "StrongChallengeActivity"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "RogueRelic"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "GridFightActivity"
-              }
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"715173654\">Enemy_W4_Pollux_ResetStageBGM</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__715173654\">Enemy_W4_Pollux_ResetStageBGM</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex",
-                  "value": "CurWaveIndex"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave: Start",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex2",
-                  "value": "CurWaveIndex"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_WaveIndex",
-                    "compareType": "NOT=",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
-                      "displayLines": "MDF_WaveIndex2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_WaveIndex2"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "4014033_Modifiers": {
       "fileName": "4014033_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -5707,10 +4425,6 @@ const compositeAbilityObject = {
           "stackData": [
             "_HpLimitRatio",
             "_FatigueRatio"
-          ],
-          "latentQueue": [
-            "AIFlag",
-            "_WorldLevel"
           ],
           "description": "When this target deals DMG to enemy targets, decreases DMG received by enemy targets by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Restore HP to an ally target until it reaches <span class=\"descriptionNumberColor\">MDF_ShowValue2</span> to dispel this effect.",
           "type": "Other",
@@ -7341,10 +6055,6 @@ const compositeAbilityObject = {
             "MDF_ShowValue1",
             "MDF_SpeedUpRatio"
           ],
-          "latentQueue": [
-            "AIFlag",
-            "_WorldLevel"
-          ],
           "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Attacks against \"Pollux\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
           "type": "Other",
           "effectName": "Enhance",
@@ -7811,9 +6521,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__599310144\">Monster_W4_Pollux_FX_Ground</a>",
           "latentQueue": [
-            "StoryMode",
-            "_StorySetSpeed",
-            "_StorySimulationSpeed",
             "IsNeedFade",
             "AIFlag"
           ],

@@ -3,9 +3,10 @@ const compositeAbilityObject = {
   "fullCharacterName": 4014030,
   "trimCharacterName": 4014030,
   "abilityList": [
+    "4014030_Monster_W4_Pollux_SpecailAbility05",
     "4014030_Monster_W4_Pollux_EndInsert_Part02",
     "4014030_Monster_W4_Pollux_EndInsert_Part01",
-    "4014030_Monster_W4_Pollux_SpecailAbility05",
+    "4014030_Monster_W4_Pollux_PassiveAbility_BGM",
     "4014030_Monster_W4_Pollux_Stun_Insert_Camera",
     "4014030_Monster_W4_Pollux_Stun_Insert",
     "4014030_Monster_W4_Pollux_StunRecover_Insert_Camera",
@@ -24,11 +25,27 @@ const compositeAbilityObject = {
     "4014030_Monster_W4_Pollux_Ability02_Part01",
     "4014030_Monster_W4_Pollux_Ability01_Part02",
     "4014030_Monster_W4_Pollux_Ability01_Part01",
-    "4014030_Monster_W4_Pollux_PassiveAbility_BGM",
     "4014030_Modifiers",
     "4014030_Functions"
   ],
   "abilityObject": {
+    "4014030_Monster_W4_Pollux_SpecailAbility05": {
+      "fileName": "4014030_Monster_W4_Pollux_SpecailAbility05",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_StorySimulationSpeed",
+          "value": 1
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "4014030_Monster_W4_Pollux_EndInsert_Part02": {
       "fileName": "4014030_Monster_W4_Pollux_EndInsert_Part02",
       "abilityType": null,
@@ -80,22 +97,110 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4014030_Monster_W4_Pollux_SpecailAbility05": {
-      "fileName": "4014030_Monster_W4_Pollux_SpecailAbility05",
-      "abilityType": null,
+    "4014030_Monster_W4_Pollux_PassiveAbility_BGM": {
+      "fileName": "4014030_Monster_W4_Pollux_PassiveAbility_BGM",
+      "skillTrigger": "Passive_BGM",
+      "abilityType": "Basic ATK",
       "energy": null,
       "toughnessList": null,
-      "parse": [
+      "parse": [],
+      "whenAdded": [
         {
-          "name": "Define Custom Variable",
-          "variableName": "_StorySimulationSpeed",
-          "value": 1
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage Type",
+                "stageType": "Challenge"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "VerseSimulation"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "StrongChallengeActivity"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "RogueRelic"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "GridFightActivity"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"715173654\">Enemy_W4_Pollux_ResetStageBGM</a>"
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
-      "references": []
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__715173654\">Enemy_W4_Pollux_ResetStageBGM</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Varying Data",
+                  "target": null,
+                  "variableName": "MDF_WaveIndex",
+                  "value": "CurWaveIndex"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "New Enemy Wave: Start",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Varying Data",
+                  "target": null,
+                  "variableName": "MDF_WaveIndex2",
+                  "value": "CurWaveIndex"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_WaveIndex",
+                    "compareType": "NOT=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
+                      "displayLines": "MDF_WaveIndex2",
+                      "constants": [],
+                      "variables": [
+                        "MDF_WaveIndex2"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     "4014030_Monster_W4_Pollux_Stun_Insert_Camera": {
       "fileName": "4014030_Monster_W4_Pollux_Stun_Insert_Camera",
@@ -3984,111 +4089,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "4014030_Monster_W4_Pollux_PassiveAbility_BGM": {
-      "fileName": "4014030_Monster_W4_Pollux_PassiveAbility_BGM",
-      "skillTrigger": "Passive_BGM",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage Type",
-                "stageType": "Challenge"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "VerseSimulation"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "StrongChallengeActivity"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "RogueRelic"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "GridFightActivity"
-              }
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"715173654\">Enemy_W4_Pollux_ResetStageBGM</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__715173654\">Enemy_W4_Pollux_ResetStageBGM</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex",
-                  "value": "CurWaveIndex"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave: Start",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex2",
-                  "value": "CurWaveIndex"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_WaveIndex",
-                    "compareType": "NOT=",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
-                      "displayLines": "MDF_WaveIndex2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_WaveIndex2"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
     },
     "4014030_Modifiers": {
       "fileName": "4014030_Modifiers",
