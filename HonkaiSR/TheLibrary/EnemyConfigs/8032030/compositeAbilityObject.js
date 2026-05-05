@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 8032030,
   "trimCharacterName": 8032030,
   "abilityList": [
+    "8032030_Monster_W3_AventurinePart_Passive01",
     "8032030_Monster_W3_AventurinePart_Ability04_Part02",
     "8032030_Monster_W3_AventurinePart_Ability04_Part01",
     "8032030_Monster_W3_AventurinePart_Ability03_Part02",
@@ -11,10 +12,42 @@ const compositeAbilityObject = {
     "8032030_Monster_W3_AventurinePart_Ability02_Part01",
     "8032030_Monster_W3_AventurinePart_Ability01_Part02",
     "8032030_Monster_W3_AventurinePart_Ability01_Part01",
-    "8032030_Monster_W3_AventurinePart_Passive01",
     "8032030_Modifiers"
   ],
   "abilityObject": {
+    "8032030_Monster_W3_AventurinePart_Passive01": {
+      "fileName": "8032030_Monster_W3_AventurinePart_Passive01",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"126188110\">Monster_W3_AventurinePart_SpeedZero</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "8032030_Monster_W3_AventurinePart_Ability04_Part02": {
       "fileName": "8032030_Monster_W3_AventurinePart_Ability04_Part02",
       "abilityType": null,
@@ -893,39 +926,6 @@ const compositeAbilityObject = {
           "isTrigger": true
         },
         "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8032030_Monster_W3_AventurinePart_Passive01": {
-      "fileName": "8032030_Monster_W3_AventurinePart_Passive01",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"126188110\">Monster_W3_AventurinePart_SpeedZero</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
-        }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"

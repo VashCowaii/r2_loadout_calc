@@ -1140,9 +1140,6 @@ const configAbility = {
       "modifierFlags": [
         "RetainCountZero"
       ],
-      "stackData": [
-        "MDF_DamageReduce"
-      ],
       "description": "Lose 1 Insect Egg when attacked by \"Entomon Eulogy\" or \"Decay Eulogy.\"",
       "type": "Other",
       "statusName": "Insect Egg",
@@ -1249,10 +1246,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-77514845\">Enemy_SW_Boss_01_IF_SwarmArmorController</a>",
-      "stackData": [
-        "MDF_Armor_DamageReduce",
-        "MDF_Armor_CountNormal"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1390,10 +1383,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__654310441\">Enemy_SW_Boss_01_IF_StanceDamageController</a>",
-      "stackData": [
-        "MDF_ExplodeDamageTakenRatio",
-        "MDF_ExplodeStanceDamage"
-      ],
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",

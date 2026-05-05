@@ -101,9 +101,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
       "stackType": "Replace",
-      "latentQueue": [
-        "DiceGamblingInsertCheck_RL"
-      ],
       "addStacksPerTrigger": 1,
       "execute": [
         {

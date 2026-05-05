@@ -4,13 +4,13 @@ const compositeAbilityObject = {
   "trimCharacterName": 8022020,
   "abilityList": [
     "8022020_Monster_SW_Minion01_01_PassiveAbility_Insert_Part01",
+    "8022020_Monster_SW_Minion01_01_Passive01",
     "8022020_Monster_SW_Minion01_01_Ability03_Part02",
     "8022020_Monster_SW_Minion01_01_Ability03_Part01",
     "8022020_Monster_SW_Minion01_01_Ability02_Part02",
     "8022020_Monster_SW_Minion01_01_Ability02_Part01",
     "8022020_Monster_SW_Minion01_01_Ability01_Part02",
     "8022020_Monster_SW_Minion01_01_Ability01_Part01",
-    "8022020_Monster_SW_Minion01_01_Passive01",
     "8022020_Modifiers"
   ],
   "abilityObject": {
@@ -185,6 +185,122 @@ const compositeAbilityObject = {
         "primaryTarget": "{{All Team Members}}"
       },
       "references": []
+    },
+    "8022020_Monster_SW_Minion01_01_Passive01": {
+      "fileName": "8022020_Monster_SW_Minion01_01_Passive01",
+      "skillTrigger": "Monster_SW_Minion01_01_Passive01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"603233661\">Monster_SW_Minion01_01_AIChange</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1206413856\">Monster_SW_Minion01_01_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"585935533\">Monster_SW_Minion01_01_Deathrattle</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__585935533\">Monster_SW_Minion01_01_Deathrattle</a>",
+          "modifierFlags": [
+            "Deathrattle",
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Was Killed (Queued) [Owner]",
+              "execute": [
+                {
+                  "name": "Dispel Debuffs",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "silent": true
+                },
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_SW_Minion01_01_PassiveAbility_Insert_Part01",
+                  "priorityTag": "EnemyDeathEffect",
+                  "ownerState": "Mask_AliveOrLimbo",
+                  "targetState": "Mask_AliveOrLimbo",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                },
+                {
+                  "name": "Mark Entity For Immediate Death"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__603233661\">Monster_SW_Minion01_01_AIChange</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1702234274\">Monster_SW_Minion01_01_Burning_Modifier</a>"
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "AIFlag",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1206413856\">Monster_SW_Minion01_01_MuteHitFly</a>",
+          "modifierFlags": [
+            "MuteHitFly"
+          ]
+        }
+      ]
     },
     "8022020_Monster_SW_Minion01_01_Ability03_Part02": {
       "fileName": "8022020_Monster_SW_Minion01_01_Ability03_Part02",
@@ -554,122 +670,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
-    },
-    "8022020_Monster_SW_Minion01_01_Passive01": {
-      "fileName": "8022020_Monster_SW_Minion01_01_Passive01",
-      "skillTrigger": "Monster_SW_Minion01_01_Passive01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"603233661\">Monster_SW_Minion01_01_AIChange</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1206413856\">Monster_SW_Minion01_01_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"585935533\">Monster_SW_Minion01_01_Deathrattle</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__585935533\">Monster_SW_Minion01_01_Deathrattle</a>",
-          "modifierFlags": [
-            "Deathrattle",
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Was Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Dispel Debuffs",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "silent": true
-                },
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_SW_Minion01_01_PassiveAbility_Insert_Part01",
-                  "priorityTag": "EnemyDeathEffect",
-                  "ownerState": "Mask_AliveOrLimbo",
-                  "targetState": "Mask_AliveOrLimbo",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                },
-                {
-                  "name": "Mark Entity For Immediate Death"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__603233661\">Monster_SW_Minion01_01_AIChange</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1702234274\">Monster_SW_Minion01_01_Burning_Modifier</a>"
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1206413856\">Monster_SW_Minion01_01_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ]
-        }
-      ]
     },
     "8022020_Modifiers": {
       "fileName": "8022020_Modifiers",

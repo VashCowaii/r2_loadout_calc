@@ -14,9 +14,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
-      "latentQueue": [
-        "performAccFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2036,9 +2033,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__259450291\">Monster_SW_Boss_01_Ability05Charge</a>",
-      "latentQueue": [
-        "Phase2FirstTurn"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -2057,9 +2051,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1256327347\">Monster_SW_Boss_01_Ability07_Ball</a>",
-      "latentQueue": [
-        "Phase2FirstTurn"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -2117,9 +2108,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2142572207\">Monster_SW_Boss_01_Ability05_Passive</a>",
-      "latentQueue": [
-        "Phase2FirstTurn"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2331,12 +2319,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-850302516\">Monster_SW_Boss_01_DamageReduce</a>[<span class=\"descriptionNumberColor\">Multiply</span>]",
-      "stackData": [
-        "MDF_DamageReduceRatio"
-      ],
-      "latentQueue": [
-        "Phase2FirstTurn"
-      ],
       "description": "Reduces DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageReduceRatio</span>. Summons a regular Swarm every time this unit is attacked. When this unit's Weakness is Broken, deals Toughness Reduction equal to its own max Toughness to all friendly units and increases the DMG taken by all other friendly units besides the target themselves.",
       "type": "Buff",
       "effectName": "Multiply",
