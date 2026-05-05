@@ -3,7 +3,6 @@ const compositeAbilityObject = {
   "fullCharacterName": 8013141,
   "trimCharacterName": 8013141,
   "abilityList": [
-    "8013141_Monster_AML_Boss_Part2_DieChangePhase_Insert",
     "8013141_Monster_AML_Boss_Part2_HitEffect",
     "8013141_WMonster_W0_Boss_Part2_PassiveAbility03",
     "8013141_Monster_AML_Boss_Part2_Ability12_Part02",
@@ -21,19 +20,6 @@ const compositeAbilityObject = {
     "8013141_Modifiers"
   ],
   "abilityObject": {
-    "8013141_Monster_AML_Boss_Part2_DieChangePhase_Insert": {
-      "fileName": "8013141_Monster_AML_Boss_Part2_DieChangePhase_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "8013141_Monster_AML_Boss_Part2_HitEffect": {
       "fileName": "8013141_Monster_AML_Boss_Part2_HitEffect",
       "skillTrigger": "PassiveSkill04",

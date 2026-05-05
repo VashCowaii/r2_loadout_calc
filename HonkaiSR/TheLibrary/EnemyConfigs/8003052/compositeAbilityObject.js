@@ -3,1363 +3,17 @@ const compositeAbilityObject = {
   "fullCharacterName": 8003052,
   "trimCharacterName": 8003052,
   "abilityList": [
-    "8003052_Monster_AML_Elite01_01_Ability09_Part02",
-    "8003052_Monster_AML_Elite01_01_Ability09_Part01",
-    "8003052_Monster_AML_Elite01_01_Ability08_Part02",
-    "8003052_Monster_AML_Elite01_01_Ability08_Part01",
-    "8003052_Monster_AML_Elite01_01_Ability07_Part02",
-    "8003052_Monster_AML_Elite01_01_Ability07_Part01",
-    "8003052_Monster_AML_Elite01_01_Ability06_Part02",
-    "8003052_Monster_AML_Elite01_01_Ability06_Part01",
-    "8003052_Monster_AML_Elite01_01_Ability05_Part02",
-    "8003052_Monster_AML_Elite01_01_Ability05_Part01",
-    "8003052_Monster_AML_Elite01_01_Ability04_Part02",
-    "8003052_Monster_AML_Elite01_01_Ability04_Part01",
-    "8003052_Monster_AML_Elite01_01_Ability03_Part02",
-    "8003052_Monster_AML_Elite01_01_Ability03_Part01",
-    "8003052_Monster_AML_Elite01_01_Ability02_Part02",
-    "8003052_Monster_AML_Elite01_01_Ability02_Part01",
-    "8003052_Monster_AML_Elite01_01_Ability01_Part02",
-    "8003052_Monster_AML_Elite01_01_Ability01_Part01",
     "8003052_Monster_AML_Elite01_01_PassiveAbility_InsertAbility_ListenPoison",
     "8003052_Monster_AML_Elite01_01_PassiveAbility_Initiate",
+    "8003052_Monster_AML_Elite01_01_Ability06_Part02",
+    "8003052_Monster_AML_Elite01_01_Ability06_Part01",
+    "8003052_Monster_AML_Elite01_01_Ability03_Part02",
+    "8003052_Monster_AML_Elite01_01_Ability03_Part01",
+    "8003052_Monster_AML_Elite01_01_Ability01_Part02",
+    "8003052_Monster_AML_Elite01_01_Ability01_Part01",
     "8003052_Modifiers"
   ],
   "abilityObject": {
-    "8003052_Monster_AML_Elite01_01_Ability09_Part02": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability09_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Create Enemies",
-          "delayPercent": 0,
-          "enemyList": [
-            {
-              "name": "Create Enemy from Custom",
-              "value": "Monster_SummonID",
-              "summonLocation": "BeforeCaster"
-            },
-            {
-              "name": "Create Enemy from Custom",
-              "value": "Monster_SummonID",
-              "summonLocation": "AfterCaster"
-            }
-          ]
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": 0.5,
-          "enemyList": [
-            {
-              "name": "Create Enemy from Custom",
-              "value": "Monster_SummonID",
-              "summonLocation": "First"
-            },
-            {
-              "name": "Create Enemy from Custom",
-              "value": "Monster_SummonID",
-              "summonLocation": "Last"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8003052_Monster_AML_Elite01_01_Ability09_Part01": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability09_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Elite01_01_Ability09_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8003052_Monster_AML_Elite01_01_Ability08_Part02": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability08_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_31) || RETURN",
-              "displayLines": "UnusedUnderThisBase_31",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_31"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]"
-          },
-          "passed": [
-            {
-              "name": "Trigger Modifier Event",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "variableName": "DOT_TriggerRatio",
-              "eventType": "DOT_Poison",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[4]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[4]]}"
-            ]
-          },
-          "baseChance": 1,
-          "stackLimit": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[5]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[5]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[5]]}"
-            ]
-          },
-          "valuePerStack": {
-            "Modifier_Poison_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[3]]}"
-              ]
-            }
-          },
-          "stackFlag": "CharacterSkill"
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8003052_Monster_AML_Elite01_01_Ability08_Part01": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability08_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Elite01_01_Ability08_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8003052_Monster_AML_Elite01_01_Ability07_Part02": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability07_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Shot Fired"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"60428755\">Monster_AML_Elite01_01_PoisonCount</a>",
-              "valuePerStack": {
-                "MDF_MaxLayer": {
-                  "operator": "Variables[0] ({[PassiveSkillInitiate[5]]}) || RETURN",
-                  "displayLines": "{[PassiveSkillInitiate[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkillInitiate[5]]}"
-                  ]
-                },
-                "MDF_LifeTime": {
-                  "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-                  "displayLines": "{[PassiveSkillInitiate[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkillInitiate[4]]}"
-                  ]
-                },
-                "MDF_DamagePercentage": {
-                  "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-                  "displayLines": "{[PassiveSkillInitiate[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkillInitiate[3]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"60428755\">Monster_AML_Elite01_01_PoisonCount</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8003052_Monster_AML_Elite01_01_Ability07_Part01": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability07_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Elite01_01_Ability07_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8003052_Monster_AML_Elite01_01_Ability06_Part02": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability06_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-412932365\">Enemy_AML_Elite01_01_ShootEff_Arrow</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1780037570\">Enemy_AML_Elite01_01_ShootEff_Body</a>"
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1527066682\">Monster_AML_Elite01_Endurance</a>"
-        },
-        {
-          "name": "Achievement",
-          "matchTags": true,
-          "relatedAchievements": [
-            {
-              "title": "Doldrums",
-              "desc": "Make Stormbringer fail to use Windfall Storm due to having no ally with Wind Shear",
-              "rarity": "Low"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8003052_Monster_AML_Elite01_01_Ability06_Part01": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability06_Part01",
-      "childAbilityList": [
-        "8003052_Monster_AML_Elite01_01_Ability06_Camera",
-        "8003052_Monster_AML_Elite01_01_Ability06_Part01",
-        "8003052_Monster_AML_Elite01_01_Ability06_Part02"
-      ],
-      "skillTrigger": "Skill06",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Elite01_01_Ability06_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8003052_Monster_AML_Elite01_01_Ability05_Part02": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability05_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-412932365\">Enemy_AML_Elite01_01_ShootEff_Arrow</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1780037570\">Enemy_AML_Elite01_01_ShootEff_Body</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1517316347\">Monster_AML_Elite01_01_DieChargeEffHide</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Hostile Entities(AOE)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Looped Event",
-              "Event": [
-                "Move to Next Listed Target",
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Ability Target(ST)}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-940158065\">Enemy_AML_Elite01_01_DOTAim</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Ability Target(ST)}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]"
-                      },
-                      "passed": [
-                        {
-                          "name": "ATK Scaling DMG",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Ability Target(ST)}}"
-                          },
-                          "AttackScaling": {
-                            "DamageType": "Wind",
-                            "Damage": {
-                              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                              "displayLines": "{[Skill05[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[0]]}"
-                              ]
-                            },
-                            "Toughness": null,
-                            "Tags": null,
-                            "attackType": "Basic ATK",
-                            "EnergyGainPercent": "100%"
-                          }
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Enemy ID",
-                            "ID": 8003051,
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            "characterName": "Stormbringer (Bug)"
-                          },
-                          "passed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Ability Target(ST)}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
-                              "duration": {
-                                "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-                                "displayLines": "{[PassiveSkillInitiate[4]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[PassiveSkillInitiate[4]]}"
-                                ]
-                              },
-                              "baseChance": 1,
-                              "stackLimit": {
-                                "operator": "Variables[0] ({[PassiveSkillInitiate[5]]}) || RETURN",
-                                "displayLines": "{[PassiveSkillInitiate[5]]}",
-                                "constants": [],
-                                "variables": [
-                                  "{[PassiveSkillInitiate[5]]}"
-                                ]
-                              },
-                              "valuePerStack": {
-                                "Modifier_Poison_DamagePercentage": {
-                                  "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-                                  "displayLines": "{[PassiveSkillInitiate[3]]}",
-                                  "constants": [],
-                                  "variables": [
-                                    "{[PassiveSkillInitiate[3]]}"
-                                  ]
-                                }
-                              },
-                              "stackFlag": "CharacterSkill"
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "ATK Scaling DMG",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Ability Target(ST)}}"
-                          },
-                          "AttackScaling": {
-                            "DamageType": "Wind",
-                            "Damage": {
-                              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                              "displayLines": "{[Skill05[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[0]]}"
-                              ]
-                            },
-                            "Toughness": null,
-                            "Tags": null,
-                            "attackType": "Basic ATK",
-                            "EnergyGainPercent": "100%"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-940158065\">Enemy_AML_Elite01_01_DOTAim</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Ability Target(ST)}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-940158065\">Enemy_AML_Elite01_01_DOTAim</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-              },
-              "passed": [
-                {
-                  "name": "Shot Fired"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Ability Target(ST)}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Wind",
-                        "Damage": {
-                          "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                          "displayLines": "{[Skill05[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill05[0]]}"
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Wind",
-                        "Damage": {
-                          "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                          "displayLines": "{[Skill05[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill05[0]]}"
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-940158065\">Enemy_AML_Elite01_01_DOTAim</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1527066682\">Monster_AML_Elite01_Endurance</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8003052_Monster_AML_Elite01_01_Ability05_Part01": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability05_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Elite01_01_Ability05_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8003052_Monster_AML_Elite01_01_Ability04_Part02": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1527066682\">Monster_AML_Elite01_Endurance</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1517316347\">Monster_AML_Elite01_01_DieChargeEffHide</a>"
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase2"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1780037570\">Enemy_AML_Elite01_01_ShootEff_Body</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-412932365\">Enemy_AML_Elite01_01_ShootEff_Arrow</a>"
-        },
-        {
-          "name": "Looped Event",
-          "Event": [
-            "Move to Next Listed Target",
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Ability Target(ST)}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]"
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-940158065\">Enemy_AML_Elite01_01_DOTAim</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 8003051,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Stormbringer (Bug)"
-          },
-          "failed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8003052_Monster_AML_Elite01_01_Ability04_Part01": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability04_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Elite01_01_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8003052_Monster_AML_Elite01_01_Ability03_Part02": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Wind",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Wind",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[4]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[4]]}"
-            ]
-          },
-          "baseChance": 1,
-          "stackLimit": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[5]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[5]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[5]]}"
-            ]
-          },
-          "valuePerStack": {
-            "Modifier_Poison_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[3]]}"
-              ]
-            }
-          },
-          "stackFlag": "CharacterSkill"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Targets Adjacent(Blast)}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Targets Adjacent(Blast)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Wind",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Targets Adjacent(Blast)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Wind",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[4]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[4]]}"
-            ]
-          },
-          "baseChance": 1,
-          "stackLimit": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[5]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[5]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[5]]}"
-            ]
-          },
-          "valuePerStack": {
-            "Modifier_Poison_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[3]]}"
-              ]
-            }
-          },
-          "stackFlag": "CharacterSkill"
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8003052_Monster_AML_Elite01_01_Ability03_Part01": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability03_Part01",
-      "childAbilityList": [
-        "8003052_Monster_AML_Elite01_01_Ability03_Camera",
-        "8003052_Monster_AML_Elite01_01_Ability03_Part01",
-        "8003052_Monster_AML_Elite01_01_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Elite01_01_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "subTarget": "Blast Targets"
-      },
-      "references": []
-    },
-    "8003052_Monster_AML_Elite01_01_Ability02_Part02": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_29) || RETURN",
-              "displayLines": "UnusedUnderThisBase_29",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_29"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8003052_Monster_AML_Elite01_01_Ability02_Part01": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability02_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Elite01_01_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8003052_Monster_AML_Elite01_01_Ability01_Part02": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Shot Fired"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Wind",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Wind",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[4]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[4]]}"
-            ]
-          },
-          "baseChance": 1,
-          "stackLimit": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[5]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[5]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[5]]}"
-            ]
-          },
-          "valuePerStack": {
-            "Modifier_Poison_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[3]]}"
-              ]
-            }
-          },
-          "stackFlag": "CharacterSkill"
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8003052_Monster_AML_Elite01_01_Ability01_Part01": {
-      "fileName": "8003052_Monster_AML_Elite01_01_Ability01_Part01",
-      "childAbilityList": [
-        "8003052_Monster_AML_Elite01_01_Ability01_Camera",
-        "8003052_Monster_AML_Elite01_01_Ability01_Part01",
-        "8003052_Monster_AML_Elite01_01_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Elite01_01_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "8003052_Monster_AML_Elite01_01_PassiveAbility_InsertAbility_ListenPoison": {
       "fileName": "8003052_Monster_AML_Elite01_01_PassiveAbility_InsertAbility_ListenPoison",
       "abilityType": null,
@@ -1865,6 +519,508 @@ const compositeAbilityObject = {
         }
       ]
     },
+    "8003052_Monster_AML_Elite01_01_Ability06_Part02": {
+      "fileName": "8003052_Monster_AML_Elite01_01_Ability06_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-412932365\">Enemy_AML_Elite01_01_ShootEff_Arrow</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1780037570\">Enemy_AML_Elite01_01_ShootEff_Body</a>"
+        },
+        {
+          "name": "Change Character Transformation",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "phase": "Phase1"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1527066682\">Monster_AML_Elite01_Endurance</a>"
+        },
+        {
+          "name": "Achievement",
+          "matchTags": true,
+          "relatedAchievements": [
+            {
+              "title": "Doldrums",
+              "desc": "Make Stormbringer fail to use Windfall Storm due to having no ally with Wind Shear",
+              "rarity": "Low"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "8003052_Monster_AML_Elite01_01_Ability06_Part01": {
+      "fileName": "8003052_Monster_AML_Elite01_01_Ability06_Part01",
+      "childAbilityList": [
+        "8003052_Monster_AML_Elite01_01_Ability06_Camera",
+        "8003052_Monster_AML_Elite01_01_Ability06_Part01",
+        "8003052_Monster_AML_Elite01_01_Ability06_Part02"
+      ],
+      "skillTrigger": "Skill06",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_AML_Elite01_01_Ability06_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8003052_Monster_AML_Elite01_01_Ability03_Part02": {
+      "fileName": "8003052_Monster_AML_Elite01_01_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]"
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Wind",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                  "displayLines": "{[Skill03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill03[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Wind",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                  "displayLines": "{[Skill03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill03[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
+            "displayLines": "{[PassiveSkillInitiate[4]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkillInitiate[4]]}"
+            ]
+          },
+          "baseChance": 1,
+          "stackLimit": {
+            "operator": "Variables[0] ({[PassiveSkillInitiate[5]]}) || RETURN",
+            "displayLines": "{[PassiveSkillInitiate[5]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkillInitiate[5]]}"
+            ]
+          },
+          "valuePerStack": {
+            "Modifier_Poison_DamagePercentage": {
+              "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
+              "displayLines": "{[PassiveSkillInitiate[3]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkillInitiate[3]]}"
+              ]
+            }
+          },
+          "stackFlag": "CharacterSkill"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Targets Adjacent(Blast)}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]"
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Wind",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                  "displayLines": "{[Skill03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill03[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Wind",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                  "displayLines": "{[Skill03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill03[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
+            "displayLines": "{[PassiveSkillInitiate[4]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkillInitiate[4]]}"
+            ]
+          },
+          "baseChance": 1,
+          "stackLimit": {
+            "operator": "Variables[0] ({[PassiveSkillInitiate[5]]}) || RETURN",
+            "displayLines": "{[PassiveSkillInitiate[5]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkillInitiate[5]]}"
+            ]
+          },
+          "valuePerStack": {
+            "Modifier_Poison_DamagePercentage": {
+              "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
+              "displayLines": "{[PassiveSkillInitiate[3]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkillInitiate[3]]}"
+              ]
+            }
+          },
+          "stackFlag": "CharacterSkill"
+        },
+        {
+          "name": "Change Character Transformation",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "phase": "Phase1"
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "8003052_Monster_AML_Elite01_01_Ability03_Part01": {
+      "fileName": "8003052_Monster_AML_Elite01_01_Ability03_Part01",
+      "childAbilityList": [
+        "8003052_Monster_AML_Elite01_01_Ability03_Camera",
+        "8003052_Monster_AML_Elite01_01_Ability03_Part01",
+        "8003052_Monster_AML_Elite01_01_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_AML_Elite01_01_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
+      "references": []
+    },
+    "8003052_Monster_AML_Elite01_01_Ability01_Part02": {
+      "fileName": "8003052_Monster_AML_Elite01_01_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Shot Fired"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]"
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Wind",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                  "displayLines": "{[Skill01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill01[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Wind",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                  "displayLines": "{[Skill01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill01[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
+            "displayLines": "{[PassiveSkillInitiate[4]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkillInitiate[4]]}"
+            ]
+          },
+          "baseChance": 1,
+          "stackLimit": {
+            "operator": "Variables[0] ({[PassiveSkillInitiate[5]]}) || RETURN",
+            "displayLines": "{[PassiveSkillInitiate[5]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkillInitiate[5]]}"
+            ]
+          },
+          "valuePerStack": {
+            "Modifier_Poison_DamagePercentage": {
+              "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
+              "displayLines": "{[PassiveSkillInitiate[3]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkillInitiate[3]]}"
+              ]
+            }
+          },
+          "stackFlag": "CharacterSkill"
+        },
+        {
+          "name": "Change Character Transformation",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "phase": "Phase1"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "8003052_Monster_AML_Elite01_01_Ability01_Part01": {
+      "fileName": "8003052_Monster_AML_Elite01_01_Ability01_Part01",
+      "childAbilityList": [
+        "8003052_Monster_AML_Elite01_01_Ability01_Camera",
+        "8003052_Monster_AML_Elite01_01_Ability01_Part01",
+        "8003052_Monster_AML_Elite01_01_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_AML_Elite01_01_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
     "8003052_Modifiers": {
       "fileName": "8003052_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -2003,11 +1159,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__60428755\">Monster_AML_Elite01_01_PoisonCount</a>",
-          "stackData": [
-            "MDF_MaxLayer",
-            "MDF_LifeTime",
-            "MDF_DamagePercentage"
-          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",

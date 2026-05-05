@@ -574,12 +574,7 @@ const configAbility = {
         "MDF_DamageTakenUpRatio_PerLayer"
       ],
       "latentQueue": [
-        "InsertFlag",
-        "Insert2Flag",
-        "Insert1Flag",
-        "Insert3Flag",
-        "TeammateInsertFlag",
-        "TeammateInsertFlag2"
+        "Insert2Flag"
       ],
       "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
       "type": "Debuff",
@@ -1412,14 +1407,6 @@ const configAbility = {
       "modifierFlags": [
         "DisableHealHP"
       ],
-      "latentQueue": [
-        "InsertFlag",
-        "Insert2Flag",
-        "Insert1Flag",
-        "Insert3Flag",
-        "TeammateInsertFlag",
-        "TeammateInsertFlag2"
-      ],
       "description": "In Repose.",
       "type": "Other",
       "statusName": "Repose",
@@ -1503,14 +1490,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1143427895\">Monster_W2_HuanlongPart_01_Stealth</a>",
       "modifierFlags": [
         "Stealth"
-      ],
-      "latentQueue": [
-        "TeammateInsertFlag2",
-        "TeammateInsertFlag",
-        "Insert3Flag",
-        "Insert1Flag",
-        "Insert2Flag",
-        "InsertFlag"
       ],
       "execute": [
         {

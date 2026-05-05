@@ -3,21 +3,9 @@ const compositeAbilityObject = {
   "fullCharacterName": 8003060,
   "trimCharacterName": 8003060,
   "abilityList": [
-    "8003060_Monster_XP_MonsterGroup_Ability01",
     "8003060_Monster_XP_MonsterGroup_PassiveAbilityInitiate"
   ],
   "abilityObject": {
-    "8003060_Monster_XP_MonsterGroup_Ability01": {
-      "fileName": "8003060_Monster_XP_MonsterGroup_Ability01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "8003060_Monster_XP_MonsterGroup_PassiveAbilityInitiate": {
       "fileName": "8003060_Monster_XP_MonsterGroup_PassiveAbilityInitiate",
       "skillTrigger": "PassiveSkill01",

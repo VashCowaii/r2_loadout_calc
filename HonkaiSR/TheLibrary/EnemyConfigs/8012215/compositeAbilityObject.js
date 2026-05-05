@@ -4,23 +4,13 @@ const compositeAbilityObject = {
   "trimCharacterName": 8012215,
   "abilityList": [
     "8012215_Monster_W2_HuanlongPart_01_IF_PassiveAbility_Insert_Part01",
+    "8012215_Monster_W2_HuanlongPart_03_IF_Passive01",
     "8012215_Monster_W2_HuanlongPart_01_IF_Ability04_Part02",
     "8012215_Monster_W2_HuanlongPart_01_IF_Ability04_Part01",
     "8012215_Monster_W2_HuanlongPart_01_IF_Ability03_Part02",
     "8012215_Monster_W2_HuanlongPart_01_IF_Ability03_Part01",
-    "8012215_Monster_W2_HuanlongPart_03_IF_Passive01",
-    "8012215_Monster_W2_HuanlongPart_01_IF_Passive01",
-    "8012215_Monster_W2_HuanlongPart_01_PassiveAbility_Insert3_Part01",
-    "8012215_Monster_W2_HuanlongPart_01_PassiveAbility_Insert2_Part01",
-    "8012215_Monster_W2_HuanlongPart_01_PassiveAbility_Insert_Part01",
-    "8012215_Monster_W2_HuanlongPart_01_PassiveAbility_InsertAll_Part01",
-    "8012215_Monster_W2_HuanlongPart_01_Ability04_Part02",
-    "8012215_Monster_W2_HuanlongPart_01_Ability04_Part01",
-    "8012215_Monster_W2_HuanlongPart_01_Ability03_Part02",
-    "8012215_Monster_W2_HuanlongPart_01_Ability03_Part01",
     "8012215_Monster_W2_HuanlongPart_01_Ability02_Part02",
     "8012215_Monster_W2_HuanlongPart_01_Ability02_Part01",
-    "8012215_Monster_W2_HuanlongPart_01_PassiveAbilityInitiate",
     "8012215_Modifiers"
   ],
   "abilityObject": {
@@ -160,6 +150,248 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []
+    },
+    "8012215_Monster_W2_HuanlongPart_03_IF_Passive01": {
+      "fileName": "8012215_Monster_W2_HuanlongPart_03_IF_Passive01",
+      "skillTrigger": "PassiveSkill02",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2137176594\">Monster_W2_HuanlongPart_03_IF_Deathrattle</a>"
+        },
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Summoner}}"
+          },
+          "variableName": "SummonerMaxHPValue",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1775073303\">Monster_W2_HuanlongPart_01_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"316085297\">Monster_W2_HuanlongPart_01_IF_Mark</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-265482801\">Monster_W2_HuanlongPart_01_IF_Break</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"532367944\">Standard_SuperArmorController</a>",
+          "valuePerStack": {
+            "MDF_SuperArmorDamageResistance": {
+              "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkill03[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill03[0]]}"
+              ]
+            },
+            "MDF_SuperArmorBreakDamageTakenRatio": {
+              "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
+              "displayLines": "{[PassiveSkill03[1]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill03[1]]}"
+              ]
+            },
+            "MDF_SuperArmorBreakActionDelay": {
+              "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
+              "displayLines": "{[PassiveSkill03[2]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill03[2]]}"
+              ]
+            }
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-265482801\">Monster_W2_HuanlongPart_01_IF_Break</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-69472783\">Monster_W2_HuanlongPart_IF_Active</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-69472783\">Monster_W2_HuanlongPart_IF_Active</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "End Broken State [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-69472783\">Monster_W2_HuanlongPart_IF_Active</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2137176594\">Monster_W2_HuanlongPart_03_IF_Deathrattle</a>",
+          "modifierFlags": [
+            "Deathrattle",
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Was Killed (Queued) [Owner]",
+              "execute": [
+                {
+                  "name": "Dispel Debuffs",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "silent": true
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Summoner of Modifier Holder}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "CurrentHP",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "CurrentHP",
+                    "compareType": "=",
+                    "value2": 0,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Inject Ability Use",
+                      "abilityName": "Monster_W2_HuanlongPart_01_IF_PassiveAbility_Insert_Part01",
+                      "priorityTag": "EnemyForceKill",
+                      "ownerState": "Mask_AliveOrLimbo",
+                      "targetState": "Mask_AliveOrLimbo",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "allowAbilityTriggers": false
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Inject Ability Use",
+                      "checkOverride": {
+                        "name": "Condition Priority",
+                        "overridePriority": "MonsterForceKill",
+                        "condition": {
+                          "name": "Compare: Ability Value",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Summoner of Modifier Holder}}"
+                          },
+                          "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                          "compareType": "<=",
+                          "value2": 0
+                        }
+                      },
+                      "abilityName": "Monster_W2_HuanlongPart_01_IF_PassiveAbility_Insert_Part01",
+                      "priorityTag": "EnemyDeathEffect",
+                      "ownerState": "Mask_AliveOrLimbo",
+                      "targetState": "Mask_AliveOrLimbo",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                },
+                {
+                  "name": "Mark Entity For Immediate Death"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1775073303\">Monster_W2_HuanlongPart_01_MuteHitFly</a>",
+          "modifierFlags": [
+            "MuteHitFly"
+          ]
+        }
+      ]
     },
     "8012215_Monster_W2_HuanlongPart_01_IF_Ability04_Part02": {
       "fileName": "8012215_Monster_W2_HuanlongPart_01_IF_Ability04_Part02",
@@ -1188,2315 +1420,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8012215_Monster_W2_HuanlongPart_03_IF_Passive01": {
-      "fileName": "8012215_Monster_W2_HuanlongPart_03_IF_Passive01",
-      "skillTrigger": "PassiveSkill02",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2137176594\">Monster_W2_HuanlongPart_03_IF_Deathrattle</a>"
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "variableName": "SummonerMaxHPValue",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1775073303\">Monster_W2_HuanlongPart_01_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"316085297\">Monster_W2_HuanlongPart_01_IF_Mark</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-265482801\">Monster_W2_HuanlongPart_01_IF_Break</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"532367944\">Standard_SuperArmorController</a>",
-          "valuePerStack": {
-            "MDF_SuperArmorDamageResistance": {
-              "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill03[0]]}"
-              ]
-            },
-            "MDF_SuperArmorBreakDamageTakenRatio": {
-              "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill03[1]]}"
-              ]
-            },
-            "MDF_SuperArmorBreakActionDelay": {
-              "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill03[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill03[2]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-265482801\">Monster_W2_HuanlongPart_01_IF_Break</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-69472783\">Monster_W2_HuanlongPart_IF_Active</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-69472783\">Monster_W2_HuanlongPart_IF_Active</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-69472783\">Monster_W2_HuanlongPart_IF_Active</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2137176594\">Monster_W2_HuanlongPart_03_IF_Deathrattle</a>",
-          "modifierFlags": [
-            "Deathrattle",
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Was Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Dispel Debuffs",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "silent": true
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Summoner of Modifier Holder}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "CurrentHP",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "CurrentHP",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Monster_W2_HuanlongPart_01_IF_PassiveAbility_Insert_Part01",
-                      "priorityTag": "EnemyForceKill",
-                      "ownerState": "Mask_AliveOrLimbo",
-                      "targetState": "Mask_AliveOrLimbo",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "checkOverride": {
-                        "name": "Condition Priority",
-                        "overridePriority": "MonsterForceKill",
-                        "condition": {
-                          "name": "Compare: Ability Value",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Summoner of Modifier Holder}}"
-                          },
-                          "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                          "compareType": "<=",
-                          "value2": 0
-                        }
-                      },
-                      "abilityName": "Monster_W2_HuanlongPart_01_IF_PassiveAbility_Insert_Part01",
-                      "priorityTag": "EnemyDeathEffect",
-                      "ownerState": "Mask_AliveOrLimbo",
-                      "targetState": "Mask_AliveOrLimbo",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                },
-                {
-                  "name": "Mark Entity For Immediate Death"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1775073303\">Monster_W2_HuanlongPart_01_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ]
-        }
-      ]
-    },
-    "8012215_Monster_W2_HuanlongPart_01_IF_Passive01": {
-      "fileName": "8012215_Monster_W2_HuanlongPart_01_IF_Passive01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-729917037\">Monster_W2_HuanlongPart_01_IF_OnDeathrattle</a>"
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "variableName": "SummonerMaxHPValue",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1775073303\">Monster_W2_HuanlongPart_01_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-265482801\">Monster_W2_HuanlongPart_01_IF_Break</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"316085297\">Monster_W2_HuanlongPart_01_IF_Mark</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"532367944\">Standard_SuperArmorController</a>",
-          "valuePerStack": {
-            "MDF_SuperArmorDamageResistance": {
-              "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill03[0]]}"
-              ]
-            },
-            "MDF_SuperArmorBreakDamageTakenRatio": {
-              "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill03[1]]}"
-              ]
-            },
-            "MDF_SuperArmorBreakActionDelay": {
-              "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill03[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill03[2]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-265482801\">Monster_W2_HuanlongPart_01_IF_Break</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-69472783\">Monster_W2_HuanlongPart_IF_Active</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-69472783\">Monster_W2_HuanlongPart_IF_Active</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-69472783\">Monster_W2_HuanlongPart_IF_Active</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-729917037\">Monster_W2_HuanlongPart_01_IF_OnDeathrattle</a>",
-          "modifierFlags": [
-            "Deathrattle",
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Was Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Dispel Debuffs",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "silent": true
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Summoner of Modifier Holder}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "CurrentHP",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "CurrentHP",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Monster_W2_HuanlongPart_01_IF_PassiveAbility_Insert_Part01",
-                      "priorityTag": "EnemyForceKill",
-                      "ownerState": "Mask_AliveOrLimbo",
-                      "targetState": "Mask_AliveOrLimbo",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "checkOverride": {
-                        "name": "Condition Priority",
-                        "overridePriority": "MonsterForceKill",
-                        "condition": {
-                          "name": "Compare: Ability Value",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Summoner of Modifier Holder}}"
-                          },
-                          "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                          "compareType": "<=",
-                          "value2": 0
-                        }
-                      },
-                      "abilityName": "Monster_W2_HuanlongPart_01_IF_PassiveAbility_Insert_Part01",
-                      "priorityTag": "EnemyDeathEffect",
-                      "ownerState": "Mask_AliveOrLimbo",
-                      "targetState": "Mask_AliveOrLimbo",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                },
-                {
-                  "name": "Mark Entity For Immediate Death"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1775073303\">Monster_W2_HuanlongPart_01_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ]
-        }
-      ]
-    },
-    "8012215_Monster_W2_HuanlongPart_01_PassiveAbility_Insert3_Part01": {
-      "fileName": "8012215_Monster_W2_HuanlongPart_01_PassiveAbility_Insert3_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Modifier Holder}}"
-                },
-                "value1": "Insert2Flag",
-                "compareType": "=",
-                "value2": 0,
-                "contextScope": "TargetEntity"
-              },
-              {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Modifier Holder}}"
-                },
-                "value1": "Insert1Flag",
-                "compareType": "=",
-                "value2": 0,
-                "contextScope": "TargetEntity"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": {
-                  "operator": "Variables[0] (SummonerID) || RETURN",
-                  "displayLines": "SummonerID",
-                  "constants": [],
-                  "variables": [
-                    "SummonerID"
-                  ]
-                },
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": null
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-                  "valuePerStack": {
-                    "MDF_ActionDelayRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_214) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_214",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_214"
-                      ]
-                    },
-                    "MDF_DamageTakenUpRatio_PerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_215) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_215",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_215"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8012215_Monster_W2_HuanlongPart_01_PassiveAbility_Insert2_Part01": {
-      "fileName": "8012215_Monster_W2_HuanlongPart_01_PassiveAbility_Insert2_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": {
-              "operator": "Variables[0] (SummonerID) || RETURN",
-              "displayLines": "SummonerID",
-              "constants": [],
-              "variables": [
-                "SummonerID"
-              ]
-            },
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-              "valuePerStack": {
-                "MDF_ActionDelayRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_214) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_214",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_214"
-                  ]
-                },
-                "MDF_DamageTakenUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_215) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_215",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_215"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1043458445\">Monster_W2_HuanlongPart_01_Dormancy</a>[<span class=\"descriptionNumberColor\">Repose</span>]",
-              "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_196) || RETURN",
-                "displayLines": "UnusedUnderThisBase_196",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_196"
-                ]
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8012215_Monster_W2_HuanlongPart_01_PassiveAbility_Insert_Part01": {
-      "fileName": "8012215_Monster_W2_HuanlongPart_01_PassiveAbility_Insert_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "value1": "Insert2Flag",
-            "compareType": "=",
-            "value2": 0,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": {
-                  "operator": "Variables[0] (SummonerID) || RETURN",
-                  "displayLines": "SummonerID",
-                  "constants": [],
-                  "variables": [
-                    "SummonerID"
-                  ]
-                },
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": null
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-                  "valuePerStack": {
-                    "MDF_ActionDelayRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_214) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_214",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_214"
-                      ]
-                    },
-                    "MDF_DamageTakenUpRatio_PerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_215) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_215",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_215"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8012215_Monster_W2_HuanlongPart_01_PassiveAbility_InsertAll_Part01": {
-      "fileName": "8012215_Monster_W2_HuanlongPart_01_PassiveAbility_InsertAll_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "value1": "InsertFlag",
-            "compareType": "=",
-            "value2": 0,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "InsertFlag",
-              "value": 1
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Modifier Holder}}"
-                },
-                "value1": "Insert2Flag",
-                "compareType": "=",
-                "value2": 1,
-                "contextScope": "TargetEntity"
-              },
-              "passed": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "searchRandom": true,
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonerID) || RETURN",
-                      "displayLines": "SummonerID",
-                      "constants": [],
-                      "variables": [
-                        "SummonerID"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{All Unselectable Targets, All Team Members(Exclude Self)}}"
-                      },
-                      "searchRandom": true,
-                      "includeDyingTargets": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": {
-                          "operator": "Variables[0] (SummonID) || RETURN",
-                          "displayLines": "SummonID",
-                          "constants": [],
-                          "variables": [
-                            "SummonID"
-                          ]
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": null
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "value1": "InsertFlag",
-                            "compareType": "=",
-                            "value2": 1,
-                            "contextScope": "TargetEntity"
-                          },
-                          "passed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "TeammateInsertFlag",
-                              "value": 1
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "TeammateInsertFlag",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Find New Target",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{All Unselectable Targets, All Team Members(Exclude Self)}}"
-                          },
-                          "searchRandom": true,
-                          "includeDyingTargets": true,
-                          "maxTargets": 1,
-                          "conditions": {
-                            "name": "Enemy ID",
-                            "ID": {
-                              "operator": "Variables[0] (SummonID) || RETURN",
-                              "displayLines": "SummonID",
-                              "constants": [],
-                              "variables": [
-                                "SummonID"
-                              ]
-                            },
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "characterName": null
-                          },
-                          "ifTargetFound": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "OR",
-                                "conditionList": [
-                                  {
-                                    "name": "Compare: Variable",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "value1": "Insert1Flag",
-                                    "compareType": "=",
-                                    "value2": 1,
-                                    "contextScope": "TargetEntity"
-                                  },
-                                  {
-                                    "name": "Compare: Variable",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "value1": "Insert2Flag",
-                                    "compareType": "=",
-                                    "value2": 1,
-                                    "contextScope": "TargetEntity"
-                                  },
-                                  {
-                                    "name": "Compare: Variable",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "value1": "Insert3Flag",
-                                    "compareType": "=",
-                                    "value2": 1,
-                                    "contextScope": "TargetEntity"
-                                  }
-                                ]
-                              },
-                              "passed": [
-                                {
-                                  "name": "Define Custom Variable",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Modifier Holder}}"
-                                  },
-                                  "scope": "TargetEntity",
-                                  "variableName": "TeammateInsertFlag2",
-                                  "value": 1
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "TeammateInsertFlag2",
-                            "compareType": "=",
-                            "value2": 1,
-                            "contextScope": "TargetEntity"
-                          },
-                          "passed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-                              "valuePerStack": {
-                                "MDF_ActionDelayRatio": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_214) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_214",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_214"
-                                  ]
-                                },
-                                "MDF_DamageTakenUpRatio_PerLayer": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_215) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_215",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_215"
-                                  ]
-                                }
-                              },
-                              "addStacksPerTrigger": 2
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-                              "valuePerStack": {
-                                "MDF_ActionDelayRatio": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_214) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_214",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_214"
-                                  ]
-                                },
-                                "MDF_DamageTakenUpRatio_PerLayer": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_215) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_215",
-                                  "constants": [],
-                                  "variables": [
-                                    "UnusedUnderThisBase_215"
-                                  ]
-                                }
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1043458445\">Monster_W2_HuanlongPart_01_Dormancy</a>[<span class=\"descriptionNumberColor\">Repose</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_196) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_196",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_196"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "Insert1Flag",
-                    "compareType": "=",
-                    "value2": 1,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": {
-                          "operator": "Variables[0] (SummonerID) || RETURN",
-                          "displayLines": "SummonerID",
-                          "constants": [],
-                          "variables": [
-                            "SummonerID"
-                          ]
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": null
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Find New Target",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{All Unselectable Targets, All Team Members(Exclude Self)}}"
-                          },
-                          "searchRandom": true,
-                          "includeDyingTargets": true,
-                          "maxTargets": 1,
-                          "conditions": {
-                            "name": "Enemy ID",
-                            "ID": {
-                              "operator": "Variables[0] (SummonID) || RETURN",
-                              "displayLines": "SummonID",
-                              "constants": [],
-                              "variables": [
-                                "SummonID"
-                              ]
-                            },
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "characterName": null
-                          },
-                          "ifTargetFound": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Variable",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value1": "InsertFlag",
-                                "compareType": "=",
-                                "value2": 1,
-                                "contextScope": "TargetEntity"
-                              },
-                              "passed": [
-                                {
-                                  "name": "Define Custom Variable",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Modifier Holder}}"
-                                  },
-                                  "scope": "TargetEntity",
-                                  "variableName": "TeammateInsertFlag",
-                                  "value": 1
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "TeammateInsertFlag",
-                            "compareType": "=",
-                            "value2": 0,
-                            "contextScope": "TargetEntity"
-                          },
-                          "passed": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Has Flag",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                },
-                                "flagName": "STAT_CTRL"
-                              }
-                            },
-                            {
-                              "name": "Find New Target",
-                              "from": {
-                                "name": "Target Name",
-                                "target": "{{All Unselectable Targets, All Team Members(Exclude Self)}}"
-                              },
-                              "searchRandom": true,
-                              "includeDyingTargets": true,
-                              "maxTargets": 1,
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": {
-                                  "operator": "Variables[0] (SummonID) || RETURN",
-                                  "displayLines": "SummonID",
-                                  "constants": [],
-                                  "variables": [
-                                    "SummonID"
-                                  ]
-                                },
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": null
-                              },
-                              "ifTargetFound": [
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "OR",
-                                    "conditionList": [
-                                      {
-                                        "name": "Compare: Variable",
-                                        "target": {
-                                          "name": "Target Name",
-                                          "target": "{{Parameter Target}}"
-                                        },
-                                        "value1": "Insert1Flag",
-                                        "compareType": "=",
-                                        "value2": 1,
-                                        "contextScope": "TargetEntity"
-                                      },
-                                      {
-                                        "name": "Compare: Variable",
-                                        "target": {
-                                          "name": "Target Name",
-                                          "target": "{{Parameter Target}}"
-                                        },
-                                        "value1": "Insert2Flag",
-                                        "compareType": "=",
-                                        "value2": 1,
-                                        "contextScope": "TargetEntity"
-                                      },
-                                      {
-                                        "name": "Compare: Variable",
-                                        "target": {
-                                          "name": "Target Name",
-                                          "target": "{{Parameter Target}}"
-                                        },
-                                        "value1": "Insert3Flag",
-                                        "compareType": "=",
-                                        "value2": 1,
-                                        "contextScope": "TargetEntity"
-                                      }
-                                    ]
-                                  },
-                                  "passed": [
-                                    {
-                                      "name": "Define Custom Variable",
-                                      "target": {
-                                        "name": "Target Name",
-                                        "target": "{{Modifier Holder}}"
-                                      },
-                                      "scope": "TargetEntity",
-                                      "variableName": "TeammateInsertFlag2",
-                                      "value": 1
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Variable",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Modifier Holder}}"
-                                },
-                                "value1": "TeammateInsertFlag2",
-                                "compareType": "=",
-                                "value2": 1,
-                                "contextScope": "TargetEntity"
-                              },
-                              "passed": [
-                                {
-                                  "name": "Add Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-                                  "valuePerStack": {
-                                    "MDF_ActionDelayRatio": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_214) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_214",
-                                      "constants": [],
-                                      "variables": [
-                                        "UnusedUnderThisBase_214"
-                                      ]
-                                    },
-                                    "MDF_DamageTakenUpRatio_PerLayer": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_215) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_215",
-                                      "constants": [],
-                                      "variables": [
-                                        "UnusedUnderThisBase_215"
-                                      ]
-                                    }
-                                  },
-                                  "addStacksPerTrigger": 2
-                                }
-                              ],
-                              "failed": [
-                                {
-                                  "name": "Add Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-                                  "valuePerStack": {
-                                    "MDF_ActionDelayRatio": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_214) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_214",
-                                      "constants": [],
-                                      "variables": [
-                                        "UnusedUnderThisBase_214"
-                                      ]
-                                    },
-                                    "MDF_DamageTakenUpRatio_PerLayer": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_215) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_215",
-                                      "constants": [],
-                                      "variables": [
-                                        "UnusedUnderThisBase_215"
-                                      ]
-                                    }
-                                  }
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "Insert3Flag",
-                        "compareType": "=",
-                        "value2": 1,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Find New Target",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          "searchRandom": true,
-                          "conditions": {
-                            "name": "Enemy ID",
-                            "ID": {
-                              "operator": "Variables[0] (SummonerID) || RETURN",
-                              "displayLines": "SummonerID",
-                              "constants": [],
-                              "variables": [
-                                "SummonerID"
-                              ]
-                            },
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "characterName": null
-                          },
-                          "ifTargetFound": [
-                            {
-                              "name": "Find New Target",
-                              "from": {
-                                "name": "Target Name",
-                                "target": "{{All Unselectable Targets, All Team Members(Exclude Self)}}"
-                              },
-                              "searchRandom": true,
-                              "includeDyingTargets": true,
-                              "maxTargets": 1,
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": {
-                                  "operator": "Variables[0] (SummonID) || RETURN",
-                                  "displayLines": "SummonID",
-                                  "constants": [],
-                                  "variables": [
-                                    "SummonID"
-                                  ]
-                                },
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": null
-                              },
-                              "ifTargetFound": [
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Compare: Variable",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "value1": "InsertFlag",
-                                    "compareType": "=",
-                                    "value2": 1,
-                                    "contextScope": "TargetEntity"
-                                  },
-                                  "passed": [
-                                    {
-                                      "name": "Define Custom Variable",
-                                      "target": {
-                                        "name": "Target Name",
-                                        "target": "{{Modifier Holder}}"
-                                      },
-                                      "scope": "TargetEntity",
-                                      "variableName": "TeammateInsertFlag",
-                                      "value": 1
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Variable",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Modifier Holder}}"
-                                },
-                                "value1": "TeammateInsertFlag",
-                                "compareType": "=",
-                                "value2": 0,
-                                "contextScope": "TargetEntity"
-                              },
-                              "passed": [
-                                {
-                                  "name": "Find New Target",
-                                  "from": {
-                                    "name": "Target Name",
-                                    "target": "{{All Unselectable Targets, All Team Members(Exclude Self)}}"
-                                  },
-                                  "searchRandom": true,
-                                  "includeDyingTargets": true,
-                                  "maxTargets": 1,
-                                  "conditions": {
-                                    "name": "Enemy ID",
-                                    "ID": {
-                                      "operator": "Variables[0] (SummonID) || RETURN",
-                                      "displayLines": "SummonID",
-                                      "constants": [],
-                                      "variables": [
-                                        "SummonID"
-                                      ]
-                                    },
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "characterName": null
-                                  },
-                                  "ifTargetFound": [
-                                    {
-                                      "name": "IF",
-                                      "conditions": {
-                                        "name": "OR",
-                                        "conditionList": [
-                                          {
-                                            "name": "Compare: Variable",
-                                            "target": {
-                                              "name": "Target Name",
-                                              "target": "{{Parameter Target}}"
-                                            },
-                                            "value1": "Insert1Flag",
-                                            "compareType": "=",
-                                            "value2": 1,
-                                            "contextScope": "TargetEntity"
-                                          },
-                                          {
-                                            "name": "Compare: Variable",
-                                            "target": {
-                                              "name": "Target Name",
-                                              "target": "{{Parameter Target}}"
-                                            },
-                                            "value1": "Insert2Flag",
-                                            "compareType": "=",
-                                            "value2": 1,
-                                            "contextScope": "TargetEntity"
-                                          },
-                                          {
-                                            "name": "Compare: Variable",
-                                            "target": {
-                                              "name": "Target Name",
-                                              "target": "{{Parameter Target}}"
-                                            },
-                                            "value1": "Insert3Flag",
-                                            "compareType": "=",
-                                            "value2": 1,
-                                            "contextScope": "TargetEntity"
-                                          }
-                                        ]
-                                      },
-                                      "passed": [
-                                        {
-                                          "name": "Define Custom Variable",
-                                          "target": {
-                                            "name": "Target Name",
-                                            "target": "{{Modifier Holder}}"
-                                          },
-                                          "scope": "TargetEntity",
-                                          "variableName": "TeammateInsertFlag2",
-                                          "value": 1
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Compare: Variable",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Modifier Holder}}"
-                                    },
-                                    "value1": "TeammateInsertFlag2",
-                                    "compareType": "=",
-                                    "value2": 1,
-                                    "contextScope": "TargetEntity"
-                                  },
-                                  "passed": [
-                                    {
-                                      "name": "Add Events/Bonuses",
-                                      "to": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-                                      "valuePerStack": {
-                                        "MDF_ActionDelayRatio": {
-                                          "operator": "Variables[0] (UnusedUnderThisBase_214) || RETURN",
-                                          "displayLines": "UnusedUnderThisBase_214",
-                                          "constants": [],
-                                          "variables": [
-                                            "UnusedUnderThisBase_214"
-                                          ]
-                                        },
-                                        "MDF_DamageTakenUpRatio_PerLayer": {
-                                          "operator": "Variables[0] (UnusedUnderThisBase_215) || RETURN",
-                                          "displayLines": "UnusedUnderThisBase_215",
-                                          "constants": [],
-                                          "variables": [
-                                            "UnusedUnderThisBase_215"
-                                          ]
-                                        }
-                                      },
-                                      "addStacksPerTrigger": 2
-                                    }
-                                  ],
-                                  "failed": [
-                                    {
-                                      "name": "Add Events/Bonuses",
-                                      "to": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "modifier": "<a class=\"gModGreen\" id=\"-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-                                      "valuePerStack": {
-                                        "MDF_ActionDelayRatio": {
-                                          "operator": "Variables[0] (UnusedUnderThisBase_214) || RETURN",
-                                          "displayLines": "UnusedUnderThisBase_214",
-                                          "constants": [],
-                                          "variables": [
-                                            "UnusedUnderThisBase_214"
-                                          ]
-                                        },
-                                        "MDF_DamageTakenUpRatio_PerLayer": {
-                                          "operator": "Variables[0] (UnusedUnderThisBase_215) || RETURN",
-                                          "displayLines": "UnusedUnderThisBase_215",
-                                          "constants": [],
-                                          "variables": [
-                                            "UnusedUnderThisBase_215"
-                                          ]
-                                        }
-                                      }
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Modifier Holder}}"
-                },
-                "value1": "TeammateInsertFlag",
-                "compareType": "=",
-                "value2": 0,
-                "contextScope": "TargetEntity"
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8012215_Monster_W2_HuanlongPart_01_Ability04_Part02": {
-      "fileName": "8012215_Monster_W2_HuanlongPart_01_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"541144260\">Monster_W2_Huanlong_Ability08_First</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "value1": "Phase3End",
-            "compareType": "=",
-            "value2": 1,
-            "contextScope": "TargetEntity"
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1845976277\">Monster_W2_HuanlongPart_01_Activity</a>[<span class=\"descriptionNumberColor\">Bloom</span>]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1118527556\">Monster_W2_HuanlongPart_01_RemoveActivityEffect</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Unselectable Targets, All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": {
-              "operator": "Variables[0] (SummonID) || RETURN",
-              "displayLines": "SummonID",
-              "constants": [],
-              "variables": [
-                "SummonID"
-              ]
-            },
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null
-          },
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1043458445\">Monster_W2_HuanlongPart_01_Dormancy</a>[<span class=\"descriptionNumberColor\">Repose</span>]"
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "DormancyFlag",
-                  "value": 1
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1143427895\">Monster_W2_HuanlongPart_01_Stealth</a>"
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "flagName": "Break"
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "BreakFlag",
-                  "value": 1
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "value1": "Phase3End",
-            "compareType": "=",
-            "value2": 1,
-            "contextScope": "TargetEntity"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1932091323\">Monster_W2_Huanlong_Ability08_Prepare</a>"
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "variableName": "MaxHPValue",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster's Summoner}}"
-                },
-                "value1": "Phase3End",
-                "compareType": "=",
-                "value2": 1,
-                "contextScope": "TargetEntity"
-              },
-              "passed": [
-                {
-                  "name": "Set HP Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "setValue": 1
-                }
-              ],
-              "failed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Imaginary",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (MaxHPValue) || Variables[1] (UnusedUnderThisBase_200) || MUL || RETURN",
-                      "displayLines": "(MaxHPValue * UnusedUnderThisBase_200)",
-                      "constants": [],
-                      "variables": [
-                        "MaxHPValue",
-                        "UnusedUnderThisBase_200"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "DamageFlat": {
-                  "operator": "Variables[0] (MaxHPValue) || Variables[1] (UnusedUnderThisBase_200) || MUL || RETURN",
-                  "displayLines": "(MaxHPValue * UnusedUnderThisBase_200)",
-                  "constants": [],
-                  "variables": [
-                    "MaxHPValue",
-                    "UnusedUnderThisBase_200"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1932091323\">Monster_W2_Huanlong_Ability08_Prepare</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1845976277\">Monster_W2_HuanlongPart_01_Activity</a>[<span class=\"descriptionNumberColor\">Bloom</span>]"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1845976277\">Monster_W2_HuanlongPart_01_Activity</a>[<span class=\"descriptionNumberColor\">Bloom</span>]"
-          },
-          "noTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1896373900\">Monster_W2_Huanlong_Charge</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"911555281\">Monster_W2_Huanlong_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1866067565\">Monster_W2_Huanlong_Sign02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-921214664\">Monster_W2_Huanlong_Ability08Mark</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"541144260\">Monster_W2_Huanlong_Ability08_First</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1118527556\">Monster_W2_HuanlongPart_01_RemoveActivityEffect</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": {
-              "operator": "Variables[0] (SummonID) || RETURN",
-              "displayLines": "SummonID",
-              "constants": [],
-              "variables": [
-                "SummonID"
-              ]
-            },
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null
-          },
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value1": "DormancyFlag",
-                "compareType": "=",
-                "value2": 1,
-                "contextScope": "TargetEntity"
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "DormancyFlag",
-                  "value": 0
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1143427895\">Monster_W2_HuanlongPart_01_Stealth</a>"
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value1": "BreakFlag",
-                "compareType": "=",
-                "value2": 1,
-                "contextScope": "TargetEntity"
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "BreakFlag",
-                  "value": 0
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "value1": "Phase3End",
-            "compareType": "=",
-            "value2": 1,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Inject Ability Use",
-              "abilityName": "Monster_W2_Huanlong_Part3_Camera3_Insert",
-              "abilitySource": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "abilityTarget": {
-                "name": "Target Name",
-                "target": "{{Phantylia: Main Target}}"
-              },
-              "priorityTag": "EnemyPhaseChange",
-              "ownerState": "Mask_AliveOrLimbo",
-              "targetState": "Mask_AliveOrLimbo",
-              "canHitNonTargets": true,
-              "allowAbilityTriggers": false
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8012215_Monster_W2_HuanlongPart_01_Ability04_Part01": {
-      "fileName": "8012215_Monster_W2_HuanlongPart_01_Ability04_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_HuanlongPart_01_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 3
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 3
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8012215_Monster_W2_HuanlongPart_01_Ability03_Part02": {
-      "fileName": "8012215_Monster_W2_HuanlongPart_01_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-410845452\">Monster_W2_HuanlongPart_01_Part2_SpecialPerform</a>"
-          }
-        },
-        "Ability Start",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-410845452\">Monster_W2_HuanlongPart_01_Part2_SpecialPerform</a>"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-410845452\">Monster_W2_HuanlongPart_01_Part2_SpecialPerform</a>"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-410845452\">Monster_W2_HuanlongPart_01_Part2_SpecialPerform</a>"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
-          },
-          "baseChance": {
-            "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-            "displayLines": "{[Skill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[2]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_DirtyHPRatio": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            }
-          },
-          "success": []
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-410845452\">Monster_W2_HuanlongPart_01_Part2_SpecialPerform</a>"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"45124899\">Monster_W2_HuanlongPart_01_Part2_JingYuan</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-410845452\">Monster_W2_HuanlongPart_01_Part2_SpecialPerform</a>"
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-410845452\">Monster_W2_HuanlongPart_01_Part2_SpecialPerform</a>"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8012215_Monster_W2_HuanlongPart_01_Ability03_Part01": {
-      "fileName": "8012215_Monster_W2_HuanlongPart_01_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_HuanlongPart_01_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-410845452\">Monster_W2_HuanlongPart_01_Part2_SpecialPerform</a>"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
     "8012215_Monster_W2_HuanlongPart_01_Ability02_Part02": {
       "fileName": "8012215_Monster_W2_HuanlongPart_01_Ability02_Part02",
       "abilityType": null,
@@ -3638,105 +1561,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
-    },
-    "8012215_Monster_W2_HuanlongPart_01_PassiveAbilityInitiate": {
-      "fileName": "8012215_Monster_W2_HuanlongPart_01_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1485253143\">Monster_W2_HuanlongPart_01_Revive</a>",
-          "valuePerStack": {
-            "MDF_DormancyLifeTime": {
-              "operator": "Variables[0] (UnusedUnderThisBase_196) || RETURN",
-              "displayLines": "UnusedUnderThisBase_196",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_196"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"569926357\">Monster_W2_HuanlongPart_01_WeakControl</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1775073303\">Monster_W2_HuanlongPart_01_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-647503843\">Monster_W2_HuanlongPart_01_InsertAbilityController</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"90629678\">Monster_W2_HuanlongPart_01_Number01</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"73852059\">Monster_W2_HuanlongPart_01_Number02</a>"
-            }
-          ],
-          "noTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"90629678\">Monster_W2_HuanlongPart_01_Number01</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1775073303\">Monster_W2_HuanlongPart_01_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ]
-        }
-      ]
     },
     "8012215_Modifiers": {
       "fileName": "8012215_Modifiers",
@@ -4309,18 +2133,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "stackType": "Replace",
-          "stackData": [
-            "MDF_ActionDelayRatio",
-            "MDF_DamageTakenUpRatio_PerLayer"
-          ],
-          "latentQueue": [
-            "InsertFlag",
-            "Insert2Flag",
-            "Insert1Flag",
-            "Insert3Flag",
-            "TeammateInsertFlag",
-            "TeammateInsertFlag2"
-          ],
           "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
           "type": "Debuff",
           "effectName": "Vulnerability",
@@ -4385,9 +2197,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1118527556\">Monster_W2_HuanlongPart_01_RemoveActivityEffect</a>",
-          "latentQueue": [
-            "Phase3End"
-          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -5152,14 +2961,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "DisableHealHP"
           ],
-          "latentQueue": [
-            "InsertFlag",
-            "Insert2Flag",
-            "Insert1Flag",
-            "Insert3Flag",
-            "TeammateInsertFlag",
-            "TeammateInsertFlag2"
-          ],
           "description": "In Repose.",
           "type": "Other",
           "statusName": "Repose",
@@ -5244,14 +3045,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Stealth"
           ],
-          "latentQueue": [
-            "TeammateInsertFlag2",
-            "TeammateInsertFlag",
-            "Insert3Flag",
-            "Insert1Flag",
-            "Insert2Flag",
-            "InsertFlag"
-          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5267,9 +3060,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1485253143\">Monster_W2_HuanlongPart_01_Revive</a>",
-          "stackData": [
-            "MDF_DormancyLifeTime"
-          ],
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",

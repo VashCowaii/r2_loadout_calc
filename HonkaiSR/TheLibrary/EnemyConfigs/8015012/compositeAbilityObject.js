@@ -3,229 +3,26 @@ const compositeAbilityObject = {
   "fullCharacterName": 8015012,
   "trimCharacterName": 8015012,
   "abilityList": [
-    "8015012_Monster_AML_Boss_IF_PassiveAbilityInitiate",
+    "8015012_Monster_AML_Boss_IF_InsertPart3_Part01",
+    "8015012_Monster_AML_Boss_IF_InsertPart2_Part01",
+    "8015012_Monster_AML_Boss_IF_InsertPart1_Part01",
     "8015012_Monster_AML_Boss_IF_AbilityEX05",
     "8015012_Monster_AML_Boss_IF_AbilityEX04",
     "8015012_Monster_AML_Boss_IF_AbilityEX03",
     "8015012_Monster_AML_Boss_IF_AbilityEX02",
     "8015012_Monster_AML_Boss_IF_AbilityEX01",
-    "8015012_Monster_AML_Boss_IF_InsertPart3_Part01",
-    "8015012_Monster_AML_Boss_IF_InsertPart2_Part01",
-    "8015012_Monster_AML_Boss_IF_InsertPart1_Part01",
-    "8015012_Monster_AML_Boss_IF_Insert_DownAndChangePhase_Part02",
-    "8015012_Monster_AML_Boss_IF_Insert_DownAndChangePhase_Part01",
+    "8015012_Monster_AML_Boss_IF_PassiveAbilityInitiate",
+    "8015012_Monster_AML_Boss_IF_AbilityP02",
     "8015012_Monster_AML_Boss_IF_Insert02_Part02",
     "8015012_Monster_AML_Boss_IF_Insert02_Part01",
+    "8015012_Monster_AML_Boss_IF_Insert_DownAndChangePhase_Part02",
+    "8015012_Monster_AML_Boss_IF_Insert_DownAndChangePhase_Part01",
     "8015012_Monster_AML_Boss_IF_Insert_Recover_Part01",
     "8015012_Monster_AML_Boss_IF_Insert_ChangePhase_Part01",
-    "8015012_Monster_AML_Boss_IF_AbilityP02",
     "8015012_Monster_AML_Boss_IF_AbilityP01",
     "8015012_Modifiers"
   ],
   "abilityObject": {
-    "8015012_Monster_AML_Boss_IF_PassiveAbilityInitiate": {
-      "fileName": "8015012_Monster_AML_Boss_IF_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Set Enemy Phase"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1346968931\">Enemy_AML_Boss_IF_Die_Camera</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8015012_Monster_AML_Boss_IF_AbilityEX05": {
-      "fileName": "8015012_Monster_AML_Boss_IF_AbilityEX05",
-      "skillTrigger": "SkillEX05",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8015012_Monster_AML_Boss_IF_AbilityEX04": {
-      "fileName": "8015012_Monster_AML_Boss_IF_AbilityEX04",
-      "skillTrigger": "SkillEX04",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": ">=",
-            "value2": 4
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1886072709\">Enemy_AML_Boss_IF_AbilityEX04</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8015012_Monster_AML_Boss_IF_AbilityEX03": {
-      "fileName": "8015012_Monster_AML_Boss_IF_AbilityEX03",
-      "skillTrigger": "SkillEX03",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": ">=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1802184614\">Enemy_AML_Boss_IF_AbilityEX03</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8015012_Monster_AML_Boss_IF_AbilityEX02": {
-      "fileName": "8015012_Monster_AML_Boss_IF_AbilityEX02",
-      "skillTrigger": "SkillEX02",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": ">=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1785406995\">Enemy_AML_Boss_IF_AbilityEX02</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8015012_Monster_AML_Boss_IF_AbilityEX01": {
-      "fileName": "8015012_Monster_AML_Boss_IF_AbilityEX01",
-      "skillTrigger": "SkillEX01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": ">=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1835739852\">Enemy_AML_Boss_IF_AbilityEX01</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "8015012_Monster_AML_Boss_IF_InsertPart3_Part01": {
       "fileName": "8015012_Monster_AML_Boss_IF_InsertPart3_Part01",
       "abilityType": null,
@@ -1123,32 +920,221 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8015012_Monster_AML_Boss_IF_Insert_DownAndChangePhase_Part02": {
-      "fileName": "8015012_Monster_AML_Boss_IF_Insert_DownAndChangePhase_Part02",
-      "abilityType": null,
+    "8015012_Monster_AML_Boss_IF_AbilityEX05": {
+      "fileName": "8015012_Monster_AML_Boss_IF_AbilityEX05",
+      "skillTrigger": "SkillEX05",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8015012_Monster_AML_Boss_IF_AbilityEX04": {
+      "fileName": "8015012_Monster_AML_Boss_IF_AbilityEX04",
+      "skillTrigger": "SkillEX04",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HardLevel",
+            "compareType": ">=",
+            "value2": 4
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1886072709\">Enemy_AML_Boss_IF_AbilityEX04</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8015012_Monster_AML_Boss_IF_AbilityEX03": {
+      "fileName": "8015012_Monster_AML_Boss_IF_AbilityEX03",
+      "skillTrigger": "SkillEX03",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HardLevel",
+            "compareType": ">=",
+            "value2": 3
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1802184614\">Enemy_AML_Boss_IF_AbilityEX03</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8015012_Monster_AML_Boss_IF_AbilityEX02": {
+      "fileName": "8015012_Monster_AML_Boss_IF_AbilityEX02",
+      "skillTrigger": "SkillEX02",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HardLevel",
+            "compareType": ">=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1785406995\">Enemy_AML_Boss_IF_AbilityEX02</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8015012_Monster_AML_Boss_IF_AbilityEX01": {
+      "fileName": "8015012_Monster_AML_Boss_IF_AbilityEX01",
+      "skillTrigger": "SkillEX01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HardLevel",
+            "compareType": ">=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1835739852\">Enemy_AML_Boss_IF_AbilityEX01</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8015012_Monster_AML_Boss_IF_PassiveAbilityInitiate": {
+      "fileName": "8015012_Monster_AML_Boss_IF_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Inject Ability Use",
-          "abilityName": "Monster_AML_Boss_IF_Insert_ChangePhase_Part01",
-          "abilitySource": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "abilityTarget": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "priorityTag": "EnemyPhaseChange",
-          "ownerState": "Mask_AliveOrLimbo",
-          "targetState": "Mask_AliveOrLimbo",
-          "canHitNonTargets": true,
-          "showInActionOrder": true,
-          "allowAbilityTriggers": false
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         },
         {
-          "name": "Remove Events/Bonuses",
+          "name": "Set Enemy Phase"
+        },
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1346968931\">Enemy_AML_Boss_IF_Die_Camera</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8015012_Monster_AML_Boss_IF_AbilityP02": {
+      "fileName": "8015012_Monster_AML_Boss_IF_AbilityP02",
+      "childAbilityList": [
+        "8015012_Monster_AML_Boss_IF_AbilityP02"
+      ],
+      "skillTrigger": "SkillP02",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -1156,124 +1142,20 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1744952962\">Enemy_AML_Boss_IF_Unselectable</a>[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
         },
         {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"651799441\">Enemy_AML_Boss_ListenPartDie</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Unselectable Targets, All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2081849040\">Enemy_AML_Boss_IF_Part_Revive</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1787283303\">Enemy_AML_Boss_IF_Sign_Part1</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1804060922\">Enemy_AML_Boss_IF_Sign_Part2</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1820838541\">Enemy_AML_Boss_IF_Sign_Part3</a>"
-            },
-            {
-              "name": "Mark Entity For Immediate Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            {
-              "name": "Force Entity Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            {
-              "name": "Remove from Team Target Grouping",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "stayInTeam": false
-            }
-          ]
-        },
-        {
-          "name": "Change Character Transformation",
+          "name": "Assign Unique Name",
+          "uniqueName": "AML_Boss_00",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          },
-          "phase": "Phase2"
-        },
-        {
-          "name": "Set Mapping Point",
-          "point": "Origin",
-          "mapTo": "HeadOrigin"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"739623542\">Enemy_AML_Boss_IF_DamageTakenUp</a>",
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
-            }
           }
         },
         {
-          "name": "Set HP Value",
-          "target": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "setValue": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ListenAllDieController"
+          "modifier": "<a class=\"gModGreen\" id=\"1146217540\">Enemy_AML_Boss_IF_PassiveAbilityInitiate_ChangePhaseController</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1281,32 +1163,13 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"1605741417\">Enemy_AML_Boss_HitEffect</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"255719361\">Enemy_AML_Boss_IF_ListenAllPartLimbo</a>"
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
-      "references": []
-    },
-    "8015012_Monster_AML_Boss_IF_Insert_DownAndChangePhase_Part01": {
-      "fileName": "8015012_Monster_AML_Boss_IF_Insert_DownAndChangePhase_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Boss_IF_Insert_DownAndChangePhase_Part02",
-          "isTrigger": true
-        }
-      ],
-      "targetObjectData": {
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -1507,6 +1370,194 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "ability": "Monster_AML_Boss_IF_Insert02_Part02",
+          "isTrigger": true
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8015012_Monster_AML_Boss_IF_Insert_DownAndChangePhase_Part02": {
+      "fileName": "8015012_Monster_AML_Boss_IF_Insert_DownAndChangePhase_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Inject Ability Use",
+          "abilityName": "Monster_AML_Boss_IF_Insert_ChangePhase_Part01",
+          "abilitySource": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "abilityTarget": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "priorityTag": "EnemyPhaseChange",
+          "ownerState": "Mask_AliveOrLimbo",
+          "targetState": "Mask_AliveOrLimbo",
+          "canHitNonTargets": true,
+          "showInActionOrder": true,
+          "allowAbilityTriggers": false
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1744952962\">Enemy_AML_Boss_IF_Unselectable</a>[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"651799441\">Enemy_AML_Boss_ListenPartDie</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{All Unselectable Targets, All Team Members(Exclude Self)}}"
+          },
+          "searchRandom": true,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-2081849040\">Enemy_AML_Boss_IF_Part_Revive</a>"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1787283303\">Enemy_AML_Boss_IF_Sign_Part1</a>"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1804060922\">Enemy_AML_Boss_IF_Sign_Part2</a>"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1820838541\">Enemy_AML_Boss_IF_Sign_Part3</a>"
+            },
+            {
+              "name": "Mark Entity For Immediate Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            },
+            {
+              "name": "Force Entity Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            },
+            {
+              "name": "Remove from Team Target Grouping",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "stayInTeam": false
+            }
+          ]
+        },
+        {
+          "name": "Change Character Transformation",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "phase": "Phase2"
+        },
+        {
+          "name": "Set Mapping Point",
+          "point": "Origin",
+          "mapTo": "HeadOrigin"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"739623542\">Enemy_AML_Boss_IF_DamageTakenUp</a>",
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+              "displayLines": "{[SkillP01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[0]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Set HP Value",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "setValue": 1
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "ListenAllDieController"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1605741417\">Enemy_AML_Boss_HitEffect</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8015012_Monster_AML_Boss_IF_Insert_DownAndChangePhase_Part01": {
+      "fileName": "8015012_Monster_AML_Boss_IF_Insert_DownAndChangePhase_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_AML_Boss_IF_Insert_DownAndChangePhase_Part02",
           "isTrigger": true
         }
       ],
@@ -3088,57 +3139,6 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8015012_Monster_AML_Boss_IF_AbilityP02": {
-      "fileName": "8015012_Monster_AML_Boss_IF_AbilityP02",
-      "childAbilityList": [
-        "8015012_Monster_AML_Boss_IF_AbilityP02"
-      ],
-      "skillTrigger": "SkillP02",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1744952962\">Enemy_AML_Boss_IF_Unselectable</a>[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "AML_Boss_00",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1146217540\">Enemy_AML_Boss_IF_PassiveAbilityInitiate_ChangePhaseController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"255719361\">Enemy_AML_Boss_IF_ListenAllPartLimbo</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -6601,6 +6601,9 @@ const compositeAbilityObject = {
             "Endurance"
           ],
           "useEntitySnapshot": true,
+          "latentQueue": [
+            "SkillEX03_P4_ActionDelayRatio"
+          ],
           "description": "Cannot be targeted until Disaster's Right Hand, Dawn's Left Hand, and Antimatter Engine have all been destroyed.",
           "type": "Buff",
           "statusName": "Vestige Valor",

@@ -2686,6 +2686,9 @@ const configAbility = {
         "Endurance"
       ],
       "useEntitySnapshot": true,
+      "latentQueue": [
+        "SkillEX03_P4_ActionDelayRatio"
+      ],
       "description": "Cannot be targeted until Disaster's Right Hand, Dawn's Left Hand, and Antimatter Engine have all been destroyed.",
       "type": "Buff",
       "statusName": "Vestige Valor",

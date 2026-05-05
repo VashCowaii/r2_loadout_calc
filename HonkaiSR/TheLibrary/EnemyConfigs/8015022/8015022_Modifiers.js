@@ -1614,8 +1614,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__427738508\">Monster_W2_Huanlong_Part3</a>",
       "latentQueue": [
-        "AIFlag",
-        "Phase3FirstTurn"
+        "AIFlag"
       ],
       "execute": [
         {
@@ -1645,8 +1644,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__444516127\">Monster_W2_Huanlong_Part2</a>",
       "latentQueue": [
-        "InsertCheck",
-        "AIFlag"
+        "Phase_Flag"
       ],
       "execute": [
         {
@@ -1675,6 +1673,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__461293746\">Monster_W2_Huanlong_Part1</a>",
+      "latentQueue": [
+        "Phase_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1935,10 +1936,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-192345709\">Monster_W2_Huanlong_Part2_BattlePerform</a>",
-      "latentQueue": [
-        "InsertCheck",
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -3223,10 +3220,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__872971873\">Monster_W2_Huanlong_Part3End</a>",
-      "latentQueue": [
-        "AIFlag",
-        "Phase3FirstTurn"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
