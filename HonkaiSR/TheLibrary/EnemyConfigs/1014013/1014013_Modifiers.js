@@ -53,9 +53,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__670022041\">Monster_W1_SvarogPart_RL_ListenBreak_Modifier</a>",
-      "latentQueue": [
-        "CanUseSkill03"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -133,9 +130,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>",
-      "stackData": [
-        "Modifier_DamagePercentage"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -608,9 +602,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "PassiveSkill02_P2_HPRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -891,9 +882,6 @@ const configAbility = {
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
         "STAT_DefenceDown"
-      ],
-      "stackData": [
-        "MDF_DefenceAddedRatio_PerLayer"
       ],
       "description": "Reduces DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio_PerLayer</span>. This effect can stack.",
       "type": "Debuff",
@@ -1797,10 +1785,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-353224873\">Monster_W1_GS_Svarog_DisableAction</a>",
       "modifierFlags": [
         "DisableAction"
-      ],
-      "latentQueue": [
-        "Svarog_SpecialVictory_Flag",
-        "DecisionFlag"
       ]
     },
     {

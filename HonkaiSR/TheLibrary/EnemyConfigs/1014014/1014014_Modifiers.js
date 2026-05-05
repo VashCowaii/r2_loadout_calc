@@ -53,9 +53,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__670022041\">Monster_W1_SvarogPart_RL_ListenBreak_Modifier</a>",
-      "latentQueue": [
-        "CanUseSkill03"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1049,9 +1046,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "latentQueue": [
-        "CanUseSkill03"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1432,12 +1426,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "PassiveSkill02_P2_HPRatio",
-        "PassiveSkill02_P3_StanceBreakTakenRatio",
-        "PassiveSkill02_P4_MDF_AllDamageTypeTakenRatio",
-        "PassiveSkill02_P5_LifeTime"
-      ],
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo",
@@ -1797,10 +1785,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-353224873\">Monster_W1_GS_Svarog_DisableAction</a>",
       "modifierFlags": [
         "DisableAction"
-      ],
-      "latentQueue": [
-        "Svarog_SpecialVictory_Flag",
-        "DecisionFlag"
       ]
     },
     {
