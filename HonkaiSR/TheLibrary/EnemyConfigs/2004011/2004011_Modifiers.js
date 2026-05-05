@@ -1161,9 +1161,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-879407781\">Monster_W2_Kafka_CharmTargetMark</a>",
-      "latentQueue": [
-        "PursuitCheck"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1526,12 +1523,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1082518094\">Monster_W2_Kafka_Pursuit</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
-      ],
-      "stackData": [
-        "MDF_Count"
-      ],
-      "latentQueue": [
-        "DisPelCount"
       ],
       "execute": [
         {

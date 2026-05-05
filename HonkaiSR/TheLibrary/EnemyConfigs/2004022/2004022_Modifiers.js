@@ -1816,9 +1816,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__90667768\">DanhengIL_EXAbility01_LV2</a>",
-      "latentQueue": [
-        "DanhengIL_MainBattle_Counter"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1900,9 +1897,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__141000625\">DanhengIL_EXAbility01_LV1</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_MainBattle_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2032,9 +2026,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__310423138\">DanhengIL_EXAbility01_Diable_Ultra</a>",
-      "latentQueue": [
-        "DanhengIL_MainBattle_Counter"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -2044,11 +2035,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__684006930\">Enemy_W2_Yanqing_StandByEffect</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -3360,9 +3346,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak",
         "MuteHitH"
-      ],
-      "stackData": [
-        "MDF_SpeedDelta"
       ],
       "description": "Yanqing's Toughness cannot be reduced, and his SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedDelta</span>. Destroy all of Yanqing's Flying Swords to dispel this effect and cause DMG to Yanqing.",
       "type": "Other",

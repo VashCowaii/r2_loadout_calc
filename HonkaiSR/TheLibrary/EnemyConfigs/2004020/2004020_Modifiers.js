@@ -807,9 +807,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__90667768\">DanhengIL_EXAbility01_LV2</a>",
-      "latentQueue": [
-        "DanhengIL_MainBattle_Counter"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -891,9 +888,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__141000625\">DanhengIL_EXAbility01_LV1</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_MainBattle_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1023,9 +1017,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__310423138\">DanhengIL_EXAbility01_Diable_Ultra</a>",
-      "latentQueue": [
-        "DanhengIL_MainBattle_Counter"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

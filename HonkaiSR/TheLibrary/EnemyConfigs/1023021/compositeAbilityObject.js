@@ -3,10 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": 1023021,
   "trimCharacterName": 1023021,
   "abilityList": [
+    "1023021_Monster_W1_Mecha03_01_Passive01",
     "1023021_Monster_W1_Mecha03_01_Ability11_Part02",
     "1023021_Monster_W1_Mecha03_01_Ability11_Part01",
     "1023021_Monster_W1_Mecha03_01_Ability10_Part02",
     "1023021_Monster_W1_Mecha03_01_Ability10_Part01",
+    "1023021_Monster_W1_Mecha03_01_Ability09_Part02",
+    "1023021_Monster_W1_Mecha03_01_Ability09_Part01",
     "1023021_Monster_W1_Mecha03_01_Ability08_Part02",
     "1023021_Monster_W1_Mecha03_01_Ability08_Part01",
     "1023021_Monster_W1_Mecha03_01_Ability07_Part02",
@@ -15,14 +18,123 @@ const compositeAbilityObject = {
     "1023021_Monster_W1_Mecha03_01_Ability06_Part01",
     "1023021_Monster_W1_Mecha03_01_Ability05_Part02",
     "1023021_Monster_W1_Mecha03_01_Ability05_Part01",
-    "1023021_Monster_W1_Mecha03_01_Ability09_Part02",
-    "1023021_Monster_W1_Mecha03_01_Ability09_Part01",
     "1023021_Monster_W1_Mecha03_01_Ability01_Part02",
     "1023021_Monster_W1_Mecha03_01_Ability01_Part01",
-    "1023021_Monster_W1_Mecha03_01_Passive01",
     "1023021_Modifiers"
   ],
   "abilityObject": {
+    "1023021_Monster_W1_Mecha03_01_Passive01": {
+      "fileName": "1023021_Monster_W1_Mecha03_01_Passive01",
+      "childAbilityList": [
+        "1023021_Monster_W1_Mecha03_01_Passive01"
+      ],
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-923896178\">Monster_W1_Mecha03_01_MureHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"703130049\">Monster_W1_Mecha03_01_AIChange</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1952827515\">Monster_W1_Mecha03_01_EffectCommon</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__703130049\">Monster_W1_Mecha03_01_AIChange</a>",
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1421560478\">Monster_W1_Mecha03_01_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                  "onlyRemoveOwnersInstance": true
+                }
+              ]
+            },
+            {
+              "eventTrigger": "End Broken State [Owner]",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "Monster_W1_Mecha03_01_AICounter_01",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-923896178\">Monster_W1_Mecha03_01_MureHitFly</a>",
+          "modifierFlags": [
+            "MuteHitFly"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1952827515\">Monster_W1_Mecha03_01_EffectCommon</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]"
+            },
+            {
+              "eventTrigger": "End Broken State [Owner]"
+            }
+          ]
+        }
+      ]
+    },
     "1023021_Monster_W1_Mecha03_01_Ability11_Part02": {
       "fileName": "1023021_Monster_W1_Mecha03_01_Ability11_Part02",
       "abilityType": null,
@@ -436,6 +548,151 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1023021_Monster_W1_Mecha03_01_Ability09_Part02": {
+      "fileName": "1023021_Monster_W1_Mecha03_01_Ability09_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Looped Event",
+          "maxLoops": 10,
+          "Event": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Ice",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill09[0]]}) || Constants[0] (0.1) || MUL || RETURN",
+                  "displayLines": "({[Skill09[0]]} * 0.1)",
+                  "constants": [
+                    0.1
+                  ],
+                  "variables": [
+                    "{[Skill09[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "10%"
+              }
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target List}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1137901449\">Monster_W1_Mecha03_01_Frozen</a>[<span class=\"descriptionNumberColor\">Deep Freeze</span>]",
+          "baseChance": 1,
+          "stackLimit": {
+            "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
+            "displayLines": "{[Skill06[3]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill06[3]]}"
+            ]
+          },
+          "valuePerStack": {
+            "MDF_IceResistanceRatio_PerLayer": {
+              "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
+              "displayLines": "{[Skill06[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill06[1]]}"
+              ]
+            },
+            "MDF_SpeedAddedDelta_PerLayer": {
+              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+              "displayLines": "{[Skill06[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill06[0]]}"
+              ]
+            },
+            "MDF_MaxLayer": {
+              "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
+              "displayLines": "{[Skill06[3]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill06[3]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1705391722\">Monster_W1_Mecha03_01_Rage</a>[<span class=\"descriptionNumberColor\">Surpass</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1421560478\">Monster_W1_Mecha03_01_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
+          "onlyRemoveOwnersInstance": true
+        },
+        {
+          "name": "Change Character Transformation",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "phase": "Phase1"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "1023021_Monster_W1_Mecha03_01_Ability09_Part01": {
+      "fileName": "1023021_Monster_W1_Mecha03_01_Ability09_Part01",
+      "childAbilityList": [
+        "1023021_Monster_W1_Mecha03_01_Ability09_Camera",
+        "1023021_Monster_W1_Mecha03_01_Ability09_Part01",
+        "1023021_Monster_W1_Mecha03_01_Ability09_Part02"
+      ],
+      "skillTrigger": "Skill09",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W1_Mecha03_01_Ability09_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       },
       "references": []
     },
@@ -1111,151 +1368,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "1023021_Monster_W1_Mecha03_01_Ability09_Part02": {
-      "fileName": "1023021_Monster_W1_Mecha03_01_Ability09_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Looped Event",
-          "maxLoops": 10,
-          "Event": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Ice",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill09[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-                  "displayLines": "({[Skill09[0]]} * 0.1)",
-                  "constants": [
-                    0.1
-                  ],
-                  "variables": [
-                    "{[Skill09[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "10%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target List}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1137901449\">Monster_W1_Mecha03_01_Frozen</a>[<span class=\"descriptionNumberColor\">Deep Freeze</span>]",
-          "baseChance": 1,
-          "stackLimit": {
-            "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-            "displayLines": "{[Skill06[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[3]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_IceResistanceRatio_PerLayer": {
-              "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-              "displayLines": "{[Skill06[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[1]]}"
-              ]
-            },
-            "MDF_SpeedAddedDelta_PerLayer": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-              "displayLines": "{[Skill06[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[3]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1705391722\">Monster_W1_Mecha03_01_Rage</a>[<span class=\"descriptionNumberColor\">Surpass</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1421560478\">Monster_W1_Mecha03_01_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
-          "onlyRemoveOwnersInstance": true
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1023021_Monster_W1_Mecha03_01_Ability09_Part01": {
-      "fileName": "1023021_Monster_W1_Mecha03_01_Ability09_Part01",
-      "childAbilityList": [
-        "1023021_Monster_W1_Mecha03_01_Ability09_Camera",
-        "1023021_Monster_W1_Mecha03_01_Ability09_Part01",
-        "1023021_Monster_W1_Mecha03_01_Ability09_Part02"
-      ],
-      "skillTrigger": "Skill09",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W1_Mecha03_01_Ability09_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "1023021_Monster_W1_Mecha03_01_Ability01_Part02": {
       "fileName": "1023021_Monster_W1_Mecha03_01_Ability01_Part02",
       "abilityType": null,
@@ -1340,118 +1452,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "1023021_Monster_W1_Mecha03_01_Passive01": {
-      "fileName": "1023021_Monster_W1_Mecha03_01_Passive01",
-      "childAbilityList": [
-        "1023021_Monster_W1_Mecha03_01_Passive01"
-      ],
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-923896178\">Monster_W1_Mecha03_01_MureHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"703130049\">Monster_W1_Mecha03_01_AIChange</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1952827515\">Monster_W1_Mecha03_01_EffectCommon</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__703130049\">Monster_W1_Mecha03_01_AIChange</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1421560478\">Monster_W1_Mecha03_01_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
-                  "onlyRemoveOwnersInstance": true
-                }
-              ]
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_W1_Mecha03_01_AICounter_01",
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-923896178\">Monster_W1_Mecha03_01_MureHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1952827515\">Monster_W1_Mecha03_01_EffectCommon</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]"
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]"
-            }
-          ]
-        }
-      ]
     },
     "1023021_Modifiers": {
       "fileName": "1023021_Modifiers",

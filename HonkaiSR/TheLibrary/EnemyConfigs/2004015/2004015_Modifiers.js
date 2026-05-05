@@ -29,12 +29,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1555277593\">Monster_W2_Kafka_RL_LowHP</a>",
-      "stackData": [
-        "MDF_LowHPRatio"
-      ],
-      "latentQueue": [
-        "DisPelCount"
-      ],
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -714,12 +708,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__688364152\">Monster_W2_Kafka_RL_Power</a>",
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "DisPelCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -827,9 +815,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__108137779\">Monster_W2_Kafka_RL_Pursuit</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
-      ],
-      "latentQueue": [
-        "DisPelCount"
       ],
       "execute": [
         {
@@ -1019,9 +1004,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1041839558\">Monster_W2_Kafka_RL_PartController</a>",
-      "latentQueue": [
-        "DisPelCount"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -1161,9 +1143,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-879407781\">Monster_W2_Kafka_CharmTargetMark</a>",
-      "latentQueue": [
-        "PursuitCheck"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1526,12 +1505,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1082518094\">Monster_W2_Kafka_Pursuit</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
-      ],
-      "stackData": [
-        "MDF_Count"
-      ],
-      "latentQueue": [
-        "DisPelCount"
       ],
       "execute": [
         {

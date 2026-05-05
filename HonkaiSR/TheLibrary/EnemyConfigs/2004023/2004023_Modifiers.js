@@ -11,13 +11,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-355399980\">Monster_W2_Yanqing_RL_LowHP</a>",
-      "stackData": [
-        "MDF_LowHPRatio"
-      ],
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase"
-      ],
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -149,9 +142,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__262387731\">Enemy_W2_Yanqing_AbilityP01_Part03SpeedUp</a>",
-      "stackData": [
-        "MDF_SpeedDelta"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -274,9 +264,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2018294690\">Enemy_W2_Yanqing_AbilityP01_ChangePhaseController</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_SkillP01_InsertFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -532,9 +519,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2068860507\">Enemy_W2_Yanqing_SwordPowerUp</a>[<span class=\"descriptionNumberColor\">Ordeal</span>]",
       "useEntitySnapshot": true,
-      "latentQueue": [
-        "FinalPhase"
-      ],
       "description": "This summon receives an enhancement and increases Max Toughness. After attacking, there is a high chance of Freezing the target.",
       "type": "Other",
       "effectName": "Ordeal",
@@ -719,9 +703,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak",
         "MuteHitH"
-      ],
-      "stackData": [
-        "MDF_SpeedDelta"
       ],
       "description": "Yanqing's Toughness cannot be reduced, and his SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedDelta</span>. Destroy all of Yanqing's Flying Swords to dispel this effect and cause DMG to Yanqing.",
       "type": "Other",
@@ -959,9 +940,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1122230262\">Enemy_W2_Yanqing_Standard_Overdrive</a>[<span class=\"descriptionNumberColor\">Chilling Light</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "AllDamageTypeAddedRatioPerLayer"
-      ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>. This effect can stack.",
       "type": "Buff",
       "effectName": "Chilling Light",
@@ -4424,11 +4402,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
-      ],
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -4468,11 +4441,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1101843162\">W2_YanQing_BattleScore6</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
       ],
       "execute": [
         {
@@ -4519,11 +4487,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
-      ],
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -4568,11 +4531,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1135398400\">W2_YanQing_BattleScore4</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
       ],
       "execute": [
         {
@@ -4619,11 +4577,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
-      ],
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -4664,11 +4617,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
-      ],
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -4708,11 +4656,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1051510305\">W2_YanQing_BattleScore1</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
       ],
       "execute": [
         {
@@ -5217,9 +5160,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__90667768\">DanhengIL_EXAbility01_LV2</a>",
-      "latentQueue": [
-        "DanhengIL_MainBattle_Counter"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5301,9 +5241,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__141000625\">DanhengIL_EXAbility01_LV1</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_MainBattle_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5433,9 +5370,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__310423138\">DanhengIL_EXAbility01_Diable_Ultra</a>",
-      "latentQueue": [
-        "DanhengIL_MainBattle_Counter"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -5445,11 +5379,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__684006930\">Enemy_W2_Yanqing_StandByEffect</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -5580,11 +5509,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1466013786\">Enemy_W2_Yanqing_StandBySwordEffect_Controller</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
-      ],
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -6761,9 +6685,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak",
         "MuteHitH"
-      ],
-      "stackData": [
-        "MDF_SpeedDelta"
       ],
       "description": "Yanqing's Toughness cannot be reduced, and his SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedDelta</span>. Destroy all of Yanqing's Flying Swords to dispel this effect and cause DMG to Yanqing.",
       "type": "Other",

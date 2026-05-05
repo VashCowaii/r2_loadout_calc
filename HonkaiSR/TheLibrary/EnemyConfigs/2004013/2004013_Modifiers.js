@@ -11,6 +11,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>",
+      "latentQueue": [
+        "MDF_Right",
+        "MDF_Left"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -20,6 +24,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1988286038\">Monster_W2_Kafka_RL_Part03EnhanceEffect</a>",
+      "latentQueue": [
+        "MDF_Right",
+        "MDF_Left"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -29,12 +37,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1555277593\">Monster_W2_Kafka_RL_LowHP</a>",
-      "stackData": [
-        "MDF_LowHPRatio"
-      ],
-      "latentQueue": [
-        "DisPelCount"
-      ],
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -714,12 +716,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__688364152\">Monster_W2_Kafka_RL_Power</a>",
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "DisPelCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -827,9 +823,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__108137779\">Monster_W2_Kafka_RL_Pursuit</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
-      ],
-      "latentQueue": [
-        "DisPelCount"
       ],
       "execute": [
         {
@@ -1019,9 +1012,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1041839558\">Monster_W2_Kafka_RL_PartController</a>",
-      "latentQueue": [
-        "DisPelCount"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -1161,6 +1151,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1510857703\">Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect</a>",
+      "latentQueue": [
+        "ElectricFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1631,11 +1624,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__807751830\">Monster_W2_Kafka_IF_MindControl_True</a>",
       "modifierFlags": [
         "DispelPriorityHigh"
-      ],
-      "latentQueue": [
-        "MindControlCount",
-        "ShowHint04",
-        "FinalPhase"
       ],
       "execute": [
         {
@@ -2108,9 +2096,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-568638257\">Monster_W2_Kafka_IF_PartController</a>",
-      "latentQueue": [
-        "DisPelCount"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -2297,9 +2282,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-196949568\">Monster_W2_Kafka_IF_SummonControl</a>",
-      "latentQueue": [
-        "DisPelCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2937,9 +2919,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-879407781\">Monster_W2_Kafka_CharmTargetMark</a>",
-      "latentQueue": [
-        "PursuitCheck"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -3194,7 +3173,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
+      "for": "<a class=\"gModGreen\" id=\"mod__364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>",
+      "latentQueue": [
+        "MDF_Right",
+        "MDF_Left"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3302,12 +3285,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1082518094\">Monster_W2_Kafka_Pursuit</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
-      ],
-      "stackData": [
-        "MDF_Count"
-      ],
-      "latentQueue": [
-        "DisPelCount"
       ],
       "execute": [
         {

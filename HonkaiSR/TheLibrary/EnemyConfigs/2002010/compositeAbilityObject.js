@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 2002010,
   "trimCharacterName": 2002010,
   "abilityList": [
+    "2002010_Monster_W2_Knight01_Passive01",
     "2002010_Monster_W2_Knight01_PassiveAbility_Insert_Part01",
     "2002010_Monster_W2_Knight01_Ability03_Part02",
     "2002010_Monster_W2_Knight01_Ability03_Part01",
@@ -10,10 +11,24 @@ const compositeAbilityObject = {
     "2002010_Monster_W2_Knight01_Ability02_Part01",
     "2002010_Monster_W2_Knight01_Ability01_Part02",
     "2002010_Monster_W2_Knight01_Ability01_Part01",
-    "2002010_Monster_W2_Knight01_Passive01",
     "2002010_Modifiers"
   ],
   "abilityObject": {
+    "2002010_Monster_W2_Knight01_Passive01": {
+      "fileName": "2002010_Monster_W2_Knight01_Passive01",
+      "childAbilityList": [
+        "2002010_Monster_W2_Knight01_PassiveAbility_Insert_Part01"
+      ],
+      "skillTrigger": "Monster_W2_Knight01_00_Passive01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "2002010_Monster_W2_Knight01_PassiveAbility_Insert_Part01": {
       "fileName": "2002010_Monster_W2_Knight01_PassiveAbility_Insert_Part01",
       "abilityType": null,
@@ -337,21 +352,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "2002010_Monster_W2_Knight01_Passive01": {
-      "fileName": "2002010_Monster_W2_Knight01_Passive01",
-      "childAbilityList": [
-        "2002010_Monster_W2_Knight01_PassiveAbility_Insert_Part01"
-      ],
-      "skillTrigger": "Monster_W2_Knight01_00_Passive01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },
