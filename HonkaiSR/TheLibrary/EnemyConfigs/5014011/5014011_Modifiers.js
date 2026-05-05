@@ -51,13 +51,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SuperArmorBreak"
       ],
-      "stackData": [
-        "MDF_AllDamageTypeTakenRatio"
-      ],
-      "latentQueue": [
-        "MDF_Phase1",
-        "MDF_Suc"
-      ],
       "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>. Action delayed.",
       "type": "Debuff",
       "effectName": "Tilted",
@@ -3083,9 +3076,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-321445076\">Enemy_W5_Vtuber_Charge</a>",
-      "stackData": [
-        "MDF_AllDamageReduce"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -3507,9 +3497,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1092944424\">W5_Vtuber_BattleScore2</a>",
       "stackType": "Replace",
-      "latentQueue": [
-        "MDF_Phase1"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3572,11 +3559,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1143277281\">W5_Vtuber_BattleScore1</a>",
       "stackType": "Replace",
-      "latentQueue": [
-        "MDF_Phase1",
-        "MDF_Suc",
-        "MDF_Phase2"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

@@ -3,16 +3,70 @@ const compositeAbilityObject = {
   "fullCharacterName": 8002010,
   "trimCharacterName": 8002010,
   "abilityList": [
+    "8002010_Monster_XP_Minion02_PassiveAbility_Initiate",
     "8002010_Monster_XP_Minion02_Ability03_Part02",
     "8002010_Monster_XP_Minion02_Ability03_Part01",
     "8002010_Monster_XP_Minion02_Ability02_Part02",
     "8002010_Monster_XP_Minion02_Ability02_Part01",
     "8002010_Monster_XP_Minion02_Ability01_Part02",
     "8002010_Monster_XP_Minion02_Ability01_Part01",
-    "8002010_Monster_XP_Minion02_PassiveAbility_Initiate",
     "8002010_Modifiers"
   ],
   "abilityObject": {
+    "8002010_Monster_XP_Minion02_PassiveAbility_Initiate": {
+      "fileName": "8002010_Monster_XP_Minion02_PassiveAbility_Initiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-979817918\">Enemy_XP_Minion02_PassiveArmor</a>"
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-922335175\">XP_Minion02_Effect</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-979817918\">Enemy_XP_Minion02_PassiveArmor</a>",
+          "execute": [
+            {
+              "eventTrigger": "End Broken State [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-922335175\">XP_Minion02_Effect</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "8002010_Monster_XP_Minion02_Ability03_Part02": {
       "fileName": "8002010_Monster_XP_Minion02_Ability03_Part02",
       "abilityType": null,
@@ -314,60 +368,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "8002010_Monster_XP_Minion02_PassiveAbility_Initiate": {
-      "fileName": "8002010_Monster_XP_Minion02_PassiveAbility_Initiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-979817918\">Enemy_XP_Minion02_PassiveArmor</a>"
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-922335175\">XP_Minion02_Effect</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-979817918\">Enemy_XP_Minion02_PassiveArmor</a>",
-          "execute": [
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-922335175\">XP_Minion02_Effect</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ]
     },
     "8002010_Modifiers": {
       "fileName": "8002010_Modifiers",

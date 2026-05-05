@@ -4,10 +4,9 @@ const compositeAbilityObject = {
   "trimCharacterName": 5022010,
   "abilityList": [
     "5022010_Monster_W5_RipperPart_Deathrattle_Part01",
+    "5022010_Monster_W5_RipperPart_Passive01",
     "5022010_Monster_W5_RipperPart_Ability01_Part02",
     "5022010_Monster_W5_RipperPart_Ability01_Part01",
-    "5022010_Monster_W5_RipperPart_Passive02",
-    "5022010_Monster_W5_RipperPart_Passive01",
     "5022010_Modifiers"
   ],
   "abilityObject": {
@@ -162,6 +161,31 @@ const compositeAbilityObject = {
       },
       "references": []
     },
+    "5022010_Monster_W5_RipperPart_Passive01": {
+      "fileName": "5022010_Monster_W5_RipperPart_Passive01",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"266895438\">Monster_W5_RipperPart_Deathrattle</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "5022010_Monster_W5_RipperPart_Ability01_Part02": {
       "fileName": "5022010_Monster_W5_RipperPart_Ability01_Part02",
       "abilityType": null,
@@ -250,53 +274,6 @@ const compositeAbilityObject = {
             }
           ]
         }
-      },
-      "references": []
-    },
-    "5022010_Monster_W5_RipperPart_Passive02": {
-      "fileName": "5022010_Monster_W5_RipperPart_Passive02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5022010_Monster_W5_RipperPart_Passive01": {
-      "fileName": "5022010_Monster_W5_RipperPart_Passive01",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"266895438\">Monster_W5_RipperPart_Deathrattle</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },

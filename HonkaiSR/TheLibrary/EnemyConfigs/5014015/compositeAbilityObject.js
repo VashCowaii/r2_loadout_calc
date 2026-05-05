@@ -3,23 +3,20 @@ const compositeAbilityObject = {
   "fullCharacterName": 5014015,
   "trimCharacterName": 5014015,
   "abilityList": [
-    "5014015_Monster_W5_Vtuber_PassiveAbilityInitiate_RLBoss",
     "5014015_Monster_W5_Vtuber_ChangePhase01",
     "5014015_Monster_W5_Vtuber_PassiveAbilityInitiate",
+    "5014015_Monster_W5_Vtuber_PassiveAbilityInitiate_RLBoss",
     "5014015_Monster_W5_Vtuber_Ability07_Part02",
     "5014015_Monster_W5_Vtuber_Ability07_Part01",
     "5014015_Monster_W5_Vtuber_Ability06_Lose_Part02",
     "5014015_Monster_W5_Vtuber_Ability06_Win_ExtraElationTime",
     "5014015_Monster_W5_Vtuber_Ability06_Win_Part02",
     "5014015_Monster_W5_Vtuber_Ability06_Part01",
-    "5014015_Monster_W5_Vtuber_AbortInsert",
     "5014015_Monster_W5_Vtuber_Ability04_Part02",
     "5014015_Monster_W5_Vtuber_Ability04_Part01",
     "5014015_Monster_W5_Vtuber_Ability03_Part03",
     "5014015_Monster_W5_Vtuber_Ability03_Part02",
     "5014015_Monster_W5_Vtuber_Ability03_Part01",
-    "5014015_BattleEvent_Monster_W5_Vtuber_Part01",
-    "5014015_BattleEvent_Monster_W5_Vtuber_EnterReady",
     "5014015_Monster_W5_Vtuber_Ability03_Part00",
     "5014015_Monster_W5_Vtuber_Ability02_Part02",
     "5014015_Monster_W5_Vtuber_Ability02_Part01",
@@ -31,89 +28,6 @@ const compositeAbilityObject = {
     "5014015_BE_BattleEvents"
   ],
   "abilityObject": {
-    "5014015_Monster_W5_Vtuber_PassiveAbilityInitiate_RLBoss": {
-      "fileName": "5014015_Monster_W5_Vtuber_PassiveAbilityInitiate_RLBoss",
-      "childAbilityList": [
-        "5014015_Monster_W5_Vtuber_PassiveAbilityInitiate_RLBoss"
-      ],
-      "skillTrigger": "PassiveSkill04",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1281829506\">Monster_W5_Vtuber_RLBoss_Passive</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1281829506\">Monster_W5_Vtuber_RLBoss_Passive</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action Completed [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1141771649\">Enemy_W5_Vtuber_InField</a>[<span class=\"descriptionNumberColor\">Epic showdown in progress!</span>]"
-                      },
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-                      "valuePerStack": {
-                        "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill03[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill03[0]]}"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "5014015_Monster_W5_Vtuber_ChangePhase01": {
       "fileName": "5014015_Monster_W5_Vtuber_ChangePhase01",
       "abilityType": null,
@@ -769,6 +683,89 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Ultimate Prep-Phase [Owner]"
+            }
+          ]
+        }
+      ]
+    },
+    "5014015_Monster_W5_Vtuber_PassiveAbilityInitiate_RLBoss": {
+      "fileName": "5014015_Monster_W5_Vtuber_PassiveAbilityInitiate_RLBoss",
+      "childAbilityList": [
+        "5014015_Monster_W5_Vtuber_PassiveAbilityInitiate_RLBoss"
+      ],
+      "skillTrigger": "PassiveSkill04",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1281829506\">Monster_W5_Vtuber_RLBoss_Passive</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1281829506\">Monster_W5_Vtuber_RLBoss_Passive</a>",
+          "execute": [
+            {
+              "eventTrigger": "Action Completed [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1141771649\">Enemy_W5_Vtuber_InField</a>[<span class=\"descriptionNumberColor\">Epic showdown in progress!</span>]"
+                      },
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                      "valuePerStack": {
+                        "MDF_DamageUpRatio_PerLayer": {
+                          "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
+                          "displayLines": "{[PassiveSkill03[0]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[PassiveSkill03[0]]}"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -1900,69 +1897,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}",
         "allowMemoHostileTarget": "Forbidden",
         "targetIsVariable": true
-      },
-      "references": []
-    },
-    "5014015_Monster_W5_Vtuber_AbortInsert": {
-      "fileName": "5014015_Monster_W5_Vtuber_AbortInsert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Add Target by Unique Identifier",
-              "identifier": "W5_Vtuber_00"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"308759632\">Enemy_W5_Vtuber_SwitchField</a>"
-          },
-          "passed": [
-            {
-              "name": "Define Modifier-Specific Variable",
-              "target": {
-                "name": "Add Target by Unique Identifier",
-                "identifier": "W5_Vtuber_00"
-              },
-              "modifierName": "<a class=\"gModGreen\" id=\"308759632\">Enemy_W5_Vtuber_SwitchField</a>",
-              "variableName": "MDF_SwitchField",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "includeDyingTargets": true,
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "flagName": [
-              "Stealth"
-            ],
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add to Team Target Grouping",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },
@@ -3308,68 +3242,6 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "5014015_BattleEvent_Monster_W5_Vtuber_Part01": {
-      "fileName": "5014015_BattleEvent_Monster_W5_Vtuber_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Add Target by Unique Identifier",
-            "identifier": "W5_Vtuber_00"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1713929309\">Enemy_W5_Vtuber_MainStory_Ability03</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1869034007\">Enemy_W5_Vtuber_MuteUltra</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Add Target by Unique Identifier",
-            "identifier": "W5_Vtuber_00"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2019186097\">Enemy_W5_Vtuber_Locking</a>"
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Add Target by Unique Identifier",
-            "identifier": "W5_Vtuber_00"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W5_Vtuber_Ability03_Part01",
-          "isTrigger": true
-        },
-        "Wait for Pending Ability Completions",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "5014015_BattleEvent_Monster_W5_Vtuber_EnterReady": {
-      "fileName": "5014015_BattleEvent_Monster_W5_Vtuber_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },

@@ -4,11 +4,11 @@ const compositeAbilityObject = {
   "trimCharacterName": 8001030,
   "abilityList": [
     "8001030_Monster_XP_Minion03_PassiveAbility_Insert_Part01",
+    "8001030_Monster_XP_Minion03_Passive01",
     "8001030_Monster_XP_Minion03_Ability02_Part02",
     "8001030_Monster_XP_Minion03_Ability02_Part01",
     "8001030_Monster_XP_Minion03_Ability01_Part02",
     "8001030_Monster_XP_Minion03_Ability01_Part01",
-    "8001030_Monster_XP_Minion03_Passive01",
     "8001030_Modifiers"
   ],
   "abilityObject": {
@@ -70,145 +70,6 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8001030_Monster_XP_Minion03_Ability02_Part02": {
-      "fileName": "8001030_Monster_XP_Minion03_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1727496698\">Monster_XP_Minion03_Attack</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-            "displayLines": "{[Skill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[1]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_AttackAddedRatio": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            }
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{All Team Members}}"
-      },
-      "references": []
-    },
-    "8001030_Monster_XP_Minion03_Ability02_Part01": {
-      "fileName": "8001030_Monster_XP_Minion03_Ability02_Part01",
-      "childAbilityList": [
-        "8001030_Monster_XP_Minion03_Ability02_Camera",
-        "8001030_Monster_XP_Minion03_Ability02_Part01",
-        "8001030_Monster_XP_Minion03_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Minion03_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{All Team Members}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{All Team Members}}"
-      },
-      "references": []
-    },
-    "8001030_Monster_XP_Minion03_Ability01_Part02": {
-      "fileName": "8001030_Monster_XP_Minion03_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8001030_Monster_XP_Minion03_Ability01_Part01": {
-      "fileName": "8001030_Monster_XP_Minion03_Ability01_Part01",
-      "childAbilityList": [
-        "8001030_Monster_XP_Minion03_Ability01_Camera",
-        "8001030_Monster_XP_Minion03_Ability01_Part01",
-        "8001030_Monster_XP_Minion03_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Minion03_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
       },
       "references": []
     },
@@ -520,6 +381,145 @@ const compositeAbilityObject = {
           ]
         }
       ]
+    },
+    "8001030_Monster_XP_Minion03_Ability02_Part02": {
+      "fileName": "8001030_Monster_XP_Minion03_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1727496698\">Monster_XP_Minion03_Attack</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+            "displayLines": "{[Skill02[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill02[1]]}"
+            ]
+          },
+          "valuePerStack": {
+            "MDF_AttackAddedRatio": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            }
+          }
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "references": []
+    },
+    "8001030_Monster_XP_Minion03_Ability02_Part01": {
+      "fileName": "8001030_Monster_XP_Minion03_Ability02_Part01",
+      "childAbilityList": [
+        "8001030_Monster_XP_Minion03_Ability02_Camera",
+        "8001030_Monster_XP_Minion03_Ability02_Part01",
+        "8001030_Monster_XP_Minion03_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_XP_Minion03_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "references": []
+    },
+    "8001030_Monster_XP_Minion03_Ability01_Part02": {
+      "fileName": "8001030_Monster_XP_Minion03_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "8001030_Monster_XP_Minion03_Ability01_Part01": {
+      "fileName": "8001030_Monster_XP_Minion03_Ability01_Part01",
+      "childAbilityList": [
+        "8001030_Monster_XP_Minion03_Ability01_Camera",
+        "8001030_Monster_XP_Minion03_Ability01_Part01",
+        "8001030_Monster_XP_Minion03_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_XP_Minion03_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
     },
     "8001030_Modifiers": {
       "fileName": "8001030_Modifiers",
