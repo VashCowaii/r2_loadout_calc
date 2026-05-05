@@ -192,11 +192,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1928525254\">Monster_W2_FeixiaoPart_SuperArmorController</a>",
-      "stackData": [
-        "MDF_SuperArmorDamageResistance",
-        "MDF_BreakActionDelay",
-        "MDF_SuperArmorBreakDamageAddedRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

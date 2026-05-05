@@ -4,22 +4,16 @@ const compositeAbilityObject = {
   "trimCharacterName": 2033020,
   "abilityList": [
     "2033020_Monster_W2_FeixiaoPart_PassiveAbility_Insert2",
+    "2033020_Monster_W2_FeixiaoPart_PassiveAbilityInitiate",
     "2033020_Monster_W2_FeixiaoPart_Ability06_Part02",
     "2033020_Monster_W2_FeixiaoPart_Ability06_Part01",
     "2033020_Monster_W2_FeixiaoPart_Ability05_Part02",
     "2033020_Monster_W2_FeixiaoPart_Ability05_Part01",
     "2033020_Monster_W2_FeixiaoPart_Ability04_Part02",
     "2033020_Monster_W2_FeixiaoPart_Ability04_Part01",
-    "2033020_Monster_W2_FeixiaoPart_Ability03_Part02",
     "2033020_Monster_W2_FeixiaoPart_Ability03_Part01",
-    "2033020_Monster_W2_FeixiaoPart_Ability02_Part02",
     "2033020_Monster_W2_FeixiaoPart_Ability02_Part01",
-    "2033020_Monster_W2_FeixiaoPart_Ability01_Part02",
     "2033020_Monster_W2_FeixiaoPart_Ability01_Part01",
-    "2033020_Monster_W2_FeixiaoPart_03_PassiveAbilityInitiate",
-    "2033020_Monster_W2_FeixiaoPart_02_PassiveAbilityInitiate",
-    "2033020_Monster_W2_FeixiaoPart_01_PassiveAbilityInitiate",
-    "2033020_Monster_W2_FeixiaoPart_PassiveAbilityInitiate",
     "2033020_Modifiers"
   ],
   "abilityObject": {
@@ -30,6 +24,178 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2033020_Monster_W2_FeixiaoPart_PassiveAbilityInitiate": {
+      "fileName": "2033020_Monster_W2_FeixiaoPart_PassiveAbilityInitiate",
+      "skillTrigger": "Passive01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2121118445\">Monster_W2_FeixiaoPart_PartController</a>"
+        },
+        {
+          "name": "Set Enemy Phase",
+          "phase": 2,
+          "applyOverride": false
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"637793327\">Monster_W2_FeixiaoPart_Formation</a>"
+        },
+        {
+          "name": "Set Action-State",
+          "on": null,
+          "stateName": "FeixiaoPart",
+          "state": false
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 2033021,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "Ecliptic Inner Beast & Shadow of \"Feixiao\""
+          }
+        },
+        {
+          "name": "Create Enemy as Body Part",
+          "partName": "Head",
+          "value": {
+            "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
+            "displayLines": "PartEntity1_MonsterID",
+            "constants": [],
+            "variables": [
+              "PartEntity1_MonsterID"
+            ]
+          },
+          "offset": 2,
+          "linkHitByPart": true
+        },
+        {
+          "name": "Create Enemy as Body Part",
+          "partName": "Limb",
+          "value": {
+            "operator": "Variables[0] (PartEntity2_MonsterID) || RETURN",
+            "displayLines": "PartEntity2_MonsterID",
+            "constants": [],
+            "variables": [
+              "PartEntity2_MonsterID"
+            ]
+          },
+          "offset": -1,
+          "type": 2,
+          "linkHitByPart": true
+        },
+        {
+          "name": "Create Enemy as Body Part",
+          "partName": "Tail",
+          "value": {
+            "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
+            "displayLines": "PartEntity3_MonsterID",
+            "constants": [],
+            "variables": [
+              "PartEntity3_MonsterID"
+            ]
+          },
+          "offset": -2,
+          "type": 3,
+          "linkHitByPart": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1365495312\">Monster_W2_FeixiaoPart_HeadNormalEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-31609686\">Monster_W2_FeixiaoPart_LimbNormalEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"506782608\">Monster_W2_FeixiaoPart_TailNormalEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1095211474\">Monster_W2_FeixiaoPart_Part2ResidentEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1236954137\">Monster_W2_FeixiaoPart_Unselectable</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1306733131\">Monster_W2_Feixiao_Stop</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -525,121 +691,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2033020_Monster_W2_FeixiaoPart_Ability03_Part02": {
-      "fileName": "2033020_Monster_W2_FeixiaoPart_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nebula Devourer: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nebula Devourer: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nebula Devourer: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_3) || RETURN",
-              "displayLines": "UnusedUnderThisBase_3",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_3"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Nebula Devourer: Self}}"
-            },
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Nebula Devourer: Self}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Nebula Devourer: Self}}"
-            },
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Nebula Devourer: Self}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Nebula Devourer: Self}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
     "2033020_Monster_W2_FeixiaoPart_Ability03_Part01": {
       "fileName": "2033020_Monster_W2_FeixiaoPart_Ability03_Part01",
       "childAbilityList": [
@@ -666,208 +717,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2033020_Monster_W2_FeixiaoPart_Ability02_Part02": {
-      "fileName": "2033020_Monster_W2_FeixiaoPart_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nebula Devourer: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nebula Devourer: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nebula Devourer: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1683392657\">Monster_W2_Feixiao_Ability05_Target</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1683392657\">Monster_W2_Feixiao_Ability05_Target</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Enemy Feixiao: Skill05 Target}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": "=",
-            "value2": 3
-          },
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Enemy Feixiao: Skill05 Target}}"
-                },
-                "value1": "TeamCharacterCount",
-                "compareType": "=",
-                "value2": 2
-              }
-            }
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_3) || RETURN",
-              "displayLines": "UnusedUnderThisBase_3",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_3"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_3) || RETURN",
-              "displayLines": "UnusedUnderThisBase_3",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_3"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Set Target Parameter",
-          "readTarget": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "paramTarget": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All, ST, and Blast}} + {{ST and Blast}}.[[getCharByChangeSource]]"
-          },
-          "variableName": "CameraTarget"
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1683392657\">Monster_W2_Feixiao_Ability05_Target</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Nebula Devourer: Self}}"
-            },
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Nebula Devourer: Self}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Nebula Devourer: Self}}"
-            },
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Nebula Devourer: Self}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Nebula Devourer: Self}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
       },
       "references": []
     },
@@ -901,121 +750,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2033020_Monster_W2_FeixiaoPart_Ability01_Part02": {
-      "fileName": "2033020_Monster_W2_FeixiaoPart_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nebula Devourer: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nebula Devourer: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nebula Devourer: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_3) || RETURN",
-              "displayLines": "UnusedUnderThisBase_3",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_3"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Nebula Devourer: Self}}"
-            },
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Nebula Devourer: Self}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Nebula Devourer: Self}}"
-            },
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Nebula Devourer: Self}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Nebula Devourer: Self}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
     "2033020_Monster_W2_FeixiaoPart_Ability01_Part01": {
       "fileName": "2033020_Monster_W2_FeixiaoPart_Ability01_Part01",
       "childAbilityList": [
@@ -1042,445 +776,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2033020_Monster_W2_FeixiaoPart_03_PassiveAbilityInitiate": {
-      "fileName": "2033020_Monster_W2_FeixiaoPart_03_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Feixiao: Self}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Skill06DamagePercentage",
-          "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_29) || RETURN",
-            "displayLines": "UnusedUnderThisBase_29",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_29"
-            ]
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Nebula Devourer: Self Initial}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Skill06DamagePercentage",
-          "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_3) || RETURN",
-            "displayLines": "UnusedUnderThisBase_3",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_3"
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1928525254\">Monster_W2_FeixiaoPart_SuperArmorController</a>",
-          "valuePerStack": {
-            "MDF_SuperArmorDamageResistance": {
-              "operator": "Variables[0] (UnusedUnderThisBase_395) || RETURN",
-              "displayLines": "UnusedUnderThisBase_395",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_395"
-              ]
-            },
-            "MDF_BreakActionDelay": {
-              "operator": "Variables[0] (UnusedUnderThisBase_396) || RETURN",
-              "displayLines": "UnusedUnderThisBase_396",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_396"
-              ]
-            },
-            "MDF_SuperArmorBreakDamageAddedRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_397) || RETURN",
-              "displayLines": "UnusedUnderThisBase_397",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_397"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1429897457\">Monster_W2_FeixiaoPart_LockHP</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2033020_Monster_W2_FeixiaoPart_02_PassiveAbilityInitiate": {
-      "fileName": "2033020_Monster_W2_FeixiaoPart_02_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Feixiao: Self}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Skill05DamagePercentage",
-          "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_29) || RETURN",
-            "displayLines": "UnusedUnderThisBase_29",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_29"
-            ]
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Nebula Devourer: Self Initial}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Skill05DamagePercentage",
-          "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_3) || RETURN",
-            "displayLines": "UnusedUnderThisBase_3",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_3"
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1928525254\">Monster_W2_FeixiaoPart_SuperArmorController</a>",
-          "valuePerStack": {
-            "MDF_SuperArmorDamageResistance": {
-              "operator": "Variables[0] (UnusedUnderThisBase_395) || RETURN",
-              "displayLines": "UnusedUnderThisBase_395",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_395"
-              ]
-            },
-            "MDF_BreakActionDelay": {
-              "operator": "Variables[0] (UnusedUnderThisBase_396) || RETURN",
-              "displayLines": "UnusedUnderThisBase_396",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_396"
-              ]
-            },
-            "MDF_SuperArmorBreakDamageAddedRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_397) || RETURN",
-              "displayLines": "UnusedUnderThisBase_397",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_397"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1429897457\">Monster_W2_FeixiaoPart_LockHP</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2033020_Monster_W2_FeixiaoPart_01_PassiveAbilityInitiate": {
-      "fileName": "2033020_Monster_W2_FeixiaoPart_01_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Feixiao: Self}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Skill04DamagePercentage",
-          "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_29) || RETURN",
-            "displayLines": "UnusedUnderThisBase_29",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_29"
-            ]
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Nebula Devourer: Self Initial}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Skill04DamagePercentage",
-          "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_3) || RETURN",
-            "displayLines": "UnusedUnderThisBase_3",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_3"
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1928525254\">Monster_W2_FeixiaoPart_SuperArmorController</a>",
-          "valuePerStack": {
-            "MDF_SuperArmorDamageResistance": {
-              "operator": "Variables[0] (UnusedUnderThisBase_395) || RETURN",
-              "displayLines": "UnusedUnderThisBase_395",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_395"
-              ]
-            },
-            "MDF_BreakActionDelay": {
-              "operator": "Variables[0] (UnusedUnderThisBase_396) || RETURN",
-              "displayLines": "UnusedUnderThisBase_396",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_396"
-              ]
-            },
-            "MDF_SuperArmorBreakDamageAddedRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_397) || RETURN",
-              "displayLines": "UnusedUnderThisBase_397",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_397"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1429897457\">Monster_W2_FeixiaoPart_LockHP</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2033020_Monster_W2_FeixiaoPart_PassiveAbilityInitiate": {
-      "fileName": "2033020_Monster_W2_FeixiaoPart_PassiveAbilityInitiate",
-      "skillTrigger": "Passive01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2121118445\">Monster_W2_FeixiaoPart_PartController</a>"
-        },
-        {
-          "name": "Set Enemy Phase",
-          "phase": 2,
-          "applyOverride": false
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"637793327\">Monster_W2_FeixiaoPart_Formation</a>"
-        },
-        {
-          "name": "Set Action-State",
-          "on": null,
-          "stateName": "FeixiaoPart",
-          "state": false
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 2033021,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Ecliptic Inner Beast & Shadow of \"Feixiao\""
-          }
-        },
-        {
-          "name": "Create Enemy as Body Part",
-          "partName": "Head",
-          "value": {
-            "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-            "displayLines": "PartEntity1_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity1_MonsterID"
-            ]
-          },
-          "offset": 2,
-          "linkHitByPart": true
-        },
-        {
-          "name": "Create Enemy as Body Part",
-          "partName": "Limb",
-          "value": {
-            "operator": "Variables[0] (PartEntity2_MonsterID) || RETURN",
-            "displayLines": "PartEntity2_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity2_MonsterID"
-            ]
-          },
-          "offset": -1,
-          "type": 2,
-          "linkHitByPart": true
-        },
-        {
-          "name": "Create Enemy as Body Part",
-          "partName": "Tail",
-          "value": {
-            "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-            "displayLines": "PartEntity3_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity3_MonsterID"
-            ]
-          },
-          "offset": -2,
-          "type": 3,
-          "linkHitByPart": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1365495312\">Monster_W2_FeixiaoPart_HeadNormalEffect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-31609686\">Monster_W2_FeixiaoPart_LimbNormalEffect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"506782608\">Monster_W2_FeixiaoPart_TailNormalEffect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1095211474\">Monster_W2_FeixiaoPart_Part2ResidentEffect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1236954137\">Monster_W2_FeixiaoPart_Unselectable</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1306733131\">Monster_W2_Feixiao_Stop</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },
@@ -1612,11 +907,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1928525254\">Monster_W2_FeixiaoPart_SuperArmorController</a>",
-          "stackData": [
-            "MDF_SuperArmorDamageResistance",
-            "MDF_BreakActionDelay",
-            "MDF_SuperArmorBreakDamageAddedRatio"
-          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",

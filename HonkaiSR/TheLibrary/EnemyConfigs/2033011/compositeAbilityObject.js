@@ -16,7 +16,6 @@ const compositeAbilityObject = {
     "2033011_Monster_W2_LycanMecha_Ability02_Part01",
     "2033011_Monster_W2_LycanMecha_Ability01_Part02",
     "2033011_Monster_W2_LycanMecha_Ability01_Part01",
-    "2033011_Monster_W2_LycanMecha_MainStoryInitiate",
     "2033011_Modifiers",
     "2033011_BE_BattleEvents"
   ],
@@ -2564,36 +2563,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "2033011_Monster_W2_LycanMecha_MainStoryInitiate": {
-      "fileName": "2033011_Monster_W2_LycanMecha_MainStoryInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2016689086\">Enemy_W2_LycanMecha_MainStory</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2016689086\">Enemy_W2_LycanMecha_MainStory</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action Phase Start [Anyone][?]"
-            }
-          ]
-        }
-      ]
     },
     "2033011_Modifiers": {
       "fileName": "2033011_Modifiers",
