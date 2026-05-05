@@ -3,94 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": 4012092,
   "trimCharacterName": 4012092,
   "abilityList": [
+    "4012092_Monster_W4_DawnsEyePart_03_PassiveAbilityInitiate",
     "4012092_Monster_W4_DawnsEyePart_03_Ability01_Part02",
-    "4012092_Monster_W4_DawnsEyePart_03_Ability01_Part01",
-    "4012092_Monster_W4_DawnsEyePart_03_PassiveAbilityInitiate"
+    "4012092_Monster_W4_DawnsEyePart_03_Ability01_Part01"
   ],
   "abilityObject": {
-    "4012092_Monster_W4_DawnsEyePart_03_Ability01_Part02": {
-      "fileName": "4012092_Monster_W4_DawnsEyePart_03_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1128353279\">Enemy_W4_DawnsEye_PartBlock</a>[<span class=\"descriptionNumberColor\">Marine Layer</span>]"
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "MaxHPValue",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-        },
-        {
-          "name": "Set HP Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "setPercent": 1
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012092_Monster_W4_DawnsEyePart_03_Ability01_Part01": {
-      "fileName": "4012092_Monster_W4_DawnsEyePart_03_Ability01_Part01",
-      "childAbilityList": [
-        "4012092_Monster_W4_DawnsEyePart_03_Ability01_Part01",
-        "4012092_Monster_W4_DawnsEyePart_03_Ability01_Part02",
-        "4012092_Monster_W4_DawnsEyePart_03_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_DawnsEyePart_03_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4012092_Monster_W4_DawnsEyePart_03_PassiveAbilityInitiate": {
       "fileName": "4012092_Monster_W4_DawnsEyePart_03_PassiveAbilityInitiate",
       "skillTrigger": "PassiveSkillInitiate",
@@ -263,6 +180,89 @@ const compositeAbilityObject = {
           ]
         }
       ]
+    },
+    "4012092_Monster_W4_DawnsEyePart_03_Ability01_Part02": {
+      "fileName": "4012092_Monster_W4_DawnsEyePart_03_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1128353279\">Enemy_W4_DawnsEye_PartBlock</a>[<span class=\"descriptionNumberColor\">Marine Layer</span>]"
+        },
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "MaxHPValue",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "Set HP Value",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "setPercent": 1
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4012092_Monster_W4_DawnsEyePart_03_Ability01_Part01": {
+      "fileName": "4012092_Monster_W4_DawnsEyePart_03_Ability01_Part01",
+      "childAbilityList": [
+        "4012092_Monster_W4_DawnsEyePart_03_Ability01_Part01",
+        "4012092_Monster_W4_DawnsEyePart_03_Ability01_Part02",
+        "4012092_Monster_W4_DawnsEyePart_03_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_DawnsEyePart_03_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
     }
   }
 }

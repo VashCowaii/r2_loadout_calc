@@ -3,17 +3,10 @@ const compositeAbilityObject = {
   "fullCharacterName": 4012050,
   "trimCharacterName": 4012050,
   "abilityList": [
-    "4012050_Monster_XP_Minion04_Ability03_Part02",
-    "4012050_Monster_XP_Minion04_Ability03_Part01",
-    "4012050_Monster_XP_Minion04_Ability02_Part02",
-    "4012050_Monster_XP_Minion04_Ability02_Part01",
-    "4012050_Monster_XP_Minion04_Ability01_Part02",
-    "4012050_Monster_XP_Minion04_Ability01_Part01",
-    "4012050_Monster_XP_Minion04_08_PassiveAbility_Tutorial",
-    "4012050_Monster_XP_Minion04_PassiveAbility_Tutorial",
-    "4012050_Monster_XP_Minion04_PassiveAbilityInitiate",
     "4012050_Monster_W4_Mascot_Ability04_Insert_Part02",
     "4012050_Monster_W4_Mascot_Ability04_Insert_Part01",
+    "4012050_Monster_W4_Mascot_PassiveAbilityInitiate",
+    "4012050_Monster_XP_Minion04_PassiveAbilityInitiate",
     "4012050_Monster_W4_Mascot_Ability03_Insert_Part02",
     "4012050_Monster_W4_Mascot_Ability03_Insert_Part01",
     "4012050_Monster_W4_Mascot_Ability03_Part02",
@@ -26,221 +19,9 @@ const compositeAbilityObject = {
     "4012050_Monster_W4_Mascot_Ability01_Insert_Part01",
     "4012050_Monster_W4_Mascot_Ability01_Part02",
     "4012050_Monster_W4_Mascot_Ability01_Part01",
-    "4012050_Monster_W4_Mascot_PassiveAbilityInitiate",
     "4012050_Modifiers"
   ],
   "abilityObject": {
-    "4012050_Monster_XP_Minion04_Ability03_Part02": {
-      "fileName": "4012050_Monster_XP_Minion04_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"222306094\">Enemy_XP_Minion04_EscapingCharge02</a>"
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Mark Entity For Immediate Death"
-        },
-        "Trigger: Ability End",
-        {
-          "name": "Entity Escape Battle",
-          "triggerEnemyEscape": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012050_Monster_XP_Minion04_Ability03_Part01": {
-      "fileName": "4012050_Monster_XP_Minion04_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Minion04_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012050_Monster_XP_Minion04_Ability02_Part02": {
-      "fileName": "4012050_Monster_XP_Minion04_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"205528475\">Enemy_XP_Minion04_EscapingCharge01</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"222306094\">Enemy_XP_Minion04_EscapingCharge02</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012050_Monster_XP_Minion04_Ability02_Part01": {
-      "fileName": "4012050_Monster_XP_Minion04_Ability02_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Minion04_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012050_Monster_XP_Minion04_Ability01_Part02": {
-      "fileName": "4012050_Monster_XP_Minion04_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"205528475\">Enemy_XP_Minion04_EscapingCharge01</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012050_Monster_XP_Minion04_Ability01_Part01": {
-      "fileName": "4012050_Monster_XP_Minion04_Ability01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Minion04_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012050_Monster_XP_Minion04_08_PassiveAbility_Tutorial": {
-      "fileName": "4012050_Monster_XP_Minion04_08_PassiveAbility_Tutorial",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012050_Monster_XP_Minion04_PassiveAbility_Tutorial": {
-      "fileName": "4012050_Monster_XP_Minion04_PassiveAbility_Tutorial",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012050_Monster_XP_Minion04_PassiveAbilityInitiate": {
-      "fileName": "4012050_Monster_XP_Minion04_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1012060513\">Enemy_XP_Minion04_BeHitSoundController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1012060513\">Enemy_XP_Minion04_BeHitSoundController</a>",
-          "execute": [
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Hit"
-            }
-          ]
-        }
-      ]
-    },
     "4012050_Monster_W4_Mascot_Ability04_Insert_Part02": {
       "fileName": "4012050_Monster_W4_Mascot_Ability04_Insert_Part02",
       "abilityType": null,
@@ -328,6 +109,118 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
+    },
+    "4012050_Monster_W4_Mascot_PassiveAbilityInitiate": {
+      "fileName": "4012050_Monster_W4_Mascot_PassiveAbilityInitiate",
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"407991733\">Enemy_W4_Mascot_ListenCorrectInteract</a>",
+          "valuePerStack": {
+            "MDF_SuccessDamageRatio": {
+              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+              "displayLines": "{[SkillP01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[0]]}"
+              ]
+            }
+          }
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1842024628\">Enemy_W4_Mascot_EnterBattle</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1549112384\">Enemy_W4_Mascot_DeathRattle</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-348410444\">Enemy_W4_Mascot_MuteBreak</a>",
+          "valuePerStack": {
+            "MDF_AllDamageReduce": {
+              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
+              "displayLines": "{[SkillP01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[2]]}"
+              ]
+            }
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4012050_Monster_XP_Minion04_PassiveAbilityInitiate": {
+      "fileName": "4012050_Monster_XP_Minion04_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1012060513\">Enemy_XP_Minion04_BeHitSoundController</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1012060513\">Enemy_XP_Minion04_BeHitSoundController</a>",
+          "execute": [
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Hit"
+            }
+          ]
+        }
+      ]
     },
     "4012050_Monster_W4_Mascot_Ability03_Insert_Part02": {
       "fileName": "4012050_Monster_W4_Mascot_Ability03_Insert_Part02",
@@ -836,84 +729,6 @@ const compositeAbilityObject = {
           "isTrigger": true
         },
         "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012050_Monster_W4_Mascot_PassiveAbilityInitiate": {
-      "fileName": "4012050_Monster_W4_Mascot_PassiveAbilityInitiate",
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"407991733\">Enemy_W4_Mascot_ListenCorrectInteract</a>",
-          "valuePerStack": {
-            "MDF_SuccessDamageRatio": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1842024628\">Enemy_W4_Mascot_EnterBattle</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1549112384\">Enemy_W4_Mascot_DeathRattle</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-348410444\">Enemy_W4_Mascot_MuteBreak</a>",
-          "valuePerStack": {
-            "MDF_AllDamageReduce": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
-            }
-          }
-        }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"

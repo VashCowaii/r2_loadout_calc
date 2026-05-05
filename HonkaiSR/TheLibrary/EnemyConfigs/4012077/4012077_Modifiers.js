@@ -17,10 +17,6 @@ const configAbility = {
         "STAT_DOT"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_DamagePercentage",
-        "MDF_DamageHpAddedRatio"
-      ],
       "description": "Receives DMG at the start of the turn. The higher the target's current HP percentage, the more DMG they receive.",
       "type": "Debuff",
       "effectName": "DoT",
@@ -1412,13 +1408,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "stackData": [
-        "MDF_ShowValue1",
-        "MDF_SpeedUpRatio"
-      ],
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Attacks against \"Guide of Withering and Decay\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
       "type": "Other",
       "effectName": "Enhance",
@@ -1658,9 +1647,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1989762066\">Enemy_W4_PolluxPart_IF_Link</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -4127,11 +4113,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2037214572\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Controller</a>",
-      "stackData": [
-        "MDF_NegativeBlood_Target_DeathCountDown",
-        "MDF_NegativeBlood_Target_FatigueRatio",
-        "MDF_NegativeBlood_Target_StanceBreakDownRatio"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -4215,9 +4196,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-822435931\">Enemy_W4_Pollux_IF_UltraReadyMark</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
