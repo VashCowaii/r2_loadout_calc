@@ -3,7 +3,6 @@ const compositeAbilityObject = {
   "fullCharacterName": 1004031,
   "trimCharacterName": 1004031,
   "abilityList": [
-    "1004031_Monster_W1_Bronya_RL_ShowHPBar",
     "1004031_Monster_W1_Bronya_RL_PassiveAbilityInitiate",
     "1004031_Monster_W1_Bronya_RL_Ability04_Part02",
     "1004031_Monster_W1_Bronya_RL_Ability04_Part01",
@@ -16,26 +15,6 @@ const compositeAbilityObject = {
     "1004031_Modifiers"
   ],
   "abilityObject": {
-    "1004031_Monster_W1_Bronya_RL_ShowHPBar": {
-      "fileName": "1004031_Monster_W1_Bronya_RL_ShowHPBar",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "1004031_Monster_W1_Bronya_RL_PassiveAbilityInitiate": {
       "fileName": "1004031_Monster_W1_Bronya_RL_PassiveAbilityInitiate",
       "skillTrigger": "PassiveSkillInitiate",

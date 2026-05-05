@@ -665,7 +665,8 @@ const configAbility = {
         "MDF_SpeedUp"
       ],
       "latentQueue": [
-        "PhaseFlag"
+        "Gepard_LimboFlag",
+        "AIFlag"
       ],
       "description": "Greatly enhances this unit, increasing SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>. When in this state, Bronya can summon even more Silvermane Cannoneers.",
       "type": "Buff",
