@@ -4,10 +4,10 @@ const compositeAbilityObject = {
   "trimCharacterName": 1002015,
   "abilityList": [
     "1002015_Boss_Cocolia_RL_Weapon_DeathSetCamera",
-    "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Part02",
-    "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Part01",
     "1002015_Boss_Cocolia_RL_Weapon_DeathEffect",
-    "1002015_Boss_Cocolia_RL_Weapon_MuteHitFly"
+    "1002015_Boss_Cocolia_RL_Weapon_MuteHitFly",
+    "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Part02",
+    "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Part01"
   ],
   "abilityObject": {
     "1002015_Boss_Cocolia_RL_Weapon_DeathSetCamera": {
@@ -89,74 +89,6 @@ const compositeAbilityObject = {
           ]
         }
       ]
-    },
-    "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Part02": {
-      "fileName": "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Part01": {
-      "fileName": "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Part01",
-      "childAbilityList": [
-        "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Part01",
-        "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Part02",
-        "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Camera"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_Boss_Cocolia_RL_Weapon_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
     },
     "1002015_Boss_Cocolia_RL_Weapon_DeathEffect": {
       "fileName": "1002015_Boss_Cocolia_RL_Weapon_DeathEffect",
@@ -307,6 +239,74 @@ const compositeAbilityObject = {
           ]
         }
       ]
+    },
+    "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Part02": {
+      "fileName": "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+              "displayLines": "{[Skill04[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Part01": {
+      "fileName": "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Part01",
+      "childAbilityList": [
+        "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Part01",
+        "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Part02",
+        "1002015_Monster_Boss_Cocolia_RL_Weapon_Ability04_Camera"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_Boss_Cocolia_RL_Weapon_Ability04_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
     }
   }
 }
