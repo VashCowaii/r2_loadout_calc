@@ -3,29 +3,881 @@ const compositeAbilityObject = {
   "fullCharacterName": 4023011,
   "trimCharacterName": 4023011,
   "abilityList": [
+    "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbility_Insert",
+    "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbility_Summon",
+    "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbilityInitiate",
     "4023011_Monster_W4_Griffin_LocalLegend_Ability04_Part02",
     "4023011_Monster_W4_Griffin_LocalLegend_Ability04_Part01",
     "4023011_Monster_W4_Griffin_LocalLegend_Ability03_Part02",
     "4023011_Monster_W4_Griffin_LocalLegend_Ability03_Part01",
-    "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part02",
     "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part02_02",
+    "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part02",
     "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part01",
-    "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbility_Summon",
-    "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbility_Insert",
-    "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbilityInitiate",
-    "4023011_Monster_W4_Griffin_Ability04_Part02",
-    "4023011_Monster_W4_Griffin_Ability04_Part01",
-    "4023011_Monster_W4_Griffin_Ability03_Part02",
-    "4023011_Monster_W4_Griffin_Ability03_Part01",
-    "4023011_Monster_W4_Griffin_Ability02_Part02",
-    "4023011_Monster_W4_Griffin_Ability02_Part01",
     "4023011_Monster_W4_Griffin_Ability01_Part02",
     "4023011_Monster_W4_Griffin_Ability01_Part01",
-    "4023011_Monster_W4_Griffin_PassiveAbilityInitiate",
     "4023011_Modifiers",
     "4023011_Functions"
   ],
   "abilityObject": {
+    "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbility_Insert": {
+      "fileName": "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbility_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "WAIT FOR",
+          "condition": {
+            "name": "Death Animation Completed",
+            "team": "Enemy Team",
+            "type": "Team Characters"
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2109418688\">Enemy_W4_Griffin_SignOnAvatar</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
+          "onlyRemoveOwnersInstance": true
+        },
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1209574560\">Enemy_W4_Griffin_UltraReady</a>"
+        },
+        {
+          "name": "Assign Target Battle-Location",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "row": 0
+        },
+        {
+          "name": "Create Enemies",
+          "delayPercent": {
+            "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+            "displayLines": "{[Skill02[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill02[1]]}"
+            ]
+          },
+          "enemyList": [
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (SummonID02) || RETURN",
+                "displayLines": "SummonID02",
+                "constants": [],
+                "variables": [
+                  "SummonID02"
+                ]
+              },
+              "locationType": "AfterCaster"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Recently Summoned Enemies}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-766200550\">Monster_W4_Griffin_LocalLegend_Partner</a>"
+        },
+        {
+          "name": "Create Shared HP Group",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "subTarget": {
+            "name": "Target Name",
+            "target": "{{Recently Summoned Enemies}}"
+          },
+          "removeShields": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Recently Summoned Enemies}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+        },
+        {
+          "name": "Define Custom Variable with Team Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Mascot}}"
+          },
+          "variableName": "_MascotCounts",
+          "livingTargets": true
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": {
+            "operator": "Constants[0] (3) || Variables[0] (_MascotCounts) || SUB || RETURN",
+            "displayLines": "(3 - _MascotCounts)",
+            "constants": [
+              3
+            ],
+            "variables": [
+              "_MascotCounts"
+            ]
+          },
+          "Event": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"1587865992\">W4_Griffin_LocalLegend_Summon</a>"
+            }
+          ]
+        },
+        "Deleted bullshit",
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1853897030\">Monster_W4_Griffin_LocalLegend_PartChangeMark</a>",
+            "invertCondition": true
+          }
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
+        },
+        {
+          "name": "Create Shared HP Group",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "subTarget": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
+          },
+          "removeShields": true
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 1
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1763194403\">Monster_W4_Griffin_LocalLegend_PartController_LockHP</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-191889698\">MModifier_W4_Griffin_LocalLegend_Revenge</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1263736651\">MModifier_W4_Griffin_LocalLegend_AllDamageTaken</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Current Turn Owner}}"
+            }
+          },
+          "passed": [
+            {
+              "name": "Assign Advance/Delay to Current Ability Use",
+              "adjustmentValue": 0,
+              "adjustmentType": "="
+            }
+          ]
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "set": 0
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "InsertCheck02",
+          "value": 0
+        },
+        {
+          "name": "Change Character Transformation",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "phase": "PhaseNormal"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbility_Summon": {
+      "fileName": "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbility_Summon",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "WAIT FOR",
+          "condition": {
+            "name": "Death Animation Completed",
+            "team": "Enemy Team",
+            "type": "Team Characters"
+          }
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": {
+            "operator": "Variables[0] (FREEVAR) || RETURN",
+            "displayLines": "FREEVAR",
+            "constants": [],
+            "variables": [
+              "FREEVAR"
+            ]
+          },
+          "Event": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"1587865992\">W4_Griffin_LocalLegend_Summon</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_DieSumsCheck",
+            "compareType": "<",
+            "value2": {
+              "operator": "Variables[0] (_DieSums) || RETURN",
+              "displayLines": "_DieSums",
+              "constants": [],
+              "variables": [
+                "_DieSums"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_DieSumsCheck",
+          "value": {
+            "operator": "Variables[0] (_DieSums) || RETURN",
+            "displayLines": "_DieSums",
+            "constants": [],
+            "variables": [
+              "_DieSums"
+            ]
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "InsertCheck02",
+          "value": 0
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_SummonCounts",
+          "value": 0
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbilityInitiate": {
+      "fileName": "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-757280196\">W4_Griffin_LocalLegend_BattleScore1</a>",
+          "casterAssign": "TargetSelf"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"203272356\">Enemy_W4_Griffin_Status</a>"
+        },
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Set Enemy Phase"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 4023011,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Earthshaker Leo: Solblaze Winged Beast"
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 402301100,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": null
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1763194403\">Monster_W4_Griffin_LocalLegend_PartController_LockHP</a>"
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_MaxDamageReduce",
+          "value": {
+            "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
+            "displayLines": "{[PassiveSkill02[5]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill02[5]]}"
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Stage ID",
+            "ID": 426007,
+            "compareType": "=",
+            "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_FactorK",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[7]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[7]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[7]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Phase1Sums",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[1]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Phase2Sums",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[2]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_BonusInit",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[3]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[3]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_BonusSums",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[4]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[4]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Bonus2Init",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[8]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[8]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[8]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Bonus2Sums",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[9]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[9]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[9]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_BonusLimit",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[10]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[10]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[10]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Bonus2Limit",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[11]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[11]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[11]]}"
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_FactorK",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[6]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[6]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[6]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Phase1Sums",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[0]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Phase2Sums",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[1]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_BonusInit",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[2]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_BonusSums",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[3]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[3]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Bonus2Init",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[4]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[4]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Bonus2Sums",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[5]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[5]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_BonusLimit",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[6]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[6]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[6]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Bonus2Limit",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[7]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[7]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[7]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": 4,
+          "Event": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"1587865992\">W4_Griffin_LocalLegend_Summon</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"364693111\">Enemy_W4_Griffin_LocalLegend_Status</a>"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "set": 0
+        }
+      ],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__203272356\">Enemy_W4_Griffin_Status</a>",
+          "modifierFlags": [
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Pre-Death [Owner]",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{EVENT[RoT] Mascot}}"
+                  },
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value1": "_ListenCorrectInteract",
+                    "compareType": "=",
+                    "value2": 0
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Trigger Ability",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "ability": "Monster_W4_Mascot_Ability04_LocalLegend_Part03"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-71309847\">Enemy_W4_Mascot_LocalLegend_DeathRattle</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Force Entity Death",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Minions}}"
+                  }
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2109418688\">Enemy_W4_Griffin_SignOnAvatar</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                  "onlyRemoveOwnersInstance": true
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "AIFlag",
+                        "compareType": "=",
+                        "value2": 2,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "AIFlag",
+                        "compareType": "=",
+                        "value2": 4,
+                        "contextScope": "TargetEntity"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Added Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "AIFlag",
+                      "context": "TargetEntity",
+                      "value": -1,
+                      "max": 20
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "AIFlag",
+                    "compareType": "=",
+                    "value2": 5,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "AIFlag",
+                      "value": 1
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2109418688\">Enemy_W4_Griffin_SignOnAvatar</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                  "onlyRemoveOwnersInstance": true
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1209574560\">Enemy_W4_Griffin_UltraReady</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier is Added [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Stage ID",
+                        "ID": 426007,
+                        "compareType": "=",
+                        "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                      },
+                      {
+                        "name": "Modifier Was",
+                        "modifier": "<a class=\"gModGreen\" id=\"35393434\">Standard_FastAction</a>[<span class=\"descriptionNumberColor\">Stormride</span>]"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-191889698\">MModifier_W4_Griffin_LocalLegend_Revenge</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                      "valuePerStack": {
+                        "MDF_AddedDamageRatio": {
+                          "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
+                          "displayLines": "{[PassiveSkill02[0]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[PassiveSkill02[0]]}"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "4023011_Monster_W4_Griffin_LocalLegend_Ability04_Part02": {
       "fileName": "4023011_Monster_W4_Griffin_LocalLegend_Ability04_Part02",
       "abilityType": null,
@@ -271,610 +1123,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []
-    },
-    "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part02": {
-      "fileName": "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "UI Display Event",
-          "popUpText": "Heralding the Dawn"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target Count",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Player Team All}}"
-            },
-            "compareType": "NOT=",
-            "value2": 1,
-            "livingTargets": true
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target Count",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Player Team All}}"
-            },
-            "compareType": ">=",
-            "value2": 3,
-            "livingTargets": true
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Noontide Gryphon: Skill02 Target}}"
-                  },
-                  {
-                    "name": "Target Index"
-                  }
-                ]
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Noontide Gryphon: Skill02 Target}}"
-                  },
-                  {
-                    "name": "Target Index",
-                    "indexValue": 1
-                  }
-                ]
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1699176100\">Monster_W4_Griffin_Ability02_Target02</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Noontide Gryphon: Skill02 Target}}"
-                  },
-                  {
-                    "name": "Target Index",
-                    "indexValue": 2
-                  }
-                ]
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1715953719\">Monster_W4_Griffin_Ability02_Target03</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1624884388\">Monster_W4_Griffin_Ability02_Attack01</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1675217245\">Monster_W4_Griffin_Ability02_Attack02</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1658439626\">Monster_W4_Griffin_Ability02_Attack03</a>"
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target Count",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Player Team All}}"
-                },
-                "compareType": ">=",
-                "value2": 2,
-                "livingTargets": true
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Noontide Gryphon: Skill02 Target}}"
-                      },
-                      {
-                        "name": "Target Index"
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Noontide Gryphon: Skill02 Target}}"
-                      },
-                      {
-                        "name": "Target Index",
-                        "indexValue": 1
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1699176100\">Monster_W4_Griffin_Ability02_Target02</a>"
-                },
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"1624884388\">Monster_W4_Griffin_Ability02_Attack01</a>"
-                },
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"1675217245\">Monster_W4_Griffin_Ability02_Attack02</a>"
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Noontide Gryphon: Skill02 Target}}"
-                      },
-                      {
-                        "name": "Target Index"
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                },
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"299917600\">Monster_W4_Griffin_Ability02_Attack01_1P</a>"
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1699176100\">Monster_W4_Griffin_Ability02_Target02</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1715953719\">Monster_W4_Griffin_Ability02_Target03</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "functions": [
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__299917600\">Monster_W4_Griffin_Ability02_Attack01_1P</a>",
-          "parse": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                    }
-                  }
-                ]
-              },
-              "AttackScaling": {
-                "DamageType": "Fire",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                    }
-                  }
-                ]
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
-              "duration": {
-                "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[1]]}"
-                ]
-              },
-              "baseChance": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
-              },
-              "valuePerStack": {
-                "Modifier_Burn_DamagePercentage": {
-                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[2]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__1624884388\">Monster_W4_Griffin_Ability02_Attack01</a>",
-          "parse": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                    }
-                  }
-                ]
-              },
-              "AttackScaling": {
-                "DamageType": "Fire",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                    }
-                  }
-                ]
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
-              "duration": {
-                "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[1]]}"
-                ]
-              },
-              "baseChance": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
-              },
-              "valuePerStack": {
-                "Modifier_Burn_DamagePercentage": {
-                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[2]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__1675217245\">Monster_W4_Griffin_Ability02_Attack02</a>",
-          "parse": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1699176100\">Monster_W4_Griffin_Ability02_Target02</a>"
-                    }
-                  }
-                ]
-              },
-              "AttackScaling": {
-                "DamageType": "Fire",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1699176100\">Monster_W4_Griffin_Ability02_Target02</a>"
-                    }
-                  }
-                ]
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
-              "duration": {
-                "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[1]]}"
-                ]
-              },
-              "baseChance": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
-              },
-              "valuePerStack": {
-                "Modifier_Burn_DamagePercentage": {
-                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[2]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__1658439626\">Monster_W4_Griffin_Ability02_Attack03</a>",
-          "parse": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1715953719\">Monster_W4_Griffin_Ability02_Target03</a>"
-                    }
-                  }
-                ]
-              },
-              "AttackScaling": {
-                "DamageType": "Fire",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1715953719\">Monster_W4_Griffin_Ability02_Target03</a>"
-                    }
-                  }
-                ]
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
-              "duration": {
-                "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[1]]}"
-                ]
-              },
-              "baseChance": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
-              },
-              "valuePerStack": {
-                "Modifier_Burn_DamagePercentage": {
-                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[2]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1715953719\">Monster_W4_Griffin_Ability02_Target03</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1699176100\">Monster_W4_Griffin_Ability02_Target02</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-        }
-      ]
     },
     "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part02_02": {
       "fileName": "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part02_02",
@@ -1558,1915 +1806,16 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part01": {
-      "fileName": "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part01",
-      "childAbilityList": [
-        "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Camera",
-        "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Camera02",
-        "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part01",
-        "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part02",
-        "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part02_02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Target Count",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
-                },
-                "compareType": "=",
-                "value2": 1,
-                "livingTargets": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
-                },
-                "flagName": "STAT_CTRL",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
-                },
-                "flagName": "DisableAction",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
-                },
-                "flagName": "Break",
-                "invertCondition": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "ability": "Monster_W4_Griffin_LocalLegend_Ability02_Part02_02",
-              "isTrigger": true
-            },
-            "Deleted bullshit"
-          ],
-          "failed": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "ability": "Monster_W4_Griffin_LocalLegend_Ability02_Part02",
-              "isTrigger": true
-            },
-            "Deleted bullshit"
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Target Count",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
-                },
-                "compareType": "=",
-                "value2": 1,
-                "livingTargets": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
-                },
-                "flagName": "STAT_CTRL",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
-                },
-                "flagName": "DisableAction",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
-                },
-                "flagName": "Break",
-                "invertCondition": true
-              }
-            ]
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}",
-        "targetIsVariable": true
-      },
-      "references": []
-    },
-    "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbility_Summon": {
-      "fileName": "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbility_Summon",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "WAIT FOR",
-          "condition": {
-            "name": "Death Animation Completed",
-            "team": "Enemy Team",
-            "type": "Team Characters"
-          }
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": {
-            "operator": "Variables[0] (FREEVAR) || RETURN",
-            "displayLines": "FREEVAR",
-            "constants": [],
-            "variables": [
-              "FREEVAR"
-            ]
-          },
-          "Event": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1587865992\">W4_Griffin_LocalLegend_Summon</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_DieSumsCheck",
-            "compareType": "<",
-            "value2": {
-              "operator": "Variables[0] (_DieSums) || RETURN",
-              "displayLines": "_DieSums",
-              "constants": [],
-              "variables": [
-                "_DieSums"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_DieSumsCheck",
-          "value": {
-            "operator": "Variables[0] (_DieSums) || RETURN",
-            "displayLines": "_DieSums",
-            "constants": [],
-            "variables": [
-              "_DieSums"
-            ]
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "InsertCheck02",
-          "value": 0
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_SummonCounts",
-          "value": 0
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbility_Insert": {
-      "fileName": "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbility_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "WAIT FOR",
-          "condition": {
-            "name": "Death Animation Completed",
-            "team": "Enemy Team",
-            "type": "Team Characters"
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2109418688\">Enemy_W4_Griffin_SignOnAvatar</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
-          "onlyRemoveOwnersInstance": true
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1209574560\">Enemy_W4_Griffin_UltraReady</a>"
-        },
-        {
-          "name": "Assign Target Battle-Location",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "row": 0
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": {
-            "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-            "displayLines": "{[Skill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[1]]}"
-            ]
-          },
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonID02) || RETURN",
-                "displayLines": "SummonID02",
-                "constants": [],
-                "variables": [
-                  "SummonID02"
-                ]
-              },
-              "locationType": "AfterCaster"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Recently Summoned Enemies}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-766200550\">Monster_W4_Griffin_LocalLegend_Partner</a>"
-        },
-        {
-          "name": "Create Shared HP Group",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "subTarget": {
-            "name": "Target Name",
-            "target": "{{Recently Summoned Enemies}}"
-          },
-          "removeShields": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Recently Summoned Enemies}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-        },
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Mascot}}"
-          },
-          "variableName": "_MascotCounts",
-          "livingTargets": true
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": {
-            "operator": "Constants[0] (3) || Variables[0] (_MascotCounts) || SUB || RETURN",
-            "displayLines": "(3 - _MascotCounts)",
-            "constants": [
-              3
-            ],
-            "variables": [
-              "_MascotCounts"
-            ]
-          },
-          "Event": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1587865992\">W4_Griffin_LocalLegend_Summon</a>"
-            }
-          ]
-        },
-        "Deleted bullshit",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1853897030\">Monster_W4_Griffin_LocalLegend_PartChangeMark</a>",
-            "invertCondition": true
-          }
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Create Shared HP Group",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "subTarget": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
-          },
-          "removeShields": true
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1763194403\">Monster_W4_Griffin_LocalLegend_PartController_LockHP</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-191889698\">MModifier_W4_Griffin_LocalLegend_Revenge</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1263736651\">MModifier_W4_Griffin_LocalLegend_AllDamageTaken</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "target2": {
-              "name": "Target Name",
-              "target": "{{Current Turn Owner}}"
-            }
-          },
-          "passed": [
-            {
-              "name": "Assign Advance/Delay to Current Ability Use",
-              "adjustmentValue": 0,
-              "adjustmentType": "="
-            }
-          ]
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "set": 0
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "InsertCheck02",
-          "value": 0
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "PhaseNormal"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbilityInitiate": {
-      "fileName": "4023011_Monster_W4_Griffin_LocalLegend_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-757280196\">W4_Griffin_LocalLegend_BattleScore1</a>",
-          "casterAssign": "TargetSelf"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"203272356\">Enemy_W4_Griffin_Status</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Set Enemy Phase"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 4023011,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Earthshaker Leo: Solblaze Winged Beast"
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 402301100,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": null
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1763194403\">Monster_W4_Griffin_LocalLegend_PartController_LockHP</a>"
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_MaxDamageReduce",
-          "value": {
-            "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[5]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[5]]}"
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Stage ID",
-            "ID": 426007,
-            "compareType": "=",
-            "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_FactorK",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[7]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[7]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[7]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Phase1Sums",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[1]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Phase2Sums",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[2]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_BonusInit",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[3]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_BonusSums",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[4]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Bonus2Init",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[8]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[8]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[8]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Bonus2Sums",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[9]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[9]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[9]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_BonusLimit",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[10]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[10]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[10]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Bonus2Limit",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[11]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[11]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[11]]}"
-                ]
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_FactorK",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[6]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[6]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[6]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Phase1Sums",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[0]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Phase2Sums",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[1]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_BonusInit",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[2]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_BonusSums",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[3]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Bonus2Init",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[4]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Bonus2Sums",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[5]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_BonusLimit",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[6]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[6]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[6]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Bonus2Limit",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[7]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[7]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[7]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": 4,
-          "Event": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1587865992\">W4_Griffin_LocalLegend_Summon</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"364693111\">Enemy_W4_Griffin_LocalLegend_Status</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "set": 0
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__203272356\">Enemy_W4_Griffin_Status</a>",
-          "modifierFlags": [
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Pre-Death [Owner]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{EVENT[RoT] Mascot}}"
-                  },
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value1": "_ListenCorrectInteract",
-                    "compareType": "=",
-                    "value2": 0
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Trigger Ability",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "ability": "Monster_W4_Mascot_Ability04_LocalLegend_Part03"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-71309847\">Enemy_W4_Mascot_LocalLegend_DeathRattle</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  }
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2109418688\">Enemy_W4_Griffin_SignOnAvatar</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
-                  "onlyRemoveOwnersInstance": true
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "AIFlag",
-                        "compareType": "=",
-                        "value2": 2,
-                        "contextScope": "TargetEntity"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "AIFlag",
-                        "compareType": "=",
-                        "value2": 4,
-                        "contextScope": "TargetEntity"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": -1,
-                      "max": 20
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "AIFlag",
-                    "compareType": "=",
-                    "value2": 5,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 1
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2109418688\">Enemy_W4_Griffin_SignOnAvatar</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
-                  "onlyRemoveOwnersInstance": true
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1209574560\">Enemy_W4_Griffin_UltraReady</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Stage ID",
-                        "ID": 426007,
-                        "compareType": "=",
-                        "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-                      },
-                      {
-                        "name": "Modifier Was",
-                        "modifier": "<a class=\"gModGreen\" id=\"35393434\">Standard_FastAction</a>[<span class=\"descriptionNumberColor\">Stormride</span>]"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-191889698\">MModifier_W4_Griffin_LocalLegend_Revenge</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-                      "valuePerStack": {
-                        "MDF_AddedDamageRatio": {
-                          "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[0]]}"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "4023011_Monster_W4_Griffin_Ability04_Part02": {
-      "fileName": "4023011_Monster_W4_Griffin_Ability04_Part02",
+    "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part02": {
+      "fileName": "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         "Ability Start",
         {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1209574560\">Enemy_W4_Griffin_UltraReady</a>"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.25,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_387) || RETURN",
-              "displayLines": "UnusedUnderThisBase_387",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_387"
-              ]
-            },
-            "HitSplit": 0.25,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.25,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_387) || RETURN",
-              "displayLines": "UnusedUnderThisBase_387",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_387"
-              ]
-            },
-            "HitSplit": 0.25,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.25,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_387) || RETURN",
-              "displayLines": "UnusedUnderThisBase_387",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_387"
-              ]
-            },
-            "HitSplit": 0.25,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "searchRandom": true,
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1656896295\">Enemy_W4_Unicorn_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Oronyx's Mark</span>]",
-                    "invertCondition": true
-                  },
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"26062276\">Enemy_W4_Griffin_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Aquila's Mark</span>]",
-                    "invertCondition": true
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
-                    },
-                    "HitSplit": 0.25,
-                    "Toughness": null,
-                    "Tags": null,
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
-                    },
-                    "HitSplit": 0.25,
-                    "Toughness": null,
-                    "Tags": null,
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "value": "ENEMIES_OBJECT_UNUSED__181"
-              },
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"26062276\">Enemy_W4_Griffin_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Aquila's Mark</span>]",
-                  "valuePerStack": {
-                    "_GriffinMark_SPCost": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_379) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_379",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_379"
-                      ]
-                    },
-                    "_GriffinMark_DamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_380) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_380",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_380"
-                      ]
-                    },
-                    "_MixedMark_LoseHpRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_381) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_381",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_381"
-                      ]
-                    },
-                    "_UnicornMark_Chance": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_382) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_382",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_382"
-                      ]
-                    },
-                    "_UnicornMark_LifeTime": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_383) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_383",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_383"
-                      ]
-                    },
-                    "_UnicornMark_ActionDelayRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_384) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_384",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_384"
-                      ]
-                    },
-                    "_UnicornMark_DebuffDamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_385) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_385",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_385"
-                      ]
-                    },
-                    "_UnicornMark_DamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_386) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_386",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_386"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "searchRandom": true,
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1656896295\">Enemy_W4_Unicorn_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Oronyx's Mark</span>]",
-                    "invertCondition": true
-                  },
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"26062276\">Enemy_W4_Griffin_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Aquila's Mark</span>]",
-                    "invertCondition": true
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_387) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_387",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_387"
-                      ]
-                    },
-                    "HitSplit": 0.25,
-                    "Toughness": null,
-                    "Tags": null,
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_387) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_387",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_387"
-                      ]
-                    },
-                    "HitSplit": 0.25,
-                    "Toughness": null,
-                    "Tags": null,
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "value": "ENEMIES_OBJECT_UNUSED__181"
-              },
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"26062276\">Enemy_W4_Griffin_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Aquila's Mark</span>]",
-                  "valuePerStack": {
-                    "_GriffinMark_SPCost": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_379) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_379",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_379"
-                      ]
-                    },
-                    "_GriffinMark_DamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_380) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_380",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_380"
-                      ]
-                    },
-                    "_MixedMark_LoseHpRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_381) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_381",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_381"
-                      ]
-                    },
-                    "_UnicornMark_Chance": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_382) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_382",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_382"
-                      ]
-                    },
-                    "_UnicornMark_LifeTime": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_383) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_383",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_383"
-                      ]
-                    },
-                    "_UnicornMark_ActionDelayRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_384) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_384",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_384"
-                      ]
-                    },
-                    "_UnicornMark_DebuffDamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_385) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_385",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_385"
-                      ]
-                    },
-                    "_UnicornMark_DamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_386) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_386",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_386"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "value": "ENEMIES_OBJECT_UNUSED__181"
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{ST and Blast}}"
-              },
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_378) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_378",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_378"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2109418688\">Enemy_W4_Griffin_SignOnAvatar</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
-          "onlyRemoveOwnersInstance": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4023011_Monster_W4_Griffin_Ability04_Part01": {
-      "fileName": "4023011_Monster_W4_Griffin_Ability04_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target Count",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Noontide Gryphon: Skill04 Target}}"
-            },
-            "compareType": "=",
-            "value2": 2,
-            "livingTargets": true
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Ability Target(ST)}}"
-                },
-                "target2": {
-                  "name": "Target Sequence",
-                  "Sequence": [
-                    {
-                      "name": "Target Name",
-                      "target": "{{Player Team All}}"
-                    },
-                    {
-                      "name": "Return Target",
-                      "value": 1
-                    }
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Griffin_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4023011_Monster_W4_Griffin_Ability03_Part02": {
-      "fileName": "4023011_Monster_W4_Griffin_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Noontide Gryphon: Skill03 Target}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2109418688\">Enemy_W4_Griffin_SignOnAvatar</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1926757602\">Enemy_W4_Griffin_Ability03_Mark</a>",
-          "onlyRemoveOwnersInstance": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1209574560\">Enemy_W4_Griffin_UltraReady</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4023011_Monster_W4_Griffin_Ability03_Part01": {
-      "fileName": "4023011_Monster_W4_Griffin_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"26062276\">Enemy_W4_Griffin_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Aquila's Mark</span>]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1926757602\">Enemy_W4_Griffin_Ability03_Mark</a>"
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Noontide Gryphon: Skill03 Target}}"
-          },
-          "variableName": "_TargetCount",
-          "livingTargets": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_TargetCount",
-            "compareType": "<",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1926757602\">Enemy_W4_Griffin_Ability03_Mark</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Griffin_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4023011_Monster_W4_Griffin_Ability02_Part02": {
-      "fileName": "4023011_Monster_W4_Griffin_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1273402705\">Monster_W4_Griffin_NoSummon</a>",
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "Mark Entity For Immediate Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              }
-            },
-            {
-              "name": "Force Entity Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              }
-            },
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                "displayLines": "{[Skill02[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[1]]}"
-                ]
-              },
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonID01) || RETURN",
-                    "displayLines": "SummonID01",
-                    "constants": [],
-                    "variables": [
-                      "SummonID01"
-                    ]
-                  },
-                  "locationType": "AroundCaster"
-                }
-              ]
-            },
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                "displayLines": "{[Skill02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[2]]}"
-                ]
-              },
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonID02) || RETURN",
-                    "displayLines": "SummonID02",
-                    "constants": [],
-                    "variables": [
-                      "SummonID02"
-                    ]
-                  },
-                  "locationType": "AroundCaster"
-                }
-              ]
-            },
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                "displayLines": "{[Skill02[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[3]]}"
-                ]
-              },
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonID03) || RETURN",
-                    "displayLines": "SummonID03",
-                    "constants": [],
-                    "variables": [
-                      "SummonID03"
-                    ]
-                  },
-                  "locationType": "AroundCaster"
-                }
-              ]
-            },
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-                "displayLines": "{[Skill02[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[4]]}"
-                ]
-              },
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonID04) || RETURN",
-                    "displayLines": "SummonID04",
-                    "constants": [],
-                    "variables": [
-                      "SummonID04"
-                    ]
-                  },
-                  "locationType": "AroundCaster"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-            }
-          ]
+          "name": "UI Display Event",
+          "popUpText": "Heralding the Dawn"
         },
         {
           "name": "IF",
@@ -3663,54 +2012,6 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1715953719\">Monster_W4_Griffin_Ability02_Target03</a>"
         },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "_Location",
-                "compareType": "=",
-                "value2": 0
-              },
-              "passed": [
-                {
-                  "name": "Assign Target Battle-Location",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "spot": "KeepOnFirst"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_Location",
-                  "value": 1
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Assign Target Battle-Location",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "spot": "KeepOnLast"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_Location",
-                  "value": 0
-                }
-              ]
-            }
-          ]
-        },
         "Trigger: Ability End"
       ],
       "functions": [
@@ -3719,297 +2020,92 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"fun__299917600\">Monster_W4_Griffin_Ability02_Attack01_1P</a>",
           "parse": [
             {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Sequence",
+                "Sequence": [
                   {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Sequence",
-                      "Sequence": [
-                        {
-                          "name": "Target Name",
-                          "target": "{{Player Team All}}"
-                        },
-                        {
-                          "name": "Target Filter",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                          }
-                        }
-                      ]
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1656896295\">Enemy_W4_Unicorn_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Oronyx's Mark</span>]",
-                    "invertCondition": true
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
                   },
                   {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Sequence",
-                      "Sequence": [
-                        {
-                          "name": "Target Name",
-                          "target": "{{Player Team All}}"
-                        },
-                        {
-                          "name": "Target Filter",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                          }
-                        }
-                      ]
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"26062276\">Enemy_W4_Griffin_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Aquila's Mark</span>]",
-                    "invertCondition": true
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
+                    }
                   }
                 ]
               },
-              "passed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                        }
-                      }
-                    ]
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                        }
-                      }
-                    ]
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
+              "AttackScaling": {
+                "DamageType": "Fire",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                  "displayLines": "{[Skill02[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill02[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
             },
             {
-              "name": "IF",
-              "conditions": {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "value": "ENEMIES_OBJECT_UNUSED__181"
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
+                    }
+                  }
+                ]
               },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                        }
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
-                  "duration": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_376) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_376",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_376"
-                    ]
-                  },
-                  "baseChance": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_375) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_375",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_375"
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_DamagePercentage_Layer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_377) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_377",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_377"
-                      ]
-                    }
-                  }
+              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
+              "duration": {
+                "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[1]]}"
+                ]
+              },
+              "baseChance": {
+                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[0]]}"
+                ]
+              },
+              "valuePerStack": {
+                "Modifier_Burn_DamagePercentage": {
+                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+                  "displayLines": "{[PassiveSkill01[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[PassiveSkill01[2]]}"
+                  ]
                 }
-              ],
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                        }
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"26062276\">Enemy_W4_Griffin_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Aquila's Mark</span>]",
-                  "valuePerStack": {
-                    "_GriffinMark_SPCost": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_379) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_379",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_379"
-                      ]
-                    },
-                    "_GriffinMark_DamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_380) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_380",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_380"
-                      ]
-                    },
-                    "_MixedMark_LoseHpRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_381) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_381",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_381"
-                      ]
-                    },
-                    "_UnicornMark_Chance": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_382) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_382",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_382"
-                      ]
-                    },
-                    "_UnicornMark_LifeTime": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_383) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_383",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_383"
-                      ]
-                    },
-                    "_UnicornMark_ActionDelayRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_384) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_384",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_384"
-                      ]
-                    },
-                    "_UnicornMark_DebuffDamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_385) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_385",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_385"
-                      ]
-                    },
-                    "_UnicornMark_DamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_386) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_386",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_386"
-                      ]
-                    }
-                  }
-                }
-              ]
+              }
             }
           ]
         },
@@ -4018,297 +2114,92 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"fun__1624884388\">Monster_W4_Griffin_Ability02_Attack01</a>",
           "parse": [
             {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Sequence",
+                "Sequence": [
                   {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Sequence",
-                      "Sequence": [
-                        {
-                          "name": "Target Name",
-                          "target": "{{Player Team All}}"
-                        },
-                        {
-                          "name": "Target Filter",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                          }
-                        }
-                      ]
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1656896295\">Enemy_W4_Unicorn_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Oronyx's Mark</span>]",
-                    "invertCondition": true
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
                   },
                   {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Sequence",
-                      "Sequence": [
-                        {
-                          "name": "Target Name",
-                          "target": "{{Player Team All}}"
-                        },
-                        {
-                          "name": "Target Filter",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                          }
-                        }
-                      ]
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"26062276\">Enemy_W4_Griffin_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Aquila's Mark</span>]",
-                    "invertCondition": true
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
+                    }
                   }
                 ]
               },
-              "passed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                        }
-                      }
-                    ]
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                        }
-                      }
-                    ]
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
+              "AttackScaling": {
+                "DamageType": "Fire",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                  "displayLines": "{[Skill02[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill02[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
             },
             {
-              "name": "IF",
-              "conditions": {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "value": "ENEMIES_OBJECT_UNUSED__181"
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
+                    }
+                  }
+                ]
               },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                        }
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
-                  "duration": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_376) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_376",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_376"
-                    ]
-                  },
-                  "baseChance": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_375) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_375",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_375"
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_DamagePercentage_Layer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_377) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_377",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_377"
-                      ]
-                    }
-                  }
+              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
+              "duration": {
+                "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[1]]}"
+                ]
+              },
+              "baseChance": {
+                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[0]]}"
+                ]
+              },
+              "valuePerStack": {
+                "Modifier_Burn_DamagePercentage": {
+                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+                  "displayLines": "{[PassiveSkill01[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[PassiveSkill01[2]]}"
+                  ]
                 }
-              ],
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
-                        }
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"26062276\">Enemy_W4_Griffin_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Aquila's Mark</span>]",
-                  "valuePerStack": {
-                    "_GriffinMark_SPCost": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_379) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_379",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_379"
-                      ]
-                    },
-                    "_GriffinMark_DamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_380) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_380",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_380"
-                      ]
-                    },
-                    "_MixedMark_LoseHpRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_381) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_381",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_381"
-                      ]
-                    },
-                    "_UnicornMark_Chance": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_382) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_382",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_382"
-                      ]
-                    },
-                    "_UnicornMark_LifeTime": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_383) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_383",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_383"
-                      ]
-                    },
-                    "_UnicornMark_ActionDelayRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_384) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_384",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_384"
-                      ]
-                    },
-                    "_UnicornMark_DebuffDamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_385) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_385",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_385"
-                      ]
-                    },
-                    "_UnicornMark_DamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_386) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_386",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_386"
-                      ]
-                    }
-                  }
-                }
-              ]
+              }
             }
           ]
         },
@@ -4317,297 +2208,92 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"fun__1675217245\">Monster_W4_Griffin_Ability02_Attack02</a>",
           "parse": [
             {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Sequence",
+                "Sequence": [
                   {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Sequence",
-                      "Sequence": [
-                        {
-                          "name": "Target Name",
-                          "target": "{{Player Team All}}"
-                        },
-                        {
-                          "name": "Target Filter",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"1699176100\">Monster_W4_Griffin_Ability02_Target02</a>"
-                          }
-                        }
-                      ]
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1656896295\">Enemy_W4_Unicorn_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Oronyx's Mark</span>]",
-                    "invertCondition": true
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
                   },
                   {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Sequence",
-                      "Sequence": [
-                        {
-                          "name": "Target Name",
-                          "target": "{{Player Team All}}"
-                        },
-                        {
-                          "name": "Target Filter",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"1699176100\">Monster_W4_Griffin_Ability02_Target02</a>"
-                          }
-                        }
-                      ]
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"26062276\">Enemy_W4_Griffin_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Aquila's Mark</span>]",
-                    "invertCondition": true
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1699176100\">Monster_W4_Griffin_Ability02_Target02</a>"
+                    }
                   }
                 ]
               },
-              "passed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1699176100\">Monster_W4_Griffin_Ability02_Target02</a>"
-                        }
-                      }
-                    ]
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1699176100\">Monster_W4_Griffin_Ability02_Target02</a>"
-                        }
-                      }
-                    ]
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
+              "AttackScaling": {
+                "DamageType": "Fire",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                  "displayLines": "{[Skill02[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill02[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
             },
             {
-              "name": "IF",
-              "conditions": {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "value": "ENEMIES_OBJECT_UNUSED__181"
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1699176100\">Monster_W4_Griffin_Ability02_Target02</a>"
+                    }
+                  }
+                ]
               },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1699176100\">Monster_W4_Griffin_Ability02_Target02</a>"
-                        }
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
-                  "duration": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_376) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_376",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_376"
-                    ]
-                  },
-                  "baseChance": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_375) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_375",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_375"
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_DamagePercentage_Layer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_377) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_377",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_377"
-                      ]
-                    }
-                  }
+              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
+              "duration": {
+                "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[1]]}"
+                ]
+              },
+              "baseChance": {
+                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[0]]}"
+                ]
+              },
+              "valuePerStack": {
+                "Modifier_Burn_DamagePercentage": {
+                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+                  "displayLines": "{[PassiveSkill01[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[PassiveSkill01[2]]}"
+                  ]
                 }
-              ],
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1699176100\">Monster_W4_Griffin_Ability02_Target02</a>"
-                        }
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"26062276\">Enemy_W4_Griffin_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Aquila's Mark</span>]",
-                  "valuePerStack": {
-                    "_GriffinMark_SPCost": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_379) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_379",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_379"
-                      ]
-                    },
-                    "_GriffinMark_DamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_380) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_380",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_380"
-                      ]
-                    },
-                    "_MixedMark_LoseHpRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_381) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_381",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_381"
-                      ]
-                    },
-                    "_UnicornMark_Chance": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_382) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_382",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_382"
-                      ]
-                    },
-                    "_UnicornMark_LifeTime": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_383) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_383",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_383"
-                      ]
-                    },
-                    "_UnicornMark_ActionDelayRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_384) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_384",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_384"
-                      ]
-                    },
-                    "_UnicornMark_DebuffDamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_385) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_385",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_385"
-                      ]
-                    },
-                    "_UnicornMark_DamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_386) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_386",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_386"
-                      ]
-                    }
-                  }
-                }
-              ]
+              }
             }
           ]
         },
@@ -4616,297 +2302,92 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"fun__1658439626\">Monster_W4_Griffin_Ability02_Attack03</a>",
           "parse": [
             {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Sequence",
+                "Sequence": [
                   {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Sequence",
-                      "Sequence": [
-                        {
-                          "name": "Target Name",
-                          "target": "{{Player Team All}}"
-                        },
-                        {
-                          "name": "Target Filter",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"1715953719\">Monster_W4_Griffin_Ability02_Target03</a>"
-                          }
-                        }
-                      ]
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1656896295\">Enemy_W4_Unicorn_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Oronyx's Mark</span>]",
-                    "invertCondition": true
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
                   },
                   {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Sequence",
-                      "Sequence": [
-                        {
-                          "name": "Target Name",
-                          "target": "{{Player Team All}}"
-                        },
-                        {
-                          "name": "Target Filter",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"1715953719\">Monster_W4_Griffin_Ability02_Target03</a>"
-                          }
-                        }
-                      ]
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"26062276\">Enemy_W4_Griffin_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Aquila's Mark</span>]",
-                    "invertCondition": true
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1715953719\">Monster_W4_Griffin_Ability02_Target03</a>"
+                    }
                   }
                 ]
               },
-              "passed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1715953719\">Monster_W4_Griffin_Ability02_Target03</a>"
-                        }
-                      }
-                    ]
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1715953719\">Monster_W4_Griffin_Ability02_Target03</a>"
-                        }
-                      }
-                    ]
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
+              "AttackScaling": {
+                "DamageType": "Fire",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                  "displayLines": "{[Skill02[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill02[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
             },
             {
-              "name": "IF",
-              "conditions": {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "value": "ENEMIES_OBJECT_UNUSED__181"
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1715953719\">Monster_W4_Griffin_Ability02_Target03</a>"
+                    }
+                  }
+                ]
               },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1715953719\">Monster_W4_Griffin_Ability02_Target03</a>"
-                        }
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
-                  "duration": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_376) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_376",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_376"
-                    ]
-                  },
-                  "baseChance": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_375) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_375",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_375"
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_DamagePercentage_Layer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_377) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_377",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_377"
-                      ]
-                    }
-                  }
+              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
+              "duration": {
+                "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[1]]}"
+                ]
+              },
+              "baseChance": {
+                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[0]]}"
+                ]
+              },
+              "valuePerStack": {
+                "Modifier_Burn_DamagePercentage": {
+                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+                  "displayLines": "{[PassiveSkill01[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[PassiveSkill01[2]]}"
+                  ]
                 }
-              ],
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1715953719\">Monster_W4_Griffin_Ability02_Target03</a>"
-                        }
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"26062276\">Enemy_W4_Griffin_Debuff_Mark</a>[<span class=\"descriptionNumberColor\">Aquila's Mark</span>]",
-                  "valuePerStack": {
-                    "_GriffinMark_SPCost": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_379) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_379",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_379"
-                      ]
-                    },
-                    "_GriffinMark_DamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_380) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_380",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_380"
-                      ]
-                    },
-                    "_MixedMark_LoseHpRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_381) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_381",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_381"
-                      ]
-                    },
-                    "_UnicornMark_Chance": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_382) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_382",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_382"
-                      ]
-                    },
-                    "_UnicornMark_LifeTime": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_383) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_383",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_383"
-                      ]
-                    },
-                    "_UnicornMark_ActionDelayRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_384) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_384",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_384"
-                      ]
-                    },
-                    "_UnicornMark_DebuffDamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_385) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_385",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_385"
-                      ]
-                    },
-                    "_UnicornMark_DamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_386) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_386",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_386"
-                      ]
-                    }
-                  }
-                }
-              ]
+              }
             }
           ]
         }
@@ -4929,25 +2410,141 @@ const compositeAbilityObject = {
         }
       ]
     },
-    "4023011_Monster_W4_Griffin_Ability02_Part01": {
-      "fileName": "4023011_Monster_W4_Griffin_Ability02_Part01",
-      "abilityType": null,
+    "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part01": {
+      "fileName": "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part01",
+      "childAbilityList": [
+        "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Camera",
+        "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Camera02",
+        "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part01",
+        "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part02",
+        "4023011_Monster_W4_Griffin_LocalLegend_Ability02_Part02_02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Target Count",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
+                },
+                "compareType": "=",
+                "value2": 1,
+                "livingTargets": true
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
+                },
+                "flagName": "STAT_CTRL",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
+                },
+                "flagName": "DisableAction",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
+                },
+                "flagName": "Break",
+                "invertCondition": true
+              }
+            ]
           },
-          "ability": "Monster_W4_Griffin_Ability02_Part02",
-          "isTrigger": true
+          "passed": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "ability": "Monster_W4_Griffin_LocalLegend_Ability02_Part02_02",
+              "isTrigger": true
+            },
+            "Deleted bullshit"
+          ],
+          "failed": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "ability": "Monster_W4_Griffin_LocalLegend_Ability02_Part02",
+              "isTrigger": true
+            },
+            "Deleted bullshit"
+          ]
         },
-        "Deleted bullshit"
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Target Count",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
+                },
+                "compareType": "=",
+                "value2": 1,
+                "livingTargets": true
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
+                },
+                "flagName": "STAT_CTRL",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
+                },
+                "flagName": "DisableAction",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
+                },
+                "flagName": "Break",
+                "invertCondition": true
+              }
+            ]
+          }
+        }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
       },
       "references": []
     },
@@ -5066,162 +2663,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "4023011_Monster_W4_Griffin_PassiveAbilityInitiate": {
-      "fileName": "4023011_Monster_W4_Griffin_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"203272356\">Enemy_W4_Griffin_Status</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__203272356\">Enemy_W4_Griffin_Status</a>",
-          "modifierFlags": [
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Pre-Death [Owner]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2109418688\">Enemy_W4_Griffin_SignOnAvatar</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
-                  "onlyRemoveOwnersInstance": true
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "AIFlag",
-                        "compareType": "=",
-                        "value2": 2,
-                        "contextScope": "TargetEntity"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "AIFlag",
-                        "compareType": "=",
-                        "value2": 4,
-                        "contextScope": "TargetEntity"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": -1,
-                      "max": 20
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "AIFlag",
-                    "compareType": "=",
-                    "value2": 5,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 1
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>",
-                    "invertCondition": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2109418688\">Enemy_W4_Griffin_SignOnAvatar</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
-                  "onlyRemoveOwnersInstance": true
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1209574560\">Enemy_W4_Griffin_UltraReady</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ]
     },
     "4023011_Modifiers": {
       "fileName": "4023011_Modifiers",
@@ -6224,19 +3665,6 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "RemoveWhenCasterUnstage"
           ],
-          "stackData": [
-            "_GriffinMark_SPCost",
-            "_GriffinMark_DamagePercentage",
-            "_MixedMark_LoseHpRatio",
-            "_UnicornMark_Chance",
-            "_UnicornMark_LifeTime",
-            "_UnicornMark_ActionDelayRatio",
-            "_UnicornMark_DebuffDamagePercentage",
-            "_UnicornMark_DamagePercentage"
-          ],
-          "latentQueue": [
-            "_Location"
-          ],
           "description": "When a target gains \"Aquila's Mark\" again, dispel all marks, and they take Fire DMG and lose Energy. When a target gains \"Oronyx's Mark\" again, dispel all marks, and they take True DMG based on <span class=\"descriptionNumberColor\">_MixedMark_LoseHpRatio</span> of their Max HP, lose Energy, and have a high chance to be afflicted with Entanglement. After any ally target defeats an enemy target, this mark can be dispelled, prioritizing dispelling the mark from the target that dealt the fatal damage.",
           "type": "Other",
           "effectName": "Aquila's Mark",
@@ -6594,9 +4022,6 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1506863241\">Enemy_W4_Griffin_Debuff_Status</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
-          ],
-          "latentQueue": [
-            "_Location"
           ],
           "execute": [
             {

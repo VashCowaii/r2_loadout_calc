@@ -84,9 +84,6 @@ const configAbility = {
         "MuteHitH",
         "STAT_SuperArmor"
       ],
-      "stackData": [
-        "MDF_AllDamageTypeResistance"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -779,9 +776,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__41194297\">Enemy_W4_FireProwler_01_IF_NextWave</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "latentQueue": [
-        "AIFlag"
       ]
     },
     {
@@ -1458,15 +1452,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2128816741\">Enemy_W4_FireProwler_01_IF_Activated03</a>",
-      "stackData": [
-        "SummonIndex",
-        "MDF_ActionDelay1_Weight",
-        "MDF_ActionDelay1",
-        "MDF_ActionDelay2_Weight",
-        "MDF_ActionDelay2",
-        "MDF_ActionDelay3_Weight",
-        "MDF_ActionDelay3"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1555,9 +1540,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2095261503\">Enemy_W4_FireProwler_01_IF_Activated01</a>[<span class=\"descriptionNumberColor\">Mutual Sacrifice</span>]",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "When \"%CasterName\" uses \"Demise's Storm,\" also use \"Demise's Storm\" at the same time.",
       "type": "Other",
       "effectName": "Simultaneously use \"Demise's Storm\"",
@@ -1978,9 +1960,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1742476718\">Enemy_W4_FireProwler_01_IF_HPBack</a>[<span class=\"descriptionNumberColor\">Shackled</span>]",
       "modifierFlags": [
         "Deathrattle"
-      ],
-      "stackData": [
-        "MDF_LoseHPRatio"
       ],
       "description": "After receiving a killing blow, if \"%CasterName\" is in the \"Shackle Shatter\" state, be instantly resummoned and enter the \"Shackled\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
       "type": "Other",
@@ -3548,8 +3527,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_PropertyValue"
+      "latentQueue": [
+        "Deathrattle_Count",
+        "Deathrattle"
       ],
       "description": "Each stack reduces DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. 1 stack is lost after 1 \"Long-Shattered Vessel\" is defeated.",
       "type": "Buff",
@@ -3975,9 +3955,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__911157260\">Enemy_W4_FireProwler_TimePowerListener</a>",
-      "stackData": [
-        "MDF_MaxCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

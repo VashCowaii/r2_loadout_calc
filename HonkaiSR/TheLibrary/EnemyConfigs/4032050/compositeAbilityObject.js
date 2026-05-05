@@ -3,12 +3,44 @@ const compositeAbilityObject = {
   "fullCharacterName": 4032050,
   "trimCharacterName": 4032050,
   "abilityList": [
+    "4032050_Monster_W4_Shooter_01_AbilityP01",
     "4032050_Monster_W4_Shooter_01_Ability01_Part02",
     "4032050_Monster_W4_Shooter_01_Ability01_Part01",
-    "4032050_Monster_W4_Shooter_01_AbilityP01",
     "4032050_Modifiers"
   ],
   "abilityObject": {
+    "4032050_Monster_W4_Shooter_01_AbilityP01": {
+      "fileName": "4032050_Monster_W4_Shooter_01_AbilityP01",
+      "skillTrigger": "SkillP01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"276019182\">Enemy_W4_Shooter_01_ConfineHit_Controller</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"783794549\">Enemy_W4_Shooter_01_Effect</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "4032050_Monster_W4_Shooter_01_Ability01_Part02": {
       "fileName": "4032050_Monster_W4_Shooter_01_Ability01_Part02",
       "abilityType": null,
@@ -115,38 +147,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4032050_Monster_W4_Shooter_01_AbilityP01": {
-      "fileName": "4032050_Monster_W4_Shooter_01_AbilityP01",
-      "skillTrigger": "SkillP01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"276019182\">Enemy_W4_Shooter_01_ConfineHit_Controller</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"783794549\">Enemy_W4_Shooter_01_Effect</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },

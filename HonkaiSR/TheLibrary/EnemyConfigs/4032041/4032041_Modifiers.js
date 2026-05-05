@@ -10,6 +10,89 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1771764709\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood</a>[<span class=\"descriptionNumberColor\">HP Overload</span>]",
+      "modifierFlags": [
+        "MuteBreak"
+      ],
+      "description": "Target has accumulated \"HP Overload,\" healing <span class=\"descriptionNumberColor\">MDF_NegativeBlood</span> HP will remove this state. When the \"Overload Settlement\" turn begins, the target will receive fatal damage.",
+      "type": "Other",
+      "statusName": "HP Overload",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Define Custom Variable with Stat",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "variableName": "MDF_NegativeBlood_Temp",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;"
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_NegativeBlood",
+              "value": {
+                "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
+                "constants": [],
+                "variables": [
+                  "CEIL",
+                  "MDF_NegativeBlood_Temp"
+                ]
+              }
+            },
+            {
+              "name": "Modify Weaknesses",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "action": "Protected",
+              "valueList": [
+                "Physical",
+                "Fire",
+                "Ice",
+                "Thunder",
+                "Wind",
+                "Quantum",
+                "Imaginary"
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "HP Change [Owner]",
+          "execute": [
+            {
+              "name": "Define Custom Variable with Stat",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "variableName": "MDF_NegativeBlood_Temp",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;"
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_NegativeBlood",
+              "value": {
+                "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
+                "constants": [],
+                "variables": [
+                  "CEIL",
+                  "MDF_NegativeBlood_Temp"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-82278057\">Enemy_W4_Scholar_01_LocalLegend_StealthBreak</a>",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
@@ -285,10 +368,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-19048827\">Enemy_W4_Scholar_01_Stealth</a>[<span class=\"descriptionNumberColor\">Lurking</span>]",
       "modifierFlags": [
         "Stealth"
-      ],
-      "stackData": [
-        "MDF_StealthBreak_ActionDelayRatio",
-        "MDF_StealthBreak_AllDamageTypeTakenRatio"
       ],
       "description": "Cannot become the primary target for abilities that require active selection. DMG received increases by <span class=\"descriptionNumberColor\">MDF_StealthBreak_AllDamageTypeTakenRatio</span>. When Weakness is Broken or when all enemy units on the field aside from this unit are in \"Lurking\" state, dispels \"Lurking\" state for this unit. When there are no other enemy units on the battlefield, this unit dispels the \"Lurking\" state.",
       "type": "Buff",

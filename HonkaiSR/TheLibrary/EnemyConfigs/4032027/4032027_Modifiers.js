@@ -398,10 +398,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1700303456\">Enemy_W4_Phainon_ShowBattleCondition</a>",
-      "latentQueue": [
-        "_LockHp03",
-        "MDF_CurrentSP"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",

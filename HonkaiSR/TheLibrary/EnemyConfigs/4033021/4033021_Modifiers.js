@@ -133,6 +133,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1358856185\">Enemy_W4_Claymore_01_LocalLegend_TargetSelectPrepare</a>",
       "stackType": "ReplaceByCaster",
       "latentQueue": [
+        "InsertCheck03",
         "_SelectTimes"
       ],
       "execute": [

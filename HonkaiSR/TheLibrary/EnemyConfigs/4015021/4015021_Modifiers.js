@@ -1032,9 +1032,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__196132555\">Enemy_W4_DawnsEye_01_MainStoryLockHP</a>",
-      "stackData": [
-        "MDF_DeathSPAdd"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1087,6 +1084,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-459185506\">Enemy_W4_DawnsEye_01_StandbyEffect</a>",
+      "latentQueue": [
+        "_IsStoryTri"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

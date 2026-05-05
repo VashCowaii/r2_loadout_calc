@@ -3,16 +3,43 @@ const compositeAbilityObject = {
   "fullCharacterName": 4032040,
   "trimCharacterName": 4032040,
   "abilityList": [
+    "4032040_Monster_W4_Scholar_01_AbilityP01",
     "4032040_Monster_W4_Scholar_01_Ability03_Part02",
     "4032040_Monster_W4_Scholar_01_Ability03_Part01",
     "4032040_Monster_W4_Scholar_01_Ability02_Part02",
     "4032040_Monster_W4_Scholar_01_Ability02_Part01",
     "4032040_Monster_W4_Scholar_01_Ability01_Part02",
     "4032040_Monster_W4_Scholar_01_Ability01_Part01",
-    "4032040_Monster_W4_Scholar_01_AbilityP01",
     "4032040_Modifiers"
   ],
   "abilityObject": {
+    "4032040_Monster_W4_Scholar_01_AbilityP01": {
+      "fileName": "4032040_Monster_W4_Scholar_01_AbilityP01",
+      "childAbilityList": [
+        "4032040_Monster_W4_Scholar_01_AbilityP01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1296271884\">Enemy_W4_Scholar_01_ConfineHit_Controller</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "4032040_Monster_W4_Scholar_01_Ability03_Part02": {
       "fileName": "4032040_Monster_W4_Scholar_01_Ability03_Part02",
       "abilityType": null,
@@ -227,33 +254,6 @@ const compositeAbilityObject = {
           "isTrigger": true
         },
         "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4032040_Monster_W4_Scholar_01_AbilityP01": {
-      "fileName": "4032040_Monster_W4_Scholar_01_AbilityP01",
-      "childAbilityList": [
-        "4032040_Monster_W4_Scholar_01_AbilityP01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1296271884\">Enemy_W4_Scholar_01_ConfineHit_Controller</a>"
-        }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"

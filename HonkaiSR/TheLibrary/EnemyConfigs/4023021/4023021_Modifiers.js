@@ -467,16 +467,6 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "RemoveWhenCasterUnstage"
       ],
-      "stackData": [
-        "_GriffinMark_SPCost",
-        "_GriffinMark_DamagePercentage",
-        "_MixedMark_LoseHpRatio",
-        "_UnicornMark_Chance",
-        "_UnicornMark_LifeTime",
-        "_UnicornMark_ActionDelayRatio",
-        "_UnicornMark_DebuffDamagePercentage",
-        "_UnicornMark_DamagePercentage"
-      ],
       "description": "When a target gains \"Oronyx's Mark\" again, dispel all marks, and they take Quantum DMG with a high chance to be afflicted with Entanglement. When a target gains \"Aquila's Mark\" again, dispel all marks, and they receive True DMG based on <span class=\"descriptionNumberColor\">_MixedMark_LoseHpRatio</span> of their Max HP, lose Energy, and have a high chance to be afflicted with Entanglement. Using Ultimate can dispel this mark.",
       "type": "Other",
       "effectName": "Oronyx's Mark",

@@ -3,903 +3,22 @@ const compositeAbilityObject = {
   "fullCharacterName": 4033012,
   "trimCharacterName": 4033012,
   "abilityList": [
-    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Part02",
-    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Part01",
-    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability05_Part02",
-    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability05_Part01",
     "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Insert_Part02",
     "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Insert_Part01",
+    "4033012_Monster_XP_Elite01_02_LocalLegend_PassiveAbility_Insert",
+    "4033012_Monster_XP_Elite01_02_LocalLegend_PassiveAbility01",
+    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Part02",
+    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Part01",
     "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Part02",
     "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Part01",
     "4033012_Monster_XP_Elite01_02_LocalLegend_Ability02_Part02",
     "4033012_Monster_XP_Elite01_02_LocalLegend_Ability02_Part01",
     "4033012_Monster_XP_Elite01_02_LocalLegend_Ability01_Part02",
     "4033012_Monster_XP_Elite01_02_LocalLegend_Ability01_Part01",
-    "4033012_Monster_XP_Elite01_02_LocalLegend_PassiveAbility_Insert",
-    "4033012_Monster_XP_Elite01_02_LocalLegend_PassiveAbility01",
     "4033012_Modifiers",
     "4033012_BE_BattleEvents"
   ],
   "abilityObject": {
-    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Part02": {
-      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target Count",
-                "target": {
-                  "name": "Target Sequence",
-                  "Sequence": [
-                    {
-                      "name": "Target Name",
-                      "target": "{{Caster's Minions}}"
-                    },
-                    {
-                      "name": "Target Filter",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": {
-                          "operator": "Variables[0] (SummonID01) || RETURN",
-                          "displayLines": "SummonID01",
-                          "constants": [],
-                          "variables": [
-                            "SummonID01"
-                          ]
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": null
-                      }
-                    }
-                  ]
-                },
-                "compareType": "=",
-                "value2": 0,
-                "livingTargets": true
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                    "displayLines": "{[Skill06[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[0]]}"
-                    ]
-                  },
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonID01) || RETURN",
-                        "displayLines": "SummonID01",
-                        "constants": [],
-                        "variables": [
-                          "SummonID01"
-                        ]
-                      },
-                      "locationType": "AroundCasterOnEdge"
-                    }
-                  ]
-                },
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-                    "displayLines": "{[Skill06[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[3]]}"
-                    ]
-                  },
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonID01) || RETURN",
-                        "displayLines": "SummonID01",
-                        "constants": [],
-                        "variables": [
-                          "SummonID01"
-                        ]
-                      },
-                      "locationType": "AroundCasterOnEdge"
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target Count",
-                    "target": {
-                      "name": "Target Sequence",
-                      "Sequence": [
-                        {
-                          "name": "Target Name",
-                          "target": "{{Caster's Minions}}"
-                        },
-                        {
-                          "name": "Target Filter",
-                          "conditions": {
-                            "name": "Enemy ID",
-                            "ID": {
-                              "operator": "Variables[0] (SummonID01) || RETURN",
-                              "displayLines": "SummonID01",
-                              "constants": [],
-                              "variables": [
-                                "SummonID01"
-                              ]
-                            },
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "characterName": null
-                          }
-                        }
-                      ]
-                    },
-                    "compareType": "=",
-                    "value2": 1,
-                    "livingTargets": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Create Enemies",
-                      "delayPercent": {
-                        "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                        "displayLines": "{[Skill06[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill06[0]]}"
-                        ]
-                      },
-                      "enemyList": [
-                        {
-                          "name": "Enemy Entry",
-                          "enemyID": {
-                            "operator": "Variables[0] (SummonID01) || RETURN",
-                            "displayLines": "SummonID01",
-                            "constants": [],
-                            "variables": [
-                              "SummonID01"
-                            ]
-                          },
-                          "locationType": "AroundCasterOnEdge"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target Count",
-                "target": {
-                  "name": "Target Sequence",
-                  "Sequence": [
-                    {
-                      "name": "Target Name",
-                      "target": "{{Caster's Minions}}"
-                    },
-                    {
-                      "name": "Target Filter",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": {
-                          "operator": "Variables[0] (SummonID02) || RETURN",
-                          "displayLines": "SummonID02",
-                          "constants": [],
-                          "variables": [
-                            "SummonID02"
-                          ]
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": null
-                      }
-                    }
-                  ]
-                },
-                "compareType": "=",
-                "value2": 0,
-                "livingTargets": true
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                    "displayLines": "{[Skill06[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[1]]}"
-                    ]
-                  },
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonID02) || RETURN",
-                        "displayLines": "SummonID02",
-                        "constants": [],
-                        "variables": [
-                          "SummonID02"
-                        ]
-                      },
-                      "locationType": "BeforeCaster"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target Count",
-                "target": {
-                  "name": "Target Sequence",
-                  "Sequence": [
-                    {
-                      "name": "Target Name",
-                      "target": "{{Caster's Minions}}"
-                    },
-                    {
-                      "name": "Target Filter",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": {
-                          "operator": "Variables[0] (SummonID04) || RETURN",
-                          "displayLines": "SummonID04",
-                          "constants": [],
-                          "variables": [
-                            "SummonID04"
-                          ]
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": null
-                      }
-                    }
-                  ]
-                },
-                "compareType": "=",
-                "value2": 0,
-                "livingTargets": true
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                    "displayLines": "{[Skill06[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[1]]}"
-                    ]
-                  },
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonID04) || RETURN",
-                        "displayLines": "SummonID04",
-                        "constants": [],
-                        "variables": [
-                          "SummonID04"
-                        ]
-                      },
-                      "locationType": "AfterCaster"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "FirstSummon",
-              "value": 1
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target Count",
-                "target": {
-                  "name": "Target Sequence",
-                  "Sequence": [
-                    {
-                      "name": "Target Name",
-                      "target": "{{Caster's Minions}}"
-                    },
-                    {
-                      "name": "Target Filter",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": {
-                          "operator": "Variables[0] (SummonID04) || RETURN",
-                          "displayLines": "SummonID04",
-                          "constants": [],
-                          "variables": [
-                            "SummonID04"
-                          ]
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": null
-                      }
-                    }
-                  ]
-                },
-                "compareType": "=",
-                "value2": 0,
-                "livingTargets": true
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                    "displayLines": "{[Skill06[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[0]]}"
-                    ]
-                  },
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonID04) || RETURN",
-                        "displayLines": "SummonID04",
-                        "constants": [],
-                        "variables": [
-                          "SummonID04"
-                        ]
-                      },
-                      "locationType": "AroundCaster"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target Count",
-                "target": {
-                  "name": "Target Sequence",
-                  "Sequence": [
-                    {
-                      "name": "Target Name",
-                      "target": "{{Caster's Minions}}"
-                    },
-                    {
-                      "name": "Target Filter",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": {
-                          "operator": "Variables[0] (SummonID01) || RETURN",
-                          "displayLines": "SummonID01",
-                          "constants": [],
-                          "variables": [
-                            "SummonID01"
-                          ]
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": null
-                      }
-                    }
-                  ]
-                },
-                "compareType": "=",
-                "value2": 0,
-                "livingTargets": true
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                    "displayLines": "{[Skill06[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[0]]}"
-                    ]
-                  },
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonID01) || RETURN",
-                        "displayLines": "SummonID01",
-                        "constants": [],
-                        "variables": [
-                          "SummonID01"
-                        ]
-                      },
-                      "locationType": "AroundCasterOnEdge"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target Count",
-                "target": {
-                  "name": "Target Sequence",
-                  "Sequence": [
-                    {
-                      "name": "Target Name",
-                      "target": "{{Caster's Minions}}"
-                    },
-                    {
-                      "name": "Target Filter",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": {
-                          "operator": "Variables[0] (SummonID03) || RETURN",
-                          "displayLines": "SummonID03",
-                          "constants": [],
-                          "variables": [
-                            "SummonID03"
-                          ]
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": null
-                      }
-                    }
-                  ]
-                },
-                "compareType": "=",
-                "value2": 0,
-                "livingTargets": true
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                    "displayLines": "{[Skill06[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[1]]}"
-                    ]
-                  },
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonID03) || RETURN",
-                        "displayLines": "SummonID03",
-                        "constants": [],
-                        "variables": [
-                          "SummonID03"
-                        ]
-                      },
-                      "locationType": "BeforeCaster"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target Count",
-                "target": {
-                  "name": "Target Sequence",
-                  "Sequence": [
-                    {
-                      "name": "Target Name",
-                      "target": "{{Caster's Minions}}"
-                    },
-                    {
-                      "name": "Target Filter",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": {
-                          "operator": "Variables[0] (SummonID02) || RETURN",
-                          "displayLines": "SummonID02",
-                          "constants": [],
-                          "variables": [
-                            "SummonID02"
-                          ]
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": null
-                      }
-                    }
-                  ]
-                },
-                "compareType": "=",
-                "value2": 0,
-                "livingTargets": true
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
-                    "displayLines": "{[Skill06[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill06[2]]}"
-                    ]
-                  },
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonID02) || RETURN",
-                        "displayLines": "SummonID02",
-                        "constants": [],
-                        "variables": [
-                          "SummonID02"
-                        ]
-                      },
-                      "locationType": "AroundCasterOnEdge"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": {
-              "operator": "Variables[0] (SummonID01) || RETURN",
-              "displayLines": "SummonID01",
-              "constants": [],
-              "variables": [
-                "SummonID01"
-              ]
-            },
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": {
-              "operator": "Variables[0] (SummonID02) || RETURN",
-              "displayLines": "SummonID02",
-              "constants": [],
-              "variables": [
-                "SummonID02"
-              ]
-            },
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": {
-              "operator": "Variables[0] (SummonID03) || RETURN",
-              "displayLines": "SummonID03",
-              "constants": [],
-              "variables": [
-                "SummonID03"
-              ]
-            },
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": {
-              "operator": "Variables[0] (SummonID04) || RETURN",
-              "displayLines": "SummonID04",
-              "constants": [],
-              "variables": [
-                "SummonID04"
-              ]
-            },
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null
-          }
-        },
-        {
-          "name": "Add Battle Event",
-          "eventID": 20036,
-          "variables": null,
-          "whenCreated": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"416601415\">Modifier_XP_Elite01_02_LocalLegend_Ability03BattleEvent</a>"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              "passed": [
-                {
-                  "name": "Action Advance/Delay",
-                  "advanceType": "Set",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "set": {
-                    "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                    "displayLines": "{[Skill03[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[0]]}"
-                    ]
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Action Advance/Delay",
-                  "advanceType": "Set",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "set": {
-                    "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-                    "displayLines": "{[Skill03[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[2]]}"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "variableName": "MDF_CharacterCount",
-          "livingTargets": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (_Basic_AllDamageReduceRatio) || RETURN",
-              "displayLines": "_Basic_AllDamageReduceRatio",
-              "constants": [],
-              "variables": [
-                "_Basic_AllDamageReduceRatio"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1258915271\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood_LockHP</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Part01": {
-      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Part01",
-      "childAbilityList": [
-        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Part01",
-        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Part02",
-        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Camera"
-      ],
-      "skillTrigger": "Skill06",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Elite01_02_LocalLegend_Ability06_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability05_Part02": {
-      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability05_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_TargetMaxHp",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": {}
-                },
-                "DamageFlat": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_156) || Variables[1] (_TargetMaxHp) || MUL || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_156 * _TargetMaxHp)",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_156",
-                    "_TargetMaxHp"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "True DMG",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability05_Part01": {
-      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability05_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Elite01_02_LocalLegend_Ability05_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
     "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Insert_Part02": {
       "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Insert_Part02",
       "abilityType": null,
@@ -1219,479 +338,6 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Part02": {
-      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Heartmarrow Corrosion"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1808493640\">Enemy_Standard_LocalLegend_Init_LockHp</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"449361701\">Enemy_Standard_LocalLegend_Init_MuteBreak</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1291270123\">Monster_XP_Elite01_02_LocalLegend_Ability03_Status</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1258915271\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood_LockHP</a>"
-        },
-        {
-          "name": "Add Battle Event",
-          "eventID": 20036,
-          "variables": null,
-          "whenCreated": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"416601415\">Modifier_XP_Elite01_02_LocalLegend_Ability03BattleEvent</a>"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              "passed": [
-                {
-                  "name": "Action Advance/Delay",
-                  "advanceType": "Set",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "set": {
-                    "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                    "displayLines": "{[Skill03[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[0]]}"
-                    ]
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Action Advance/Delay",
-                  "advanceType": "Set",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "set": {
-                    "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-                    "displayLines": "{[Skill03[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill03[2]]}"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Part01": {
-      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Part01",
-      "childAbilityList": [
-        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Part01",
-        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Part02",
-        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Camera"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Elite01_02_LocalLegend_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability02_Part02": {
-      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Define Custom Variable",
-          "scope": "ContextAbility",
-          "variableName": "FireBallNum",
-          "value": 1
-        },
-        {
-          "name": "Trigger Multiple Functions",
-          "functionList": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1380139364\">Monster_XP_Elite01_02_Ability02_Ball_ParallelTargetFinding</a>",
-              "delayInterval": 0.2537,
-              "parallelCount": 5
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "functions": [
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1380139364\">Monster_XP_Elite01_02_Ability02_Ball_ParallelTargetFinding</a>",
-          "parse": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "FireBallNum",
-                "compareType": "=",
-                "value2": 1,
-                "contextScope": "ContextAbility"
-              },
-              "passed": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemies by Aggro OR Random}}"
-                  },
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "Trigger Multiple Functions",
-                      "functionList": [
-                        {
-                          "name": "Use Custom Character Function",
-                          "functionName": "<a class=\"gTempYellow\" id=\"1983891597\">Monster_XP_Elite01_02_Ability02_Ball_Fire</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "Trigger Multiple Functions",
-                      "functionList": [
-                        {
-                          "name": "Use Custom Character Function",
-                          "functionName": "<a class=\"gTempYellow\" id=\"1983891597\">Monster_XP_Elite01_02_Ability02_Ball_Fire</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__1983891597\">Monster_XP_Elite01_02_Ability02_Ball_Fire</a>",
-          "parse": [
-            {
-              "name": "SWITCH",
-              "switchValue": {
-                "operator": "Variables[0] (SummonType) || RETURN",
-                "displayLines": "SummonType",
-                "constants": [],
-                "variables": [
-                  "SummonType"
-                ]
-              },
-              "caseEvents": [
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": 1
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": 2
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": 3
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": 4
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": 5
-                }
-              ],
-              "defaultEvents": []
-            },
-            {
-              "name": "Shot Fired"
-            },
-            {
-              "name": "Define Custom Variable with Added Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variableName": "FireBallNum",
-              "context": "ContextAbility",
-              "value": 1,
-              "max": 100
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value1": "CurrentHP%",
-                "compareType": ">",
-                "value2": 0
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "variableName": "_TargetMaxHp",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                },
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "variableName": "_TargetCurrentHp",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Physical",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || Constants[0] (1) || Variables[1] (_TargetCurrentHp) || Variables[2] (_TargetMaxHp) || DIV || Variables[3] ({[Skill02[1]]}) || MUL || ADD || MUL || RETURN",
-                      "displayLines": "({[Skill02[0]]} * (1 + ((_TargetCurrentHp / _TargetMaxHp) * {[Skill02[1]]})))",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "{[Skill02[0]]}",
-                        "_TargetCurrentHp",
-                        "_TargetMaxHp",
-                        "{[Skill02[1]]}"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability02_Part01": {
-      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability02_Part01",
-      "childAbilityList": [
-        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability02_Part01",
-        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability02_Part02",
-        "4033012_Monster_XP_Elite01_02_Ability02_Camera"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Elite01_02_LocalLegend_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}",
-        "targetIsVariable": true
-      },
-      "references": []
-    },
-    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability01_Part02": {
-      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "variableName": "_TargetMaxHp",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "variableName": "_TargetCurrentHp",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-        },
-        {
-          "name": "Shot Fired",
-          "execute": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Projectile's Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (1) || Variables[1] (_TargetCurrentHp) || Variables[2] (_TargetMaxHp) || DIV || Variables[3] ({[Skill01[1]]}) || MUL || ADD || MUL || RETURN",
-                  "displayLines": "({[Skill01[0]]} * (1 + ((_TargetCurrentHp / _TargetMaxHp) * {[Skill01[1]]})))",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "{[Skill01[0]]}",
-                    "_TargetCurrentHp",
-                    "_TargetMaxHp",
-                    "{[Skill01[1]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability01_Part01": {
-      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability01_Part01",
-      "childAbilityList": [
-        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability01_Part01",
-        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability01_Part02",
-        "4033012_Monster_XP_Elite01_02_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Elite01_02_LocalLegend_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
       },
       "references": []
     },
@@ -2932,6 +1578,1276 @@ const compositeAbilityObject = {
           ]
         }
       ]
+    },
+    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Part02": {
+      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target Count",
+                "target": {
+                  "name": "Target Sequence",
+                  "Sequence": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Caster's Minions}}"
+                    },
+                    {
+                      "name": "Target Filter",
+                      "conditions": {
+                        "name": "Enemy ID",
+                        "ID": {
+                          "operator": "Variables[0] (SummonID01) || RETURN",
+                          "displayLines": "SummonID01",
+                          "constants": [],
+                          "variables": [
+                            "SummonID01"
+                          ]
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "characterName": null
+                      }
+                    }
+                  ]
+                },
+                "compareType": "=",
+                "value2": 0,
+                "livingTargets": true
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": {
+                    "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+                    "displayLines": "{[Skill06[0]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill06[0]]}"
+                    ]
+                  },
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonID01) || RETURN",
+                        "displayLines": "SummonID01",
+                        "constants": [],
+                        "variables": [
+                          "SummonID01"
+                        ]
+                      },
+                      "locationType": "AroundCasterOnEdge"
+                    }
+                  ]
+                },
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": {
+                    "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
+                    "displayLines": "{[Skill06[3]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill06[3]]}"
+                    ]
+                  },
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonID01) || RETURN",
+                        "displayLines": "SummonID01",
+                        "constants": [],
+                        "variables": [
+                          "SummonID01"
+                        ]
+                      },
+                      "locationType": "AroundCasterOnEdge"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target Count",
+                    "target": {
+                      "name": "Target Sequence",
+                      "Sequence": [
+                        {
+                          "name": "Target Name",
+                          "target": "{{Caster's Minions}}"
+                        },
+                        {
+                          "name": "Target Filter",
+                          "conditions": {
+                            "name": "Enemy ID",
+                            "ID": {
+                              "operator": "Variables[0] (SummonID01) || RETURN",
+                              "displayLines": "SummonID01",
+                              "constants": [],
+                              "variables": [
+                                "SummonID01"
+                              ]
+                            },
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "characterName": null
+                          }
+                        }
+                      ]
+                    },
+                    "compareType": "=",
+                    "value2": 1,
+                    "livingTargets": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Create Enemies",
+                      "delayPercent": {
+                        "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+                        "displayLines": "{[Skill06[0]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[Skill06[0]]}"
+                        ]
+                      },
+                      "enemyList": [
+                        {
+                          "name": "Enemy Entry",
+                          "enemyID": {
+                            "operator": "Variables[0] (SummonID01) || RETURN",
+                            "displayLines": "SummonID01",
+                            "constants": [],
+                            "variables": [
+                              "SummonID01"
+                            ]
+                          },
+                          "locationType": "AroundCasterOnEdge"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target Count",
+                "target": {
+                  "name": "Target Sequence",
+                  "Sequence": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Caster's Minions}}"
+                    },
+                    {
+                      "name": "Target Filter",
+                      "conditions": {
+                        "name": "Enemy ID",
+                        "ID": {
+                          "operator": "Variables[0] (SummonID02) || RETURN",
+                          "displayLines": "SummonID02",
+                          "constants": [],
+                          "variables": [
+                            "SummonID02"
+                          ]
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "characterName": null
+                      }
+                    }
+                  ]
+                },
+                "compareType": "=",
+                "value2": 0,
+                "livingTargets": true
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": {
+                    "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
+                    "displayLines": "{[Skill06[1]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill06[1]]}"
+                    ]
+                  },
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonID02) || RETURN",
+                        "displayLines": "SummonID02",
+                        "constants": [],
+                        "variables": [
+                          "SummonID02"
+                        ]
+                      },
+                      "locationType": "BeforeCaster"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target Count",
+                "target": {
+                  "name": "Target Sequence",
+                  "Sequence": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Caster's Minions}}"
+                    },
+                    {
+                      "name": "Target Filter",
+                      "conditions": {
+                        "name": "Enemy ID",
+                        "ID": {
+                          "operator": "Variables[0] (SummonID04) || RETURN",
+                          "displayLines": "SummonID04",
+                          "constants": [],
+                          "variables": [
+                            "SummonID04"
+                          ]
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "characterName": null
+                      }
+                    }
+                  ]
+                },
+                "compareType": "=",
+                "value2": 0,
+                "livingTargets": true
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": {
+                    "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
+                    "displayLines": "{[Skill06[1]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill06[1]]}"
+                    ]
+                  },
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonID04) || RETURN",
+                        "displayLines": "SummonID04",
+                        "constants": [],
+                        "variables": [
+                          "SummonID04"
+                        ]
+                      },
+                      "locationType": "AfterCaster"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "FirstSummon",
+              "value": 1
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target Count",
+                "target": {
+                  "name": "Target Sequence",
+                  "Sequence": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Caster's Minions}}"
+                    },
+                    {
+                      "name": "Target Filter",
+                      "conditions": {
+                        "name": "Enemy ID",
+                        "ID": {
+                          "operator": "Variables[0] (SummonID04) || RETURN",
+                          "displayLines": "SummonID04",
+                          "constants": [],
+                          "variables": [
+                            "SummonID04"
+                          ]
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "characterName": null
+                      }
+                    }
+                  ]
+                },
+                "compareType": "=",
+                "value2": 0,
+                "livingTargets": true
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": {
+                    "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+                    "displayLines": "{[Skill06[0]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill06[0]]}"
+                    ]
+                  },
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonID04) || RETURN",
+                        "displayLines": "SummonID04",
+                        "constants": [],
+                        "variables": [
+                          "SummonID04"
+                        ]
+                      },
+                      "locationType": "AroundCaster"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target Count",
+                "target": {
+                  "name": "Target Sequence",
+                  "Sequence": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Caster's Minions}}"
+                    },
+                    {
+                      "name": "Target Filter",
+                      "conditions": {
+                        "name": "Enemy ID",
+                        "ID": {
+                          "operator": "Variables[0] (SummonID01) || RETURN",
+                          "displayLines": "SummonID01",
+                          "constants": [],
+                          "variables": [
+                            "SummonID01"
+                          ]
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "characterName": null
+                      }
+                    }
+                  ]
+                },
+                "compareType": "=",
+                "value2": 0,
+                "livingTargets": true
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": {
+                    "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+                    "displayLines": "{[Skill06[0]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill06[0]]}"
+                    ]
+                  },
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonID01) || RETURN",
+                        "displayLines": "SummonID01",
+                        "constants": [],
+                        "variables": [
+                          "SummonID01"
+                        ]
+                      },
+                      "locationType": "AroundCasterOnEdge"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target Count",
+                "target": {
+                  "name": "Target Sequence",
+                  "Sequence": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Caster's Minions}}"
+                    },
+                    {
+                      "name": "Target Filter",
+                      "conditions": {
+                        "name": "Enemy ID",
+                        "ID": {
+                          "operator": "Variables[0] (SummonID03) || RETURN",
+                          "displayLines": "SummonID03",
+                          "constants": [],
+                          "variables": [
+                            "SummonID03"
+                          ]
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "characterName": null
+                      }
+                    }
+                  ]
+                },
+                "compareType": "=",
+                "value2": 0,
+                "livingTargets": true
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": {
+                    "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
+                    "displayLines": "{[Skill06[1]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill06[1]]}"
+                    ]
+                  },
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonID03) || RETURN",
+                        "displayLines": "SummonID03",
+                        "constants": [],
+                        "variables": [
+                          "SummonID03"
+                        ]
+                      },
+                      "locationType": "BeforeCaster"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target Count",
+                "target": {
+                  "name": "Target Sequence",
+                  "Sequence": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Caster's Minions}}"
+                    },
+                    {
+                      "name": "Target Filter",
+                      "conditions": {
+                        "name": "Enemy ID",
+                        "ID": {
+                          "operator": "Variables[0] (SummonID02) || RETURN",
+                          "displayLines": "SummonID02",
+                          "constants": [],
+                          "variables": [
+                            "SummonID02"
+                          ]
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "characterName": null
+                      }
+                    }
+                  ]
+                },
+                "compareType": "=",
+                "value2": 0,
+                "livingTargets": true
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": {
+                    "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
+                    "displayLines": "{[Skill06[2]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill06[2]]}"
+                    ]
+                  },
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonID02) || RETURN",
+                        "displayLines": "SummonID02",
+                        "constants": [],
+                        "variables": [
+                          "SummonID02"
+                        ]
+                      },
+                      "locationType": "AroundCasterOnEdge"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": {
+              "operator": "Variables[0] (SummonID01) || RETURN",
+              "displayLines": "SummonID01",
+              "constants": [],
+              "variables": [
+                "SummonID01"
+              ]
+            },
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "characterName": null
+          }
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": {
+              "operator": "Variables[0] (SummonID02) || RETURN",
+              "displayLines": "SummonID02",
+              "constants": [],
+              "variables": [
+                "SummonID02"
+              ]
+            },
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "characterName": null
+          }
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": {
+              "operator": "Variables[0] (SummonID03) || RETURN",
+              "displayLines": "SummonID03",
+              "constants": [],
+              "variables": [
+                "SummonID03"
+              ]
+            },
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "characterName": null
+          }
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": {
+              "operator": "Variables[0] (SummonID04) || RETURN",
+              "displayLines": "SummonID04",
+              "constants": [],
+              "variables": [
+                "SummonID04"
+              ]
+            },
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "characterName": null
+          }
+        },
+        {
+          "name": "Add Battle Event",
+          "eventID": 20036,
+          "variables": null,
+          "whenCreated": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"416601415\">Modifier_XP_Elite01_02_LocalLegend_Ability03BattleEvent</a>"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "Action Advance/Delay",
+                  "advanceType": "Set",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "set": {
+                    "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                    "displayLines": "{[Skill03[0]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill03[0]]}"
+                    ]
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Action Advance/Delay",
+                  "advanceType": "Set",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "set": {
+                    "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
+                    "displayLines": "{[Skill03[2]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill03[2]]}"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable with Team Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "variableName": "MDF_CharacterCount",
+          "livingTargets": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (_Basic_AllDamageReduceRatio) || RETURN",
+              "displayLines": "_Basic_AllDamageReduceRatio",
+              "constants": [],
+              "variables": [
+                "_Basic_AllDamageReduceRatio"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1258915271\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood_LockHP</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Part01": {
+      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Part01",
+      "childAbilityList": [
+        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Part01",
+        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Part02",
+        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability06_Camera"
+      ],
+      "skillTrigger": "Skill06",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_XP_Elite01_02_LocalLegend_Ability06_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Part02": {
+      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Heartmarrow Corrosion"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1808493640\">Enemy_Standard_LocalLegend_Init_LockHp</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"449361701\">Enemy_Standard_LocalLegend_Init_MuteBreak</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1291270123\">Monster_XP_Elite01_02_LocalLegend_Ability03_Status</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1258915271\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood_LockHP</a>"
+        },
+        {
+          "name": "Add Battle Event",
+          "eventID": 20036,
+          "variables": null,
+          "whenCreated": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"416601415\">Modifier_XP_Elite01_02_LocalLegend_Ability03BattleEvent</a>"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "Action Advance/Delay",
+                  "advanceType": "Set",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "set": {
+                    "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                    "displayLines": "{[Skill03[0]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill03[0]]}"
+                    ]
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Action Advance/Delay",
+                  "advanceType": "Set",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "set": {
+                    "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
+                    "displayLines": "{[Skill03[2]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill03[2]]}"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Part01": {
+      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Part01",
+      "childAbilityList": [
+        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Part01",
+        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Part02",
+        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability03_Camera"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_XP_Elite01_02_LocalLegend_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability02_Part02": {
+      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Define Custom Variable",
+          "scope": "ContextAbility",
+          "variableName": "FireBallNum",
+          "value": 1
+        },
+        {
+          "name": "Trigger Multiple Functions",
+          "functionList": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1380139364\">Monster_XP_Elite01_02_Ability02_Ball_ParallelTargetFinding</a>",
+              "delayInterval": 0.2537,
+              "parallelCount": 5
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "functions": [
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1380139364\">Monster_XP_Elite01_02_Ability02_Ball_ParallelTargetFinding</a>",
+          "parse": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "FireBallNum",
+                "compareType": "=",
+                "value2": 1,
+                "contextScope": "ContextAbility"
+              },
+              "passed": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemies by Aggro OR Random}}"
+                  },
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "Trigger Multiple Functions",
+                      "functionList": [
+                        {
+                          "name": "Use Custom Character Function",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1983891597\">Monster_XP_Elite01_02_Ability02_Ball_Fire</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "Trigger Multiple Functions",
+                      "functionList": [
+                        {
+                          "name": "Use Custom Character Function",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1983891597\">Monster_XP_Elite01_02_Ability02_Ball_Fire</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1983891597\">Monster_XP_Elite01_02_Ability02_Ball_Fire</a>",
+          "parse": [
+            {
+              "name": "SWITCH",
+              "switchValue": {
+                "operator": "Variables[0] (SummonType) || RETURN",
+                "displayLines": "SummonType",
+                "constants": [],
+                "variables": [
+                  "SummonType"
+                ]
+              },
+              "caseEvents": [
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 1
+                },
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 2
+                },
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 3
+                },
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 4
+                },
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 5
+                }
+              ],
+              "defaultEvents": []
+            },
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Define Custom Variable with Added Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "variableName": "FireBallNum",
+              "context": "ContextAbility",
+              "value": 1,
+              "max": 100
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value1": "CurrentHP%",
+                "compareType": ">",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "variableName": "_TargetMaxHp",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "variableName": "_TargetCurrentHp",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
+                },
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Physical",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill02[0]]}) || Constants[0] (1) || Variables[1] (_TargetCurrentHp) || Variables[2] (_TargetMaxHp) || DIV || Variables[3] ({[Skill02[1]]}) || MUL || ADD || MUL || RETURN",
+                      "displayLines": "({[Skill02[0]]} * (1 + ((_TargetCurrentHp / _TargetMaxHp) * {[Skill02[1]]})))",
+                      "constants": [
+                        1
+                      ],
+                      "variables": [
+                        "{[Skill02[0]]}",
+                        "_TargetCurrentHp",
+                        "_TargetMaxHp",
+                        "{[Skill02[1]]}"
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability02_Part01": {
+      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability02_Part01",
+      "childAbilityList": [
+        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability02_Part01",
+        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability02_Part02",
+        "4033012_Monster_XP_Elite01_02_Ability02_Camera"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_XP_Elite01_02_LocalLegend_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
+      "references": []
+    },
+    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability01_Part02": {
+      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "variableName": "_TargetMaxHp",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "variableName": "_TargetCurrentHp",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
+        },
+        {
+          "name": "Shot Fired",
+          "execute": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Projectile's Target}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (1) || Variables[1] (_TargetCurrentHp) || Variables[2] (_TargetMaxHp) || DIV || Variables[3] ({[Skill01[1]]}) || MUL || ADD || MUL || RETURN",
+                  "displayLines": "({[Skill01[0]]} * (1 + ((_TargetCurrentHp / _TargetMaxHp) * {[Skill01[1]]})))",
+                  "constants": [
+                    1
+                  ],
+                  "variables": [
+                    "{[Skill01[0]]}",
+                    "_TargetCurrentHp",
+                    "_TargetMaxHp",
+                    "{[Skill01[1]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4033012_Monster_XP_Elite01_02_LocalLegend_Ability01_Part01": {
+      "fileName": "4033012_Monster_XP_Elite01_02_LocalLegend_Ability01_Part01",
+      "childAbilityList": [
+        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability01_Part01",
+        "4033012_Monster_XP_Elite01_02_LocalLegend_Ability01_Part02",
+        "4033012_Monster_XP_Elite01_02_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_XP_Elite01_02_LocalLegend_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
     },
     "4033012_Modifiers": {
       "fileName": "4033012_Modifiers",

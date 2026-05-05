@@ -896,9 +896,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__911157260\">Enemy_W4_FireProwler_TimePowerListener</a>",
-      "stackData": [
-        "MDF_MaxCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

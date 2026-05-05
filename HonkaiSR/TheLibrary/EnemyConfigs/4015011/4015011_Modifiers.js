@@ -2275,8 +2275,7 @@ const configAbility = {
         "RemoveWhenCasterDead"
       ],
       "latentQueue": [
-        "AIFlag",
-        "PauseLevelForCameraPerform"
+        "AIFlag"
       ],
       "description": "Currently unselectable.",
       "type": "Other",
@@ -2375,8 +2374,7 @@ const configAbility = {
         "MDF_SunnyBreakColdRatio"
       ],
       "latentQueue": [
-        "AIFlag",
-        "PauseLevelForCameraPerform"
+        "AIFlag"
       ],
       "description": "When receiving DMG, \"Sublime, Radiant, Avatar of the Sky\" loses an equal amount of HP.",
       "type": "Other",
@@ -3320,8 +3318,7 @@ const configAbility = {
         "MDF_SunnyBreakCold"
       ],
       "latentQueue": [
-        "AIFlag",
-        "PauseLevelForCameraPerform"
+        "AIFlag"
       ],
       "execute": [
         {
@@ -4950,13 +4947,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1982815636\">Modifier_Monster_W4_DawnsEye_WheaterSunnyForLevel</a>",
-      "stackData": [
-        "Weather_SunnyHeatInitial",
-        "Weather_HeatDamage",
-        "Weather_HeatAddPerAction",
-        "Weather_HeatCountDown",
-        "Weather_AllDamageTypeAddedRatio"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",

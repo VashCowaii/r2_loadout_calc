@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 4033024,
   "trimCharacterName": 4033024,
   "abilityList": [
+    "4033024_Monster_W4_Claymore_01_AbilityP01",
     "4033024_Monster_W4_Claymore_01_Ability04_Part02",
     "4033024_Monster_W4_Claymore_01_Ability04_Part01",
     "4033024_Monster_W4_Claymore_01_Ability03_Part02",
@@ -13,10 +14,44 @@ const compositeAbilityObject = {
     "4033024_Monster_W4_Claymore_01_Ability02_Part01",
     "4033024_Monster_W4_Claymore_01_Ability01_Part02",
     "4033024_Monster_W4_Claymore_01_Ability01_Part01",
-    "4033024_Monster_W4_Claymore_01_AbilityP01",
     "4033024_Modifiers"
   ],
   "abilityObject": {
+    "4033024_Monster_W4_Claymore_01_AbilityP01": {
+      "fileName": "4033024_Monster_W4_Claymore_01_AbilityP01",
+      "childAbilityList": [
+        "4033024_Monster_W4_Claymore_01_AbilityP01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"709550235\">W4_Claymore_01_BattleScore1</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "4033024_Monster_W4_Claymore_01_Ability04_Part02": {
       "fileName": "4033024_Monster_W4_Claymore_01_Ability04_Part02",
       "abilityType": null,
@@ -709,41 +744,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target",
         "subTarget": "Blast Targets"
-      },
-      "references": []
-    },
-    "4033024_Monster_W4_Claymore_01_AbilityP01": {
-      "fileName": "4033024_Monster_W4_Claymore_01_AbilityP01",
-      "childAbilityList": [
-        "4033024_Monster_W4_Claymore_01_AbilityP01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"709550235\">W4_Claymore_01_BattleScore1</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },

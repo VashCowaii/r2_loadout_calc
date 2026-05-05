@@ -23,6 +23,15 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1932074311\">Enemy_W4_FireProwler_IF_LockStance</a>",
+      "latentQueue": [
+        "InsertFlag_LMin",
+        "InsertFlag_LMout",
+        "ChangePhase",
+        "AIFlag",
+        "Assist_Flag",
+        "Phase_Flag",
+        "LMCountDown"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -83,9 +92,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteHitH",
         "STAT_SuperArmor"
-      ],
-      "stackData": [
-        "MDF_AllDamageTypeResistance"
       ],
       "execute": [
         {
@@ -3548,9 +3554,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Each stack reduces DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. 1 stack is lost after 1 \"Long-Shattered Vessel\" is defeated.",
       "type": "Buff",
       "statusName": "DMG Reduction",
@@ -3742,9 +3745,6 @@ const configAbility = {
       "stackType": "Multiple",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [
-        "MDF_RallyHP"
       ]
     },
     {
@@ -3975,9 +3975,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__911157260\">Enemy_W4_FireProwler_TimePowerListener</a>",
-      "stackData": [
-        "MDF_MaxCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
