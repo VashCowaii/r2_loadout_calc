@@ -2877,6 +2877,9 @@ const configAbility = {
       "stackData": [
         "MDF_DamageUpRatio_PerLayer"
       ],
+      "latentQueue": [
+        "InsertCheck"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -3036,9 +3039,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1124446035\">Monster_W1_CocoliaP1_RL_IcePower</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
       ],
       "execute": [
         {
