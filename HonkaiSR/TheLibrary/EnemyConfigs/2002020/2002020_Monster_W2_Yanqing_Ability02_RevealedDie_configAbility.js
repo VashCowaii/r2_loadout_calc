@@ -1,5 +1,5 @@
 const configAbility = {
-  "fileName": "2004024_Monster_W2_Yanqing_Ability02_RevealedDie",
+  "fileName": "2002020_Monster_W2_Yanqing_Ability02_RevealedDie",
   "abilityType": null,
   "energy": null,
   "toughnessList": null,

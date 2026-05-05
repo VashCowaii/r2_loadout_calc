@@ -3,468 +3,18 @@ const compositeAbilityObject = {
   "fullCharacterName": 2023021,
   "trimCharacterName": 2023021,
   "abilityList": [
+    "2023021_Monster_W2_Beast02_RLElite_AbilityP01_Initiate",
     "2023021_Monster_W2_Beast02_RLElite_Ability05_Part02",
     "2023021_Monster_W2_Beast02_RLElite_Ability05_Part01",
-    "2023021_Monster_W2_Beast02_RLElite_Ability04_Part02",
-    "2023021_Monster_W2_Beast02_RLElite_Ability04_Part01",
     "2023021_Monster_W2_Beast02_RLElite_Ability03_Part02",
     "2023021_Monster_W2_Beast02_RLElite_Ability03_Part01",
     "2023021_Monster_W2_Beast02_RLElite_Ability02_Part02",
     "2023021_Monster_W2_Beast02_RLElite_Ability02_Part01",
     "2023021_Monster_W2_Beast02_RLElite_Ability01_Part02",
     "2023021_Monster_W2_Beast02_RLElite_Ability01_Part01",
-    "2023021_Monster_W2_Beast02_RLElite_AbilityP01_Initiate",
     "2023021_Modifiers"
   ],
   "abilityObject": {
-    "2023021_Monster_W2_Beast02_RLElite_Ability05_Part02": {
-      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability05_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
-            },
-            "HitSplit": 0.6,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "60%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
-            },
-            "HitSplit": 0.2,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "20%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
-            },
-            "HitSplit": 0.2,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "20%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2023021_Monster_W2_Beast02_RLElite_Ability05_Part01": {
-      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability05_Part01",
-      "childAbilityList": [
-        "2023021_Monster_W2_Beast02_RLElite_Ability05_Part01",
-        "2023021_Monster_W2_Beast02_RLElite_Ability05_Part02",
-        "2023021_Monster_W2_Beast02_RLElite_Ability05_Camera"
-      ],
-      "skillTrigger": "Skill05",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Beast02_RLElite_Ability05_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2023021_Monster_W2_Beast02_RLElite_Ability04_Part02": {
-      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2023021_Monster_W2_Beast02_RLElite_Ability04_Part01": {
-      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability04_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2023021_Monster_W2_Beast02_RLElite_Ability03_Part02": {
-      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"974234853\">Monster_W2_Beast02_RLElite_Weak</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2023021_Monster_W2_Beast02_RLElite_Ability03_Part01": {
-      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability03_Part01",
-      "childAbilityList": [
-        "2023021_Monster_W2_Beast02_RLElite_Ability03_Part01",
-        "2023021_Monster_W2_Beast02_RLElite_Ability03_Part02",
-        "2023021_Monster_W2_Beast02_RLElite_Ability03_Camera"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Beast02_RLElite_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase0"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2023021_Monster_W2_Beast02_RLElite_Ability02_Part02": {
-      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-        },
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"296260861\">Monster_W2_Beast02_RLElite_Bullet</a>",
-          "counter": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Bullet_Count"
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": {
-            "operator": "Variables[0] (Bullet_Count) || RETURN",
-            "displayLines": "Bullet_Count",
-            "constants": [],
-            "variables": [
-              "Bullet_Count"
-            ]
-          },
-          "entityClass": "Enemy",
-          "maximum": 3,
-          "assignState": "True"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1835721372\">Monster_W2_Beast02_RLElite_Edict</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "advanceType": "Set",
-          "multiAdd": "{[Skill02[0]]}"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2023021_Monster_W2_Beast02_RLElite_Ability02_Part01": {
-      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability02_Part01",
-      "childAbilityList": [
-        "2023021_Monster_W2_Beast02_RLElite_Ability02_Part01",
-        "2023021_Monster_W2_Beast02_RLElite_Ability02_Part02",
-        "2023021_Monster_W2_Beast02_RLElite_Ability02_Camera"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Beast02_RLElite_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "2023021_Monster_W2_Beast02_RLElite_Ability01_Part02": {
-      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "Bullet_Count",
-            "compareType": "=",
-            "value2": 3,
-            "contextScope": "TargetEntity"
-          },
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "Bullet_Count",
-                "compareType": "=",
-                "value2": 2,
-                "contextScope": "TargetEntity"
-              }
-            }
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Variables[1] ({[Skill01[1]]}) || Variables[2] (Bullet_Count) || MUL || ADD || RETURN",
-              "displayLines": "({[Skill01[0]]} + ({[Skill01[1]]} * Bullet_Count))",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}",
-                "{[Skill01[1]]}",
-                "Bullet_Count"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Define Modifier Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifierName": "<a class=\"gModGreen\" id=\"296260861\">Monster_W2_Beast02_RLElite_Bullet</a>",
-          "value": 0
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Bullet_Count"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"329970269\">Enemy_W2_Beast02_RLElite_GennkiMark</a>[<span class=\"descriptionNumberColor\">Gather Courage</span>]"
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": {
-            "operator": "Variables[0] (Bullet_Count) || RETURN",
-            "displayLines": "Bullet_Count",
-            "constants": [],
-            "variables": [
-              "Bullet_Count"
-            ]
-          },
-          "entityClass": "Enemy",
-          "maximum": 3,
-          "assignState": "False"
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2023021_Monster_W2_Beast02_RLElite_Ability01_Part01": {
-      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability01_Part01",
-      "childAbilityList": [
-        "2023021_Monster_W2_Beast02_RLElite_Ability01_Part01",
-        "2023021_Monster_W2_Beast02_RLElite_Ability01_Part02",
-        "2023021_Monster_W2_Beast02_RLElite_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Beast02_RLElite_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "2023021_Monster_W2_Beast02_RLElite_AbilityP01_Initiate": {
       "fileName": "2023021_Monster_W2_Beast02_RLElite_AbilityP01_Initiate",
       "childAbilityList": [
@@ -794,6 +344,432 @@ const compositeAbilityObject = {
         }
       ]
     },
+    "2023021_Monster_W2_Beast02_RLElite_Ability05_Part02": {
+      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability05_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+              "displayLines": "{[Skill05[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[0]]}"
+              ]
+            },
+            "HitSplit": 0.6,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "60%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+              "displayLines": "{[Skill05[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[0]]}"
+              ]
+            },
+            "HitSplit": 0.2,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "20%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+              "displayLines": "{[Skill05[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[0]]}"
+              ]
+            },
+            "HitSplit": 0.2,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "20%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2023021_Monster_W2_Beast02_RLElite_Ability05_Part01": {
+      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability05_Part01",
+      "childAbilityList": [
+        "2023021_Monster_W2_Beast02_RLElite_Ability05_Part01",
+        "2023021_Monster_W2_Beast02_RLElite_Ability05_Part02",
+        "2023021_Monster_W2_Beast02_RLElite_Ability05_Camera"
+      ],
+      "skillTrigger": "Skill05",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Beast02_RLElite_Ability05_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "2023021_Monster_W2_Beast02_RLElite_Ability03_Part02": {
+      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"974234853\">Monster_W2_Beast02_RLElite_Weak</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2023021_Monster_W2_Beast02_RLElite_Ability03_Part01": {
+      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability03_Part01",
+      "childAbilityList": [
+        "2023021_Monster_W2_Beast02_RLElite_Ability03_Part01",
+        "2023021_Monster_W2_Beast02_RLElite_Ability03_Part02",
+        "2023021_Monster_W2_Beast02_RLElite_Ability03_Camera"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Beast02_RLElite_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        {
+          "name": "Change Character Transformation",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "phase": "Phase0"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2023021_Monster_W2_Beast02_RLElite_Ability02_Part02": {
+      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+        },
+        "Ability Start",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"296260861\">Monster_W2_Beast02_RLElite_Bullet</a>",
+          "counter": 1
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Bullet_Count"
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": {
+            "operator": "Variables[0] (Bullet_Count) || RETURN",
+            "displayLines": "Bullet_Count",
+            "constants": [],
+            "variables": [
+              "Bullet_Count"
+            ]
+          },
+          "entityClass": "Enemy",
+          "maximum": 3,
+          "assignState": "True"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-61251553\">Monster_W2_Beast02_RLElite_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Monitor</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1835721372\">Monster_W2_Beast02_RLElite_Edict</a>"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "advanceType": "Set",
+          "multiAdd": "{[Skill02[0]]}"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2023021_Monster_W2_Beast02_RLElite_Ability02_Part01": {
+      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability02_Part01",
+      "childAbilityList": [
+        "2023021_Monster_W2_Beast02_RLElite_Ability02_Part01",
+        "2023021_Monster_W2_Beast02_RLElite_Ability02_Part02",
+        "2023021_Monster_W2_Beast02_RLElite_Ability02_Camera"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Beast02_RLElite_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "2023021_Monster_W2_Beast02_RLElite_Ability01_Part02": {
+      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Bullet_Count",
+            "compareType": "=",
+            "value2": 3,
+            "contextScope": "TargetEntity"
+          },
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Bullet_Count",
+                "compareType": "=",
+                "value2": 2,
+                "contextScope": "TargetEntity"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || Variables[1] ({[Skill01[1]]}) || Variables[2] (Bullet_Count) || MUL || ADD || RETURN",
+              "displayLines": "({[Skill01[0]]} + ({[Skill01[1]]} * Bullet_Count))",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}",
+                "{[Skill01[1]]}",
+                "Bullet_Count"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "Define Modifier Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifierName": "<a class=\"gModGreen\" id=\"296260861\">Monster_W2_Beast02_RLElite_Bullet</a>",
+          "value": 0
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Bullet_Count"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"329970269\">Enemy_W2_Beast02_RLElite_GennkiMark</a>[<span class=\"descriptionNumberColor\">Gather Courage</span>]"
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": {
+            "operator": "Variables[0] (Bullet_Count) || RETURN",
+            "displayLines": "Bullet_Count",
+            "constants": [],
+            "variables": [
+              "Bullet_Count"
+            ]
+          },
+          "entityClass": "Enemy",
+          "maximum": 3,
+          "assignState": "False"
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2023021_Monster_W2_Beast02_RLElite_Ability01_Part01": {
+      "fileName": "2023021_Monster_W2_Beast02_RLElite_Ability01_Part01",
+      "childAbilityList": [
+        "2023021_Monster_W2_Beast02_RLElite_Ability01_Part01",
+        "2023021_Monster_W2_Beast02_RLElite_Ability01_Part02",
+        "2023021_Monster_W2_Beast02_RLElite_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Beast02_RLElite_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
     "2023021_Modifiers": {
       "fileName": "2023021_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -861,9 +837,6 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "KeepOnDeathrattle",
             "RemoveWhenOwnerUnselectable"
-          ],
-          "latentQueue": [
-            "Beast02RL_Num_Flag"
           ],
           "description": "Marked by %CasterName for Monitoring.",
           "type": "Other",

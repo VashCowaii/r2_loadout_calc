@@ -3,362 +3,83 @@ const compositeAbilityObject = {
   "fullCharacterName": 2013010,
   "trimCharacterName": 2013010,
   "abilityList": [
+    "2013010_Monster_W2_Mecha03_PassiveAbilityInitiate",
+    "2013010_Monster_W2_Mecha03_AbilityP01_Insert",
+    "2013010_Monster_W2_Mecha03_AbilityP01",
     "2013010_Monster_W2_Mecha03_Ability03_Part02",
     "2013010_Monster_W2_Mecha03_Ability03_Part01",
     "2013010_Monster_W2_Mecha03_Ability02_Part02",
     "2013010_Monster_W2_Mecha03_Ability02_Part01",
     "2013010_Monster_W2_Mecha03_Ability01_Part02",
     "2013010_Monster_W2_Mecha03_Ability01_Part01",
-    "2013010_Monster_W2_Mecha03_AbilityP01_Insert",
-    "2013010_Monster_W2_Mecha03_AbilityP01",
-    "2013010_Monster_W2_Mecha03_PassiveAbilityInitiate",
     "2013010_Modifiers"
   ],
   "abilityObject": {
-    "2013010_Monster_W2_Mecha03_Ability03_Part02": {
-      "fileName": "2013010_Monster_W2_Mecha03_Ability03_Part02",
-      "abilityType": null,
+    "2013010_Monster_W2_Mecha03_PassiveAbilityInitiate": {
+      "fileName": "2013010_Monster_W2_Mecha03_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
       "parse": [
-        "Ability Start",
         {
-          "name": "ATK Scaling DMG",
-          "target": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
+            "target": "{{Caster}}"
           },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "20%"
-          }
+          "modifier": "<a class=\"gModGreen\" id=\"1528696767\">W2_Mecha03_BattleScore1</a>"
         },
         {
-          "name": "ATK Scaling DMG",
+          "name": "Declare Custom Variable",
           "target": {
             "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
+            "target": "{{Caster}}"
           },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.8) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.8)",
-              "constants": [
-                0.8
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "80%"
-          }
+          "scope": "TargetEntity",
+          "variableName": "W2_Mecha03_00_AICounter",
+          "value": 1
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "W2_Mecha03_00_Overdrive_State"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "W2_Mecha03_00_Overdrive_InsertFlag"
         },
         {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
+            "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-            "displayLines": "{[Skill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[2]]}"
-            ]
-          },
-          "baseChance": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
-          },
-          "immediateEffect": true,
-          "valuePerStack": {
-            "MDF_ActionDelayRatio": {
-              "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-              "displayLines": "{[Skill03[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[3]]}"
-              ]
-            }
-          }
+          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
         },
-        "Trigger: Attack End",
         {
-          "name": "Remove Events/Bonuses",
+          "name": "Add Events/Bonuses",
           "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1235993006\">Monster_W2_Mecha03_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
-            "compareType": "=",
-            "value2": 1,
-            "valueType": "LifeTime"
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2013010_Monster_W2_Mecha03_Ability03_Part01": {
-      "fileName": "2013010_Monster_W2_Mecha03_Ability03_Part01",
-      "childAbilityList": [
-        "2013010_Monster_W2_Mecha03_Ability03_Camera",
-        "2013010_Monster_W2_Mecha03_Ability03_Part01",
-        "2013010_Monster_W2_Mecha03_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_W2_Mecha03_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        }
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
+        "primaryTarget": "{{Caster}}"
       },
       "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "2013010_Monster_W2_Mecha03_Ability02_Part02": {
-      "fileName": "2013010_Monster_W2_Mecha03_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2013010_Monster_W2_Mecha03_Ability02_Part01": {
-      "fileName": "2013010_Monster_W2_Mecha03_Ability02_Part01",
-      "childAbilityList": [
-        "2013010_Monster_W2_Mecha03_Ability02_Camera",
-        "2013010_Monster_W2_Mecha03_Ability02_Part01",
-        "2013010_Monster_W2_Mecha03_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Mecha03_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "2013010_Monster_W2_Mecha03_Ability01_Part02": {
-      "fileName": "2013010_Monster_W2_Mecha03_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"618418511\">Enemy_W2_Mecha03_Overdrive_Accumulate</a>",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1941111631\">Enemy_W2_Mecha03_Overdrive_Accumulate_Toast</a>",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-            "displayLines": "{[Skill01[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[3]]}"
-            ]
-          },
-          "baseChance": {
-            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-            "displayLines": "{[Skill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[1]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            }
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2013010_Monster_W2_Mecha03_Ability01_Part01": {
-      "fileName": "2013010_Monster_W2_Mecha03_Ability01_Part01",
-      "childAbilityList": [
-        "2013010_Monster_W2_Mecha03_Ability01_Camera",
-        "2013010_Monster_W2_Mecha03_Ability01_Part01",
-        "2013010_Monster_W2_Mecha03_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Mecha03_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
+        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },
@@ -789,71 +510,350 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2013010_Monster_W2_Mecha03_PassiveAbilityInitiate": {
-      "fileName": "2013010_Monster_W2_Mecha03_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
+    "2013010_Monster_W2_Mecha03_Ability03_Part02": {
+      "fileName": "2013010_Monster_W2_Mecha03_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.2) || MUL || RETURN",
+              "displayLines": "({[Skill03[0]]} * 0.2)",
+              "constants": [
+                0.2
+              ],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "20%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.8) || MUL || RETURN",
+              "displayLines": "({[Skill03[0]]} * 0.8)",
+              "constants": [
+                0.8
+              ],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "80%"
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
+            "displayLines": "{[Skill03[2]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill03[2]]}"
+            ]
+          },
+          "baseChance": {
+            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
+            "displayLines": "{[Skill03[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill03[1]]}"
+            ]
+          },
+          "immediateEffect": true,
+          "valuePerStack": {
+            "MDF_ActionDelayRatio": {
+              "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
+              "displayLines": "{[Skill03[3]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill03[3]]}"
+              ]
+            }
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1235993006\">Monster_W2_Mecha03_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
+            "compareType": "=",
+            "value2": 1,
+            "valueType": "LifeTime"
+          },
+          "passed": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2013010_Monster_W2_Mecha03_Ability03_Part01": {
+      "fileName": "2013010_Monster_W2_Mecha03_Ability03_Part01",
+      "childAbilityList": [
+        "2013010_Monster_W2_Mecha03_Ability03_Camera",
+        "2013010_Monster_W2_Mecha03_Ability03_Part01",
+        "2013010_Monster_W2_Mecha03_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Add Events/Bonuses",
-          "to": {
+          "name": "Trigger Ability",
+          "from": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"1528696767\">W2_Mecha03_BattleScore1</a>"
+          "ability": "Monster_W2_Mecha03_Ability03_Part02",
+          "isTrigger": true
         },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W2_Mecha03_00_AICounter",
-          "value": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W2_Mecha03_00_Overdrive_State"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W2_Mecha03_00_Overdrive_InsertFlag"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        }
+        "Deleted bullshit",
+        "Deleted bullshit"
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
+        "primaryTarget": "{{Ability Target List}}"
       },
       "realTargetData": {
-        "primaryTarget": "{{Caster}}"
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "2013010_Monster_W2_Mecha03_Ability02_Part02": {
+      "fileName": "2013010_Monster_W2_Mecha03_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2013010_Monster_W2_Mecha03_Ability02_Part01": {
+      "fileName": "2013010_Monster_W2_Mecha03_Ability02_Part01",
+      "childAbilityList": [
+        "2013010_Monster_W2_Mecha03_Ability02_Camera",
+        "2013010_Monster_W2_Mecha03_Ability02_Part01",
+        "2013010_Monster_W2_Mecha03_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Mecha03_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "2013010_Monster_W2_Mecha03_Ability01_Part02": {
+      "fileName": "2013010_Monster_W2_Mecha03_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"618418511\">Enemy_W2_Mecha03_Overdrive_Accumulate</a>",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1941111631\">Enemy_W2_Mecha03_Overdrive_Accumulate_Toast</a>",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+            "displayLines": "{[Skill01[3]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[3]]}"
+            ]
+          },
+          "baseChance": {
+            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+            "displayLines": "{[Skill01[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[1]]}"
+            ]
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
+              "displayLines": "{[Skill01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[2]]}"
+              ]
+            }
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "2013010_Monster_W2_Mecha03_Ability01_Part01": {
+      "fileName": "2013010_Monster_W2_Mecha03_Ability01_Part01",
+      "childAbilityList": [
+        "2013010_Monster_W2_Mecha03_Ability01_Camera",
+        "2013010_Monster_W2_Mecha03_Ability01_Part01",
+        "2013010_Monster_W2_Mecha03_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Mecha03_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []
     },

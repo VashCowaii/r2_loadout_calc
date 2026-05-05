@@ -3,6 +3,9 @@ const compositeAbilityObject = {
   "fullCharacterName": 2023011,
   "trimCharacterName": 2023011,
   "abilityList": [
+    "2023011_Monster_W2_Abomi04_PassiveAbilityInitiate",
+    "2023011_Monster_W2_Abomi04_AbilityP01_Insert",
+    "2023011_Monster_W2_Abomi04_AbilityP01",
     "2023011_Monster_W2_Abomi04_Ability05_Part02",
     "2023011_Monster_W2_Abomi04_Ability05_Part01",
     "2023011_Monster_W2_Abomi04_Ability04_Part02",
@@ -13,14 +16,116 @@ const compositeAbilityObject = {
     "2023011_Monster_W2_Abomi04_Ability02_Part01",
     "2023011_Monster_W2_Abomi04_Ability01_Part02",
     "2023011_Monster_W2_Abomi04_Ability01_Part01",
-    "2023011_Monster_W2_Abomi04_PassiveAbility_Formation2",
-    "2023011_Monster_W2_Abomi04_AbilityP01_Insert",
-    "2023011_Monster_W2_Abomi04_AbilityP01",
-    "2023011_Monster_W2_Abomi04_PassiveAbilityInitiate",
-    "2023011_Monster_W2_Abomi04_PassiveAbility_DanHeng",
     "2023011_Modifiers"
   ],
   "abilityObject": {
+    "2023011_Monster_W2_Abomi04_PassiveAbilityInitiate": {
+      "fileName": "2023011_Monster_W2_Abomi04_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "W2_Abomi04_00_AICounter",
+          "value": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2023011_Monster_W2_Abomi04_AbilityP01_Insert": {
+      "fileName": "2023011_Monster_W2_Abomi04_AbilityP01_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "W2_Abomi04_00_InsertFlag"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2023011_Monster_W2_Abomi04_AbilityP01": {
+      "fileName": "2023011_Monster_W2_Abomi04_AbilityP01",
+      "childAbilityList": [
+        "2023011_Monster_W2_Abomi04_AbilityP01",
+        "2023011_Monster_W2_Abomi04_AbilityP01_Insert"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"378580326\">Enemy_W2_Abomi04_HitToHeal_Controller</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "2023011_Monster_W2_Abomi04_Ability05_Part02": {
       "fileName": "2023011_Monster_W2_Abomi04_Ability05_Part02",
       "abilityType": null,
@@ -1145,182 +1250,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "2023011_Monster_W2_Abomi04_PassiveAbility_Formation2": {
-      "fileName": "2023011_Monster_W2_Abomi04_PassiveAbility_Formation2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-502774281\">Enemy_W2_Abomi04_PassiveAbility_Formation2</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2023011_Monster_W2_Abomi04_AbilityP01_Insert": {
-      "fileName": "2023011_Monster_W2_Abomi04_AbilityP01_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W2_Abomi04_00_InsertFlag"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2023011_Monster_W2_Abomi04_AbilityP01": {
-      "fileName": "2023011_Monster_W2_Abomi04_AbilityP01",
-      "childAbilityList": [
-        "2023011_Monster_W2_Abomi04_AbilityP01",
-        "2023011_Monster_W2_Abomi04_AbilityP01_Insert"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"378580326\">Enemy_W2_Abomi04_HitToHeal_Controller</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2023011_Monster_W2_Abomi04_PassiveAbilityInitiate": {
-      "fileName": "2023011_Monster_W2_Abomi04_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W2_Abomi04_00_AICounter",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2023011_Monster_W2_Abomi04_PassiveAbility_DanHeng": {
-      "fileName": "2023011_Monster_W2_Abomi04_PassiveAbility_DanHeng",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1529984302\">Monster_W2_Abomi04_PassiveAbility_DanHeng</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1529984302\">Monster_W2_Abomi04_PassiveAbility_DanHeng</a>",
-          "execute": [
-            {
-              "eventTrigger": "Got a Kill [Owner]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ]
     },
     "2023011_Modifiers": {
       "fileName": "2023011_Modifiers",

@@ -3,13 +3,58 @@ const compositeAbilityObject = {
   "fullCharacterName": 2022110,
   "trimCharacterName": 2022110,
   "abilityList": [
+    "2022110_Monster_W2_Valkyrie01_01_AbilityP01",
     "2022110_Monster_W2_Valkyrie01_01_Ability02_Part02",
     "2022110_Monster_W2_Valkyrie01_01_Ability02_Part01",
     "2022110_Monster_W2_Valkyrie01_01_Ability01_Part02",
-    "2022110_Monster_W2_Valkyrie01_01_Ability01_Part01",
-    "2022110_Monster_W2_Valkyrie01_01_AbilityP01"
+    "2022110_Monster_W2_Valkyrie01_01_Ability01_Part01"
   ],
   "abilityObject": {
+    "2022110_Monster_W2_Valkyrie01_01_AbilityP01": {
+      "fileName": "2022110_Monster_W2_Valkyrie01_01_AbilityP01",
+      "childAbilityList": [
+        "2022110_Monster_W2_Valkyrie01_01_AbilityP01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1604945835\">Enemy_W2_Valkyrie01_01_AbilityP01_ComboAttack</a>[<span class=\"descriptionNumberColor\">Maddened</span>]"
+        }
+      ],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1604945835\">Enemy_W2_Valkyrie01_01_AbilityP01_ComboAttack</a>[<span class=\"descriptionNumberColor\">Maddened</span>]",
+          "description": "Attack changes to Sawing Evil: Sever.",
+          "type": "Buff",
+          "effectName": "Maddened",
+          "statusName": "Maddened",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            }
+          ]
+        }
+      ]
+    },
     "2022110_Monster_W2_Valkyrie01_01_Ability02_Part02": {
       "fileName": "2022110_Monster_W2_Valkyrie01_01_Ability02_Part02",
       "abilityType": null,
@@ -164,51 +209,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "2022110_Monster_W2_Valkyrie01_01_AbilityP01": {
-      "fileName": "2022110_Monster_W2_Valkyrie01_01_AbilityP01",
-      "childAbilityList": [
-        "2022110_Monster_W2_Valkyrie01_01_AbilityP01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1604945835\">Enemy_W2_Valkyrie01_01_AbilityP01_ComboAttack</a>[<span class=\"descriptionNumberColor\">Maddened</span>]"
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1604945835\">Enemy_W2_Valkyrie01_01_AbilityP01_ComboAttack</a>[<span class=\"descriptionNumberColor\">Maddened</span>]",
-          "description": "Attack changes to Sawing Evil: Sever.",
-          "type": "Buff",
-          "effectName": "Maddened",
-          "statusName": "Maddened",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            }
-          ]
-        }
-      ]
     }
   }
 }

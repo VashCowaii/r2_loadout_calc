@@ -725,12 +725,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__163974997\">Monster_W2_Xuanlu_10_RL_LowHP</a>",
-      "stackData": [
-        "MDF_LowHPRatio"
-      ],
-      "latentQueue": [
-        "InsertCheck"
-      ],
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -1068,9 +1062,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1029262152\">Enemy_W2_Xuanlu_10_MinionMark_3</a>",
-      "stackData": [
-        "MDF_MaxMinionCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1594,10 +1585,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-561335331\">Enemy_W2_Xuanlu_SecondPhase</a>",
-      "latentQueue": [
-        "AIFlag",
-        "TurnFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

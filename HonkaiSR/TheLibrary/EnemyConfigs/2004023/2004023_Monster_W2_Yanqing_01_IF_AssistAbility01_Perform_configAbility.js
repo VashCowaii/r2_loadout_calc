@@ -1,5 +1,5 @@
 const configAbility = {
-  "fileName": "2004025_Monster_W2_Yanqing_Ability01_Part01",
+  "fileName": "2004023_Monster_W2_Yanqing_01_IF_AssistAbility01_Perform",
   "abilityType": null,
   "energy": null,
   "toughnessList": null,
@@ -10,13 +10,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "ability": "Monster_W2_Yanqing_Ability01_Part02",
+      "inherentTarget": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
+      "ability": "Monster_W2_Yanqing_01_IF_AssistAbility01_Effect",
       "isTrigger": true
-    },
-    "Deleted bullshit"
+    }
   ],
   "targetObjectData": {
-    "primaryTarget": "{{Ability Target List}}"
+    "primaryTarget": "Inherent Target"
   },
   "references": []
 }

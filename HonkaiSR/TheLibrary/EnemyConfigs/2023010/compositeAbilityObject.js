@@ -3,8 +3,9 @@ const compositeAbilityObject = {
   "fullCharacterName": 2023010,
   "trimCharacterName": 2023010,
   "abilityList": [
-    "2023010_Monster_W2_Abomi04_Ability05_Part02",
-    "2023010_Monster_W2_Abomi04_Ability05_Part01",
+    "2023010_Monster_W2_Abomi04_PassiveAbilityInitiate",
+    "2023010_Monster_W2_Abomi04_AbilityP01_Insert",
+    "2023010_Monster_W2_Abomi04_AbilityP01",
     "2023010_Monster_W2_Abomi04_Ability04_Part02",
     "2023010_Monster_W2_Abomi04_Ability04_Part01",
     "2023010_Monster_W2_Abomi04_Ability03_Part02",
@@ -13,469 +14,113 @@ const compositeAbilityObject = {
     "2023010_Monster_W2_Abomi04_Ability02_Part01",
     "2023010_Monster_W2_Abomi04_Ability01_Part02",
     "2023010_Monster_W2_Abomi04_Ability01_Part01",
-    "2023010_Monster_W2_Abomi04_PassiveAbility_Formation2",
-    "2023010_Monster_W2_Abomi04_AbilityP01_Insert",
-    "2023010_Monster_W2_Abomi04_AbilityP01",
-    "2023010_Monster_W2_Abomi04_PassiveAbilityInitiate",
-    "2023010_Monster_W2_Abomi04_PassiveAbility_DanHeng",
     "2023010_Modifiers"
   ],
   "abilityObject": {
-    "2023010_Monster_W2_Abomi04_Ability05_Part02": {
-      "fileName": "2023010_Monster_W2_Abomi04_Ability05_Part02",
-      "abilityType": null,
+    "2023010_Monster_W2_Abomi04_PassiveAbilityInitiate": {
+      "fileName": "2023010_Monster_W2_Abomi04_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
       "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "W2_Abomi04_00_AICounter",
+          "value": 1
+        },
         {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"125847833\">Monster_W2_Abomi04_Command</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
         },
-        "Ability Start",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2023010_Monster_W2_Abomi04_AbilityP01_Insert": {
+      "fileName": "2023010_Monster_W2_Abomi04_AbilityP01_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
         {
           "name": "Remove Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Player Team All}}"
+            "target": "{{Modifier Holder}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-488885736\">Monster_W2_Abomi04_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
         },
         {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{All Team Members(Exclude Self)}}"
-                },
-                "value1": "TeamCharacterCount",
-                "compareType": "<=",
-                "value2": 3
-              },
-              {
-                "name": "Compare: Target Count SUM",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{All Team Members(Exclude Self)}}"
-                },
-                "conditions": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
-                }
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-98608309\">Enemy_W2_Abomi04_HitToHeal_Effect</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{All Team Members(Exclude Self)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": "<=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Consume",
-              "consumeFrom": "MaxHP",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "consumePercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_45) || RETURN",
-                "displayLines": "UnusedUnderThisBase_45",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_45"
-                ]
-              },
-              "consumeFloor": 1
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "team": "Enemy Team",
-                "location": "Left"
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_41) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_41",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_41"
-                    ]
-                  },
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "W2_Abomi04_00_SummonID",
-                      "summonLocation": "First"
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_41) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_41",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_41"
-                    ]
-                  },
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "W2_Abomi04_00_SummonID",
-                      "summonLocation": "Last"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{All Team Members(Exclude Self)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": "<=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "team": "Enemy Team",
-                "location": "Right"
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_42) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_42",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_42"
-                    ]
-                  },
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "W2_Abomi04_00_SummonID",
-                      "summonLocation": "Last"
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_42) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_42",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_42"
-                    ]
-                  },
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "W2_Abomi04_00_SummonID",
-                      "summonLocation": "First"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{All Team Members(Exclude Self)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": "<=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Consume",
-              "consumeFrom": "MaxHP",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "consumePercent": {
-                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                "displayLines": "{[Skill04[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[0]]}"
-                ]
-              },
-              "consumeFloor": 1
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "team": "Enemy Team",
-                "location": "Left"
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_43) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_43",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_43"
-                    ]
-                  },
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "W2_Abomi04_00_SummonID2",
-                      "summonLocation": "First"
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_43) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_43",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_43"
-                    ]
-                  },
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "W2_Abomi04_00_SummonID2",
-                      "summonLocation": "Last"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{All Team Members(Exclude Self)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": "<=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "team": "Enemy Team",
-                "location": "Right"
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_44) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_44",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_44"
-                    ]
-                  },
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "W2_Abomi04_00_SummonID2",
-                      "summonLocation": "Last"
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_44) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_44",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_44"
-                    ]
-                  },
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "W2_Abomi04_00_SummonID2",
-                      "summonLocation": "First"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target Count SUM",
-            "target": {
-              "name": "Target Name",
-              "target": "{{All Team Members(Exclude Self)}}"
-            },
-            "conditions": {
-              "name": "Has Modifier",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
-            }
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
+          "name": "Declare Custom Variable",
+          "target": {
             "name": "Target Name",
-            "target": "{{Caster's Minions}}"
+            "target": "{{Modifier Holder}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-453804030\">Enemy_W2_Abomi04_SummonedMinions</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-488885736\">Monster_W2_Abomi04_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
-          "duration": 2
-        },
-        "Trigger: Ability End"
+          "scope": "TargetEntity",
+          "variableName": "W2_Abomi04_00_InsertFlag"
+        }
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
+        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },
-    "2023010_Monster_W2_Abomi04_Ability05_Part01": {
-      "fileName": "2023010_Monster_W2_Abomi04_Ability05_Part01",
-      "abilityType": null,
+    "2023010_Monster_W2_Abomi04_AbilityP01": {
+      "fileName": "2023010_Monster_W2_Abomi04_AbilityP01",
+      "childAbilityList": [
+        "2023010_Monster_W2_Abomi04_AbilityP01",
+        "2023010_Monster_W2_Abomi04_AbilityP01_Insert"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Trigger Ability",
-          "from": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_W2_Abomi04_Ability05_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
+          "modifier": "<a class=\"gModGreen\" id=\"378580326\">Enemy_W2_Abomi04_HitToHeal_Controller</a>"
+        }
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },
@@ -1136,182 +781,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "2023010_Monster_W2_Abomi04_PassiveAbility_Formation2": {
-      "fileName": "2023010_Monster_W2_Abomi04_PassiveAbility_Formation2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-502774281\">Enemy_W2_Abomi04_PassiveAbility_Formation2</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2023010_Monster_W2_Abomi04_AbilityP01_Insert": {
-      "fileName": "2023010_Monster_W2_Abomi04_AbilityP01_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W2_Abomi04_00_InsertFlag"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2023010_Monster_W2_Abomi04_AbilityP01": {
-      "fileName": "2023010_Monster_W2_Abomi04_AbilityP01",
-      "childAbilityList": [
-        "2023010_Monster_W2_Abomi04_AbilityP01",
-        "2023010_Monster_W2_Abomi04_AbilityP01_Insert"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"378580326\">Enemy_W2_Abomi04_HitToHeal_Controller</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2023010_Monster_W2_Abomi04_PassiveAbilityInitiate": {
-      "fileName": "2023010_Monster_W2_Abomi04_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W2_Abomi04_00_AICounter",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2023010_Monster_W2_Abomi04_PassiveAbility_DanHeng": {
-      "fileName": "2023010_Monster_W2_Abomi04_PassiveAbility_DanHeng",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1529984302\">Monster_W2_Abomi04_PassiveAbility_DanHeng</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1529984302\">Monster_W2_Abomi04_PassiveAbility_DanHeng</a>",
-          "execute": [
-            {
-              "eventTrigger": "Got a Kill [Owner]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ]
     },
     "2023010_Modifiers": {
       "fileName": "2023010_Modifiers",

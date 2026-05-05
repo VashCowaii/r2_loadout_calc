@@ -1,5 +1,5 @@
 const configAbility = {
-  "fileName": "2022080_Monster_W2_Xuanlu_02_AbilityP03_Part01_RL",
+  "fileName": "2004023_Monster_W2_Yanqing_01_IF_AssistAbility01_Logic",
   "abilityType": null,
   "energy": null,
   "toughnessList": null,
@@ -14,13 +14,13 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "ability": "Monster_W2_Xuanlu_02_AbilityP03_Part02_RL",
+      "ability": "Monster_W2_Yanqing_01_IF_AssistAbility01_Perform",
       "isTrigger": true
-    },
-    "Deleted bullshit"
+    }
   ],
   "targetObjectData": {
     "primaryTarget": "Inherent Target"
   },
+  "tag": "DOT_Burn",
   "references": []
 }

@@ -3,6 +3,8 @@ const compositeAbilityObject = {
   "fullCharacterName": 2013020,
   "trimCharacterName": 2013020,
   "abilityList": [
+    "2013020_Monster_W2_Valkyrie02_PassiveAbilityInitiate",
+    "2013020_Monster_W2_Valkyrie02_AbilityP01",
     "2013020_Monster_W2_Valkyrie02_Ability06_Part02",
     "2013020_Monster_W2_Valkyrie02_Ability06_Part01",
     "2013020_Monster_W2_Valkyrie02_Ability04_Insert_Part02",
@@ -15,11 +17,86 @@ const compositeAbilityObject = {
     "2013020_Monster_W2_Valkyrie02_Ability02_Part01",
     "2013020_Monster_W2_Valkyrie02_Ability01_Part02",
     "2013020_Monster_W2_Valkyrie02_Ability01_Part01",
-    "2013020_Monster_W2_Valkyrie02_AbilityP01",
-    "2013020_Monster_W2_Valkyrie02_PassiveAbilityInitiate",
     "2013020_Modifiers"
   ],
   "abilityObject": {
+    "2013020_Monster_W2_Valkyrie02_PassiveAbilityInitiate": {
+      "fileName": "2013020_Monster_W2_Valkyrie02_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1554819207\">Enemy_W2_Valkyrie02_RemoveOneMore</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "W2_Valkyrie02_00_AICounter",
+          "value": 1
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2013020_Monster_W2_Valkyrie02_AbilityP01": {
+      "fileName": "2013020_Monster_W2_Valkyrie02_AbilityP01",
+      "childAbilityList": [
+        "2013020_Monster_W2_Valkyrie02_AbilityP01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "2013020_Monster_W2_Valkyrie02_Ability06_Part02": {
       "fileName": "2013020_Monster_W2_Valkyrie02_Ability06_Part02",
       "abilityType": null,
@@ -918,83 +995,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "2013020_Monster_W2_Valkyrie02_AbilityP01": {
-      "fileName": "2013020_Monster_W2_Valkyrie02_AbilityP01",
-      "childAbilityList": [
-        "2013020_Monster_W2_Valkyrie02_AbilityP01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2013020_Monster_W2_Valkyrie02_PassiveAbilityInitiate": {
-      "fileName": "2013020_Monster_W2_Valkyrie02_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1554819207\">Enemy_W2_Valkyrie02_RemoveOneMore</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W2_Valkyrie02_00_AICounter",
-          "value": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },

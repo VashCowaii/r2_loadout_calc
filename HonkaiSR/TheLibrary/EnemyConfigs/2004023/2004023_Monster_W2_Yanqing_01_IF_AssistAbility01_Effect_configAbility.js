@@ -1,10 +1,9 @@
 const configAbility = {
-  "fileName": "2002021_Monster_W2_Yanqing_01_Ability01_Part02",
+  "fileName": "2004023_Monster_W2_Yanqing_01_IF_AssistAbility01_Effect",
   "abilityType": null,
   "energy": null,
   "toughnessList": null,
   "parse": [
-    "Ability Start",
     {
       "name": "Remove Events/Bonuses",
       "to": {
@@ -33,62 +32,15 @@ const configAbility = {
       },
       "passed": [
         {
-          "name": "Shot Fired",
-          "execute": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Ice",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
+          "name": "Shot Fired"
         }
       ],
       "failed": [
         {
-          "name": "Shot Fired",
-          "execute": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Ice",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
+          "name": "Shot Fired"
         }
       ]
     },
-    "Trigger: Attack End",
     {
       "name": "IF",
       "conditions": {
@@ -108,28 +60,28 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
           "duration": {
-            "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-            "displayLines": "{[Skill01[2]]}",
+            "operator": "Variables[0] (UnusedUnderThisBase_295) || RETURN",
+            "displayLines": "UnusedUnderThisBase_295",
             "constants": [],
             "variables": [
-              "{[Skill01[2]]}"
+              "UnusedUnderThisBase_295"
             ]
           },
           "baseChance": {
-            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-            "displayLines": "{[Skill01[1]]}",
+            "operator": "Variables[0] (UnusedUnderThisBase_296) || RETURN",
+            "displayLines": "UnusedUnderThisBase_296",
             "constants": [],
             "variables": [
-              "{[Skill01[1]]}"
+              "UnusedUnderThisBase_296"
             ]
           },
           "valuePerStack": {
             "Modifier_Frozen_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
+              "operator": "Variables[0] (UnusedUnderThisBase_294) || RETURN",
+              "displayLines": "UnusedUnderThisBase_294",
               "constants": [],
               "variables": [
-                "{[Skill01[3]]}"
+                "UnusedUnderThisBase_294"
               ]
             }
           }
@@ -164,11 +116,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-770732625\">Enemy_W2_Yanqing_01_SwordPowerUp_StandByEffect</a>"
         }
       ]
-    },
-    "Trigger: Ability End"
+    }
   ],
   "targetObjectData": {
-    "primaryTarget": "{{Ability Target List}}"
+    "primaryTarget": "Inherent Target"
   },
   "references": []
 }

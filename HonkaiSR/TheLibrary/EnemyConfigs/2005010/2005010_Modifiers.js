@@ -1305,10 +1305,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1847577011\">Monster_W2_Feixiao_AfterConnect</a>",
-      "latentQueue": [
-        "BattleEventPartFlag"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-1847577011\">Monster_W2_Feixiao_AfterConnect</a>"
     },
     {
       "name": "Modifier Construction",

@@ -66,9 +66,6 @@ const configAbility = {
         "KeepOnDeathrattle",
         "RemoveWhenOwnerUnselectable"
       ],
-      "latentQueue": [
-        "Beast02RL_Num_Flag"
-      ],
       "description": "Marked by %CasterName for Monitoring.",
       "type": "Other",
       "effectName": "Monitor",

@@ -3,38 +3,25 @@ const compositeAbilityObject = {
   "fullCharacterName": 2024013,
   "trimCharacterName": 2024013,
   "abilityList": [
-    "2024013_Monster_W2_Xuanlu_Extra_Ability12_Part02",
+    "2024013_Monster_W2_Xuanlu_10_ChangePhase3",
+    "2024013_Monster_W2_Xuanlu_10_ChangePhase2",
+    "2024013_Monster_W2_Xuanlu_10_Extra_PassiveAbility_Initiate",
+    "2024013_Monster_W2_Xuanlu_Extra_AbilityP01_Initiate",
     "2024013_Monster_W2_Xuanlu_Extra_Ability16_Part01",
     "2024013_Monster_W2_Xuanlu_Extra_Ability15_Part01",
-    "2024013_Monster_W2_Xuanlu_Extra_Ability12_Part01",
-    "2024013_Monster_W2_Xuanlu_Extra_Ability10_Part02",
-    "2024013_Monster_W2_Xuanlu_Extra_Ability10_Part01",
-    "2024013_Monster_W2_Xuanlu_Extra_AbilityP01_Initiate",
-    "2024013_Monster_W2_Xuanlu_10_Extra_PassiveAbility_Initiate",
     "2024013_Monster_W2_Xuanlu_10_Ability14_Initiate",
     "2024013_Monster_W2_Xuanlu_10_Ability13_Part02",
     "2024013_Monster_W2_Xuanlu_10_Ability13_Part01",
-    "2024013_Monster_W2_Xuanlu_10_Ability12_Part02",
-    "2024013_Monster_W2_Xuanlu_10_Ability12_Part01",
+    "2024013_Monster_W2_Xuanlu_Extra_Ability12_Part02",
+    "2024013_Monster_W2_Xuanlu_Extra_Ability12_Part01",
     "2024013_Monster_W2_Xuanlu_10_Ability11_Part02",
     "2024013_Monster_W2_Xuanlu_10_Ability11_Part01",
-    "2024013_Monster_W2_Xuanlu_10_Ability10_Part02",
-    "2024013_Monster_W2_Xuanlu_10_Ability10_Part01",
+    "2024013_Monster_W2_Xuanlu_Extra_Ability10_Part02",
+    "2024013_Monster_W2_Xuanlu_Extra_Ability10_Part01",
     "2024013_Monster_W2_Xuanlu_10_Ability09_Part02",
     "2024013_Monster_W2_Xuanlu_10_Ability09_Part01",
     "2024013_Monster_W2_Xuanlu_10_Ability08_Part02",
     "2024013_Monster_W2_Xuanlu_10_Ability08_Part01",
-    "2024013_Monster_W2_Xuanlu_10_ChangePhase3",
-    "2024013_Monster_W2_Xuanlu_10_ChangePhase2",
-    "2024013_Monster_W2_Xuanlu_10_PassiveAbility_Initiate",
-    "2024013_Monster_W2_Xuanlu_Pingshu_PassiveAbility_Initiate",
-    "2024013_Monster_W2_Xuanlu_PassiveAbility_Insert",
-    "2024013_Monster_W2_Xuanlu_Mainline_Final",
-    "2024013_Monster_W2_Xuanlu_Mainline_Heal",
-    "2024013_Monster_W2_Xuanlu_Ability09_Part02",
-    "2024013_Monster_W2_Xuanlu_Ability09_Part01",
-    "2024013_Monster_W2_Xuanlu_Ability08_Part02",
-    "2024013_Monster_W2_Xuanlu_Ability08_Part01",
     "2024013_Monster_W2_Xuanlu_Ability07_Part02",
     "2024013_Monster_W2_Xuanlu_Ability07_Part01",
     "2024013_Monster_W2_Xuanlu_Ability06_Part02",
@@ -49,695 +36,207 @@ const compositeAbilityObject = {
     "2024013_Monster_W2_Xuanlu_Ability02_Part01",
     "2024013_Monster_W2_Xuanlu_Ability01_Part02",
     "2024013_Monster_W2_Xuanlu_Ability01_Part01",
-    "2024013_Monster_W2_Xuanlu_PassiveAbility_Initiate",
     "2024013_Monster_W2_Xuanlu_PassiveAbility_BGM",
     "2024013_Modifiers"
   ],
   "abilityObject": {
-    "2024013_Monster_W2_Xuanlu_Extra_Ability12_Part02": {
-      "fileName": "2024013_Monster_W2_Xuanlu_Extra_Ability12_Part02",
+    "2024013_Monster_W2_Xuanlu_10_ChangePhase3": {
+      "fileName": "2024013_Monster_W2_Xuanlu_10_ChangePhase3",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
-        "Ability Start",
         {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{All Team Members}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": "<=",
-            "value2": 4
-          },
-          "passed": [
-            {
-              "name": "Random Event",
-              "odds": [
-                0.5,
-                0.5
-              ],
-              "execute": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": 0,
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonMinionID_3) || RETURN",
-                        "displayLines": "SummonMinionID_3",
-                        "constants": [],
-                        "variables": [
-                          "SummonMinionID_3"
-                        ]
-                      },
-                      "locationType": "BeforeCaster"
-                    }
-                  ]
-                },
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": 0,
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonMinionID_3) || RETURN",
-                        "displayLines": "SummonMinionID_3",
-                        "constants": [],
-                        "variables": [
-                          "SummonMinionID_3"
-                        ]
-                      },
-                      "locationType": "AfterCaster"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
+          "name": "Force Entity Death",
+          "target": {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": {
-              "operator": "Variables[0] (SummonMinionID_3) || RETURN",
-              "displayLines": "SummonMinionID_3",
-              "constants": [],
-              "variables": [
-                "SummonMinionID_3"
-              ]
-            },
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1302509608\">Enemy_W2_Xuanlu_Extra_MinionMark_3</a>",
-              "valuePerStack": {
-                "MDF_MaxMinionCount": 1
-              }
-            }
-          ]
+          }
         },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024013_Monster_W2_Xuanlu_Extra_Ability16_Part01": {
-      "fileName": "2024013_Monster_W2_Xuanlu_Extra_Ability16_Part01",
-      "childAbilityList": [
-        "2024013_Monster_W2_Xuanlu_Extra_Ability16_Part01"
-      ],
-      "skillTrigger": "Skill16",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024013_Monster_W2_Xuanlu_Extra_Ability15_Part01": {
-      "fileName": "2024013_Monster_W2_Xuanlu_Extra_Ability15_Part01",
-      "childAbilityList": [
-        "2024013_Monster_W2_Xuanlu_Extra_Ability15_Part01"
-      ],
-      "skillTrigger": "Skill15",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024013_Monster_W2_Xuanlu_Extra_Ability12_Part01": {
-      "fileName": "2024013_Monster_W2_Xuanlu_Extra_Ability12_Part01",
-      "childAbilityList": [
-        "2024013_Monster_W2_Xuanlu_Extra_Ability12_Part01",
-        "2024013_Monster_W2_Xuanlu_Extra_Ability12_Part02"
-      ],
-      "skillTrigger": "Skill12",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
         {
-          "name": "Trigger Ability",
-          "from": {
+          "name": "Dispel Debuffs",
+          "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_W2_Xuanlu_Extra_Ability12_Part02",
-          "isTrigger": true
+          "silent": true
         },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024013_Monster_W2_Xuanlu_Extra_Ability10_Part02": {
-      "fileName": "2024013_Monster_W2_Xuanlu_Extra_Ability10_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
+        "Deleted bullshit",
         {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "Minion_1_Alive",
-            "compareType": "<",
-            "value2": {
-              "operator": "Variables[0] (MinionState_1) || RETURN",
-              "displayLines": "MinionState_1",
-              "constants": [],
-              "variables": [
-                "MinionState_1"
-              ]
-            }
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "delayPercent": 1.2,
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonMinionID_1) || RETURN",
-                    "displayLines": "SummonMinionID_1",
-                    "constants": [],
-                    "variables": [
-                      "SummonMinionID_1"
-                    ]
-                  },
-                  "locationType": "BeforeCaster"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-221780048\">Enemy_W2_Xuanlu_Extra_ListenMinion_1_Killed</a>"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Minion_1_Alive",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "Minion_3_Alive",
-            "compareType": "<",
-            "value2": {
-              "operator": "Variables[0] (MinionState_3) || RETURN",
-              "displayLines": "MinionState_3",
-              "constants": [],
-              "variables": [
-                "MinionState_3"
-              ]
-            }
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonMinionID_3) || RETURN",
-                    "displayLines": "SummonMinionID_3",
-                    "constants": [],
-                    "variables": [
-                      "SummonMinionID_3"
-                    ]
-                  },
-                  "locationType": "AfterCaster"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1758985714\">Enemy_W2_Xuanlu_Extra_ListenMinion_3_Killed</a>"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Minion_3_Alive",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "Minion_4_Alive",
-            "compareType": "<",
-            "value2": {
-              "operator": "Variables[0] (MinionState_4) || RETURN",
-              "displayLines": "MinionState_4",
-              "constants": [],
-              "variables": [
-                "MinionState_4"
-              ]
-            }
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "delayPercent": 0.6,
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonMinionID_4) || RETURN",
-                    "displayLines": "SummonMinionID_4",
-                    "constants": [],
-                    "variables": [
-                      "SummonMinionID_4"
-                    ]
-                  },
-                  "locationType": "AfterCaster"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"884572601\">Enemy_W2_Xuanlu_Extra_ListenMinion_4_Killed</a>"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Minion_4_Alive",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "Minion_2_Alive",
-            "compareType": "<",
-            "value2": {
-              "operator": "Variables[0] (MinionState_2) || RETURN",
-              "displayLines": "MinionState_2",
-              "constants": [],
-              "variables": [
-                "MinionState_2"
-              ]
-            }
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "Minion_2_Alive",
-                "compareType": "=",
-                "value2": 0
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": 0,
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-                        "displayLines": "SummonMinionID_2",
-                        "constants": [],
-                        "variables": [
-                          "SummonMinionID_2"
-                        ]
-                      },
-                      "locationType": "First"
-                    },
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-                        "displayLines": "SummonMinionID_2",
-                        "constants": [],
-                        "variables": [
-                          "SummonMinionID_2"
-                        ]
-                      },
-                      "locationType": "Last"
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Random Event",
-                  "odds": [
-                    0.5,
-                    0.5
-                  ],
-                  "execute": [
-                    {
-                      "name": "Create Enemies",
-                      "delayPercent": 0,
-                      "enemyList": [
-                        {
-                          "name": "Enemy Entry",
-                          "enemyID": {
-                            "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-                            "displayLines": "SummonMinionID_2",
-                            "constants": [],
-                            "variables": [
-                              "SummonMinionID_2"
-                            ]
-                          },
-                          "locationType": "First"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Create Enemies",
-                      "delayPercent": 0,
-                      "enemyList": [
-                        {
-                          "name": "Enemy Entry",
-                          "enemyID": {
-                            "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-                            "displayLines": "SummonMinionID_2",
-                            "constants": [],
-                            "variables": [
-                              "SummonMinionID_2"
-                            ]
-                          },
-                          "locationType": "Last"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1947428863\">Enemy_W2_Xuanlu_Extra_ListenMinion_2_Killed</a>"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Minion_2_Alive",
-              "value": 2
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": {
-                  "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-                  "displayLines": "SummonMinionID_2",
-                  "constants": [],
-                  "variables": [
-                    "SummonMinionID_2"
-                  ]
-                },
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": null
-              },
-              {
-                "name": "NOT",
-                "condition": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1933098157\">Enemy_W2_Xuanlu_10_Extra_IncreaseReturnDamage</a>[<span class=\"descriptionNumberColor\">Cultivation</span>]"
-                }
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1933098157\">Enemy_W2_Xuanlu_10_Extra_IncreaseReturnDamage</a>[<span class=\"descriptionNumberColor\">Cultivation</span>]",
-              "valuePerStack": {
-                "MDF_DamageIncreaseValue": {
-                  "operator": "Variables[0] ({[Skill15[0]]}) || RETURN",
-                  "displayLines": "{[Skill15[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill15[0]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "MDF_ShowFlag",
-            "compareType": "=",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "MDF_ShowFlag",
-              "value": 1
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-348100636\">Enemy_W2_Xuanlu_10_Extra_HealMinionShowUIModifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "2024013_Monster_W2_Xuanlu_Extra_Ability10_Part01": {
-      "fileName": "2024013_Monster_W2_Xuanlu_Extra_Ability10_Part01",
-      "childAbilityList": [
-        "2024013_Monster_W2_Xuanlu_Extra_Ability10_Part01",
-        "2024013_Monster_W2_Xuanlu_Extra_Ability10_Part02"
-      ],
-      "skillTrigger": "Skill10",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Xuanlu_Extra_Ability10_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024013_Monster_W2_Xuanlu_Extra_AbilityP01_Initiate": {
-      "fileName": "2024013_Monster_W2_Xuanlu_Extra_AbilityP01_Initiate",
-      "childAbilityList": [
-        "2024013_Monster_W2_Xuanlu_Extra_AbilityP01_Initiate"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
+          "name": "Remove Events/Bonuses",
           "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"1064795338\">Enemy_W2_Xuanlu_Extra_AbilityP01_PowerUp</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"938780665\">Enemy_W2_Xuanlu_10_EnergyDrain</a>[<span class=\"descriptionNumberColor\">Synwood Renewal</span>]"
         },
         {
-          "name": "Add Events/Bonuses",
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2023283041\">Enemy_W2_Xuanlu_Ability07_NoWeakness</a>[<span class=\"descriptionNumberColor\">Hardy Leaf Sheath</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-585027897\">Enemy_W2_Xuanlu_Endurance</a>"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "set": 0
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 1
+        },
+        {
+          "name": "Remove Events/Bonuses",
           "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "MaxMinionCount",
+          "value": 4
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-106618190\">Enemy_W2_Xuanlu_10_PartController_LockHP</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"113542848\">Enemy_W2_Xuanlu_10_SecondPhase</a>"
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
-      "realTargetData": {
+      "references": []
+    },
+    "2024013_Monster_W2_Xuanlu_10_ChangePhase2": {
+      "fileName": "2024013_Monster_W2_Xuanlu_10_ChangePhase2",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Force Entity Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          }
+        },
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        "Deleted bullshit",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2023283041\">Enemy_W2_Xuanlu_Ability07_NoWeakness</a>[<span class=\"descriptionNumberColor\">Hardy Leaf Sheath</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-585027897\">Enemy_W2_Xuanlu_Endurance</a>"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "set": 0
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 1
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "MaxMinionCount",
+          "value": 4
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"113542848\">Enemy_W2_Xuanlu_10_SecondPhase</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "scope": "TargetEntity",
+          "variableName": "InsertCheck",
+          "value": 1
+        }
+      ],
+      "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1064795338\">Enemy_W2_Xuanlu_Extra_AbilityP01_PowerUp</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"651865792\">Monster_IF_BOSS_Standard_BreakBonus</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        }
-      ]
+      "references": []
     },
     "2024013_Monster_W2_Xuanlu_10_Extra_PassiveAbility_Initiate": {
       "fileName": "2024013_Monster_W2_Xuanlu_10_Extra_PassiveAbility_Initiate",
@@ -1022,6 +521,112 @@ const compositeAbilityObject = {
           ]
         }
       ]
+    },
+    "2024013_Monster_W2_Xuanlu_Extra_AbilityP01_Initiate": {
+      "fileName": "2024013_Monster_W2_Xuanlu_Extra_AbilityP01_Initiate",
+      "childAbilityList": [
+        "2024013_Monster_W2_Xuanlu_Extra_AbilityP01_Initiate"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1064795338\">Enemy_W2_Xuanlu_Extra_AbilityP01_PowerUp</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1064795338\">Enemy_W2_Xuanlu_Extra_AbilityP01_PowerUp</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"651865792\">Monster_IF_BOSS_Standard_BreakBonus</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "End Broken State [Owner]",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "AIFlag",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "2024013_Monster_W2_Xuanlu_Extra_Ability16_Part01": {
+      "fileName": "2024013_Monster_W2_Xuanlu_Extra_Ability16_Part01",
+      "childAbilityList": [
+        "2024013_Monster_W2_Xuanlu_Extra_Ability16_Part01"
+      ],
+      "skillTrigger": "Skill16",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2024013_Monster_W2_Xuanlu_Extra_Ability15_Part01": {
+      "fileName": "2024013_Monster_W2_Xuanlu_Extra_Ability15_Part01",
+      "childAbilityList": [
+        "2024013_Monster_W2_Xuanlu_Extra_Ability15_Part01"
+      ],
+      "skillTrigger": "Skill15",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
     },
     "2024013_Monster_W2_Xuanlu_10_Ability14_Initiate": {
       "fileName": "2024013_Monster_W2_Xuanlu_10_Ability14_Initiate",
@@ -1544,8 +1149,8 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2024013_Monster_W2_Xuanlu_10_Ability12_Part02": {
-      "fileName": "2024013_Monster_W2_Xuanlu_10_Ability12_Part02",
+    "2024013_Monster_W2_Xuanlu_Extra_Ability12_Part02": {
+      "fileName": "2024013_Monster_W2_Xuanlu_Extra_Ability12_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -1554,238 +1159,6 @@ const compositeAbilityObject = {
         {
           "name": "IF",
           "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{All Team Members}}"
-                },
-                "value1": "TeamCharacterCount",
-                "compareType": "<=",
-                "value2": 4
-              },
-              {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{All Team Members}}"
-                },
-                "value1": "TeamCharacterCount",
-                "compareType": "=",
-                "value2": 0,
-                "conditions": {
-                  "name": "Character ID",
-                  "ID": "SummonMinionID_3",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "characterName": null
-                }
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
-                "displayLines": "{[Skill12[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill12[0]]}"
-                ]
-              },
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonMinionID_3) || RETURN",
-                    "displayLines": "SummonMinionID_3",
-                    "constants": [],
-                    "variables": [
-                      "SummonMinionID_3"
-                    ]
-                  },
-                  "locationType": "Last"
-                }
-              ]
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": {
-                  "operator": "Variables[0] (SummonMinionID_3) || RETURN",
-                  "displayLines": "SummonMinionID_3",
-                  "constants": [],
-                  "variables": [
-                    "SummonMinionID_3"
-                  ]
-                },
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": null
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1029262152\">Enemy_W2_Xuanlu_10_MinionMark_3</a>",
-                  "valuePerStack": {
-                    "MDF_MaxMinionCount": {
-                      "operator": "Variables[0] (MaxMinionCount) || RETURN",
-                      "displayLines": "MaxMinionCount",
-                      "constants": [],
-                      "variables": [
-                        "MaxMinionCount"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{All Team Members}}"
-                },
-                "value1": "TeamCharacterCount",
-                "compareType": "<=",
-                "value2": 4
-              },
-              {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{All Team Members}}"
-                },
-                "value1": "TeamCharacterCount",
-                "compareType": "=",
-                "value2": 0,
-                "conditions": {
-                  "name": "Character ID",
-                  "ID": "SummonMinionID_1",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "characterName": null
-                }
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill12[1]]}) || RETURN",
-                "displayLines": "{[Skill12[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill12[1]]}"
-                ]
-              },
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonMinionID_1) || RETURN",
-                    "displayLines": "SummonMinionID_1",
-                    "constants": [],
-                    "variables": [
-                      "SummonMinionID_1"
-                    ]
-                  },
-                  "locationType": "First"
-                }
-              ]
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": {
-                  "operator": "Variables[0] (SummonMinionID_1) || RETURN",
-                  "displayLines": "SummonMinionID_1",
-                  "constants": [],
-                  "variables": [
-                    "SummonMinionID_1"
-                  ]
-                },
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": null
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1062817390\">Enemy_W2_Xuanlu_10_MinionMark_1</a>",
-                  "valuePerStack": {
-                    "MDF_MaxMinionCount": {
-                      "operator": "Variables[0] (MaxMinionCount) || RETURN",
-                      "displayLines": "MaxMinionCount",
-                      "constants": [],
-                      "variables": [
-                        "MaxMinionCount"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
             "name": "Compare: Variable",
             "target": {
               "name": "Target Name",
@@ -1797,173 +1170,94 @@ const compositeAbilityObject = {
           },
           "passed": [
             {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill12[2]]}) || RETURN",
-                "displayLines": "{[Skill12[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill12[2]]}"
-                ]
-              },
-              "enemyList": [
+              "name": "Random Event",
+              "odds": [
+                0.5,
+                0.5
+              ],
+              "execute": [
                 {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-                    "displayLines": "SummonMinionID_2",
-                    "constants": [],
-                    "variables": [
-                      "SummonMinionID_2"
-                    ]
-                  },
-                  "locationType": "AroundCaster"
-                }
-              ]
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": {
-                  "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-                  "displayLines": "SummonMinionID_2",
-                  "constants": [],
-                  "variables": [
-                    "SummonMinionID_2"
+                  "name": "Create Enemies",
+                  "delayPercent": 0,
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonMinionID_3) || RETURN",
+                        "displayLines": "SummonMinionID_3",
+                        "constants": [],
+                        "variables": [
+                          "SummonMinionID_3"
+                        ]
+                      },
+                      "locationType": "BeforeCaster"
+                    }
                   ]
                 },
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": null
-              },
-              "ifTargetFound": [
                 {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1046039771\">Enemy_W2_Xuanlu_10_MinionMark_2</a>",
-                  "valuePerStack": {
-                    "MDF_MaxMinionCount": {
-                      "operator": "Variables[0] (MaxMinionCount) || RETURN",
-                      "displayLines": "MaxMinionCount",
-                      "constants": [],
-                      "variables": [
-                        "MaxMinionCount"
-                      ]
+                  "name": "Create Enemies",
+                  "delayPercent": 0,
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonMinionID_3) || RETURN",
+                        "displayLines": "SummonMinionID_3",
+                        "constants": [],
+                        "variables": [
+                          "SummonMinionID_3"
+                        ]
+                      },
+                      "locationType": "AfterCaster"
                     }
-                  }
+                  ]
                 }
               ]
             }
           ]
         },
         {
-          "name": "IF",
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "searchRandom": true,
           "conditions": {
-            "name": "Compare: Variable",
+            "name": "Enemy ID",
+            "ID": {
+              "operator": "Variables[0] (SummonMinionID_3) || RETURN",
+              "displayLines": "SummonMinionID_3",
+              "constants": [],
+              "variables": [
+                "SummonMinionID_3"
+              ]
+            },
             "target": {
               "name": "Target Name",
-              "target": "{{All Team Members}}"
+              "target": "{{Parameter Target}}"
             },
-            "value1": "TeamCharacterCount",
-            "compareType": "<=",
-            "value2": 4
+            "characterName": null
           },
-          "passed": [
+          "ifTargetFound": [
             {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill12[3]]}) || RETURN",
-                "displayLines": "{[Skill12[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill12[3]]}"
-                ]
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
               },
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-                    "displayLines": "SummonMinionID_2",
-                    "constants": [],
-                    "variables": [
-                      "SummonMinionID_2"
-                    ]
-                  },
-                  "locationType": "AroundCaster"
-                }
-              ]
+              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
             },
             {
-              "name": "Find New Target",
-              "from": {
+              "name": "Add Events/Bonuses",
+              "to": {
                 "name": "Target Name",
-                "target": "{{Caster's Minions}}"
+                "target": "{{Parameter Target}}"
               },
-              "searchRandom": true,
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": {
-                  "operator": "Variables[0] (SummonMinionID_2) || RETURN",
-                  "displayLines": "SummonMinionID_2",
-                  "constants": [],
-                  "variables": [
-                    "SummonMinionID_2"
-                  ]
-                },
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": null
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1046039771\">Enemy_W2_Xuanlu_10_MinionMark_2</a>",
-                  "valuePerStack": {
-                    "MDF_MaxMinionCount": {
-                      "operator": "Variables[0] (MaxMinionCount) || RETURN",
-                      "displayLines": "MaxMinionCount",
-                      "constants": [],
-                      "variables": [
-                        "MaxMinionCount"
-                      ]
-                    }
-                  }
-                }
-              ]
+              "modifier": "<a class=\"gModGreen\" id=\"1302509608\">Enemy_W2_Xuanlu_Extra_MinionMark_3</a>",
+              "valuePerStack": {
+                "MDF_MaxMinionCount": 1
+              }
             }
           ]
         },
@@ -1974,9 +1268,14 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2024013_Monster_W2_Xuanlu_10_Ability12_Part01": {
-      "fileName": "2024013_Monster_W2_Xuanlu_10_Ability12_Part01",
-      "abilityType": null,
+    "2024013_Monster_W2_Xuanlu_Extra_Ability12_Part01": {
+      "fileName": "2024013_Monster_W2_Xuanlu_Extra_Ability12_Part01",
+      "childAbilityList": [
+        "2024013_Monster_W2_Xuanlu_Extra_Ability12_Part01",
+        "2024013_Monster_W2_Xuanlu_Extra_Ability12_Part02"
+      ],
+      "skillTrigger": "Skill12",
+      "abilityType": "Basic ATK",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -1986,12 +1285,15 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_W2_Xuanlu_10_Ability12_Part02",
+          "ability": "Monster_W2_Xuanlu_Extra_Ability12_Part02",
           "isTrigger": true
         },
         "Deleted bullshit"
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -2172,8 +1474,8 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2024013_Monster_W2_Xuanlu_10_Ability10_Part02": {
-      "fileName": "2024013_Monster_W2_Xuanlu_10_Ability10_Part02",
+    "2024013_Monster_W2_Xuanlu_Extra_Ability10_Part02": {
+      "fileName": "2024013_Monster_W2_Xuanlu_Extra_Ability10_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -2183,25 +1485,21 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{All Team Members}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": "<=",
-            "value2": 4
+            "value1": "Minion_1_Alive",
+            "compareType": "<",
+            "value2": {
+              "operator": "Variables[0] (MinionState_1) || RETURN",
+              "displayLines": "MinionState_1",
+              "constants": [],
+              "variables": [
+                "MinionState_1"
+              ]
+            }
           },
           "passed": [
             {
               "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill10[0]]}) || RETURN",
-                "displayLines": "{[Skill10[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill10[0]]}"
-                ]
-              },
+              "delayPercent": 1.2,
               "enemyList": [
                 {
                   "name": "Enemy Entry",
@@ -2213,9 +1511,30 @@ const compositeAbilityObject = {
                       "SummonMinionID_1"
                     ]
                   },
-                  "locationType": "AroundCasterOnEdge"
+                  "locationType": "BeforeCaster"
                 }
               ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-221780048\">Enemy_W2_Xuanlu_Extra_ListenMinion_1_Killed</a>"
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Minion_1_Alive",
+              "value": 1
             }
           ]
         },
@@ -2223,39 +1542,239 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{All Team Members}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": "<=",
-            "value2": 4
+            "value1": "Minion_3_Alive",
+            "compareType": "<",
+            "value2": {
+              "operator": "Variables[0] (MinionState_3) || RETURN",
+              "displayLines": "MinionState_3",
+              "constants": [],
+              "variables": [
+                "MinionState_3"
+              ]
+            }
           },
           "passed": [
             {
               "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill10[1]]}) || RETURN",
-                "displayLines": "{[Skill10[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill10[1]]}"
-                ]
-              },
               "enemyList": [
                 {
                   "name": "Enemy Entry",
                   "enemyID": {
-                    "operator": "Variables[0] (SummonMinionID_1) || RETURN",
-                    "displayLines": "SummonMinionID_1",
+                    "operator": "Variables[0] (SummonMinionID_3) || RETURN",
+                    "displayLines": "SummonMinionID_3",
                     "constants": [],
                     "variables": [
-                      "SummonMinionID_1"
+                      "SummonMinionID_3"
                     ]
                   },
-                  "locationType": "AroundCasterOnEdge"
+                  "locationType": "AfterCaster"
                 }
               ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1758985714\">Enemy_W2_Xuanlu_Extra_ListenMinion_3_Killed</a>"
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Minion_3_Alive",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Minion_4_Alive",
+            "compareType": "<",
+            "value2": {
+              "operator": "Variables[0] (MinionState_4) || RETURN",
+              "displayLines": "MinionState_4",
+              "constants": [],
+              "variables": [
+                "MinionState_4"
+              ]
+            }
+          },
+          "passed": [
+            {
+              "name": "Create Enemies",
+              "delayPercent": 0.6,
+              "enemyList": [
+                {
+                  "name": "Enemy Entry",
+                  "enemyID": {
+                    "operator": "Variables[0] (SummonMinionID_4) || RETURN",
+                    "displayLines": "SummonMinionID_4",
+                    "constants": [],
+                    "variables": [
+                      "SummonMinionID_4"
+                    ]
+                  },
+                  "locationType": "AfterCaster"
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"884572601\">Enemy_W2_Xuanlu_Extra_ListenMinion_4_Killed</a>"
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Minion_4_Alive",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Minion_2_Alive",
+            "compareType": "<",
+            "value2": {
+              "operator": "Variables[0] (MinionState_2) || RETURN",
+              "displayLines": "MinionState_2",
+              "constants": [],
+              "variables": [
+                "MinionState_2"
+              ]
+            }
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Minion_2_Alive",
+                "compareType": "=",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": 0,
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonMinionID_2) || RETURN",
+                        "displayLines": "SummonMinionID_2",
+                        "constants": [],
+                        "variables": [
+                          "SummonMinionID_2"
+                        ]
+                      },
+                      "locationType": "First"
+                    },
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonMinionID_2) || RETURN",
+                        "displayLines": "SummonMinionID_2",
+                        "constants": [],
+                        "variables": [
+                          "SummonMinionID_2"
+                        ]
+                      },
+                      "locationType": "Last"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Random Event",
+                  "odds": [
+                    0.5,
+                    0.5
+                  ],
+                  "execute": [
+                    {
+                      "name": "Create Enemies",
+                      "delayPercent": 0,
+                      "enemyList": [
+                        {
+                          "name": "Enemy Entry",
+                          "enemyID": {
+                            "operator": "Variables[0] (SummonMinionID_2) || RETURN",
+                            "displayLines": "SummonMinionID_2",
+                            "constants": [],
+                            "variables": [
+                              "SummonMinionID_2"
+                            ]
+                          },
+                          "locationType": "First"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Create Enemies",
+                      "delayPercent": 0,
+                      "enemyList": [
+                        {
+                          "name": "Enemy Entry",
+                          "enemyID": {
+                            "operator": "Variables[0] (SummonMinionID_2) || RETURN",
+                            "displayLines": "SummonMinionID_2",
+                            "constants": [],
+                            "variables": [
+                              "SummonMinionID_2"
+                            ]
+                          },
+                          "locationType": "Last"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1947428863\">Enemy_W2_Xuanlu_Extra_ListenMinion_2_Killed</a>"
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Minion_2_Alive",
+              "value": 2
             }
           ]
         },
@@ -2263,24 +1782,40 @@ const compositeAbilityObject = {
           "name": "Find New Target",
           "from": {
             "name": "Target Name",
-            "target": "{{Caster's Minions}}"
+            "target": "{{Enemy Team All}}"
           },
           "searchRandom": true,
           "conditions": {
-            "name": "Enemy ID",
-            "ID": {
-              "operator": "Variables[0] (SummonMinionID_1) || RETURN",
-              "displayLines": "SummonMinionID_1",
-              "constants": [],
-              "variables": [
-                "SummonMinionID_1"
-              ]
-            },
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": {
+                  "operator": "Variables[0] (SummonMinionID_2) || RETURN",
+                  "displayLines": "SummonMinionID_2",
+                  "constants": [],
+                  "variables": [
+                    "SummonMinionID_2"
+                  ]
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": null
+              },
+              {
+                "name": "NOT",
+                "condition": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1933098157\">Enemy_W2_Xuanlu_10_Extra_IncreaseReturnDamage</a>[<span class=\"descriptionNumberColor\">Cultivation</span>]"
+                }
+              }
+            ]
           },
           "ifTargetFound": [
             {
@@ -2289,25 +1824,33 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1062817390\">Enemy_W2_Xuanlu_10_MinionMark_1</a>",
+              "modifier": "<a class=\"gModGreen\" id=\"1933098157\">Enemy_W2_Xuanlu_10_Extra_IncreaseReturnDamage</a>[<span class=\"descriptionNumberColor\">Cultivation</span>]",
               "valuePerStack": {
-                "MDF_MaxMinionCount": {
-                  "operator": "Variables[0] (MaxMinionCount) || RETURN",
-                  "displayLines": "MaxMinionCount",
+                "MDF_DamageIncreaseValue": {
+                  "operator": "Variables[0] ({[Skill15[0]]}) || RETURN",
+                  "displayLines": "{[Skill15[0]]}",
                   "constants": [],
                   "variables": [
-                    "MaxMinionCount"
+                    "{[Skill15[0]]}"
                   ]
                 }
               }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "MDF_ShowFlag",
+            "compareType": "=",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_ShowFlag",
+              "value": 1
             }
           ]
         },
@@ -2316,11 +1859,29 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
-      "references": []
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-348100636\">Enemy_W2_Xuanlu_10_Extra_HealMinionShowUIModifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        }
+      ]
     },
-    "2024013_Monster_W2_Xuanlu_10_Ability10_Part01": {
-      "fileName": "2024013_Monster_W2_Xuanlu_10_Ability10_Part01",
-      "abilityType": null,
+    "2024013_Monster_W2_Xuanlu_Extra_Ability10_Part01": {
+      "fileName": "2024013_Monster_W2_Xuanlu_Extra_Ability10_Part01",
+      "childAbilityList": [
+        "2024013_Monster_W2_Xuanlu_Extra_Ability10_Part01",
+        "2024013_Monster_W2_Xuanlu_Extra_Ability10_Part02"
+      ],
+      "skillTrigger": "Skill10",
+      "abilityType": "Basic ATK",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -2330,12 +1891,15 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_W2_Xuanlu_10_Ability10_Part02",
+          "ability": "Monster_W2_Xuanlu_Extra_Ability10_Part02",
           "isTrigger": true
         },
         "Deleted bullshit"
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -2567,1397 +2131,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2024013_Monster_W2_Xuanlu_10_ChangePhase3": {
-      "fileName": "2024013_Monster_W2_Xuanlu_10_ChangePhase3",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          }
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"938780665\">Enemy_W2_Xuanlu_10_EnergyDrain</a>[<span class=\"descriptionNumberColor\">Synwood Renewal</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2023283041\">Enemy_W2_Xuanlu_Ability07_NoWeakness</a>[<span class=\"descriptionNumberColor\">Hardy Leaf Sheath</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-585027897\">Enemy_W2_Xuanlu_Endurance</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "set": 0
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "MaxMinionCount",
-          "value": 4
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-106618190\">Enemy_W2_Xuanlu_10_PartController_LockHP</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"113542848\">Enemy_W2_Xuanlu_10_SecondPhase</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024013_Monster_W2_Xuanlu_10_ChangePhase2": {
-      "fileName": "2024013_Monster_W2_Xuanlu_10_ChangePhase2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          }
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2023283041\">Enemy_W2_Xuanlu_Ability07_NoWeakness</a>[<span class=\"descriptionNumberColor\">Hardy Leaf Sheath</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-585027897\">Enemy_W2_Xuanlu_Endurance</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "set": 0
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "MaxMinionCount",
-          "value": 4
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"113542848\">Enemy_W2_Xuanlu_10_SecondPhase</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "scope": "TargetEntity",
-          "variableName": "InsertCheck",
-          "value": 1
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024013_Monster_W2_Xuanlu_10_PassiveAbility_Initiate": {
-      "fileName": "2024013_Monster_W2_Xuanlu_10_PassiveAbility_Initiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"131137481\">Enemy_W2_Xuanlu_10_RemoveOneMore_RL</a>"
-        },
-        {
-          "name": "Set Enemy Phase"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1366728989\">MMonsterW2_Xuanlu_10_EnterBattleToast</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-106618190\">Enemy_W2_Xuanlu_10_PartController_LockHP</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"966945518\">Enemy_W2_Xuanlu_10_Default</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-948493080\">Enemy_W2_Xuanlu_10_Break</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "InsertCheck",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"163974997\">Monster_W2_Xuanlu_10_RL_LowHP</a>",
-          "valuePerStack": {
-            "MDF_LowHPRatio": {
-              "operator": "Variables[0] ({[Skill14[1]]}) || RETURN",
-              "displayLines": "{[Skill14[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill14[1]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-948493080\">Enemy_W2_Xuanlu_10_Break</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1366728989\">MMonsterW2_Xuanlu_10_EnterBattleToast</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "priorityLevel": 999999
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__966945518\">Enemy_W2_Xuanlu_10_Default</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__131137481\">Enemy_W2_Xuanlu_10_RemoveOneMore_RL</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 3
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
-                      },
-                      "failed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                      },
-                      "failed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "AIFlag",
-                            "compareType": "=",
-                            "value2": 2,
-                            "contextScope": "TargetEntity"
-                          },
-                          {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "AIFlag",
-                            "compareType": "=",
-                            "value2": 4,
-                            "contextScope": "TargetEntity"
-                          },
-                          {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "AIFlag",
-                            "compareType": "=",
-                            "value2": 6,
-                            "contextScope": "TargetEntity"
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable with Added Value",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "variableName": "AIFlag",
-                          "context": "TargetEntity",
-                          "value": 1,
-                          "max": 12
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "AIFlag",
-                        "compareType": "=",
-                        "value2": 8,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 2
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "AIFlag",
-                            "compareType": "=",
-                            "value2": 2,
-                            "contextScope": "TargetEntity"
-                          },
-                          {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "AIFlag",
-                            "compareType": "=",
-                            "value2": 4,
-                            "contextScope": "TargetEntity"
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 3
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "AIFlag",
-                        "compareType": "=",
-                        "value2": 6,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "HP_Bars_Remaining",
-                        "compareType": "=",
-                        "value2": 3
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "FinalPhase",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "AIFlag",
-                            "compareType": "=",
-                            "value2": 2,
-                            "contextScope": "TargetEntity"
-                          },
-                          {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "AIFlag",
-                            "compareType": "=",
-                            "value2": 3,
-                            "contextScope": "TargetEntity"
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 4
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "AIFlag",
-                            "compareType": "=",
-                            "value2": 5,
-                            "contextScope": "TargetEntity"
-                          },
-                          {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "AIFlag",
-                            "compareType": "=",
-                            "value2": 6,
-                            "contextScope": "TargetEntity"
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 7
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "AIFlag",
-                            "compareType": "=",
-                            "value2": 8,
-                            "contextScope": "TargetEntity"
-                          },
-                          {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "AIFlag",
-                            "compareType": "=",
-                            "value2": 9,
-                            "contextScope": "TargetEntity"
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "HP_Bars_Remaining",
-                        "compareType": "=",
-                        "value2": 3
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "FinalPhase",
-                        "compareType": "=",
-                        "value2": 1,
-                        "contextScope": "TargetEntity"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "CanUseUltra",
-              "from": "ContextOwner",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "maxValue": 1,
-                  "includeMaxValueInRange": true,
-                  "whenValueChanges": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "CanUseUltra",
-                        "compareType": "=",
-                        "value2": 1,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "2024013_Monster_W2_Xuanlu_Pingshu_PassiveAbility_Initiate": {
-      "fileName": "2024013_Monster_W2_Xuanlu_Pingshu_PassiveAbility_Initiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Set Enemy Phase"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-338709001\">Enemy_W2_Xuanlu_Default</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-719369711\">Enemy_W2_Xuanlu_Break</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-719369711\">Enemy_W2_Xuanlu_Break</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "AIFlag",
-                    "compareType": "=",
-                    "value2": 2,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "TurnFlag",
-                        "compareType": "=",
-                        "value2": 3,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "TurnFlag",
-                          "value": 1
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Define Custom Variable with Added Value",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "variableName": "TurnFlag",
-                          "context": "TargetEntity",
-                          "value": 1,
-                          "min": 1,
-                          "max": 3
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-338709001\">Enemy_W2_Xuanlu_Default</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn End [Anyone]",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "SummonMinionCount"
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "2024013_Monster_W2_Xuanlu_PassiveAbility_Insert": {
-      "fileName": "2024013_Monster_W2_Xuanlu_PassiveAbility_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          }
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-585027897\">Enemy_W2_Xuanlu_Endurance</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "set": 0
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "TurnFlag",
-          "value": 1
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-776504343\">Enemy_W2_Xuanlu_PartController_LockHP</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1142936642\">Enemy_W2_Xuanlu_Mainline_Final</a>"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-561335331\">Enemy_W2_Xuanlu_SecondPhase</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024013_Monster_W2_Xuanlu_Mainline_Final": {
-      "fileName": "2024013_Monster_W2_Xuanlu_Mainline_Final",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1142936642\">Enemy_W2_Xuanlu_Mainline_Final</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024013_Monster_W2_Xuanlu_Mainline_Heal": {
-      "fileName": "2024013_Monster_W2_Xuanlu_Mainline_Heal",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-897449444\">Enemy_W2_Xuanlu_Mainline_HealHP</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024013_Monster_W2_Xuanlu_Ability09_Part02": {
-      "fileName": "2024013_Monster_W2_Xuanlu_Ability09_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Back to Life"
-        },
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Heal",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "healPercent": 1,
-          "formula": "Heal from Healer's MaxHP"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "HealHPCheck",
-          "value": 1
-        },
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "HealHPTime",
-          "context": "TargetEntity",
-          "value": 1,
-          "max": 2
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HealHPTime",
-            "compareType": ">=",
-            "value2": 2,
-            "contextScope": "TargetEntity"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024013_Monster_W2_Xuanlu_Ability09_Part01": {
-      "fileName": "2024013_Monster_W2_Xuanlu_Ability09_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Xuanlu_Ability09_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024013_Monster_W2_Xuanlu_Ability08_Part02": {
-      "fileName": "2024013_Monster_W2_Xuanlu_Ability08_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Skill08_BonusCount",
-          "value": {
-            "operator": "Variables[0] (MinionCount) || RETURN",
-            "displayLines": "MinionCount",
-            "constants": [],
-            "variables": [
-              "MinionCount"
-            ]
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill08[0]]}) || Constants[0] (1) || Variables[1] (Skill08_BonusCount) || Variables[2] ({[Skill08[1]]}) || MUL || ADD || MUL || RETURN",
-              "displayLines": "({[Skill08[0]]} * (1 + (Skill08_BonusCount * {[Skill08[1]]})))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "{[Skill08[0]]}",
-                "Skill08_BonusCount",
-                "{[Skill08[1]]}"
-              ]
-            },
-            "HitSplit": 0.15,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": 5,
-          "Event": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill08[0]]}) || Constants[0] (1) || Variables[1] (Skill08_BonusCount) || Variables[2] ({[Skill08[1]]}) || MUL || ADD || MUL || RETURN",
-                  "displayLines": "({[Skill08[0]]} * (1 + (Skill08_BonusCount * {[Skill08[1]]})))",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "{[Skill08[0]]}",
-                    "Skill08_BonusCount",
-                    "{[Skill08[1]]}"
-                  ]
-                },
-                "HitSplit": 0.17,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"392004917\">Enemy_W2_Xuanlu_Ability08_CoolDown</a>",
-          "duration": 1
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__392004917\">Enemy_W2_Xuanlu_Ability08_CoolDown</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn End [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                  },
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "2024013_Monster_W2_Xuanlu_Ability08_Part01": {
-      "fileName": "2024013_Monster_W2_Xuanlu_Ability08_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Xuanlu_Ability08_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []
@@ -5149,173 +3322,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2024013_Monster_W2_Xuanlu_PassiveAbility_Initiate": {
-      "fileName": "2024013_Monster_W2_Xuanlu_PassiveAbility_Initiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Set Enemy Phase"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-776504343\">Enemy_W2_Xuanlu_PartController_LockHP</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-338709001\">Enemy_W2_Xuanlu_Default</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-719369711\">Enemy_W2_Xuanlu_Break</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-719369711\">Enemy_W2_Xuanlu_Break</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "AIFlag",
-                    "compareType": "=",
-                    "value2": 2,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "TurnFlag",
-                        "compareType": "=",
-                        "value2": 3,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "TurnFlag",
-                          "value": 1
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Define Custom Variable with Added Value",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "variableName": "TurnFlag",
-                          "context": "TargetEntity",
-                          "value": 1,
-                          "min": 1,
-                          "max": 3
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-338709001\">Enemy_W2_Xuanlu_Default</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn End [Anyone]",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "SummonMinionCount"
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "2024013_Monster_W2_Xuanlu_PassiveAbility_BGM": {
       "fileName": "2024013_Monster_W2_Xuanlu_PassiveAbility_BGM",
       "childAbilityList": [
@@ -6151,12 +4157,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__163974997\">Monster_W2_Xuanlu_10_RL_LowHP</a>",
-          "stackData": [
-            "MDF_LowHPRatio"
-          ],
-          "latentQueue": [
-            "InsertCheck"
-          ],
           "execute": [
             {
               "eventTrigger": "HP Change [Owner]",
@@ -6494,9 +4494,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1029262152\">Enemy_W2_Xuanlu_10_MinionMark_3</a>",
-          "stackData": [
-            "MDF_MaxMinionCount"
-          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -7020,10 +5017,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-561335331\">Enemy_W2_Xuanlu_SecondPhase</a>",
-          "latentQueue": [
-            "AIFlag",
-            "TurnFlag"
-          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"

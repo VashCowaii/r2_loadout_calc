@@ -29,6 +29,9 @@ const compositeAbilityObject = {
     "2004023_Monster_W2_Yanqing_IF_Ability01_Logic",
     "2004023_Monster_W2_Yanqing_IF_Ability01_AssistInit",
     "2004023_Monster_W2_Yanqing_PassiveAbility_BGM",
+    "2004023_Monster_W2_Yanqing_01_IF_AssistAbility01_Logic",
+    "2004023_Monster_W2_Yanqing_01_IF_AssistAbility01_Perform",
+    "2004023_Monster_W2_Yanqing_01_IF_AssistAbility01_Effect",
     "2004023_Modifiers"
   ],
   "abilityObject": {
@@ -3781,6 +3784,182 @@ const compositeAbilityObject = {
           ]
         }
       ]
+    },
+    "2004023_Monster_W2_Yanqing_01_IF_AssistAbility01_Logic": {
+      "fileName": "2004023_Monster_W2_Yanqing_01_IF_AssistAbility01_Logic",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W2_Yanqing_01_IF_AssistAbility01_Perform",
+          "isTrigger": true
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "tag": "DOT_Burn",
+      "references": []
+    },
+    "2004023_Monster_W2_Yanqing_01_IF_AssistAbility01_Perform": {
+      "fileName": "2004023_Monster_W2_Yanqing_01_IF_AssistAbility01_Perform",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W2_Yanqing_01_IF_AssistAbility01_Effect",
+          "isTrigger": true
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "2004023_Monster_W2_Yanqing_01_IF_AssistAbility01_Effect": {
+      "fileName": "2004023_Monster_W2_Yanqing_01_IF_AssistAbility01_Effect",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"153779397\">Enemy_W2_Yanqing_01_StandByEffect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-770732625\">Enemy_W2_Yanqing_01_SwordPowerUp_StandByEffect</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-2068860507\">Enemy_W2_Yanqing_SwordPowerUp</a>[<span class=\"descriptionNumberColor\">Ordeal</span>]"
+          },
+          "passed": [
+            {
+              "name": "Shot Fired"
+            }
+          ],
+          "failed": [
+            {
+              "name": "Shot Fired"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-2068860507\">Enemy_W2_Yanqing_SwordPowerUp</a>[<span class=\"descriptionNumberColor\">Ordeal</span>]"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
+              "duration": {
+                "operator": "Variables[0] (UnusedUnderThisBase_295) || RETURN",
+                "displayLines": "UnusedUnderThisBase_295",
+                "constants": [],
+                "variables": [
+                  "UnusedUnderThisBase_295"
+                ]
+              },
+              "baseChance": {
+                "operator": "Variables[0] (UnusedUnderThisBase_296) || RETURN",
+                "displayLines": "UnusedUnderThisBase_296",
+                "constants": [],
+                "variables": [
+                  "UnusedUnderThisBase_296"
+                ]
+              },
+              "valuePerStack": {
+                "Modifier_Frozen_DamagePercentage": {
+                  "operator": "Variables[0] (UnusedUnderThisBase_294) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_294",
+                  "constants": [],
+                  "variables": [
+                    "UnusedUnderThisBase_294"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"153779397\">Enemy_W2_Yanqing_01_StandByEffect</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-2068860507\">Enemy_W2_Yanqing_SwordPowerUp</a>[<span class=\"descriptionNumberColor\">Ordeal</span>]"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-770732625\">Enemy_W2_Yanqing_01_SwordPowerUp_StandByEffect</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
     },
     "2004023_Modifiers": {
       "fileName": "2004023_Modifiers",

@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 2023020,
   "trimCharacterName": 2023020,
   "abilityList": [
+    "2023020_Monster_W2_Beast02_AbilityP01_Initiate",
     "2023020_Monster_W2_Beast02_Ability05_Part02",
     "2023020_Monster_W2_Beast02_Ability05_Part01",
     "2023020_Monster_W2_Beast02_Ability04_Part02",
@@ -13,10 +14,90 @@ const compositeAbilityObject = {
     "2023020_Monster_W2_Beast02_Ability02_Part01",
     "2023020_Monster_W2_Beast02_Ability01_Part02",
     "2023020_Monster_W2_Beast02_Ability01_Part01",
-    "2023020_Monster_W2_Beast02_AbilityP01_Initiate",
     "2023020_Modifiers"
   ],
   "abilityObject": {
+    "2023020_Monster_W2_Beast02_AbilityP01_Initiate": {
+      "fileName": "2023020_Monster_W2_Beast02_AbilityP01_Initiate",
+      "childAbilityList": [
+        "2023020_Monster_W2_Beast02_AbilityP01_Initiate"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2027241011\">W2_Beast02_MuteHitFly</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Level Entity}}"
+            },
+            "value1": "Beast02_Num_Flag",
+            "compareType": "=",
+            "value2": 0,
+            "contextScope": "TargetEntity"
+          },
+          "passed": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "Beast02_Num_Flag"
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable with Added Value",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "variableName": "Beast02_Num_Flag",
+          "context": "TargetEntity",
+          "value": 1,
+          "max": 10
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2027241011\">W2_Beast02_MuteHitFly</a>",
+          "modifierFlags": [
+            "MuteHitFly"
+          ]
+        }
+      ]
+    },
     "2023020_Monster_W2_Beast02_Ability05_Part02": {
       "fileName": "2023020_Monster_W2_Beast02_Ability05_Part02",
       "abilityType": null,
@@ -479,87 +560,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "2023020_Monster_W2_Beast02_AbilityP01_Initiate": {
-      "fileName": "2023020_Monster_W2_Beast02_AbilityP01_Initiate",
-      "childAbilityList": [
-        "2023020_Monster_W2_Beast02_AbilityP01_Initiate"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2027241011\">W2_Beast02_MuteHitFly</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Level Entity}}"
-            },
-            "value1": "Beast02_Num_Flag",
-            "compareType": "=",
-            "value2": 0,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "Beast02_Num_Flag"
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "variableName": "Beast02_Num_Flag",
-          "context": "TargetEntity",
-          "value": 1,
-          "max": 10
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2027241011\">W2_Beast02_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ]
-        }
-      ]
     },
     "2023020_Modifiers": {
       "fileName": "2023020_Modifiers",
