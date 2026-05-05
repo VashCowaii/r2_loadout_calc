@@ -5,10 +5,10 @@ const compositeAbilityObject = {
   "abilityList": [
     "4062020_Monster_W2_Beast01_04_AbilityP02_InsertAbility_Part02",
     "4062020_Monster_W2_Beast01_04_AbilityP02_InsertAbility_Part01",
-    "4062020_Monster_W2_Beast01_04_Ability01_Part02",
-    "4062020_Monster_W2_Beast01_04_Ability01_Part01",
     "4062020_Monster_W2_Beast01_04_AbilityP02",
     "4062020_Monster_W2_Beast01_04_AbilityP01",
+    "4062020_Monster_W2_Beast01_04_Ability01_Part02",
+    "4062020_Monster_W2_Beast01_04_Ability01_Part01",
     "4062020_Modifiers"
   ],
   "abilityObject": {
@@ -148,73 +148,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4062020_Monster_W2_Beast01_04_Ability01_Part02": {
-      "fileName": "4062020_Monster_W2_Beast01_04_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4062020_Monster_W2_Beast01_04_Ability01_Part01": {
-      "fileName": "4062020_Monster_W2_Beast01_04_Ability01_Part01",
-      "childAbilityList": [
-        "4062020_Monster_W2_Beast01_04_Ability01_Camera",
-        "4062020_Monster_W2_Beast01_04_Ability01_Part01",
-        "4062020_Monster_W2_Beast01_04_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Beast01_04_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "4062020_Monster_W2_Beast01_04_AbilityP02": {
       "fileName": "4062020_Monster_W2_Beast01_04_AbilityP02",
       "childAbilityList": [
@@ -342,6 +275,73 @@ const compositeAbilityObject = {
           ]
         }
       ]
+    },
+    "4062020_Monster_W2_Beast01_04_Ability01_Part02": {
+      "fileName": "4062020_Monster_W2_Beast01_04_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4062020_Monster_W2_Beast01_04_Ability01_Part01": {
+      "fileName": "4062020_Monster_W2_Beast01_04_Ability01_Part01",
+      "childAbilityList": [
+        "4062020_Monster_W2_Beast01_04_Ability01_Camera",
+        "4062020_Monster_W2_Beast01_04_Ability01_Part01",
+        "4062020_Monster_W2_Beast01_04_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Beast01_04_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
     },
     "4062020_Modifiers": {
       "fileName": "4062020_Modifiers",

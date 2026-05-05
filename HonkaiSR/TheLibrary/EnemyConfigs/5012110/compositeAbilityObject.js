@@ -5,10 +5,10 @@ const compositeAbilityObject = {
   "abilityList": [
     "5012110_Monster_W5_Limao_Ability02_Part02",
     "5012110_Monster_W5_Limao_Ability02_Part01",
-    "5012110_Monster_W5_Limao_Ability01_Part02",
-    "5012110_Monster_W5_Limao_Ability01_Part01",
     "5012110_Monster_W5_Limao_FrameCapture",
     "5012110_Monster_W5_Limao_PassiveAbilityInitiate",
+    "5012110_Monster_W5_Limao_Ability01_Part02",
+    "5012110_Monster_W5_Limao_Ability01_Part01",
     "5012110_Modifiers"
   ],
   "abilityObject": {
@@ -339,76 +339,6 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "5012110_Monster_W5_Limao_Ability01_Part02": {
-      "fileName": "5012110_Monster_W5_Limao_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "5012110_Monster_W5_Limao_Ability01_Part01": {
-      "fileName": "5012110_Monster_W5_Limao_Ability01_Part01",
-      "childAbilityList": [
-        "5012110_Monster_W5_Limao_Ability01_Part01",
-        "5012110_Monster_W5_Limao_Ability01_Part02",
-        "5012110_Monster_W5_Limao_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Limao_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
       },
       "references": []
     },
@@ -2092,6 +2022,76 @@ const compositeAbilityObject = {
           ]
         }
       ]
+    },
+    "5012110_Monster_W5_Limao_Ability01_Part02": {
+      "fileName": "5012110_Monster_W5_Limao_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "5012110_Monster_W5_Limao_Ability01_Part01": {
+      "fileName": "5012110_Monster_W5_Limao_Ability01_Part01",
+      "childAbilityList": [
+        "5012110_Monster_W5_Limao_Ability01_Part01",
+        "5012110_Monster_W5_Limao_Ability01_Part02",
+        "5012110_Monster_W5_Limao_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W5_Limao_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
     },
     "5012110_Modifiers": {
       "fileName": "5012110_Modifiers",

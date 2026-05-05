@@ -5,9 +5,9 @@ const compositeAbilityObject = {
   "abilityList": [
     "5012010_Monster_W3_TV_03_Ability02_Part02",
     "5012010_Monster_W3_TV_03_Ability02_Part01",
+    "5012010_Monster_W3_TV_03_PassiveAbilityInitiate",
     "5012010_Monster_W3_TV_03_Ability01_Part02",
     "5012010_Monster_W3_TV_03_Ability01_Part01",
-    "5012010_Monster_W3_TV_03_PassiveAbilityInitiate",
     "5012010_Modifiers"
   ],
   "abilityObject": {
@@ -209,81 +209,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "5012010_Monster_W3_TV_03_Ability01_Part02": {
-      "fileName": "5012010_Monster_W3_TV_03_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Shot Fired",
-          "projectileCount": 1,
-          "execute": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "canPhase": true,
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "5012010_Monster_W3_TV_03_Ability01_Part01": {
-      "fileName": "5012010_Monster_W3_TV_03_Ability01_Part01",
-      "childAbilityList": [
-        "5012010_Monster_W3_TV_03_Ability01_Part01",
-        "5012010_Monster_W3_TV_03_Ability01_Part02",
-        "5012010_Monster_W3_TV_03_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_TV_03_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "5012010_Monster_W3_TV_03_PassiveAbilityInitiate": {
       "fileName": "5012010_Monster_W3_TV_03_PassiveAbilityInitiate",
       "skillTrigger": "SkillP01",
@@ -426,6 +351,81 @@ const compositeAbilityObject = {
           ]
         }
       ]
+    },
+    "5012010_Monster_W3_TV_03_Ability01_Part02": {
+      "fileName": "5012010_Monster_W3_TV_03_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Shot Fired",
+          "projectileCount": 1,
+          "execute": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Quantum",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                  "displayLines": "{[Skill01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill01[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "5012010_Monster_W3_TV_03_Ability01_Part01": {
+      "fileName": "5012010_Monster_W3_TV_03_Ability01_Part01",
+      "childAbilityList": [
+        "5012010_Monster_W3_TV_03_Ability01_Part01",
+        "5012010_Monster_W3_TV_03_Ability01_Part02",
+        "5012010_Monster_W3_TV_03_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_TV_03_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
     },
     "5012010_Modifiers": {
       "fileName": "5012010_Modifiers",

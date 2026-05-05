@@ -190,9 +190,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-680453013\">Enemy_W5_Ranger_Main_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "MDF_SpeedUp"
-      ],
       "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>.",
       "type": "Buff",
       "effectName": "SPD Boost",
@@ -570,10 +567,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-258343603\">Enemy_W5_Ranger_Debuff</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "MDF_AllDamageTypeTakenRatio",
-        "MDF_ResistanceDelta"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -782,10 +775,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak",
         "Endurance"
-      ],
-      "stackData": [
-        "MDF_MaxCharge",
-        "MDF_HitCharge"
       ],
       "execute": [
         {

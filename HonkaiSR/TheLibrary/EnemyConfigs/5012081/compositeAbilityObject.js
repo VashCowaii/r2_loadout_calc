@@ -3,12 +3,52 @@ const compositeAbilityObject = {
   "fullCharacterName": 5012081,
   "trimCharacterName": 5012081,
   "abilityList": [
+    "5012081_Monster_W5_VtuberPart02_PassiveAbilityInitiate",
     "5012081_Monster_W5_VtuberPart02_Ability01_Part02",
     "5012081_Monster_W5_VtuberPart02_Ability01_Part01",
-    "5012081_Monster_W5_VtuberPart02_PassiveAbilityInitiate",
     "5012081_Modifiers"
   ],
   "abilityObject": {
+    "5012081_Monster_W5_VtuberPart02_PassiveAbilityInitiate": {
+      "fileName": "5012081_Monster_W5_VtuberPart02_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkill",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1182558090\">Enemy_W5_VtuberPart02_00</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"41880618\">Enemy_W5_VtuberPart02_Eff</a>"
+        },
+        {
+          "name": "Change Character Transformation",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "phase": "Phase02"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "5012081_Monster_W5_VtuberPart02_Ability01_Part02": {
       "fileName": "5012081_Monster_W5_VtuberPart02_Ability01_Part02",
       "abilityType": null,
@@ -107,46 +147,6 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5012081_Monster_W5_VtuberPart02_PassiveAbilityInitiate": {
-      "fileName": "5012081_Monster_W5_VtuberPart02_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkill",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1182558090\">Enemy_W5_VtuberPart02_00</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"41880618\">Enemy_W5_VtuberPart02_Eff</a>"
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase02"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"

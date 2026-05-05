@@ -11,9 +11,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1199719779\">Enemy_W5_JK_PowerOut_EffectTimeline</a>",
-      "latentQueue": [
-        "InsertFlag_W5_JK_00"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"

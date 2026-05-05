@@ -154,9 +154,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1643569913\">Enemy_W5_Ranger_Main_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "MDF_DamageUp"
-      ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUp</span>.",
       "type": "Buff",
       "effectName": "DMG Boost",
@@ -570,10 +567,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-258343603\">Enemy_W5_Ranger_Debuff</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "MDF_AllDamageTypeTakenRatio",
-        "MDF_ResistanceDelta"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -782,10 +775,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak",
         "Endurance"
-      ],
-      "stackData": [
-        "MDF_MaxCharge",
-        "MDF_HitCharge"
       ],
       "execute": [
         {

@@ -3,6 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": 5013031,
   "trimCharacterName": 5013031,
   "abilityList": [
+    "5013031_Monster_W5_Peacock_AbilityP01_Insert03_Part02",
+    "5013031_Monster_W5_Peacock_AbilityP01_Insert03_Part01",
+    "5013031_Monster_W5_Peacock_AbilityP01_Insert02_Part02",
+    "5013031_Monster_W5_Peacock_AbilityP01_Insert02_Part01",
+    "5013031_Monster_W5_Peacock_AbilityP01_Insert01_Part02",
+    "5013031_Monster_W5_Peacock_AbilityP01_Insert01_Part01",
+    "5013031_Monster_W5_Peacock_AbilityP01",
     "5013031_Monster_W5_Peacock_Ability05_Part02",
     "5013031_Monster_W5_Peacock_Ability05_Part01",
     "5013031_Monster_W5_Peacock_Ability04_Part02",
@@ -11,17 +18,474 @@ const compositeAbilityObject = {
     "5013031_Monster_W5_Peacock_Ability03_Part01",
     "5013031_Monster_W5_Peacock_Ability01_Part02",
     "5013031_Monster_W5_Peacock_Ability01_Part01",
-    "5013031_Monster_W5_Peacock_AbilityP01_Insert03_Part02",
-    "5013031_Monster_W5_Peacock_AbilityP01_Insert03_Part01",
-    "5013031_Monster_W5_Peacock_AbilityP01_Insert02_Part02",
-    "5013031_Monster_W5_Peacock_AbilityP01_Insert02_Part01",
-    "5013031_Monster_W5_Peacock_AbilityP01_Insert01_Part02",
-    "5013031_Monster_W5_Peacock_AbilityP01_Insert01_Part01",
-    "5013031_Monster_W5_Peacock_AbilityP01",
     "5013031_Modifiers",
     "5013031_Functions"
   ],
   "abilityObject": {
+    "5013031_Monster_W5_Peacock_AbilityP01_Insert03_Part02": {
+      "fileName": "5013031_Monster_W5_Peacock_AbilityP01_Insert03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "ColorOutInsertFlag"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "CurrentColorSlotIndex",
+            "compareType": ">=",
+            "value2": 6
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
+              "variables": {
+                "DynamicString_ColorSlotX": 6
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "CurrentColorSlotIndex",
+            "compareType": ">=",
+            "value2": 5
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
+              "variables": {
+                "DynamicString_ColorSlotX": 5
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "CurrentColorSlotIndex",
+            "compareType": ">=",
+            "value2": 4
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
+              "variables": {
+                "DynamicString_ColorSlotX": 4
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "CurrentColorSlotIndex",
+            "compareType": ">=",
+            "value2": 3
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
+              "variables": {
+                "DynamicString_ColorSlotX": 3
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "CurrentColorSlotIndex",
+            "compareType": ">=",
+            "value2": 2
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
+              "variables": {
+                "DynamicString_ColorSlotX": 2
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "CurrentColorSlotIndex",
+            "compareType": ">=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
+              "variables": {
+                "DynamicString_ColorSlotX": 1
+              }
+            }
+          ]
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
+          "variables": {
+            "DynamicString_ColorSlotX": 1
+          }
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
+          "variables": {
+            "DynamicString_ColorSlotX": 2
+          }
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
+          "variables": {
+            "DynamicString_ColorSlotX": 3
+          }
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
+          "variables": {
+            "DynamicString_ColorSlotX": 4
+          }
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
+          "variables": {
+            "DynamicString_ColorSlotX": 5
+          }
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
+          "variables": {
+            "DynamicString_ColorSlotX": 6
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Define Custom Variable",
+          "variableName": "CurrentColorSlotIndex",
+          "value": 0
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5013031_Monster_W5_Peacock_AbilityP01_Insert03_Part01": {
+      "fileName": "5013031_Monster_W5_Peacock_AbilityP01_Insert03_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W5_Peacock_AbilityP01_Insert03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5013031_Monster_W5_Peacock_AbilityP01_Insert02_Part02": {
+      "fileName": "5013031_Monster_W5_Peacock_AbilityP01_Insert02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "ColorOutInsertFlag"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"973037691\">Enemy_W5_Peacock_AbilityP01_Colorful</a>[<span class=\"descriptionNumberColor\">Color</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2047643861\">Enemy_W5_Peacock_AbilityP01_Colorful_Effect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]",
+          "valuePerStack": {
+            "MDF_ElationDamageExtraColorCount": {
+              "operator": "Variables[0] ({[SkillP01[6]]}) || RETURN",
+              "displayLines": "{[SkillP01[6]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[6]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5013031_Monster_W5_Peacock_AbilityP01_Insert02_Part01": {
+      "fileName": "5013031_Monster_W5_Peacock_AbilityP01_Insert02_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W5_Peacock_AbilityP01_Insert02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "onAbort": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "ColorOutInsertFlag"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5013031_Monster_W5_Peacock_AbilityP01_Insert01_Part02": {
+      "fileName": "5013031_Monster_W5_Peacock_AbilityP01_Insert01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "ColorInInsertFlag"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2047643861\">Enemy_W5_Peacock_AbilityP01_Colorful_Effect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"973037691\">Enemy_W5_Peacock_AbilityP01_Colorful</a>[<span class=\"descriptionNumberColor\">Color</span>]",
+          "valuePerStack": {
+            "MDF_ColorDiffDamageAddedRatio": {
+              "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
+              "displayLines": "{[SkillP01[4]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[4]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2014742101\">Enemy_W5_Peacock_Endurance</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+          },
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5013031_Monster_W5_Peacock_AbilityP01_Insert01_Part01": {
+      "fileName": "5013031_Monster_W5_Peacock_AbilityP01_Insert01_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W5_Peacock_AbilityP01_Insert01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "onAbort": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "ColorInInsertFlag"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5013031_Monster_W5_Peacock_AbilityP01": {
+      "fileName": "5013031_Monster_W5_Peacock_AbilityP01",
+      "childAbilityList": [
+        "5013031_Monster_W5_Peacock_AbilityP01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"521870185\">Enemy_W5_Peacock_RemoveOneMore</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2075359647\">Enemy_W5_Peacock_AbilityP01_ColorStateController</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1459756173\">W5_Peacock_BattleScore1</a>"
+        }
+      ],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "5013031_Monster_W5_Peacock_Ability05_Part02": {
       "fileName": "5013031_Monster_W5_Peacock_Ability05_Part02",
       "abilityType": null,
@@ -1622,470 +2086,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "5013031_Monster_W5_Peacock_AbilityP01_Insert03_Part02": {
-      "fileName": "5013031_Monster_W5_Peacock_AbilityP01_Insert03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ColorOutInsertFlag"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "CurrentColorSlotIndex",
-            "compareType": ">=",
-            "value2": 6
-          },
-          "passed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
-              "variables": {
-                "DynamicString_ColorSlotX": 6
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "CurrentColorSlotIndex",
-            "compareType": ">=",
-            "value2": 5
-          },
-          "passed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
-              "variables": {
-                "DynamicString_ColorSlotX": 5
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "CurrentColorSlotIndex",
-            "compareType": ">=",
-            "value2": 4
-          },
-          "passed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
-              "variables": {
-                "DynamicString_ColorSlotX": 4
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "CurrentColorSlotIndex",
-            "compareType": ">=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
-              "variables": {
-                "DynamicString_ColorSlotX": 3
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "CurrentColorSlotIndex",
-            "compareType": ">=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
-              "variables": {
-                "DynamicString_ColorSlotX": 2
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "CurrentColorSlotIndex",
-            "compareType": ">=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
-              "variables": {
-                "DynamicString_ColorSlotX": 1
-              }
-            }
-          ]
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
-          "variables": {
-            "DynamicString_ColorSlotX": 1
-          }
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
-          "variables": {
-            "DynamicString_ColorSlotX": 2
-          }
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
-          "variables": {
-            "DynamicString_ColorSlotX": 3
-          }
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
-          "variables": {
-            "DynamicString_ColorSlotX": 4
-          }
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
-          "variables": {
-            "DynamicString_ColorSlotX": 5
-          }
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
-          "variables": {
-            "DynamicString_ColorSlotX": 6
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Define Custom Variable",
-          "variableName": "CurrentColorSlotIndex",
-          "value": 0
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013031_Monster_W5_Peacock_AbilityP01_Insert03_Part01": {
-      "fileName": "5013031_Monster_W5_Peacock_AbilityP01_Insert03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Peacock_AbilityP01_Insert03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013031_Monster_W5_Peacock_AbilityP01_Insert02_Part02": {
-      "fileName": "5013031_Monster_W5_Peacock_AbilityP01_Insert02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ColorOutInsertFlag"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"973037691\">Enemy_W5_Peacock_AbilityP01_Colorful</a>[<span class=\"descriptionNumberColor\">Color</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2047643861\">Enemy_W5_Peacock_AbilityP01_Colorful_Effect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]",
-          "valuePerStack": {
-            "MDF_ElationDamageExtraColorCount": {
-              "operator": "Variables[0] ({[SkillP01[6]]}) || RETURN",
-              "displayLines": "{[SkillP01[6]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[6]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013031_Monster_W5_Peacock_AbilityP01_Insert02_Part01": {
-      "fileName": "5013031_Monster_W5_Peacock_AbilityP01_Insert02_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Peacock_AbilityP01_Insert02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "onAbort": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ColorOutInsertFlag"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013031_Monster_W5_Peacock_AbilityP01_Insert01_Part02": {
-      "fileName": "5013031_Monster_W5_Peacock_AbilityP01_Insert01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ColorInInsertFlag"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2047643861\">Enemy_W5_Peacock_AbilityP01_Colorful_Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"973037691\">Enemy_W5_Peacock_AbilityP01_Colorful</a>[<span class=\"descriptionNumberColor\">Color</span>]",
-          "valuePerStack": {
-            "MDF_ColorDiffDamageAddedRatio": {
-              "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-              "displayLines": "{[SkillP01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2014742101\">Enemy_W5_Peacock_Endurance</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-          },
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013031_Monster_W5_Peacock_AbilityP01_Insert01_Part01": {
-      "fileName": "5013031_Monster_W5_Peacock_AbilityP01_Insert01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Peacock_AbilityP01_Insert01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "onAbort": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ColorInInsertFlag"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013031_Monster_W5_Peacock_AbilityP01": {
-      "fileName": "5013031_Monster_W5_Peacock_AbilityP01",
-      "childAbilityList": [
-        "5013031_Monster_W5_Peacock_AbilityP01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"521870185\">Enemy_W5_Peacock_RemoveOneMore</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2075359647\">Enemy_W5_Peacock_AbilityP01_ColorStateController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1459756173\">W5_Peacock_BattleScore1</a>"
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },

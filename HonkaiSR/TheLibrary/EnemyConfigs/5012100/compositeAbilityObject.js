@@ -3,124 +3,272 @@ const compositeAbilityObject = {
   "fullCharacterName": 5012100,
   "trimCharacterName": 5012100,
   "abilityList": [
-    "5012100_Monster_W5_Magical_Ability01_Part02",
-    "5012100_Monster_W5_Magical_Ability01_Part01",
-    "5012100_Monster_W5_Magical_Ability03_Part01",
-    "5012100_Monster_W5_Magical_Ability02_Part01",
     "5012100_Monster_W5_Magical_ChangeToSun",
     "5012100_Monster_W5_Magical_Passive01",
+    "5012100_Monster_W5_Magical_Ability03_Part01",
+    "5012100_Monster_W5_Magical_Ability02_Part01",
+    "5012100_Monster_W5_Magical_Ability01_Part02",
+    "5012100_Monster_W5_Magical_Ability01_Part01",
     "5012100_Modifiers"
   ],
   "abilityObject": {
-    "5012100_Monster_W5_Magical_Ability01_Part02": {
-      "fileName": "5012100_Monster_W5_Magical_Ability01_Part02",
+    "5012100_Monster_W5_Magical_ChangeToSun": {
+      "fileName": "5012100_Monster_W5_Magical_ChangeToSun",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Looped Event",
-          "maxLoops": 6,
-          "Event": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
-                },
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"222603007\">Enemy_W5_Magical_Passive_ChangeToSun</a>"
         },
         {
-          "name": "ATK Scaling DMG",
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1664599275\">Enemy_W5_Magical_Passive_ChangeToRain</a>"
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": {
+            "operator": "Variables[0] (ModifierLayers) || RETURN",
+            "displayLines": "ModifierLayers",
+            "constants": [],
+            "variables": [
+              "ModifierLayers"
+            ]
+          },
+          "entityClass": "Enemy",
+          "maximum": {
+            "operator": "Variables[0] (ModifierMaxLayers) || RETURN",
+            "displayLines": "ModifierMaxLayers",
+            "constants": [],
+            "variables": [
+              "ModifierMaxLayers"
+            ]
+          },
+          "assignState": "True",
+          "state": "Active",
+          "trigger": "SpEff_Trigger"
+        },
+        {
+          "name": "Adjust Team Punchline Value",
+          "value": {
+            "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+            "displayLines": "{[PassiveSkill01[1]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill01[1]]}"
+            ]
+          },
+          "adjustment": "Add"
+        },
+        {
+          "name": "Action Advance/Delay",
           "target": {
             "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
+            "target": "{{Caster}}"
           },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "HitSplit": 0.4,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
+          "advanceType": "Set",
+          "multiAdd": "{[PassiveSkill01[2]]}"
+        }
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
+        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },
-    "5012100_Monster_W5_Magical_Ability01_Part01": {
-      "fileName": "5012100_Monster_W5_Magical_Ability01_Part01",
-      "childAbilityList": [
-        "5012100_Monster_W5_Magical_Ability01_Camera",
-        "5012100_Monster_W5_Magical_Ability01_Part01",
-        "5012100_Monster_W5_Magical_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
+    "5012100_Monster_W5_Magical_Passive01": {
+      "fileName": "5012100_Monster_W5_Magical_Passive01",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Magical_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "Animation Event",
+          "name": "Change Character Transformation",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "state": "Skill01",
-          "passed": [
-            {
-              "name": "Animation Task"
-            }
-          ]
+          "phase": "Default"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1018576515\">Enemy_W5_Magical_Passive</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-821429936\">Enemy_W5_Magical_DeathRattle</a>"
         }
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
+        "primaryTarget": "{{Caster}}"
       },
       "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
+        "primaryTarget": "{{Caster}}"
       },
-      "references": []
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-821429936\">Enemy_W5_Magical_DeathRattle</a>",
+          "modifierFlags": [
+            "Deathrattle",
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Fatal Damage [Owner]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "Weather",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      {
+                        "name": "Attack Type",
+                        "attackTypes": [
+                          "Elation DMG"
+                        ],
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "Weather",
+                      "value": 1
+                    },
+                    {
+                      "name": "Adjust Team Punchline Value",
+                      "value": {
+                        "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+                        "displayLines": "{[PassiveSkill01[1]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[PassiveSkill01[1]]}"
+                        ]
+                      },
+                      "adjustment": "Add"
+                    },
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (ModifierLayers) || RETURN",
+                        "displayLines": "ModifierLayers",
+                        "constants": [],
+                        "variables": [
+                          "ModifierLayers"
+                        ]
+                      },
+                      "entityClass": "Enemy",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "maximum": {
+                        "operator": "Variables[0] (ModifierMaxLayers) || RETURN",
+                        "displayLines": "ModifierMaxLayers",
+                        "constants": [],
+                        "variables": [
+                          "ModifierMaxLayers"
+                        ]
+                      },
+                      "assignState": "True",
+                      "state": "Active",
+                      "trigger": "SpEff_Trigger"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Was Killed (Queued) [Owner]",
+              "execute": [
+                {
+                  "name": "Dispel Debuffs",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
+                },
+                {
+                  "name": "Exit Broken-State",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "Weather",
+                    "compareType": "=",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Inject Ability Use",
+                      "abilityName": "Monster_W5_Magical_Ability02_Part01",
+                      "priorityTag": "EnemyDeathEffect",
+                      "ownerState": "Mask_AliveOrLimbo",
+                      "showInActionOrder": true,
+                      "allowAbilityTriggers": false
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Inject Ability Use",
+                      "abilityName": "Monster_W5_Magical_Ability03_Part01",
+                      "priorityTag": "EnemyDeathEffect",
+                      "ownerState": "Mask_AliveOrLimbo",
+                      "showInActionOrder": true,
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     "5012100_Monster_W5_Magical_Ability03_Part01": {
       "fileName": "5012100_Monster_W5_Magical_Ability03_Part01",
@@ -432,263 +580,115 @@ const compositeAbilityObject = {
         }
       ]
     },
-    "5012100_Monster_W5_Magical_ChangeToSun": {
-      "fileName": "5012100_Monster_W5_Magical_ChangeToSun",
+    "5012100_Monster_W5_Magical_Ability01_Part02": {
+      "fileName": "5012100_Monster_W5_Magical_Ability01_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"222603007\">Enemy_W5_Magical_Passive_ChangeToSun</a>"
+          "name": "Looped Event",
+          "maxLoops": 6,
+          "Event": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                  "displayLines": "{[Skill01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill01[0]]}"
+                  ]
+                },
+                "HitSplit": 0.1,
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
         },
         {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1664599275\">Enemy_W5_Magical_Passive_ChangeToRain</a>"
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": {
-            "operator": "Variables[0] (ModifierLayers) || RETURN",
-            "displayLines": "ModifierLayers",
-            "constants": [],
-            "variables": [
-              "ModifierLayers"
-            ]
-          },
-          "entityClass": "Enemy",
-          "maximum": {
-            "operator": "Variables[0] (ModifierMaxLayers) || RETURN",
-            "displayLines": "ModifierMaxLayers",
-            "constants": [],
-            "variables": [
-              "ModifierMaxLayers"
-            ]
-          },
-          "assignState": "True",
-          "state": "Active",
-          "trigger": "SpEff_Trigger"
-        },
-        {
-          "name": "Adjust Team Punchline Value",
-          "value": {
-            "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[1]]}"
-            ]
-          },
-          "adjustment": "Add"
-        },
-        {
-          "name": "Action Advance/Delay",
+          "name": "ATK Scaling DMG",
           "target": {
             "name": "Target Name",
-            "target": "{{Caster}}"
+            "target": "{{Ability Target(ST)}}"
           },
-          "advanceType": "Set",
-          "multiAdd": "{[PassiveSkill01[2]]}"
-        }
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "HitSplit": 0.4,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
+        "primaryTarget": "{{Ability Target List}}"
       },
       "references": []
     },
-    "5012100_Monster_W5_Magical_Passive01": {
-      "fileName": "5012100_Monster_W5_Magical_Passive01",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
+    "5012100_Monster_W5_Magical_Ability01_Part01": {
+      "fileName": "5012100_Monster_W5_Magical_Ability01_Part01",
+      "childAbilityList": [
+        "5012100_Monster_W5_Magical_Ability01_Camera",
+        "5012100_Monster_W5_Magical_Ability01_Part01",
+        "5012100_Monster_W5_Magical_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Change Character Transformation",
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W5_Magical_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        {
+          "name": "Animation Event",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "phase": "Default"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1018576515\">Enemy_W5_Magical_Passive</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-821429936\">Enemy_W5_Magical_DeathRattle</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-821429936\">Enemy_W5_Magical_DeathRattle</a>",
-          "modifierFlags": [
-            "Deathrattle",
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
+          "state": "Skill01",
+          "passed": [
             {
-              "eventTrigger": "Fatal Damage [Owner]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "Weather",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Attack Type",
-                        "attackTypes": [
-                          "Elation DMG"
-                        ],
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        }
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "Weather",
-                      "value": 1
-                    },
-                    {
-                      "name": "Adjust Team Punchline Value",
-                      "value": {
-                        "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill01[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill01[1]]}"
-                        ]
-                      },
-                      "adjustment": "Add"
-                    },
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (ModifierLayers) || RETURN",
-                        "displayLines": "ModifierLayers",
-                        "constants": [],
-                        "variables": [
-                          "ModifierLayers"
-                        ]
-                      },
-                      "entityClass": "Enemy",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "maximum": {
-                        "operator": "Variables[0] (ModifierMaxLayers) || RETURN",
-                        "displayLines": "ModifierMaxLayers",
-                        "constants": [],
-                        "variables": [
-                          "ModifierMaxLayers"
-                        ]
-                      },
-                      "assignState": "True",
-                      "state": "Active",
-                      "trigger": "SpEff_Trigger"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Was Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Dispel Debuffs",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  }
-                },
-                {
-                  "name": "Exit Broken-State",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "Weather",
-                    "compareType": "=",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Monster_W5_Magical_Ability02_Part01",
-                      "priorityTag": "EnemyDeathEffect",
-                      "ownerState": "Mask_AliveOrLimbo",
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Monster_W5_Magical_Ability03_Part01",
-                      "priorityTag": "EnemyDeathEffect",
-                      "ownerState": "Mask_AliveOrLimbo",
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
+              "name": "Animation Task"
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
     },
     "5012100_Modifiers": {
       "fileName": "5012100_Modifiers",

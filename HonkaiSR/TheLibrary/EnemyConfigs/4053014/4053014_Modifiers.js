@@ -32,9 +32,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1829701863\">W4_Manta_BattleScore1</a>",
-      "latentQueue": [
-        "Manta_Passive"
-      ],
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Owner]",
@@ -2262,10 +2259,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1079670411\">Enemy_W4_Manta_Passive_Insert_Mark</a>",
-      "latentQueue": [
-        "Manta_Passive"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__1079670411\">Enemy_W4_Manta_Passive_Insert_Mark</a>"
     },
     {
       "name": "Modifier Construction",
