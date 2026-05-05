@@ -3,12 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": 1014010,
   "trimCharacterName": 1014010,
   "abilityList": [
+    "1014010_Monster_W1_GS_Svarog_PassiveAbilityInitiate",
     "1014010_Monster_W1_GS_Svarog_PassiveAbility04",
     "1014010_Monster_W1_GS_Svarog_PassiveAbility02",
-    "1014010_Monster_W1_GS_Svarog_PassiveAbility03",
     "1014010_Monster_W1_GS_Svarog_Ability08_Part02",
     "1014010_Monster_W1_GS_Svarog_Ability08_Part01",
-    "1014010_Monster_W1_GS_Svarog_AIControl",
     "1014010_Monster_W1_GS_Svarog_Ability07_Part02",
     "1014010_Monster_W1_GS_Svarog_Ability07_Part01",
     "1014010_Monster_W1_GS_Svarog_Ability06_Part02",
@@ -23,11 +22,162 @@ const compositeAbilityObject = {
     "1014010_Monster_W1_GS_Svarog_Ability02_Part01",
     "1014010_Monster_W1_GS_Svarog_Ability01_Part02",
     "1014010_Monster_W1_GS_Svarog_Ability01_Part01",
-    "1014010_Monster_W1_GS_Svarog_PassiveAbilityInitiate",
     "1014010_Monster_W1_Svarog_PassiveAbility_BGM",
     "1014010_Modifiers"
   ],
   "abilityObject": {
+    "1014010_Monster_W1_GS_Svarog_PassiveAbilityInitiate": {
+      "fileName": "1014010_Monster_W1_GS_Svarog_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"340882576\">Monster_W1_GS_Svarog_BattleScore1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"686372206\">Monster_W1_GS_Svarog_Break</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 101401010,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "Svarog"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"193352830\">Monster_W1_GS_Svarog_SpecialVictory_LockHP</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__193352830\">Monster_W1_GS_Svarog_SpecialVictory_LockHP</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Lock HP",
+                  "threshold": 0.7
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Locked HP Floor Reached [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "Svarog_SpecialVictory_Flag",
+                    "compareType": "=",
+                    "value2": 0,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Dispel Debuffs",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "silent": true
+                    },
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "DecisionFlag"
+                    },
+                    {
+                      "name": "Action Advance/Delay",
+                      "advanceType": "Set",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "multiBase": 0
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-353224873\">Monster_W1_GS_Svarog_DisableAction</a>"
+                    },
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Svarog_SpecialVictory_Flag",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__686372206\">Monster_W1_GS_Svarog_Break</a>",
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]"
+            }
+          ]
+        }
+      ]
+    },
     "1014010_Monster_W1_GS_Svarog_PassiveAbility04": {
       "fileName": "1014010_Monster_W1_GS_Svarog_PassiveAbility04",
       "childAbilityList": [
@@ -122,48 +272,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "1014010_Monster_W1_GS_Svarog_PassiveAbility03": {
-      "fileName": "1014010_Monster_W1_GS_Svarog_PassiveAbility03",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Create Enemies",
-          "delayPercent": 0,
-          "refreshPositions": false,
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": 9004021,
-              "locationType": "BeforeCaster"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"17783365\">Svarog_Part_ListenHP_Modifier</a>",
-          "valuePerStack": {
-            "PassiveAbility02_P2_HPRatio": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__35) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED__35",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED__35"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "1014010_Monster_W1_GS_Svarog_Ability08_Part02": {
       "fileName": "1014010_Monster_W1_GS_Svarog_Ability08_Part02",
       "abilityType": null,
@@ -207,76 +315,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
-    },
-    "1014010_Monster_W1_GS_Svarog_AIControl": {
-      "fileName": "1014010_Monster_W1_GS_Svarog_AIControl",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-954371893\">Straight_AIControl</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-954371893\">Straight_AIControl</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action End [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "AIFlag",
-                  "context": "TargetEntity",
-                  "value": 1,
-                  "min": 1,
-                  "max": 7
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "AIFlag",
-                    "compareType": ">",
-                    "value2": 6,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
     },
     "1014010_Monster_W1_GS_Svarog_Ability07_Part02": {
       "fileName": "1014010_Monster_W1_GS_Svarog_Ability07_Part02",
@@ -1168,158 +1206,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "1014010_Monster_W1_GS_Svarog_PassiveAbilityInitiate": {
-      "fileName": "1014010_Monster_W1_GS_Svarog_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"340882576\">Monster_W1_GS_Svarog_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"686372206\">Monster_W1_GS_Svarog_Break</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 101401010,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Svarog"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"193352830\">Monster_W1_GS_Svarog_SpecialVictory_LockHP</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__193352830\">Monster_W1_GS_Svarog_SpecialVictory_LockHP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.7
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Locked HP Floor Reached [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "Svarog_SpecialVictory_Flag",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Dispel Debuffs",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "silent": true
-                    },
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "DecisionFlag"
-                    },
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "multiBase": 0
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-353224873\">Monster_W1_GS_Svarog_DisableAction</a>"
-                    },
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Svarog_SpecialVictory_Flag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__686372206\">Monster_W1_GS_Svarog_Break</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]"
-            }
-          ]
-        }
-      ]
     },
     "1014010_Monster_W1_Svarog_PassiveAbility_BGM": {
       "fileName": "1014010_Monster_W1_Svarog_PassiveAbility_BGM",

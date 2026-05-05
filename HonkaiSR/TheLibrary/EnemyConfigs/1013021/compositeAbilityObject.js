@@ -8,15 +8,12 @@ const compositeAbilityObject = {
     "1013021_WMonster_W1_Mecha_05_Ability12_Part01",
     "1013021_WMonster_W1_Mecha_05_Ability11_Part02",
     "1013021_WMonster_W1_Mecha_05_Ability11_Part01",
-    "1013021_WMonster_W1_Mecha_05_AbilityP09_Part02",
-    "1013021_WMonster_W1_Mecha_05_AbilityP09_Part01",
     "1013021_WMonster_W1_Mecha_05_Ability09_Part02",
     "1013021_WMonster_W1_Mecha_05_Ability09_Part01",
     "1013021_WMonster_W1_Mecha_05_Ability07_Part02",
     "1013021_WMonster_W1_Mecha_05_Ability07_Part01",
     "1013021_WMonster_W1_Mecha_05_Ability06_Part02",
     "1013021_WMonster_W1_Mecha_05_Ability06_Part01",
-    "1013021_Monster_W1_Mecha04_PassiveAbility_KlaraSpecialVictory",
     "1013021_Modifiers"
   ],
   "abilityObject": {
@@ -823,103 +820,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "1013021_WMonster_W1_Mecha_05_AbilityP09_Part02": {
-      "fileName": "1013021_WMonster_W1_Mecha_05_AbilityP09_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
-              "displayLines": "{[Skill09[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill09[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-95545360\">W1_Mecha02_ThunderDOT</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
-          "duration": 2,
-          "baseChance": 1,
-          "stackLimit": {
-            "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-            "displayLines": "{[Skill06[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[3]]}"
-            ]
-          },
-          "valuePerStack": {
-            "Modifier_Bleed_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-              "displayLines": "{[Skill06[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[1]]}"
-              ]
-            },
-            "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-              "displayLines": "{[Skill06[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[3]]}"
-              ]
-            }
-          }
-        },
-        "Trigger: Attack End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "1013021_WMonster_W1_Mecha_05_AbilityP09_Part01": {
-      "fileName": "1013021_WMonster_W1_Mecha_05_AbilityP09_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "WMonster_W1_Mecha_05_AbilityP09_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       },
       "references": []
     },
@@ -1806,62 +1706,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "1013021_Monster_W1_Mecha04_PassiveAbility_KlaraSpecialVictory": {
-      "fileName": "1013021_Monster_W1_Mecha04_PassiveAbility_KlaraSpecialVictory",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-220942891\">Monster_W1_Mecha04_KlaraSpecialVictory_LockHP</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__151548297\">Monster_W1_Mecha04_Instance_DisableAction</a>",
-          "modifierFlags": [
-            "DisableAction"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-220942891\">Monster_W1_Mecha04_KlaraSpecialVictory_LockHP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.01
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Locked HP Floor Reached [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"151548297\">Monster_W1_Mecha04_Instance_DisableAction</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ]
     },
     "1013021_Modifiers": {
       "fileName": "1013021_Modifiers",

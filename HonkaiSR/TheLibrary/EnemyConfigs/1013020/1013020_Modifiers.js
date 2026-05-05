@@ -460,9 +460,6 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "AttackSign"
       ],
-      "latentQueue": [
-        "Mecha04_Aim_Flag"
-      ],
       "description": "%CasterName will focus attacks on this target.",
       "type": "Other",
       "effectName": "Lock On",
@@ -475,9 +472,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "AttackSign"
-      ],
-      "latentQueue": [
-        "Mecha04_Aim_Flag"
       ],
       "description": "%CasterName will focus attacks on this target.",
       "type": "Other",

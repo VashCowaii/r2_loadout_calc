@@ -4,19 +4,14 @@ const compositeAbilityObject = {
   "trimCharacterName": 1013020,
   "abilityList": [
     "1013020_WMonster_W1_Mecha_05_Passive_AIControlAndHPLock",
-    "1013020_WMonster_W1_Mecha_05_Ability12_Part02",
-    "1013020_WMonster_W1_Mecha_05_Ability12_Part01",
     "1013020_WMonster_W1_Mecha_05_Ability11_Part02",
     "1013020_WMonster_W1_Mecha_05_Ability11_Part01",
-    "1013020_WMonster_W1_Mecha_05_AbilityP09_Part02",
-    "1013020_WMonster_W1_Mecha_05_AbilityP09_Part01",
     "1013020_WMonster_W1_Mecha_05_Ability09_Part02",
     "1013020_WMonster_W1_Mecha_05_Ability09_Part01",
     "1013020_WMonster_W1_Mecha_05_Ability07_Part02",
     "1013020_WMonster_W1_Mecha_05_Ability07_Part01",
     "1013020_WMonster_W1_Mecha_05_Ability06_Part02",
     "1013020_WMonster_W1_Mecha_05_Ability06_Part01",
-    "1013020_Monster_W1_Mecha04_PassiveAbility_KlaraSpecialVictory",
     "1013020_Modifiers"
   ],
   "abilityObject": {
@@ -582,136 +577,6 @@ const compositeAbilityObject = {
         }
       ]
     },
-    "1013020_WMonster_W1_Mecha_05_Ability12_Part02": {
-      "fileName": "1013020_WMonster_W1_Mecha_05_Ability12_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1520229010\">Enemy_W1_Mecha04_ChainSawSpeedUp</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Mecha04_Aim_Flag"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 2,
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "Mecha04_Aim_Flag",
-                "compareType": "=",
-                "value2": 0,
-                "contextScope": "TargetEntity"
-              },
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Mecha04_Aim_Flag",
-                  "value": 1
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1002549759\">Monster_W1_Mecha04_Sign01</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
-                  "counter": 1
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1052882616\">Monster_W1_Mecha04_Sign02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
-                  "counter": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 3
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-136691859\">Monster_W1_Mecha04_RL_Ability12_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "1013020_WMonster_W1_Mecha_05_Ability12_Part01": {
-      "fileName": "1013020_WMonster_W1_Mecha_05_Ability12_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "WMonster_W1_Mecha_05_Ability12_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
     "1013020_WMonster_W1_Mecha_05_Ability11_Part02": {
       "fileName": "1013020_WMonster_W1_Mecha_05_Ability11_Part02",
       "abilityType": null,
@@ -813,103 +678,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "1013020_WMonster_W1_Mecha_05_AbilityP09_Part02": {
-      "fileName": "1013020_WMonster_W1_Mecha_05_AbilityP09_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
-              "displayLines": "{[Skill09[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill09[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-95545360\">W1_Mecha02_ThunderDOT</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
-          "duration": 2,
-          "baseChance": 1,
-          "stackLimit": {
-            "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-            "displayLines": "{[Skill06[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[3]]}"
-            ]
-          },
-          "valuePerStack": {
-            "Modifier_Bleed_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-              "displayLines": "{[Skill06[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[1]]}"
-              ]
-            },
-            "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-              "displayLines": "{[Skill06[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[3]]}"
-              ]
-            }
-          }
-        },
-        "Trigger: Attack End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "1013020_WMonster_W1_Mecha_05_AbilityP09_Part01": {
-      "fileName": "1013020_WMonster_W1_Mecha_05_AbilityP09_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "WMonster_W1_Mecha_05_AbilityP09_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       },
       "references": []
     },
@@ -1797,62 +1565,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "1013020_Monster_W1_Mecha04_PassiveAbility_KlaraSpecialVictory": {
-      "fileName": "1013020_Monster_W1_Mecha04_PassiveAbility_KlaraSpecialVictory",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-220942891\">Monster_W1_Mecha04_KlaraSpecialVictory_LockHP</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__151548297\">Monster_W1_Mecha04_Instance_DisableAction</a>",
-          "modifierFlags": [
-            "DisableAction"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-220942891\">Monster_W1_Mecha04_KlaraSpecialVictory_LockHP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.01
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Locked HP Floor Reached [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"151548297\">Monster_W1_Mecha04_Instance_DisableAction</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "1013020_Modifiers": {
       "fileName": "1013020_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -2315,9 +2027,6 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
-          "latentQueue": [
-            "Mecha04_Aim_Flag"
-          ],
           "description": "%CasterName will focus attacks on this target.",
           "type": "Other",
           "effectName": "Lock On",
@@ -2330,9 +2039,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "AttackSign"
-          ],
-          "latentQueue": [
-            "Mecha04_Aim_Flag"
           ],
           "description": "%CasterName will focus attacks on this target.",
           "type": "Other",

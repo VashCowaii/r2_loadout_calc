@@ -7,12 +7,11 @@ const compositeAbilityObject = {
     "1013014_Monster_W1_Mecha03_RL_PassiveAbility_Insert3",
     "1013014_Monster_W1_Mecha03_RL_PassiveAbility_Insert2",
     "1013014_Monster_W1_Mecha03_RL_PassiveAbility_Insert",
+    "1013014_WMonster_W1_Mecha_02_RL_Passive_AIControlAndHPLock",
     "1013014_WMonster_W1_Mecha_02_RL_Ability07_Part02",
     "1013014_WMonster_W1_Mecha_02_RL_Ability07_Part01",
     "1013014_WMonster_W1_Mecha_02_RL_Ability06_Part02",
     "1013014_WMonster_W1_Mecha_02_RL_Ability06_Part01",
-    "1013014_WMonster_W1_Mecha_02_RL_Passive_AIControlAndHPLock",
-    "1013014_WMonster_W1_Mecha_02_Passive_AIControlAndHPLock",
     "1013014_WMonster_W1_Mecha_02_Ability05_Part02",
     "1013014_WMonster_W1_Mecha_02_Ability05_Part01",
     "1013014_WMonster_W1_Mecha_02_Ability04_Part02",
@@ -23,7 +22,6 @@ const compositeAbilityObject = {
     "1013014_WMonster_W1_Mecha_02_Ability02_Part01",
     "1013014_WMonster_W1_Mecha_02_Ability01_Part02",
     "1013014_WMonster_W1_Mecha_02_Ability01_Part01",
-    "1013014_WMonster_Mecha_02_PassiveAbilityInitiate",
     "1013014_Modifiers"
   ],
   "abilityObject": {
@@ -821,6 +819,231 @@ const compositeAbilityObject = {
       },
       "references": []
     },
+    "1013014_WMonster_W1_Mecha_02_RL_Passive_AIControlAndHPLock": {
+      "fileName": "1013014_WMonster_W1_Mecha_02_RL_Passive_AIControlAndHPLock",
+      "childAbilityList": [
+        "1013014_WMonster_W1_Mecha_02_RL_Passive_AIControlAndHPLock"
+      ],
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-404471381\">Monster_W1_Mecha03_RemoveOneMore</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1280509085\">Monster_Mecha03_BreakResetCharge</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1494789360\">Monster_W1_Mecha03_RL_PartController</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "SummonSequence",
+          "value": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-69428728\">WMonster_Mecha_02_MuteHitFly</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1280509085\">Monster_Mecha03_BreakResetCharge</a>",
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1670817312\">W1_Mecha02_AttackBonus</a>[<span class=\"descriptionNumberColor\">Charging</span>]"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"118150896\">Monster_W1_Mecha03_RL_Ability03_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "HP_Bars_Remaining",
+                        "compareType": ">",
+                        "value2": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "HP_Bars_Remaining",
+                            "compareType": "=",
+                            "value2": 2
+                          },
+                          "passed": [
+                            {
+                              "name": "Declare Custom Variable",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "scope": "TargetEntity",
+                              "variableName": "AIFlag",
+                              "value": 1
+                            },
+                            {
+                              "name": "Remove Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1364752860\">W1_Mecha02_AttackBonus_Effect</a>"
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Declare Custom Variable",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "scope": "TargetEntity",
+                              "variableName": "AIFlag",
+                              "value": 2
+                            },
+                            {
+                              "name": "Remove Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1364752860\">W1_Mecha02_AttackBonus_Effect</a>"
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Declare Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "scope": "TargetEntity",
+                          "variableName": "AIFlag",
+                          "value": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-69428728\">WMonster_Mecha_02_MuteHitFly</a>",
+          "modifierFlags": [
+            "MuteHitFly"
+          ],
+          "latentQueue": [
+            "SummonSequence"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
+          "latentQueue": [
+            "SummonSequence"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]"
+            },
+            {
+              "eventTrigger": "Action Choice Window [Owner]"
+            }
+          ]
+        }
+      ]
+    },
     "1013014_WMonster_W1_Mecha_02_RL_Ability07_Part02": {
       "fileName": "1013014_WMonster_W1_Mecha_02_RL_Ability07_Part02",
       "abilityType": null,
@@ -1179,411 +1402,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "1013014_WMonster_W1_Mecha_02_RL_Passive_AIControlAndHPLock": {
-      "fileName": "1013014_WMonster_W1_Mecha_02_RL_Passive_AIControlAndHPLock",
-      "childAbilityList": [
-        "1013014_WMonster_W1_Mecha_02_RL_Passive_AIControlAndHPLock"
-      ],
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-404471381\">Monster_W1_Mecha03_RemoveOneMore</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1280509085\">Monster_Mecha03_BreakResetCharge</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1494789360\">Monster_W1_Mecha03_RL_PartController</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "SummonSequence",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-69428728\">WMonster_Mecha_02_MuteHitFly</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1280509085\">Monster_Mecha03_BreakResetCharge</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1670817312\">W1_Mecha02_AttackBonus</a>[<span class=\"descriptionNumberColor\">Charging</span>]"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"118150896\">Monster_W1_Mecha03_RL_Ability03_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "HP_Bars_Remaining",
-                        "compareType": ">",
-                        "value2": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "value1": "HP_Bars_Remaining",
-                            "compareType": "=",
-                            "value2": 2
-                          },
-                          "passed": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "AIFlag",
-                              "value": 1
-                            },
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1364752860\">W1_Mecha02_AttackBonus_Effect</a>"
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "AIFlag",
-                              "value": 2
-                            },
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1364752860\">W1_Mecha02_AttackBonus_Effect</a>"
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 4
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-69428728\">WMonster_Mecha_02_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ],
-          "latentQueue": [
-            "SummonSequence"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
-          "latentQueue": [
-            "SummonSequence"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]"
-            },
-            {
-              "eventTrigger": "Action Choice Window [Owner]"
-            }
-          ]
-        }
-      ]
-    },
-    "1013014_WMonster_W1_Mecha_02_Passive_AIControlAndHPLock": {
-      "fileName": "1013014_WMonster_W1_Mecha_02_Passive_AIControlAndHPLock",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 1013011,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Automaton Grizzly (Bug)"
-          },
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-404471381\">Monster_W1_Mecha03_RemoveOneMore</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1280509085\">Monster_Mecha03_BreakResetCharge</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "SummonSequence",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-69428728\">WMonster_Mecha_02_MuteHitFly</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1280509085\">Monster_Mecha03_BreakResetCharge</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1670817312\">W1_Mecha02_AttackBonus</a>[<span class=\"descriptionNumberColor\">Charging</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": 1013011,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "characterName": "Automaton Grizzly (Bug)"
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "AIFlag",
-                            "compareType": "=",
-                            "value2": 3,
-                            "contextScope": "TargetEntity"
-                          },
-                          "passed": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "AIFlag",
-                              "value": 2
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 4
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-69428728\">WMonster_Mecha_02_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ],
-          "latentQueue": [
-            "SummonSequence"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
-          "latentQueue": [
-            "SummonSequence"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]"
-            },
-            {
-              "eventTrigger": "Action Choice Window [Owner]"
-            }
-          ]
-        }
-      ]
     },
     "1013014_WMonster_W1_Mecha_02_Ability05_Part02": {
       "fileName": "1013014_WMonster_W1_Mecha_02_Ability05_Part02",
@@ -3173,121 +2991,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "1013014_WMonster_Mecha_02_PassiveAbilityInitiate": {
-      "fileName": "1013014_WMonster_Mecha_02_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ActivationCountDown",
-          "value": 2
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ActivationMode"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "BeingDamageFlag",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"639506044\">WMonster_Mecha_02_Activation_Controller</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__639506044\">WMonster_Mecha_02_Activation_Controller</a>",
-          "latentQueue": [
-            "ActivationCountDown",
-            "ActivationMode",
-            "BeingDamageFlag"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Take Damage End [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "BeingDamageFlag",
-                        "compareType": "=",
-                        "value2": 1,
-                        "contextScope": "TargetEntity"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "ActivationMode",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "BeingDamageFlag"
-                    },
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "WMonster_Mecha_02_Ability10_InsertAbility",
-                      "priorityTag": "EnemyAttackFromSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
     },
     "1013014_Modifiers": {
       "fileName": "1013014_Modifiers",

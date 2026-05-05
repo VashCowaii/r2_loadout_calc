@@ -7,27 +7,23 @@ const compositeAbilityObject = {
     "1013024_Monster_W1_Mecha04_RL_PassiveAbility_Insert3",
     "1013024_Monster_W1_Mecha04_RL_PassiveAbility_Insert2",
     "1013024_Monster_W1_Mecha04_RL_PassiveAbility_Insert",
+    "1013024_WMonster_W1_Mecha_05_RL_Passive_AIControlAndHPLock",
     "1013024_WMonster_W1_Mecha_05_RL_Ability13_Part02",
     "1013024_WMonster_W1_Mecha_05_RL_Ability13_Part01",
     "1013024_WMonster_W1_Mecha_05_RL_Ability10_Part02",
     "1013024_WMonster_W1_Mecha_05_RL_Ability10_Part01",
     "1013024_WMonster_W1_Mecha_05_RL_Ability08_Part02",
     "1013024_WMonster_W1_Mecha_05_RL_Ability08_Part01",
-    "1013024_WMonster_W1_Mecha_05_RL_Passive_AIControlAndHPLock",
-    "1013024_WMonster_W1_Mecha_05_Passive_AIControlAndHPLock",
     "1013024_WMonster_W1_Mecha_05_Ability12_Part02",
     "1013024_WMonster_W1_Mecha_05_Ability12_Part01",
     "1013024_WMonster_W1_Mecha_05_Ability11_Part02",
     "1013024_WMonster_W1_Mecha_05_Ability11_Part01",
-    "1013024_WMonster_W1_Mecha_05_AbilityP09_Part02",
-    "1013024_WMonster_W1_Mecha_05_AbilityP09_Part01",
     "1013024_WMonster_W1_Mecha_05_Ability09_Part02",
     "1013024_WMonster_W1_Mecha_05_Ability09_Part01",
     "1013024_WMonster_W1_Mecha_05_Ability07_Part02",
     "1013024_WMonster_W1_Mecha_05_Ability07_Part01",
     "1013024_WMonster_W1_Mecha_05_Ability06_Part02",
     "1013024_WMonster_W1_Mecha_05_Ability06_Part01",
-    "1013024_Monster_W1_Mecha04_PassiveAbility_KlaraSpecialVictory",
     "1013024_Modifiers"
   ],
   "abilityObject": {
@@ -854,6 +850,378 @@ const compositeAbilityObject = {
       },
       "references": []
     },
+    "1013024_WMonster_W1_Mecha_05_RL_Passive_AIControlAndHPLock": {
+      "fileName": "1013024_WMonster_W1_Mecha_05_RL_Passive_AIControlAndHPLock",
+      "childAbilityList": [
+        "1013024_WMonster_W1_Mecha_05_RL_Passive_AIControlAndHPLock"
+      ],
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1081277388\">Monster_Mecha04_BattleScore1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1945457431\">Monster_W1_Mecha04_PassiveMDF</a>[<span class=\"descriptionNumberColor\">Hounding Pursuit</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1827416969\">Monster_W1_Mecha04_InsertControl</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"736844777\">Monster_W1_Mecha04_RL_PartController</a>"
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-69428728\">WMonster_Mecha_02_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1170487461\">Enemy_W1_Mecha04_ChainSawSpeedController</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1945457431\">Monster_W1_Mecha04_PassiveMDF</a>[<span class=\"descriptionNumberColor\">Hounding Pursuit</span>]",
+          "description": "If \"Felling Order\" hits one target that does not currently have a Shield, immediately use \"Dismantle\" on a random target.",
+          "type": "Other",
+          "statusName": "Hounding Pursuit"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-742125552\">Enemy_W1_Mecha04_ChainSawSpeedNormal</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1170487461\">Enemy_W1_Mecha04_ChainSawSpeedController</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_Confine"
+                      }
+                    ]
+                  },
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-742125552\">Enemy_W1_Mecha04_ChainSawSpeedNormal</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier is Added [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_Confine"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_CTRL_Frozen"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "Break"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-742125552\">Enemy_W1_Mecha04_ChainSawSpeedNormal</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_Confine"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_CTRL_Frozen"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "Break"
+                      }
+                    ]
+                  },
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-742125552\">Enemy_W1_Mecha04_ChainSawSpeedNormal</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-69428728\">WMonster_Mecha_02_MuteHitFly</a>",
+          "modifierFlags": [
+            "MuteHitFly"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]"
+            },
+            {
+              "eventTrigger": "Action Choice Window [Owner]"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1827416969\">Monster_W1_Mecha04_InsertControl</a>",
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "Monster_W1_Mecha04_00_InsertFlag"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "End Broken State [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "HP_Bars_Remaining",
+                    "compareType": ">=",
+                    "value2": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      "searchRandom": true,
+                      "maxTargets": 1,
+                      "conditions": {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-1002549759\">Monster_W1_Mecha04_Sign01</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-1052882616\">Monster_W1_Mecha04_Sign02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
+                          }
+                        ]
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"413586706\">Enemy_W1_Mecha04_ChainSawSpeedUpAgain</a>"
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      "searchRandom": true,
+                      "maxTargets": 1,
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1909388904\">Sign_W1_Mecha02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"413586706\">Enemy_W1_Mecha04_ChainSawSpeedUpAgain</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "1013024_WMonster_W1_Mecha_05_RL_Ability13_Part02": {
       "fileName": "1013024_WMonster_W1_Mecha_05_RL_Ability13_Part02",
       "abilityType": null,
@@ -1544,933 +1912,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "1013024_WMonster_W1_Mecha_05_RL_Passive_AIControlAndHPLock": {
-      "fileName": "1013024_WMonster_W1_Mecha_05_RL_Passive_AIControlAndHPLock",
-      "childAbilityList": [
-        "1013024_WMonster_W1_Mecha_05_RL_Passive_AIControlAndHPLock"
-      ],
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1081277388\">Monster_Mecha04_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1945457431\">Monster_W1_Mecha04_PassiveMDF</a>[<span class=\"descriptionNumberColor\">Hounding Pursuit</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1827416969\">Monster_W1_Mecha04_InsertControl</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"736844777\">Monster_W1_Mecha04_RL_PartController</a>"
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-69428728\">WMonster_Mecha_02_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1170487461\">Enemy_W1_Mecha04_ChainSawSpeedController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1945457431\">Monster_W1_Mecha04_PassiveMDF</a>[<span class=\"descriptionNumberColor\">Hounding Pursuit</span>]",
-          "description": "If \"Felling Order\" hits one target that does not currently have a Shield, immediately use \"Dismantle\" on a random target.",
-          "type": "Other",
-          "statusName": "Hounding Pursuit"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-742125552\">Enemy_W1_Mecha04_ChainSawSpeedNormal</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1170487461\">Enemy_W1_Mecha04_ChainSawSpeedController</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_Confine"
-                      }
-                    ]
-                  },
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-742125552\">Enemy_W1_Mecha04_ChainSawSpeedNormal</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_Confine"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_CTRL_Frozen"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "Break"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-742125552\">Enemy_W1_Mecha04_ChainSawSpeedNormal</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_Confine"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_CTRL_Frozen"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "Break"
-                      }
-                    ]
-                  },
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-742125552\">Enemy_W1_Mecha04_ChainSawSpeedNormal</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-69428728\">WMonster_Mecha_02_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]"
-            },
-            {
-              "eventTrigger": "Action Choice Window [Owner]"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1827416969\">Monster_W1_Mecha04_InsertControl</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_W1_Mecha04_00_InsertFlag"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": ">=",
-                    "value2": 2
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-1002549759\">Monster_W1_Mecha04_Sign01</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-                          },
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-1052882616\">Monster_W1_Mecha04_Sign02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-                          }
-                        ]
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"413586706\">Enemy_W1_Mecha04_ChainSawSpeedUpAgain</a>"
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1909388904\">Sign_W1_Mecha02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"413586706\">Enemy_W1_Mecha04_ChainSawSpeedUpAgain</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "1013024_WMonster_W1_Mecha_05_Passive_AIControlAndHPLock": {
-      "fileName": "1013024_WMonster_W1_Mecha_05_Passive_AIControlAndHPLock",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1081277388\">Monster_Mecha04_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1827416969\">Monster_W1_Mecha04_InsertControl</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 1013021,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Automaton Direwolf (Bug)"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1101304873\">Monster_Mecha04_ResetAI</a>"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1945457431\">Monster_W1_Mecha04_PassiveMDF</a>[<span class=\"descriptionNumberColor\">Hounding Pursuit</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1321057432\">Monster_W1_Mecha04_RemoveOneMore</a>"
-            }
-          ]
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-69428728\">WMonster_Mecha_02_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1170487461\">Enemy_W1_Mecha04_ChainSawSpeedController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1945457431\">Monster_W1_Mecha04_PassiveMDF</a>[<span class=\"descriptionNumberColor\">Hounding Pursuit</span>]",
-          "description": "If \"Felling Order\" hits one target that does not currently have a Shield, immediately use \"Dismantle\" on a random target.",
-          "type": "Other",
-          "statusName": "Hounding Pursuit"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-742125552\">Enemy_W1_Mecha04_ChainSawSpeedNormal</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1170487461\">Enemy_W1_Mecha04_ChainSawSpeedController</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_Confine"
-                      }
-                    ]
-                  },
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-742125552\">Enemy_W1_Mecha04_ChainSawSpeedNormal</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_Confine"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_CTRL_Frozen"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "Break"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-742125552\">Enemy_W1_Mecha04_ChainSawSpeedNormal</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_Confine"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_CTRL_Frozen"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "Break"
-                      }
-                    ]
-                  },
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-742125552\">Enemy_W1_Mecha04_ChainSawSpeedNormal</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-69428728\">WMonster_Mecha_02_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]"
-            },
-            {
-              "eventTrigger": "Action Choice Window [Owner]"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1827416969\">Monster_W1_Mecha04_InsertControl</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_W1_Mecha04_00_InsertFlag"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": 1013021,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "characterName": "Automaton Direwolf (Bug)"
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-1002549759\">Monster_W1_Mecha04_Sign01</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-                          },
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-1052882616\">Monster_W1_Mecha04_Sign02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-                          }
-                        ]
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"413586706\">Enemy_W1_Mecha04_ChainSawSpeedUpAgain</a>"
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1909388904\">Sign_W1_Mecha02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"413586706\">Enemy_W1_Mecha04_ChainSawSpeedUpAgain</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1101304873\">Monster_Mecha04_ResetAI</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_ResetValue",
-                    "compareType": "=",
-                    "value2": 10
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                      "value": 10
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "MDF_ResetValue",
-                        "compareType": "=",
-                        "value2": 3
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                          "value": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn End [Anyone]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "searchRandom": true,
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1002549759\">Monster_W1_Mecha04_Sign01</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1052882616\">Monster_W1_Mecha04_Sign02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-                      }
-                    ]
-                  },
-                  "noTargetFound": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                      "value": 1
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_ResetValue",
-                      "value": 0
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1002549759\">Monster_W1_Mecha04_Sign01</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_ResetValue",
-                      "value": 10
-                    },
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                      "value": 10
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1052882616\">Monster_W1_Mecha04_Sign02</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_ResetValue",
-                      "value": 3
-                    },
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                      "value": 3
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "1013024_WMonster_W1_Mecha_05_Ability12_Part02": {
       "fileName": "1013024_WMonster_W1_Mecha_05_Ability12_Part02",
       "abilityType": null,
@@ -2712,103 +2153,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "1013024_WMonster_W1_Mecha_05_AbilityP09_Part02": {
-      "fileName": "1013024_WMonster_W1_Mecha_05_AbilityP09_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
-              "displayLines": "{[Skill09[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill09[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-95545360\">W1_Mecha02_ThunderDOT</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
-          "duration": 2,
-          "baseChance": 1,
-          "stackLimit": {
-            "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-            "displayLines": "{[Skill06[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[3]]}"
-            ]
-          },
-          "valuePerStack": {
-            "Modifier_Bleed_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-              "displayLines": "{[Skill06[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[1]]}"
-              ]
-            },
-            "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-              "displayLines": "{[Skill06[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[3]]}"
-              ]
-            }
-          }
-        },
-        "Trigger: Attack End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "1013024_WMonster_W1_Mecha_05_AbilityP09_Part01": {
-      "fileName": "1013024_WMonster_W1_Mecha_05_AbilityP09_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "WMonster_W1_Mecha_05_AbilityP09_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       },
       "references": []
     },
@@ -3695,62 +3039,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "1013024_Monster_W1_Mecha04_PassiveAbility_KlaraSpecialVictory": {
-      "fileName": "1013024_Monster_W1_Mecha04_PassiveAbility_KlaraSpecialVictory",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-220942891\">Monster_W1_Mecha04_KlaraSpecialVictory_LockHP</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__151548297\">Monster_W1_Mecha04_Instance_DisableAction</a>",
-          "modifierFlags": [
-            "DisableAction"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-220942891\">Monster_W1_Mecha04_KlaraSpecialVictory_LockHP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.01
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Locked HP Floor Reached [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"151548297\">Monster_W1_Mecha04_Instance_DisableAction</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ]
     },
     "1013024_Modifiers": {
       "fileName": "1013024_Modifiers",

@@ -93,6 +93,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1980712149\">Monster_W1_Mecha04_RL_Part03Effect</a>",
+      "latentQueue": [
+        "WMonster_W1_Mecha_02_AIFlag_P2"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"

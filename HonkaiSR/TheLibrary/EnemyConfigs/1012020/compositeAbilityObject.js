@@ -6,16 +6,13 @@ const compositeAbilityObject = {
     "1012020_Monster_W1_GSMecha_01_Ability04_Part02",
     "1012020_Monster_W1_GSMecha_01_Ability04_Part01",
     "1012020_Monster_W1_GSMecha_01_PassiveAbility_Insert",
+    "1012020_Monster_W1_GSMecha_01_PassiveAbility_Initiate",
     "1012020_Monster_W1_GSMecha_01_Ability03_Part02",
     "1012020_Monster_W1_GSMecha_01_Ability03_Part01",
     "1012020_Monster_W1_GSMecha_01_Ability02_Part02",
     "1012020_Monster_W1_GSMecha_01_Ability02_Part01",
     "1012020_Monster_W1_GSMecha_01_Ability01_Part02",
-    "1012020_Monster_W1_GSMecha_01_Ability01_Part01",
-    "1012020_Monster_W1_GSMecha_01_PassiveAbility_KlaraSpecialVictory",
-    "1012020_Monster_W1_GSMecha_01_PassiveAbility_KlaraEnterBattleCamera",
-    "1012020_Monster_W1_GSMecha_01_PassiveAbility_KlaraCamera",
-    "1012020_Monster_W1_GSMecha_01_PassiveAbility_Initiate"
+    "1012020_Monster_W1_GSMecha_01_Ability01_Part01"
   ],
   "abilityObject": {
     "1012020_Monster_W1_GSMecha_01_Ability04_Part02": {
@@ -152,6 +149,89 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
+    },
+    "1012020_Monster_W1_GSMecha_01_PassiveAbility_Initiate": {
+      "fileName": "1012020_Monster_W1_GSMecha_01_PassiveAbility_Initiate",
+      "childAbilityList": [
+        "1012020_Monster_W1_GSMecha_01_PassiveAbility_Initiate",
+        "1012020_Monster_W1_GSMecha_01_PassiveAbility_Insert"
+      ],
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1061722899\">Monster_W1_GSMecha_01_Initiate</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "_BoomTimes"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "_BoomRound"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1061722899\">Monster_W1_GSMecha_01_Initiate</a>",
+          "modifierFlags": [
+            "Deathrattle",
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Was Killed (Queued) [Owner]",
+              "execute": [
+                {
+                  "name": "Dispel Debuffs",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "silent": true
+                },
+                {
+                  "name": "Mark Entity For Immediate Death"
+                },
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_W1_GSMecha_01_PassiveAbility_Insert",
+                  "priorityTag": "EnemyDeathEffect",
+                  "ownerState": "Mask_AliveOrLimbo",
+                  "targetState": "Mask_AliveOrLimbo",
+                  "canHitNonTargets": true,
+                  "showInActionOrder": true,
+                  "allowAbilityTriggers": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     "1012020_Monster_W1_GSMecha_01_Ability03_Part02": {
       "fileName": "1012020_Monster_W1_GSMecha_01_Ability03_Part02",
@@ -427,187 +507,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "1012020_Monster_W1_GSMecha_01_PassiveAbility_KlaraSpecialVictory": {
-      "fileName": "1012020_Monster_W1_GSMecha_01_PassiveAbility_KlaraSpecialVictory",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"469780750\">Monster_W1_GSMecha_01_KlaraSpecialVictory_LockHP</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1995523642\">Monster_W1_GSMecha_01_Instance_DisableAction</a>",
-          "modifierFlags": [
-            "DisableAction"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__469780750\">Monster_W1_GSMecha_01_KlaraSpecialVictory_LockHP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.01
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Locked HP Floor Reached [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1995523642\">Monster_W1_GSMecha_01_Instance_DisableAction</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "1012020_Monster_W1_GSMecha_01_PassiveAbility_KlaraEnterBattleCamera": {
-      "fileName": "1012020_Monster_W1_GSMecha_01_PassiveAbility_KlaraEnterBattleCamera",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1012020_Monster_W1_GSMecha_01_PassiveAbility_KlaraCamera": {
-      "fileName": "1012020_Monster_W1_GSMecha_01_PassiveAbility_KlaraCamera",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-498979834\">Monster_W1_GSMecha_01_PassiveAbility_KlaraEnterBattle</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-498979834\">Monster_W1_GSMecha_01_PassiveAbility_KlaraEnterBattle</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "priorityLevel": -55
-            }
-          ]
-        }
-      ]
-    },
-    "1012020_Monster_W1_GSMecha_01_PassiveAbility_Initiate": {
-      "fileName": "1012020_Monster_W1_GSMecha_01_PassiveAbility_Initiate",
-      "childAbilityList": [
-        "1012020_Monster_W1_GSMecha_01_PassiveAbility_Initiate",
-        "1012020_Monster_W1_GSMecha_01_PassiveAbility_Insert"
-      ],
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1061722899\">Monster_W1_GSMecha_01_Initiate</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "_BoomTimes"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "_BoomRound"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1061722899\">Monster_W1_GSMecha_01_Initiate</a>",
-          "modifierFlags": [
-            "Deathrattle",
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Was Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Dispel Debuffs",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "silent": true
-                },
-                {
-                  "name": "Mark Entity For Immediate Death"
-                },
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_W1_GSMecha_01_PassiveAbility_Insert",
-                  "priorityTag": "EnemyDeathEffect",
-                  "ownerState": "Mask_AliveOrLimbo",
-                  "targetState": "Mask_AliveOrLimbo",
-                  "canHitNonTargets": true,
-                  "showInActionOrder": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ]
-        }
-      ]
     }
   }
 }
