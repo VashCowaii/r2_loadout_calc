@@ -363,11 +363,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-243818097\">SPRL_Flag</a>",
-      "latentQueue": [
-        "SPRLCount",
-        "Strike_SPRLCount"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-243818097\">SPRL_Flag</a>"
     },
     {
       "name": "Modifier Construction",
@@ -1013,6 +1009,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__321901706\">Monster_W1_Gepard_RL_Revive</a>",
+      "latentQueue": [
+        "UsedShieldFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",

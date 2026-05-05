@@ -536,14 +536,6 @@ const configAbility = {
       "modifierFlags": [
         "Shield"
       ],
-      "stackData": [
-        "MDF_ShieldPercentage",
-        "MDF_MaxHPHitPercentage1",
-        "MDF_MaxHPHitPercentage2"
-      ],
-      "latentQueue": [
-        "UsedShieldFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -884,20 +876,13 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-243818097\">SPRL_Flag</a>",
-      "latentQueue": [
-        "SPRLCount",
-        "Strike_SPRLCount"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-243818097\">SPRL_Flag</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-508706525\">Gepard_RL_Break</a>",
       "modifierFlags": [
         "DisableAction"
-      ],
-      "latentQueue": [
-        "UsedShieldFlag"
       ],
       "execute": [
         {
@@ -952,9 +937,6 @@ const configAbility = {
       "modifierFlags": [
         "Shield"
       ],
-      "latentQueue": [
-        "UsedShieldFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -981,14 +963,6 @@ const configAbility = {
       "stackType": "Replace",
       "modifierFlags": [
         "Shield"
-      ],
-      "stackData": [
-        "MDF_ShieldPercentage",
-        "MDF_MaxHPHitPercentage1",
-        "MDF_MaxHPHitPercentage2"
-      ],
-      "latentQueue": [
-        "UsedShieldFlag"
       ],
       "execute": [
         {
@@ -1299,9 +1273,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
-      "latentQueue": [
-        "UsedShieldFlag"
-      ],
       "description": "Toughness cannot be reduced.",
       "type": "Other",
       "effectName": "Toughness Protection",
@@ -1535,6 +1506,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__321901706\">Monster_W1_Gepard_RL_Revive</a>",
+      "latentQueue": [
+        "UsedShieldFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",

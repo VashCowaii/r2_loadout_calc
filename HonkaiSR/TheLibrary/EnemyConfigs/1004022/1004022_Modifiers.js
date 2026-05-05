@@ -363,11 +363,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-243818097\">SPRL_Flag</a>",
-      "latentQueue": [
-        "SPRLCount",
-        "Strike_SPRLCount"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-243818097\">SPRL_Flag</a>"
     },
     {
       "name": "Modifier Construction",
