@@ -1145,6 +1145,12 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
+      "latentQueue": [
+        "Monster_IF_InsertCount",
+        "Monster_IF_InsertCameraFlag",
+        "Monster_IF_InsertCount02",
+        "Monster_IF_InsertCameraFlag02"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1243,6 +1249,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1028252906\">W2_Argenti_BattleScore1</a>",
+      "latentQueue": [
+        "Monster_IF_InsertCount",
+        "Monster_IF_InsertCameraFlag",
+        "Monster_IF_InsertCount02",
+        "Monster_IF_InsertCameraFlag02"
+      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",

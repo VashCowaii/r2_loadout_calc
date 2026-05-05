@@ -3,15 +3,16 @@ const compositeAbilityObject = {
   "fullCharacterName": 3003033,
   "trimCharacterName": 3003033,
   "abilityList": [
+    "3003033_Monster_W3_Figure_RLElite_Standard_Part_Insert",
     "3003033_Monster_W3_Figure_02_RLElite_AssistAbility02_Part02",
     "3003033_Monster_W3_Figure_02_RLElite_AssistAbility02_Part01",
     "3003033_Monster_W3_Figure_02_RLElite_AssistAbility01_Effect",
     "3003033_Monster_W3_Figure_02_RLElite_AssistAbility01_Perform",
     "3003033_Monster_W3_Figure_02_RLElite_AssistAbility01_Logic",
+    "3003033_Monster_W3_Figure_02_RLElite_PassiveAbility_Initiate",
+    "3003033_Monster_W3_Figure_02_RLElite_Ability07_Part00_BattleEvent",
     "3003033_Monster_W3_Figure_02_RLElite_Ability07_Part02",
     "3003033_Monster_W3_Figure_02_RLElite_Ability07_Part01",
-    "3003033_Monster_W3_Figure_02_RLElite_Ability10_AssistInit_Insert",
-    "3003033_Monster_W3_Figure_02_RLElite_Ability07_Part00_BattleEvent",
     "3003033_Monster_W3_Figure_02_RLElite_Ability07_Part00",
     "3003033_Monster_W3_Figure_02_RLElite_Ability06_Part02",
     "3003033_Monster_W3_Figure_02_RLElite_Ability06_Part01",
@@ -25,11 +26,20 @@ const compositeAbilityObject = {
     "3003033_Monster_W3_Figure_02_RLElite_Ability02_Part01",
     "3003033_Monster_W3_Figure_02_RLElite_Ability01_Part02",
     "3003033_Monster_W3_Figure_02_RLElite_Ability01_Part01",
-    "3003033_Monster_W3_Figure_RLElite_Standard_Part_Insert",
-    "3003033_Monster_W3_Figure_02_RLElite_PassiveAbility_Initiate",
     "3003033_Modifiers"
   ],
   "abilityObject": {
+    "3003033_Monster_W3_Figure_RLElite_Standard_Part_Insert": {
+      "fileName": "3003033_Monster_W3_Figure_RLElite_Standard_Part_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "3003033_Monster_W3_Figure_02_RLElite_AssistAbility02_Part02": {
       "fileName": "3003033_Monster_W3_Figure_02_RLElite_AssistAbility02_Part02",
       "abilityType": null,
@@ -86,87 +96,85 @@ const compositeAbilityObject = {
       "tag": "DOT_Burn",
       "references": []
     },
-    "3003033_Monster_W3_Figure_02_RLElite_Ability07_Part02": {
-      "fileName": "3003033_Monster_W3_Figure_02_RLElite_Ability07_Part02",
-      "abilityType": null,
+    "3003033_Monster_W3_Figure_02_RLElite_PassiveAbility_Initiate": {
+      "fileName": "3003033_Monster_W3_Figure_02_RLElite_PassiveAbility_Initiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
-      "parse": [
+      "parse": [],
+      "whenAdded": [
         {
-          "name": "Trigger Ability",
-          "from": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "ability": "Monster_W3_Figure_02_RLElite_Ability07_Part01",
-          "isTrigger": true
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         },
         {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Add Target by Unique Identifier",
-            "identifier": "DollBoss"
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
           },
-          "variableName": "W3_FigureBoss_00_BattleScore2_Flag1",
-          "context": "TargetEntity",
-          "value": -1,
-          "max": 100
+          "modifier": "<a class=\"gModGreen\" id=\"-918700562\">Monster_W3_Figure_02_RLElite_FireInHead</a>"
         },
         {
-          "name": "ATK Scaling DMG",
-          "target": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
+            "target": "{{Caster}}"
           },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-              "displayLines": "{[Skill07[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill07[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
+          "modifier": "<a class=\"gModGreen\" id=\"-675720383\">Enemy_W3_Figure_02_RLElite_AudioControllerForChosenOne</a>"
         },
-        "Trigger: Attack End"
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1606294659\">W3_Figure_02_BattleScore1</a>"
+        }
       ],
       "targetObjectData": {
-        "primaryTarget": "Inherent Target"
+        "primaryTarget": "{{Caster}}"
       },
-      "tag": "DOT",
-      "references": []
-    },
-    "3003033_Monster_W3_Figure_02_RLElite_Ability07_Part01": {
-      "fileName": "3003033_Monster_W3_Figure_02_RLElite_Ability07_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       },
-      "references": []
-    },
-    "3003033_Monster_W3_Figure_02_RLElite_Ability10_AssistInit_Insert": {
-      "fileName": "3003033_Monster_W3_Figure_02_RLElite_Ability10_AssistInit_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-675720383\">Enemy_W3_Figure_02_RLElite_AudioControllerForChosenOne</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier is Added [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     "3003033_Monster_W3_Figure_02_RLElite_Ability07_Part00_BattleEvent": {
       "fileName": "3003033_Monster_W3_Figure_02_RLElite_Ability07_Part00_BattleEvent",
@@ -320,6 +328,77 @@ const compositeAbilityObject = {
           ]
         }
       ]
+    },
+    "3003033_Monster_W3_Figure_02_RLElite_Ability07_Part02": {
+      "fileName": "3003033_Monster_W3_Figure_02_RLElite_Ability07_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "ability": "Monster_W3_Figure_02_RLElite_Ability07_Part01",
+          "isTrigger": true
+        },
+        {
+          "name": "Define Custom Variable with Added Value",
+          "target": {
+            "name": "Add Target by Unique Identifier",
+            "identifier": "DollBoss"
+          },
+          "variableName": "W3_FigureBoss_00_BattleScore2_Flag1",
+          "context": "TargetEntity",
+          "value": -1,
+          "max": 100
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
+              "displayLines": "{[Skill07[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill07[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "tag": "DOT",
+      "references": []
+    },
+    "3003033_Monster_W3_Figure_02_RLElite_Ability07_Part01": {
+      "fileName": "3003033_Monster_W3_Figure_02_RLElite_Ability07_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
     },
     "3003033_Monster_W3_Figure_02_RLElite_Ability07_Part00": {
       "fileName": "3003033_Monster_W3_Figure_02_RLElite_Ability07_Part00",
@@ -1635,97 +1714,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "3003033_Monster_W3_Figure_RLElite_Standard_Part_Insert": {
-      "fileName": "3003033_Monster_W3_Figure_RLElite_Standard_Part_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3003033_Monster_W3_Figure_02_RLElite_PassiveAbility_Initiate": {
-      "fileName": "3003033_Monster_W3_Figure_02_RLElite_PassiveAbility_Initiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-918700562\">Monster_W3_Figure_02_RLElite_FireInHead</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-675720383\">Enemy_W3_Figure_02_RLElite_AudioControllerForChosenOne</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1606294659\">W3_Figure_02_BattleScore1</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-675720383\">Enemy_W3_Figure_02_RLElite_AudioControllerForChosenOne</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier is Added [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
     },
     "3003033_Modifiers": {
       "fileName": "3003033_Modifiers",

@@ -401,9 +401,6 @@ const configAbility = {
         "MDF_ExploreDelayRatio",
         "MDF_ExploreDamageUpRatio"
       ],
-      "latentQueue": [
-        "BreakEndFlag"
-      ],
       "description": "An extra action can be taken every turn with a slight increase in SPD.",
       "type": "Buff",
       "effectName": "Impresario",

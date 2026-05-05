@@ -52,10 +52,6 @@ const configAbility = {
         "MuteHitFly",
         "ListenBattleEventSkill"
       ],
-      "latentQueue": [
-        "Storage_Flag",
-        "Power_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo",
@@ -215,26 +211,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2061561939\">MModifier_Monster_W2_Beast02_01_InsertMark</a>",
-      "stackType": "Replace",
-      "latentQueue": [
-        "Fire1_Flag",
-        "BattleScore_FireBallCount"
-      ]
+      "stackType": "Replace"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__660808743\">Enemy_W2_Beast02_01_ActivityTelevision_HitMark4</a>",
-      "stackData": [
-        "isCaster"
-      ],
-      "latentQueue": [
-        "Storage_Flag",
-        "Fire1_Flag",
-        "BattleScore_FireBallCount",
-        "Fire2_Flag",
-        "Fire3_Flag",
-        "Fire4_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -286,16 +267,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__610475886\">Enemy_W2_Beast02_01_ActivityTelevision_HitMark3</a>",
-      "stackData": [
-        "isCaster"
-      ],
-      "latentQueue": [
-        "Storage_Flag",
-        "Fire1_Flag",
-        "BattleScore_FireBallCount",
-        "Fire2_Flag",
-        "Fire3_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -347,15 +318,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__627253505\">Enemy_W2_Beast02_01_ActivityTelevision_HitMark2</a>",
-      "stackData": [
-        "isCaster"
-      ],
-      "latentQueue": [
-        "Storage_Flag",
-        "Fire1_Flag",
-        "BattleScore_FireBallCount",
-        "Fire2_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -407,13 +369,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__576920648\">Enemy_W2_Beast02_01_ActivityTelevision_HitMark1</a>",
-      "stackData": [
-        "isCaster"
-      ],
-      "latentQueue": [
-        "Fire1_Flag",
-        "BattleScore_FireBallCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -476,13 +431,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-917579162\">W2_Beast02_01_ActivityTelevision_ModifyDelay</a>",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "Storage_Flag",
-        "Power_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "Being Attacked End [Owner]",

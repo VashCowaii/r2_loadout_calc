@@ -3,1677 +3,23 @@ const compositeAbilityObject = {
   "fullCharacterName": 3004013,
   "trimCharacterName": 3004013,
   "abilityList": [
-    "3004013_Monster_W3_FigureBoss_BattleEvent",
-    "3004013_Monster_W3_FigureBoss_Ability04_Insert_Explode",
-    "3004013_Monster_W3_FigureBoss_Ability03_Insert_Transform",
-    "3004013_Monster_W3_FigureBoss_Ability02_Insert_RestartPhase2",
-    "3004013_Monster_W3_FigureBoss_Ability02_Insert_Restart",
-    "3004013_Monster_W3_FigureBoss_Ability01_Insert_EnterCombat",
+    "3004013_Monster_W3_FigureBoss_PassiveAbility02_Insert",
+    "3004013_Monster_W3_FigureBoss_PassiveAbility01_Insert",
     "3004013_Monster_W3_FigureBoss_PassiveAbility06",
     "3004013_Monster_W3_FigureBoss_PassiveAbility05",
     "3004013_Monster_W3_FigureBoss_PassiveAbility03",
-    "3004013_Monster_W3_FigureBoss_PassiveAbility02_Insert",
-    "3004013_Monster_W3_FigureBoss_PassiveAbility01_Insert",
     "3004013_Monster_W3_FigureBoss_RLBoss_New_PassiveAbility_Initiate",
-    "3004013_Monster_W3_FigureBoss_PassiveAbility_Initiate",
-    "3004013_Monster_W3_Figure_Solo_RLElite_PassiveAbility_Initiate",
-    "3004013_Monster_W3_DollElite_Standard_BattleEvent",
-    "3004013_Monster_W3_DollElite_Standard_Ability04_Insert_Explode",
-    "3004013_Monster_W3_DollElite_Standard_Ability03_Insert_Transform",
-    "3004013_Monster_W3_DollElite_Standard_Ability02_Insert_RestartPhase2",
-    "3004013_Monster_W3_DollElite_Standard_Ability02_Insert_Restart",
-    "3004013_Monster_W3_DollElite_Standard_Ability01_Insert_EnterCombat",
-    "3004013_WMonster_W3_DollElite01_PassiveAbility02_Insert",
-    "3004013_WMonster_W3_DollElite01_PassiveAbility01_Insert",
-    "3004013_Monster_W3_FigureBoss_New_PassiveAbility_Initiate",
-    "3004013_WMonster_W3_DollElite01_PassiveAbility_Initiate",
-    "3004013_Monster_W3_Figure_Solo_PassiveAbility_Initiate",
     "3004013_Monster_W3_FigureBoss_PassiveAbility_BGM",
+    "3004013_Monster_W3_FigureBoss_Ability01_Insert_EnterCombat",
+    "3004013_Monster_W3_FigureBoss_Ability02_Insert_Restart",
+    "3004013_Monster_W3_FigureBoss_Ability03_Insert_Transform",
+    "3004013_Monster_W3_FigureBoss_Ability04_Insert_Explode",
+    "3004013_Monster_W3_FigureBoss_Ability02_Insert_RestartPhase2",
     "3004013_Modifiers",
     "3004013_Functions",
     "3004013_BE_BattleEvents"
   ],
   "abilityObject": {
-    "3004013_Monster_W3_FigureBoss_BattleEvent": {
-      "fileName": "3004013_Monster_W3_FigureBoss_BattleEvent",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"921164585\">Enemy_W3_FigureBoss_BattleEvent</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1664207003\">Monster_W3_FigureBoss_DispelStatus_BE</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__921164585\">Enemy_W3_FigureBoss_BattleEvent</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Turn Start [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Ability Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
-                        "compareType": "<=",
-                        "value2": 4
-                      },
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "invertCondition": true
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "searchRandom": true,
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Check Boolean Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "value": "W3_Figure_00"
-                          },
-                          {
-                            "name": "Check Boolean Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "value": "W3_Figure_01"
-                          },
-                          {
-                            "name": "Check Boolean Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "value": "W3_Figure_02"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "Break"
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "STAT_CTRL"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "multiBase": 1
-                    },
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "Monster_W3_FigureBoss_Ability02_Insert_RestartPhase2",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "priorityTag": "EnemyChangeState",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "noTargetFound": [
-                    {
-                      "name": "Dispel Debuffs",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "silent": true
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "OR",
-                            "conditionList": [
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_00"
-                              },
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_01"
-                              },
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_02"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "Break"
-                          }
-                        ]
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Exit Broken-State",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          }
-                        },
-                        {
-                          "name": "Reset Toughness",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "OR",
-                            "conditionList": [
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_00"
-                              },
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_01"
-                              },
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_02"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "STAT_CTRL"
-                          }
-                        ]
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Remove Modifier Behavior Flag(s)",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "flagNames": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Check Boolean Value",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "value": "W3_Figure_02"
-                            }
-                          }
-                        ]
-                      },
-                      "multiBase": 1.333
-                    },
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Check Boolean Value",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "value": "W3_Figure_00"
-                            }
-                          }
-                        ]
-                      },
-                      "multiBase": 0.0009999999
-                    },
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Check Boolean Value",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "value": "W3_Figure_01"
-                            }
-                          }
-                        ]
-                      },
-                      "multiBase": 0.667
-                    },
-                    {
-                      "name": "Trigger Ability",
-                      "from": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Check Boolean Value",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "value": "W3_Figure_02"
-                            }
-                          }
-                        ]
-                      },
-                      "ability": "Monster_W3_Figure_02_RLElite_Ability07_Part00",
-                      "isTrigger": true
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "OR",
-                            "conditionList": [
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_00"
-                              },
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_01"
-                              },
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_02"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1611594582\">Monster_W3_FigureBoss_Standard_TheChosenOneEffect</a>"
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"919092314\">Monster_W3_FigureBoss_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                "Wait for Pending Ability Completions"
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (BE_P1_BESpeed) || RETURN",
-                    "displayLines": "BE_P1_BESpeed",
-                    "constants": [],
-                    "variables": [
-                      "BE_P1_BESpeed"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Weakness Break [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "W3_Figure_00"
-                      },
-                      {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "W3_Figure_01"
-                      },
-                      {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "W3_Figure_02"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "advanceType": "Set",
-                      "multiAdd": "P2_BreakDelayRatioPerFigure"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "3004013_Monster_W3_FigureBoss_Ability04_Insert_Explode": {
-      "fileName": "3004013_Monster_W3_FigureBoss_Ability04_Insert_Explode",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "W3_Figure_00"
-              },
-              {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "W3_Figure_01"
-              },
-              {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "W3_Figure_02"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target List}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target List}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target List}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"745906485\">Enemy_W3_Figure_02_RLElite_SuperArmorBreak</a>"
-            },
-            {
-              "name": "Looped Event",
-              "maxLoops": 4,
-              "Event": [
-                {
-                  "name": "Consume",
-                  "consumeFrom": "MaxHP",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target List}}"
-                  },
-                  "consumePercent": {
-                    "operator": "Variables[0] (P3_ExploreDamagePercentage) || Constants[0] (4) || DIV || RETURN",
-                    "displayLines": "(P3_ExploreDamagePercentage / 4)",
-                    "constants": [
-                      4
-                    ],
-                    "variables": [
-                      "P3_ExploreDamagePercentage"
-                    ]
-                  },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "AllType"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "OR",
-                  "conditionList": [
-                    {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_00"
-                    },
-                    {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_01"
-                    },
-                    {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_02"
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          "advanceType": "Set",
-          "multiAdd": "P4_ExploreDelayRatio"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "OR",
-                  "conditionList": [
-                    {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_00"
-                    },
-                    {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_01"
-                    },
-                    {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_02"
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-558855282\">Enemy_W3_FigureBoss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-          "valuePerStack": {
-            "MDF_ExploreDamageUpRatio": {
-              "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-              "displayLines": "P5_ExploreDamageUpRatio",
-              "constants": [],
-              "variables": [
-                "P5_ExploreDamageUpRatio"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-558855282\">Enemy_W3_FigureBoss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-          "stackData": [
-            "MDF_ExploreDamageUpRatio"
-          ],
-          "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_ExploreDamageUpRatio</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability",
-          "duration": 1,
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_ExploreDamageUpRatio) || RETURN",
-                    "displayLines": "MDF_ExploreDamageUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ExploreDamageUpRatio"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "3004013_Monster_W3_FigureBoss_Ability03_Insert_Transform": {
-      "fileName": "3004013_Monster_W3_FigureBoss_Ability03_Insert_Transform",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_00"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_01"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_02"
-                  }
-                ]
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "flagName": "Break",
-                "invertCondition": true
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
-              "valuePerStack": {
-                "MDF_BreakDelayRatio": {
-                  "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-                  "displayLines": "P1_BreakDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P1_BreakDelayRatio"
-                  ]
-                },
-                "MDF_ChosenOneSpeedUp": {
-                  "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-                  "displayLines": "P2_ChosenOneSpeedUp",
-                  "constants": [],
-                  "variables": [
-                    "P2_ChosenOneSpeedUp"
-                  ]
-                },
-                "MDF_ExploreDamagePercentage": {
-                  "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-                  "displayLines": "P3_ExploreDamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "P3_ExploreDamagePercentage"
-                  ]
-                },
-                "MDF_ExploreDelayRatio": {
-                  "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-                  "displayLines": "P4_ExploreDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P4_ExploreDelayRatio"
-                  ]
-                },
-                "MDF_ExploreDamageUpRatio": {
-                  "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-                  "displayLines": "P5_ExploreDamageUpRatio",
-                  "constants": [],
-                  "variables": [
-                    "P5_ExploreDamageUpRatio"
-                  ]
-                }
-              }
-            }
-          ],
-          "noTargetFound": [
-            {
-              "name": "Inject Ability Use",
-              "condition": {
-                "name": "Insert Ability Condition",
-                "type": "AbilityOwnerInsertCount",
-                "typeValue": 1
-              },
-              "abilityName": "Monster_W3_FigureBoss_Ability04_Insert_Explode",
-              "abilitySource": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "abilityTarget": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "priorityTag": "EnemyChangeState",
-              "canHitNonTargets": true,
-              "valuePerStack": {
-                "P1_BreakDelayRatio": {
-                  "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-                  "displayLines": "P1_BreakDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P1_BreakDelayRatio"
-                  ]
-                },
-                "P2_ChosenOneSpeedUp": {
-                  "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-                  "displayLines": "P2_ChosenOneSpeedUp",
-                  "constants": [],
-                  "variables": [
-                    "P2_ChosenOneSpeedUp"
-                  ]
-                },
-                "P3_ExploreDamagePercentage": {
-                  "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-                  "displayLines": "P3_ExploreDamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "P3_ExploreDamagePercentage"
-                  ]
-                },
-                "P4_ExploreDelayRatio": {
-                  "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-                  "displayLines": "P4_ExploreDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P4_ExploreDelayRatio"
-                  ]
-                },
-                "P5_ExploreDamageUpRatio": {
-                  "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-                  "displayLines": "P5_ExploreDamageUpRatio",
-                  "constants": [],
-                  "variables": [
-                    "P5_ExploreDamageUpRatio"
-                  ]
-                }
-              },
-              "allowAbilityTriggers": false
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3004013_Monster_W3_FigureBoss_Ability02_Insert_RestartPhase2": {
-      "fileName": "3004013_Monster_W3_FigureBoss_Ability02_Insert_RestartPhase2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_00"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_01"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_02"
-                  }
-                ]
-              },
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "flagName": "Break"
-                  },
-                  {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "flagName": "STAT_CTRL"
-                  }
-                ]
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Parameter Target List}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "flagName": "Break"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Reset Toughness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target List}}"
-                  }
-                },
-                {
-                  "name": "Exit Broken-State",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target List}}"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "W3_Figure_00"
-                      },
-                      {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "W3_Figure_01"
-                      },
-                      {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "W3_Figure_02"
-                      }
-                    ]
-                  },
-                  {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "flagName": "STAT_CTRL"
-                  }
-                ]
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Remove Modifier Behavior Flag(s)",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "flagNames": []
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target List}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
-              "valuePerStack": {
-                "MDF_BreakDelayRatio": {
-                  "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-                  "displayLines": "P1_BreakDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P1_BreakDelayRatio"
-                  ]
-                },
-                "MDF_ChosenOneSpeedUp": {
-                  "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-                  "displayLines": "P2_ChosenOneSpeedUp",
-                  "constants": [],
-                  "variables": [
-                    "P2_ChosenOneSpeedUp"
-                  ]
-                },
-                "MDF_ExploreDamagePercentage": {
-                  "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-                  "displayLines": "P3_ExploreDamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "P3_ExploreDamagePercentage"
-                  ]
-                },
-                "MDF_ExploreDelayRatio": {
-                  "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-                  "displayLines": "P4_ExploreDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P4_ExploreDelayRatio"
-                  ]
-                },
-                "MDF_ExploreDamageUpRatio": {
-                  "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-                  "displayLines": "P5_ExploreDamageUpRatio",
-                  "constants": [],
-                  "variables": [
-                    "P5_ExploreDamageUpRatio"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Action Advance/Delay",
-              "advanceType": "Set",
-              "target": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_02"
-                    }
-                  }
-                ]
-              },
-              "multiBase": 1.33
-            },
-            {
-              "name": "Action Advance/Delay",
-              "advanceType": "Set",
-              "target": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_00"
-                    }
-                  }
-                ]
-              },
-              "multiBase": 0.0009999999
-            },
-            {
-              "name": "Action Advance/Delay",
-              "advanceType": "Set",
-              "target": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_01"
-                    }
-                  }
-                ]
-              },
-              "multiBase": 0.667
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target List}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-            },
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_02"
-                    }
-                  }
-                ]
-              },
-              "ability": "Monster_W3_Figure_02_RLElite_Ability07_Part00",
-              "isTrigger": true
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1611594582\">Monster_W3_FigureBoss_Standard_TheChosenOneEffect</a>"
-            },
-            "Wait for Pending Ability Completions",
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3004013_Monster_W3_FigureBoss_Ability02_Insert_Restart": {
-      "fileName": "3004013_Monster_W3_FigureBoss_Ability02_Insert_Restart",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
-          "valuePerStack": {
-            "MDF_BreakDelayRatio": {
-              "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-              "displayLines": "P1_BreakDelayRatio",
-              "constants": [],
-              "variables": [
-                "P1_BreakDelayRatio"
-              ]
-            },
-            "MDF_ChosenOneSpeedUp": {
-              "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-              "displayLines": "P2_ChosenOneSpeedUp",
-              "constants": [],
-              "variables": [
-                "P2_ChosenOneSpeedUp"
-              ]
-            },
-            "MDF_ExploreDamagePercentage": {
-              "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-              "displayLines": "P3_ExploreDamagePercentage",
-              "constants": [],
-              "variables": [
-                "P3_ExploreDamagePercentage"
-              ]
-            },
-            "MDF_ExploreDelayRatio": {
-              "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-              "displayLines": "P4_ExploreDelayRatio",
-              "constants": [],
-              "variables": [
-                "P4_ExploreDelayRatio"
-              ]
-            },
-            "MDF_ExploreDamageUpRatio": {
-              "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-              "displayLines": "P5_ExploreDamageUpRatio",
-              "constants": [],
-              "variables": [
-                "P5_ExploreDamageUpRatio"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3004013_Monster_W3_FigureBoss_Ability01_Insert_EnterCombat": {
-      "fileName": "3004013_Monster_W3_FigureBoss_Ability01_Insert_EnterCombat",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_00"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_01"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_02"
-                  }
-                ]
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-900182182\">Monster_W3_FigureBoss_Standard_Basic</a>[<span class=\"descriptionNumberColor\">\"Puppets of the Order\"</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
-          "valuePerStack": {
-            "MDF_BreakDelayRatio": {
-              "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-              "displayLines": "P1_BreakDelayRatio",
-              "constants": [],
-              "variables": [
-                "P1_BreakDelayRatio"
-              ]
-            },
-            "MDF_ChosenOneSpeedUp": {
-              "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-              "displayLines": "P2_ChosenOneSpeedUp",
-              "constants": [],
-              "variables": [
-                "P2_ChosenOneSpeedUp"
-              ]
-            },
-            "MDF_ExploreDamagePercentage": {
-              "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-              "displayLines": "P3_ExploreDamagePercentage",
-              "constants": [],
-              "variables": [
-                "P3_ExploreDamagePercentage"
-              ]
-            },
-            "MDF_ExploreDelayRatio": {
-              "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-              "displayLines": "P4_ExploreDelayRatio",
-              "constants": [],
-              "variables": [
-                "P4_ExploreDelayRatio"
-              ]
-            },
-            "MDF_ExploreDamageUpRatio": {
-              "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-              "displayLines": "P5_ExploreDamageUpRatio",
-              "constants": [],
-              "variables": [
-                "P5_ExploreDamageUpRatio"
-              ]
-            }
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 300401000,
-            "target": {
-              "name": "Add Target by Unique Identifier",
-              "identifier": "DollBoss"
-            },
-            "characterName": null
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_00"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_01"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_02"
-                  }
-                ]
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1202391577\">Enemy_W3_FigureBoss_SaveModel</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1202391577\">Enemy_W3_FigureBoss_SaveModel</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ]
-        }
-      ]
-    },
-    "3004013_Monster_W3_FigureBoss_PassiveAbility06": {
-      "fileName": "3004013_Monster_W3_FigureBoss_PassiveAbility06",
-      "childAbilityList": [
-        "3004013_Monster_W3_FigureBoss_PassiveAbility06"
-      ],
-      "skillTrigger": "Skill06",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3004013_Monster_W3_FigureBoss_PassiveAbility05": {
-      "fileName": "3004013_Monster_W3_FigureBoss_PassiveAbility05",
-      "childAbilityList": [
-        "3004013_Monster_W3_FigureBoss_PassiveAbility05"
-      ],
-      "skillTrigger": "Skill05",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3004013_Monster_W3_FigureBoss_PassiveAbility03": {
-      "fileName": "3004013_Monster_W3_FigureBoss_PassiveAbility03",
-      "childAbilityList": [
-        "3004013_Monster_W3_FigureBoss_PassiveAbility03"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "3004013_Monster_W3_FigureBoss_PassiveAbility02_Insert": {
       "fileName": "3004013_Monster_W3_FigureBoss_PassiveAbility02_Insert",
       "abilityType": null,
@@ -2577,6 +923,60 @@ const compositeAbilityObject = {
       },
       "references": []
     },
+    "3004013_Monster_W3_FigureBoss_PassiveAbility06": {
+      "fileName": "3004013_Monster_W3_FigureBoss_PassiveAbility06",
+      "childAbilityList": [
+        "3004013_Monster_W3_FigureBoss_PassiveAbility06"
+      ],
+      "skillTrigger": "Skill06",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3004013_Monster_W3_FigureBoss_PassiveAbility05": {
+      "fileName": "3004013_Monster_W3_FigureBoss_PassiveAbility05",
+      "childAbilityList": [
+        "3004013_Monster_W3_FigureBoss_PassiveAbility05"
+      ],
+      "skillTrigger": "Skill05",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3004013_Monster_W3_FigureBoss_PassiveAbility03": {
+      "fileName": "3004013_Monster_W3_FigureBoss_PassiveAbility03",
+      "childAbilityList": [
+        "3004013_Monster_W3_FigureBoss_PassiveAbility03"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "3004013_Monster_W3_FigureBoss_RLBoss_New_PassiveAbility_Initiate": {
       "fileName": "3004013_Monster_W3_FigureBoss_RLBoss_New_PassiveAbility_Initiate",
       "childAbilityList": [
@@ -2943,823 +1343,106 @@ const compositeAbilityObject = {
         }
       ]
     },
-    "3004013_Monster_W3_FigureBoss_PassiveAbility_Initiate": {
-      "fileName": "3004013_Monster_W3_FigureBoss_PassiveAbility_Initiate",
-      "abilityType": null,
+    "3004013_Monster_W3_FigureBoss_PassiveAbility_BGM": {
+      "fileName": "3004013_Monster_W3_FigureBoss_PassiveAbility_BGM",
+      "childAbilityList": [
+        "3004013_Monster_W3_FigureBoss_PassiveAbility_BGM"
+      ],
+      "skillTrigger": "Passive_BGM",
+      "abilityType": "Basic ATK",
       "energy": null,
       "toughnessList": null,
       "parse": [],
       "whenAdded": [
         {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1675215449\">Monster_W3_FigureBoss_Initiate</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1027298323\">Monster_W3_FigureBoss_DispelStatus</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-724775683\">Monster_W3_FigureBoss_PartController</a>"
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "DollBoss",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_FigureBoss_Ability01_Insert_EnterCombat",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_FigureBoss_Ability02_Insert_Restart",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_FigureBoss_Ability03_Insert_Transform",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_FigureBoss_Ability04_Insert_Explode",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_FigureBoss_Ability02_Insert_RestartPhase2",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage Type",
+                "stageType": "Challenge"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "VerseSimulation"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "StrongChallengeActivity"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "RogueRelic"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "GridFightActivity"
+              }
+            ]
           }
         },
         {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Caster}}"
+            "target": "{{Level Entity}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"201948068\">Monster_W3_FigureBoss_ViewModeListener</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-894175068\">W3_FigureBoss_BattleScore1</a>"
-        },
-        {
-          "name": "Set Action-State",
-          "on": null,
-          "stateName": "DollBoss",
-          "state": false
+          "modifier": "<a class=\"gModGreen\" id=\"419579896\">Enemy_W3_FigureBoss_ResetStageBGM</a>"
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
-      "references": []
-    },
-    "3004013_Monster_W3_Figure_Solo_RLElite_PassiveAbility_Initiate": {
-      "fileName": "3004013_Monster_W3_Figure_Solo_RLElite_PassiveAbility_Initiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3004013_Monster_W3_DollElite_Standard_BattleEvent": {
-      "fileName": "3004013_Monster_W3_DollElite_Standard_BattleEvent",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1671905329\">Enemy_W3_DollElite_Standard_BattleEvent</a>"
-        }
-      ],
-      "targetObjectData": {
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1671905329\">Enemy_W3_DollElite_Standard_BattleEvent</a>",
-          "stackType": "ReplaceByCaster",
+          "for": "<a class=\"gModGreen\" id=\"mod__419579896\">Enemy_W3_FigureBoss_ResetStageBGM</a>",
           "execute": [
-            {
-              "eventTrigger": "Turn Start [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Ability Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
-                        "compareType": "<=",
-                        "value2": 4
-                      },
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "invertCondition": true
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "searchRandom": true,
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Check Boolean Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "value": "W3_Figure_00"
-                          },
-                          {
-                            "name": "Check Boolean Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "value": "W3_Figure_01"
-                          },
-                          {
-                            "name": "Check Boolean Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "value": "W3_Figure_02"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "Break"
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "STAT_CTRL"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "multiBase": 1
-                    },
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "Monster_W3_DollElite_Standard_Ability02_Insert_RestartPhase2",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "priorityTag": "EnemyChangeState",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "noTargetFound": [
-                    {
-                      "name": "Dispel Debuffs",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "silent": true
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "OR",
-                            "conditionList": [
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_00"
-                              },
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_01"
-                              },
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_02"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "Break"
-                          }
-                        ]
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Exit Broken-State",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          }
-                        },
-                        {
-                          "name": "Reset Toughness",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "OR",
-                            "conditionList": [
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_00"
-                              },
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_01"
-                              },
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_02"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "STAT_CTRL"
-                          }
-                        ]
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Remove Modifier Behavior Flag(s)",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "flagNames": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Check Boolean Value",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "value": "W3_Figure_02"
-                            }
-                          }
-                        ]
-                      },
-                      "multiBase": 1.333
-                    },
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Check Boolean Value",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "value": "W3_Figure_00"
-                            }
-                          }
-                        ]
-                      },
-                      "multiBase": 0.0009999999
-                    },
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Check Boolean Value",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "value": "W3_Figure_01"
-                            }
-                          }
-                        ]
-                      },
-                      "multiBase": 0.667
-                    },
-                    {
-                      "name": "Trigger Ability",
-                      "from": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Check Boolean Value",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "value": "W3_Figure_02"
-                            }
-                          }
-                        ]
-                      },
-                      "ability": "Monster_W3_Figure_02_Ability07_Part00",
-                      "isTrigger": true
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"851149437\">Enemy_W3_DollElite_Commnon_TheChosenOneEffect</a>"
-                    },
-                    "Wait for Pending Ability Completions"
-                  ]
-                }
-              ]
-            },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (BE_P1_BESpeed) || RETURN",
-                    "displayLines": "BE_P1_BESpeed",
-                    "constants": [],
-                    "variables": [
-                      "BE_P1_BESpeed"
-                    ]
-                  }
+                  "name": "Define Custom Variable with Varying Data",
+                  "target": null,
+                  "variableName": "MDF_WaveIndex",
+                  "value": "CurWaveIndex"
                 }
               ]
             },
             {
-              "eventTrigger": "Weakness Break [Anyone]",
+              "eventTrigger": "New Enemy Wave: Start",
               "execute": [
+                {
+                  "name": "Define Custom Variable with Varying Data",
+                  "target": null,
+                  "variableName": "MDF_WaveIndex2",
+                  "value": "CurWaveIndex"
+                },
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Check Boolean Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "value": "W3_Figure_00"
-                          },
-                          {
-                            "name": "Check Boolean Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "value": "W3_Figure_01"
-                          },
-                          {
-                            "name": "Check Boolean Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "value": "W3_Figure_02"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1775147687\">RedStanceState</a>",
-                        "invertCondition": true
-                      }
-                    ]
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_WaveIndex",
+                    "compareType": "NOT=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
+                      "displayLines": "MDF_WaveIndex2",
+                      "constants": [],
+                      "variables": [
+                        "MDF_WaveIndex2"
+                      ]
+                    }
                   },
                   "passed": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "advanceType": "Set",
-                      "multiAdd": "P2_BreakDelayRatioPerFigure"
-                    }
+                    "Modifier Deletes Itself"
                   ]
                 }
               ]
@@ -3768,8 +1451,459 @@ const compositeAbilityObject = {
         }
       ]
     },
-    "3004013_Monster_W3_DollElite_Standard_Ability04_Insert_Explode": {
-      "fileName": "3004013_Monster_W3_DollElite_Standard_Ability04_Insert_Explode",
+    "3004013_Monster_W3_FigureBoss_Ability01_Insert_EnterCombat": {
+      "fileName": "3004013_Monster_W3_FigureBoss_Ability01_Insert_EnterCombat",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "searchRandom": true,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_00"
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_01"
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_02"
+                  }
+                ]
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-900182182\">Monster_W3_FigureBoss_Standard_Basic</a>[<span class=\"descriptionNumberColor\">\"Puppets of the Order\"</span>]"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
+          "valuePerStack": {
+            "MDF_BreakDelayRatio": {
+              "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
+              "displayLines": "P1_BreakDelayRatio",
+              "constants": [],
+              "variables": [
+                "P1_BreakDelayRatio"
+              ]
+            },
+            "MDF_ChosenOneSpeedUp": {
+              "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
+              "displayLines": "P2_ChosenOneSpeedUp",
+              "constants": [],
+              "variables": [
+                "P2_ChosenOneSpeedUp"
+              ]
+            },
+            "MDF_ExploreDamagePercentage": {
+              "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
+              "displayLines": "P3_ExploreDamagePercentage",
+              "constants": [],
+              "variables": [
+                "P3_ExploreDamagePercentage"
+              ]
+            },
+            "MDF_ExploreDelayRatio": {
+              "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
+              "displayLines": "P4_ExploreDelayRatio",
+              "constants": [],
+              "variables": [
+                "P4_ExploreDelayRatio"
+              ]
+            },
+            "MDF_ExploreDamageUpRatio": {
+              "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
+              "displayLines": "P5_ExploreDamageUpRatio",
+              "constants": [],
+              "variables": [
+                "P5_ExploreDamageUpRatio"
+              ]
+            }
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 300401000,
+            "target": {
+              "name": "Add Target by Unique Identifier",
+              "identifier": "DollBoss"
+            },
+            "characterName": null
+          },
+          "passed": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "searchRandom": true,
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_00"
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_01"
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_02"
+                  }
+                ]
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1202391577\">Enemy_W3_FigureBoss_SaveModel</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1202391577\">Enemy_W3_FigureBoss_SaveModel</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        }
+      ]
+    },
+    "3004013_Monster_W3_FigureBoss_Ability02_Insert_Restart": {
+      "fileName": "3004013_Monster_W3_FigureBoss_Ability02_Insert_Restart",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
+          "valuePerStack": {
+            "MDF_BreakDelayRatio": {
+              "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
+              "displayLines": "P1_BreakDelayRatio",
+              "constants": [],
+              "variables": [
+                "P1_BreakDelayRatio"
+              ]
+            },
+            "MDF_ChosenOneSpeedUp": {
+              "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
+              "displayLines": "P2_ChosenOneSpeedUp",
+              "constants": [],
+              "variables": [
+                "P2_ChosenOneSpeedUp"
+              ]
+            },
+            "MDF_ExploreDamagePercentage": {
+              "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
+              "displayLines": "P3_ExploreDamagePercentage",
+              "constants": [],
+              "variables": [
+                "P3_ExploreDamagePercentage"
+              ]
+            },
+            "MDF_ExploreDelayRatio": {
+              "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
+              "displayLines": "P4_ExploreDelayRatio",
+              "constants": [],
+              "variables": [
+                "P4_ExploreDelayRatio"
+              ]
+            },
+            "MDF_ExploreDamageUpRatio": {
+              "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
+              "displayLines": "P5_ExploreDamageUpRatio",
+              "constants": [],
+              "variables": [
+                "P5_ExploreDamageUpRatio"
+              ]
+            }
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "3004013_Monster_W3_FigureBoss_Ability03_Insert_Transform": {
+      "fileName": "3004013_Monster_W3_FigureBoss_Ability03_Insert_Transform",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_00"
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_01"
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_02"
+                  }
+                ]
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "flagName": "Break",
+                "invertCondition": true
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
+              "valuePerStack": {
+                "MDF_BreakDelayRatio": {
+                  "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
+                  "displayLines": "P1_BreakDelayRatio",
+                  "constants": [],
+                  "variables": [
+                    "P1_BreakDelayRatio"
+                  ]
+                },
+                "MDF_ChosenOneSpeedUp": {
+                  "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
+                  "displayLines": "P2_ChosenOneSpeedUp",
+                  "constants": [],
+                  "variables": [
+                    "P2_ChosenOneSpeedUp"
+                  ]
+                },
+                "MDF_ExploreDamagePercentage": {
+                  "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
+                  "displayLines": "P3_ExploreDamagePercentage",
+                  "constants": [],
+                  "variables": [
+                    "P3_ExploreDamagePercentage"
+                  ]
+                },
+                "MDF_ExploreDelayRatio": {
+                  "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
+                  "displayLines": "P4_ExploreDelayRatio",
+                  "constants": [],
+                  "variables": [
+                    "P4_ExploreDelayRatio"
+                  ]
+                },
+                "MDF_ExploreDamageUpRatio": {
+                  "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
+                  "displayLines": "P5_ExploreDamageUpRatio",
+                  "constants": [],
+                  "variables": [
+                    "P5_ExploreDamageUpRatio"
+                  ]
+                }
+              }
+            }
+          ],
+          "noTargetFound": [
+            {
+              "name": "Inject Ability Use",
+              "condition": {
+                "name": "Insert Ability Condition",
+                "type": "AbilityOwnerInsertCount",
+                "typeValue": 1
+              },
+              "abilityName": "Monster_W3_FigureBoss_Ability04_Insert_Explode",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "priorityTag": "EnemyChangeState",
+              "canHitNonTargets": true,
+              "valuePerStack": {
+                "P1_BreakDelayRatio": {
+                  "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
+                  "displayLines": "P1_BreakDelayRatio",
+                  "constants": [],
+                  "variables": [
+                    "P1_BreakDelayRatio"
+                  ]
+                },
+                "P2_ChosenOneSpeedUp": {
+                  "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
+                  "displayLines": "P2_ChosenOneSpeedUp",
+                  "constants": [],
+                  "variables": [
+                    "P2_ChosenOneSpeedUp"
+                  ]
+                },
+                "P3_ExploreDamagePercentage": {
+                  "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
+                  "displayLines": "P3_ExploreDamagePercentage",
+                  "constants": [],
+                  "variables": [
+                    "P3_ExploreDamagePercentage"
+                  ]
+                },
+                "P4_ExploreDelayRatio": {
+                  "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
+                  "displayLines": "P4_ExploreDelayRatio",
+                  "constants": [],
+                  "variables": [
+                    "P4_ExploreDelayRatio"
+                  ]
+                },
+                "P5_ExploreDamageUpRatio": {
+                  "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
+                  "displayLines": "P5_ExploreDamageUpRatio",
+                  "constants": [],
+                  "variables": [
+                    "P5_ExploreDamageUpRatio"
+                  ]
+                }
+              },
+              "allowAbilityTriggers": false
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "3004013_Monster_W3_FigureBoss_Ability04_Insert_Explode": {
+      "fileName": "3004013_Monster_W3_FigureBoss_Ability04_Insert_Explode",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -3780,7 +1914,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
+          "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
         },
         {
           "name": "Find New Target",
@@ -3840,7 +1974,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target List}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-1855037437\">Enemy_W3_Figure_02_SuperArmorBreak</a>"
+              "modifier": "<a class=\"gModGreen\" id=\"745906485\">Enemy_W3_Figure_02_RLElite_SuperArmorBreak</a>"
             },
             {
               "name": "Looped Event",
@@ -3961,7 +2095,7 @@ const compositeAbilityObject = {
               }
             ]
           },
-          "modifier": "<a class=\"gModGreen\" id=\"1389138668\">Enemy_W3_DollElite_Standard_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-558855282\">Enemy_W3_FigureBoss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "valuePerStack": {
             "MDF_ExploreDamageUpRatio": {
               "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
@@ -3980,7 +2114,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1389138668\">Enemy_W3_DollElite_Standard_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-558855282\">Enemy_W3_FigureBoss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "stackData": [
             "MDF_ExploreDamageUpRatio"
           ],
@@ -4015,204 +2149,8 @@ const compositeAbilityObject = {
         }
       ]
     },
-    "3004013_Monster_W3_DollElite_Standard_Ability03_Insert_Transform": {
-      "fileName": "3004013_Monster_W3_DollElite_Standard_Ability03_Insert_Transform",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_00"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_01"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_02"
-                  }
-                ]
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "flagName": "Break",
-                "invertCondition": true
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
-              "valuePerStack": {
-                "MDF_BreakDelayRatio": {
-                  "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-                  "displayLines": "P1_BreakDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P1_BreakDelayRatio"
-                  ]
-                },
-                "MDF_ChosenOneSpeedUp": {
-                  "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-                  "displayLines": "P2_ChosenOneSpeedUp",
-                  "constants": [],
-                  "variables": [
-                    "P2_ChosenOneSpeedUp"
-                  ]
-                },
-                "MDF_ExploreDamagePercentage": {
-                  "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-                  "displayLines": "P3_ExploreDamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "P3_ExploreDamagePercentage"
-                  ]
-                },
-                "MDF_ExploreDelayRatio": {
-                  "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-                  "displayLines": "P4_ExploreDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P4_ExploreDelayRatio"
-                  ]
-                },
-                "MDF_ExploreDamageUpRatio": {
-                  "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-                  "displayLines": "P5_ExploreDamageUpRatio",
-                  "constants": [],
-                  "variables": [
-                    "P5_ExploreDamageUpRatio"
-                  ]
-                }
-              }
-            }
-          ],
-          "noTargetFound": [
-            {
-              "name": "Inject Ability Use",
-              "condition": {
-                "name": "Insert Ability Condition",
-                "type": "AbilityOwnerInsertCount",
-                "typeValue": 1
-              },
-              "abilityName": "Monster_W3_DollElite_Standard_Ability04_Insert_Explode",
-              "abilitySource": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "abilityTarget": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "priorityTag": "EnemyChangeState",
-              "canHitNonTargets": true,
-              "valuePerStack": {
-                "P1_BreakDelayRatio": {
-                  "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-                  "displayLines": "P1_BreakDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P1_BreakDelayRatio"
-                  ]
-                },
-                "P2_ChosenOneSpeedUp": {
-                  "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-                  "displayLines": "P2_ChosenOneSpeedUp",
-                  "constants": [],
-                  "variables": [
-                    "P2_ChosenOneSpeedUp"
-                  ]
-                },
-                "P3_ExploreDamagePercentage": {
-                  "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-                  "displayLines": "P3_ExploreDamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "P3_ExploreDamagePercentage"
-                  ]
-                },
-                "P4_ExploreDelayRatio": {
-                  "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-                  "displayLines": "P4_ExploreDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P4_ExploreDelayRatio"
-                  ]
-                },
-                "P5_ExploreDamageUpRatio": {
-                  "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-                  "displayLines": "P5_ExploreDamageUpRatio",
-                  "constants": [],
-                  "variables": [
-                    "P5_ExploreDamageUpRatio"
-                  ]
-                }
-              },
-              "allowAbilityTriggers": false
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3004013_Monster_W3_DollElite_Standard_Ability02_Insert_RestartPhase2": {
-      "fileName": "3004013_Monster_W3_DollElite_Standard_Ability02_Insert_RestartPhase2",
+    "3004013_Monster_W3_FigureBoss_Ability02_Insert_RestartPhase2": {
+      "fileName": "3004013_Monster_W3_FigureBoss_Ability02_Insert_RestartPhase2",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -4279,6 +2217,14 @@ const compositeAbilityObject = {
             ]
           },
           "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
+            },
             {
               "name": "Find New Target",
               "from": {
@@ -4377,7 +2323,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target List}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
               "valuePerStack": {
                 "MDF_BreakDelayRatio": {
                   "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
@@ -4526,7 +2472,7 @@ const compositeAbilityObject = {
                   }
                 ]
               },
-              "ability": "Monster_W3_Figure_02_Ability07_Part00",
+              "ability": "Monster_W3_Figure_02_RLElite_Ability07_Part00",
               "isTrigger": true
             },
             {
@@ -4535,1522 +2481,24 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"851149437\">Enemy_W3_DollElite_Commnon_TheChosenOneEffect</a>"
+              "modifier": "<a class=\"gModGreen\" id=\"-1611594582\">Monster_W3_FigureBoss_Standard_TheChosenOneEffect</a>"
             },
-            "Wait for Pending Ability Completions"
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3004013_Monster_W3_DollElite_Standard_Ability02_Insert_Restart": {
-      "fileName": "3004013_Monster_W3_DollElite_Standard_Ability02_Insert_Restart",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
-          "valuePerStack": {
-            "MDF_BreakDelayRatio": {
-              "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-              "displayLines": "P1_BreakDelayRatio",
-              "constants": [],
-              "variables": [
-                "P1_BreakDelayRatio"
-              ]
-            },
-            "MDF_ChosenOneSpeedUp": {
-              "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-              "displayLines": "P2_ChosenOneSpeedUp",
-              "constants": [],
-              "variables": [
-                "P2_ChosenOneSpeedUp"
-              ]
-            },
-            "MDF_ExploreDamagePercentage": {
-              "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-              "displayLines": "P3_ExploreDamagePercentage",
-              "constants": [],
-              "variables": [
-                "P3_ExploreDamagePercentage"
-              ]
-            },
-            "MDF_ExploreDelayRatio": {
-              "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-              "displayLines": "P4_ExploreDelayRatio",
-              "constants": [],
-              "variables": [
-                "P4_ExploreDelayRatio"
-              ]
-            },
-            "MDF_ExploreDamageUpRatio": {
-              "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-              "displayLines": "P5_ExploreDamageUpRatio",
-              "constants": [],
-              "variables": [
-                "P5_ExploreDamageUpRatio"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3004013_Monster_W3_DollElite_Standard_Ability01_Insert_EnterCombat": {
-      "fileName": "3004013_Monster_W3_DollElite_Standard_Ability01_Insert_EnterCombat",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_00"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_01"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_02"
-                  }
-                ]
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1336534629\">Enemy_W3_DollElite_Commnon_Basic</a>[<span class=\"descriptionNumberColor\">\"Puppets of the Order\"</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
-          "valuePerStack": {
-            "MDF_BreakDelayRatio": {
-              "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-              "displayLines": "P1_BreakDelayRatio",
-              "constants": [],
-              "variables": [
-                "P1_BreakDelayRatio"
-              ]
-            },
-            "MDF_ChosenOneSpeedUp": {
-              "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-              "displayLines": "P2_ChosenOneSpeedUp",
-              "constants": [],
-              "variables": [
-                "P2_ChosenOneSpeedUp"
-              ]
-            },
-            "MDF_ExploreDamagePercentage": {
-              "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-              "displayLines": "P3_ExploreDamagePercentage",
-              "constants": [],
-              "variables": [
-                "P3_ExploreDamagePercentage"
-              ]
-            },
-            "MDF_ExploreDelayRatio": {
-              "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-              "displayLines": "P4_ExploreDelayRatio",
-              "constants": [],
-              "variables": [
-                "P4_ExploreDelayRatio"
-              ]
-            },
-            "MDF_ExploreDamageUpRatio": {
-              "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-              "displayLines": "P5_ExploreDamageUpRatio",
-              "constants": [],
-              "variables": [
-                "P5_ExploreDamageUpRatio"
-              ]
-            }
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 300401000,
-            "target": {
-              "name": "Add Target by Unique Identifier",
-              "identifier": "DollBoss"
-            },
-            "characterName": null
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_00"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_01"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_02"
-                  }
-                ]
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1202391577\">Enemy_W3_FigureBoss_SaveModel</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1202391577\">Enemy_W3_FigureBoss_SaveModel</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ]
-        }
-      ]
-    },
-    "3004013_WMonster_W3_DollElite01_PassiveAbility02_Insert": {
-      "fileName": "3004013_WMonster_W3_DollElite01_PassiveAbility02_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3004013_WMonster_W3_DollElite01_PassiveAbility01_Insert": {
-      "fileName": "3004013_WMonster_W3_DollElite01_PassiveAbility01_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "BreakEndFlag"
-        },
-        {
-          "name": "Add Battle Event",
-          "teamName": "Enemy Team",
-          "eventID": 20012,
-          "variables": {
-            "BE_P1_BESpeed": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_BreakDelayRatioPerFigure": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Battle Event List}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Battle Event ID",
-            "ID": 20012,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            }
-          },
-          "ifTargetFound": [
-            {
-              "name": "Action Advance/Delay",
-              "advanceType": "Set",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "multiBase": 0
-            }
-          ]
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "W3_Figure_00"
-              },
-              {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "W3_Figure_01"
-              },
-              {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "W3_Figure_02"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Exit Broken-State",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            {
-              "name": "Reset Toughness",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
+            "Wait for Pending Ability Completions",
             {
               "name": "Remove Events/Bonuses",
               "to": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
-              "valuePerStack": {
-                "MDF_BreakDelayRatio": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
-                },
-                "MDF_ChosenOneSpeedUp": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
-                },
-                "MDF_ExploreDamagePercentage": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
-                },
-                "MDF_ExploreDelayRatio": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
-                },
-                "MDF_ExploreDamageUpRatio": {
-                  "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                  "displayLines": "{[Skill01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[4]]}"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2051649734\">Enemy_W3_DollElite_Commnon_DamageSplit</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"911256169\">Enemy_W3_DollElite_Commnon_DamageSplitPhase2</a>",
-              "casterAssign": "CasterSelf"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1902031976\">Monster_ChangePhase_ParamEntity</a>"
-            }
-          ]
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "InsertCheck",
-          "value": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Check Boolean Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "value": "W3_Figure_02"
-                }
-              }
-            ]
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 7
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Check Boolean Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "value": "W3_Figure_00"
-                }
-              }
-            ]
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Check Boolean Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "value": "W3_Figure_01"
-                }
-              }
-            ]
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 3
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Check Boolean Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "value": "W3_Figure_02"
-                }
-              }
-            ]
-          },
-          "multiBase": 1.333
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Check Boolean Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "value": "W3_Figure_00"
-                }
-              }
-            ]
-          },
-          "multiBase": 0.0009999999
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Check Boolean Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "value": "W3_Figure_01"
-                }
-              }
-            ]
-          },
-          "multiBase": 0.667
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-48704972\">WMonster_W3_DollElite01_PartController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1198317781\">Enemy_W3_DollElite_Commnon_Part2Break</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "W3_Figure_00"
-              },
-              {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "W3_Figure_01"
-              },
-              {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "W3_Figure_02"
-              }
-            ]
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-894175068\">W3_FigureBoss_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-843842211\">W3_FigureBoss_BattleScore2</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3004013_Monster_W3_FigureBoss_New_PassiveAbility_Initiate": {
-      "fileName": "3004013_Monster_W3_FigureBoss_New_PassiveAbility_Initiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-942301720\">Monster_W3_FigureBoss_New_SummonMonster</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-972729784\">Enemy_W3_DollElite_Boss_Initiate</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-48704972\">WMonster_W3_DollElite01_PartController</a>"
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "DollBoss",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_DollElite_Standard_Ability01_Insert_EnterCombat",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_DollElite_Standard_Ability02_Insert_Restart",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_DollElite_Standard_Ability03_Insert_Transform",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_DollElite_Standard_Ability04_Insert_Explode",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_DollElite_Standard_Ability02_Insert_RestartPhase2",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-366928355\">Enemy_W3_DollElite_Boss_ViewModeListener</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-894175068\">W3_FigureBoss_BattleScore1</a>"
-        },
-        {
-          "name": "Set Action-State",
-          "on": null,
-          "stateName": "DollBoss",
-          "state": false
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1183897502\">Monster_W3_FigureBoss_New_ImmuneDebuff</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1183897502\">Monster_W3_FigureBoss_New_ImmuneDebuff</a>",
-          "modifierFlags": [
-            "ImmuneDebuff",
-            "MuteSpeed"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                "Mark Entity as Non-Target(Unselectable)"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-942301720\">Monster_W3_FigureBoss_New_SummonMonster</a>"
-        }
-      ]
-    },
-    "3004013_WMonster_W3_DollElite01_PassiveAbility_Initiate": {
-      "fileName": "3004013_WMonster_W3_DollElite01_PassiveAbility_Initiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-972729784\">Enemy_W3_DollElite_Boss_Initiate</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-48704972\">WMonster_W3_DollElite01_PartController</a>"
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "DollBoss",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_DollElite_Standard_Ability01_Insert_EnterCombat",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_DollElite_Standard_Ability02_Insert_Restart",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_DollElite_Standard_Ability03_Insert_Transform",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_DollElite_Standard_Ability04_Insert_Explode",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_DollElite_Standard_Ability02_Insert_RestartPhase2",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-366928355\">Enemy_W3_DollElite_Boss_ViewModeListener</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-894175068\">W3_FigureBoss_BattleScore1</a>"
-        },
-        {
-          "name": "Set Action-State",
-          "on": null,
-          "stateName": "DollBoss",
-          "state": false
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3004013_Monster_W3_Figure_Solo_PassiveAbility_Initiate": {
-      "fileName": "3004013_Monster_W3_Figure_Solo_PassiveAbility_Initiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3004013_Monster_W3_FigureBoss_PassiveAbility_BGM": {
-      "fileName": "3004013_Monster_W3_FigureBoss_PassiveAbility_BGM",
-      "childAbilityList": [
-        "3004013_Monster_W3_FigureBoss_PassiveAbility_BGM"
-      ],
-      "skillTrigger": "Passive_BGM",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage Type",
-                "stageType": "Challenge"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "VerseSimulation"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "StrongChallengeActivity"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "RogueRelic"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "GridFightActivity"
-              }
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"419579896\">Enemy_W3_FigureBoss_ResetStageBGM</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__419579896\">Enemy_W3_FigureBoss_ResetStageBGM</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex",
-                  "value": "CurWaveIndex"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave: Start",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex2",
-                  "value": "CurWaveIndex"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_WaveIndex",
-                    "compareType": "NOT=",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
-                      "displayLines": "MDF_WaveIndex2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_WaveIndex2"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
+              "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
             }
           ]
         }
-      ]
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
     },
     "3004013_Modifiers": {
       "fileName": "3004013_Modifiers",
@@ -6451,9 +2899,6 @@ const compositeAbilityObject = {
             "MDF_ExploreDamagePercentage",
             "MDF_ExploreDelayRatio",
             "MDF_ExploreDamageUpRatio"
-          ],
-          "latentQueue": [
-            "BreakEndFlag"
           ],
           "description": "An extra action can be taken every turn and SPD increases slightly.",
           "type": "Buff",
@@ -8517,16 +4962,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
-          "stackData": [
-            "MDF_BreakDelayRatio",
-            "MDF_ChosenOneSpeedUp",
-            "MDF_ExploreDamagePercentage",
-            "MDF_ExploreDelayRatio",
-            "MDF_ExploreDamageUpRatio"
-          ],
-          "latentQueue": [
-            "BreakEndFlag"
-          ],
           "description": "An extra action can be taken every turn with a slight increase in SPD.",
           "type": "Buff",
           "effectName": "Impresario",
@@ -9138,11 +5573,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1198317781\">Enemy_W3_DollElite_Commnon_Part2Break</a>",
-          "latentQueue": [
-            "BreakEndFlag",
-            "InsertCheck",
-            "AIFlag"
-          ],
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -9164,9 +5594,6 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
-          ],
-          "latentQueue": [
-            "BreakEndFlag"
           ],
           "execute": [
             {
@@ -10155,22 +6582,6 @@ const compositeAbilityObject = {
           "eventType": "Assist",
           "abilityList": [
             "Monster_W3_FigureBoss_BattleEvent"
-          ],
-          "overridesArray": [
-            {
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
-              "value": 100
-            }
-          ],
-          "hardLevelEvent": true
-        },
-        {
-          "name": "Battle Event Construction",
-          "ID": 20012,
-          "team": "Enemy Team",
-          "eventType": "Assist",
-          "abilityList": [
-            "Monster_W3_DollElite_Standard_BattleEvent"
           ],
           "overridesArray": [
             {

@@ -15,7 +15,6 @@ const configAbility = {
         "KeepOnDeathrattle"
       ],
       "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
         "AIFlag"
       ],
       "execute": [
@@ -103,10 +102,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__674764816\">W3_Sunday_BattleScore2</a>",
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -155,7 +150,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__725097673\">W3_Sunday_BattleScore1</a>",
       "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
         "AIFlag"
       ],
       "execute": [
@@ -573,10 +567,6 @@ const configAbility = {
       "modifierFlags": [
         "BlockDamage"
       ],
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-        "AIFlag"
-      ],
       "description": "Immune to all DMG.",
       "type": "Other",
       "statusName": "Im Anfang war der Sinn",
@@ -787,10 +777,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1411318356\">Enemy_W3_Sunday_LeaveBattleSound</a>",
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Leave Battle"
@@ -801,7 +787,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__896746501\">Enemy_W3_Sunday_AudioReset</a>",
       "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
         "AIFlag"
       ],
       "execute": [
@@ -813,9 +798,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-538347270\">Enemy_W3_Sunday_SaveModel</a>",
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -855,9 +837,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__118438066\">Enemy_W3_Sunday_P2BEBanUltra</a>",
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn Start [Anyone]",
@@ -935,10 +914,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1598244363\">Enemy_W3_Sunday_03_P1LockHP</a>",
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1160,9 +1135,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2070195260\">Enemy_W3_Sunday_P2BELockHP</a>",
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1314,7 +1286,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__868485684\">Enemy_W3_Sunday_HitReact</a>",
       "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
         "AIFlag"
       ],
       "execute": [
@@ -1394,9 +1365,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-660746350\">Enemy_W3_Sunday_LightTeamLockHP</a>",
-      "latentQueue": [
-        "Skill06PerformFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1412,10 +1380,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2090970120\">Enemy_W3_Sunday_Player20LockHP</a>",
-      "latentQueue": [
-        "AIFlag",
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1493,7 +1457,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__83954247\">Enemy_W3_Sunday_Part1FloatingMessage</a>",
       "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
         "AIFlag"
       ],
       "execute": [
@@ -1519,9 +1482,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1038358096\">Enemy_W3_Sunday_CharacterChangePhase_P3_3</a>",
-      "latentQueue": [
-        "W3_Sunday_00_TimePause_ActionCounter"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1570,9 +1530,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1021580477\">Enemy_W3_Sunday_CharacterChangePhase_P3_2</a>",
-      "latentQueue": [
-        "W3_Sunday_00_TimePause_ActionCounter"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1656,10 +1613,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1049255631\">Enemy_W3_Sunday_CharacterChangePhase_P3_Controller</a>",
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2131,9 +2084,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__33853682\">Enemy_W3_Sunday_Ability09_ChargeEffect_03</a>",
-      "latentQueue": [
-        "W3_Sunday_00_TimePause_ActionCounter"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -2149,9 +2099,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__50631301\">Enemy_W3_Sunday_Ability09_ChargeEffect_02</a>",
-      "latentQueue": [
-        "W3_Sunday_00_TimePause_ActionCounter"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -2182,10 +2129,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-985522063\">Enemy_W3_Sunday_Ability09_ReactionModel</a>",
-      "latentQueue": [
-        "W3_Sunday_00_TimePause_ActionCounter",
-        "W3_Sunday_00_Skill09_Round"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2572,9 +2515,6 @@ const configAbility = {
         "Shield",
         "MuteBreak"
       ],
-      "stackData": [
-        "MDF_Skill07_P2_DamageRatio"
-      ],
       "description": "Increases the DMG dealt by <span class=\"descriptionNumberColor\">MDF_Skill07_P2_DamageRatio</span>, and decreases the DMG taken. Toughness cannot be reduced. This lasts until the Shield is depleted.",
       "type": "Buff",
       "effectName": "If We Live In the Light",
@@ -2801,11 +2741,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__2124259254\">MissionBattleEvent60012_Charge_permission</a>",
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-        "AIFlag"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__2124259254\">MissionBattleEvent60012_Charge_permission</a>"
     },
     {
       "name": "Modifier Construction",
@@ -2947,9 +2883,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__512429102\">Enemy_W3_Sunday_03_PassiveAbilityInitiate_ChangePhaseController</a>",
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -3049,9 +2982,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1973291237\">Enemy_W3_Sunday_PassiveAbilityInitiate_ChangePhaseController</a>",
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -3492,9 +3422,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1981356350\">Enemy_W3_Sunday_PassiveAbilityInitiate_EnterBattle</a>",
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -3723,11 +3650,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1121563146\">Enemy_W3_SundayPart_AssistAbilityAttach</a>",
               "valuePerStack": {
                 "MDF_Assist_DamagePercentage": {
-                  "operator": "Variables[0] (W3_Sunday_00_PassiveSkillInitiate_InsertFlag) || RETURN",
-                  "displayLines": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
+                  "operator": "Variables[0] ([object Object]) || RETURN",
+                  "displayLines": "[object Object]",
                   "constants": [],
                   "variables": [
-                    "W3_Sunday_00_PassiveSkillInitiate_InsertFlag"
+                    {}
                   ]
                 }
               }
@@ -3791,9 +3718,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1006822227\">Enemy_W3_Sunday_SummonMinions_Controller</a>",
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -3953,10 +3877,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-98549587\">Enemy_W3_Sunday_Part03_PowerUp</a>",
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -4068,9 +3988,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__941255357\">Enemy_W3_Sunday_RemoveOneMore</a>",
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Action End [Owner]",

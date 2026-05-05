@@ -3,1547 +3,20 @@ const compositeAbilityObject = {
   "fullCharacterName": 3004012,
   "trimCharacterName": 3004012,
   "abilityList": [
-    "3004012_Monster_W3_DollElite_Standard_BattleEvent",
-    "3004012_Monster_W3_DollElite_Standard_Ability04_Insert_Explode",
-    "3004012_Monster_W3_DollElite_Standard_Ability03_Insert_Transform",
-    "3004012_Monster_W3_DollElite_Standard_Ability02_Insert_RestartPhase2",
-    "3004012_Monster_W3_DollElite_Standard_Ability02_Insert_Restart",
-    "3004012_Monster_W3_DollElite_Standard_Ability01_Insert_EnterCombat",
     "3004012_WMonster_W3_DollElite01_PassiveAbility02_Insert",
     "3004012_WMonster_W3_DollElite01_PassiveAbility01_Insert",
     "3004012_Monster_W3_FigureBoss_New_PassiveAbility_Initiate",
-    "3004012_WMonster_W3_DollElite01_PassiveAbility_Initiate",
-    "3004012_Monster_W3_Figure_Solo_PassiveAbility_Initiate",
     "3004012_Monster_W3_FigureBoss_PassiveAbility_BGM",
+    "3004012_Monster_W3_DollElite_Standard_Ability01_Insert_EnterCombat",
+    "3004012_Monster_W3_DollElite_Standard_Ability02_Insert_Restart",
+    "3004012_Monster_W3_DollElite_Standard_Ability03_Insert_Transform",
+    "3004012_Monster_W3_DollElite_Standard_Ability04_Insert_Explode",
+    "3004012_Monster_W3_DollElite_Standard_Ability02_Insert_RestartPhase2",
     "3004012_Modifiers",
     "3004012_Functions",
     "3004012_BE_BattleEvents"
   ],
   "abilityObject": {
-    "3004012_Monster_W3_DollElite_Standard_BattleEvent": {
-      "fileName": "3004012_Monster_W3_DollElite_Standard_BattleEvent",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1671905329\">Enemy_W3_DollElite_Standard_BattleEvent</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1671905329\">Enemy_W3_DollElite_Standard_BattleEvent</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Turn Start [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Ability Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
-                        "compareType": "<=",
-                        "value2": 4
-                      },
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "invertCondition": true
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "searchRandom": true,
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Check Boolean Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "value": "W3_Figure_00"
-                          },
-                          {
-                            "name": "Check Boolean Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "value": "W3_Figure_01"
-                          },
-                          {
-                            "name": "Check Boolean Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "value": "W3_Figure_02"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "Break"
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "STAT_CTRL"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "multiBase": 1
-                    },
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "Monster_W3_DollElite_Standard_Ability02_Insert_RestartPhase2",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "priorityTag": "EnemyChangeState",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "noTargetFound": [
-                    {
-                      "name": "Dispel Debuffs",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "silent": true
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "OR",
-                            "conditionList": [
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_00"
-                              },
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_01"
-                              },
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_02"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "Break"
-                          }
-                        ]
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Exit Broken-State",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          }
-                        },
-                        {
-                          "name": "Reset Toughness",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "OR",
-                            "conditionList": [
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_00"
-                              },
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_01"
-                              },
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "W3_Figure_02"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "STAT_CTRL"
-                          }
-                        ]
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Remove Modifier Behavior Flag(s)",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "flagNames": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Check Boolean Value",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "value": "W3_Figure_02"
-                            }
-                          }
-                        ]
-                      },
-                      "multiBase": 1.333
-                    },
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Check Boolean Value",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "value": "W3_Figure_00"
-                            }
-                          }
-                        ]
-                      },
-                      "multiBase": 0.0009999999
-                    },
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Check Boolean Value",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "value": "W3_Figure_01"
-                            }
-                          }
-                        ]
-                      },
-                      "multiBase": 0.667
-                    },
-                    {
-                      "name": "Trigger Ability",
-                      "from": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Check Boolean Value",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "value": "W3_Figure_02"
-                            }
-                          }
-                        ]
-                      },
-                      "ability": "Monster_W3_Figure_02_Ability07_Part00",
-                      "isTrigger": true
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"851149437\">Enemy_W3_DollElite_Commnon_TheChosenOneEffect</a>"
-                    },
-                    "Wait for Pending Ability Completions"
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (BE_P1_BESpeed) || RETURN",
-                    "displayLines": "BE_P1_BESpeed",
-                    "constants": [],
-                    "variables": [
-                      "BE_P1_BESpeed"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Weakness Break [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Check Boolean Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "value": "W3_Figure_00"
-                          },
-                          {
-                            "name": "Check Boolean Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "value": "W3_Figure_01"
-                          },
-                          {
-                            "name": "Check Boolean Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "value": "W3_Figure_02"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1775147687\">RedStanceState</a>",
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "advanceType": "Set",
-                      "multiAdd": "P2_BreakDelayRatioPerFigure"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "3004012_Monster_W3_DollElite_Standard_Ability04_Insert_Explode": {
-      "fileName": "3004012_Monster_W3_DollElite_Standard_Ability04_Insert_Explode",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "W3_Figure_00"
-              },
-              {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "W3_Figure_01"
-              },
-              {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "W3_Figure_02"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target List}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target List}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target List}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1855037437\">Enemy_W3_Figure_02_SuperArmorBreak</a>"
-            },
-            {
-              "name": "Looped Event",
-              "maxLoops": 4,
-              "Event": [
-                {
-                  "name": "Consume",
-                  "consumeFrom": "MaxHP",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target List}}"
-                  },
-                  "consumePercent": {
-                    "operator": "Variables[0] (P3_ExploreDamagePercentage) || Constants[0] (4) || DIV || RETURN",
-                    "displayLines": "(P3_ExploreDamagePercentage / 4)",
-                    "constants": [
-                      4
-                    ],
-                    "variables": [
-                      "P3_ExploreDamagePercentage"
-                    ]
-                  },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "AllType"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "OR",
-                  "conditionList": [
-                    {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_00"
-                    },
-                    {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_01"
-                    },
-                    {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_02"
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          "advanceType": "Set",
-          "multiAdd": "P4_ExploreDelayRatio"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "OR",
-                  "conditionList": [
-                    {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_00"
-                    },
-                    {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_01"
-                    },
-                    {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_02"
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1389138668\">Enemy_W3_DollElite_Standard_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-          "valuePerStack": {
-            "MDF_ExploreDamageUpRatio": {
-              "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-              "displayLines": "P5_ExploreDamageUpRatio",
-              "constants": [],
-              "variables": [
-                "P5_ExploreDamageUpRatio"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1389138668\">Enemy_W3_DollElite_Standard_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-          "stackData": [
-            "MDF_ExploreDamageUpRatio"
-          ],
-          "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_ExploreDamageUpRatio</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability",
-          "duration": 1,
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_ExploreDamageUpRatio) || RETURN",
-                    "displayLines": "MDF_ExploreDamageUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ExploreDamageUpRatio"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "3004012_Monster_W3_DollElite_Standard_Ability03_Insert_Transform": {
-      "fileName": "3004012_Monster_W3_DollElite_Standard_Ability03_Insert_Transform",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_00"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_01"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_02"
-                  }
-                ]
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "flagName": "Break",
-                "invertCondition": true
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
-              "valuePerStack": {
-                "MDF_BreakDelayRatio": {
-                  "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-                  "displayLines": "P1_BreakDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P1_BreakDelayRatio"
-                  ]
-                },
-                "MDF_ChosenOneSpeedUp": {
-                  "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-                  "displayLines": "P2_ChosenOneSpeedUp",
-                  "constants": [],
-                  "variables": [
-                    "P2_ChosenOneSpeedUp"
-                  ]
-                },
-                "MDF_ExploreDamagePercentage": {
-                  "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-                  "displayLines": "P3_ExploreDamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "P3_ExploreDamagePercentage"
-                  ]
-                },
-                "MDF_ExploreDelayRatio": {
-                  "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-                  "displayLines": "P4_ExploreDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P4_ExploreDelayRatio"
-                  ]
-                },
-                "MDF_ExploreDamageUpRatio": {
-                  "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-                  "displayLines": "P5_ExploreDamageUpRatio",
-                  "constants": [],
-                  "variables": [
-                    "P5_ExploreDamageUpRatio"
-                  ]
-                }
-              }
-            }
-          ],
-          "noTargetFound": [
-            {
-              "name": "Inject Ability Use",
-              "condition": {
-                "name": "Insert Ability Condition",
-                "type": "AbilityOwnerInsertCount",
-                "typeValue": 1
-              },
-              "abilityName": "Monster_W3_DollElite_Standard_Ability04_Insert_Explode",
-              "abilitySource": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "abilityTarget": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "priorityTag": "EnemyChangeState",
-              "canHitNonTargets": true,
-              "valuePerStack": {
-                "P1_BreakDelayRatio": {
-                  "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-                  "displayLines": "P1_BreakDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P1_BreakDelayRatio"
-                  ]
-                },
-                "P2_ChosenOneSpeedUp": {
-                  "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-                  "displayLines": "P2_ChosenOneSpeedUp",
-                  "constants": [],
-                  "variables": [
-                    "P2_ChosenOneSpeedUp"
-                  ]
-                },
-                "P3_ExploreDamagePercentage": {
-                  "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-                  "displayLines": "P3_ExploreDamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "P3_ExploreDamagePercentage"
-                  ]
-                },
-                "P4_ExploreDelayRatio": {
-                  "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-                  "displayLines": "P4_ExploreDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P4_ExploreDelayRatio"
-                  ]
-                },
-                "P5_ExploreDamageUpRatio": {
-                  "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-                  "displayLines": "P5_ExploreDamageUpRatio",
-                  "constants": [],
-                  "variables": [
-                    "P5_ExploreDamageUpRatio"
-                  ]
-                }
-              },
-              "allowAbilityTriggers": false
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3004012_Monster_W3_DollElite_Standard_Ability02_Insert_RestartPhase2": {
-      "fileName": "3004012_Monster_W3_DollElite_Standard_Ability02_Insert_RestartPhase2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_00"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_01"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_02"
-                  }
-                ]
-              },
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "flagName": "Break"
-                  },
-                  {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "flagName": "STAT_CTRL"
-                  }
-                ]
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Parameter Target List}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "flagName": "Break"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Reset Toughness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target List}}"
-                  }
-                },
-                {
-                  "name": "Exit Broken-State",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target List}}"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "W3_Figure_00"
-                      },
-                      {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "W3_Figure_01"
-                      },
-                      {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "W3_Figure_02"
-                      }
-                    ]
-                  },
-                  {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "flagName": "STAT_CTRL"
-                  }
-                ]
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Remove Modifier Behavior Flag(s)",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "flagNames": []
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target List}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
-              "valuePerStack": {
-                "MDF_BreakDelayRatio": {
-                  "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-                  "displayLines": "P1_BreakDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P1_BreakDelayRatio"
-                  ]
-                },
-                "MDF_ChosenOneSpeedUp": {
-                  "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-                  "displayLines": "P2_ChosenOneSpeedUp",
-                  "constants": [],
-                  "variables": [
-                    "P2_ChosenOneSpeedUp"
-                  ]
-                },
-                "MDF_ExploreDamagePercentage": {
-                  "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-                  "displayLines": "P3_ExploreDamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "P3_ExploreDamagePercentage"
-                  ]
-                },
-                "MDF_ExploreDelayRatio": {
-                  "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-                  "displayLines": "P4_ExploreDelayRatio",
-                  "constants": [],
-                  "variables": [
-                    "P4_ExploreDelayRatio"
-                  ]
-                },
-                "MDF_ExploreDamageUpRatio": {
-                  "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-                  "displayLines": "P5_ExploreDamageUpRatio",
-                  "constants": [],
-                  "variables": [
-                    "P5_ExploreDamageUpRatio"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Action Advance/Delay",
-              "advanceType": "Set",
-              "target": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_02"
-                    }
-                  }
-                ]
-              },
-              "multiBase": 1.33
-            },
-            {
-              "name": "Action Advance/Delay",
-              "advanceType": "Set",
-              "target": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_00"
-                    }
-                  }
-                ]
-              },
-              "multiBase": 0.0009999999
-            },
-            {
-              "name": "Action Advance/Delay",
-              "advanceType": "Set",
-              "target": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_01"
-                    }
-                  }
-                ]
-              },
-              "multiBase": 0.667
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target List}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-            },
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "W3_Figure_02"
-                    }
-                  }
-                ]
-              },
-              "ability": "Monster_W3_Figure_02_Ability07_Part00",
-              "isTrigger": true
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"851149437\">Enemy_W3_DollElite_Commnon_TheChosenOneEffect</a>"
-            },
-            "Wait for Pending Ability Completions"
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3004012_Monster_W3_DollElite_Standard_Ability02_Insert_Restart": {
-      "fileName": "3004012_Monster_W3_DollElite_Standard_Ability02_Insert_Restart",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
-          "valuePerStack": {
-            "MDF_BreakDelayRatio": {
-              "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-              "displayLines": "P1_BreakDelayRatio",
-              "constants": [],
-              "variables": [
-                "P1_BreakDelayRatio"
-              ]
-            },
-            "MDF_ChosenOneSpeedUp": {
-              "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-              "displayLines": "P2_ChosenOneSpeedUp",
-              "constants": [],
-              "variables": [
-                "P2_ChosenOneSpeedUp"
-              ]
-            },
-            "MDF_ExploreDamagePercentage": {
-              "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-              "displayLines": "P3_ExploreDamagePercentage",
-              "constants": [],
-              "variables": [
-                "P3_ExploreDamagePercentage"
-              ]
-            },
-            "MDF_ExploreDelayRatio": {
-              "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-              "displayLines": "P4_ExploreDelayRatio",
-              "constants": [],
-              "variables": [
-                "P4_ExploreDelayRatio"
-              ]
-            },
-            "MDF_ExploreDamageUpRatio": {
-              "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-              "displayLines": "P5_ExploreDamageUpRatio",
-              "constants": [],
-              "variables": [
-                "P5_ExploreDamageUpRatio"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3004012_Monster_W3_DollElite_Standard_Ability01_Insert_EnterCombat": {
-      "fileName": "3004012_Monster_W3_DollElite_Standard_Ability01_Insert_EnterCombat",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_00"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_01"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_02"
-                  }
-                ]
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1336534629\">Enemy_W3_DollElite_Commnon_Basic</a>[<span class=\"descriptionNumberColor\">\"Puppets of the Order\"</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
-          "valuePerStack": {
-            "MDF_BreakDelayRatio": {
-              "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
-              "displayLines": "P1_BreakDelayRatio",
-              "constants": [],
-              "variables": [
-                "P1_BreakDelayRatio"
-              ]
-            },
-            "MDF_ChosenOneSpeedUp": {
-              "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
-              "displayLines": "P2_ChosenOneSpeedUp",
-              "constants": [],
-              "variables": [
-                "P2_ChosenOneSpeedUp"
-              ]
-            },
-            "MDF_ExploreDamagePercentage": {
-              "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
-              "displayLines": "P3_ExploreDamagePercentage",
-              "constants": [],
-              "variables": [
-                "P3_ExploreDamagePercentage"
-              ]
-            },
-            "MDF_ExploreDelayRatio": {
-              "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
-              "displayLines": "P4_ExploreDelayRatio",
-              "constants": [],
-              "variables": [
-                "P4_ExploreDelayRatio"
-              ]
-            },
-            "MDF_ExploreDamageUpRatio": {
-              "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
-              "displayLines": "P5_ExploreDamageUpRatio",
-              "constants": [],
-              "variables": [
-                "P5_ExploreDamageUpRatio"
-              ]
-            }
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 300401000,
-            "target": {
-              "name": "Add Target by Unique Identifier",
-              "identifier": "DollBoss"
-            },
-            "characterName": null
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_00"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_01"
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W3_Figure_02"
-                  }
-                ]
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1202391577\">Enemy_W3_FigureBoss_SaveModel</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1202391577\">Enemy_W3_FigureBoss_SaveModel</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ]
-        }
-      ]
-    },
     "3004012_WMonster_W3_DollElite01_PassiveAbility02_Insert": {
       "fileName": "3004012_WMonster_W3_DollElite01_PassiveAbility02_Insert",
       "abilityType": null,
@@ -2368,332 +841,6 @@ const compositeAbilityObject = {
         }
       ]
     },
-    "3004012_WMonster_W3_DollElite01_PassiveAbility_Initiate": {
-      "fileName": "3004012_WMonster_W3_DollElite01_PassiveAbility_Initiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-972729784\">Enemy_W3_DollElite_Boss_Initiate</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-48704972\">WMonster_W3_DollElite01_PartController</a>"
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "DollBoss",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_DollElite_Standard_Ability01_Insert_EnterCombat",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_DollElite_Standard_Ability02_Insert_Restart",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_DollElite_Standard_Ability03_Insert_Transform",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_DollElite_Standard_Ability04_Insert_Explode",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W3_DollElite_Standard_Ability02_Insert_RestartPhase2",
-          "parameters": {
-            "P1_BreakDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "P2_ChosenOneSpeedUp": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "P3_ExploreDamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "P4_ExploreDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "P5_ExploreDamageUpRatio": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-366928355\">Enemy_W3_DollElite_Boss_ViewModeListener</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-894175068\">W3_FigureBoss_BattleScore1</a>"
-        },
-        {
-          "name": "Set Action-State",
-          "on": null,
-          "stateName": "DollBoss",
-          "state": false
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3004012_Monster_W3_Figure_Solo_PassiveAbility_Initiate": {
-      "fileName": "3004012_Monster_W3_Figure_Solo_PassiveAbility_Initiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "3004012_Monster_W3_FigureBoss_PassiveAbility_BGM": {
       "fileName": "3004012_Monster_W3_FigureBoss_PassiveAbility_BGM",
       "childAbilityList": [
@@ -2801,6 +948,1039 @@ const compositeAbilityObject = {
           ]
         }
       ]
+    },
+    "3004012_Monster_W3_DollElite_Standard_Ability01_Insert_EnterCombat": {
+      "fileName": "3004012_Monster_W3_DollElite_Standard_Ability01_Insert_EnterCombat",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "searchRandom": true,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_00"
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_01"
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_02"
+                  }
+                ]
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1336534629\">Enemy_W3_DollElite_Commnon_Basic</a>[<span class=\"descriptionNumberColor\">\"Puppets of the Order\"</span>]"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
+          "valuePerStack": {
+            "MDF_BreakDelayRatio": {
+              "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
+              "displayLines": "P1_BreakDelayRatio",
+              "constants": [],
+              "variables": [
+                "P1_BreakDelayRatio"
+              ]
+            },
+            "MDF_ChosenOneSpeedUp": {
+              "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
+              "displayLines": "P2_ChosenOneSpeedUp",
+              "constants": [],
+              "variables": [
+                "P2_ChosenOneSpeedUp"
+              ]
+            },
+            "MDF_ExploreDamagePercentage": {
+              "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
+              "displayLines": "P3_ExploreDamagePercentage",
+              "constants": [],
+              "variables": [
+                "P3_ExploreDamagePercentage"
+              ]
+            },
+            "MDF_ExploreDelayRatio": {
+              "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
+              "displayLines": "P4_ExploreDelayRatio",
+              "constants": [],
+              "variables": [
+                "P4_ExploreDelayRatio"
+              ]
+            },
+            "MDF_ExploreDamageUpRatio": {
+              "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
+              "displayLines": "P5_ExploreDamageUpRatio",
+              "constants": [],
+              "variables": [
+                "P5_ExploreDamageUpRatio"
+              ]
+            }
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 300401000,
+            "target": {
+              "name": "Add Target by Unique Identifier",
+              "identifier": "DollBoss"
+            },
+            "characterName": null
+          },
+          "passed": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "searchRandom": true,
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_00"
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_01"
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_02"
+                  }
+                ]
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1202391577\">Enemy_W3_FigureBoss_SaveModel</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1202391577\">Enemy_W3_FigureBoss_SaveModel</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        }
+      ]
+    },
+    "3004012_Monster_W3_DollElite_Standard_Ability02_Insert_Restart": {
+      "fileName": "3004012_Monster_W3_DollElite_Standard_Ability02_Insert_Restart",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
+          "valuePerStack": {
+            "MDF_BreakDelayRatio": {
+              "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
+              "displayLines": "P1_BreakDelayRatio",
+              "constants": [],
+              "variables": [
+                "P1_BreakDelayRatio"
+              ]
+            },
+            "MDF_ChosenOneSpeedUp": {
+              "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
+              "displayLines": "P2_ChosenOneSpeedUp",
+              "constants": [],
+              "variables": [
+                "P2_ChosenOneSpeedUp"
+              ]
+            },
+            "MDF_ExploreDamagePercentage": {
+              "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
+              "displayLines": "P3_ExploreDamagePercentage",
+              "constants": [],
+              "variables": [
+                "P3_ExploreDamagePercentage"
+              ]
+            },
+            "MDF_ExploreDelayRatio": {
+              "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
+              "displayLines": "P4_ExploreDelayRatio",
+              "constants": [],
+              "variables": [
+                "P4_ExploreDelayRatio"
+              ]
+            },
+            "MDF_ExploreDamageUpRatio": {
+              "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
+              "displayLines": "P5_ExploreDamageUpRatio",
+              "constants": [],
+              "variables": [
+                "P5_ExploreDamageUpRatio"
+              ]
+            }
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "3004012_Monster_W3_DollElite_Standard_Ability03_Insert_Transform": {
+      "fileName": "3004012_Monster_W3_DollElite_Standard_Ability03_Insert_Transform",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_00"
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_01"
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_02"
+                  }
+                ]
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "flagName": "Break",
+                "invertCondition": true
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
+              "valuePerStack": {
+                "MDF_BreakDelayRatio": {
+                  "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
+                  "displayLines": "P1_BreakDelayRatio",
+                  "constants": [],
+                  "variables": [
+                    "P1_BreakDelayRatio"
+                  ]
+                },
+                "MDF_ChosenOneSpeedUp": {
+                  "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
+                  "displayLines": "P2_ChosenOneSpeedUp",
+                  "constants": [],
+                  "variables": [
+                    "P2_ChosenOneSpeedUp"
+                  ]
+                },
+                "MDF_ExploreDamagePercentage": {
+                  "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
+                  "displayLines": "P3_ExploreDamagePercentage",
+                  "constants": [],
+                  "variables": [
+                    "P3_ExploreDamagePercentage"
+                  ]
+                },
+                "MDF_ExploreDelayRatio": {
+                  "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
+                  "displayLines": "P4_ExploreDelayRatio",
+                  "constants": [],
+                  "variables": [
+                    "P4_ExploreDelayRatio"
+                  ]
+                },
+                "MDF_ExploreDamageUpRatio": {
+                  "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
+                  "displayLines": "P5_ExploreDamageUpRatio",
+                  "constants": [],
+                  "variables": [
+                    "P5_ExploreDamageUpRatio"
+                  ]
+                }
+              }
+            }
+          ],
+          "noTargetFound": [
+            {
+              "name": "Inject Ability Use",
+              "condition": {
+                "name": "Insert Ability Condition",
+                "type": "AbilityOwnerInsertCount",
+                "typeValue": 1
+              },
+              "abilityName": "Monster_W3_DollElite_Standard_Ability04_Insert_Explode",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "priorityTag": "EnemyChangeState",
+              "canHitNonTargets": true,
+              "valuePerStack": {
+                "P1_BreakDelayRatio": {
+                  "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
+                  "displayLines": "P1_BreakDelayRatio",
+                  "constants": [],
+                  "variables": [
+                    "P1_BreakDelayRatio"
+                  ]
+                },
+                "P2_ChosenOneSpeedUp": {
+                  "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
+                  "displayLines": "P2_ChosenOneSpeedUp",
+                  "constants": [],
+                  "variables": [
+                    "P2_ChosenOneSpeedUp"
+                  ]
+                },
+                "P3_ExploreDamagePercentage": {
+                  "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
+                  "displayLines": "P3_ExploreDamagePercentage",
+                  "constants": [],
+                  "variables": [
+                    "P3_ExploreDamagePercentage"
+                  ]
+                },
+                "P4_ExploreDelayRatio": {
+                  "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
+                  "displayLines": "P4_ExploreDelayRatio",
+                  "constants": [],
+                  "variables": [
+                    "P4_ExploreDelayRatio"
+                  ]
+                },
+                "P5_ExploreDamageUpRatio": {
+                  "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
+                  "displayLines": "P5_ExploreDamageUpRatio",
+                  "constants": [],
+                  "variables": [
+                    "P5_ExploreDamageUpRatio"
+                  ]
+                }
+              },
+              "allowAbilityTriggers": false
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "3004012_Monster_W3_DollElite_Standard_Ability04_Insert_Explode": {
+      "fileName": "3004012_Monster_W3_DollElite_Standard_Ability04_Insert_Explode",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "W3_Figure_00"
+              },
+              {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "W3_Figure_01"
+              },
+              {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "W3_Figure_02"
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1855037437\">Enemy_W3_Figure_02_SuperArmorBreak</a>"
+            },
+            {
+              "name": "Looped Event",
+              "maxLoops": 4,
+              "Event": [
+                {
+                  "name": "Consume",
+                  "consumeFrom": "MaxHP",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target List}}"
+                  },
+                  "consumePercent": {
+                    "operator": "Variables[0] (P3_ExploreDamagePercentage) || Constants[0] (4) || DIV || RETURN",
+                    "displayLines": "(P3_ExploreDamagePercentage / 4)",
+                    "constants": [
+                      4
+                    ],
+                    "variables": [
+                      "P3_ExploreDamagePercentage"
+                    ]
+                  },
+                  "DamageType": {
+                    "name": "Damage Type Source",
+                    "sourceType": "AllType"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Action Advance/Delay",
+          "target": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "OR",
+                  "conditionList": [
+                    {
+                      "name": "Check Boolean Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "value": "W3_Figure_00"
+                    },
+                    {
+                      "name": "Check Boolean Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "value": "W3_Figure_01"
+                    },
+                    {
+                      "name": "Check Boolean Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "value": "W3_Figure_02"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "advanceType": "Set",
+          "multiAdd": "P4_ExploreDelayRatio"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "OR",
+                  "conditionList": [
+                    {
+                      "name": "Check Boolean Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "value": "W3_Figure_00"
+                    },
+                    {
+                      "name": "Check Boolean Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "value": "W3_Figure_01"
+                    },
+                    {
+                      "name": "Check Boolean Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "value": "W3_Figure_02"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1389138668\">Enemy_W3_DollElite_Standard_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "valuePerStack": {
+            "MDF_ExploreDamageUpRatio": {
+              "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
+              "displayLines": "P5_ExploreDamageUpRatio",
+              "constants": [],
+              "variables": [
+                "P5_ExploreDamageUpRatio"
+              ]
+            }
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1389138668\">Enemy_W3_DollElite_Standard_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "stackData": [
+            "MDF_ExploreDamageUpRatio"
+          ],
+          "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_ExploreDamageUpRatio</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
+          "duration": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_ExploreDamageUpRatio) || RETURN",
+                    "displayLines": "MDF_ExploreDamageUpRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_ExploreDamageUpRatio"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "3004012_Monster_W3_DollElite_Standard_Ability02_Insert_RestartPhase2": {
+      "fileName": "3004012_Monster_W3_DollElite_Standard_Ability02_Insert_RestartPhase2",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_00"
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_01"
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W3_Figure_02"
+                  }
+                ]
+              },
+              {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "Break"
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "STAT_CTRL"
+                  }
+                ]
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
+              },
+              "searchRandom": true,
+              "conditions": {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "flagName": "Break"
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Reset Toughness",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target List}}"
+                  }
+                },
+                {
+                  "name": "Exit Broken-State",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target List}}"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "searchRandom": true,
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value": "W3_Figure_00"
+                      },
+                      {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value": "W3_Figure_01"
+                      },
+                      {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value": "W3_Figure_02"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "STAT_CTRL"
+                  }
+                ]
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Remove Modifier Behavior Flag(s)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "flagNames": []
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
+              "valuePerStack": {
+                "MDF_BreakDelayRatio": {
+                  "operator": "Variables[0] (P1_BreakDelayRatio) || RETURN",
+                  "displayLines": "P1_BreakDelayRatio",
+                  "constants": [],
+                  "variables": [
+                    "P1_BreakDelayRatio"
+                  ]
+                },
+                "MDF_ChosenOneSpeedUp": {
+                  "operator": "Variables[0] (P2_ChosenOneSpeedUp) || RETURN",
+                  "displayLines": "P2_ChosenOneSpeedUp",
+                  "constants": [],
+                  "variables": [
+                    "P2_ChosenOneSpeedUp"
+                  ]
+                },
+                "MDF_ExploreDamagePercentage": {
+                  "operator": "Variables[0] (P3_ExploreDamagePercentage) || RETURN",
+                  "displayLines": "P3_ExploreDamagePercentage",
+                  "constants": [],
+                  "variables": [
+                    "P3_ExploreDamagePercentage"
+                  ]
+                },
+                "MDF_ExploreDelayRatio": {
+                  "operator": "Variables[0] (P4_ExploreDelayRatio) || RETURN",
+                  "displayLines": "P4_ExploreDelayRatio",
+                  "constants": [],
+                  "variables": [
+                    "P4_ExploreDelayRatio"
+                  ]
+                },
+                "MDF_ExploreDamageUpRatio": {
+                  "operator": "Variables[0] (P5_ExploreDamageUpRatio) || RETURN",
+                  "displayLines": "P5_ExploreDamageUpRatio",
+                  "constants": [],
+                  "variables": [
+                    "P5_ExploreDamageUpRatio"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Action Advance/Delay",
+              "advanceType": "Set",
+              "target": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Check Boolean Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "value": "W3_Figure_02"
+                    }
+                  }
+                ]
+              },
+              "multiBase": 1.33
+            },
+            {
+              "name": "Action Advance/Delay",
+              "advanceType": "Set",
+              "target": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Check Boolean Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "value": "W3_Figure_00"
+                    }
+                  }
+                ]
+              },
+              "multiBase": 0.0009999999
+            },
+            {
+              "name": "Action Advance/Delay",
+              "advanceType": "Set",
+              "target": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Check Boolean Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "value": "W3_Figure_01"
+                    }
+                  }
+                ]
+              },
+              "multiBase": 0.667
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+            },
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Check Boolean Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "value": "W3_Figure_02"
+                    }
+                  }
+                ]
+              },
+              "ability": "Monster_W3_Figure_02_Ability07_Part00",
+              "isTrigger": true
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"851149437\">Enemy_W3_DollElite_Commnon_TheChosenOneEffect</a>"
+            },
+            "Wait for Pending Ability Completions"
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
     },
     "3004012_Modifiers": {
       "fileName": "3004012_Modifiers",
@@ -3204,9 +2384,6 @@ const compositeAbilityObject = {
             "MDF_ExploreDamagePercentage",
             "MDF_ExploreDelayRatio",
             "MDF_ExploreDamageUpRatio"
-          ],
-          "latentQueue": [
-            "BreakEndFlag"
           ],
           "description": "An extra action can be taken every turn with a slight increase in SPD.",
           "type": "Buff",

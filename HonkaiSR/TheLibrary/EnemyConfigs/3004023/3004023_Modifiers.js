@@ -444,11 +444,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__665202517\">MModifier_Monster_W3_TV_02_Side2</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]",
       "latentQueue": [
-        "BreakEndFlag",
-        "InsertCheck",
-        "LockCount",
-        "AI_HeiShengBei_SpecialAI",
-        "AI_HeiShengBei_Need"
+        "AIFlag"
       ],
       "description": "Banacademic Office members can use \"Classroom Channel\" abilities. After they are attacked, they switch to \"Off-Class Channel\" mode.",
       "type": "Other",

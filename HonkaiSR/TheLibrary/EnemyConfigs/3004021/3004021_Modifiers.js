@@ -441,11 +441,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__665202517\">MModifier_Monster_W3_TV_02_Side2</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]",
       "latentQueue": [
-        "BreakEndFlag",
-        "InsertCheck",
-        "LockCount",
-        "AI_HeiShengBei_SpecialAI",
-        "AI_HeiShengBei_Need"
+        "AIFlag"
       ],
       "description": "Banacademic Office members can use \"Classroom Channel\" abilities. After they are attacked, they switch to \"Off-Class Channel\" mode.",
       "type": "Other",
@@ -1648,9 +1644,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-396183840\">Enemy_W3_Dinosaur_02_IF_StanceBreakRatioUp</a>[<span class=\"descriptionNumberColor\">Weakness Break Efficiency Boost</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "Weakness Break Efficiency Boost",
@@ -2135,11 +2128,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1954613914\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmorController</a>",
-      "stackData": [
-        "MDF_MinionsSuperArmor_AllDamageReduce",
-        "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
-        "MDF_SetActionDelayValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -4333,11 +4321,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (InsertCheck) || RETURN",
-                "displayLines": "InsertCheck",
+                "operator": "Variables[0] (POSTTRIM_UNKNOWN_1) || RETURN",
+                "displayLines": "POSTTRIM_UNKNOWN_1",
                 "constants": [],
                 "variables": [
-                  "InsertCheck"
+                  "POSTTRIM_UNKNOWN_1"
                 ]
               },
               "assignState": "True",
@@ -4364,11 +4352,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (InsertCheck) || RETURN",
-                "displayLines": "InsertCheck",
+                "operator": "Variables[0] (POSTTRIM_UNKNOWN_1) || RETURN",
+                "displayLines": "POSTTRIM_UNKNOWN_1",
                 "constants": [],
                 "variables": [
-                  "InsertCheck"
+                  "POSTTRIM_UNKNOWN_1"
                 ]
               },
               "assignState": "False",
@@ -4453,11 +4441,11 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (InsertCheck) || RETURN",
-                    "displayLines": "InsertCheck",
+                    "operator": "Variables[0] (POSTTRIM_UNKNOWN_1) || RETURN",
+                    "displayLines": "POSTTRIM_UNKNOWN_1",
                     "constants": [],
                     "variables": [
-                      "InsertCheck"
+                      "POSTTRIM_UNKNOWN_1"
                     ]
                   },
                   "assignState": "True",
@@ -4532,11 +4520,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (InsertCheck) || RETURN",
-                "displayLines": "InsertCheck",
+                "operator": "Variables[0] (POSTTRIM_UNKNOWN_1) || RETURN",
+                "displayLines": "POSTTRIM_UNKNOWN_1",
                 "constants": [],
                 "variables": [
-                  "InsertCheck"
+                  "POSTTRIM_UNKNOWN_1"
                 ]
               },
               "assignState": "True",
@@ -4551,11 +4539,11 @@ const configAbility = {
               "scope": "ContextModifier",
               "variableName": "MDF_Negative_Count_Diff",
               "value": {
-                "operator": "Variables[0] (InsertCheck) || Variables[1] (BreakEndFlag) || SUB || RETURN",
-                "displayLines": "(InsertCheck - BreakEndFlag)",
+                "operator": "Variables[0] (POSTTRIM_UNKNOWN_1) || Variables[1] (BreakEndFlag) || SUB || RETURN",
+                "displayLines": "(POSTTRIM_UNKNOWN_1 - BreakEndFlag)",
                 "constants": [],
                 "variables": [
-                  "InsertCheck",
+                  "POSTTRIM_UNKNOWN_1",
                   "BreakEndFlag"
                 ]
               }

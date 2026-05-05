@@ -118,11 +118,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "stackData": [
-        "MDF_SpeedUpRatio",
-        "MDF_DamageUpRatio",
-        "MDF_LifeTime"
-      ],
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",

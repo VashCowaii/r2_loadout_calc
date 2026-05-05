@@ -15,9 +15,6 @@ const configAbility = {
       "modifierFlags": [
         "Shield"
       ],
-      "stackData": [
-        "MDF_ShowValue"
-      ],
       "description": "Gains a Shield that can offset DMG.",
       "type": "Buff",
       "effectName": "Shield",

@@ -398,9 +398,6 @@ const configAbility = {
         "MDF_ExploreDelayRatio",
         "MDF_ExploreDamageUpRatio"
       ],
-      "latentQueue": [
-        "BreakEndFlag"
-      ],
       "description": "An extra action can be taken every turn and SPD increases slightly.",
       "type": "Buff",
       "effectName": "Impresario",
@@ -2463,16 +2460,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]",
-      "stackData": [
-        "MDF_BreakDelayRatio",
-        "MDF_ChosenOneSpeedUp",
-        "MDF_ExploreDamagePercentage",
-        "MDF_ExploreDelayRatio",
-        "MDF_ExploreDamageUpRatio"
-      ],
-      "latentQueue": [
-        "BreakEndFlag"
-      ],
       "description": "An extra action can be taken every turn with a slight increase in SPD.",
       "type": "Buff",
       "effectName": "Impresario",
@@ -3084,11 +3071,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1198317781\">Enemy_W3_DollElite_Commnon_Part2Break</a>",
-      "latentQueue": [
-        "BreakEndFlag",
-        "InsertCheck",
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -3110,9 +3092,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "latentQueue": [
-        "BreakEndFlag"
       ],
       "execute": [
         {

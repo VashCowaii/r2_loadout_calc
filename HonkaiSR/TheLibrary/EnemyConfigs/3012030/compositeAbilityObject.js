@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 3012030,
   "trimCharacterName": 3012030,
   "abilityList": [
+    "3012030_Monster_W3_DeathPart_PassiveAbilityInitiate",
     "3012030_Monster_W3_DeathPart_Ability03_Part03",
     "3012030_Monster_W3_DeathPart_Ability03_Part02",
     "3012030_Monster_W3_DeathPart_Ability03_Insert",
@@ -10,447 +11,9 @@ const compositeAbilityObject = {
     "3012030_Monster_W3_DeathPart_Ability02_Part01",
     "3012030_Monster_W3_DeathPart_SKill01_Part02",
     "3012030_Monster_W3_DeathPart_SKill01_Insert",
-    "3012030_Monster_W3_DeathPart_PassiveAbilityInitiate_Main2",
-    "3012030_Monster_W3_DeathPart_PassiveAbilityInitiate",
     "3012030_Modifiers"
   ],
   "abilityObject": {
-    "3012030_Monster_W3_DeathPart_Ability03_Part03": {
-      "fileName": "3012030_Monster_W3_DeathPart_Ability03_Part03",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Unselectable Targets}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-804634083\">Death_Control_Modifier</a>"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"488990783\">W3_DeathPart_Sgin_Modifier</a>",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1176710437\">Monster_W3_Death_IsSummoner</a>",
-                "invertCondition": true
-              },
-              {
-                "name": "Is Part Of Team",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "team": "Player Team"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"488990783\">W3_DeathPart_Sgin_Modifier</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3012030_Monster_W3_DeathPart_Ability03_Part02": {
-      "fileName": "3012030_Monster_W3_DeathPart_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Unselectable Targets}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-804634083\">Death_Control_Modifier</a>"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"488990783\">W3_DeathPart_Sgin_Modifier</a>",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1176710437\">Monster_W3_Death_IsSummoner</a>",
-                "invertCondition": true
-              },
-              {
-                "name": "Is Part Of Team",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "team": "Player Team"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"488990783\">W3_DeathPart_Sgin_Modifier</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3012030_Monster_W3_DeathPart_Ability03_Insert": {
-      "fileName": "3012030_Monster_W3_DeathPart_Ability03_Insert",
-      "childAbilityList": [
-        "3012030_Monster_W3_DeathPart_Ability03_Insert",
-        "3012030_Monster_W3_DeathPart_Ability03_Part02",
-        "3012030_Monster_W3_DeathPart_Ability03_Part03",
-        "3012030_Monster_W3_DeathPart_Ability03_Camera"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Level Entity}}"
-                },
-                "value1": "DeathPart_Appear_Flag",
-                "compareType": "=",
-                "value2": 1,
-                "contextScope": "TargetEntity"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "ability": "Monster_W3_DeathPart_Ability03_Part03",
-              "isTrigger": true
-            }
-          ],
-          "failed": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "DeathPart_Appear_Flag",
-              "value": 1
-            },
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "ability": "Monster_W3_DeathPart_Ability03_Part02",
-              "isTrigger": true
-            }
-          ]
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3012030_Monster_W3_DeathPart_Ability02_Part02": {
-      "fileName": "3012030_Monster_W3_DeathPart_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3012030_Monster_W3_DeathPart_Ability02_Part01": {
-      "fileName": "3012030_Monster_W3_DeathPart_Ability02_Part01",
-      "childAbilityList": [
-        "3012030_Monster_W3_DeathPart_Ability02_Part01",
-        "3012030_Monster_W3_DeathPart_Ability02_Part02",
-        "3012030_Monster_W3_DeathPart_Ability02_Camera"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_DeathPart_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3012030_Monster_W3_DeathPart_SKill01_Part02": {
-      "fileName": "3012030_Monster_W3_DeathPart_SKill01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
-        },
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{MZM: Unselectable Part}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-804634083\">Death_Control_Modifier</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3012030_Monster_W3_DeathPart_SKill01_Insert": {
-      "fileName": "3012030_Monster_W3_DeathPart_SKill01_Insert",
-      "childAbilityList": [
-        "3012030_Monster_W3_DeathPart_SKill01_Insert",
-        "3012030_Monster_W3_DeathPart_SKill01_Part02",
-        "3012030_Monster_W3_DeathPart_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Slumber Awakening"
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_DeathPart_SKill01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3012030_Monster_W3_DeathPart_PassiveAbilityInitiate_Main2": {
-      "fileName": "3012030_Monster_W3_DeathPart_PassiveAbilityInitiate_Main2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Divide HP Bar into Segments",
-          "segCount": {
-            "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-            "displayLines": "{[SkillP01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[0]]}"
-            ]
-          }
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "phase": "PhaseCharge"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Insert_Flag"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1476787547\">Monster_W3_DeathPart_ListenDie</a>",
-          "valuePerStack": {
-            "MDF_ShowValue": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Unselectable Targets}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"488990783\">W3_DeathPart_Sgin_Modifier</a>",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1176710437\">Monster_W3_Death_IsSummoner</a>",
-                "invertCondition": true
-              },
-              {
-                "name": "Is Part Of Team",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "team": "Player Team"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"488990783\">W3_DeathPart_Sgin_Modifier</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "3012030_Monster_W3_DeathPart_PassiveAbilityInitiate": {
       "fileName": "3012030_Monster_W3_DeathPart_PassiveAbilityInitiate",
       "skillTrigger": "SkillP01",
@@ -812,6 +375,334 @@ const compositeAbilityObject = {
         }
       ]
     },
+    "3012030_Monster_W3_DeathPart_Ability03_Part03": {
+      "fileName": "3012030_Monster_W3_DeathPart_Ability03_Part03",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{All Unselectable Targets}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-804634083\">Death_Control_Modifier</a>"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"488990783\">W3_DeathPart_Sgin_Modifier</a>",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1176710437\">Monster_W3_Death_IsSummoner</a>",
+                "invertCondition": true
+              },
+              {
+                "name": "Is Part Of Team",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "team": "Player Team"
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"488990783\">W3_DeathPart_Sgin_Modifier</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3012030_Monster_W3_DeathPart_Ability03_Part02": {
+      "fileName": "3012030_Monster_W3_DeathPart_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{All Unselectable Targets}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-804634083\">Death_Control_Modifier</a>"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"488990783\">W3_DeathPart_Sgin_Modifier</a>",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1176710437\">Monster_W3_Death_IsSummoner</a>",
+                "invertCondition": true
+              },
+              {
+                "name": "Is Part Of Team",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "team": "Player Team"
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"488990783\">W3_DeathPart_Sgin_Modifier</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3012030_Monster_W3_DeathPart_Ability03_Insert": {
+      "fileName": "3012030_Monster_W3_DeathPart_Ability03_Insert",
+      "childAbilityList": [
+        "3012030_Monster_W3_DeathPart_Ability03_Insert",
+        "3012030_Monster_W3_DeathPart_Ability03_Part02",
+        "3012030_Monster_W3_DeathPart_Ability03_Part03",
+        "3012030_Monster_W3_DeathPart_Ability03_Camera"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Level Entity}}"
+                },
+                "value1": "DeathPart_Appear_Flag",
+                "compareType": "=",
+                "value2": 1,
+                "contextScope": "TargetEntity"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "ability": "Monster_W3_DeathPart_Ability03_Part03",
+              "isTrigger": true
+            }
+          ],
+          "failed": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "DeathPart_Appear_Flag",
+              "value": 1
+            },
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "ability": "Monster_W3_DeathPart_Ability03_Part02",
+              "isTrigger": true
+            }
+          ]
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3012030_Monster_W3_DeathPart_Ability02_Part02": {
+      "fileName": "3012030_Monster_W3_DeathPart_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3012030_Monster_W3_DeathPart_Ability02_Part01": {
+      "fileName": "3012030_Monster_W3_DeathPart_Ability02_Part01",
+      "childAbilityList": [
+        "3012030_Monster_W3_DeathPart_Ability02_Part01",
+        "3012030_Monster_W3_DeathPart_Ability02_Part02",
+        "3012030_Monster_W3_DeathPart_Ability02_Camera"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_DeathPart_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3012030_Monster_W3_DeathPart_SKill01_Part02": {
+      "fileName": "3012030_Monster_W3_DeathPart_SKill01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
+        },
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{MZM: Unselectable Part}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-804634083\">Death_Control_Modifier</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3012030_Monster_W3_DeathPart_SKill01_Insert": {
+      "fileName": "3012030_Monster_W3_DeathPart_SKill01_Insert",
+      "childAbilityList": [
+        "3012030_Monster_W3_DeathPart_SKill01_Insert",
+        "3012030_Monster_W3_DeathPart_SKill01_Part02",
+        "3012030_Monster_W3_DeathPart_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Slumber Awakening"
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_DeathPart_SKill01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "3012030_Modifiers": {
       "fileName": "3012030_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1157,9 +1048,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__488990783\">W3_DeathPart_Sgin_Modifier</a>",
           "stackType": "Multiple",
-          "latentQueue": [
-            "Insert_Flag"
-          ],
           "execute": [
             {
               "eventTrigger": "Update Target Selected(UI) [Anyone]",

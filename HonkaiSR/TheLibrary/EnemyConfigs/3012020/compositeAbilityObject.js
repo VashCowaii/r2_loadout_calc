@@ -3,12 +3,39 @@ const compositeAbilityObject = {
   "fullCharacterName": 3012020,
   "trimCharacterName": 3012020,
   "abilityList": [
+    "3012020_Monster_W3_Clock_01_AbilityP01",
     "3012020_Monster_W3_Clock_01_Ability03_Part02",
     "3012020_Monster_W3_Clock_01_Ability03_Part01",
-    "3012020_Monster_W3_Clock_01_AbilityP01",
     "3012020_Modifiers"
   ],
   "abilityObject": {
+    "3012020_Monster_W3_Clock_01_AbilityP01": {
+      "fileName": "3012020_Monster_W3_Clock_01_AbilityP01",
+      "childAbilityList": [
+        "3012020_Monster_W3_Clock_01_AbilityP01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-95775214\">Enemy_W3_Clock_01_AbilityP01_SuperArmorController</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "3012020_Monster_W3_Clock_01_Ability03_Part02": {
       "fileName": "3012020_Monster_W3_Clock_01_Ability03_Part02",
       "abilityType": null,
@@ -72,33 +99,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "3012020_Monster_W3_Clock_01_AbilityP01": {
-      "fileName": "3012020_Monster_W3_Clock_01_AbilityP01",
-      "childAbilityList": [
-        "3012020_Monster_W3_Clock_01_AbilityP01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-95775214\">Enemy_W3_Clock_01_AbilityP01_SuperArmorController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },

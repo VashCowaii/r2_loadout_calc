@@ -14,9 +14,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
-      "latentQueue": [
-        "Bullet_Flag"
-      ],
       "description": "Toughness cannot be reduced before the Nightfall state ends.",
       "type": "Other",
       "statusName": "Weakness Protected",
@@ -490,9 +487,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__721704074\">Monster_W3_Death_Ability06_Charge_CharacterChangePhase</a>",
-      "latentQueue": [
-        "Bullet_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

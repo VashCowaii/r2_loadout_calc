@@ -4,12 +4,10 @@ const compositeAbilityObject = {
   "trimCharacterName": 3022011,
   "abilityList": [
     "3022011_Monster_W3_SundayPart_IF_PassiveAbility_Insert",
-    "3022011_Monster_W3_SundayPart_IF_PassiveAbility",
-    "3022011_Monster_W3_SundayPart_Ability01_Assist_Part02_02",
-    "3022011_Monster_W3_SundayPart_Ability01_Assist_Part02_01",
-    "3022011_Monster_W3_SundayPart_AbilityP01",
     "3022011_Monster_W3_SundayPart_Ability06_Part01",
     "3022011_Monster_W3_SundayPart_Ability04_Part01",
+    "3022011_Monster_W3_SundayPart_IF_PassiveAbility",
+    "3022011_Monster_W3_SundayPart_AbilityP01",
     "3022011_Monster_W3_SundayPart_Ability01_Part02",
     "3022011_Monster_W3_SundayPart_Ability01_Part01",
     "3022011_Modifiers"
@@ -228,6 +226,136 @@ const compositeAbilityObject = {
               ]
             }
           ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3022011_Monster_W3_SundayPart_Ability06_Part01": {
+      "fileName": "3022011_Monster_W3_SundayPart_Ability06_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Part Of Team Location",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "team": "Enemy Team"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "team": "Enemy Team",
+                "location": "Left"
+              },
+              {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "team": "Enemy Team",
+                "location": "Medium"
+              },
+              {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "team": "Enemy Team",
+                "location": "Right",
+                "invertCondition": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "team": "Enemy Team",
+                "location": "Left",
+                "invertCondition": true
+              },
+              {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "team": "Enemy Team",
+                "location": "Medium"
+              },
+              {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "team": "Enemy Team",
+                "location": "Right"
+              }
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Part Of Team Location",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "team": "Enemy Team",
+            "location": "Max"
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3022011_Monster_W3_SundayPart_Ability04_Part01": {
+      "fileName": "3022011_Monster_W3_SundayPart_Ability04_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"259206088\">Enemy_W3_Sunday_Ability042_PartSpecialAnimation</a>"
+          }
         }
       ],
       "targetObjectData": {
@@ -571,76 +699,6 @@ const compositeAbilityObject = {
         }
       ]
     },
-    "3022011_Monster_W3_SundayPart_Ability01_Assist_Part02_02": {
-      "fileName": "3022011_Monster_W3_SundayPart_Ability01_Assist_Part02_02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "HitSplit": 0.5,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3022011_Monster_W3_SundayPart_Ability01_Assist_Part02_01": {
-      "fileName": "3022011_Monster_W3_SundayPart_Ability01_Assist_Part02_01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "HitSplit": 0.5,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
     "3022011_Monster_W3_SundayPart_AbilityP01": {
       "fileName": "3022011_Monster_W3_SundayPart_AbilityP01",
       "childAbilityList": [
@@ -680,136 +738,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       },
       "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3022011_Monster_W3_SundayPart_Ability06_Part01": {
-      "fileName": "3022011_Monster_W3_SundayPart_Ability06_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Is Part Of Team Location",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "team": "Enemy Team"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "team": "Enemy Team",
-                "location": "Left"
-              },
-              {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "team": "Enemy Team",
-                "location": "Medium"
-              },
-              {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "team": "Enemy Team",
-                "location": "Right",
-                "invertCondition": true
-              }
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "team": "Enemy Team",
-                "location": "Left",
-                "invertCondition": true
-              },
-              {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "team": "Enemy Team",
-                "location": "Medium"
-              },
-              {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "team": "Enemy Team",
-                "location": "Right"
-              }
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Is Part Of Team Location",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "team": "Enemy Team",
-            "location": "Max"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3022011_Monster_W3_SundayPart_Ability04_Part01": {
-      "fileName": "3022011_Monster_W3_SundayPart_Ability04_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"259206088\">Enemy_W3_Sunday_Ability042_PartSpecialAnimation</a>"
-          }
-        }
-      ],
-      "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
