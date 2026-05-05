@@ -3,10 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 8003020,
   "trimCharacterName": 8003020,
   "abilityList": [
-    "8003020_Monster_XP_Elite01_Ability09_Part02",
-    "8003020_Monster_XP_Elite01_Ability09_Part01",
-    "8003020_Monster_XP_Elite01_Ability08_Part02",
-    "8003020_Monster_XP_Elite01_Ability08_Part01",
+    "8003020_Monster_XP_Elite01_PassiveAbility01",
     "8003020_Monster_XP_Elite01_Ability07_Part02",
     "8003020_Monster_XP_Elite01_Ability07_Part01",
     "8003020_Monster_XP_Elite01_Ability05_Part02",
@@ -15,114 +12,13 @@ const compositeAbilityObject = {
     "8003020_Monster_XP_Elite01_Ability03_Part01",
     "8003020_Monster_XP_Elite01_Ability01_Part02",
     "8003020_Monster_XP_Elite01_Ability01_Part01",
-    "8003020_Monster_XP_Elite01_PassiveAbility01",
     "8003020_Modifiers"
   ],
   "abilityObject": {
-    "8003020_Monster_XP_Elite01_Ability09_Part02": {
-      "fileName": "8003020_Monster_XP_Elite01_Ability09_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Shot Fired",
-          "execute": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-829438264\">Monster_XP_Elite01_Ability08_FireBall</a>"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Fire",
-                "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_38) || Variables[1] (UnusedUnderThisBase_158) || Variables[2] (UnusedUnderThisBase_159) || MUL || ADD || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_38 + (UnusedUnderThisBase_158 * UnusedUnderThisBase_159))",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_38",
-                    "UnusedUnderThisBase_158",
-                    "UnusedUnderThisBase_159"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
-              "duration": {
-                "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                "displayLines": "{[Skill05[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[2]]}"
-                ]
-              },
-              "baseChance": 1,
-              "valuePerStack": {
-                "MDF_DamagePercentage_Layer": {
-                  "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                  "displayLines": "{[Skill05[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[3]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8003020_Monster_XP_Elite01_Ability09_Part01": {
-      "fileName": "8003020_Monster_XP_Elite01_Ability09_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Elite01_Ability09_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8003020_Monster_XP_Elite01_Ability08_Part02": {
-      "fileName": "8003020_Monster_XP_Elite01_Ability08_Part02",
-      "abilityType": null,
+    "8003020_Monster_XP_Elite01_PassiveAbility01": {
+      "fileName": "8003020_Monster_XP_Elite01_PassiveAbility01",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -132,519 +28,232 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-829438264\">Monster_XP_Elite01_Ability08_FireBall</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         },
         {
-          "name": "Find New Target",
-          "from": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
+            "target": "{{Caster}}"
           },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "AvatarBurningCount",
-              "value": {
-                "operator": "Variables[0] (AvatarBurningCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(AvatarBurningCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "AvatarBurningCount"
-                ]
-              }
-            }
-          ]
+          "modifier": "<a class=\"gModGreen\" id=\"2044612477\">Enemy_XP_Elite01_MuteHitFly</a>"
         },
         {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "AvatarBurningCount",
-            "compareType": ">=",
-            "value2": 1
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
           },
-          "passed": [
+          "modifier": "<a class=\"gModGreen\" id=\"1742468401\">Enemy_XP_Elite01_ListenStanceBreakModifier</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-561802374\">NoWeakAndResistance</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1742468401\">Enemy_XP_Elite01_ListenStanceBreakModifier</a>",
+          "execute": [
             {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
                     "target": {
                       "name": "Target Name",
-                      "target": "{{Parameter Target}}"
+                      "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]"
+                    "value1": "StanceBreak_Sign",
+                    "compareType": "=",
+                    "value2": 1,
+                    "contextScope": "TargetEntity"
                   },
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1090456915\">XP_Fire_Elite_Burning_Modifier_2</a>[<span class=\"descriptionNumberColor\">Spontaneous Combustion</span>]"
                     },
-                    "modifier": "<a class=\"gModGreen\" id=\"-2102762800\">Monster_XP_Elite01_Ability08_Mark</a>",
-                    "invertCondition": true
-                  }
-                ]
-              },
-              "ifTargetFound": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Enemy ID",
+                        "ID": 8003021,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "characterName": "Blaze Out of Space (Bug)"
+                      },
+                      "failed": [
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1077360781\">XP_Elite_Fire_Ability07_AttackUp_Modifier</a>[<span class=\"descriptionNumberColor\">Molten</span>]"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "Skill07_Added_AttackRatio",
+                      "value": 0
+                    },
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "StanceBreak_Sign"
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-561802374\">NoWeakAndResistance</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "End Broken State [Owner]",
+              "execute": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Name",
-                    "target": "{{Parameter Target}}"
+                    "target": "{{Caster}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2102762800\">Monster_XP_Elite01_Ability08_Mark</a>"
-                },
-                {
-                  "name": "UI Display Event (On Entity)",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "popUpText": "Enkindle is absorbed",
-                  "living": true
+                  "modifier": "<a class=\"gModGreen\" id=\"-561802374\">NoWeakAndResistance</a>"
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__76652957\">Enemy_XP_Elite01_AIControl</a>",
+          "execute": [
             {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "AvatarBurningCount",
-                "compareType": ">=",
-                "value2": 2
-              },
-              "passed": [
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
                 {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
+                  "name": "IF",
                   "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-2102762800\">Monster_XP_Elite01_Ability08_Mark</a>",
-                        "invertCondition": true
-                      }
-                    ]
+                    "name": "Compare: Variable",
+                    "value1": "Phase_Flag",
+                    "compareType": "=",
+                    "value2": 1,
+                    "contextScope": "TargetEntity"
                   },
-                  "ifTargetFound": [
+                  "passed": [
                     {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-2102762800\">Monster_XP_Elite01_Ability08_Mark</a>"
-                    },
-                    {
-                      "name": "UI Display Event (On Entity)",
+                      "name": "Define Custom Variable with Added Value",
                       "target": {
                         "name": "Target Name",
-                        "target": "{{Parameter Target}}"
+                        "target": "{{Modifier Holder}}"
                       },
-                      "popUpText": "Enkindle is absorbed",
-                      "living": true
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "AvatarBurningCount",
-                    "compareType": ">=",
-                    "value2": 3
-                  },
-                  "passed": [
+                      "variableName": "AIFlag",
+                      "context": "TargetEntity",
+                      "value": 1,
+                      "min": 1,
+                      "max": 4
+                    },
                     {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
+                      "name": "IF",
                       "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]"
-                          },
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-2102762800\">Monster_XP_Elite01_Ability08_Mark</a>",
-                            "invertCondition": true
-                          }
-                        ]
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-2102762800\">Monster_XP_Elite01_Ability08_Mark</a>"
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
                         },
+                        "value1": "AIFlag",
+                        "compareType": ">",
+                        "value2": 3,
+                        "contextScope": "TargetEntity"
+                      },
+                      "passed": [
                         {
-                          "name": "UI Display Event (On Entity)",
+                          "name": "Declare Custom Variable",
                           "target": {
                             "name": "Target Name",
-                            "target": "{{Parameter Target}}"
+                            "target": "{{Modifier Holder}}"
                           },
-                          "popUpText": "Enkindle is absorbed",
-                          "living": true
+                          "scope": "TargetEntity",
+                          "variableName": "AIFlag",
+                          "value": 1
                         }
                       ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable with Added Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "AIFlag",
+                      "context": "TargetEntity",
+                      "value": 1,
+                      "min": 1,
+                      "max": 3
                     },
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "value1": "AvatarBurningCount",
-                        "compareType": ">=",
-                        "value2": 4
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "AIFlag",
+                        "compareType": ">",
+                        "value2": 2,
+                        "contextScope": "TargetEntity"
                       },
                       "passed": [
                         {
-                          "name": "Find New Target",
-                          "from": {
+                          "name": "Declare Custom Variable",
+                          "target": {
                             "name": "Target Name",
-                            "target": "{{Hostile Entities(AOE)}}"
+                            "target": "{{Modifier Holder}}"
                           },
-                          "searchRandom": true,
-                          "maxTargets": 1,
-                          "conditions": {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]"
-                              },
-                              {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"-2102762800\">Monster_XP_Elite01_Ability08_Mark</a>",
-                                "invertCondition": true
-                              }
-                            ]
-                          },
-                          "ifTargetFound": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-2102762800\">Monster_XP_Elite01_Ability08_Mark</a>"
-                            },
-                            {
-                              "name": "UI Display Event (On Entity)",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "popUpText": "Enkindle is absorbed",
-                              "living": true
-                            }
-                          ]
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "value1": "AvatarBurningCount",
-                            "compareType": ">=",
-                            "value2": 5
-                          },
-                          "passed": [
-                            {
-                              "name": "Find New Target",
-                              "from": {
-                                "name": "Target Name",
-                                "target": "{{Hostile Entities(AOE)}}"
-                              },
-                              "searchRandom": true,
-                              "maxTargets": 1,
-                              "conditions": {
-                                "name": "AND",
-                                "conditionList": [
-                                  {
-                                    "name": "Has Modifier",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]"
-                                  },
-                                  {
-                                    "name": "Has Modifier",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "modifier": "<a class=\"gModGreen\" id=\"-2102762800\">Monster_XP_Elite01_Ability08_Mark</a>",
-                                    "invertCondition": true
-                                  }
-                                ]
-                              },
-                              "ifTargetFound": [
-                                {
-                                  "name": "Add Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-2102762800\">Monster_XP_Elite01_Ability08_Mark</a>"
-                                },
-                                {
-                                  "name": "UI Display Event (On Entity)",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "popUpText": "Enkindle is absorbed",
-                                  "living": true
-                                }
-                              ]
-                            },
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Variable",
-                                "value1": "AvatarBurningCount",
-                                "compareType": ">=",
-                                "value2": 6
-                              },
-                              "passed": [
-                                {
-                                  "name": "Find New Target",
-                                  "from": {
-                                    "name": "Target Name",
-                                    "target": "{{Hostile Entities(AOE)}}"
-                                  },
-                                  "searchRandom": true,
-                                  "maxTargets": 1,
-                                  "conditions": {
-                                    "name": "AND",
-                                    "conditionList": [
-                                      {
-                                        "name": "Has Modifier",
-                                        "target": {
-                                          "name": "Target Name",
-                                          "target": "{{Parameter Target}}"
-                                        },
-                                        "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]"
-                                      },
-                                      {
-                                        "name": "Has Modifier",
-                                        "target": {
-                                          "name": "Target Name",
-                                          "target": "{{Parameter Target}}"
-                                        },
-                                        "modifier": "<a class=\"gModGreen\" id=\"-2102762800\">Monster_XP_Elite01_Ability08_Mark</a>",
-                                        "invertCondition": true
-                                      }
-                                    ]
-                                  },
-                                  "ifTargetFound": [
-                                    {
-                                      "name": "Add Events/Bonuses",
-                                      "to": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "modifier": "<a class=\"gModGreen\" id=\"-2102762800\">Monster_XP_Elite01_Ability08_Mark</a>"
-                                    },
-                                    {
-                                      "name": "UI Display Event (On Entity)",
-                                      "target": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "popUpText": "Enkindle is absorbed",
-                                      "living": true
-                                    }
-                                  ]
-                                },
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Compare: Variable",
-                                    "value1": "AvatarBurningCount",
-                                    "compareType": ">=",
-                                    "value2": 7
-                                  },
-                                  "passed": [
-                                    {
-                                      "name": "Find New Target",
-                                      "from": {
-                                        "name": "Target Name",
-                                        "target": "{{Hostile Entities(AOE)}}"
-                                      },
-                                      "searchRandom": true,
-                                      "maxTargets": 1,
-                                      "conditions": {
-                                        "name": "AND",
-                                        "conditionList": [
-                                          {
-                                            "name": "Has Modifier",
-                                            "target": {
-                                              "name": "Target Name",
-                                              "target": "{{Parameter Target}}"
-                                            },
-                                            "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]"
-                                          },
-                                          {
-                                            "name": "Has Modifier",
-                                            "target": {
-                                              "name": "Target Name",
-                                              "target": "{{Parameter Target}}"
-                                            },
-                                            "modifier": "<a class=\"gModGreen\" id=\"-2102762800\">Monster_XP_Elite01_Ability08_Mark</a>",
-                                            "invertCondition": true
-                                          }
-                                        ]
-                                      },
-                                      "ifTargetFound": [
-                                        {
-                                          "name": "Add Events/Bonuses",
-                                          "to": {
-                                            "name": "Target Name",
-                                            "target": "{{Parameter Target}}"
-                                          },
-                                          "modifier": "<a class=\"gModGreen\" id=\"-2102762800\">Monster_XP_Elite01_Ability08_Mark</a>"
-                                        },
-                                        {
-                                          "name": "UI Display Event (On Entity)",
-                                          "target": {
-                                            "name": "Target Name",
-                                            "target": "{{Parameter Target}}"
-                                          },
-                                          "popUpText": "Enkindle is absorbed",
-                                          "living": true
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "name": "IF",
-                                      "conditions": {
-                                        "name": "Compare: Variable",
-                                        "value1": "AvatarBurningCount",
-                                        "compareType": ">=",
-                                        "value2": 8
-                                      },
-                                      "passed": [
-                                        {
-                                          "name": "Find New Target",
-                                          "from": {
-                                            "name": "Target Name",
-                                            "target": "{{Hostile Entities(AOE)}}"
-                                          },
-                                          "searchRandom": true,
-                                          "maxTargets": 1,
-                                          "conditions": {
-                                            "name": "AND",
-                                            "conditionList": [
-                                              {
-                                                "name": "Has Modifier",
-                                                "target": {
-                                                  "name": "Target Name",
-                                                  "target": "{{Parameter Target}}"
-                                                },
-                                                "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]"
-                                              },
-                                              {
-                                                "name": "Has Modifier",
-                                                "target": {
-                                                  "name": "Target Name",
-                                                  "target": "{{Parameter Target}}"
-                                                },
-                                                "modifier": "<a class=\"gModGreen\" id=\"-2102762800\">Monster_XP_Elite01_Ability08_Mark</a>",
-                                                "invertCondition": true
-                                              }
-                                            ]
-                                          },
-                                          "ifTargetFound": [
-                                            {
-                                              "name": "Add Events/Bonuses",
-                                              "to": {
-                                                "name": "Target Name",
-                                                "target": "{{Parameter Target}}"
-                                              },
-                                              "modifier": "<a class=\"gModGreen\" id=\"-2102762800\">Monster_XP_Elite01_Ability08_Mark</a>"
-                                            },
-                                            {
-                                              "name": "UI Display Event (On Entity)",
-                                              "target": {
-                                                "name": "Target Name",
-                                                "target": "{{Parameter Target}}"
-                                              },
-                                              "popUpText": "Enkindle is absorbed",
-                                              "living": true
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
+                          "scope": "TargetEntity",
+                          "variableName": "AIFlag",
+                          "value": 1
                         }
                       ]
                     }
@@ -655,213 +264,22 @@ const compositeAbilityObject = {
           ]
         },
         {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "AvatarBurningCount",
-            "compareType": ">=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Shot Fired"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "AvatarBurningCount",
-                "compareType": ">=",
-                "value2": 2
-              },
-              "passed": [
-                {
-                  "name": "Shot Fired"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "AvatarBurningCount",
-                    "compareType": ">=",
-                    "value2": 3
-                  },
-                  "passed": [
-                    {
-                      "name": "Shot Fired"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "AvatarBurningCount",
-                        "compareType": ">=",
-                        "value2": 4
-                      },
-                      "passed": [
-                        {
-                          "name": "Shot Fired"
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "value1": "AvatarBurningCount",
-                            "compareType": ">=",
-                            "value2": 5
-                          },
-                          "passed": [
-                            {
-                              "name": "Shot Fired"
-                            },
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Variable",
-                                "value1": "AvatarBurningCount",
-                                "compareType": ">=",
-                                "value2": 6
-                              },
-                              "passed": [
-                                {
-                                  "name": "Shot Fired"
-                                },
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Compare: Variable",
-                                    "value1": "AvatarBurningCount",
-                                    "compareType": ">=",
-                                    "value2": 7
-                                  },
-                                  "passed": [
-                                    {
-                                      "name": "Shot Fired"
-                                    },
-                                    {
-                                      "name": "IF",
-                                      "conditions": {
-                                        "name": "Compare: Variable",
-                                        "value1": "AvatarBurningCount",
-                                        "compareType": ">=",
-                                        "value2": 8
-                                      },
-                                      "passed": [
-                                        {
-                                          "name": "Shot Fired"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2044612477\">Enemy_XP_Elite01_MuteHitFly</a>",
+          "modifierFlags": [
+            "MuteHitFly"
           ]
         },
         {
-          "name": "Define Custom Variable",
-          "variableName": "BurningCount",
-          "value": 0
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]"
-          },
-          "ifTargetFound": [
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
+          "execute": [
             {
-              "name": "Define Custom Variable with Modifier Values",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "valueType": "Layer",
-              "variableName": "BurningLayer",
-              "modifierName": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
-              "multiplier": 1
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "BurningCount",
-              "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_159) || Variables[1] (BurningLayer) || ADD || RETURN",
-                "displayLines": "(UnusedUnderThisBase_159 + BurningLayer)",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_159",
-                  "BurningLayer"
-                ]
-              }
+              "eventTrigger": "Action Choice Window [Owner]"
             }
           ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2102762800\">Monster_XP_Elite01_Ability08_Mark</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "AvatarBurningCount",
-          "value": 0
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8003020_Monster_XP_Elite01_Ability08_Part01": {
-      "fileName": "8003020_Monster_XP_Elite01_Ability08_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Elite01_Ability08_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
+        }
+      ]
     },
     "8003020_Monster_XP_Elite01_Ability07_Part02": {
       "fileName": "8003020_Monster_XP_Elite01_Ability07_Part02",
@@ -1615,272 +1033,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "8003020_Monster_XP_Elite01_PassiveAbility01": {
-      "fileName": "8003020_Monster_XP_Elite01_PassiveAbility01",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2044612477\">Enemy_XP_Elite01_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1742468401\">Enemy_XP_Elite01_ListenStanceBreakModifier</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-561802374\">NoWeakAndResistance</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1742468401\">Enemy_XP_Elite01_ListenStanceBreakModifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "StanceBreak_Sign",
-                    "compareType": "=",
-                    "value2": 1,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1090456915\">XP_Fire_Elite_Burning_Modifier_2</a>[<span class=\"descriptionNumberColor\">Spontaneous Combustion</span>]"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": 8003021,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "characterName": "Blaze Out of Space (Bug)"
-                      },
-                      "failed": [
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1077360781\">XP_Elite_Fire_Ability07_AttackUp_Modifier</a>[<span class=\"descriptionNumberColor\">Molten</span>]"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Skill07_Added_AttackRatio",
-                      "value": 0
-                    },
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "StanceBreak_Sign"
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-561802374\">NoWeakAndResistance</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-561802374\">NoWeakAndResistance</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__76652957\">Enemy_XP_Elite01_AIControl</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Phase_Flag",
-                    "compareType": "=",
-                    "value2": 1,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1,
-                      "min": 1,
-                      "max": 4
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "AIFlag",
-                        "compareType": ">",
-                        "value2": 3,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1,
-                      "min": 1,
-                      "max": 3
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "AIFlag",
-                        "compareType": ">",
-                        "value2": 2,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2044612477\">Enemy_XP_Elite01_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action Choice Window [Owner]"
-            }
-          ]
-        }
-      ]
     },
     "8003020_Modifiers": {
       "fileName": "8003020_Modifiers",
