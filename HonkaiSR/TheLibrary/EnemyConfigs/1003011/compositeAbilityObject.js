@@ -5,6 +5,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "1003011_Monster_W1_Soldier03_PassiveAbilityInsert2",
     "1003011_Monster_W1_Soldier03_PassiveAbilityInsert",
+    "1003011_Monster_W1_Soldier03_PassiveAbilityInitiate",
     "1003011_Monster_W1_Soldier03_Ability09_Part02",
     "1003011_Monster_W1_Soldier03_Ability09_Part01",
     "1003011_Monster_W1_Soldier03_Ability08_Part02",
@@ -13,13 +14,10 @@ const compositeAbilityObject = {
     "1003011_Monster_W1_Soldier03_Ability07_Part01",
     "1003011_Monster_W1_Soldier03_AbilityP06_Part02",
     "1003011_Monster_W1_Soldier03_AbilityP06_Part01",
-    "1003011_Monster_W1_Soldier03_Ability06_Insert_Part02",
-    "1003011_Monster_W1_Soldier03_Ability06_Insert_Part01",
     "1003011_Monster_W1_Soldier03_Ability06_Part02",
     "1003011_Monster_W1_Soldier03_Ability06_Part01",
     "1003011_Monster_W1_Soldier03_Ability01_Part02",
     "1003011_Monster_W1_Soldier03_Ability01_Part01",
-    "1003011_Monster_W1_Soldier03_PassiveAbilityInitiate",
     "1003011_Modifiers"
   ],
   "abilityObject": {
@@ -261,6 +259,95 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1003011_Monster_W1_Soldier03_PassiveAbilityInitiate": {
+      "fileName": "1003011_Monster_W1_Soldier03_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-35846482\">Enemy_W1_Soldier03_BattleScore1</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "W1_Soldier03_00_SummonCounter"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "W1_Soldier03_00_AICounter",
+          "value": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 1003011,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "Silvermane Lieutenant (Bug)"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1997793398\">Monster_W1_Soldier03_ShieldControl</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -1151,212 +1238,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "1003011_Monster_W1_Soldier03_Ability06_Insert_Part02": {
-      "fileName": "1003011_Monster_W1_Soldier03_Ability06_Insert_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "({[Skill06[0]]} * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "20%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-              "displayLines": "({[Skill06[0]]} * 0.1)",
-              "constants": [
-                0.1
-              ],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "10%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-              "displayLines": "({[Skill06[0]]} * 0.1)",
-              "constants": [
-                0.1
-              ],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "10%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.1) || MUL || RETURN",
-              "displayLines": "({[Skill06[0]]} * 0.1)",
-              "constants": [
-                0.1
-              ],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "10%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "({[Skill06[0]]} * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "50%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-387357924\">Enemy_W1_Soldier03_ListenBeingAttacked</a>[<span class=\"descriptionNumberColor\">Counter</span>]"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W1_Soldier03_00_AICounter",
-          "value": 1
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 1
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "1003011_Monster_W1_Soldier03_Ability06_Insert_Part01": {
-      "fileName": "1003011_Monster_W1_Soldier03_Ability06_Insert_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W1_Soldier03_Ability06_Insert_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "from": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "to": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "value1": "Distance_Between_Entities",
-            "compareType": ">",
-            "value2": 0
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
     "1003011_Monster_W1_Soldier03_Ability06_Part02": {
       "fileName": "1003011_Monster_W1_Soldier03_Ability06_Part02",
       "abilityType": null,
@@ -1635,95 +1516,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "1003011_Monster_W1_Soldier03_PassiveAbilityInitiate": {
-      "fileName": "1003011_Monster_W1_Soldier03_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-35846482\">Enemy_W1_Soldier03_BattleScore1</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W1_Soldier03_00_SummonCounter"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W1_Soldier03_00_AICounter",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 1003011,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Silvermane Lieutenant (Bug)"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1997793398\">Monster_W1_Soldier03_ShieldControl</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },

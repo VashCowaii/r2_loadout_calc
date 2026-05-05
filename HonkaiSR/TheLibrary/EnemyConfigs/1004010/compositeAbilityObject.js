@@ -3,27 +3,16 @@ const compositeAbilityObject = {
   "fullCharacterName": 1004010,
   "trimCharacterName": 1004010,
   "abilityList": [
-    "1004010_Boss_Cocolia_P1_Weapon_DeathSetCamera",
-    "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability04_Part02",
-    "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability04_Part01",
-    "1004010_Boss_Cocolia_P1_Weapon_DeathEffect",
-    "1004010_Boss_Cocolia_P1_Weapon_MuteHitFly",
-    "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability03_Part02",
-    "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability03_Part01",
-    "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability02_Part01",
-    "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability01_Part01",
-    "1004010_Boss_Cocolia_P2_BossModifier",
-    "1004010_Boss_Cocolia_P1_AIControlAndHPLock",
     "1004010_Boss_Cocolia_P1_StanceBreakInsert",
+    "1004010_Boss_Cocolia_P2_BossModifier",
     "1004010_Boss_Cocolia_P1_StateCameraChange_02",
     "1004010_Boss_Cocolia_P1_StateCameraChange_01",
+    "1004010_Boss_Cocolia_P1_Weapon_MuteHitFly",
     "1004010_Boss_Cocolia_P2_insertAbility",
     "1004010_Boss_Cocolia_P2_PassiveAbility_Initiate",
-    "1004010_Boss_Cocolia_P1_AbilityTest_Part02",
-    "1004010_Boss_Cocolia_P1_AbilityTest_Part01",
-    "1004010_Boss_Cocolia_P1_Ability08_Part02",
-    "1004010_Boss_Cocolia_P1_Ability08_Part01",
-    "1004010_Boss_Cocolia_P1_LockHP",
+    "1004010_Boss_Cocolia_P1_Insert",
+    "1004010_Boss_Cocolia_IceValue",
+    "1004010_Boss_Cocolia_P1_AIControlAndHPLock",
     "1004010_Boss_Cocolia_P1_Ability07_Part02",
     "1004010_Boss_Cocolia_P1_Ability07_Part01",
     "1004010_Boss_Cocolia_P1_Ability06_Part02",
@@ -36,318 +25,76 @@ const compositeAbilityObject = {
     "1004010_Boss_Cocolia_P1_Ability03_Part01",
     "1004010_Boss_Cocolia_P1_Ability02_Part02",
     "1004010_Boss_Cocolia_P1_Ability02_Part01",
-    "1004010_Boss_Cocolia_P1_Insert",
-    "1004010_Boss_Cocolia_IceValue",
-    "1004010_Boss_Cocolia_P1_Ability01_Part02",
-    "1004010_Boss_Cocolia_P1_Ability01_Part01",
     "1004010_Monster_W1_CocoliaP1_PassiveAbility_BGM",
     "1004010_Modifiers"
   ],
   "abilityObject": {
-    "1004010_Boss_Cocolia_P1_Weapon_DeathSetCamera": {
-      "fileName": "1004010_Boss_Cocolia_P1_Weapon_DeathSetCamera",
+    "1004010_Boss_Cocolia_P1_StanceBreakInsert": {
+      "fileName": "1004010_Boss_Cocolia_P1_StanceBreakInsert",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Add Events/Bonuses",
-          "to": {
+          "name": "Looped Event",
+          "maxLoops": 3,
+          "Event": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1302022455\">Boss_Cocolia_IceValueShow</a>"
+            }
+          ]
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"1118324770\">Boss_Cocolia_P1_Weapon_DeathSetCamera</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 1
+        },
         {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1118324770\">Boss_Cocolia_P1_Weapon_DeathSetCamera</a>",
-          "execute": [
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Phase_Flag",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
             {
-              "eventTrigger": "When Put in Deathstate Limbo",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-79024859\">BOSS_COCOLIA_BOSS_MDF</a>"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "WeaponDeathCount",
-                      "context": "TargetEntity",
-                      "value": 1,
-                      "max": 2
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "WeaponDeathCount",
-                        "compareType": "=",
-                        "value2": 2,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        "Deleted bullshit"
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "Phase_Flag",
+              "value": 2
+            }
+          ],
+          "failed": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "Phase_Flag",
+              "value": 3
             }
           ]
         }
-      ]
-    },
-    "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability04_Part02": {
-      "fileName": "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability04_Part01": {
-      "fileName": "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability04_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_Boss_Cocolia_P1_Weapon_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1004010_Boss_Cocolia_P1_Weapon_DeathEffect": {
-      "fileName": "1004010_Boss_Cocolia_P1_Weapon_DeathEffect",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1847839650\">Boss_Cocolia_P1_Weapon_DeathEffect</a>"
-        }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1847839650\">Boss_Cocolia_P1_Weapon_DeathEffect</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Put in Deathstate Limbo",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "DeathEvent_Trigger_Times",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "1004010_Boss_Cocolia_P1_Weapon_MuteHitFly": {
-      "fileName": "1004010_Boss_Cocolia_P1_Weapon_MuteHitFly",
-      "skillTrigger": "PassiveSkill05",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1485263337\">Boss_Cocolia_MuteHitFly_Modifier</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability03_Part02": {
-      "fileName": "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED_1) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED_1",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED_1"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Mark Entity For Immediate Death"
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability03_Part01": {
-      "fileName": "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "DeathEvent_Trigger_Times",
-          "context": "TargetEntity",
-          "value": 1,
-          "max": 1
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_Boss_Cocolia_P1_Weapon_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability02_Part01": {
-      "fileName": "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability02_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability01_Part01": {
-      "fileName": "1004010_Monster_Boss_Cocolia_P1_Weapon_Ability01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
       },
       "references": []
     },
@@ -391,6 +138,355 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Action Choice Window [Owner]"
+            }
+          ]
+        }
+      ]
+    },
+    "1004010_Boss_Cocolia_P1_StateCameraChange_02": {
+      "fileName": "1004010_Boss_Cocolia_P1_StateCameraChange_02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1004010_Boss_Cocolia_P1_StateCameraChange_01": {
+      "fileName": "1004010_Boss_Cocolia_P1_StateCameraChange_01",
+      "skillTrigger": "PassiveSkill06",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1004010_Boss_Cocolia_P1_Weapon_MuteHitFly": {
+      "fileName": "1004010_Boss_Cocolia_P1_Weapon_MuteHitFly",
+      "skillTrigger": "PassiveSkill05",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1485263337\">Boss_Cocolia_MuteHitFly_Modifier</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1004010_Boss_Cocolia_P2_insertAbility": {
+      "fileName": "1004010_Boss_Cocolia_P2_insertAbility",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable with Added Value",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "DeathEvent_Trigger_Times",
+          "context": "TargetEntity",
+          "value": 1,
+          "max": 1
+        },
+        {
+          "name": "Remove from Team Target Grouping",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "stayInTeam": false
+        },
+        {
+          "name": "Create Enemies",
+          "delayPercent": 0,
+          "enemyList": [
+            {
+              "name": "Create Enemy from Custom",
+              "value": "P2ID",
+              "summonLocation": "BeforeCaster"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1004010_Boss_Cocolia_P2_PassiveAbility_Initiate": {
+      "fileName": "1004010_Boss_Cocolia_P2_PassiveAbility_Initiate",
+      "skillTrigger": "PassiveSkill04",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1004010_Boss_Cocolia_P1_Insert": {
+      "fileName": "1004010_Boss_Cocolia_P1_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "InsertController"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1004010_Boss_Cocolia_IceValue": {
+      "fileName": "1004010_Boss_Cocolia_IceValue",
+      "skillTrigger": "PassiveSkill03",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1681235670\">Boss_Cocolia_BattleScore4</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1731568527\">Boss_Cocolia_BattleScore3</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1714790908\">Boss_Cocolia_BattleScore2</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1765123765\">Boss_Cocolia_BattleScore1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1043898383\">Boss_Cocolia_IceValueManage</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1043898383\">Boss_Cocolia_IceValueManage</a>",
+          "counter": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "InsertController"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1230340009\">Monster_W1_CocoliaP1_RemoveOneMore</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Hit"
+            },
+            {
+              "eventTrigger": "Take Damage End [Owner]: Hit",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Damage Type/Element",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "list": [
+                          "Fire"
+                        ]
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "LeftHandAlive",
+                        "compareType": "=",
+                        "value2": 0,
+                        "contextScope": "TargetEntity"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "InsertController",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Attacked End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "InsertController",
+                        "compareType": "=",
+                        "value2": 1,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Skill Type",
+                            "skillType": "Skill"
+                          },
+                          {
+                            "name": "Skill Type",
+                            "skillType": "Ultimate"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1302022455\">Boss_Cocolia_IceValueShow</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-325261952\">Boss_Cocolia_P1_Ability05_Bonus</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Change Character Transformation",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "phase": "Phase1"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "End Broken State [Owner]",
+              "execute": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "phase": "Phase0"
+                }
+              ]
             }
           ]
         }
@@ -510,340 +606,6 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "When Put in Deathstate Limbo"
-            }
-          ]
-        }
-      ]
-    },
-    "1004010_Boss_Cocolia_P1_StanceBreakInsert": {
-      "fileName": "1004010_Boss_Cocolia_P1_StanceBreakInsert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Looped Event",
-          "maxLoops": 3,
-          "Event": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1302022455\">Boss_Cocolia_IceValueShow</a>"
-            }
-          ]
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "Phase_Flag",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "Phase_Flag",
-              "value": 2
-            }
-          ],
-          "failed": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "Phase_Flag",
-              "value": 3
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004010_Boss_Cocolia_P1_StateCameraChange_02": {
-      "fileName": "1004010_Boss_Cocolia_P1_StateCameraChange_02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004010_Boss_Cocolia_P1_StateCameraChange_01": {
-      "fileName": "1004010_Boss_Cocolia_P1_StateCameraChange_01",
-      "skillTrigger": "PassiveSkill06",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004010_Boss_Cocolia_P2_insertAbility": {
-      "fileName": "1004010_Boss_Cocolia_P2_insertAbility",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "DeathEvent_Trigger_Times",
-          "context": "TargetEntity",
-          "value": 1,
-          "max": 1
-        },
-        {
-          "name": "Remove from Team Target Grouping",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "stayInTeam": false
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": 0,
-          "enemyList": [
-            {
-              "name": "Create Enemy from Custom",
-              "value": "P2ID",
-              "summonLocation": "BeforeCaster"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004010_Boss_Cocolia_P2_PassiveAbility_Initiate": {
-      "fileName": "1004010_Boss_Cocolia_P2_PassiveAbility_Initiate",
-      "skillTrigger": "PassiveSkill04",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004010_Boss_Cocolia_P1_AbilityTest_Part02": {
-      "fileName": "1004010_Boss_Cocolia_P1_AbilityTest_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1004010_Boss_Cocolia_P1_AbilityTest_Part01": {
-      "fileName": "1004010_Boss_Cocolia_P1_AbilityTest_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Boss_Cocolia_P1_AbilityTest_Part02",
-          "isTrigger": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1004010_Boss_Cocolia_P1_Ability08_Part02": {
-      "fileName": "1004010_Boss_Cocolia_P1_Ability08_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"807903782\">Boss_Cocolia_P2_BattleEvent_ListenPlayerUltra</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"801976131\">ListenHPRatio_Modifier</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004010_Boss_Cocolia_P1_Ability08_Part01": {
-      "fileName": "1004010_Boss_Cocolia_P1_Ability08_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Boss_Cocolia_P1_Ability08_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004010_Boss_Cocolia_P1_LockHP": {
-      "fileName": "1004010_Boss_Cocolia_P1_LockHP",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"801976131\">ListenHPRatio_Modifier</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__801976131\">ListenHPRatio_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED_2) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED_2",
-                    "constants": [],
-                    "variables": [
-                      "ENEMIES_OBJECT_UNUSED_2"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Locked HP Floor Reached [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "Blizzard_Trigger_Times",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
-                    },
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "Blizzard_Trigger_Times",
-                      "context": "TargetEntity",
-                      "value": 1,
-                      "max": 1
-                    },
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Boss_Cocolia_P1_Ability08_Part01",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
             }
           ]
         }
@@ -1650,340 +1412,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004010_Boss_Cocolia_P1_Insert": {
-      "fileName": "1004010_Boss_Cocolia_P1_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "InsertController"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004010_Boss_Cocolia_IceValue": {
-      "fileName": "1004010_Boss_Cocolia_IceValue",
-      "skillTrigger": "PassiveSkill03",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1681235670\">Boss_Cocolia_BattleScore4</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1731568527\">Boss_Cocolia_BattleScore3</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1714790908\">Boss_Cocolia_BattleScore2</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1765123765\">Boss_Cocolia_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1043898383\">Boss_Cocolia_IceValueManage</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1043898383\">Boss_Cocolia_IceValueManage</a>",
-          "counter": 1,
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "InsertController"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1230340009\">Monster_W1_CocoliaP1_RemoveOneMore</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Hit"
-            },
-            {
-              "eventTrigger": "Take Damage End [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Damage Type/Element",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "list": [
-                          "Fire"
-                        ]
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "LeftHandAlive",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "InsertController",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Attacked End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "InsertController",
-                        "compareType": "=",
-                        "value2": 1,
-                        "contextScope": "TargetEntity"
-                      },
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Skill Type",
-                            "skillType": "Skill"
-                          },
-                          {
-                            "name": "Skill Type",
-                            "skillType": "Ultimate"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1302022455\">Boss_Cocolia_IceValueShow</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-325261952\">Boss_Cocolia_P1_Ability05_Bonus</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Change Character Transformation",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "phase": "Phase1"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "phase": "Phase0"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "1004010_Boss_Cocolia_P1_Ability01_Part02": {
-      "fileName": "1004010_Boss_Cocolia_P1_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED_1) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(ENEMIES_OBJECT_UNUSED_1 * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED_1"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "50%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED_1) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "(ENEMIES_OBJECT_UNUSED_1 * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED_1"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "50%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1302022455\">Boss_Cocolia_IceValueShow</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1004010_Boss_Cocolia_P1_Ability01_Part01": {
-      "fileName": "1004010_Boss_Cocolia_P1_Ability01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Boss_Cocolia_P1_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
       },
       "references": []
     },
