@@ -1,5 +1,5 @@
 const configAbility = {
-  "fileName": "8015010_Monster_AML_Boss_Passive03",
+  "fileName": "8002091_Monster_XP_Minion04_08_PassiveAbility_Tutorial",
   "abilityType": null,
   "energy": null,
   "toughnessList": null,

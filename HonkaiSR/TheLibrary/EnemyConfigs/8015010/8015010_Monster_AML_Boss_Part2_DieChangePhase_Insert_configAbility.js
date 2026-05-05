@@ -1,14 +1,13 @@
 const configAbility = {
-  "fileName": "8015010_Monster_AML_Boss_Ability08_Part02",
+  "fileName": "8015010_Monster_AML_Boss_Part2_DieChangePhase_Insert",
   "abilityType": null,
   "energy": null,
   "toughnessList": null,
   "parse": [
-    "Ability Start",
-    "Trigger: Ability End"
+    "Deleted bullshit"
   ],
   "targetObjectData": {
-    "primaryTarget": "{{Ability Target List}}"
+    "primaryTarget": "{{Caster}}"
   },
   "references": []
 }
