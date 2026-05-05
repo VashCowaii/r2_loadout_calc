@@ -11,7 +11,6 @@ const compositeAbilityObject = {
     "70001_BattleEventAbility_Elation_Ability04_02",
     "70001_BattleEventAbility_Elation_Ability04_01",
     "70001_BattleEventAbility_Elation_Ability03_Entry",
-    "70001_StageAbility_Elation",
     "70001_Modifiers",
     "70001_BE_BattleEvents"
   ],
@@ -815,34 +814,6 @@ const compositeAbilityObject = {
           "value": "-1"
         }
       ]
-    },
-    "70001_StageAbility_Elation": {
-      "fileName": "70001_StageAbility_Elation",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Preload Battle Event(s)",
-          "eventID": [
-            70001
-          ]
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"994071549\">MLevel_Elation_Standard</a>"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
     },
     "70001_Modifiers": {
       "fileName": "70001_Modifiers",

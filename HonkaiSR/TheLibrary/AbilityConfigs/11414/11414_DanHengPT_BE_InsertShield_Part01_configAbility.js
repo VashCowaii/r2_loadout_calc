@@ -1,22 +1,26 @@
 const configAbility = {
-  "fileName": "60024_MissionBattleEvent60024_Beta_Ability03_Part01",
+  "fileName": "11414_DanHengPT_BE_InsertShield_Part01",
   "abilityType": null,
   "energy": null,
   "toughnessList": null,
   "parse": [
+    "Deleted bullshit",
     {
       "name": "Trigger Ability",
       "from": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "ability": "MissionBattleEvent60024_Beta_Ability03_Part02",
+      "inherentTarget": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
+      "ability": "DanHengPT_BE_InsertShield_Part02",
       "isTrigger": true
-    },
-    "Deleted bullshit"
+    }
   ],
   "references": [],
   "targetObjectData": {
-    "primaryTarget": "All Enemy Team Members"
+    "primaryTarget": "Inherent Target"
   }
 }

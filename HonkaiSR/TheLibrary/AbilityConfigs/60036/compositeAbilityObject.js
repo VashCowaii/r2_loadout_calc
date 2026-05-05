@@ -3,24 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": 60036,
   "trimCharacterName": 60036,
   "abilityList": [
-    "60036_BattleEventAbility_60020_Camera",
     "60036_MissionBattleEvent60020_PassiveAbility01",
+    "60036_BattleEventAbility_60020_Camera",
     "60036_MissionBattleEvent60020_Ability03_Part02",
     "60036_MissionBattleEvent60020_Ability03_Part01",
     "60036_Modifiers"
   ],
   "abilityObject": {
-    "60036_BattleEventAbility_60020_Camera": {
-      "fileName": "60036_BattleEventAbility_60020_Camera",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
     "60036_MissionBattleEvent60020_PassiveAbility01": {
       "fileName": "60036_MissionBattleEvent60020_PassiveAbility01",
       "childAbilityList": [
@@ -295,6 +284,17 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "60036_BattleEventAbility_60020_Camera": {
+      "fileName": "60036_BattleEventAbility_60020_Camera",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
       }
     },
     "60036_MissionBattleEvent60020_Ability03_Part02": {

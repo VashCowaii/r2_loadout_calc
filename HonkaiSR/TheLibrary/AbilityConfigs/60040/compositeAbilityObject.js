@@ -6,7 +6,6 @@ const compositeAbilityObject = {
     "60040_MissionBattleEvent60039_AbilityP01",
     "60040_MissionBattleEvent60039_Ability03_Camera",
     "60040_MissionBattleEvent60039_Ability03_Part02",
-    "60040_MissionBattleEvent60039_Player_Ability03_Part01",
     "60040_MissionBattleEvent60039_Ability03_Part01"
   ],
   "abilityObject": {
@@ -623,17 +622,6 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "60040_MissionBattleEvent60039_Player_Ability03_Part01": {
-      "fileName": "60040_MissionBattleEvent60039_Player_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
       }
     },
     "60040_MissionBattleEvent60039_Ability03_Part01": {

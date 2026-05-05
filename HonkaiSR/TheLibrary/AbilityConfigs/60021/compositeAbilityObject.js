@@ -3,11 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": 60021,
   "trimCharacterName": 60021,
   "abilityList": [
-    "60021_MissionBattleEvent60021_AbilityP01",
     "60021_MissionBattleEvent60021_Insert4",
     "60021_MissionBattleEvent60021_Insert3",
     "60021_MissionBattleEvent60021_Insert2",
     "60021_MissionBattleEvent60021_Insert1",
+    "60021_MissionBattleEvent60021_AbilityP01",
     "60021_MissionBattleEvent60021_Ability03_Camera",
     "60021_MissionBattleEvent60021_Ability03_Part02",
     "60021_MissionBattleEvent60021_Ability03_Part01",
@@ -15,6 +15,535 @@ const compositeAbilityObject = {
     "60021_Functions"
   ],
   "abilityObject": {
+    "60021_MissionBattleEvent60021_Insert4": {
+      "fileName": "60021_MissionBattleEvent60021_Insert4",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"270618984\">StageSpecialAbility_20412061_BEPerform</a>",
+          "paramSequence2": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1487905304\">StageSpecialAbility_20412061_InBattle_Weakness_Fire</a>",
+              "duration": 2,
+              "valuePerStack": {
+                "MDF_PropertyValue": 0.2
+              }
+            },
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Quantum",
+                "dmgFormula": "Max HP Scaling",
+                "Toughness": {
+                  "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (2) || MUL || RETURN",
+                  "displayLines": "(AOE Toughness Value * 2)",
+                  "constants": [
+                    2
+                  ],
+                  "variables": [
+                    "AOE Toughness Value"
+                  ]
+                },
+                "ToughnessDMGType": {
+                  "DamageType": "AllType"
+                },
+                "Tags": null,
+                "attackType": "Ultimate"
+              }
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1487905304\">StageSpecialAbility_20412061_InBattle_Weakness_Fire</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_AttachWeakness"
+          ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Override Modifier Name",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifierName": "<a class=\"gModGreen\" id=\"1487905304\">StageSpecialAbility_20412061_InBattle_Weakness_Fire</a>",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1099669275\">Silwolf_BPAbility_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]"
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFireBonus</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Fire"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "60021_MissionBattleEvent60021_Insert3": {
+      "fileName": "60021_MissionBattleEvent60021_Insert3",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"270618984\">StageSpecialAbility_20412061_BEPerform</a>",
+          "paramSequence2": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"808836798\">StageSpecialAbility_20412061_InBattle_Weakness_Thunder</a>",
+              "duration": 2,
+              "valuePerStack": {
+                "MDF_PropertyValue": 0.2
+              }
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
+              "duration": {
+                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__229) || RETURN",
+                "displayLines": "ENEMIES_OBJECT_UNUSED__229",
+                "constants": [],
+                "variables": [
+                  "ENEMIES_OBJECT_UNUSED__229"
+                ]
+              },
+              "valuePerStack": {
+                "Modifier_Electric_DamagePercentage": {
+                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__230) || RETURN",
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__230",
+                  "constants": [],
+                  "variables": [
+                    "ENEMIES_OBJECT_UNUSED__230"
+                  ]
+                }
+              },
+              "stackFlag": "Level"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+              "duration": {
+                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__229) || RETURN",
+                "displayLines": "ENEMIES_OBJECT_UNUSED__229",
+                "constants": [],
+                "variables": [
+                  "ENEMIES_OBJECT_UNUSED__229"
+                ]
+              },
+              "valuePerStack": {
+                "Modifier_Poison_DamagePercentage": {
+                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__230) || RETURN",
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__230",
+                  "constants": [],
+                  "variables": [
+                    "ENEMIES_OBJECT_UNUSED__230"
+                  ]
+                }
+              },
+              "stackFlag": "Level"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
+              "duration": {
+                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__229) || RETURN",
+                "displayLines": "ENEMIES_OBJECT_UNUSED__229",
+                "constants": [],
+                "variables": [
+                  "ENEMIES_OBJECT_UNUSED__229"
+                ]
+              },
+              "valuePerStack": {
+                "Modifier_Burn_DamagePercentage": {
+                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__230) || RETURN",
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__230",
+                  "constants": [],
+                  "variables": [
+                    "ENEMIES_OBJECT_UNUSED__230"
+                  ]
+                }
+              },
+              "stackFlag": "Level"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"227784370\">Standard_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
+              "duration": {
+                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__229) || RETURN",
+                "displayLines": "ENEMIES_OBJECT_UNUSED__229",
+                "constants": [],
+                "variables": [
+                  "ENEMIES_OBJECT_UNUSED__229"
+                ]
+              },
+              "valuePerStack": {
+                "Modifier_Tear_DamageRatio": 0.1,
+                "Modifier_Tear_MaxPercentage": {
+                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__230) || RETURN",
+                  "displayLines": "ENEMIES_OBJECT_UNUSED__230",
+                  "constants": [],
+                  "variables": [
+                    "ENEMIES_OBJECT_UNUSED__230"
+                  ]
+                }
+              },
+              "stackFlag": "Level"
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__808836798\">StageSpecialAbility_20412061_InBattle_Weakness_Thunder</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_AttachWeakness"
+          ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Override Modifier Name",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifierName": "<a class=\"gModGreen\" id=\"808836798\">StageSpecialAbility_20412061_InBattle_Weakness_Thunder</a>",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"954284461\">Silwolf_BPAbility_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Extra Lightning Weakness</span>]"
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningBonus</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Thunder"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "60021_MissionBattleEvent60021_Insert2": {
+      "fileName": "60021_MissionBattleEvent60021_Insert2",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"270618984\">StageSpecialAbility_20412061_BEPerform</a>",
+          "paramSequence2": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1351694549\">StageSpecialAbility_20412061_InBattle_Weakness_Ice</a>",
+              "duration": 2,
+              "valuePerStack": {
+                "MDF_PropertyValue": 0.2
+              }
+            },
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "searchRandom": true,
+              "ifTargetFound": [
+                {
+                  "name": "Action Advance/Delay",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "advanceType": "Delay",
+                  "multiAdd": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1351694549\">StageSpecialAbility_20412061_InBattle_Weakness_Ice</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_AttachWeakness"
+          ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Override Modifier Name",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1351694549\">StageSpecialAbility_20412061_InBattle_Weakness_Ice</a>",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"110873612\">Silwolf_BPAbility_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Extra Ice Weakness</span>]"
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIceBonus</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Ice"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "60021_MissionBattleEvent60021_Insert1": {
+      "fileName": "60021_MissionBattleEvent60021_Insert1",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"270618984\">StageSpecialAbility_20412061_BEPerform</a>",
+          "paramSequence2": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"591807962\">StageSpecialAbility_20412061_InBattle_Weakness_Wind</a>",
+              "duration": 2,
+              "valuePerStack": {
+                "MDF_PropertyValue": 0.2
+              }
+            },
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Quantum",
+                "Damage": {
+                  "operator": "Constants[0] (8) || Variables[0] ({[SkillP01[3]]}) || MUL || RETURN",
+                  "displayLines": "(8 * {[SkillP01[3]]})",
+                  "constants": [
+                    8
+                  ],
+                  "variables": [
+                    "{[SkillP01[3]]}"
+                  ]
+                },
+                "indirectDMG": true,
+                "Toughness": {
+                  "displayLines": 30
+                },
+                "Tags": null,
+                "attackType": "Ultimate"
+              }
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__591807962\">StageSpecialAbility_20412061_InBattle_Weakness_Wind</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_AttachWeakness"
+          ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Override Modifier Name",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifierName": "<a class=\"gModGreen\" id=\"591807962\">StageSpecialAbility_20412061_InBattle_Weakness_Wind</a>",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"1411533355\">Silwolf_BPAbility_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Extra Wind Weakness</span>]"
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindBonus</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Wind"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
     "60021_MissionBattleEvent60021_AbilityP01": {
       "fileName": "60021_MissionBattleEvent60021_AbilityP01",
       "childAbilityList": [
@@ -815,535 +1344,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
-      }
-    },
-    "60021_MissionBattleEvent60021_Insert4": {
-      "fileName": "60021_MissionBattleEvent60021_Insert4",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"270618984\">StageSpecialAbility_20412061_BEPerform</a>",
-          "paramSequence2": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1487905304\">StageSpecialAbility_20412061_InBattle_Weakness_Fire</a>",
-              "duration": 2,
-              "valuePerStack": {
-                "MDF_PropertyValue": 0.2
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "dmgFormula": "Max HP Scaling",
-                "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (2) || MUL || RETURN",
-                  "displayLines": "(AOE Toughness Value * 2)",
-                  "constants": [
-                    2
-                  ],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
-                },
-                "ToughnessDMGType": {
-                  "DamageType": "AllType"
-                },
-                "Tags": null,
-                "attackType": "Ultimate"
-              }
-            }
-          ]
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1487905304\">StageSpecialAbility_20412061_InBattle_Weakness_Fire</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_AttachWeakness"
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Override Modifier Name",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifierName": "<a class=\"gModGreen\" id=\"1487905304\">StageSpecialAbility_20412061_InBattle_Weakness_Fire</a>",
-                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1099669275\">Silwolf_BPAbility_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]"
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFireBonus</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                },
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Fire"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "60021_MissionBattleEvent60021_Insert3": {
-      "fileName": "60021_MissionBattleEvent60021_Insert3",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"270618984\">StageSpecialAbility_20412061_BEPerform</a>",
-          "paramSequence2": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"808836798\">StageSpecialAbility_20412061_InBattle_Weakness_Thunder</a>",
-              "duration": 2,
-              "valuePerStack": {
-                "MDF_PropertyValue": 0.2
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
-              "duration": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__229) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__229",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__229"
-                ]
-              },
-              "valuePerStack": {
-                "Modifier_Electric_DamagePercentage": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__230) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__230",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__230"
-                  ]
-                }
-              },
-              "stackFlag": "Level"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
-              "duration": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__229) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__229",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__229"
-                ]
-              },
-              "valuePerStack": {
-                "Modifier_Poison_DamagePercentage": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__230) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__230",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__230"
-                  ]
-                }
-              },
-              "stackFlag": "Level"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
-              "duration": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__229) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__229",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__229"
-                ]
-              },
-              "valuePerStack": {
-                "Modifier_Burn_DamagePercentage": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__230) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__230",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__230"
-                  ]
-                }
-              },
-              "stackFlag": "Level"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"227784370\">Standard_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
-              "duration": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__229) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__229",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__229"
-                ]
-              },
-              "valuePerStack": {
-                "Modifier_Tear_DamageRatio": 0.1,
-                "Modifier_Tear_MaxPercentage": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__230) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__230",
-                  "constants": [],
-                  "variables": [
-                    "ENEMIES_OBJECT_UNUSED__230"
-                  ]
-                }
-              },
-              "stackFlag": "Level"
-            }
-          ]
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__808836798\">StageSpecialAbility_20412061_InBattle_Weakness_Thunder</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_AttachWeakness"
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Override Modifier Name",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifierName": "<a class=\"gModGreen\" id=\"808836798\">StageSpecialAbility_20412061_InBattle_Weakness_Thunder</a>",
-                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"954284461\">Silwolf_BPAbility_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Extra Lightning Weakness</span>]"
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningBonus</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                },
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Thunder"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "60021_MissionBattleEvent60021_Insert2": {
-      "fileName": "60021_MissionBattleEvent60021_Insert2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"270618984\">StageSpecialAbility_20412061_BEPerform</a>",
-          "paramSequence2": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1351694549\">StageSpecialAbility_20412061_InBattle_Weakness_Ice</a>",
-              "duration": 2,
-              "valuePerStack": {
-                "MDF_PropertyValue": 0.2
-              }
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "searchRandom": true,
-              "ifTargetFound": [
-                {
-                  "name": "Action Advance/Delay",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "advanceType": "Delay",
-                  "multiAdd": 1
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1351694549\">StageSpecialAbility_20412061_InBattle_Weakness_Ice</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_AttachWeakness"
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Override Modifier Name",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifierName": "<a class=\"gModGreen\" id=\"-1351694549\">StageSpecialAbility_20412061_InBattle_Weakness_Ice</a>",
-                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"110873612\">Silwolf_BPAbility_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Extra Ice Weakness</span>]"
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIceBonus</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                },
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Ice"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "60021_MissionBattleEvent60021_Insert1": {
-      "fileName": "60021_MissionBattleEvent60021_Insert1",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"270618984\">StageSpecialAbility_20412061_BEPerform</a>",
-          "paramSequence2": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"591807962\">StageSpecialAbility_20412061_InBattle_Weakness_Wind</a>",
-              "duration": 2,
-              "valuePerStack": {
-                "MDF_PropertyValue": 0.2
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "canPhase": true,
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "Damage": {
-                  "operator": "Constants[0] (8) || Variables[0] ({[SkillP01[3]]}) || MUL || RETURN",
-                  "displayLines": "(8 * {[SkillP01[3]]})",
-                  "constants": [
-                    8
-                  ],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
-                },
-                "indirectDMG": true,
-                "Toughness": {
-                  "displayLines": 30
-                },
-                "Tags": null,
-                "attackType": "Ultimate"
-              }
-            }
-          ]
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__591807962\">StageSpecialAbility_20412061_InBattle_Weakness_Wind</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_AttachWeakness"
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Override Modifier Name",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifierName": "<a class=\"gModGreen\" id=\"591807962\">StageSpecialAbility_20412061_InBattle_Weakness_Wind</a>",
-                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"1411533355\">Silwolf_BPAbility_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Extra Wind Weakness</span>]"
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindBonus</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                },
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Wind"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "60021_MissionBattleEvent60021_Ability03_Camera": {
