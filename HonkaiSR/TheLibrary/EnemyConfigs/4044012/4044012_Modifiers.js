@@ -1593,6 +1593,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__534638248\">Monster_W4_Theoroi_Part1</a>[<span class=\"descriptionNumberColor\">To Logos</span>]",
+      "latentQueue": [
+        "MainCount"
+      ],
       "description": "Use \"SET Proof_Method=Black_Tide\" after <span class=\"descriptionNumberColor\">MDF_CurrentCountRemain</span> more instances of either of the following: enemy target generations or ally memosprite summons.",
       "type": "Other",
       "effectName": "To Logos",

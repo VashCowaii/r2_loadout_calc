@@ -3,36 +3,24 @@ const compositeAbilityObject = {
   "fullCharacterName": 4035011,
   "trimCharacterName": 4035011,
   "abilityList": [
-    "4035011_Monster_W4_IronTombCore_Main_P2_5",
-    "4035011_Monster_W4_IronTombCore_Main_P2BattlePerform",
-    "4035011_Monster_W4_IronTombCore_Main_P3QTE",
-    "4035011_Monster_W4_IronTombCore_Main_P3BattlePerform02",
-    "4035011_Monster_W4_IronTombCore_Main_P3BattlePerform",
-    "4035011_Monster_W4_IronTombCore_Main_P3",
     "4035011_Monster_W4_IronTombCore_Main_P3End",
-    "4035011_Monster_W4_IronTombCore_Main_P2End",
-    "4035011_Monster_W4_IronTombCore_Main_WorldErosion_Insert",
-    "4035011_Monster_W4_IronTombCore_Main_PassiveAbilityInitiate",
+    "4035011_Monster_W4_IronTombCore_Main_EndPerform_Part01",
     "4035011_Monster_W4_IronTombCore_Main_Ability083_Part01",
     "4035011_Monster_W4_IronTombCore_Main_Ability08_Part02",
     "4035011_Monster_W4_IronTombCore_Main_Ability08_Part01",
-    "4035011_Monster_W4_IronTombCore_Main_Ability06_Part02",
-    "4035011_Monster_W4_IronTombCore_Main_Ability06_Part01",
-    "4035011_Monster_W4_IronTombCore_Main_EndPerform_Part01",
-    "4035011_Monster_W4_IronTombCore_QATest_NoEnding",
-    "4035011_Monster_W4_IronTombCore_Appear",
-    "4035011_Monster_W4_IronTombCore_Beta",
+    "4035011_Monster_W4_IronTombCore_Main_P2End",
+    "4035011_Monster_W4_IronTombCore_Main_WorldErosion_Insert",
+    "4035011_Monster_W4_IronTombCore_Main_PassiveAbilityInitiate",
     "4035011_Monster_W4_IronTombCore_WorldErosion_Insert",
-    "4035011_Monster_W4_IronTombCore_TimeLock_Off",
-    "4035011_Monster_W4_IronTombCore_PassiveAbility_Insert02",
     "4035011_Monster_W4_IronTombCore_PassiveAbility_Insert",
     "4035011_Monster_W4_IronTombCore_PassiveAbilityInitiate",
     "4035011_Monster_W4_IronTombCore_Ability09_Part01",
-    "4035011_Monster_W4_IronTombCore_Ability082_Part01",
     "4035011_Monster_W4_IronTombCore_Ability08_Part02",
     "4035011_Monster_W4_IronTombCore_Ability08_Part01",
     "4035011_Monster_W4_IronTombCore_Ability07_Part02",
     "4035011_Monster_W4_IronTombCore_Ability07_Part01",
+    "4035011_Monster_W4_IronTombCore_Main_Ability06_Part02",
+    "4035011_Monster_W4_IronTombCore_Main_Ability06_Part01",
     "4035011_Monster_W4_IronTombCore_Ability06_Part02",
     "4035011_Monster_W4_IronTombCore_Ability06_Part01",
     "4035011_Monster_W4_IronTombCore_Ability05_Part02",
@@ -50,181 +38,6 @@ const compositeAbilityObject = {
     "4035011_BE_BattleEvents"
   ],
   "abilityObject": {
-    "4035011_Monster_W4_IronTombCore_Main_P2_5": {
-      "fileName": "4035011_Monster_W4_IronTombCore_Main_P2_5",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-717242715\">Monster_W4_IronTombCore_Main_P2_5</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-717242715\">Monster_W4_IronTombCore_Main_P2_5</a>"
-        }
-      ]
-    },
-    "4035011_Monster_W4_IronTombCore_Main_P2BattlePerform": {
-      "fileName": "4035011_Monster_W4_IronTombCore_Main_P2BattlePerform",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"395299548\">Monster_W4_IronTombCore_Main_P2BattlePerform</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__395299548\">Monster_W4_IronTombCore_Main_P2BattlePerform</a>"
-        }
-      ]
-    },
-    "4035011_Monster_W4_IronTombCore_Main_P3QTE": {
-      "fileName": "4035011_Monster_W4_IronTombCore_Main_P3QTE",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"463592931\">Enemy_W4_IronTombCore_Main_P3Level</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1833350337\">Enemy_W4_IronTombCore_Main_P3QTETest</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1833350337\">Enemy_W4_IronTombCore_Main_P3QTETest</a>"
-        }
-      ]
-    },
-    "4035011_Monster_W4_IronTombCore_Main_P3BattlePerform02": {
-      "fileName": "4035011_Monster_W4_IronTombCore_Main_P3BattlePerform02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"463592931\">Enemy_W4_IronTombCore_Main_P3Level</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1313833624\">Enemy_W4_IronTombCore_Main_P3BattlePerformTest02</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1313833624\">Enemy_W4_IronTombCore_Main_P3BattlePerformTest02</a>"
-        }
-      ]
-    },
-    "4035011_Monster_W4_IronTombCore_Main_P3BattlePerform": {
-      "fileName": "4035011_Monster_W4_IronTombCore_Main_P3BattlePerform",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"463592931\">Enemy_W4_IronTombCore_Main_P3Level</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"154177838\">Enemy_W4_IronTombCore_Main_P3BattlePerformTest</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__154177838\">Enemy_W4_IronTombCore_Main_P3BattlePerformTest</a>"
-        }
-      ]
-    },
-    "4035011_Monster_W4_IronTombCore_Main_P3": {
-      "fileName": "4035011_Monster_W4_IronTombCore_Main_P3",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"463592931\">Enemy_W4_IronTombCore_Main_P3Level</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4035011_Monster_W4_IronTombCore_Main_P3End": {
       "fileName": "4035011_Monster_W4_IronTombCore_Main_P3End",
       "abilityType": null,
@@ -247,6 +60,155 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"895432020\">Enemy_W4_IronTombCore_Main_DisableAction</a>"
         }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4035011_Monster_W4_IronTombCore_Main_EndPerform_Part01": {
+      "fileName": "4035011_Monster_W4_IronTombCore_Main_EndPerform_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"144377800\">W4_IronTombCore_RemoveBreakEffect</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": "Yapping is over"
+        },
+        {
+          "name": "Inject Ability Use",
+          "abilityName": "Monster_W4_IronTombCore_Main_Ability08_Part01",
+          "priorityTag": "STAGE_Enemy",
+          "ownerState": "Mask_AliveOrLimbo",
+          "targetState": "Mask_AliveOrLimbo",
+          "canHitNonTargets": true,
+          "allowAbilityTriggers": false
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4035011_Monster_W4_IronTombCore_Main_Ability083_Part01": {
+      "fileName": "4035011_Monster_W4_IronTombCore_Main_Ability083_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": "Yapping is over"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4035011_Monster_W4_IronTombCore_Main_Ability08_Part02": {
+      "fileName": "4035011_Monster_W4_IronTombCore_Main_Ability08_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"144377800\">W4_IronTombCore_RemoveBreakEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Irontomb: Cyrene's Demiurge}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-385769957\">MEnemy_W4_IronTombCore_Main_CharacterForceVisible</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "#CL_QTE_Progress",
+          "value": {
+            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__106) || RETURN",
+            "displayLines": "ENEMIES_OBJECT_UNUSED__106",
+            "constants": [],
+            "variables": [
+              "ENEMIES_OBJECT_UNUSED__106"
+            ]
+          }
+        },
+        {
+          "name": "Set IronTomb Progress",
+          "display": {
+            "operator": "Variables[0] (#CL_QTE_Progress) || RETURN",
+            "displayLines": "#CL_QTE_Progress",
+            "constants": [],
+            "variables": [
+              "#CL_QTE_Progress"
+            ]
+          },
+          "mode": "QTE"
+        },
+        {
+          "name": "Set IronTomb Progress",
+          "display": 80,
+          "duration": 8,
+          "mode": "QTE"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "#CL_QTE_Progress",
+          "value": 80
+        },
+        {
+          "name": "Set IronTomb Progress",
+          "display": 95,
+          "duration": 2.5,
+          "mode": "QTE"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "#CL_QTE_Progress",
+          "value": 95
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_IronTombCore_Main_Ability083_Part01",
+          "isTrigger": true
+        },
+        "Quick-Time-Event"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4035011_Monster_W4_IronTombCore_Main_Ability08_Part01": {
+      "fileName": "4035011_Monster_W4_IronTombCore_Main_Ability08_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_IronTombCore_Main_Ability08_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
@@ -664,480 +626,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4035011_Monster_W4_IronTombCore_Main_Ability083_Part01": {
-      "fileName": "4035011_Monster_W4_IronTombCore_Main_Ability083_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "IF",
-          "conditions": "Yapping is over"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4035011_Monster_W4_IronTombCore_Main_Ability08_Part02": {
-      "fileName": "4035011_Monster_W4_IronTombCore_Main_Ability08_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"144377800\">W4_IronTombCore_RemoveBreakEffect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Irontomb: Cyrene's Demiurge}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-385769957\">MEnemy_W4_IronTombCore_Main_CharacterForceVisible</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "#CL_QTE_Progress",
-          "value": {
-            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__106) || RETURN",
-            "displayLines": "ENEMIES_OBJECT_UNUSED__106",
-            "constants": [],
-            "variables": [
-              "ENEMIES_OBJECT_UNUSED__106"
-            ]
-          }
-        },
-        {
-          "name": "Set IronTomb Progress",
-          "display": {
-            "operator": "Variables[0] (#CL_QTE_Progress) || RETURN",
-            "displayLines": "#CL_QTE_Progress",
-            "constants": [],
-            "variables": [
-              "#CL_QTE_Progress"
-            ]
-          },
-          "mode": "QTE"
-        },
-        {
-          "name": "Set IronTomb Progress",
-          "display": 80,
-          "duration": 8,
-          "mode": "QTE"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "#CL_QTE_Progress",
-          "value": 80
-        },
-        {
-          "name": "Set IronTomb Progress",
-          "display": 95,
-          "duration": 2.5,
-          "mode": "QTE"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "#CL_QTE_Progress",
-          "value": 95
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_IronTombCore_Main_Ability083_Part01",
-          "isTrigger": true
-        },
-        "Quick-Time-Event"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4035011_Monster_W4_IronTombCore_Main_Ability08_Part01": {
-      "fileName": "4035011_Monster_W4_IronTombCore_Main_Ability08_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_IronTombCore_Main_Ability08_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4035011_Monster_W4_IronTombCore_Main_Ability06_Part02": {
-      "fileName": "4035011_Monster_W4_IronTombCore_Main_Ability06_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"144377800\">W4_IronTombCore_RemoveBreakEffect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Irontomb: Cyrene's Demiurge}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-385769957\">MEnemy_W4_IronTombCore_Main_CharacterForceVisible</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1868461228\">Enemy_W4_IronTombCorePart_01_Ability02_Charge</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-699052579\">Enemy_W4_IronTombCorePart_Ability02_Charge</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1834862117\">Enemy_W4_IronTombCore_Main_P3_PartDisableAction</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team(Exclude Memosprites)}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team(Exclude Memosprites)}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team(Exclude Memosprites)}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team(Exclude Memosprites)}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>"
-            }
-          ]
-        },
-        "Quick-Time-Event",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-660533962\">Enemy_W4_IronTombCore_Main_P3_HardLockHp_50</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Irontomb: Cyrene's Demiurge}}"
-          },
-          "maxTargets": 1,
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"402547307\">MissionBattleEvent60034_AddAbility</a>"
-            },
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "ability": "Servant_CyreneServant_v2_Ability01_Part01",
-              "isTrigger": true
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Irontomb: Phantom}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1998035776\">Enemy_W4_IronTombPhantom_Part3</a>[<span class=\"descriptionNumberColor\">ERROR: Main Process Compromised</span>]"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-1291213263\">W4_IronTombCore_AddBreakEffect</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_MissionTalkEnd",
-          "value": 1
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            }
-          ]
-        }
-      ]
-    },
-    "4035011_Monster_W4_IronTombCore_Main_Ability06_Part01": {
-      "fileName": "4035011_Monster_W4_IronTombCore_Main_Ability06_Part01",
-      "childAbilityList": [
-        "4035011_Monster_W4_IronTombCore_Main_Ability06_Part01",
-        "4035011_Monster_W4_IronTombCore_Main_Ability06_Part02"
-      ],
-      "skillTrigger": "Skill062",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_IronTombCore_Main_Ability06_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "targetIsVariable": true
-      },
-      "references": []
-    },
-    "4035011_Monster_W4_IronTombCore_Main_EndPerform_Part01": {
-      "fileName": "4035011_Monster_W4_IronTombCore_Main_EndPerform_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"144377800\">W4_IronTombCore_RemoveBreakEffect</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": "Yapping is over"
-        },
-        {
-          "name": "Inject Ability Use",
-          "abilityName": "Monster_W4_IronTombCore_Main_Ability08_Part01",
-          "priorityTag": "STAGE_Enemy",
-          "ownerState": "Mask_AliveOrLimbo",
-          "targetState": "Mask_AliveOrLimbo",
-          "canHitNonTargets": true,
-          "allowAbilityTriggers": false
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4035011_Monster_W4_IronTombCore_QATest_NoEnding": {
-      "fileName": "4035011_Monster_W4_IronTombCore_QATest_NoEnding",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1441620046\">Monster_W4_IronTombCore_QATest_NoEnding</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1441620046\">Monster_W4_IronTombCore_QATest_NoEnding</a>"
-        }
-      ]
-    },
-    "4035011_Monster_W4_IronTombCore_Appear": {
-      "fileName": "4035011_Monster_W4_IronTombCore_Appear",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4035011_Monster_W4_IronTombCore_Beta": {
-      "fileName": "4035011_Monster_W4_IronTombCore_Beta",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"845647266\">Enemy_W4_IronTombCore_Beta</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__845647266\">Enemy_W4_IronTombCore_Beta</a>"
-        }
-      ]
-    },
     "4035011_Monster_W4_IronTombCore_WorldErosion_Insert": {
       "fileName": "4035011_Monster_W4_IronTombCore_WorldErosion_Insert",
       "abilityType": null,
@@ -1366,586 +854,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []
-    },
-    "4035011_Monster_W4_IronTombCore_TimeLock_Off": {
-      "fileName": "4035011_Monster_W4_IronTombCore_TimeLock_Off",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1372521903\">MModifier_W4_IronTombCore_TimeLock</a>[<span class=\"descriptionNumberColor\">Action Lock</span>]"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4035011_Monster_W4_IronTombCore_PassiveAbility_Insert02": {
-      "fileName": "4035011_Monster_W4_IronTombCore_PassiveAbility_Insert02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{BattleEvent60030}}"
-          },
-          "variableName": "_CurrentBPSP",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
-        },
-        {
-          "name": "Mark Entity For Immediate Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{BattleEvent60030}}"
-          }
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{BattleEvent60030}}"
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_WorldErosionIndex",
-          "value": 2
-        },
-        {
-          "name": "Add Battle Event",
-          "eventID": 60031,
-          "assignOwner": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "variables": null,
-          "whenCreated": [
-            {
-              "name": "Update Energy",
-              "on": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "value": {
-                "operator": "Variables[0] (_CurrentBPSP) || RETURN",
-                "displayLines": "_CurrentBPSP",
-                "constants": [],
-                "variables": [
-                  "_CurrentBPSP"
-                ]
-              },
-              "isFixed": "* ERR",
-              "isSetToValue": true
-            },
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_IsWeek",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Irontomb: Phantom}}"
-          },
-          "variableName": "_PhaseCheck",
-          "value": 1
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Level Entity}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"845647266\">Enemy_W4_IronTombCore_Beta</a>",
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "Change Battle Arena",
-              "status": "Inactive",
-              "arenaID": 2048104
-            },
-            {
-              "name": "Change Battle Arena",
-              "arenaID": 2048105
-            }
-          ]
-        },
-        "Deleted bullshit",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_WorldErosion",
-            "compareType": "<",
-            "value2": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-              "displayLines": "({[PassiveSkill01[0]]} * 100)",
-              "constants": [
-                100
-              ],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
-            }
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Trigger1",
-              "value": 1
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Trigger2",
-              "value": 1
-            },
-            {
-              "name": "Set IronTomb Progress",
-              "display": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-                "displayLines": "({[PassiveSkill01[0]]} * 100)",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
-              },
-              "duration": 3
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_WorldErosion",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-                "displayLines": "({[PassiveSkill01[0]]} * 100)",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Set HP Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "setValue": 1
-        },
-        {
-          "name": "Divide BossHP into Bars",
-          "barCount": 15
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations",
-            "invertCondition": true
-          }
-        },
-        {
-          "name": "Deal Toughness DMG",
-          "value": 99999,
-          "defender": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ToughnessDMGType": {
-            "name": "Damage Type Source",
-            "sourceType": {}
-          }
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Irontomb: Part 1}}"
-          },
-          "searchRandom": true,
-          "ifTargetFound": [
-            {
-              "name": "Dispel Debuffs",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "silent": true
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1902031976\">Monster_ChangePhase_ParamEntity</a>"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-2078801645\">Enemy_W4_IronTombCorePart_Break</a>[<span class=\"descriptionNumberColor\">Grave Wound</span>]"
-              },
-              "passed": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-1496068463\">W4_IronTombCorePart_Recover</a>"
-                }
-              ]
-            },
-            {
-              "name": "Heal",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "healPercent": 1,
-              "formula": "Heal from Target MaxHP"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Irontomb: Part 2}}"
-          },
-          "searchRandom": true,
-          "ifTargetFound": [
-            {
-              "name": "Dispel Debuffs",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "silent": true
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1902031976\">Monster_ChangePhase_ParamEntity</a>"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-2078801645\">Enemy_W4_IronTombCorePart_Break</a>[<span class=\"descriptionNumberColor\">Grave Wound</span>]"
-              },
-              "passed": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"2061848542\">W4_IronTombCorePart_01_Recover</a>"
-                }
-              ]
-            },
-            {
-              "name": "Heal",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "healPercent": 1,
-              "formula": "Heal from Target MaxHP"
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2029275245\">Enemy_W4_IronTombCore_P3_PartController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1529513281\">Enemy_W4_IronTombCore_Main_P3_AvatarDamageAdded_Listener</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"187835282\">MModifier_W4_IronTombCore_Ability07_Charge</a>[<span class=\"descriptionNumberColor\">Resist and Destroy</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-141772826\">MModifier_W4_IronTombCore_Ability07_BlockDamage</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1381137894\">MModifier_W4_IronTombCore_Ability07_MuteBreak</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1262350181\">MModifier_W4_IronTombCorePart_Ability07_Charge</a>",
-          "casterAssign": "TargetSelf"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Irontomb: Part 1}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Irontomb: Part 2}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Define Custom Variable with WorldLevel",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "_WorldLevel"
-        },
-        {
-          "name": "IF",
-          "conditions": "Turn Owner is in Action",
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"990482536\">Enemy_W4_IronTombCore_P3_DisableAction</a>"
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "_WorldLevel",
-                "compareType": "<",
-                "value2": 6
-              },
-              "passed": [
-                {
-                  "name": "Action Advance/Delay",
-                  "advanceType": "Set",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "set": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_228) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_228",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_228"
-                    ]
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Action Advance/Delay",
-                  "advanceType": "Set",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "set": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_229) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_229",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_229"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}} + {{Irontomb: Core}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-470333037\">Enemy_W4_IronTombCore_Main_P3_HpRatioAdded</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 4035010,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Anti-Creator, Hatred Inundate"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-493664803\">MScoring_30234_FirstTutorial</a>"
-              },
-              "passed": [
-                {
-                  "name": "Achievement",
-                  "matchTags": true,
-                  "relatedAchievements": []
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__990482536\">Enemy_W4_IronTombCore_P3_DisableAction</a>",
-          "modifierFlags": [
-            "DisableAction"
-          ],
-          "latentQueue": [
-            "_IsWeek",
-            "_PhaseCheck",
-            "_Trigger1",
-            "_Trigger2",
-            "AIFlag",
-            "_WorldLevel"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Turn [Action-End Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "_WorldLevel",
-                    "compareType": "<",
-                    "value2": 6
-                  },
-                  "passed": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "set": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_228) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_228",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_228"
-                        ]
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "set": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_229) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_229",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_229"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        }
-      ]
     },
     "4035011_Monster_W4_IronTombCore_PassiveAbility_Insert": {
       "fileName": "4035011_Monster_W4_IronTombCore_PassiveAbility_Insert",
@@ -2682,81 +1590,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       },
       "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4035011_Monster_W4_IronTombCore_Ability082_Part01": {
-      "fileName": "4035011_Monster_W4_IronTombCore_Ability082_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-141772826\">MModifier_W4_IronTombCore_Ability07_BlockDamage</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1381137894\">MModifier_W4_IronTombCore_Ability07_MuteBreak</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"187835282\">MModifier_W4_IronTombCore_Ability07_Charge</a>[<span class=\"descriptionNumberColor\">Resist and Destroy</span>]"
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "_CurrentStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
-        },
-        {
-          "name": "Deal Toughness DMG",
-          "value": {
-            "operator": "Variables[0] (_CurrentStance) || RETURN",
-            "displayLines": "_CurrentStance",
-            "constants": [],
-            "variables": [
-              "_CurrentStance"
-            ]
-          },
-          "defender": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "forceReduction": true,
-          "canDelay": true,
-          "ToughnessDMGType": {
-            "name": "Damage Type Source",
-            "sourceType": {}
-          }
-        }
-      ],
-      "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -3847,6 +2680,265 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4035011_Monster_W4_IronTombCore_Main_Ability06_Part02": {
+      "fileName": "4035011_Monster_W4_IronTombCore_Main_Ability06_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"144377800\">W4_IronTombCore_RemoveBreakEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Irontomb: Cyrene's Demiurge}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-385769957\">MEnemy_W4_IronTombCore_Main_CharacterForceVisible</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1868461228\">Enemy_W4_IronTombCorePart_01_Ability02_Charge</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-699052579\">Enemy_W4_IronTombCorePart_Ability02_Charge</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1834862117\">Enemy_W4_IronTombCore_Main_P3_PartDisableAction</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team(Exclude Memosprites)}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>",
+            "invertCondition": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team(Exclude Memosprites)}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>",
+            "invertCondition": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team(Exclude Memosprites)}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>",
+            "invertCondition": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team(Exclude Memosprites)}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>",
+            "invertCondition": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>"
+            }
+          ]
+        },
+        "Quick-Time-Event",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-660533962\">Enemy_W4_IronTombCore_Main_P3_HardLockHp_50</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Irontomb: Cyrene's Demiurge}}"
+          },
+          "maxTargets": 1,
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"402547307\">MissionBattleEvent60034_AddAbility</a>"
+            },
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "ability": "Servant_CyreneServant_v2_Ability01_Part01",
+              "isTrigger": true
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Irontomb: Phantom}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1998035776\">Enemy_W4_IronTombPhantom_Part3</a>[<span class=\"descriptionNumberColor\">ERROR: Main Process Compromised</span>]"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1291213263\">W4_IronTombCore_AddBreakEffect</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_MissionTalkEnd",
+          "value": 1
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            }
+          ]
+        }
+      ]
+    },
+    "4035011_Monster_W4_IronTombCore_Main_Ability06_Part01": {
+      "fileName": "4035011_Monster_W4_IronTombCore_Main_Ability06_Part01",
+      "childAbilityList": [
+        "4035011_Monster_W4_IronTombCore_Main_Ability06_Part01",
+        "4035011_Monster_W4_IronTombCore_Main_Ability06_Part02"
+      ],
+      "skillTrigger": "Skill062",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_IronTombCore_Main_Ability06_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "targetIsVariable": true
       },
       "references": []
     },

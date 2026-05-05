@@ -4,9 +4,8 @@ const compositeAbilityObject = {
   "trimCharacterName": 4044011,
   "abilityList": [
     "4044011_Monster_W4_Theoroi_Part2Summon",
-    "4044011_BattleEventAbility_Monster_W4_Theoroi_Enhance",
     "4044011_BattleEventAbility_Monster_W4_Theoroi_SummonMonster",
-    "4044011_BattleEventAbility_Monster_W4_Theoroi_Summon",
+    "4044011_Monster_W4_Theoroi_Passive01",
     "4044011_Monster_W4_Theoroi_Ability17_Part02",
     "4044011_Monster_W4_Theoroi_Ability17_Part01",
     "4044011_Monster_W4_Theoroi_Ability16_Part02",
@@ -29,7 +28,6 @@ const compositeAbilityObject = {
     "4044011_Monster_W4_Theoroi_Ability02_Part01",
     "4044011_Monster_W4_Theoroi_Ability01_Part02",
     "4044011_Monster_W4_Theoroi_Ability01_Part01",
-    "4044011_Monster_W4_Theoroi_Passive01",
     "4044011_Monster_W4_Theoroi_PassiveAbility_BGM",
     "4044011_Modifiers",
     "4044011_BE_BattleEvents"
@@ -282,73 +280,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4044011_BattleEventAbility_Monster_W4_Theoroi_Enhance": {
-      "fileName": "4044011_BattleEventAbility_Monster_W4_Theoroi_Enhance",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 0.5
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-839772764\">Modifier_BattleEventAbility_Enhance</a>"
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "TheoroiEnhance",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-839772764\">Modifier_BattleEventAbility_Enhance</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "condition": {
-                    "name": "Insert Ability Condition",
-                    "type": "AbilityOwnerInsertUnusedCount",
-                    "typeValue": 1
-                  },
-                  "abilityName": "Monster_W4_Theoroi_Ability17_Part01",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Zandar: Self}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "priorityTag": "EnemyBuffSelf",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "4044011_BattleEventAbility_Monster_W4_Theoroi_SummonMonster": {
       "fileName": "4044011_BattleEventAbility_Monster_W4_Theoroi_SummonMonster",
       "abilityType": null,
@@ -448,28 +379,20 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4044011_BattleEventAbility_Monster_W4_Theoroi_Summon": {
-      "fileName": "4044011_BattleEventAbility_Monster_W4_Theoroi_Summon",
-      "abilityType": null,
+    "4044011_Monster_W4_Theoroi_Passive01": {
+      "fileName": "4044011_Monster_W4_Theoroi_Passive01",
+      "skillTrigger": "PassiveSkill03",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
+      "parse": [
         {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "multiBase": {
-            "operator": "Variables[0] (SummonInitDelay) || RETURN",
-            "displayLines": "SummonInitDelay",
-            "constants": [],
-            "variables": [
-              "SummonInitDelay"
-            ]
-          }
+          "modifier": "<a class=\"gModGreen\" id=\"-62507954\">W4_Theoroi_BattleScore1</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -477,65 +400,120 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"746359205\">Modifier_BattleEventAbility_SummonMonster</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-79285573\">W4_Theoroi_BattleScore2</a>"
         },
         {
-          "name": "Assign Unique Name",
-          "uniqueName": "TheoroiSummon",
+          "name": "Boss Bar Display",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          }
-        }
-      ],
-      "references": [
+          },
+          "display": true
+        },
         {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__746359205\">Modifier_BattleEventAbility_SummonMonster</a>",
-          "execute": [
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Divide BossHP into Bars",
+          "barCount": {
+            "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
+            "displayLines": "{[PassiveSkill03[5]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill03[5]]}"
+            ]
+          }
+        },
+        {
+          "name": "Preload Battle Event(s)",
+          "eventID": [
+            20024,
+            20028
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "InSkill05",
+            "invertCondition": true
+          },
+          "passed": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Enemy Team All}}"
-                    },
-                    "value1": "TeamCharacterCount",
-                    "compareType": "<",
-                    "value2": 6
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "BattleEventAbility_Monster_W4_Theoroi_SummonMonster",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Zandar: Self}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "priorityTag": "EnemyBuffOthers",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
-                    }
+              "name": "Add Battle Event",
+              "teamName": "Enemy Team",
+              "eventID": 20024,
+              "variables": {
+                "SummonInitDelay": {
+                  "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+                  "displayLines": "{[PassiveSkill01[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[PassiveSkill01[1]]}"
                   ]
                 }
-              ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1225407383\">Monster_W4_Theoroi_Passive</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 4044011,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "First Genius, Entelechy, Zandar",
+            "isBaseCompare": true
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-2031587797\">Monster_W4_Theoroi_Main</a>"
             }
           ]
         }
-      ]
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"534638248\">Monster_W4_Theoroi_Part1</a>[<span class=\"descriptionNumberColor\">To Logos</span>]"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
     },
     "4044011_Monster_W4_Theoroi_Ability17_Part02": {
       "fileName": "4044011_Monster_W4_Theoroi_Ability17_Part02",
@@ -3450,142 +3428,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4044011_Monster_W4_Theoroi_Passive01": {
-      "fileName": "4044011_Monster_W4_Theoroi_Passive01",
-      "skillTrigger": "PassiveSkill03",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-62507954\">W4_Theoroi_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-79285573\">W4_Theoroi_BattleScore2</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Divide BossHP into Bars",
-          "barCount": {
-            "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[5]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[5]]}"
-            ]
-          }
-        },
-        {
-          "name": "Preload Battle Event(s)",
-          "eventID": [
-            20024,
-            20028
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "value": "InSkill05",
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "Add Battle Event",
-              "teamName": "Enemy Team",
-              "eventID": 20024,
-              "variables": {
-                "SummonInitDelay": {
-                  "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[1]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1225407383\">Monster_W4_Theoroi_Passive</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 4044011,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "First Genius, Entelechy, Zandar",
-            "isBaseCompare": true
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2031587797\">Monster_W4_Theoroi_Main</a>"
-            }
-          ]
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"534638248\">Monster_W4_Theoroi_Part1</a>[<span class=\"descriptionNumberColor\">To Logos</span>]"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4044011_Monster_W4_Theoroi_PassiveAbility_BGM": {
       "fileName": "4044011_Monster_W4_Theoroi_PassiveAbility_BGM",
       "childAbilityList": [
@@ -5289,6 +5131,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__534638248\">Monster_W4_Theoroi_Part1</a>[<span class=\"descriptionNumberColor\">To Logos</span>]",
+          "latentQueue": [
+            "MainCount"
+          ],
           "description": "Use \"SET Proof_Method=Black_Tide\" after <span class=\"descriptionNumberColor\">MDF_CurrentCountRemain</span> more instances of either of the following: enemy target generations or ally memosprite summons.",
           "type": "Other",
           "effectName": "To Logos",

@@ -572,6 +572,10 @@ const configAbility = {
         "Deathrattle",
         "KeepOnDeathrattle"
       ],
+      "latentQueue": [
+        "HPBack_TimePowerCount",
+        "HPBack"
+      ],
       "description": "After receiving a killing blow, if \"%CasterName\"'s \"Calamity Power\" stacks are not 0, be instantly resummoned and enter the \"Enfettered\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
       "type": "Other",
       "effectName": "Enfettered",
@@ -666,6 +670,10 @@ const configAbility = {
       ],
       "stackData": [
         "MDF_RallyHP"
+      ],
+      "latentQueue": [
+        "HPBack_TimePowerCount",
+        "HPBack"
       ]
     },
     {
