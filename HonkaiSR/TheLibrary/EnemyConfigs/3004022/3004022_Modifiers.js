@@ -4260,11 +4260,11 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_Negative_Count_Max",
                       "value": {
-                        "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
-                        "displayLines": "MDF_Negative_Count_Max",
+                        "operator": "Variables[0] (UnusedUnderThisBase_613) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_613",
                         "constants": [],
                         "variables": [
-                          "MDF_Negative_Count_Max"
+                          "UnusedUnderThisBase_613"
                         ]
                       }
                     }
@@ -4287,11 +4287,11 @@ const configAbility = {
                           "name": "Define Custom Variable",
                           "variableName": "MDF_Negative_Count_Max",
                           "value": {
-                            "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
-                            "displayLines": "MDF_Negative_Count",
+                            "operator": "Variables[0] (UnusedUnderThisBase_615) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_615",
                             "constants": [],
                             "variables": [
-                              "MDF_Negative_Count"
+                              "UnusedUnderThisBase_615"
                             ]
                           }
                         }
@@ -4314,11 +4314,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_Negative_Count_Max",
                               "value": {
-                                "operator": "Variables[0] (Negative_Count) || RETURN",
-                                "displayLines": "Negative_Count",
+                                "operator": "Variables[0] (UnusedUnderThisBase_614) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_614",
                                 "constants": [],
                                 "variables": [
-                                  "Negative_Count"
+                                  "UnusedUnderThisBase_614"
                                 ]
                               }
                             }
@@ -4334,11 +4334,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_Negative_Count_Max",
                   "value": {
-                    "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
-                    "displayLines": "MDF_Negative_Count_Max",
+                    "operator": "Variables[0] (UnusedUnderThisBase_613) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_613",
                     "constants": [],
                     "variables": [
-                      "MDF_Negative_Count_Max"
+                      "UnusedUnderThisBase_613"
                     ]
                   }
                 }
@@ -4347,11 +4347,11 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (BreakEndFlag) || RETURN",
-                "displayLines": "BreakEndFlag",
+                "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
+                "displayLines": "MDF_Negative_Count",
                 "constants": [],
                 "variables": [
-                  "BreakEndFlag"
+                  "MDF_Negative_Count"
                 ]
               },
               "entityClass": "Enemy",
@@ -4360,11 +4360,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (POSTTRIM_UNKNOWN_1) || RETURN",
-                "displayLines": "POSTTRIM_UNKNOWN_1",
+                "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
+                "displayLines": "MDF_Negative_Count_Max",
                 "constants": [],
                 "variables": [
-                  "POSTTRIM_UNKNOWN_1"
+                  "MDF_Negative_Count_Max"
                 ]
               },
               "assignState": "True",
@@ -4378,11 +4378,11 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (BreakEndFlag) || RETURN",
-                "displayLines": "BreakEndFlag",
+                "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
+                "displayLines": "MDF_Negative_Count",
                 "constants": [],
                 "variables": [
-                  "BreakEndFlag"
+                  "MDF_Negative_Count"
                 ]
               },
               "entityClass": "Enemy",
@@ -4391,11 +4391,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (POSTTRIM_UNKNOWN_1) || RETURN",
-                "displayLines": "POSTTRIM_UNKNOWN_1",
+                "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
+                "displayLines": "MDF_Negative_Count_Max",
                 "constants": [],
                 "variables": [
-                  "POSTTRIM_UNKNOWN_1"
+                  "MDF_Negative_Count_Max"
                 ]
               },
               "assignState": "False",
@@ -4456,22 +4456,22 @@ const configAbility = {
                   "scope": "TargetEntity",
                   "variableName": "Negative_Count",
                   "value": {
-                    "operator": "Variables[0] (BreakEndFlag) || RETURN",
-                    "displayLines": "BreakEndFlag",
+                    "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
+                    "displayLines": "MDF_Negative_Count",
                     "constants": [],
                     "variables": [
-                      "BreakEndFlag"
+                      "MDF_Negative_Count"
                     ]
                   }
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (BreakEndFlag) || RETURN",
-                    "displayLines": "BreakEndFlag",
+                    "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
+                    "displayLines": "MDF_Negative_Count",
                     "constants": [],
                     "variables": [
-                      "BreakEndFlag"
+                      "MDF_Negative_Count"
                     ]
                   },
                   "entityClass": "Enemy",
@@ -4480,11 +4480,11 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (POSTTRIM_UNKNOWN_1) || RETURN",
-                    "displayLines": "POSTTRIM_UNKNOWN_1",
+                    "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
+                    "displayLines": "MDF_Negative_Count_Max",
                     "constants": [],
                     "variables": [
-                      "POSTTRIM_UNKNOWN_1"
+                      "MDF_Negative_Count_Max"
                     ]
                   },
                   "assignState": "True",
@@ -4516,13 +4516,13 @@ const configAbility = {
               "scope": "ContextModifier",
               "variableName": "MDF_Negative_Count",
               "value": {
-                "operator": "Variables[0] (BreakEndFlag) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(BreakEndFlag + 1)",
+                "operator": "Variables[0] (MDF_Negative_Count) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(MDF_Negative_Count + 1)",
                 "constants": [
                   1
                 ],
                 "variables": [
-                  "BreakEndFlag"
+                  "MDF_Negative_Count"
                 ]
               }
             },
@@ -4535,22 +4535,22 @@ const configAbility = {
               "scope": "TargetEntity",
               "variableName": "Negative_Count",
               "value": {
-                "operator": "Variables[0] (BreakEndFlag) || RETURN",
-                "displayLines": "BreakEndFlag",
+                "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
+                "displayLines": "MDF_Negative_Count",
                 "constants": [],
                 "variables": [
-                  "BreakEndFlag"
+                  "MDF_Negative_Count"
                 ]
               }
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (BreakEndFlag) || RETURN",
-                "displayLines": "BreakEndFlag",
+                "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
+                "displayLines": "MDF_Negative_Count",
                 "constants": [],
                 "variables": [
-                  "BreakEndFlag"
+                  "MDF_Negative_Count"
                 ]
               },
               "entityClass": "Enemy",
@@ -4559,11 +4559,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (POSTTRIM_UNKNOWN_1) || RETURN",
-                "displayLines": "POSTTRIM_UNKNOWN_1",
+                "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
+                "displayLines": "MDF_Negative_Count_Max",
                 "constants": [],
                 "variables": [
-                  "POSTTRIM_UNKNOWN_1"
+                  "MDF_Negative_Count_Max"
                 ]
               },
               "assignState": "True",
@@ -4578,12 +4578,12 @@ const configAbility = {
               "scope": "ContextModifier",
               "variableName": "MDF_Negative_Count_Diff",
               "value": {
-                "operator": "Variables[0] (POSTTRIM_UNKNOWN_1) || Variables[1] (BreakEndFlag) || SUB || RETURN",
-                "displayLines": "(POSTTRIM_UNKNOWN_1 - BreakEndFlag)",
+                "operator": "Variables[0] (MDF_Negative_Count_Max) || Variables[1] (MDF_Negative_Count) || SUB || RETURN",
+                "displayLines": "(MDF_Negative_Count_Max - MDF_Negative_Count)",
                 "constants": [],
                 "variables": [
-                  "POSTTRIM_UNKNOWN_1",
-                  "BreakEndFlag"
+                  "MDF_Negative_Count_Max",
+                  "MDF_Negative_Count"
                 ]
               }
             },
