@@ -2549,11 +2549,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (UnusedUnderThisBase_289) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                "displayLines": "(UnusedUnderThisBase_289 * MDF_MaxHP)",
+                "operator": "Variables[0] (UnusedUnderThisBase_10125) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
+                "displayLines": "(UnusedUnderThisBase_10125 * MDF_MaxHP)",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_289",
+                  "UnusedUnderThisBase_10125",
                   "MDF_MaxHP"
                 ]
               },
@@ -2602,11 +2602,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_289) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                "displayLines": "(UnusedUnderThisBase_289 * MDF_MaxHP)",
+                "operator": "Variables[0] (UnusedUnderThisBase_10125) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
+                "displayLines": "(UnusedUnderThisBase_10125 * MDF_MaxHP)",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_289",
+                  "UnusedUnderThisBase_10125",
                   "MDF_MaxHP"
                 ]
               }
@@ -2635,11 +2635,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_290) || RETURN",
-                "displayLines": "UnusedUnderThisBase_290",
+                "operator": "Variables[0] (UnusedUnderThisBase_10126) || RETURN",
+                "displayLines": "UnusedUnderThisBase_10126",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_290"
+                  "UnusedUnderThisBase_10126"
                 ]
               }
             },
@@ -2663,21 +2663,21 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_289) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                "displayLines": "(UnusedUnderThisBase_289 * MDF_MaxHP)",
+                "operator": "Variables[0] (UnusedUnderThisBase_10125) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
+                "displayLines": "(UnusedUnderThisBase_10125 * MDF_MaxHP)",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_289",
+                  "UnusedUnderThisBase_10125",
                   "MDF_MaxHP"
                 ]
               },
               "entityClass": "Enemy",
               "maximum": {
-                "operator": "Variables[0] (UnusedUnderThisBase_289) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                "displayLines": "(UnusedUnderThisBase_289 * MDF_MaxHP)",
+                "operator": "Variables[0] (UnusedUnderThisBase_10125) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
+                "displayLines": "(UnusedUnderThisBase_10125 * MDF_MaxHP)",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_289",
+                  "UnusedUnderThisBase_10125",
                   "MDF_MaxHP"
                 ]
               },
@@ -2709,11 +2709,11 @@ const configAbility = {
               },
               "entityClass": "Enemy",
               "maximum": {
-                "operator": "Variables[0] (UnusedUnderThisBase_289) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                "displayLines": "(UnusedUnderThisBase_289 * MDF_MaxHP)",
+                "operator": "Variables[0] (UnusedUnderThisBase_10125) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
+                "displayLines": "(UnusedUnderThisBase_10125 * MDF_MaxHP)",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_289",
+                  "UnusedUnderThisBase_10125",
                   "MDF_MaxHP"
                 ]
               },
@@ -3650,11 +3650,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1121563146\">Enemy_W3_SundayPart_AssistAbilityAttach</a>",
               "valuePerStack": {
                 "MDF_Assist_DamagePercentage": {
-                  "operator": "Variables[0] ([object Object]) || RETURN",
-                  "displayLines": "[object Object]",
+                  "operator": "Variables[0] (UnusedUnderThisBase_10124) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_10124",
                   "constants": [],
                   "variables": [
-                    {}
+                    "UnusedUnderThisBase_10124"
                   ]
                 }
               }
@@ -3892,11 +3892,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_351) || RETURN",
-                "displayLines": "UnusedUnderThisBase_351",
+                "operator": "Variables[0] (UnusedUnderThisBase_11116) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11116",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_351"
+                  "UnusedUnderThisBase_11116"
                 ]
               }
             },

@@ -3411,11 +3411,11 @@ const compositeAbilityObject = {
                                   "variableName": "Thunder_CountLight",
                                   "context": "TargetEntity",
                                   "value": {
-                                    "operator": "Variables[0] (AIFlag) || RETURN",
-                                    "displayLines": "AIFlag",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_10856) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_10856",
                                     "constants": [],
                                     "variables": [
-                                      "AIFlag"
+                                      "UnusedUnderThisBase_10856"
                                     ]
                                   },
                                   "max": {
@@ -3436,13 +3436,13 @@ const compositeAbilityObject = {
                                   "variableName": "Thunder_CountDark",
                                   "context": "TargetEntity",
                                   "value": {
-                                    "operator": "Constants[0] (0) || Variables[0] (AIFlag) || SUB || RETURN",
-                                    "displayLines": "(0 - AIFlag)",
+                                    "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_10856) || SUB || RETURN",
+                                    "displayLines": "(0 - UnusedUnderThisBase_10856)",
                                     "constants": [
                                       0
                                     ],
                                     "variables": [
-                                      "AIFlag"
+                                      "UnusedUnderThisBase_10856"
                                     ]
                                   },
                                   "max": {
@@ -3855,11 +3855,11 @@ const compositeAbilityObject = {
                               "variableName": "Thunder_CountLight",
                               "context": "TargetEntity",
                               "value": {
-                                "operator": "Variables[0] (AIFlag) || RETURN",
-                                "displayLines": "AIFlag",
+                                "operator": "Variables[0] (UnusedUnderThisBase_10856) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_10856",
                                 "constants": [],
                                 "variables": [
-                                  "AIFlag"
+                                  "UnusedUnderThisBase_10856"
                                 ]
                               },
                               "max": {
@@ -3880,13 +3880,13 @@ const compositeAbilityObject = {
                               "variableName": "Thunder_CountDark",
                               "context": "TargetEntity",
                               "value": {
-                                "operator": "Constants[0] (0) || Variables[0] (AIFlag) || SUB || RETURN",
-                                "displayLines": "(0 - AIFlag)",
+                                "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_10856) || SUB || RETURN",
+                                "displayLines": "(0 - UnusedUnderThisBase_10856)",
                                 "constants": [
                                   0
                                 ],
                                 "variables": [
-                                  "AIFlag"
+                                  "UnusedUnderThisBase_10856"
                                 ]
                               },
                               "max": {
@@ -5360,6 +5360,9 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "stackData": [
             "MDF_TotalDamageRatioAdd"
+          ],
+          "latentQueue": [
+            "AIFlag"
           ],
           "description": "The current Charge ratio of \"Eye of Twilight\" is <span class=\"descriptionNumberColor\">MDF_ChargePercentage</span>.",
           "type": "Other",

@@ -81,11 +81,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] (UnusedUnderThisBase_14) || RETURN",
-              "displayLines": "UnusedUnderThisBase_14",
+              "operator": "Variables[0] (UnusedUnderThisBase_8765) || RETURN",
+              "displayLines": "UnusedUnderThisBase_8765",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_14"
+                "UnusedUnderThisBase_8765"
               ]
             }
           }

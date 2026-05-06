@@ -331,11 +331,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "_PassiveBreakCountBase",
               "value": {
-                "operator": "Variables[0] (0) || Variables[1] (5) || ADD || RETURN",
-                "displayLines": "(0 + 5)",
+                "operator": "Variables[0] (UnusedUnderThisBase_5980) || Variables[1] (5) || ADD || RETURN",
+                "displayLines": "(UnusedUnderThisBase_5980 + 5)",
                 "constants": [],
                 "variables": [
-                  0,
+                  "UnusedUnderThisBase_5980",
                   5
                 ]
               }
@@ -359,11 +359,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "_PassiveBreakCountBase",
               "value": {
-                "operator": "Variables[0] (0) || RETURN",
-                "displayLines": "0",
+                "operator": "Variables[0] (UnusedUnderThisBase_5980) || RETURN",
+                "displayLines": "UnusedUnderThisBase_5980",
                 "constants": [],
                 "variables": [
-                  0
+                  "UnusedUnderThisBase_5980"
                 ]
               }
             },

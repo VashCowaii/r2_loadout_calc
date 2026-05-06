@@ -233,11 +233,11 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_66) || RETURN",
-                "displayLines": "UnusedUnderThisBase_66",
+                "operator": "Variables[0] (UnusedUnderThisBase_11916) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11916",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_66"
+                  "UnusedUnderThisBase_11916"
                 ]
               }
             }
@@ -291,11 +291,11 @@ const compositeAbilityObject = {
                 "target": "{{Player Team All}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_85) || RETURN",
-                "displayLines": "UnusedUnderThisBase_85",
+                "operator": "Variables[0] (UnusedUnderThisBase_11926) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11926",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_85"
+                  "UnusedUnderThisBase_11926"
                 ]
               },
               "formula": "Heal from Target MaxHP"
@@ -6139,19 +6139,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_71) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_71",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11925) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11925",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_71"
+                            "UnusedUnderThisBase_11925"
                           ]
                         },
                         "MDF_ShieldAttack_HealRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_69) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_69",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11953) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11953",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_69"
+                            "UnusedUnderThisBase_11953"
                           ]
                         }
                       }

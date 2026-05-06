@@ -39,11 +39,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"117676328\">Monster_W2_Huanlong_JingYuan_DamageUp</a>",
           "valuePerStack": {
             "MDF_DamageUpRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_203) || RETURN",
-              "displayLines": "UnusedUnderThisBase_203",
+              "operator": "Variables[0] (UnusedUnderThisBase_8658) || RETURN",
+              "displayLines": "UnusedUnderThisBase_8658",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_203"
+                "UnusedUnderThisBase_8658"
               ]
             }
           }

@@ -691,11 +691,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-994497740\">Monster_W4_Nikadory_RLBoss_Passive</a>",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_307) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_307",
+                              "operator": "Variables[0] (UnusedUnderThisBase_12652) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_12652",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_307"
+                                "UnusedUnderThisBase_12652"
                               ]
                             }
                           }
@@ -975,11 +975,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "Skill04Damage",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_312) || RETURN",
-                "displayLines": "UnusedUnderThisBase_312",
+                "operator": "Variables[0] (UnusedUnderThisBase_11574) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11574",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_312"
+                  "UnusedUnderThisBase_11574"
                 ]
               }
             }
@@ -1715,11 +1715,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_316) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_316",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12392) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12392",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_316"
+                    "UnusedUnderThisBase_12392"
                   ]
                 },
                 "HitSplit": 0.2,
@@ -1737,11 +1737,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_316) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_316",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12392) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12392",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_316"
+                    "UnusedUnderThisBase_12392"
                   ]
                 },
                 "HitSplit": 0.2,
@@ -1759,11 +1759,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_316) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_316",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12392) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12392",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_316"
+                    "UnusedUnderThisBase_12392"
                   ]
                 },
                 "HitSplit": 0.2,
@@ -1781,11 +1781,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_316) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_316",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12392) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12392",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_316"
+                    "UnusedUnderThisBase_12392"
                   ]
                 },
                 "HitSplit": 0.2,
@@ -1803,11 +1803,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_316) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_316",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12392) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12392",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_316"
+                    "UnusedUnderThisBase_12392"
                   ]
                 },
                 "HitSplit": 0.2,
@@ -2063,11 +2063,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_314) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_314",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11559) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11559",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_314"
+                    "UnusedUnderThisBase_11559"
                   ]
                 },
                 "HitSplit": 0.4,
@@ -2124,11 +2124,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_314) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_314",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11559) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11559",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_314"
+                    "UnusedUnderThisBase_11559"
                   ]
                 },
                 "HitSplit": 0.6,
@@ -2518,11 +2518,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_35) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_35",
+                      "operator": "Variables[0] (UnusedUnderThisBase_13214) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_13214",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_35"
+                        "UnusedUnderThisBase_13214"
                       ]
                     },
                     "Toughness": null,
@@ -2540,11 +2540,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_36) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_36",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11549) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11549",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_36"
+                        "UnusedUnderThisBase_11549"
                       ]
                     },
                     "Toughness": null,
@@ -3343,11 +3343,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_313) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_313",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11550) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11550",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_313"
+                    "UnusedUnderThisBase_11550"
                   ]
                 },
                 "Toughness": null,
@@ -3772,11 +3772,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "Skill04Damage",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_312) || RETURN",
-                "displayLines": "UnusedUnderThisBase_312",
+                "operator": "Variables[0] (UnusedUnderThisBase_11574) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11574",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_312"
+                  "UnusedUnderThisBase_11574"
                 ]
               }
             }
@@ -4197,11 +4197,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_311) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_311",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13220) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13220",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_311"
+                    "UnusedUnderThisBase_13220"
                   ]
                 },
                 "Toughness": null,
@@ -4346,11 +4346,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_183) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_183",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13127) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13127",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_183"
+                    "UnusedUnderThisBase_13127"
                   ]
                 },
                 "Toughness": null,
@@ -4622,11 +4622,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Imaginary",
                     "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_4) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_4",
+                      "operator": "Variables[0] (UnusedUnderThisBase_13069) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_13069",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_4"
+                        "UnusedUnderThisBase_13069"
                       ]
                     },
                     "Toughness": null,

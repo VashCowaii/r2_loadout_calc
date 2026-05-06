@@ -1110,11 +1110,11 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_135) || RETURN",
-                "displayLines": "UnusedUnderThisBase_135",
+                "operator": "Variables[0] (UnusedUnderThisBase_12969) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12969",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_135"
+                  "UnusedUnderThisBase_12969"
                 ]
               },
               "entityClass": "Enemy",

@@ -202,11 +202,11 @@ const compositeAbilityObject = {
                     "value1": "DV_CurrentDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__178) || Variables[1] (DV_InitDelay) || ADD || RETURN",
-                      "displayLines": "(ENEMIES_OBJECT_UNUSED__178 + DV_InitDelay)",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11767) || Variables[1] (DV_InitDelay) || ADD || RETURN",
+                      "displayLines": "(UnusedUnderThisBase_11767 + DV_InitDelay)",
                       "constants": [],
                       "variables": [
-                        "ENEMIES_OBJECT_UNUSED__178",
+                        "UnusedUnderThisBase_11767",
                         "DV_InitDelay"
                       ]
                     }
@@ -271,11 +271,11 @@ const compositeAbilityObject = {
                     "value1": "DV_CurrentDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__178) || Variables[1] (DV_InitDelay) || ADD || RETURN",
-                      "displayLines": "(ENEMIES_OBJECT_UNUSED__178 + DV_InitDelay)",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11767) || Variables[1] (DV_InitDelay) || ADD || RETURN",
+                      "displayLines": "(UnusedUnderThisBase_11767 + DV_InitDelay)",
                       "constants": [],
                       "variables": [
-                        "ENEMIES_OBJECT_UNUSED__178",
+                        "UnusedUnderThisBase_11767",
                         "DV_InitDelay"
                       ]
                     }
@@ -319,11 +319,11 @@ const compositeAbilityObject = {
                     "value1": "DV_CurrentDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__178) || RETURN",
-                      "displayLines": "ENEMIES_OBJECT_UNUSED__178",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11767) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11767",
                       "constants": [],
                       "variables": [
-                        "ENEMIES_OBJECT_UNUSED__178"
+                        "UnusedUnderThisBase_11767"
                       ]
                     }
                   },

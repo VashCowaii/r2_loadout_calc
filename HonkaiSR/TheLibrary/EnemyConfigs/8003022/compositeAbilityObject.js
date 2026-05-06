@@ -307,13 +307,13 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill09[0]]}) || Variables[1] ({[Skill09[1]]}) || Variables[2] (UnusedUnderThisBase_159) || MUL || ADD || RETURN",
-                  "displayLines": "({[Skill09[0]]} + ({[Skill09[1]]} * UnusedUnderThisBase_159))",
+                  "operator": "Variables[0] ({[Skill09[0]]}) || Variables[1] ({[Skill09[1]]}) || Variables[2] (ENEMIES_OBJECT_UNUSED__253) || MUL || ADD || RETURN",
+                  "displayLines": "({[Skill09[0]]} + ({[Skill09[1]]} * ENEMIES_OBJECT_UNUSED__253))",
                   "constants": [],
                   "variables": [
                     "{[Skill09[0]]}",
                     "{[Skill09[1]]}",
-                    "UnusedUnderThisBase_159"
+                    "ENEMIES_OBJECT_UNUSED__253"
                   ]
                 },
                 "Toughness": null,
@@ -1091,11 +1091,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "BurningCount",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_159) || Variables[1] (BurningLayer) || ADD || RETURN",
-                "displayLines": "(UnusedUnderThisBase_159 + BurningLayer)",
+                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__253) || Variables[1] (BurningLayer) || ADD || RETURN",
+                "displayLines": "(ENEMIES_OBJECT_UNUSED__253 + BurningLayer)",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_159",
+                  "ENEMIES_OBJECT_UNUSED__253",
                   "BurningLayer"
                 ]
               }

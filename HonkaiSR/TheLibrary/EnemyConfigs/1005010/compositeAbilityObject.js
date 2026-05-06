@@ -1933,28 +1933,28 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_142) || RETURN",
-                "displayLines": "UnusedUnderThisBase_142",
+                "operator": "Variables[0] (UnusedUnderThisBase_7794) || RETURN",
+                "displayLines": "UnusedUnderThisBase_7794",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_142"
+                  "UnusedUnderThisBase_7794"
                 ]
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_141) || RETURN",
-                "displayLines": "UnusedUnderThisBase_141",
+                "operator": "Variables[0] (UnusedUnderThisBase_7790) || RETURN",
+                "displayLines": "UnusedUnderThisBase_7790",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_141"
+                  "UnusedUnderThisBase_7790"
                 ]
               },
               "valuePerStack": {
                 "Modifier_Frozen_DamagePercentage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_143) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_143",
+                  "operator": "Variables[0] (UnusedUnderThisBase_7800) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_7800",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_143"
+                    "UnusedUnderThisBase_7800"
                   ]
                 }
               }

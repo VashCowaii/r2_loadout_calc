@@ -1301,11 +1301,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_184) || RETURN",
-              "displayLines": "UnusedUnderThisBase_184",
+              "operator": "Variables[0] (UnusedUnderThisBase_12848) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12848",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_184"
+                "UnusedUnderThisBase_12848"
               ]
             },
             "Toughness": null,
@@ -1375,11 +1375,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-2038076408\">Monster_Gepard_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Aggravate</span>]",
           "duration": {
-            "operator": "Variables[0] (UnusedUnderThisBase_153) || RETURN",
-            "displayLines": "UnusedUnderThisBase_153",
+            "operator": "Variables[0] (UnusedUnderThisBase_7889) || RETURN",
+            "displayLines": "UnusedUnderThisBase_7889",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_153"
+              "UnusedUnderThisBase_7889"
             ]
           }
         },
@@ -3866,15 +3866,15 @@ const compositeAbilityObject = {
                         "variables": []
                       },
                       "valuePercent": {
-                        "operator": "Variables[0] (MDF_ShieldPercentage) || Constants[0] (5) || DIV || Variables[1] (MDF_Count) || MUL || Variables[2] (UnusedUnderThisBase_148) || MUL || RETURN",
-                        "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_148)",
+                        "operator": "Variables[0] (MDF_ShieldPercentage) || Constants[0] (5) || DIV || Variables[1] (MDF_Count) || MUL || Variables[2] (UnusedUnderThisBase_7854) || MUL || RETURN",
+                        "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_7854)",
                         "constants": [
                           5
                         ],
                         "variables": [
                           "MDF_ShieldPercentage",
                           "MDF_Count",
-                          "UnusedUnderThisBase_148"
+                          "UnusedUnderThisBase_7854"
                         ]
                       },
                       "formula": "HP Scaling (Shield)"

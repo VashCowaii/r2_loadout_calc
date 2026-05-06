@@ -79,11 +79,11 @@ const configAbility = {
       },
       "valuePerStack": {
         "Ability02_P2_DamageResistance": {
-          "operator": "Variables[0] (0) || RETURN",
-          "displayLines": "0",
+          "operator": "Variables[0] (UnusedUnderThisBase_4762) || RETURN",
+          "displayLines": "UnusedUnderThisBase_4762",
           "constants": [],
           "variables": [
-            0
+            "UnusedUnderThisBase_4762"
           ]
         }
       }
@@ -105,11 +105,11 @@ const configAbility = {
           ]
         },
         "Ability02_P2_DamageResistance": {
-          "operator": "Variables[0] (0) || RETURN",
-          "displayLines": "0",
+          "operator": "Variables[0] (UnusedUnderThisBase_4762) || RETURN",
+          "displayLines": "UnusedUnderThisBase_4762",
           "constants": [],
           "variables": [
-            0
+            "UnusedUnderThisBase_4762"
           ]
         },
         "AddSP": {

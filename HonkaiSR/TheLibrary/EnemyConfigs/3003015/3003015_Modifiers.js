@@ -351,11 +351,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
               "valuePerStack": {
                 "MDF_MaxCount": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_612) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_612",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9585) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9585",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_612"
+                    "UnusedUnderThisBase_9585"
                   ]
                 },
                 "MDF_PartFlag": 0
@@ -438,14 +438,14 @@ const configAbility = {
                         "value1": "Vibrate_Count",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_612) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
-                          "displayLines": "((UnusedUnderThisBase_612 / 3) * 2)",
+                          "operator": "Variables[0] (UnusedUnderThisBase_9585) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
+                          "displayLines": "((UnusedUnderThisBase_9585 / 3) * 2)",
                           "constants": [
                             3,
                             2
                           ],
                           "variables": [
-                            "UnusedUnderThisBase_612"
+                            "UnusedUnderThisBase_9585"
                           ]
                         }
                       },
@@ -479,13 +479,13 @@ const configAbility = {
                             "value1": "Vibrate_Count",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_612) || Constants[0] (3) || DIV || RETURN",
-                              "displayLines": "(UnusedUnderThisBase_612 / 3)",
+                              "operator": "Variables[0] (UnusedUnderThisBase_9585) || Constants[0] (3) || DIV || RETURN",
+                              "displayLines": "(UnusedUnderThisBase_9585 / 3)",
                               "constants": [
                                 3
                               ],
                               "variables": [
-                                "UnusedUnderThisBase_612"
+                                "UnusedUnderThisBase_9585"
                               ]
                             }
                           },
@@ -565,13 +565,13 @@ const configAbility = {
                     "value1": "Vibrate_Count",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_20) || Constants[0] (1) || SUB || RETURN",
-                      "displayLines": "(UnusedUnderThisBase_20 - 1)",
+                      "operator": "Variables[0] (UnusedUnderThisBase_9587) || Constants[0] (1) || SUB || RETURN",
+                      "displayLines": "(UnusedUnderThisBase_9587 - 1)",
                       "constants": [
                         1
                       ],
                       "variables": [
-                        "UnusedUnderThisBase_20"
+                        "UnusedUnderThisBase_9587"
                       ]
                     }
                   },
@@ -756,11 +756,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
               "valuePerStack": {
                 "MDF_MaxCount": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_612) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_612",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9585) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9585",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_612"
+                    "UnusedUnderThisBase_9585"
                   ]
                 },
                 "MDF_PartFlag": 0
@@ -843,14 +843,14 @@ const configAbility = {
                         "value1": "Vibrate_Count",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_612) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
-                          "displayLines": "((UnusedUnderThisBase_612 / 3) * 2)",
+                          "operator": "Variables[0] (UnusedUnderThisBase_9585) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
+                          "displayLines": "((UnusedUnderThisBase_9585 / 3) * 2)",
                           "constants": [
                             3,
                             2
                           ],
                           "variables": [
-                            "UnusedUnderThisBase_612"
+                            "UnusedUnderThisBase_9585"
                           ]
                         }
                       },
@@ -884,13 +884,13 @@ const configAbility = {
                             "value1": "Vibrate_Count",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_612) || Constants[0] (3) || DIV || RETURN",
-                              "displayLines": "(UnusedUnderThisBase_612 / 3)",
+                              "operator": "Variables[0] (UnusedUnderThisBase_9585) || Constants[0] (3) || DIV || RETURN",
+                              "displayLines": "(UnusedUnderThisBase_9585 / 3)",
                               "constants": [
                                 3
                               ],
                               "variables": [
-                                "UnusedUnderThisBase_612"
+                                "UnusedUnderThisBase_9585"
                               ]
                             }
                           },
@@ -989,11 +989,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
               "valuePerStack": {
                 "MDF_MaxCount": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_612) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_612",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9585) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9585",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_612"
+                    "UnusedUnderThisBase_9585"
                   ]
                 },
                 "MDF_PartFlag": 0
@@ -1041,11 +1041,11 @@ const configAbility = {
                       "context": "TargetEntity",
                       "value": 1,
                       "max": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_612) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_612",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9585) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_9585",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_612"
+                          "UnusedUnderThisBase_9585"
                         ]
                       }
                     },
@@ -1057,11 +1057,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_612) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_612",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9585) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_9585",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_612"
+                          "UnusedUnderThisBase_9585"
                         ]
                       },
                       "valuePerStack": {
@@ -1084,11 +1084,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                       "valuePerStack": {
                         "MDF_MaxCount": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_612) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_612",
+                          "operator": "Variables[0] (UnusedUnderThisBase_9585) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_9585",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_612"
+                            "UnusedUnderThisBase_9585"
                           ]
                         },
                         "MDF_PartFlag": 0
@@ -1108,13 +1108,13 @@ const configAbility = {
                             "value1": "Vibrate_Count",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_612) || Constants[0] (3) || DIV || RETURN",
-                              "displayLines": "(UnusedUnderThisBase_612 / 3)",
+                              "operator": "Variables[0] (UnusedUnderThisBase_9585) || Constants[0] (3) || DIV || RETURN",
+                              "displayLines": "(UnusedUnderThisBase_9585 / 3)",
                               "constants": [
                                 3
                               ],
                               "variables": [
-                                "UnusedUnderThisBase_612"
+                                "UnusedUnderThisBase_9585"
                               ]
                             },
                             "contextScope": "TargetEntity"
@@ -1164,14 +1164,14 @@ const configAbility = {
                             "value1": "Vibrate_Count",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_612) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
-                              "displayLines": "((UnusedUnderThisBase_612 / 3) * 2)",
+                              "operator": "Variables[0] (UnusedUnderThisBase_9585) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
+                              "displayLines": "((UnusedUnderThisBase_9585 / 3) * 2)",
                               "constants": [
                                 3,
                                 2
                               ],
                               "variables": [
-                                "UnusedUnderThisBase_612"
+                                "UnusedUnderThisBase_9585"
                               ]
                             },
                             "contextScope": "TargetEntity"
@@ -1221,11 +1221,11 @@ const configAbility = {
                             "value1": "Vibrate_Count",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_612) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_612",
+                              "operator": "Variables[0] (UnusedUnderThisBase_9585) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_9585",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_612"
+                                "UnusedUnderThisBase_9585"
                               ]
                             },
                             "contextScope": "TargetEntity"
@@ -1272,11 +1272,11 @@ const configAbility = {
                         "value1": "Vibrate_Count",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_612) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_612",
+                          "operator": "Variables[0] (UnusedUnderThisBase_9585) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_9585",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_612"
+                            "UnusedUnderThisBase_9585"
                           ]
                         },
                         "contextScope": "TargetEntity"
@@ -1368,11 +1368,11 @@ const configAbility = {
                           "context": "TargetEntity",
                           "value": 1,
                           "max": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_20) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_20",
+                            "operator": "Variables[0] (UnusedUnderThisBase_9587) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_9587",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_20"
+                              "UnusedUnderThisBase_9587"
                             ]
                           }
                         },
@@ -1384,11 +1384,11 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_20) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_20",
+                            "operator": "Variables[0] (UnusedUnderThisBase_9587) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_9587",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_20"
+                              "UnusedUnderThisBase_9587"
                             ]
                           },
                           "valuePerStack": {
@@ -1411,11 +1411,11 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                           "valuePerStack": {
                             "MDF_MaxCount": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_20) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_20",
+                              "operator": "Variables[0] (UnusedUnderThisBase_9587) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_9587",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_20"
+                                "UnusedUnderThisBase_9587"
                               ]
                             },
                             "MDF_PartFlag": 1
@@ -1435,11 +1435,11 @@ const configAbility = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_20) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_20",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_9587) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_9587",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_20"
+                                    "UnusedUnderThisBase_9587"
                                   ]
                                 },
                                 "contextScope": "TargetEntity"
@@ -1476,11 +1476,11 @@ const configAbility = {
                                 "value1": "Vibrate_Count",
                                 "compareType": "=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_20) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_20",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_9587) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_9587",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_20"
+                                    "UnusedUnderThisBase_9587"
                                   ]
                                 },
                                 "contextScope": "TargetEntity"
@@ -1603,11 +1603,11 @@ const configAbility = {
                       "context": "TargetEntity",
                       "value": 1,
                       "max": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_612) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_612",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9585) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_9585",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_612"
+                          "UnusedUnderThisBase_9585"
                         ]
                       }
                     },
@@ -1619,11 +1619,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_612) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_612",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9585) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_9585",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_612"
+                          "UnusedUnderThisBase_9585"
                         ]
                       },
                       "valuePerStack": {
@@ -1646,11 +1646,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                       "valuePerStack": {
                         "MDF_MaxCount": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_612) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_612",
+                          "operator": "Variables[0] (UnusedUnderThisBase_9585) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_9585",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_612"
+                            "UnusedUnderThisBase_9585"
                           ]
                         },
                         "MDF_PartFlag": 0
@@ -1670,13 +1670,13 @@ const configAbility = {
                             "value1": "Vibrate_Count",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_612) || Constants[0] (3) || DIV || RETURN",
-                              "displayLines": "(UnusedUnderThisBase_612 / 3)",
+                              "operator": "Variables[0] (UnusedUnderThisBase_9585) || Constants[0] (3) || DIV || RETURN",
+                              "displayLines": "(UnusedUnderThisBase_9585 / 3)",
                               "constants": [
                                 3
                               ],
                               "variables": [
-                                "UnusedUnderThisBase_612"
+                                "UnusedUnderThisBase_9585"
                               ]
                             },
                             "contextScope": "TargetEntity"
@@ -1726,14 +1726,14 @@ const configAbility = {
                             "value1": "Vibrate_Count",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_612) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
-                              "displayLines": "((UnusedUnderThisBase_612 / 3) * 2)",
+                              "operator": "Variables[0] (UnusedUnderThisBase_9585) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
+                              "displayLines": "((UnusedUnderThisBase_9585 / 3) * 2)",
                               "constants": [
                                 3,
                                 2
                               ],
                               "variables": [
-                                "UnusedUnderThisBase_612"
+                                "UnusedUnderThisBase_9585"
                               ]
                             },
                             "contextScope": "TargetEntity"
@@ -1783,11 +1783,11 @@ const configAbility = {
                             "value1": "Vibrate_Count",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_612) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_612",
+                              "operator": "Variables[0] (UnusedUnderThisBase_9585) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_9585",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_612"
+                                "UnusedUnderThisBase_9585"
                               ]
                             },
                             "contextScope": "TargetEntity"
@@ -1834,11 +1834,11 @@ const configAbility = {
                         "value1": "Vibrate_Count",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_612) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_612",
+                          "operator": "Variables[0] (UnusedUnderThisBase_9585) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_9585",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_612"
+                            "UnusedUnderThisBase_9585"
                           ]
                         },
                         "contextScope": "TargetEntity"
@@ -1950,11 +1950,11 @@ const configAbility = {
                             "value1": "Vibrate_Count",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_20) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_20",
+                              "operator": "Variables[0] (UnusedUnderThisBase_9587) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_9587",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_20"
+                                "UnusedUnderThisBase_9587"
                               ]
                             },
                             "contextScope": "TargetEntity"
@@ -1972,11 +1972,11 @@ const configAbility = {
                           "context": "TargetEntity",
                           "value": 1,
                           "max": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_20) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_20",
+                            "operator": "Variables[0] (UnusedUnderThisBase_9587) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_9587",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_20"
+                              "UnusedUnderThisBase_9587"
                             ]
                           }
                         },
@@ -1988,11 +1988,11 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_20) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_20",
+                            "operator": "Variables[0] (UnusedUnderThisBase_9587) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_9587",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_20"
+                              "UnusedUnderThisBase_9587"
                             ]
                           },
                           "valuePerStack": {
@@ -2015,11 +2015,11 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                           "valuePerStack": {
                             "MDF_MaxCount": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_20) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_20",
+                              "operator": "Variables[0] (UnusedUnderThisBase_9587) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_9587",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_20"
+                                "UnusedUnderThisBase_9587"
                               ]
                             },
                             "MDF_PartFlag": 1
@@ -2039,11 +2039,11 @@ const configAbility = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_20) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_20",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_9587) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_9587",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_20"
+                                    "UnusedUnderThisBase_9587"
                                   ]
                                 },
                                 "contextScope": "TargetEntity"
@@ -2080,11 +2080,11 @@ const configAbility = {
                                 "value1": "Vibrate_Count",
                                 "compareType": "=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_20) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_20",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_9587) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_9587",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_20"
+                                    "UnusedUnderThisBase_9587"
                                   ]
                                 },
                                 "contextScope": "TargetEntity"
@@ -2243,11 +2243,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1193792195\">MModifier_Monster_W3_Dinosaur_RLElite_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_263) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_263",
+                      "operator": "Variables[0] (UnusedUnderThisBase_9582) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_9582",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_263"
+                        "UnusedUnderThisBase_9582"
                       ]
                     }
                   }
@@ -5555,11 +5555,11 @@ const configAbility = {
                           "name": "Define Custom Variable",
                           "variableName": "MDF_Negative_Count_Max",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_615) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_615",
+                            "operator": "Variables[0] (UnusedUnderThisBase_10292) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_10292",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_615"
+                              "UnusedUnderThisBase_10292"
                             ]
                           }
                         }
@@ -5582,11 +5582,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_Negative_Count_Max",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_614) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_614",
+                                "operator": "Variables[0] (UnusedUnderThisBase_10284) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_10284",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_614"
+                                  "UnusedUnderThisBase_10284"
                                 ]
                               }
                             }

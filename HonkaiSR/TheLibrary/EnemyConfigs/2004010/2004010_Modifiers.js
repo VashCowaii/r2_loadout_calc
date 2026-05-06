@@ -243,11 +243,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_15) || Variables[1] (SkillMaxHit) || DIV || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_15 / SkillMaxHit)",
+                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__252) || Variables[1] (SkillMaxHit) || DIV || RETURN",
+                  "displayLines": "(ENEMIES_OBJECT_UNUSED__252 / SkillMaxHit)",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_15",
+                    "ENEMIES_OBJECT_UNUSED__252",
                     "SkillMaxHit"
                   ]
                 },

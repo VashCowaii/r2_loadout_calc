@@ -107,11 +107,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"117676328\">Monster_W2_Huanlong_JingYuan_DamageUp</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_203) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_203",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8658) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8658",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_203"
+                    "UnusedUnderThisBase_8658"
                   ]
                 }
               }
@@ -2868,12 +2868,12 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "DamageFlat": {
-              "operator": "Variables[0] (MaxHPValue) || Variables[1] (UnusedUnderThisBase_202) || MUL || RETURN",
-              "displayLines": "(MaxHPValue * UnusedUnderThisBase_202)",
+              "operator": "Variables[0] (MaxHPValue) || Variables[1] (UnusedUnderThisBase_8708) || MUL || RETURN",
+              "displayLines": "(MaxHPValue * UnusedUnderThisBase_8708)",
               "constants": [],
               "variables": [
                 "MaxHPValue",
-                "UnusedUnderThisBase_202"
+                "UnusedUnderThisBase_8708"
               ]
             },
             "Toughness": null,
@@ -5611,11 +5611,11 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"117676328\">Monster_W2_Huanlong_JingYuan_DamageUp</a>",
                               "valuePerStack": {
                                 "MDF_DamageUpRatio": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_203) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_203",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_8658) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_8658",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_203"
+                                    "UnusedUnderThisBase_8658"
                                   ]
                                 }
                               }

@@ -2912,11 +2912,11 @@ const compositeAbilityObject = {
               },
               "variables": {
                 "MDF_W2_Kafka_RL_BattleEvent_ActionDelay": {
-                  "operator": "Variables[0] (FinalPhase) || RETURN",
-                  "displayLines": "FinalPhase",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11469) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11469",
                   "constants": [],
                   "variables": [
-                    "FinalPhase"
+                    "UnusedUnderThisBase_11469"
                   ]
                 },
                 "MDF_W2_Kafka_RL_BattleEvent_BaseSpeed": {
@@ -4266,11 +4266,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_28) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_28",
+                      "operator": "Variables[0] (UnusedUnderThisBase_8759) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_8759",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_28"
+                        "UnusedUnderThisBase_8759"
                       ]
                     },
                     "Shield_InitValue": 0
@@ -4395,11 +4395,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_14) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_14",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8765) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8765",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_14"
+                    "UnusedUnderThisBase_8765"
                   ]
                 }
               }
@@ -4796,11 +4796,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_14) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_14",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8765) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8765",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_14"
+                    "UnusedUnderThisBase_8765"
                   ]
                 }
               }
@@ -6364,11 +6364,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1077360781\">XP_Elite_Fire_Ability07_AttackUp_Modifier</a>[<span class=\"descriptionNumberColor\">Molten</span>]",
                   "valuePerStack": {
                     "Modifier_AttackAddedRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_27) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_27",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12685) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12685",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_27"
+                        "UnusedUnderThisBase_12685"
                       ]
                     }
                   }
@@ -10799,11 +10799,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_15) || Variables[1] (SkillMaxHit) || DIV || RETURN",
-                      "displayLines": "(UnusedUnderThisBase_15 / SkillMaxHit)",
+                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__252) || Variables[1] (SkillMaxHit) || DIV || RETURN",
+                      "displayLines": "(ENEMIES_OBJECT_UNUSED__252 / SkillMaxHit)",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_15",
+                        "ENEMIES_OBJECT_UNUSED__252",
                         "SkillMaxHit"
                       ]
                     },

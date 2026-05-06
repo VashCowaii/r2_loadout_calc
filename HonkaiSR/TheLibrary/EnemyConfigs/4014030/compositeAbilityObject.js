@@ -251,11 +251,11 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_66) || RETURN",
-                "displayLines": "UnusedUnderThisBase_66",
+                "operator": "Variables[0] (UnusedUnderThisBase_11916) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11916",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_66"
+                  "UnusedUnderThisBase_11916"
                 ]
               }
             }
@@ -309,11 +309,11 @@ const compositeAbilityObject = {
                 "target": "{{Player Team All}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_85) || RETURN",
-                "displayLines": "UnusedUnderThisBase_85",
+                "operator": "Variables[0] (UnusedUnderThisBase_11926) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11926",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_85"
+                  "UnusedUnderThisBase_11926"
                 ]
               },
               "formula": "Heal from Target MaxHP"
@@ -671,11 +671,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_76) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_76",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11954) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11954",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_76"
+                    "UnusedUnderThisBase_11954"
                   ]
                 }
               }
@@ -897,11 +897,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_76) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_76",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11954) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11954",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_76"
+                    "UnusedUnderThisBase_11954"
                   ]
                 }
               }
@@ -1020,11 +1020,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "_Skill05_LoseHpRatio",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_78) || RETURN",
-                "displayLines": "UnusedUnderThisBase_78",
+                "operator": "Variables[0] (UnusedUnderThisBase_11951) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11951",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_78"
+                  "UnusedUnderThisBase_11951"
                 ]
               }
             },
@@ -1032,11 +1032,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "_Skill05_ActionDelay",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_79) || RETURN",
-                "displayLines": "UnusedUnderThisBase_79",
+                "operator": "Variables[0] (UnusedUnderThisBase_11913) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11913",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_79"
+                  "UnusedUnderThisBase_11913"
                 ]
               }
             },
@@ -1044,11 +1044,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "_Skill05_Part_ActionDelay",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_80) || RETURN",
-                "displayLines": "UnusedUnderThisBase_80",
+                "operator": "Variables[0] (UnusedUnderThisBase_11911) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11911",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_80"
+                  "UnusedUnderThisBase_11911"
                 ]
               }
             }
@@ -2826,19 +2826,19 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
               "valuePerStack": {
                 "_HpLimitRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_74) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_74",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11919) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11919",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_74"
+                    "UnusedUnderThisBase_11919"
                   ]
                 },
                 "_FatigueRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_75) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_75",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11952) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11952",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_75"
+                    "UnusedUnderThisBase_11952"
                   ]
                 }
               }
@@ -2905,19 +2905,19 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_82) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_82",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11918) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11918",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_82"
+                    "UnusedUnderThisBase_11918"
                   ]
                 },
                 "MDF_SpeedUpRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_82) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_82",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11918) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11918",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_82"
+                    "UnusedUnderThisBase_11918"
                   ]
                 }
               }
@@ -6373,19 +6373,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_71) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_71",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11925) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11925",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_71"
+                            "UnusedUnderThisBase_11925"
                           ]
                         },
                         "MDF_ShieldAttack_HealRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_69) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_69",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11953) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11953",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_69"
+                            "UnusedUnderThisBase_11953"
                           ]
                         }
                       }

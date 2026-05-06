@@ -594,11 +594,11 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_522) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_522",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9989) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9989",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_522"
+                    "UnusedUnderThisBase_9989"
                   ]
                 }
               }
@@ -3256,11 +3256,11 @@ const compositeAbilityObject = {
                       "scope": "TargetEntity",
                       "variableName": "PassiveSkill03_MaxCharge",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_521) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_521",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9971) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_9971",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_521"
+                          "UnusedUnderThisBase_9971"
                         ]
                       }
                     }
@@ -3562,11 +3562,11 @@ const compositeAbilityObject = {
                           "scope": "TargetEntity",
                           "variableName": "PassiveSkill03_MaxCharge",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_521) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_521",
+                            "operator": "Variables[0] (UnusedUnderThisBase_9971) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_9971",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_521"
+                              "UnusedUnderThisBase_9971"
                             ]
                           }
                         }
@@ -3611,11 +3611,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_582) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_582",
+                              "operator": "Variables[0] (UnusedUnderThisBase_9973) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_9973",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_582"
+                                "UnusedUnderThisBase_9973"
                               ]
                             }
                           }

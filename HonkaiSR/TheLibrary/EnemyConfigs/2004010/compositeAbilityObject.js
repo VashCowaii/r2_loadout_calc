@@ -969,11 +969,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_14) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_14",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8765) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8765",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_14"
+                    "UnusedUnderThisBase_8765"
                   ]
                 }
               }
@@ -1353,11 +1353,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_14) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_14",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8765) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8765",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_14"
+                    "UnusedUnderThisBase_8765"
                   ]
                 }
               }
@@ -1903,11 +1903,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_15) || Variables[1] (SkillMaxHit) || DIV || RETURN",
-                      "displayLines": "(UnusedUnderThisBase_15 / SkillMaxHit)",
+                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__252) || Variables[1] (SkillMaxHit) || DIV || RETURN",
+                      "displayLines": "(ENEMIES_OBJECT_UNUSED__252 / SkillMaxHit)",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_15",
+                        "ENEMIES_OBJECT_UNUSED__252",
                         "SkillMaxHit"
                       ]
                     },

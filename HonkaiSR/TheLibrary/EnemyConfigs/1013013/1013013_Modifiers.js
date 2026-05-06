@@ -831,11 +831,11 @@ const configAbility = {
                                       },
                                       "variableName": "Mecha03_00_DamageUpBasePercentage",
                                       "value": {
-                                        "operator": "Variables[0] (UnusedUnderThisBase_48) || RETURN",
-                                        "displayLines": "UnusedUnderThisBase_48",
+                                        "operator": "Variables[0] (UnusedUnderThisBase_7939) || RETURN",
+                                        "displayLines": "UnusedUnderThisBase_7939",
                                         "constants": [],
                                         "variables": [
-                                          "UnusedUnderThisBase_48"
+                                          "UnusedUnderThisBase_7939"
                                         ]
                                       }
                                     }
@@ -953,7 +953,7 @@ const configAbility = {
                                             "target": "{{Modifier Holder}}"
                                           },
                                           "advanceType": "Set",
-                                          "multiAdd": "UnusedUnderThisBase_53"
+                                          "multiAdd": "UnusedUnderThisBase_7953"
                                         },
                                         {
                                           "name": "Add Events/Bonuses",
@@ -963,11 +963,11 @@ const configAbility = {
                                           },
                                           "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                           "duration": {
-                                            "operator": "Variables[0] (UnusedUnderThisBase_52) || RETURN",
-                                            "displayLines": "UnusedUnderThisBase_52",
+                                            "operator": "Variables[0] (UnusedUnderThisBase_7950) || RETURN",
+                                            "displayLines": "UnusedUnderThisBase_7950",
                                             "constants": [],
                                             "variables": [
-                                              "UnusedUnderThisBase_52"
+                                              "UnusedUnderThisBase_7950"
                                             ]
                                           }
                                         }
@@ -980,7 +980,7 @@ const configAbility = {
                                             "target": "{{Modifier Holder}}"
                                           },
                                           "advanceType": "Set",
-                                          "multiAdd": "UnusedUnderThisBase_51"
+                                          "multiAdd": "UnusedUnderThisBase_7938"
                                         },
                                         {
                                           "name": "Add Events/Bonuses",
@@ -990,11 +990,11 @@ const configAbility = {
                                           },
                                           "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                           "duration": {
-                                            "operator": "Variables[0] (UnusedUnderThisBase_50) || RETURN",
-                                            "displayLines": "UnusedUnderThisBase_50",
+                                            "operator": "Variables[0] (UnusedUnderThisBase_7951) || RETURN",
+                                            "displayLines": "UnusedUnderThisBase_7951",
                                             "constants": [],
                                             "variables": [
-                                              "UnusedUnderThisBase_50"
+                                              "UnusedUnderThisBase_7951"
                                             ]
                                           }
                                         }
@@ -1062,11 +1062,11 @@ const configAbility = {
                                       },
                                       "variableName": "Mecha03_00_DamageUpBasePercentage",
                                       "value": {
-                                        "operator": "Variables[0] (UnusedUnderThisBase_48) || RETURN",
-                                        "displayLines": "UnusedUnderThisBase_48",
+                                        "operator": "Variables[0] (UnusedUnderThisBase_7939) || RETURN",
+                                        "displayLines": "UnusedUnderThisBase_7939",
                                         "constants": [],
                                         "variables": [
-                                          "UnusedUnderThisBase_48"
+                                          "UnusedUnderThisBase_7939"
                                         ]
                                       }
                                     }
@@ -1498,11 +1498,11 @@ const configAbility = {
                                                       },
                                                       "variableName": "Mecha03_00_DamageUpBasePercentage",
                                                       "value": {
-                                                        "operator": "Variables[0] (UnusedUnderThisBase_48) || RETURN",
-                                                        "displayLines": "UnusedUnderThisBase_48",
+                                                        "operator": "Variables[0] (UnusedUnderThisBase_7939) || RETURN",
+                                                        "displayLines": "UnusedUnderThisBase_7939",
                                                         "constants": [],
                                                         "variables": [
-                                                          "UnusedUnderThisBase_48"
+                                                          "UnusedUnderThisBase_7939"
                                                         ]
                                                       }
                                                     }
@@ -1622,7 +1622,7 @@ const configAbility = {
                                                         "target": "{{Modifier Holder}}"
                                                       },
                                                       "advanceType": "Set",
-                                                      "multiAdd": "UnusedUnderThisBase_53"
+                                                      "multiAdd": "UnusedUnderThisBase_7953"
                                                     },
                                                     {
                                                       "name": "Add Events/Bonuses",
@@ -1632,11 +1632,11 @@ const configAbility = {
                                                       },
                                                       "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                                       "duration": {
-                                                        "operator": "Variables[0] (UnusedUnderThisBase_52) || RETURN",
-                                                        "displayLines": "UnusedUnderThisBase_52",
+                                                        "operator": "Variables[0] (UnusedUnderThisBase_7950) || RETURN",
+                                                        "displayLines": "UnusedUnderThisBase_7950",
                                                         "constants": [],
                                                         "variables": [
-                                                          "UnusedUnderThisBase_52"
+                                                          "UnusedUnderThisBase_7950"
                                                         ]
                                                       }
                                                     }
@@ -1649,7 +1649,7 @@ const configAbility = {
                                                         "target": "{{Modifier Holder}}"
                                                       },
                                                       "advanceType": "Set",
-                                                      "multiAdd": "UnusedUnderThisBase_51"
+                                                      "multiAdd": "UnusedUnderThisBase_7938"
                                                     },
                                                     {
                                                       "name": "Add Events/Bonuses",
@@ -1659,11 +1659,11 @@ const configAbility = {
                                                       },
                                                       "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                                       "duration": {
-                                                        "operator": "Variables[0] (UnusedUnderThisBase_50) || RETURN",
-                                                        "displayLines": "UnusedUnderThisBase_50",
+                                                        "operator": "Variables[0] (UnusedUnderThisBase_7951) || RETURN",
+                                                        "displayLines": "UnusedUnderThisBase_7951",
                                                         "constants": [],
                                                         "variables": [
-                                                          "UnusedUnderThisBase_50"
+                                                          "UnusedUnderThisBase_7951"
                                                         ]
                                                       }
                                                     }
@@ -1747,11 +1747,11 @@ const configAbility = {
                                                   },
                                                   "variableName": "Mecha03_00_DamageUpBasePercentage",
                                                   "value": {
-                                                    "operator": "Variables[0] (UnusedUnderThisBase_48) || RETURN",
-                                                    "displayLines": "UnusedUnderThisBase_48",
+                                                    "operator": "Variables[0] (UnusedUnderThisBase_7939) || RETURN",
+                                                    "displayLines": "UnusedUnderThisBase_7939",
                                                     "constants": [],
                                                     "variables": [
-                                                      "UnusedUnderThisBase_48"
+                                                      "UnusedUnderThisBase_7939"
                                                     ]
                                                   }
                                                 }

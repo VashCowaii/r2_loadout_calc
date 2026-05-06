@@ -21,11 +21,11 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (UnusedUnderThisBase_274) || RETURN",
-            "displayLines": "UnusedUnderThisBase_274",
+            "operator": "Variables[0] (UnusedUnderThisBase_9610) || RETURN",
+            "displayLines": "UnusedUnderThisBase_9610",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_274"
+              "UnusedUnderThisBase_9610"
             ]
           },
           "Event": [
@@ -37,20 +37,20 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (UnusedUnderThisBase_273) || RETURN",
-                "displayLines": "UnusedUnderThisBase_273",
+                "operator": "Variables[0] (UnusedUnderThisBase_9608) || RETURN",
+                "displayLines": "UnusedUnderThisBase_9608",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_273"
+                  "UnusedUnderThisBase_9608"
                 ]
               },
               "valuePerStack": {
                 "MDF_MaxLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_273) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_273",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9608) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9608",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_273"
+                    "UnusedUnderThisBase_9608"
                   ]
                 }
               },
@@ -69,11 +69,11 @@ const configAbility = {
             "value1": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (UnusedUnderThisBase_273) || RETURN",
-              "displayLines": "UnusedUnderThisBase_273",
+              "operator": "Variables[0] (UnusedUnderThisBase_9608) || RETURN",
+              "displayLines": "UnusedUnderThisBase_9608",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_273"
+                "UnusedUnderThisBase_9608"
               ]
             },
             "valueType": "Layer"

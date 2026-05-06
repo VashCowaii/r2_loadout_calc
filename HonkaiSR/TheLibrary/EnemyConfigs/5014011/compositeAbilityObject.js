@@ -2604,11 +2604,11 @@ const compositeAbilityObject = {
                         "value1": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_227) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_227",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12620) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12620",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_227"
+                            "UnusedUnderThisBase_12620"
                           ]
                         },
                         "valueType": "Layer"
@@ -2627,11 +2627,11 @@ const compositeAbilityObject = {
                     "value1": "<a class=\"gModGreen\" id=\"-869771857\">Enemy_W5_VtuberPart02_Charge</a>[<span class=\"descriptionNumberColor\">Enemy Popularity</span>]",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_227) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_227",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12620) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12620",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_227"
+                        "UnusedUnderThisBase_12620"
                       ]
                     },
                     "valueType": "Layer"
@@ -3223,11 +3223,11 @@ const compositeAbilityObject = {
                         "value1": "<a class=\"gModGreen\" id=\"-869771857\">Enemy_W5_VtuberPart02_Charge</a>[<span class=\"descriptionNumberColor\">Enemy Popularity</span>]",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_227) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_227",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12620) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12620",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_227"
+                            "UnusedUnderThisBase_12620"
                           ]
                         },
                         "valueType": "Layer"
@@ -3295,11 +3295,11 @@ const compositeAbilityObject = {
                             "value1": "<a class=\"gModGreen\" id=\"-869771857\">Enemy_W5_VtuberPart02_Charge</a>[<span class=\"descriptionNumberColor\">Enemy Popularity</span>]",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_227) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_227",
+                              "operator": "Variables[0] (UnusedUnderThisBase_12620) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_12620",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_227"
+                                "UnusedUnderThisBase_12620"
                               ]
                             },
                             "valueType": "Layer"
@@ -3424,11 +3424,11 @@ const compositeAbilityObject = {
                             "value1": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]",
                             "compareType": "<",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_227) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_227",
+                              "operator": "Variables[0] (UnusedUnderThisBase_12620) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_12620",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_227"
+                                "UnusedUnderThisBase_12620"
                               ]
                             },
                             "valueType": "Layer"
@@ -4242,11 +4242,11 @@ const compositeAbilityObject = {
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_499) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_499",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12651) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12651",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_499"
+                        "UnusedUnderThisBase_12651"
                       ]
                     }
                   },

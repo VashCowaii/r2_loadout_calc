@@ -743,11 +743,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1789818614\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokSub</a>[<span class=\"descriptionNumberColor\">Rot</span>]",
                   "valuePerStack": {
                     "MDF_DamageValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_604) || Variables[1] (BaseAttack) || MUL || RETURN",
-                      "displayLines": "(UnusedUnderThisBase_604 * BaseAttack)",
+                      "operator": "Variables[0] (UnusedUnderThisBase_10811) || Variables[1] (BaseAttack) || MUL || RETURN",
+                      "displayLines": "(UnusedUnderThisBase_10811 * BaseAttack)",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_604",
+                        "UnusedUnderThisBase_10811",
                         "BaseAttack"
                       ]
                     }
@@ -1388,11 +1388,11 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_601) || RETURN",
-              "displayLines": "UnusedUnderThisBase_601",
+              "operator": "Variables[0] (UnusedUnderThisBase_10874) || RETURN",
+              "displayLines": "UnusedUnderThisBase_10874",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_601"
+                "UnusedUnderThisBase_10874"
               ]
             }
           }
@@ -1652,7 +1652,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "advanceType": "Set",
-                      "multiAdd": "UnusedUnderThisBase_602"
+                      "multiAdd": "UnusedUnderThisBase_10835"
                     }
                   ]
                 },
@@ -1673,7 +1673,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "advanceType": "Set",
-              "multiAdd": "UnusedUnderThisBase_603"
+              "multiAdd": "UnusedUnderThisBase_10875"
             },
             {
               "name": "Declare Custom Variable",
@@ -1912,11 +1912,11 @@ const configAbility = {
                     "value1": "TotalDamageRatio",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_320) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_320",
+                      "operator": "Variables[0] (UnusedUnderThisBase_10873) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_10873",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_320"
+                        "UnusedUnderThisBase_10873"
                       ]
                     }
                   }

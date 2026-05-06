@@ -42,11 +42,11 @@ const configAbility = {
         {
           "name": "Deal Toughness DMG",
           "value": {
-            "operator": "Variables[0] (MDF_Deathrattle) || Variables[1] (Summon_Deathrattle) || MUL || RETURN",
-            "displayLines": "(MDF_Deathrattle * Summon_Deathrattle)",
+            "operator": "Variables[0] (UnusedUnderThisBase_12181) || Variables[1] (Summon_Deathrattle) || MUL || RETURN",
+            "displayLines": "(UnusedUnderThisBase_12181 * Summon_Deathrattle)",
             "constants": [],
             "variables": [
-              "MDF_Deathrattle",
+              "UnusedUnderThisBase_12181",
               "Summon_Deathrattle"
             ]
           },

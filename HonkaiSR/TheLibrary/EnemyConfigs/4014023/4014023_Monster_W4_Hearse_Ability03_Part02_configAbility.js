@@ -584,13 +584,13 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "CurrentBlackBloodValue",
               "value": {
-                "operator": "Variables[0] (CurrentBlackBloodValue) || Variables[1] (CurrentRemainBlackBloodValue) || SUB || Variables[2] (UnusedUnderThisBase_318) || MUL || Variables[1] (CurrentRemainBlackBloodValue) || ADD || Variables[3] (CurrentEnhanceBlackBloodValue) || SUB || RETURN",
-                "displayLines": "((((CurrentBlackBloodValue - CurrentRemainBlackBloodValue) * UnusedUnderThisBase_318) + CurrentRemainBlackBloodValue) - CurrentEnhanceBlackBloodValue)",
+                "operator": "Variables[0] (CurrentBlackBloodValue) || Variables[1] (CurrentRemainBlackBloodValue) || SUB || Variables[2] (UnusedUnderThisBase_11333) || MUL || Variables[1] (CurrentRemainBlackBloodValue) || ADD || Variables[3] (CurrentEnhanceBlackBloodValue) || SUB || RETURN",
+                "displayLines": "((((CurrentBlackBloodValue - CurrentRemainBlackBloodValue) * UnusedUnderThisBase_11333) + CurrentRemainBlackBloodValue) - CurrentEnhanceBlackBloodValue)",
                 "constants": [],
                 "variables": [
                   "CurrentBlackBloodValue",
                   "CurrentRemainBlackBloodValue",
-                  "UnusedUnderThisBase_318",
+                  "UnusedUnderThisBase_11333",
                   "CurrentEnhanceBlackBloodValue"
                 ]
               }
@@ -602,11 +602,11 @@ const configAbility = {
                 "value1": "CurrentBlackBloodValue",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_319) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_319",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11332) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11332",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_319"
+                    "UnusedUnderThisBase_11332"
                   ]
                 }
               },
@@ -615,11 +615,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "CurrentBlackBloodValue",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_319) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_319",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11332) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11332",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_319"
+                      "UnusedUnderThisBase_11332"
                     ]
                   }
                 }

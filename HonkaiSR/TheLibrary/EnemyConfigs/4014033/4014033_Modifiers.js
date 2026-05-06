@@ -2433,19 +2433,19 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                   "valuePerStack": {
                     "MDF_ShieldPercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_71) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_71",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11925) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11925",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_71"
+                        "UnusedUnderThisBase_11925"
                       ]
                     },
                     "MDF_ShieldAttack_HealRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_69) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_69",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11953) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11953",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_69"
+                        "UnusedUnderThisBase_11953"
                       ]
                     }
                   }

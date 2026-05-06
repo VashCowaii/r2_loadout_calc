@@ -23,11 +23,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_564) || RETURN",
-                "displayLines": "UnusedUnderThisBase_564",
+                "operator": "Variables[0] (UnusedUnderThisBase_11293) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11293",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_564"
+                  "UnusedUnderThisBase_11293"
                 ]
               }
             }
@@ -3184,11 +3184,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_542) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_542",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11596) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11596",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_542"
+                            "UnusedUnderThisBase_11596"
                           ]
                         }
                       },
@@ -3244,11 +3244,11 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_542) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_542",
+                              "operator": "Variables[0] (UnusedUnderThisBase_11596) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_11596",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_542"
+                                "UnusedUnderThisBase_11596"
                               ]
                             }
                           },
@@ -3303,11 +3303,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_542) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_542",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11596) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11596",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_542"
+                        "UnusedUnderThisBase_11596"
                       ]
                     }
                   },

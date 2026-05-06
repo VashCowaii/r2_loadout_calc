@@ -31,11 +31,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_184) || RETURN",
-          "displayLines": "UnusedUnderThisBase_184",
+          "operator": "Variables[0] (UnusedUnderThisBase_12848) || RETURN",
+          "displayLines": "UnusedUnderThisBase_12848",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_184"
+            "UnusedUnderThisBase_12848"
           ]
         },
         "Toughness": null,

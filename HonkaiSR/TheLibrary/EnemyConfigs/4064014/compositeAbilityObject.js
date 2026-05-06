@@ -73,11 +73,11 @@ const compositeAbilityObject = {
             {
               "name": "Deal Toughness DMG",
               "value": {
-                "operator": "Variables[0] (MDF_Deathrattle) || Variables[1] (Summon_Deathrattle) || MUL || RETURN",
-                "displayLines": "(MDF_Deathrattle * Summon_Deathrattle)",
+                "operator": "Variables[0] (UnusedUnderThisBase_12181) || Variables[1] (Summon_Deathrattle) || MUL || RETURN",
+                "displayLines": "(UnusedUnderThisBase_12181 * Summon_Deathrattle)",
                 "constants": [],
                 "variables": [
-                  "MDF_Deathrattle",
+                  "UnusedUnderThisBase_12181",
                   "Summon_Deathrattle"
                 ]
               },
@@ -316,11 +316,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-227770037\">Monster_W4_Serpent_01_RLBoss_Passive</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_220) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_220",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12194) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12194",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_220"
+                    "UnusedUnderThisBase_12194"
                   ]
                 }
               }
@@ -2300,11 +2300,11 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_594) || RETURN",
-                "displayLines": "UnusedUnderThisBase_594",
+                "operator": "Variables[0] (UnusedUnderThisBase_12184) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12184",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_594"
+                  "UnusedUnderThisBase_12184"
                 ]
               },
               "enemyList": [
@@ -2325,11 +2325,11 @@ const compositeAbilityObject = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_595) || RETURN",
-                "displayLines": "UnusedUnderThisBase_595",
+                "operator": "Variables[0] (UnusedUnderThisBase_12185) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12185",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_595"
+                  "UnusedUnderThisBase_12185"
                 ]
               },
               "enemyList": [
@@ -2372,11 +2372,11 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_594) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_594",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12184) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12184",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_594"
+                      "UnusedUnderThisBase_12184"
                     ]
                   },
                   "enemyList": [
@@ -2397,11 +2397,11 @@ const compositeAbilityObject = {
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_595) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_595",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12185) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12185",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_595"
+                      "UnusedUnderThisBase_12185"
                     ]
                   },
                   "enemyList": [

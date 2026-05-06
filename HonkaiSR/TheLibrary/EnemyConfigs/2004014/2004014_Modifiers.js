@@ -1261,11 +1261,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1077360781\">XP_Elite_Fire_Ability07_AttackUp_Modifier</a>[<span class=\"descriptionNumberColor\">Molten</span>]",
               "valuePerStack": {
                 "Modifier_AttackAddedRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_27) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_27",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12685) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12685",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_27"
+                    "UnusedUnderThisBase_12685"
                   ]
                 }
               }
@@ -5696,11 +5696,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_15) || Variables[1] (SkillMaxHit) || DIV || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_15 / SkillMaxHit)",
+                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__252) || Variables[1] (SkillMaxHit) || DIV || RETURN",
+                  "displayLines": "(ENEMIES_OBJECT_UNUSED__252 / SkillMaxHit)",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_15",
+                    "ENEMIES_OBJECT_UNUSED__252",
                     "SkillMaxHit"
                   ]
                 },

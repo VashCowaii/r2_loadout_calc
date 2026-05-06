@@ -130,35 +130,35 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
           "valuePerStack": {
             "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_391) || RETURN",
-              "displayLines": "UnusedUnderThisBase_391",
+              "operator": "Variables[0] (UnusedUnderThisBase_12234) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12234",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_391"
+                "UnusedUnderThisBase_12234"
               ]
             },
             "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_392) || RETURN",
-              "displayLines": "UnusedUnderThisBase_392",
+              "operator": "Variables[0] (UnusedUnderThisBase_12232) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12232",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_392"
+                "UnusedUnderThisBase_12232"
               ]
             },
             "MDF_Rally_HealUpRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_393) || RETURN",
-              "displayLines": "UnusedUnderThisBase_393",
+              "operator": "Variables[0] (UnusedUnderThisBase_12235) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12235",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_393"
+                "UnusedUnderThisBase_12235"
               ]
             },
             "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_394) || RETURN",
-              "displayLines": "UnusedUnderThisBase_394",
+              "operator": "Variables[0] (UnusedUnderThisBase_12236) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12236",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_394"
+                "UnusedUnderThisBase_12236"
               ]
             }
           }
@@ -173,11 +173,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_3) || RETURN",
-              "displayLines": "UnusedUnderThisBase_3",
+              "operator": "Variables[0] (UnusedUnderThisBase_13212) || RETURN",
+              "displayLines": "UnusedUnderThisBase_13212",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_3"
+                "UnusedUnderThisBase_13212"
               ]
             },
             "Toughness": null,
@@ -195,11 +195,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_482) || RETURN",
-              "displayLines": "UnusedUnderThisBase_482",
+              "operator": "Variables[0] (UnusedUnderThisBase_10638) || RETURN",
+              "displayLines": "UnusedUnderThisBase_10638",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_482"
+                "UnusedUnderThisBase_10638"
               ]
             },
             "Toughness": null,

@@ -11282,11 +11282,11 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_290) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_290",
+                    "operator": "Variables[0] (UnusedUnderThisBase_10126) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_10126",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_290"
+                      "UnusedUnderThisBase_10126"
                     ]
                   }
                 },
@@ -12539,11 +12539,11 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_351) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_351",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11116) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11116",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_351"
+                      "UnusedUnderThisBase_11116"
                     ]
                   }
                 },
