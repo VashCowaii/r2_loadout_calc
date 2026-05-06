@@ -322,13 +322,13 @@ const configAbility = {
                 ]
               },
               "stackLimit": {
-                "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] ([object Object]) || MUL || Variables[2] ([object Object]) || ADD || Variables[3] (MDF_MaxShieldRatio) || MUL || RETURN",
-                "displayLines": "(((DanHengPT_Attack * [object Object]) + [object Object]) * MDF_MaxShieldRatio)",
+                "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4568) || MUL || Variables[2] (UnusedUnderThisBase_4558) || ADD || Variables[3] (MDF_MaxShieldRatio) || MUL || RETURN",
+                "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_4568) + UnusedUnderThisBase_4558) * MDF_MaxShieldRatio)",
                 "constants": [],
                 "variables": [
                   "DanHengPT_Attack",
-                  {},
-                  {},
+                  "UnusedUnderThisBase_4568",
+                  "UnusedUnderThisBase_4558",
                   "MDF_MaxShieldRatio"
                 ]
               }

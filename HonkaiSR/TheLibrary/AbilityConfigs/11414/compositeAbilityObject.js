@@ -620,13 +620,13 @@ const compositeAbilityObject = {
                     ]
                   },
                   "stackLimit": {
-                    "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] ([object Object]) || MUL || Variables[2] ([object Object]) || ADD || Variables[3] (MDF_MaxShieldRatio) || MUL || RETURN",
-                    "displayLines": "(((DanHengPT_Attack * [object Object]) + [object Object]) * MDF_MaxShieldRatio)",
+                    "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4568) || MUL || Variables[2] (UnusedUnderThisBase_4558) || ADD || Variables[3] (MDF_MaxShieldRatio) || MUL || RETURN",
+                    "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_4568) + UnusedUnderThisBase_4558) * MDF_MaxShieldRatio)",
                     "constants": [],
                     "variables": [
                       "DanHengPT_Attack",
-                      {},
-                      {},
+                      "UnusedUnderThisBase_4568",
+                      "UnusedUnderThisBase_4558",
                       "MDF_MaxShieldRatio"
                     ]
                   }
@@ -1141,30 +1141,30 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
-                "operator": "Variables[0] ([object Object]) || RETURN",
-                "displayLines": "[object Object]",
+                "operator": "Variables[0] (UnusedUnderThisBase_13038) || RETURN",
+                "displayLines": "UnusedUnderThisBase_13038",
                 "constants": [],
                 "variables": [
-                  {}
+                  "UnusedUnderThisBase_13038"
                 ]
               },
               "valuePerStack": {
                 "MDF_DanHengPT_InitShieldValue": {
-                  "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] ([object Object]) || MUL || Variables[2] ([object Object]) || ADD || RETURN",
-                  "displayLines": "((DanHengPT_Attack * [object Object]) + [object Object])",
+                  "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4568) || MUL || Variables[2] (UnusedUnderThisBase_4558) || ADD || RETURN",
+                  "displayLines": "((DanHengPT_Attack * UnusedUnderThisBase_4568) + UnusedUnderThisBase_4558)",
                   "constants": [],
                   "variables": [
                     "DanHengPT_Attack",
-                    {},
-                    {}
+                    "UnusedUnderThisBase_4568",
+                    "UnusedUnderThisBase_4558"
                   ]
                 },
                 "MDF_MaxShieldRatio": {
-                  "operator": "Variables[0] ([object Object]) || RETURN",
-                  "displayLines": "[object Object]",
+                  "operator": "Variables[0] (UnusedUnderThisBase_4570) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_4570",
                   "constants": [],
                   "variables": [
-                    {}
+                    "UnusedUnderThisBase_4570"
                   ]
                 },
                 "MDF_MainTarget": 1
@@ -1193,30 +1193,30 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
-                "operator": "Variables[0] ([object Object]) || RETURN",
-                "displayLines": "[object Object]",
+                "operator": "Variables[0] (UnusedUnderThisBase_5507) || RETURN",
+                "displayLines": "UnusedUnderThisBase_5507",
                 "constants": [],
                 "variables": [
-                  {}
+                  "UnusedUnderThisBase_5507"
                 ]
               },
               "valuePerStack": {
                 "MDF_DanHengPT_InitShieldValue": {
-                  "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] ([object Object]) || MUL || Variables[2] ([object Object]) || ADD || RETURN",
-                  "displayLines": "((DanHengPT_Attack * [object Object]) + [object Object])",
+                  "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4573) || MUL || Variables[2] (UnusedUnderThisBase_4574) || ADD || RETURN",
+                  "displayLines": "((DanHengPT_Attack * UnusedUnderThisBase_4573) + UnusedUnderThisBase_4574)",
                   "constants": [],
                   "variables": [
                     "DanHengPT_Attack",
-                    {},
-                    {}
+                    "UnusedUnderThisBase_4573",
+                    "UnusedUnderThisBase_4574"
                   ]
                 },
                 "MDF_MaxShieldRatio": {
-                  "operator": "Variables[0] ([object Object]) || RETURN",
-                  "displayLines": "[object Object]",
+                  "operator": "Variables[0] (UnusedUnderThisBase_4570) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_4570",
                   "constants": [],
                   "variables": [
-                    {}
+                    "UnusedUnderThisBase_4570"
                   ]
                 },
                 "MDF_MainTarget": 1
@@ -1306,32 +1306,32 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
-                    "operator": "Variables[0] ([object Object]) || RETURN",
-                    "displayLines": "[object Object]",
+                    "operator": "Variables[0] (UnusedUnderThisBase_6017) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_6017",
                     "constants": [],
                     "variables": [
-                      {}
+                      "UnusedUnderThisBase_6017"
                     ]
                   },
                   "valuePerStack": {
                     "MDF_DanHengPT_InitShieldValue": {
-                      "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (#SkillRank_Rank02_P3_ShieldRatio) || MUL || Variables[2] (DanHengPT_IsFreeAction) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || Variables[4] ([object Object]) || MUL || RETURN",
-                      "displayLines": "((((DanHengPT_Attack * #SkillRank_Rank02_P3_ShieldRatio) + DanHengPT_IsFreeAction) * DanHengPT_ExtraShieldUPRatio) * [object Object])",
+                      "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4554) || MUL || Variables[2] (UnusedUnderThisBase_4550) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || Variables[4] (UnusedUnderThisBase_5331) || MUL || RETURN",
+                      "displayLines": "((((DanHengPT_Attack * UnusedUnderThisBase_4554) + UnusedUnderThisBase_4550) * DanHengPT_ExtraShieldUPRatio) * UnusedUnderThisBase_5331)",
                       "constants": [],
                       "variables": [
                         "DanHengPT_Attack",
-                        "#SkillRank_Rank02_P3_ShieldRatio",
-                        "DanHengPT_IsFreeAction",
+                        "UnusedUnderThisBase_4554",
+                        "UnusedUnderThisBase_4550",
                         "DanHengPT_ExtraShieldUPRatio",
-                        {}
+                        "UnusedUnderThisBase_5331"
                       ]
                     },
                     "MDF_MaxShieldRatio": {
-                      "operator": "Variables[0] ([object Object]) || RETURN",
-                      "displayLines": "[object Object]",
+                      "operator": "Variables[0] (UnusedUnderThisBase_4570) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_4570",
                       "constants": [],
                       "variables": [
-                        {}
+                        "UnusedUnderThisBase_4570"
                       ]
                     },
                     "MDF_MainTarget": 1
@@ -1374,32 +1374,32 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                           "duration": {
-                            "operator": "Variables[0] ([object Object]) || RETURN",
-                            "displayLines": "[object Object]",
+                            "operator": "Variables[0] (UnusedUnderThisBase_6017) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_6017",
                             "constants": [],
                             "variables": [
-                              {}
+                              "UnusedUnderThisBase_6017"
                             ]
                           },
                           "valuePerStack": {
                             "MDF_DanHengPT_InitShieldValue": {
-                              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] ([object Object]) || MUL || Variables[2] ([object Object]) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || Variables[4] ([object Object]) || MUL || RETURN",
-                              "displayLines": "((((DanHengPT_Attack * [object Object]) + [object Object]) * DanHengPT_ExtraShieldUPRatio) * [object Object])",
+                              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4552) || MUL || Variables[2] (UnusedUnderThisBase_4580) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || Variables[4] (UnusedUnderThisBase_5331) || MUL || RETURN",
+                              "displayLines": "((((DanHengPT_Attack * UnusedUnderThisBase_4552) + UnusedUnderThisBase_4580) * DanHengPT_ExtraShieldUPRatio) * UnusedUnderThisBase_5331)",
                               "constants": [],
                               "variables": [
                                 "DanHengPT_Attack",
-                                {},
-                                {},
+                                "UnusedUnderThisBase_4552",
+                                "UnusedUnderThisBase_4580",
                                 "DanHengPT_ExtraShieldUPRatio",
-                                {}
+                                "UnusedUnderThisBase_5331"
                               ]
                             },
                             "MDF_MaxShieldRatio": {
-                              "operator": "Variables[0] ([object Object]) || RETURN",
-                              "displayLines": "[object Object]",
+                              "operator": "Variables[0] (UnusedUnderThisBase_4570) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_4570",
                               "constants": [],
                               "variables": [
-                                {}
+                                "UnusedUnderThisBase_4570"
                               ]
                             },
                             "MDF_MainTarget": 1
@@ -1419,31 +1419,31 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
-                    "operator": "Variables[0] ([object Object]) || RETURN",
-                    "displayLines": "[object Object]",
+                    "operator": "Variables[0] (UnusedUnderThisBase_6017) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_6017",
                     "constants": [],
                     "variables": [
-                      {}
+                      "UnusedUnderThisBase_6017"
                     ]
                   },
                   "valuePerStack": {
                     "MDF_DanHengPT_InitShieldValue": {
-                      "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (#SkillRank_Rank02_P3_ShieldRatio) || MUL || Variables[2] (DanHengPT_IsFreeAction) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || RETURN",
-                      "displayLines": "(((DanHengPT_Attack * #SkillRank_Rank02_P3_ShieldRatio) + DanHengPT_IsFreeAction) * DanHengPT_ExtraShieldUPRatio)",
+                      "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4554) || MUL || Variables[2] (UnusedUnderThisBase_4550) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || RETURN",
+                      "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_4554) + UnusedUnderThisBase_4550) * DanHengPT_ExtraShieldUPRatio)",
                       "constants": [],
                       "variables": [
                         "DanHengPT_Attack",
-                        "#SkillRank_Rank02_P3_ShieldRatio",
-                        "DanHengPT_IsFreeAction",
+                        "UnusedUnderThisBase_4554",
+                        "UnusedUnderThisBase_4550",
                         "DanHengPT_ExtraShieldUPRatio"
                       ]
                     },
                     "MDF_MaxShieldRatio": {
-                      "operator": "Variables[0] ([object Object]) || RETURN",
-                      "displayLines": "[object Object]",
+                      "operator": "Variables[0] (UnusedUnderThisBase_4570) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_4570",
                       "constants": [],
                       "variables": [
-                        {}
+                        "UnusedUnderThisBase_4570"
                       ]
                     },
                     "MDF_MainTarget": 1
@@ -1486,31 +1486,31 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                           "duration": {
-                            "operator": "Variables[0] ([object Object]) || RETURN",
-                            "displayLines": "[object Object]",
+                            "operator": "Variables[0] (UnusedUnderThisBase_6017) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_6017",
                             "constants": [],
                             "variables": [
-                              {}
+                              "UnusedUnderThisBase_6017"
                             ]
                           },
                           "valuePerStack": {
                             "MDF_DanHengPT_InitShieldValue": {
-                              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] ([object Object]) || MUL || Variables[2] ([object Object]) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || RETURN",
-                              "displayLines": "(((DanHengPT_Attack * [object Object]) + [object Object]) * DanHengPT_ExtraShieldUPRatio)",
+                              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4552) || MUL || Variables[2] (UnusedUnderThisBase_4580) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || RETURN",
+                              "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_4552) + UnusedUnderThisBase_4580) * DanHengPT_ExtraShieldUPRatio)",
                               "constants": [],
                               "variables": [
                                 "DanHengPT_Attack",
-                                {},
-                                {},
+                                "UnusedUnderThisBase_4552",
+                                "UnusedUnderThisBase_4580",
                                 "DanHengPT_ExtraShieldUPRatio"
                               ]
                             },
                             "MDF_MaxShieldRatio": {
-                              "operator": "Variables[0] ([object Object]) || RETURN",
-                              "displayLines": "[object Object]",
+                              "operator": "Variables[0] (UnusedUnderThisBase_4570) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_4570",
                               "constants": [],
                               "variables": [
-                                {}
+                                "UnusedUnderThisBase_4570"
                               ]
                             },
                             "MDF_MainTarget": 1
