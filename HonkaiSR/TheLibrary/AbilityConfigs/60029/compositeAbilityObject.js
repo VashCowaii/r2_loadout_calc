@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 60029,
   "trimCharacterName": 60029,
   "abilityList": [
+    "60029_BattleEventAbility_620101_Camera",
     "60029_MissionBattleEvent60024_PassiveAbility01",
     "60029_MissionBattleEvent60024_Ability03_Insert_Camera",
     "60029_MissionBattleEvent60024_Ability03_Insert_Part02",
@@ -14,6 +15,17 @@ const compositeAbilityObject = {
     "60029_Modifiers"
   ],
   "abilityObject": {
+    "60029_BattleEventAbility_620101_Camera": {
+      "fileName": "60029_BattleEventAbility_620101_Camera",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "60029_MissionBattleEvent60024_PassiveAbility01": {
       "fileName": "60029_MissionBattleEvent60024_PassiveAbility01",
       "childAbilityList": [
