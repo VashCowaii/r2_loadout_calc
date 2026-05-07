@@ -52,6 +52,8 @@ const compositeAbilityObject = {
     "1490374940_BattleEventAbility_Challenge_Month_18",
     "1490374940_BattleEventAbility_Challenge_Month_17",
     "1490374940_BattleEventAbility_Challenge_Month_16",
+    "1490374940_BattleEventAbility_SummonMonsterInfinite_Camera",
+    "1490374940_BattleEventAbility_Camear_AllDarkTeam",
     "1490374940_Modifiers",
     "1490374940_Functions",
     "1490374940_BE_BattleEvents"
@@ -17500,6 +17502,33 @@ const compositeAbilityObject = {
         }
       ]
     },
+    "1490374940_BattleEventAbility_SummonMonsterInfinite_Camera": {
+      "fileName": "1490374940_BattleEventAbility_SummonMonsterInfinite_Camera",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
+    },
+    "1490374940_BattleEventAbility_Camear_AllDarkTeam": {
+      "fileName": "1490374940_BattleEventAbility_Camear_AllDarkTeam",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Memory Turbulence"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
     "1490374940_Modifiers": {
       "fileName": "1490374940_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -17510,6 +17539,102 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1651606625\">MDF_RogueDLCAchievementListener</a>",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "count",
+                  "value": {
+                    "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(count + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "count"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "count",
+                    "compareType": "=",
+                    "value2": 10
+                  },
+                  "passed": [
+                    {
+                      "name": "Achievement",
+                      "relatedAchievements": [
+                        {
+                          "title": "All Watched Over By Machines of Loving Grace",
+                          "desc": "In Simulated Universe: Gold and Gears, endure #1[i] or more Resonance Extrapolation(s) in a single battle",
+                          "rarity": "Low",
+                          "type": "Hidden until Completion",
+                          "params": [
+                            10
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1651606625\">MDF_RogueDLCAchievementListener</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1216668349\">Challenge_Camera_AllTeam_Temp_2</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1216668349\">Challenge_Camera_AllTeam_Temp_2</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1166335492\">Challenge_Camera_AllTeam_Temp_1</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1166335492\">Challenge_Camera_AllTeam_Temp_1</a>"
+                }
+              ]
+            }
+          ]
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1189881261\">BAttleEventAbility_Weakness_Imaginary</a>",
