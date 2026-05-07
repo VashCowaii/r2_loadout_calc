@@ -1,10 +1,11 @@
 const configAbility = {
-  "fileName": "61005_HeliobusActionAbilityDelayAction_Ability03_Part01",
+  "fileName": "61008_HeliobusActionAbilityFormChange_Ability03_Part01",
   "childAbilityList": [
-    "61005_HeliobusActionAbilityDelayAction_Ability03_EnterReady",
-    "61005_HeliobusActionAbilityDelayAction_Ability03_Part01",
-    "61005_HeliobusActionAbilityDelayAction_Ability03_Part02",
-    "61005_ActionEventAbility_Camera_AllDarkTeam"
+    "61008_HeliobusActionAbilityFormChange_Ability03_EnterReady",
+    "61008_HeliobusActionAbilityFormChange_Ability03_Part01",
+    "61008_HeliobusActionAbilityFormChange_Ability03_Part02",
+    "61008_ActionEventAbility_Camera_AllDarkTeam",
+    "61008_HeliobusActionAbilityFormChange_Revert"
   ],
   "skillTrigger": "Skill03",
   "abilityType": "Ultimate",
@@ -21,7 +22,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "ability": "HeliobusActionAbilityDelayAction_Ability03_Part02",
+      "ability": "HeliobusActionAbilityFormChange_Ability03_Part02",
       "isTrigger": true
     }
   ],

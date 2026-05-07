@@ -1,7 +1,7 @@
 const configAbility = {
-  "fileName": "61005_ActionEventAbility_Standard_PassiveAbility",
+  "fileName": "61008_ActionEventAbility_Standard_PassiveAbility",
   "childAbilityList": [
-    "61005_ActionEventAbility_Standard_PassiveAbility"
+    "61008_ActionEventAbility_Standard_PassiveAbility"
   ],
   "skillTrigger": "SkillP01",
   "abilityType": "Talent",

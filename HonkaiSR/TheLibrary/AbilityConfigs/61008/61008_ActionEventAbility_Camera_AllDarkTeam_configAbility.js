@@ -1,5 +1,5 @@
 const configAbility = {
-  "fileName": "61002_HeliobusActionAbilityBPRecover_Ability03_EnterReady",
+  "fileName": "61008_ActionEventAbility_Camera_AllDarkTeam",
   "abilityType": null,
   "energy": null,
   "toughnessList": null,
