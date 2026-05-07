@@ -3,13 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": "Yao Guang",
   "trimCharacterName": "YaoGuang",
   "abilityList": [
+    "YaoGuang_YaoGuang_Trace03",
+    "YaoGuang_YaoGuang_Trace02",
+    "YaoGuang_YaoGuang_Trace01",
     "YaoGuang_YaoGuang_Eidolon6",
     "YaoGuang_YaoGuang_Eidolon4",
     "YaoGuang_YaoGuang_Eidolon2",
     "YaoGuang_YaoGuang_Eidolon1",
-    "YaoGuang_YaoGuang_Trace03",
-    "YaoGuang_YaoGuang_Trace02",
-    "YaoGuang_YaoGuang_Trace01",
     "YaoGuang_YaoGuang_TechniqueInLevel",
     "YaoGuang_YaoGuang_PassiveAbility",
     "YaoGuang_YaoGuang_Ability04_Part02",
@@ -25,135 +25,6 @@ const compositeAbilityObject = {
     "YaoGuang_Functions"
   ],
   "abilityObject": {
-    "YaoGuang_YaoGuang_Eidolon6": {
-      "fileName": "YaoGuang_YaoGuang_Eidolon6",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"696981361\">YaoGuang_Eidolon6</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__696981361\">YaoGuang_Eidolon6</a>",
-          "stackType": "ReplaceByCaster",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-986503251\">G_YaoGuang_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">Ferried Along the Astral Arc</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "YaoGuang_YaoGuang_Eidolon4": {
-      "fileName": "YaoGuang_YaoGuang_Eidolon4",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "YaoGuang_YaoGuang_Eidolon2": {
-      "fileName": "YaoGuang_YaoGuang_Eidolon2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "YaoGuang_YaoGuang_Eidolon1": {
-      "fileName": "YaoGuang_YaoGuang_Eidolon1",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"713758980\">YaoGuang_Eidolon1</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "G_Rank01_AddedElationPoint",
-          "value": {
-            "operator": "Variables[0] (40) || Variables[1] (20) || SUB || RETURN",
-            "displayLines": "(40 - 20)",
-            "constants": [],
-            "variables": [
-              40,
-              20
-            ]
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__713758980\">YaoGuang_Eidolon1</a>",
-          "stackType": "ReplaceByCaster",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-848491430\">G_YaoGuang_Eidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Chuckle Chimes Where Jade Falls</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "YaoGuang_YaoGuang_Trace03": {
       "fileName": "YaoGuang_YaoGuang_Trace03",
       "abilityType": null,
@@ -573,6 +444,135 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "YaoGuang_YaoGuang_Eidolon6": {
+      "fileName": "YaoGuang_YaoGuang_Eidolon6",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"696981361\">YaoGuang_Eidolon6</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__696981361\">YaoGuang_Eidolon6</a>",
+          "stackType": "ReplaceByCaster",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-986503251\">G_YaoGuang_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">Ferried Along the Astral Arc</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.25) || RETURN",
+                  "displayLines": "0.25",
+                  "constants": [],
+                  "variables": [
+                    0.25
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "YaoGuang_YaoGuang_Eidolon4": {
+      "fileName": "YaoGuang_YaoGuang_Eidolon4",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "YaoGuang_YaoGuang_Eidolon2": {
+      "fileName": "YaoGuang_YaoGuang_Eidolon2",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "YaoGuang_YaoGuang_Eidolon1": {
+      "fileName": "YaoGuang_YaoGuang_Eidolon1",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"713758980\">YaoGuang_Eidolon1</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "G_Rank01_AddedElationPoint",
+          "value": {
+            "operator": "Variables[0] (40) || Variables[1] (20) || SUB || RETURN",
+            "displayLines": "(40 - 20)",
+            "constants": [],
+            "variables": [
+              40,
+              20
+            ]
+          }
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__713758980\">YaoGuang_Eidolon1</a>",
+          "stackType": "ReplaceByCaster",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-848491430\">G_YaoGuang_Eidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Chuckle Chimes Where Jade Falls</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.2) || RETURN",
+                  "displayLines": "0.2",
+                  "constants": [],
+                  "variables": [
+                    0.2
+                  ]
+                }
+              }
             }
           ]
         }

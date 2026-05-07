@@ -6,10 +6,10 @@ const compositeAbilityObject = {
     "Yunli_Yunli_TechniqueInLevel_Insert_Part02",
     "Yunli_Yunli_TechniqueInLevel_Insert",
     "Yunli_Yunli_TechniqueInLevel",
-    "Yunli_Yunli_PassiveAbility01",
     "Yunli_Yunli_Counter_Preshow",
     "Yunli_Yunli_Counter_Part02",
     "Yunli_Yunli_Counter_Part01",
+    "Yunli_Yunli_PassiveAbility01",
     "Yunli_Yunli_Ability03_SuperCounter",
     "Yunli_Yunli_Ability03_NormalCounter",
     "Yunli_Yunli_Ability03_Counter_Part01",
@@ -424,6 +424,227 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "Yunli_Yunli_Counter_Preshow": {
+      "fileName": "Yunli_Yunli_Counter_Preshow",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "Yunli_Yunli_Counter_Part02": {
+      "fileName": "Yunli_Yunli_Counter_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]"
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "valuePercent": 0.5,
+          "ofAbilitySplit": true,
+          "isFixed": "* ERR"
+        },
+        {
+          "name": "Shot Fired",
+          "execute": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] (1.2) || RETURN",
+                  "displayLines": "1.2",
+                  "constants": [],
+                  "variables": [
+                    1.2
+                  ]
+                },
+                "Toughness": {
+                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
+                  "displayLines": "ST Toughness Value",
+                  "constants": [],
+                  "variables": [
+                    "ST Toughness Value"
+                  ]
+                },
+                "ToughnessDMGType": {
+                  "DamageType": "Physical"
+                },
+                "Tags": [
+                  "Counter"
+                ],
+                "attackType": "Follow-up"
+              }
+            },
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] (0.6) || RETURN",
+                  "displayLines": "0.6",
+                  "constants": [],
+                  "variables": [
+                    0.6
+                  ]
+                },
+                "Toughness": {
+                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
+                  "displayLines": "Blast Toughness Value",
+                  "constants": [],
+                  "variables": [
+                    "Blast Toughness Value"
+                  ]
+                },
+                "ToughnessDMGType": {
+                  "DamageType": "Physical"
+                },
+                "Tags": [
+                  "Counter"
+                ],
+                "attackType": "Follow-up"
+              }
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1896809372\">Yunli_Blocking_CritDamage</a>[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]"
+            },
+            "Trigger: Attack End"
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "OnInsertAbort_Flg2",
+          "value": 1
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "Yunli_Yunli_Counter_Part01": {
+      "fileName": "Yunli_Yunli_Counter_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Flashforge"
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Yunli_Counter_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "onAbort": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "flagName": "STAT_CTRL",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "flagName": "DisableAction",
+                "invertCondition": true
+              },
+              {
+                "name": "Enemies Still Alive",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "includeNonTargets": true
+              },
+              {
+                "name": "Compare: Variable",
+                "value1": "OnInsertAbort_Flg2",
+                "compareType": "=",
+                "value2": 1
+              },
+              {
+                "name": "Living State",
+                "state": "Mask_AliveOnly",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-501144556\">Yunli_InsertAbility2</a>"
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "OnInsertAbort_Flg2",
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
       }
     },
     "Yunli_Yunli_PassiveAbility01": {
@@ -871,227 +1092,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Yunli_Yunli_Counter_Preshow": {
-      "fileName": "Yunli_Yunli_Counter_Preshow",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "Yunli_Yunli_Counter_Part02": {
-      "fileName": "Yunli_Yunli_Counter_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"813451060\">Yunli_Blocking</a>[<span class=\"descriptionNumberColor\">Parry</span>]"
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "valuePercent": 0.5,
-          "ofAbilitySplit": true,
-          "isFixed": "* ERR"
-        },
-        {
-          "name": "Shot Fired",
-          "execute": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "canPhase": true,
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (1.2) || RETURN",
-                  "displayLines": "1.2",
-                  "constants": [],
-                  "variables": [
-                    1.2
-                  ]
-                },
-                "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
-                },
-                "ToughnessDMGType": {
-                  "DamageType": "Physical"
-                },
-                "Tags": [
-                  "Counter"
-                ],
-                "attackType": "Follow-up"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Targets Adjacent(Blast)}}"
-              },
-              "canPhase": true,
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (0.6) || RETURN",
-                  "displayLines": "0.6",
-                  "constants": [],
-                  "variables": [
-                    0.6
-                  ]
-                },
-                "Toughness": {
-                  "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-                  "displayLines": "Blast Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "Blast Toughness Value"
-                  ]
-                },
-                "ToughnessDMGType": {
-                  "DamageType": "Physical"
-                },
-                "Tags": [
-                  "Counter"
-                ],
-                "attackType": "Follow-up"
-              }
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1896809372\">Yunli_Blocking_CritDamage</a>[<span class=\"descriptionNumberColor\">Earthbind, Etherbreak</span>]"
-            },
-            "Trigger: Attack End"
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "OnInsertAbort_Flg2",
-          "value": 1
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "Yunli_Yunli_Counter_Part01": {
-      "fileName": "Yunli_Yunli_Counter_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Flashforge"
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Yunli_Counter_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "onAbort": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "STAT_CTRL",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "DisableAction",
-                "invertCondition": true
-              },
-              {
-                "name": "Enemies Still Alive",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "includeNonTargets": true
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "OnInsertAbort_Flg2",
-                "compareType": "=",
-                "value2": 1
-              },
-              {
-                "name": "Living State",
-                "state": "Mask_AliveOnly",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                }
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-501144556\">Yunli_InsertAbility2</a>"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "OnInsertAbort_Flg2",
-              "value": 0
-            }
-          ]
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Yunli_Yunli_Ability03_SuperCounter": {

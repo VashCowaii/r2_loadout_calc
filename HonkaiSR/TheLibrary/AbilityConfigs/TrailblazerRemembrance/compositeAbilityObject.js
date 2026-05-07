@@ -5,11 +5,13 @@ const compositeAbilityObject = {
   "summonName": "Mem",
   "trimSummonName": "Mem",
   "abilityList": [
+    "TrailblazerRemembrance_PlayerBoy_30_Trace01",
     "TrailblazerRemembrance_PlayerBoy_30_Eidolon4",
     "TrailblazerRemembrance_PlayerBoy_30_Eidolon2",
-    "TrailblazerRemembrance_PlayerBoy_30_Trace01",
     "TrailblazerRemembrance_PlayerBoy_30_TechniqueInLevel",
     "TrailblazerRemembrance_PlayerBoy_30_PassiveAbility01",
+    "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02",
+    "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01",
     "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part02_Charge",
     "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part02",
     "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part01",
@@ -18,8 +20,6 @@ const compositeAbilityObject = {
     "TrailblazerRemembrance_PlayerBoy_30_Ability21_Part01",
     "TrailblazerRemembrance_PlayerBoy_30_Ability02_Part02",
     "TrailblazerRemembrance_PlayerBoy_30_Ability02_Part01",
-    "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02",
-    "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01",
     "TrailblazerRemembrance_PlayerBoy_30_Ability01_Part02",
     "TrailblazerRemembrance_PlayerBoy_30_Ability01_Part01",
     "TrailblazerRemembrance_Modifiers",
@@ -38,6 +38,128 @@ const compositeAbilityObject = {
     "Mem_Functions"
   ],
   "abilityObject": {
+    "TrailblazerRemembrance_PlayerBoy_30_Trace01": {
+      "fileName": "TrailblazerRemembrance_PlayerBoy_30_Trace01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1430938835\">M_PlayerBoy_30_Trace01</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"894703898\">M_PlayerBoy_30_Trace01_ListenFirstSummon</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__894703898\">M_PlayerBoy_30_Trace01_ListenFirstSummon</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Character ID",
+                        "ID": "ServantID",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "characterName": null
+                      },
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}.[[getMemosprite]]"
+                        }
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Added Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}.[[getMemosprite]]"
+                      },
+                      "variableName": "CurEnergy",
+                      "context": "TargetEntity",
+                      "value": {
+                        "operator": "Variables[0] (0.4) || Constants[0] (100) || MUL || RETURN",
+                        "displayLines": "(0.4 * 100)",
+                        "constants": [
+                          100
+                        ],
+                        "variables": [
+                          0.4
+                        ]
+                      }
+                    },
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1430938835\">M_PlayerBoy_30_Trace01</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Wave Count",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Action Advance/Delay",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "advanceType": "Set",
+                      "multiAdd": "(0 - 0.3)"
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "TrailblazerRemembrance_PlayerBoy_30_Eidolon4": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Eidolon4",
       "abilityType": null,
@@ -406,128 +528,6 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TrailblazerRemembrance_PlayerBoy_30_Trace01": {
-      "fileName": "TrailblazerRemembrance_PlayerBoy_30_Trace01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1430938835\">M_PlayerBoy_30_Trace01</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"894703898\">M_PlayerBoy_30_Trace01_ListenFirstSummon</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__894703898\">M_PlayerBoy_30_Trace01_ListenFirstSummon</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Character ID",
-                        "ID": "ServantID",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": null
-                      },
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}.[[getMemosprite]]"
-                        }
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}.[[getMemosprite]]"
-                      },
-                      "variableName": "CurEnergy",
-                      "context": "TargetEntity",
-                      "value": {
-                        "operator": "Variables[0] (0.4) || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "(0.4 * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          0.4
-                        ]
-                      }
-                    },
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1430938835\">M_PlayerBoy_30_Trace01</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Wave Count",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "advanceType": "Set",
-                      "multiAdd": "(0 - 0.3)"
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
             }
           ]
         }
@@ -937,6 +937,161 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
+    "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02": {
+      "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
+          "addStacksPerTrigger": -1,
+          "silentAdd": true
+        },
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Memosprite}}"
+          },
+          "toRemove": [
+            "STAT_CTRL"
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] (1.2) || RETURN",
+              "displayLines": "1.2",
+              "constants": [],
+              "variables": [
+                1.2
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (2) || DIV || RETURN",
+              "displayLines": "(AOE Toughness Value / 2)",
+              "constants": [
+                2
+              ],
+              "variables": [
+                "AOE Toughness Value"
+              ]
+            },
+            "Tags": [
+              "Joint-Attack"
+            ],
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "Trigger: Attack End",
+          "skipDeathSettle": true
+        },
+        {
+          "name": "Define Custom Variable with Added Value",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}.[[getMemosprite]]"
+          },
+          "variableName": "CurEnergy",
+          "context": "TargetEntity",
+          "value": {
+            "operator": "Variables[0] (0.1) || Constants[0] (100) || MUL || RETURN",
+            "displayLines": "(0.1 * 100)",
+            "constants": [
+              100
+            ],
+            "variables": [
+              0.1
+            ]
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01": {
+      "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01",
+      "childAbilityList": [
+        "TrailblazerRemembrance_PlayerBoy_30_Ability11_Camera",
+        "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01",
+        "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02"
+      ],
+      "skillTrigger": "Skill11",
+      "abilityType": "Basic ATK",
+      "energy": 30,
+      "toughnessList": [
+        0,
+        10,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Define Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}.[[getMemosprite]]"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Skill11_Stance",
+          "value": {
+            "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (2) || DIV || RETURN",
+            "displayLines": "(AOE Toughness Value / 2)",
+            "constants": [
+              2
+            ],
+            "variables": [
+              "AOE Toughness Value"
+            ]
+          }
+        },
+        {
+          "name": "Trigger Joint-Attack Ability",
+          "abilityList": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "ability": "PlayerBoy_30_Ability11_Part02"
+            },
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
+              "ability": "Servant_PlayerBoyServant_30_Ability11_Together"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
     "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part02_Charge": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part02_Charge",
       "abilityType": null,
@@ -1240,161 +1395,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02": {
-      "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
-          "addStacksPerTrigger": -1,
-          "silentAdd": true
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Memosprite}}"
-          },
-          "toRemove": [
-            "STAT_CTRL"
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (1.2) || RETURN",
-              "displayLines": "1.2",
-              "constants": [],
-              "variables": [
-                1.2
-              ]
-            },
-            "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (2) || DIV || RETURN",
-              "displayLines": "(AOE Toughness Value / 2)",
-              "constants": [
-                2
-              ],
-              "variables": [
-                "AOE Toughness Value"
-              ]
-            },
-            "Tags": [
-              "Joint-Attack"
-            ],
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Trigger: Attack End",
-          "skipDeathSettle": true
-        },
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}.[[getMemosprite]]"
-          },
-          "variableName": "CurEnergy",
-          "context": "TargetEntity",
-          "value": {
-            "operator": "Variables[0] (0.1) || Constants[0] (100) || MUL || RETURN",
-            "displayLines": "(0.1 * 100)",
-            "constants": [
-              100
-            ],
-            "variables": [
-              0.1
-            ]
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01": {
-      "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01",
-      "childAbilityList": [
-        "TrailblazerRemembrance_PlayerBoy_30_Ability11_Camera",
-        "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01",
-        "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02"
-      ],
-      "skillTrigger": "Skill11",
-      "abilityType": "Basic ATK",
-      "energy": 30,
-      "toughnessList": [
-        0,
-        10,
-        0
-      ],
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}.[[getMemosprite]]"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Skill11_Stance",
-          "value": {
-            "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (2) || DIV || RETURN",
-            "displayLines": "(AOE Toughness Value / 2)",
-            "constants": [
-              2
-            ],
-            "variables": [
-              "AOE Toughness Value"
-            ]
-          }
-        },
-        {
-          "name": "Trigger Joint-Attack Ability",
-          "abilityList": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "ability": "PlayerBoy_30_Ability11_Part02"
-            },
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster's Memosprite}}"
-              },
-              "ability": "Servant_PlayerBoyServant_30_Ability11_Together"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability01_Part02": {

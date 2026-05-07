@@ -3,10 +3,10 @@ const compositeAbilityObject = {
   "fullCharacterName": "Yanqing",
   "trimCharacterName": "Yanqing",
   "abilityList": [
-    "Yanqing_Yanqing_Eidolon4",
-    "Yanqing_Yanqing_Eidolon1",
     "Yanqing_YanQing_Trace03",
     "Yanqing_YanQing_Trace01",
+    "Yanqing_Yanqing_Eidolon4",
+    "Yanqing_Yanqing_Eidolon1",
     "Yanqing_Yanqing_TechniqueInLevel",
     "Yanqing_Yanqing_PassiveAbility01_InsertAbilityPhase02",
     "Yanqing_Yanqing_PassiveAbility01_InsertAbility",
@@ -21,6 +21,206 @@ const compositeAbilityObject = {
     "Yanqing_Modifiers"
   ],
   "abilityObject": {
+    "Yanqing_YanQing_Trace03": {
+      "fileName": "Yanqing_YanQing_Trace03",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"645549950\">M_Yanqing_Tree03</a>",
+          "valuePerStack": {
+            "MDF_SpeedValue": {
+              "operator": "Variables[0] (0.1) || RETURN",
+              "displayLines": "0.1",
+              "constants": [],
+              "variables": [
+                0.1
+              ]
+            }
+          }
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2119684740\">M_Yanqing_Tree03SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_SpeedValue</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
+          "duration": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_SpeedValue) || RETURN",
+                    "displayLines": "MDF_SpeedValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_SpeedValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__645549950\">M_Yanqing_Tree03</a>",
+          "stackData": [
+            "MDF_SpeedValue"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage End [Owner]: Hit",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is a Crit"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"2119684740\">M_Yanqing_Tree03SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (2) || RETURN",
+                        "displayLines": "2",
+                        "constants": [],
+                        "variables": [
+                          2
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_SpeedValue": {
+                          "operator": "Variables[0] (MDF_SpeedValue) || RETURN",
+                          "displayLines": "MDF_SpeedValue",
+                          "constants": [],
+                          "variables": [
+                            "MDF_SpeedValue"
+                          ]
+                        },
+                        "MDF_LifeTime": {
+                          "operator": "Variables[0] (2) || RETURN",
+                          "displayLines": "2",
+                          "constants": [],
+                          "variables": [
+                            2
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Yanqing_YanQing_Trace01": {
+      "fileName": "Yanqing_YanQing_Trace01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"611994712\">M_Yanqing_Tree01</a>",
+          "valuePerStack": {
+            "MDF_DamageRatio": {
+              "operator": "Variables[0] (0.3) || RETURN",
+              "displayLines": "0.3",
+              "constants": [],
+              "variables": [
+                0.3
+              ]
+            }
+          }
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__611994712\">M_Yanqing_Tree01</a>",
+          "stackData": [
+            "MDF_DamageRatio"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Weakness",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Skill Point User}}"
+                    },
+                    "DamageType": "Ice"
+                  },
+                  "passed": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Skill Point User}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Ice",
+                        "Damage": {
+                          "operator": "Variables[0] (MDF_DamageRatio) || RETURN",
+                          "displayLines": "MDF_DamageRatio",
+                          "constants": [],
+                          "variables": [
+                            "MDF_DamageRatio"
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Additional DMG"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "Yanqing_Yanqing_Eidolon4": {
       "fileName": "Yanqing_Yanqing_Eidolon4",
       "abilityType": null,
@@ -245,206 +445,6 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Attack Targets of Modifier Holder}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Ice",
-                        "Damage": {
-                          "operator": "Variables[0] (MDF_DamageRatio) || RETURN",
-                          "displayLines": "MDF_DamageRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageRatio"
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Additional DMG"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Yanqing_YanQing_Trace03": {
-      "fileName": "Yanqing_YanQing_Trace03",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"645549950\">M_Yanqing_Tree03</a>",
-          "valuePerStack": {
-            "MDF_SpeedValue": {
-              "operator": "Variables[0] (0.1) || RETURN",
-              "displayLines": "0.1",
-              "constants": [],
-              "variables": [
-                0.1
-              ]
-            }
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2119684740\">M_Yanqing_Tree03SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-          "stackType": "ReplaceByCaster",
-          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_SpeedValue</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost",
-          "duration": 1,
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_SpeedValue) || RETURN",
-                    "displayLines": "MDF_SpeedValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__645549950\">M_Yanqing_Tree03</a>",
-          "stackData": [
-            "MDF_SpeedValue"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage End [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is a Crit"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2119684740\">M_Yanqing_Tree03SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_SpeedValue": {
-                          "operator": "Variables[0] (MDF_SpeedValue) || RETURN",
-                          "displayLines": "MDF_SpeedValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_SpeedValue"
-                          ]
-                        },
-                        "MDF_LifeTime": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Yanqing_YanQing_Trace01": {
-      "fileName": "Yanqing_YanQing_Trace01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"611994712\">M_Yanqing_Tree01</a>",
-          "valuePerStack": {
-            "MDF_DamageRatio": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
-            }
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__611994712\">M_Yanqing_Tree01</a>",
-          "stackData": [
-            "MDF_DamageRatio"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Weakness",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Skill Point User}}"
-                    },
-                    "DamageType": "Ice"
-                  },
-                  "passed": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Skill Point User}}"
                       },
                       "canPhase": true,
                       "AttackScaling": {

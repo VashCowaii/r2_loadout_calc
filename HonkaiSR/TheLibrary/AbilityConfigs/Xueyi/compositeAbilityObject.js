@@ -3,15 +3,14 @@ const compositeAbilityObject = {
   "fullCharacterName": "Xueyi",
   "trimCharacterName": "Xueyi",
   "abilityList": [
-    "Xueyi_Xueyi_Trace01",
+    "Xueyi_Xueyi_Ability03_StancePreCalc",
     "Xueyi_Xueyi_TechniqueInLevel",
     "Xueyi_Xueyi_PassiveAtk_Insert02",
     "Xueyi_Xueyi_PassiveAtk_Insert01",
     "Xueyi_Xueyi_PassiveAbility01",
-    "Xueyi_Xueyi_Ability03_StancePreCalc",
+    "Xueyi_Xueyi_Ability03_EnterReady",
     "Xueyi_Xueyi_Ability03_Part02",
     "Xueyi_Xueyi_Ability03_Part01",
-    "Xueyi_Xueyi_Ability03_EnterReady",
     "Xueyi_Xueyi_Ability02_Part02",
     "Xueyi_Xueyi_Ability02_Part01",
     "Xueyi_Xueyi_Ability01_Part02",
@@ -19,12 +18,26 @@ const compositeAbilityObject = {
     "Xueyi_Modifiers"
   ],
   "abilityObject": {
-    "Xueyi_Xueyi_Trace01": {
-      "fileName": "Xueyi_Xueyi_Trace01",
+    "Xueyi_Xueyi_Ability03_StancePreCalc": {
+      "fileName": "Xueyi_Xueyi_Ability03_StancePreCalc",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
-      "parse": [],
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "MDF_Skill03_StancePreCalc",
+          "value": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1101528365\">Xueyi_Ability03_WeakType_BUFF</a>"
+        }
+      ],
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
@@ -1428,29 +1441,15 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "Xueyi_Xueyi_Ability03_StancePreCalc": {
-      "fileName": "Xueyi_Xueyi_Ability03_StancePreCalc",
+    "Xueyi_Xueyi_Ability03_EnterReady": {
+      "fileName": "Xueyi_Xueyi_Ability03_EnterReady",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "MDF_Skill03_StancePreCalc",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1101528365\">Xueyi_Ability03_WeakType_BUFF</a>"
-        }
-      ],
+      "parse": [],
       "references": [],
       "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
+        "primaryTarget": "Inherent Target"
       }
     },
     "Xueyi_Xueyi_Ability03_Part02": {
@@ -1672,17 +1671,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
-      }
-    },
-    "Xueyi_Xueyi_Ability03_EnterReady": {
-      "fileName": "Xueyi_Xueyi_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Xueyi_Xueyi_Ability02_Part02": {
