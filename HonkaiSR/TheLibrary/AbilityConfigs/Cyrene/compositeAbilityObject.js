@@ -5,11 +5,10 @@ const compositeAbilityObject = {
   "summonName": "Demiurge",
   "trimSummonName": "Demiurge",
   "abilityList": [
-    "Cyrene_Cyrene_FemaleMaster",
-    "Cyrene_Cyrene_MaleMaster",
     "Cyrene_Cyrene_TechniqueInLevel",
-    "Cyrene_Cyrene_Eidolon1",
     "Cyrene_Cyrene_PassiveAbility_1",
+    "Cyrene_Cyrene_Ability11_Part02",
+    "Cyrene_Cyrene_Ability11_Part01",
     "Cyrene_Cyrene_Ability31_Part02",
     "Cyrene_Cyrene_Ability31_Part01",
     "Cyrene_Cyrene_Ability31_EnterReady",
@@ -18,8 +17,6 @@ const compositeAbilityObject = {
     "Cyrene_Cyrene_Ability03_EnterReady",
     "Cyrene_Cyrene_Ability02_Part02",
     "Cyrene_Cyrene_Ability02_Part01",
-    "Cyrene_Cyrene_Ability11_Part02",
-    "Cyrene_Cyrene_Ability11_Part01",
     "Cyrene_Cyrene_Ability01_Part02",
     "Cyrene_Cyrene_Ability01_Part01",
     "Cyrene_Modifiers",
@@ -56,58 +53,6 @@ const compositeAbilityObject = {
     "Demiurge_Functions"
   ],
   "abilityObject": {
-    "Cyrene_Cyrene_FemaleMaster": {
-      "fileName": "Cyrene_Cyrene_FemaleMaster",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1723137724\">Cyrene_Passive_FemaleMaster</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1723137724\">Cyrene_Passive_FemaleMaster</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Cyrene_Cyrene_MaleMaster": {
-      "fileName": "Cyrene_Cyrene_MaleMaster",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1722328499\">Cyrene_Passive_MaleMaster</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1722328499\">Cyrene_Passive_MaleMaster</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "Cyrene_Cyrene_TechniqueInLevel": {
       "fileName": "Cyrene_Cyrene_TechniqueInLevel",
       "childAbilityList": [
@@ -186,18 +131,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       },
       "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Cyrene_Cyrene_Eidolon1": {
-      "fileName": "Cyrene_Cyrene_Eidolon1",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [],
-      "references": [],
-      "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
     },
@@ -1174,6 +1107,237 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
+    "Cyrene_Cyrene_Ability11_Part02": {
+      "fileName": "Cyrene_Cyrene_Ability11_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
+          "variables": {
+            "parameter[0]_AddValue": {
+              "operator": "Variables[0] (3) || RETURN",
+              "displayLines": "3",
+              "constants": [],
+              "variables": [
+                3
+              ]
+            }
+          }
+        },
+        {
+          "name": "Define Custom Variable with Team Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "variableName": "EnemyCount",
+          "livingTargets": true
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] (0.3) || RETURN",
+              "displayLines": "0.3",
+              "constants": [],
+              "variables": [
+                0.3
+              ]
+            },
+            "dmgFormula": "Max HP Scaling",
+            "Toughness": {
+              "displayLines": 15
+            },
+            "Tags": null
+          }
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": {
+            "operator": "Variables[0] (EnemyCount) || RETURN",
+            "displayLines": "EnemyCount",
+            "constants": [],
+            "variables": [
+              "EnemyCount"
+            ]
+          },
+          "Event": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 2,
+              "conditions": {
+                "name": "NOT",
+                "condition": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1383897460\">Cyrene_AbilityTarget</a>"
+                }
+              },
+              "ifTargetFound": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "canPhase": true,
+                  "AttackScaling": {
+                    "DamageType": "Ice",
+                    "Damage": {
+                      "operator": "Variables[0] (0.3) || RETURN",
+                      "displayLines": "0.3",
+                      "constants": [],
+                      "variables": [
+                        0.3
+                      ]
+                    },
+                    "dmgFormula": "Max HP Scaling",
+                    "HitSplit": 0.3,
+                    "Toughness": {
+                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
+                      "displayLines": "AOE Toughness Value",
+                      "constants": [],
+                      "variables": [
+                        "AOE Toughness Value"
+                      ]
+                    },
+                    "Tags": null
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1383897460\">Cyrene_AbilityTarget</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] (0.3) || RETURN",
+              "displayLines": "0.3",
+              "constants": [],
+              "variables": [
+                0.3
+              ]
+            },
+            "dmgFormula": "Max HP Scaling",
+            "HitSplit": 0.7,
+            "Toughness": {
+              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
+              "displayLines": "AOE Toughness Value",
+              "constants": [],
+              "variables": [
+                "AOE Toughness Value"
+              ]
+            },
+            "Tags": null
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1383897460\">Cyrene_AbilityTarget</a>",
+          "execute": [
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "Cyrene_Cyrene_Ability11_Part01": {
+      "fileName": "Cyrene_Cyrene_Ability11_Part01",
+      "childAbilityList": [
+        "Cyrene_Cyrene_Ability11_Camera",
+        "Cyrene_Cyrene_Ability11_Charm_Camera",
+        "Cyrene_Cyrene_Ability11_Part01",
+        "Cyrene_Cyrene_Ability11_Part02"
+      ],
+      "skillTrigger": "Skill11",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": [
+        10,
+        5,
+        0
+      ],
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Flag",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "flagName": "Charm"
+          },
+          "passed": [
+            "Deleted bullshit"
+          ],
+          "failed": [
+            "Deleted bullshit"
+          ]
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Cyrene_Ability11_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "All Other Team Members"
+      }
+    },
     "Cyrene_Cyrene_Ability31_Part02": {
       "fileName": "Cyrene_Cyrene_Ability31_Part02",
       "abilityType": null,
@@ -1633,237 +1797,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Cyrene_Cyrene_Ability11_Part02": {
-      "fileName": "Cyrene_Cyrene_Ability11_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"1682831339\">Cyrene_ChargeEnergy</a>",
-          "variables": {
-            "parameter[0]_AddValue": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
-            }
-          }
-        },
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "variableName": "EnemyCount",
-          "livingTargets": true
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
-            },
-            "dmgFormula": "Max HP Scaling",
-            "Toughness": {
-              "displayLines": 15
-            },
-            "Tags": null
-          }
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": {
-            "operator": "Variables[0] (EnemyCount) || RETURN",
-            "displayLines": "EnemyCount",
-            "constants": [],
-            "variables": [
-              "EnemyCount"
-            ]
-          },
-          "Event": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 2,
-              "conditions": {
-                "name": "NOT",
-                "condition": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1383897460\">Cyrene_AbilityTarget</a>"
-                }
-              },
-              "ifTargetFound": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "canPhase": true,
-                  "AttackScaling": {
-                    "DamageType": "Ice",
-                    "Damage": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
-                    },
-                    "dmgFormula": "Max HP Scaling",
-                    "HitSplit": 0.3,
-                    "Toughness": {
-                      "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                      "displayLines": "AOE Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "AOE Toughness Value"
-                      ]
-                    },
-                    "Tags": null
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1383897460\">Cyrene_AbilityTarget</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
-            },
-            "dmgFormula": "Max HP Scaling",
-            "HitSplit": 0.7,
-            "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
-            },
-            "Tags": null
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1383897460\">Cyrene_AbilityTarget</a>",
-          "execute": [
-            {
-              "eventTrigger": "Attack DMG End [Anyone]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "Cyrene_Cyrene_Ability11_Part01": {
-      "fileName": "Cyrene_Cyrene_Ability11_Part01",
-      "childAbilityList": [
-        "Cyrene_Cyrene_Ability11_Camera",
-        "Cyrene_Cyrene_Ability11_Charm_Camera",
-        "Cyrene_Cyrene_Ability11_Part01",
-        "Cyrene_Cyrene_Ability11_Part02"
-      ],
-      "skillTrigger": "Skill11",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": [
-        10,
-        5,
-        0
-      ],
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "flagName": "Charm"
-          },
-          "passed": [
-            "Deleted bullshit"
-          ],
-          "failed": [
-            "Deleted bullshit"
-          ]
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Cyrene_Ability11_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "subTarget": "All Other Team Members"
       }
     },
     "Cyrene_Cyrene_Ability01_Part02": {
