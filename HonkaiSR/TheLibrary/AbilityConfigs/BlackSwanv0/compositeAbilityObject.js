@@ -3,17 +3,17 @@ const compositeAbilityObject = {
   "fullCharacterName": "Black Swan_v0",
   "trimCharacterName": "BlackSwanv0",
   "abilityList": [
+    "BlackSwanv0_BlackSwan_Trace03",
+    "BlackSwanv0_BlackSwan_Trace02",
     "BlackSwanv0_BlackSwan_Eidolon6",
     "BlackSwanv0_BlackSwan_Eidolon2",
     "BlackSwanv0_BlackSwan_Eidolon1",
-    "BlackSwanv0_BlackSwan_Trace03",
-    "BlackSwanv0_BlackSwan_Trace02",
     "BlackSwanv0_BlackSwan_TechniqueInLevel_Insert",
     "BlackSwanv0_BlackSwan_TechniqueInLevel",
     "BlackSwanv0_BlackSwan_PassiveAbility01",
+    "BlackSwanv0_BlackSwan_Ability03_Cutin",
     "BlackSwanv0_BlackSwan_Ability03_Part02",
     "BlackSwanv0_BlackSwan_Ability03_Part01",
-    "BlackSwanv0_BlackSwan_Ability03_Cutin",
     "BlackSwanv0_BlackSwan_Ability02_Part02",
     "BlackSwanv0_BlackSwan_Ability02_Part01",
     "BlackSwanv0_BlackSwan_Ability01_Part02",
@@ -21,6 +21,887 @@ const compositeAbilityObject = {
     "BlackSwanv0_Modifiers"
   ],
   "abilityObject": {
+    "BlackSwanv0_BlackSwan_Trace03": {
+      "fileName": "BlackSwanv0_BlackSwan_Trace03",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1762634781\">M_BlackSwan_Trace03</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__97197540\">M_BlackSwan_Trace03_Sub</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_PropertyRatio",
+                    "compareType": ">",
+                    "value2": {
+                      "operator": "Variables[0] (0.72) || RETURN",
+                      "displayLines": "0.72",
+                      "constants": [],
+                      "variables": [
+                        0.72
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_PropertyRatio",
+                      "value": {
+                        "operator": "Variables[0] (0.72) || RETURN",
+                        "displayLines": "0.72",
+                        "constants": [],
+                        "variables": [
+                          0.72
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
+                    "displayLines": "MDF_PropertyRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyRatio"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1762634781\">M_BlackSwan_Trace03</a>",
+          "modifierFlags": [
+            "ListenBattleEventSkill"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "CasterStatusProbability",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"97197540\">M_BlackSwan_Trace03_Sub</a>",
+                  "valuePerStack": {
+                    "MDF_PropertyRatio": {
+                      "operator": "Variables[0] (CasterStatusProbability) || Variables[1] (0.6) || MUL || RETURN",
+                      "displayLines": "(CasterStatusProbability * 0.6)",
+                      "constants": [],
+                      "variables": [
+                        "CasterStatusProbability",
+                        0.6
+                      ]
+                    }
+                  }
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ],
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": -999,
+                  "maxValue": 999,
+                  "whenValueChanges": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "variableName": "CasterStatusProbability",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"97197540\">M_BlackSwan_Trace03_Sub</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyRatio": {
+                          "operator": "Variables[0] (CasterStatusProbability) || Variables[1] (0.6) || MUL || RETURN",
+                          "displayLines": "(CasterStatusProbability * 0.6)",
+                          "constants": [],
+                          "variables": [
+                            "CasterStatusProbability",
+                            0.6
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "BlackSwanv0_BlackSwan_Trace02": {
+      "fileName": "BlackSwanv0_BlackSwan_Trace02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1745857162\">M_BlackSwan_Trace02</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>",
+          "stackType": "Replace",
+          "modifierFlags": [
+            "RemoveWhenCasterDead",
+            "KeepOnDeathrattle"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-993235017\">M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead",
+            "ListenBattleEventSkill"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_count",
+                  "value": 999
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "_count",
+                        "compareType": "<",
+                        "value2": {
+                          "operator": "Variables[0] (_maxLimit) || RETURN",
+                          "displayLines": "_maxLimit",
+                          "constants": [],
+                          "variables": [
+                            "_maxLimit"
+                          ]
+                        },
+                        "contextScope": "ContextModifier"
+                      },
+                      {
+                        "name": "Attack Type",
+                        "attackTypes": [
+                          "DOT"
+                        ],
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "mustBeAlive2": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_count",
+                      "value": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: End",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_count",
+                  "value": 999
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "mustBeAlive2": true
+                      },
+                      {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target List}}"
+                        },
+                        "mustBeAlive2": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_count",
+                      "value": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: End",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_count",
+                  "value": 999
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: Aborted",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_count",
+                  "value": 999
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-739683640\">M_BlackSwan_Trace02_AddDotOnCreate</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Enemy Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Random Chance",
+                        "chance": {
+                          "operator": "Variables[0] (Rank06_Chance) || RETURN",
+                          "displayLines": "Rank06_Chance",
+                          "constants": [],
+                          "variables": [
+                            "Rank06_Chance"
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "Rank06_Weighted_Stack_Layer",
+                          "value": {
+                            "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
+                            "displayLines": "(1 + Rank06_Extra_Layer)",
+                            "constants": [
+                              1
+                            ],
+                            "variables": [
+                              "Rank06_Extra_Layer"
+                            ]
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "Rank06_Weighted_Stack_Layer",
+                          "value": {
+                            "operator": "Constants[0] (1) || RETURN",
+                            "displayLines": "1",
+                            "constants": [
+                              1
+                            ],
+                            "variables": []
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                      "baseChance": {
+                        "operator": "Variables[0] (0.65) || RETURN",
+                        "displayLines": "0.65",
+                        "constants": [],
+                        "variables": [
+                          0.65
+                        ]
+                      },
+                      "stackLimit": {
+                        "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
+                        "displayLines": "Max_DOT_Layer",
+                        "constants": [],
+                        "variables": [
+                          "Max_DOT_Layer"
+                        ]
+                      },
+                      "valuePerStack": {
+                        "Basic_DamagePercentage": {
+                          "operator": "Variables[0] (2.4) || RETURN",
+                          "displayLines": "2.4",
+                          "constants": [],
+                          "variables": [
+                            2.4
+                          ]
+                        },
+                        "ExtraLayer_DamagePercentage": {
+                          "operator": "Variables[0] (0.12) || RETURN",
+                          "displayLines": "0.12",
+                          "constants": [],
+                          "variables": [
+                            0.12
+                          ]
+                        },
+                        "SecondLayer": {
+                          "operator": "Variables[0] (3) || RETURN",
+                          "displayLines": "3",
+                          "constants": [],
+                          "variables": [
+                            3
+                          ]
+                        },
+                        "Spread_DamagePercentage": {
+                          "operator": "Variables[0] (1.8) || RETURN",
+                          "displayLines": "1.8",
+                          "constants": [],
+                          "variables": [
+                            1.8
+                          ]
+                        },
+                        "ThirdLayer": {
+                          "operator": "Variables[0] (7) || RETURN",
+                          "displayLines": "7",
+                          "constants": [],
+                          "variables": [
+                            7
+                          ]
+                        },
+                        "DefenceIgnore": {
+                          "operator": "Variables[0] (0.2) || RETURN",
+                          "displayLines": "0.2",
+                          "constants": [],
+                          "variables": [
+                            0.2
+                          ]
+                        },
+                        "Cast_By_Level": 0
+                      },
+                      "addStacksPerTrigger": {
+                        "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
+                        "displayLines": "Rank06_Weighted_Stack_Layer",
+                        "constants": [],
+                        "variables": [
+                          "Rank06_Weighted_Stack_Layer"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1745857162\">M_BlackSwan_Trace02</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Enemy Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-993235017\">M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy</a>",
+                      "valuePerStack": {
+                        "_maxLimit": {
+                          "operator": "Variables[0] (3) || RETURN",
+                          "displayLines": "3",
+                          "constants": [],
+                          "variables": [
+                            3
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Wave Count",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                      },
+                      "searchRandom": true,
+                      "maxTargets": 99,
+                      "ifTargetFound": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Random Chance",
+                            "chance": {
+                              "operator": "Variables[0] (Rank06_Chance) || RETURN",
+                              "displayLines": "Rank06_Chance",
+                              "constants": [],
+                              "variables": [
+                                "Rank06_Chance"
+                              ]
+                            }
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "Rank06_Weighted_Stack_Layer",
+                              "value": {
+                                "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
+                                "displayLines": "(1 + Rank06_Extra_Layer)",
+                                "constants": [
+                                  1
+                                ],
+                                "variables": [
+                                  "Rank06_Extra_Layer"
+                                ]
+                              }
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "Rank06_Weighted_Stack_Layer",
+                              "value": {
+                                "operator": "Constants[0] (1) || RETURN",
+                                "displayLines": "1",
+                                "constants": [
+                                  1
+                                ],
+                                "variables": []
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                          "baseChance": {
+                            "operator": "Variables[0] (0.65) || RETURN",
+                            "displayLines": "0.65",
+                            "constants": [],
+                            "variables": [
+                              0.65
+                            ]
+                          },
+                          "stackLimit": {
+                            "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
+                            "displayLines": "Max_DOT_Layer",
+                            "constants": [],
+                            "variables": [
+                              "Max_DOT_Layer"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "Basic_DamagePercentage": {
+                              "operator": "Variables[0] (2.4) || RETURN",
+                              "displayLines": "2.4",
+                              "constants": [],
+                              "variables": [
+                                2.4
+                              ]
+                            },
+                            "ExtraLayer_DamagePercentage": {
+                              "operator": "Variables[0] (0.12) || RETURN",
+                              "displayLines": "0.12",
+                              "constants": [],
+                              "variables": [
+                                0.12
+                              ]
+                            },
+                            "SecondLayer": {
+                              "operator": "Variables[0] (3) || RETURN",
+                              "displayLines": "3",
+                              "constants": [],
+                              "variables": [
+                                3
+                              ]
+                            },
+                            "Spread_DamagePercentage": {
+                              "operator": "Variables[0] (1.8) || RETURN",
+                              "displayLines": "1.8",
+                              "constants": [],
+                              "variables": [
+                                1.8
+                              ]
+                            },
+                            "ThirdLayer": {
+                              "operator": "Variables[0] (7) || RETURN",
+                              "displayLines": "7",
+                              "constants": [],
+                              "variables": [
+                                7
+                              ]
+                            },
+                            "DefenceIgnore": {
+                              "operator": "Variables[0] (0.2) || RETURN",
+                              "displayLines": "0.2",
+                              "constants": [],
+                              "variables": [
+                                0.2
+                              ]
+                            },
+                            "Cast_By_Level": 0
+                          },
+                          "addStacksPerTrigger": {
+                            "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
+                            "displayLines": "Rank06_Weighted_Stack_Layer",
+                            "constants": [],
+                            "variables": [
+                              "Rank06_Weighted_Stack_Layer"
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-739683640\">M_BlackSwan_Trace02_AddDotOnCreate</a>"
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            },
+            {
+              "eventTrigger": "When Stacking Modifier Instance [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Random Chance",
+                        "chance": {
+                          "operator": "Variables[0] (Rank06_Chance) || RETURN",
+                          "displayLines": "Rank06_Chance",
+                          "constants": [],
+                          "variables": [
+                            "Rank06_Chance"
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "Rank06_Weighted_Stack_Layer",
+                          "value": {
+                            "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
+                            "displayLines": "(1 + Rank06_Extra_Layer)",
+                            "constants": [
+                              1
+                            ],
+                            "variables": [
+                              "Rank06_Extra_Layer"
+                            ]
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "Rank06_Weighted_Stack_Layer",
+                          "value": {
+                            "operator": "Constants[0] (1) || RETURN",
+                            "displayLines": "1",
+                            "constants": [
+                              1
+                            ],
+                            "variables": []
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
+                      "baseChance": {
+                        "operator": "Variables[0] (0.65) || RETURN",
+                        "displayLines": "0.65",
+                        "constants": [],
+                        "variables": [
+                          0.65
+                        ]
+                      },
+                      "stackLimit": {
+                        "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
+                        "displayLines": "Max_DOT_Layer",
+                        "constants": [],
+                        "variables": [
+                          "Max_DOT_Layer"
+                        ]
+                      },
+                      "valuePerStack": {
+                        "Basic_DamagePercentage": {
+                          "operator": "Variables[0] (2.4) || RETURN",
+                          "displayLines": "2.4",
+                          "constants": [],
+                          "variables": [
+                            2.4
+                          ]
+                        },
+                        "ExtraLayer_DamagePercentage": {
+                          "operator": "Variables[0] (0.12) || RETURN",
+                          "displayLines": "0.12",
+                          "constants": [],
+                          "variables": [
+                            0.12
+                          ]
+                        },
+                        "SecondLayer": {
+                          "operator": "Variables[0] (3) || RETURN",
+                          "displayLines": "3",
+                          "constants": [],
+                          "variables": [
+                            3
+                          ]
+                        },
+                        "Spread_DamagePercentage": {
+                          "operator": "Variables[0] (1.8) || RETURN",
+                          "displayLines": "1.8",
+                          "constants": [],
+                          "variables": [
+                            1.8
+                          ]
+                        },
+                        "ThirdLayer": {
+                          "operator": "Variables[0] (7) || RETURN",
+                          "displayLines": "7",
+                          "constants": [],
+                          "variables": [
+                            7
+                          ]
+                        },
+                        "DefenceIgnore": {
+                          "operator": "Variables[0] (0.2) || RETURN",
+                          "displayLines": "0.2",
+                          "constants": [],
+                          "variables": [
+                            0.2
+                          ]
+                        },
+                        "Cast_By_Level": 0
+                      },
+                      "addStacksPerTrigger": {
+                        "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
+                        "displayLines": "Rank06_Weighted_Stack_Layer",
+                        "constants": [],
+                        "variables": [
+                          "Rank06_Weighted_Stack_Layer"
+                        ]
+                      },
+                      "success": [
+                        {
+                          "name": "Define Modifier-Specific Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifierName": "<a class=\"gModGreen\" id=\"-993235017\">M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy</a>",
+                          "adjustmentType": "+",
+                          "variableName": "_count",
+                          "value": 1
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "BlackSwanv0_BlackSwan_Eidolon6": {
       "fileName": "BlackSwanv0_BlackSwan_Eidolon6",
       "abilityType": null,
@@ -1704,887 +2585,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "BlackSwanv0_BlackSwan_Trace03": {
-      "fileName": "BlackSwanv0_BlackSwan_Trace03",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1762634781\">M_BlackSwan_Trace03</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__97197540\">M_BlackSwan_Trace03_Sub</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_PropertyRatio",
-                    "compareType": ">",
-                    "value2": {
-                      "operator": "Variables[0] (0.72) || RETURN",
-                      "displayLines": "0.72",
-                      "constants": [],
-                      "variables": [
-                        0.72
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyRatio",
-                      "value": {
-                        "operator": "Variables[0] (0.72) || RETURN",
-                        "displayLines": "0.72",
-                        "constants": [],
-                        "variables": [
-                          0.72
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1762634781\">M_BlackSwan_Trace03</a>",
-          "modifierFlags": [
-            "ListenBattleEventSkill"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "CasterStatusProbability",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"97197540\">M_BlackSwan_Trace03_Sub</a>",
-                  "valuePerStack": {
-                    "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (CasterStatusProbability) || Variables[1] (0.6) || MUL || RETURN",
-                      "displayLines": "(CasterStatusProbability * 0.6)",
-                      "constants": [],
-                      "variables": [
-                        "CasterStatusProbability",
-                        0.6
-                      ]
-                    }
-                  }
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": -999,
-                  "maxValue": 999,
-                  "whenValueChanges": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "CasterStatusProbability",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"97197540\">M_BlackSwan_Trace03_Sub</a>",
-                      "valuePerStack": {
-                        "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (CasterStatusProbability) || Variables[1] (0.6) || MUL || RETURN",
-                          "displayLines": "(CasterStatusProbability * 0.6)",
-                          "constants": [],
-                          "variables": [
-                            "CasterStatusProbability",
-                            0.6
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "BlackSwanv0_BlackSwan_Trace02": {
-      "fileName": "BlackSwanv0_BlackSwan_Trace02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1745857162\">M_BlackSwan_Trace02</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>",
-          "stackType": "Replace",
-          "modifierFlags": [
-            "RemoveWhenCasterDead",
-            "KeepOnDeathrattle"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-993235017\">M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy</a>",
-          "modifierFlags": [
-            "RemoveWhenCasterDead",
-            "ListenBattleEventSkill"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_count",
-                  "value": 999
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "_count",
-                        "compareType": "<",
-                        "value2": {
-                          "operator": "Variables[0] (_maxLimit) || RETURN",
-                          "displayLines": "_maxLimit",
-                          "constants": [],
-                          "variables": [
-                            "_maxLimit"
-                          ]
-                        },
-                        "contextScope": "ContextModifier"
-                      },
-                      {
-                        "name": "Attack Type",
-                        "attackTypes": [
-                          "DOT"
-                        ],
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        }
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of",
-                    "of": {
-                      "name": "Target Name",
-                      "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_count",
-                      "value": 0
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: End",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_count",
-                  "value": 999
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of",
-                        "of": {
-                          "name": "Target Name",
-                          "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
-                      },
-                      {
-                        "name": "Is Part Of",
-                        "of": {
-                          "name": "Target Name",
-                          "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target List}}"
-                        },
-                        "mustBeAlive2": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_count",
-                      "value": 0
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Anyone]: End",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_count",
-                  "value": 999
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Anyone]: Aborted",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_count",
-                  "value": 999
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-739683640\">M_BlackSwan_Trace02_AddDotOnCreate</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Random Chance",
-                        "chance": {
-                          "operator": "Variables[0] (Rank06_Chance) || RETURN",
-                          "displayLines": "Rank06_Chance",
-                          "constants": [],
-                          "variables": [
-                            "Rank06_Chance"
-                          ]
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "Rank06_Weighted_Stack_Layer",
-                          "value": {
-                            "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
-                            "displayLines": "(1 + Rank06_Extra_Layer)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Rank06_Extra_Layer"
-                            ]
-                          }
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "Rank06_Weighted_Stack_Layer",
-                          "value": {
-                            "operator": "Constants[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [
-                              1
-                            ],
-                            "variables": []
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
-                      "baseChance": {
-                        "operator": "Variables[0] (0.65) || RETURN",
-                        "displayLines": "0.65",
-                        "constants": [],
-                        "variables": [
-                          0.65
-                        ]
-                      },
-                      "stackLimit": {
-                        "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                        "displayLines": "Max_DOT_Layer",
-                        "constants": [],
-                        "variables": [
-                          "Max_DOT_Layer"
-                        ]
-                      },
-                      "valuePerStack": {
-                        "Basic_DamagePercentage": {
-                          "operator": "Variables[0] (2.4) || RETURN",
-                          "displayLines": "2.4",
-                          "constants": [],
-                          "variables": [
-                            2.4
-                          ]
-                        },
-                        "ExtraLayer_DamagePercentage": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
-                        },
-                        "SecondLayer": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
-                        },
-                        "Spread_DamagePercentage": {
-                          "operator": "Variables[0] (1.8) || RETURN",
-                          "displayLines": "1.8",
-                          "constants": [],
-                          "variables": [
-                            1.8
-                          ]
-                        },
-                        "ThirdLayer": {
-                          "operator": "Variables[0] (7) || RETURN",
-                          "displayLines": "7",
-                          "constants": [],
-                          "variables": [
-                            7
-                          ]
-                        },
-                        "DefenceIgnore": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
-                        },
-                        "Cast_By_Level": 0
-                      },
-                      "addStacksPerTrigger": {
-                        "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
-                        "displayLines": "Rank06_Weighted_Stack_Layer",
-                        "constants": [],
-                        "variables": [
-                          "Rank06_Weighted_Stack_Layer"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1745857162\">M_BlackSwan_Trace02</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-993235017\">M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy</a>",
-                      "valuePerStack": {
-                        "_maxLimit": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Wave Count",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 99,
-                      "ifTargetFound": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Random Chance",
-                            "chance": {
-                              "operator": "Variables[0] (Rank06_Chance) || RETURN",
-                              "displayLines": "Rank06_Chance",
-                              "constants": [],
-                              "variables": [
-                                "Rank06_Chance"
-                              ]
-                            }
-                          },
-                          "passed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "Rank06_Weighted_Stack_Layer",
-                              "value": {
-                                "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
-                                "displayLines": "(1 + Rank06_Extra_Layer)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "Rank06_Extra_Layer"
-                                ]
-                              }
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "Rank06_Weighted_Stack_Layer",
-                              "value": {
-                                "operator": "Constants[0] (1) || RETURN",
-                                "displayLines": "1",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": []
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
-                          "baseChance": {
-                            "operator": "Variables[0] (0.65) || RETURN",
-                            "displayLines": "0.65",
-                            "constants": [],
-                            "variables": [
-                              0.65
-                            ]
-                          },
-                          "stackLimit": {
-                            "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                            "displayLines": "Max_DOT_Layer",
-                            "constants": [],
-                            "variables": [
-                              "Max_DOT_Layer"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "Basic_DamagePercentage": {
-                              "operator": "Variables[0] (2.4) || RETURN",
-                              "displayLines": "2.4",
-                              "constants": [],
-                              "variables": [
-                                2.4
-                              ]
-                            },
-                            "ExtraLayer_DamagePercentage": {
-                              "operator": "Variables[0] (0.12) || RETURN",
-                              "displayLines": "0.12",
-                              "constants": [],
-                              "variables": [
-                                0.12
-                              ]
-                            },
-                            "SecondLayer": {
-                              "operator": "Variables[0] (3) || RETURN",
-                              "displayLines": "3",
-                              "constants": [],
-                              "variables": [
-                                3
-                              ]
-                            },
-                            "Spread_DamagePercentage": {
-                              "operator": "Variables[0] (1.8) || RETURN",
-                              "displayLines": "1.8",
-                              "constants": [],
-                              "variables": [
-                                1.8
-                              ]
-                            },
-                            "ThirdLayer": {
-                              "operator": "Variables[0] (7) || RETURN",
-                              "displayLines": "7",
-                              "constants": [],
-                              "variables": [
-                                7
-                              ]
-                            },
-                            "DefenceIgnore": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
-                            },
-                            "Cast_By_Level": 0
-                          },
-                          "addStacksPerTrigger": {
-                            "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
-                            "displayLines": "Rank06_Weighted_Stack_Layer",
-                            "constants": [],
-                            "variables": [
-                              "Rank06_Weighted_Stack_Layer"
-                            ]
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-739683640\">M_BlackSwan_Trace02_AddDotOnCreate</a>"
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            },
-            {
-              "eventTrigger": "When Stacking Modifier Instance [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Random Chance",
-                        "chance": {
-                          "operator": "Variables[0] (Rank06_Chance) || RETURN",
-                          "displayLines": "Rank06_Chance",
-                          "constants": [],
-                          "variables": [
-                            "Rank06_Chance"
-                          ]
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "Rank06_Weighted_Stack_Layer",
-                          "value": {
-                            "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
-                            "displayLines": "(1 + Rank06_Extra_Layer)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "Rank06_Extra_Layer"
-                            ]
-                          }
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "Rank06_Weighted_Stack_Layer",
-                          "value": {
-                            "operator": "Constants[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [
-                              1
-                            ],
-                            "variables": []
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2037361233\">BlackSwan_DOT</a>[<span class=\"descriptionNumberColor\">Arcana</span>]",
-                      "baseChance": {
-                        "operator": "Variables[0] (0.65) || RETURN",
-                        "displayLines": "0.65",
-                        "constants": [],
-                        "variables": [
-                          0.65
-                        ]
-                      },
-                      "stackLimit": {
-                        "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
-                        "displayLines": "Max_DOT_Layer",
-                        "constants": [],
-                        "variables": [
-                          "Max_DOT_Layer"
-                        ]
-                      },
-                      "valuePerStack": {
-                        "Basic_DamagePercentage": {
-                          "operator": "Variables[0] (2.4) || RETURN",
-                          "displayLines": "2.4",
-                          "constants": [],
-                          "variables": [
-                            2.4
-                          ]
-                        },
-                        "ExtraLayer_DamagePercentage": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
-                        },
-                        "SecondLayer": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
-                        },
-                        "Spread_DamagePercentage": {
-                          "operator": "Variables[0] (1.8) || RETURN",
-                          "displayLines": "1.8",
-                          "constants": [],
-                          "variables": [
-                            1.8
-                          ]
-                        },
-                        "ThirdLayer": {
-                          "operator": "Variables[0] (7) || RETURN",
-                          "displayLines": "7",
-                          "constants": [],
-                          "variables": [
-                            7
-                          ]
-                        },
-                        "DefenceIgnore": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
-                        },
-                        "Cast_By_Level": 0
-                      },
-                      "addStacksPerTrigger": {
-                        "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
-                        "displayLines": "Rank06_Weighted_Stack_Layer",
-                        "constants": [],
-                        "variables": [
-                          "Rank06_Weighted_Stack_Layer"
-                        ]
-                      },
-                      "success": [
-                        {
-                          "name": "Define Modifier-Specific Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifierName": "<a class=\"gModGreen\" id=\"-993235017\">M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy</a>",
-                          "adjustmentType": "+",
-                          "variableName": "_count",
-                          "value": 1
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"375131949\">M_BlackSwan_Tree02_AddDOTFlag</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "BlackSwanv0_BlackSwan_TechniqueInLevel_Insert": {
       "fileName": "BlackSwanv0_BlackSwan_TechniqueInLevel_Insert",
       "abilityType": null,
@@ -3595,6 +3595,17 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
+    "BlackSwanv0_BlackSwan_Ability03_Cutin": {
+      "fileName": "BlackSwanv0_BlackSwan_Ability03_Cutin",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
     "BlackSwanv0_BlackSwan_Ability03_Part02": {
       "fileName": "BlackSwanv0_BlackSwan_Ability03_Part02",
       "abilityType": null,
@@ -3744,17 +3755,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "BlackSwanv0_BlackSwan_Ability03_Cutin": {
-      "fileName": "BlackSwanv0_BlackSwan_Ability03_Cutin",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "BlackSwanv0_BlackSwan_Ability02_Part02": {

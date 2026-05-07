@@ -5,9 +5,9 @@ const compositeAbilityObject = {
   "abilityList": [
     "Luka_Luka_TechniqueInLevel",
     "Luka_Luka_PassiveAbility01",
+    "Luka_Luka_Ability03_EnterReady",
     "Luka_Luka_Ability03_Part02",
     "Luka_Luka_Ability03_Part01",
-    "Luka_Luka_Ability03_EnterReady",
     "Luka_Luka_Ability02_Part02",
     "Luka_Luka_Ability02_Part01",
     "Luka_Luka_Ability11_Part02",
@@ -299,6 +299,17 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
+    "Luka_Luka_Ability03_EnterReady": {
+      "fileName": "Luka_Luka_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
     "Luka_Luka_Ability03_Part02": {
       "fileName": "Luka_Luka_Ability03_Part02",
       "abilityType": null,
@@ -501,17 +512,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
-      }
-    },
-    "Luka_Luka_Ability03_EnterReady": {
-      "fileName": "Luka_Luka_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Luka_Luka_Ability02_Part02": {

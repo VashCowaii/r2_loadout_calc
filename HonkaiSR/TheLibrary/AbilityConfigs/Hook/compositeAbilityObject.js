@@ -3,9 +3,9 @@ const compositeAbilityObject = {
   "fullCharacterName": "Hook",
   "trimCharacterName": "Hook",
   "abilityList": [
-    "Hook_Hook_Eidolon6",
     "Hook_Hook_Trace02",
     "Hook_Hook_Trace01",
+    "Hook_Hook_Eidolon6",
     "Hook_Hook_TechniqueInLevel",
     "Hook_Hook_PassiveAbility01_2",
     "Hook_Hook_PassiveAbility01",
@@ -21,6 +21,59 @@ const compositeAbilityObject = {
     "Hook_Modifiers"
   ],
   "abilityObject": {
+    "Hook_Hook_Trace02": {
+      "fileName": "Hook_Hook_Trace02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Stack Target Resistance",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "statName": "STAT_CTRL",
+          "value": {
+            "operator": "Variables[0] (0.35) || RETURN",
+            "displayLines": "0.35",
+            "constants": [],
+            "variables": [
+              0.35
+            ]
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Hook_Hook_Trace01": {
+      "fileName": "Hook_Hook_Trace01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2102269383\">M_Hook_Trace01</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2102269383\">M_Hook_Trace01</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "Hook_Hook_Eidolon6": {
       "fileName": "Hook_Hook_Eidolon6",
       "abilityType": null,
@@ -70,59 +123,6 @@ const compositeAbilityObject = {
               ]
             }
           ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Hook_Hook_Trace02": {
-      "fileName": "Hook_Hook_Trace02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Stack Target Resistance",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "statName": "STAT_CTRL",
-          "value": {
-            "operator": "Variables[0] (0.35) || RETURN",
-            "displayLines": "0.35",
-            "constants": [],
-            "variables": [
-              0.35
-            ]
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Hook_Hook_Trace01": {
-      "fileName": "Hook_Hook_Trace01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2102269383\">M_Hook_Trace01</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2102269383\">M_Hook_Trace01</a>"
         }
       ],
       "targetObjectData": {

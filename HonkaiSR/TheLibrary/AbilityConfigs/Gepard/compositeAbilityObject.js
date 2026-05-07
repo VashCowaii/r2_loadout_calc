@@ -4,7 +4,6 @@ const compositeAbilityObject = {
   "trimCharacterName": "Gepard",
   "abilityList": [
     "Gepard_Gepard_Trace03",
-    "Gepard_Gepard_Trace02",
     "Gepard_Gepard_Trace01",
     "Gepard_Gepard_TechniqueInLevel",
     "Gepard_Gepard_PassiveAbility_1_Insert",
@@ -141,17 +140,6 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Gepard_Gepard_Trace02": {
-      "fileName": "Gepard_Gepard_Trace02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }

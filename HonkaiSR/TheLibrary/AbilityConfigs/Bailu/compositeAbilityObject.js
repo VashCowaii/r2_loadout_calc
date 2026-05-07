@@ -5,8 +5,8 @@ const compositeAbilityObject = {
   "abilityList": [
     "Bailu_Bailu_Trace02",
     "Bailu_Bailu_Trace01",
-    "Bailu_Bailu_TechniqueInLevel",
     "Bailu_Bailu_InsertAbility_Revive",
+    "Bailu_Bailu_TechniqueInLevel",
     "Bailu_Bailu_PassiveAbility01",
     "Bailu_Bailu_Ability03_Part02",
     "Bailu_Bailu_Ability03_Part01",
@@ -47,6 +47,171 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Bailu_Bailu_InsertAbility_Revive": {
+      "fileName": "Bailu_Bailu_InsertAbility_Revive",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "value1": "CurrentHP",
+            "compareType": "<=",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "name": "Define Modifier Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifierName": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
+              "function": "Add"
+            },
+            "Deleted bullshit",
+            {
+              "name": "UI Display Event",
+              "popUpText": "Gourdful of Elixir"
+            },
+            {
+              "name": "Dispel Debuffs",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "silent": true
+            },
+            {
+              "name": "Heal",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "healPercent": {
+                "operator": "Variables[0] (0.18) || RETURN",
+                "displayLines": "0.18",
+                "constants": [],
+                "variables": [
+                  0.18
+                ]
+              },
+              "healFlat": {
+                "operator": "Variables[0] (480) || RETURN",
+                "displayLines": "480",
+                "constants": [],
+                "variables": [
+                  480
+                ]
+              },
+              "formula": "Heal from Healer's MaxHP"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>"
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "variableName": "MDF_ReviveTime2",
+                  "modifierName": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
+                  "multiplier": {
+                    "operator": "Constants[0] (1) || RETURN",
+                    "displayLines": "1",
+                    "constants": [
+                      1
+                    ],
+                    "variables": []
+                  }
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
+                    "displayLines": "MDF_ReviveTime2",
+                    "constants": [],
+                    "variables": [
+                      "MDF_ReviveTime2"
+                    ]
+                  },
+                  "maximum": {
+                    "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
+                    "displayLines": "MDF_ReviveTime",
+                    "constants": [],
+                    "variables": [
+                      "MDF_ReviveTime"
+                    ]
+                  },
+                  "assignState": "True",
+                  "priorState": "Active",
+                  "bar#": 3
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_ReviveTime2",
+                  "value": {
+                    "operator": "Constants[0] (0) || RETURN",
+                    "displayLines": "0",
+                    "constants": [
+                      0
+                    ],
+                    "variables": []
+                  }
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
+                    "displayLines": "MDF_ReviveTime2",
+                    "constants": [],
+                    "variables": [
+                      "MDF_ReviveTime2"
+                    ]
+                  },
+                  "maximum": {
+                    "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
+                    "displayLines": "MDF_ReviveTime",
+                    "constants": [],
+                    "variables": [
+                      "MDF_ReviveTime"
+                    ]
+                  },
+                  "assignState": "True",
+                  "priorState": "Disable",
+                  "bar#": 3
+                }
+              ]
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1496935031\">Bailu_Revive_Mark</a>"
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
       }
     },
     "Bailu_Bailu_TechniqueInLevel": {
@@ -273,171 +438,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{All Team Members}}"
-      }
-    },
-    "Bailu_Bailu_InsertAbility_Revive": {
-      "fileName": "Bailu_Bailu_InsertAbility_Revive",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "value1": "CurrentHP",
-            "compareType": "<=",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "Define Modifier Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifierName": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
-              "function": "Add"
-            },
-            "Deleted bullshit",
-            {
-              "name": "UI Display Event",
-              "popUpText": "Gourdful of Elixir"
-            },
-            {
-              "name": "Dispel Debuffs",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "silent": true
-            },
-            {
-              "name": "Heal",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "healPercent": {
-                "operator": "Variables[0] (0.18) || RETURN",
-                "displayLines": "0.18",
-                "constants": [],
-                "variables": [
-                  0.18
-                ]
-              },
-              "healFlat": {
-                "operator": "Variables[0] (480) || RETURN",
-                "displayLines": "480",
-                "constants": [],
-                "variables": [
-                  480
-                ]
-              },
-              "formula": "Heal from Healer's MaxHP"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>"
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "variableName": "MDF_ReviveTime2",
-                  "modifierName": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
-                  "multiplier": {
-                    "operator": "Constants[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [
-                      1
-                    ],
-                    "variables": []
-                  }
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
-                    "displayLines": "MDF_ReviveTime2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ReviveTime2"
-                    ]
-                  },
-                  "maximum": {
-                    "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
-                    "displayLines": "MDF_ReviveTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ReviveTime"
-                    ]
-                  },
-                  "assignState": "True",
-                  "priorState": "Active",
-                  "bar#": 3
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_ReviveTime2",
-                  "value": {
-                    "operator": "Constants[0] (0) || RETURN",
-                    "displayLines": "0",
-                    "constants": [
-                      0
-                    ],
-                    "variables": []
-                  }
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
-                    "displayLines": "MDF_ReviveTime2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ReviveTime2"
-                    ]
-                  },
-                  "maximum": {
-                    "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
-                    "displayLines": "MDF_ReviveTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ReviveTime"
-                    ]
-                  },
-                  "assignState": "True",
-                  "priorState": "Disable",
-                  "bar#": 3
-                }
-              ]
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1496935031\">Bailu_Revive_Mark</a>"
-            }
-          ]
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Bailu_Bailu_PassiveAbility01": {

@@ -3,11 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": "Natasha",
   "trimCharacterName": "Natasha",
   "abilityList": [
+    "Natasha_Natasha_Trace02",
+    "Natasha_Natasha_Eidolon4",
+    "Natasha_Natasha_Eidolon1",
     "Natasha_Natasha_Eidolon1_InsertAbility_Part02",
     "Natasha_Natasha_Eidolon1_InsertAbility_Part01",
-    "Natasha_Natasha_Eidolon1",
-    "Natasha_Natasha_Eidolon4",
-    "Natasha_Natasha_Trace02",
     "Natasha_Natasha_TechniqueInLevel",
     "Natasha_Natasha_PassiveAbility01",
     "Natasha_Natasha_Ability03_Part02",
@@ -20,43 +20,29 @@ const compositeAbilityObject = {
     "Natasha_Modifiers"
   ],
   "abilityObject": {
-    "Natasha_Natasha_Eidolon1_InsertAbility_Part02": {
-      "fileName": "Natasha_Natasha_Eidolon1_InsertAbility_Part02",
+    "Natasha_Natasha_Trace02": {
+      "fileName": "Natasha_Natasha_Trace02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Heal",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "healPercent": {
-            "operator": "Variables[0] (0.15) || RETURN",
-            "displayLines": "0.15",
-            "constants": [],
-            "variables": [
-              0.15
-            ]
-          },
-          "healFlat": {
-            "operator": "Variables[0] (400) || RETURN",
-            "displayLines": "400",
-            "constants": [],
-            "variables": [
-              400
-            ]
-          },
-          "formula": "Heal from Healer's MaxHP"
-        },
-        {
-          "name": "Remove Events/Bonuses",
+          "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1397815058\">Natasha_Eidolon1_Check</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-202375119\">M_Trace_HealRatioUp</a>",
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (0.1) || RETURN",
+              "displayLines": "0.1",
+              "constants": [],
+              "variables": [
+                0.1
+              ]
+            }
+          }
         }
       ],
       "references": [],
@@ -64,24 +50,50 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "Natasha_Natasha_Eidolon1_InsertAbility_Part01": {
-      "fileName": "Natasha_Natasha_Eidolon1_InsertAbility_Part01",
+    "Natasha_Natasha_Eidolon4": {
+      "fileName": "Natasha_Natasha_Eidolon4",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Trigger Ability",
-          "from": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Natasha_Eidolon1_InsertAbility_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
+          "modifier": "<a class=\"gModGreen\" id=\"1974553501\">Natasha_Eidolon4_Check</a>"
+        }
       ],
-      "references": [],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1974553501\">Natasha_Eidolon4_Check</a>",
+          "execute": [
+            {
+              "eventTrigger": "Being Attacked End [Owner]",
+              "execute": [
+                {
+                  "name": "Update Energy",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "value": {
+                    "operator": "Variables[0] (5) || RETURN",
+                    "displayLines": "5",
+                    "constants": [],
+                    "variables": [
+                      5
+                    ]
+                  },
+                  "isFixed": "* ERR"
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
@@ -160,78 +172,66 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "Natasha_Natasha_Eidolon4": {
-      "fileName": "Natasha_Natasha_Eidolon4",
+    "Natasha_Natasha_Eidolon1_InsertAbility_Part02": {
+      "fileName": "Natasha_Natasha_Eidolon1_InsertAbility_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Add Events/Bonuses",
+          "name": "Heal",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "healPercent": {
+            "operator": "Variables[0] (0.15) || RETURN",
+            "displayLines": "0.15",
+            "constants": [],
+            "variables": [
+              0.15
+            ]
+          },
+          "healFlat": {
+            "operator": "Variables[0] (400) || RETURN",
+            "displayLines": "400",
+            "constants": [],
+            "variables": [
+              400
+            ]
+          },
+          "formula": "Heal from Healer's MaxHP"
+        },
+        {
+          "name": "Remove Events/Bonuses",
           "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"1974553501\">Natasha_Eidolon4_Check</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-1397815058\">Natasha_Eidolon1_Check</a>"
         }
       ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1974553501\">Natasha_Eidolon4_Check</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Attacked End [Owner]",
-              "execute": [
-                {
-                  "name": "Update Energy",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "value": {
-                    "operator": "Variables[0] (5) || RETURN",
-                    "displayLines": "5",
-                    "constants": [],
-                    "variables": [
-                      5
-                    ]
-                  },
-                  "isFixed": "* ERR"
-                }
-              ]
-            }
-          ]
-        }
-      ],
+      "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "Natasha_Natasha_Trace02": {
-      "fileName": "Natasha_Natasha_Trace02",
+    "Natasha_Natasha_Eidolon1_InsertAbility_Part01": {
+      "fileName": "Natasha_Natasha_Eidolon1_InsertAbility_Part01",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Add Events/Bonuses",
-          "to": {
+          "name": "Trigger Ability",
+          "from": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-202375119\">M_Trace_HealRatioUp</a>",
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.1) || RETURN",
-              "displayLines": "0.1",
-              "constants": [],
-              "variables": [
-                0.1
-              ]
-            }
-          }
-        }
+          "ability": "Natasha_Eidolon1_InsertAbility_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
       ],
       "references": [],
       "targetObjectData": {

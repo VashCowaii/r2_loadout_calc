@@ -3,9 +3,9 @@ const compositeAbilityObject = {
   "fullCharacterName": "Dan Heng",
   "trimCharacterName": "DanHeng",
   "abilityList": [
-    "DanHeng_DanHeng_Eidolon1",
     "DanHeng_DanHeng_Trace02",
     "DanHeng_DanHeng_Trace01",
+    "DanHeng_DanHeng_Eidolon1",
     "DanHeng_DanHeng_TechniqueInLevel",
     "DanHeng_DanHeng_PassiveAbility01_Enhance_Part02",
     "DanHeng_DanHeng_PassiveAbility01_Enhance_Part01",
@@ -20,70 +20,6 @@ const compositeAbilityObject = {
     "DanHeng_Modifiers"
   ],
   "abilityObject": {
-    "DanHeng_DanHeng_Eidolon1": {
-      "fileName": "DanHeng_DanHeng_Eidolon1",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1099783557\">DanHeng_Eidolon1</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1099783557\">DanHeng_Eidolon1</a>",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Ability Target TAKING DMG}}"
-                    },
-                    "value1": "CurrentHP%",
-                    "compareType": ">=",
-                    "value2": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
-                          "value": "0.12"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "DanHeng_DanHeng_Trace02": {
       "fileName": "DanHeng_DanHeng_Trace02",
       "abilityType": null,
@@ -367,6 +303,70 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1338494483\">DanHeng_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Hidden Dragon</span>]",
                       "onlyRemoveOwnersInstance": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "DanHeng_DanHeng_Eidolon1": {
+      "fileName": "DanHeng_DanHeng_Eidolon1",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1099783557\">DanHeng_Eidolon1</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1099783557\">DanHeng_Eidolon1</a>",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target TAKING DMG}}"
+                    },
+                    "value1": "CurrentHP%",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (0.5) || RETURN",
+                      "displayLines": "0.5",
+                      "constants": [],
+                      "variables": [
+                        0.5
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
+                          "value": "0.12"
+                        }
+                      ]
                     }
                   ]
                 }

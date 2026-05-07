@@ -4,10 +4,10 @@ const compositeAbilityObject = {
   "trimCharacterName": "DrRatio",
   "abilityList": [
     "DrRatio_Dr_Ratio_TechniqueInLevel",
-    "DrRatio_Dr_Ratio_Bonus",
     "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Part02",
     "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Part01",
     "DrRatio_Dr_Ratio_PassiveAbility01",
+    "DrRatio_Dr_Ratio_Bonus",
     "DrRatio_Dr_Ratio_Ability03_Part02",
     "DrRatio_Dr_Ratio_Ability03_Part01",
     "DrRatio_Dr_Ratio_Ability03_EnterReady",
@@ -144,19 +144,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       },
       "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "DrRatio_Dr_Ratio_Bonus": {
-      "fileName": "DrRatio_Dr_Ratio_Bonus",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit"
-      ],
-      "references": [],
-      "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
     },
@@ -1547,6 +1534,19 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       },
       "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "DrRatio_Dr_Ratio_Bonus": {
+      "fileName": "DrRatio_Dr_Ratio_Bonus",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit"
+      ],
+      "references": [],
+      "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
     },

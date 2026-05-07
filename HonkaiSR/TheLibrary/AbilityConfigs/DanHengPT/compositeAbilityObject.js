@@ -4,12 +4,8 @@ const compositeAbilityObject = {
   "trimCharacterName": "DanHengPT",
   "abilityList": [
     "DanHengPT_DanHengPT_TechniqueInLevel",
-    "DanHengPT_DanHengPT_PassiveAbility01",
-    "DanHengPT_DanHengPT_BE_PassiveAbility",
     "DanHengPT_DanHengPT_BE_InsertAttack_Part02",
-    "DanHengPT_DanHengPT_BE_InsertAttack_Part01",
-    "DanHengPT_DanHengPT_BE_InsertShield_Part02",
-    "DanHengPT_DanHengPT_BE_InsertShield_Part01",
+    "DanHengPT_DanHengPT_PassiveAbility01",
     "DanHengPT_DanHengPT_Ability03_Part02",
     "DanHengPT_DanHengPT_Ability03_Part01",
     "DanHengPT_DanHengPT_Ability03_EnterReady",
@@ -103,6 +99,424 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "DanHengPT_DanHengPT_BE_InsertAttack_Part02": {
+      "fileName": "DanHengPT_DanHengPT_BE_InsertAttack_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "DanHengPT_IsFreeAction",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{DHPT}}"
+                },
+                "value1": "DanHengPT_Passive_Count",
+                "compareType": "=",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{DHPT}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>"
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{DHPT}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>",
+              "valuePerStack": {
+                "MDF_IsStack": 0
+              },
+              "casterAssign": "TargetSelf"
+            }
+          ]
+        },
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
+          "dispelCount": {
+            "operator": "Variables[0] (1) || RETURN",
+            "displayLines": "1",
+            "constants": [],
+            "variables": [
+              1
+            ]
+          },
+          "dispelOrder": "LastAdded"
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{DHPT}}"
+          },
+          "ability": "DanHengPT_BE_AddShield"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] (Skill03_InsertDanHengPTDamagePercentage) || RETURN",
+              "displayLines": "Skill03_InsertDanHengPTDamagePercentage",
+              "constants": [],
+              "variables": [
+                "Skill03_InsertDanHengPTDamagePercentage"
+              ]
+            },
+            "HitSplit": 0.25,
+            "Toughness": {
+              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
+              "displayLines": "DanHengPT_Stance_All",
+              "constants": [],
+              "variables": [
+                "DanHengPT_Stance_All"
+              ]
+            },
+            "Tags": [
+              "Summon-Tag DMG"
+            ],
+            "attackType": "Follow-up"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] (Skill03_InsertDanHengPTDamagePercentage) || RETURN",
+              "displayLines": "Skill03_InsertDanHengPTDamagePercentage",
+              "constants": [],
+              "variables": [
+                "Skill03_InsertDanHengPTDamagePercentage"
+              ]
+            },
+            "HitSplit": 0.25,
+            "Toughness": {
+              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
+              "displayLines": "DanHengPT_Stance_All",
+              "constants": [],
+              "variables": [
+                "DanHengPT_Stance_All"
+              ]
+            },
+            "Tags": [
+              "Summon-Tag DMG"
+            ],
+            "attackType": "Follow-up"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] (Skill03_InsertDanHengPTDamagePercentage) || RETURN",
+              "displayLines": "Skill03_InsertDanHengPTDamagePercentage",
+              "constants": [],
+              "variables": [
+                "Skill03_InsertDanHengPTDamagePercentage"
+              ]
+            },
+            "HitSplit": 0.25,
+            "Toughness": {
+              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
+              "displayLines": "DanHengPT_Stance_All",
+              "constants": [],
+              "variables": [
+                "DanHengPT_Stance_All"
+              ]
+            },
+            "Tags": [
+              "Summon-Tag DMG"
+            ],
+            "attackType": "Follow-up"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] (Skill03_InsertDanHengPTDamagePercentage) || RETURN",
+              "displayLines": "Skill03_InsertDanHengPTDamagePercentage",
+              "constants": [],
+              "variables": [
+                "Skill03_InsertDanHengPTDamagePercentage"
+              ]
+            },
+            "HitSplit": 0.25,
+            "Toughness": {
+              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
+              "displayLines": "DanHengPT_Stance_All",
+              "constants": [],
+              "variables": [
+                "DanHengPT_Stance_All"
+              ]
+            },
+            "Tags": [
+              "Summon-Tag DMG"
+            ],
+            "attackType": "Follow-up"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "ReadTargetType",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Bondmate}}"
+              }
+            },
+            "Damage": {
+              "operator": "Variables[0] (Skill03_InsertOwnerDamagePercentage) || RETURN",
+              "displayLines": "Skill03_InsertOwnerDamagePercentage",
+              "constants": [],
+              "variables": [
+                "Skill03_InsertOwnerDamagePercentage"
+              ]
+            },
+            "Toughness": null,
+            "Tags": [
+              "Summon-Tag DMG"
+            ],
+            "attackType": "Additional DMG"
+          },
+          "overrideDamageOwner": {
+            "name": "Target Name",
+            "target": "{{Bondmate}}"
+          },
+          "overrideDamageStatSource": {
+            "name": "Target Name",
+            "target": "{{Bondmate}}"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Variable",
+                "value1": "DanHengPT_ExtraDamageCount",
+                "compareType": ">",
+                "value2": 0
+              },
+              {
+                "name": "Compare: Variable",
+                "value1": "DanHengPT_LongLing_Flag",
+                "compareType": "=",
+                "value2": 1
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable with Shield Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Bondmate}}"
+              },
+              "variableName": "DanHengPT_ExtraDamageShield"
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "DanHengPT_ExtraDamageCount",
+              "value": {
+                "operator": "Variables[0] (DanHengPT_ExtraDamageCount) || Constants[0] (1) || SUB || RETURN",
+                "displayLines": "(DanHengPT_ExtraDamageCount - 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "DanHengPT_ExtraDamageCount"
+                ]
+              }
+            },
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "AttackScaling": {
+                "DamageType": {
+                  "name": "Damage Type Source",
+                  "sourceType": "ReadTargetType",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Bondmate}}"
+                  }
+                },
+                "DamageFlat": {
+                  "operator": "Variables[0] (DanHengPT_ExtraDamageRatio) || Variables[1] (DanHengPT_ExtraDamageShield) || MUL || RETURN",
+                  "displayLines": "(DanHengPT_ExtraDamageRatio * DanHengPT_ExtraDamageShield)",
+                  "constants": [],
+                  "variables": [
+                    "DanHengPT_ExtraDamageRatio",
+                    "DanHengPT_ExtraDamageShield"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": [
+                  "Summon-Tag DMG"
+                ],
+                "attackType": "Additional DMG"
+              },
+              "overrideDamageOwner": {
+                "name": "Target Name",
+                "target": "{{Bondmate}}"
+              },
+              "overrideDamageStatSource": {
+                "name": "Target Name",
+                "target": "{{Bondmate}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Sublimity"
+          },
+          "passed": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}.[[sortByHPCurrent]].[[reverse]]"
+              },
+              "includeDyingTargets": true,
+              "maxTargets": 1,
+              "ifTargetFound": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "DanHengPT_LongLing_Flag",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "AttackScaling": {
+                        "DamageType": {
+                          "name": "Damage Type Source",
+                          "sourceType": "ReadTargetType",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Bondmate}}"
+                          }
+                        },
+                        "Damage": {
+                          "operator": "Variables[0] (SkillTree_PointB3_OwnerDamagePercentage) || RETURN",
+                          "displayLines": "SkillTree_PointB3_OwnerDamagePercentage",
+                          "constants": [],
+                          "variables": [
+                            "SkillTree_PointB3_OwnerDamagePercentage"
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": [
+                          "Summon-Tag DMG"
+                        ],
+                        "attackType": "Additional DMG"
+                      },
+                      "overrideDamageOwner": {
+                        "name": "Target Name",
+                        "target": "{{Bondmate}}"
+                      },
+                      "overrideDamageStatSource": {
+                        "name": "Target Name",
+                        "target": "{{Bondmate}}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "DanHengPT_IsFreeAction",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "DanHengPT_IsFreeAction",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "Trigger: Attack End",
+          "fakeCharacterAttack": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
       }
     },
     "DanHengPT_DanHengPT_PassiveAbility01": {
@@ -922,693 +1336,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
-      }
-    },
-    "DanHengPT_DanHengPT_BE_PassiveAbility": {
-      "fileName": "DanHengPT_DanHengPT_BE_PassiveAbility",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-516529797\">DanHengPT_BEModifier</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-516529797\">DanHengPT_BEModifier</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{DHPT}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "DanHengPT_BE_InsertAttack_Part01",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "priorityTag": "CharacterAttackFromSelf",
-                      "ownerState": "Mask_AliveOrRevivable",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "DanHengPT_BE_InsertShield_Part01",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members}}"
-                      },
-                      "priorityTag": "CharacterBuffSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Event Owner Change",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}.[[getSummoner]]"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>"
-                    },
-                    {
-                      "name": "Set Action-State",
-                      "on": null,
-                      "stateName": "Standard_Departed"
-                    },
-                    {
-                      "name": "Remove Modifier Behavior Flag(s)",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "flagNames": [
-                        "STAT_SheepStatus_SummonObjects"
-                      ]
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-480380135\">Enemy_W2_LycanKing_IF_DisableAction</a>[<span class=\"descriptionNumberColor\">Departed</span>]"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"40667951\">Enemy_W2_LycanKing_IF_DisableActionEndMark</a>"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "DanHengPT_DanHengPT_BE_InsertAttack_Part02": {
-      "fileName": "DanHengPT_DanHengPT_BE_InsertAttack_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "DanHengPT_IsFreeAction",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{DHPT}}"
-                },
-                "value1": "DanHengPT_Passive_Count",
-                "compareType": "=",
-                "value2": 0
-              },
-              "passed": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{DHPT}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>"
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{DHPT}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>",
-              "valuePerStack": {
-                "MDF_IsStack": 0
-              },
-              "casterAssign": "TargetSelf"
-            }
-          ]
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members}}"
-          },
-          "dispelCount": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
-          },
-          "dispelOrder": "LastAdded"
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{DHPT}}"
-          },
-          "ability": "DanHengPT_BE_AddShield"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (Skill03_InsertDanHengPTDamagePercentage) || RETURN",
-              "displayLines": "Skill03_InsertDanHengPTDamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill03_InsertDanHengPTDamagePercentage"
-              ]
-            },
-            "HitSplit": 0.25,
-            "Toughness": {
-              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-              "displayLines": "DanHengPT_Stance_All",
-              "constants": [],
-              "variables": [
-                "DanHengPT_Stance_All"
-              ]
-            },
-            "Tags": [
-              "Summon-Tag DMG"
-            ],
-            "attackType": "Follow-up"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (Skill03_InsertDanHengPTDamagePercentage) || RETURN",
-              "displayLines": "Skill03_InsertDanHengPTDamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill03_InsertDanHengPTDamagePercentage"
-              ]
-            },
-            "HitSplit": 0.25,
-            "Toughness": {
-              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-              "displayLines": "DanHengPT_Stance_All",
-              "constants": [],
-              "variables": [
-                "DanHengPT_Stance_All"
-              ]
-            },
-            "Tags": [
-              "Summon-Tag DMG"
-            ],
-            "attackType": "Follow-up"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (Skill03_InsertDanHengPTDamagePercentage) || RETURN",
-              "displayLines": "Skill03_InsertDanHengPTDamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill03_InsertDanHengPTDamagePercentage"
-              ]
-            },
-            "HitSplit": 0.25,
-            "Toughness": {
-              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-              "displayLines": "DanHengPT_Stance_All",
-              "constants": [],
-              "variables": [
-                "DanHengPT_Stance_All"
-              ]
-            },
-            "Tags": [
-              "Summon-Tag DMG"
-            ],
-            "attackType": "Follow-up"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (Skill03_InsertDanHengPTDamagePercentage) || RETURN",
-              "displayLines": "Skill03_InsertDanHengPTDamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill03_InsertDanHengPTDamagePercentage"
-              ]
-            },
-            "HitSplit": 0.25,
-            "Toughness": {
-              "operator": "Variables[0] (DanHengPT_Stance_All) || RETURN",
-              "displayLines": "DanHengPT_Stance_All",
-              "constants": [],
-              "variables": [
-                "DanHengPT_Stance_All"
-              ]
-            },
-            "Tags": [
-              "Summon-Tag DMG"
-            ],
-            "attackType": "Follow-up"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "ReadTargetType",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Bondmate}}"
-              }
-            },
-            "Damage": {
-              "operator": "Variables[0] (Skill03_InsertOwnerDamagePercentage) || RETURN",
-              "displayLines": "Skill03_InsertOwnerDamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill03_InsertOwnerDamagePercentage"
-              ]
-            },
-            "Toughness": null,
-            "Tags": [
-              "Summon-Tag DMG"
-            ],
-            "attackType": "Additional DMG"
-          },
-          "overrideDamageOwner": {
-            "name": "Target Name",
-            "target": "{{Bondmate}}"
-          },
-          "overrideDamageStatSource": {
-            "name": "Target Name",
-            "target": "{{Bondmate}}"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "DanHengPT_ExtraDamageCount",
-                "compareType": ">",
-                "value2": 0
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "DanHengPT_LongLing_Flag",
-                "compareType": "=",
-                "value2": 1
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable with Shield Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Bondmate}}"
-              },
-              "variableName": "DanHengPT_ExtraDamageShield"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "DanHengPT_ExtraDamageCount",
-              "value": {
-                "operator": "Variables[0] (DanHengPT_ExtraDamageCount) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(DanHengPT_ExtraDamageCount - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "DanHengPT_ExtraDamageCount"
-                ]
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": "ReadTargetType",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Bondmate}}"
-                  }
-                },
-                "DamageFlat": {
-                  "operator": "Variables[0] (DanHengPT_ExtraDamageRatio) || Variables[1] (DanHengPT_ExtraDamageShield) || MUL || RETURN",
-                  "displayLines": "(DanHengPT_ExtraDamageRatio * DanHengPT_ExtraDamageShield)",
-                  "constants": [],
-                  "variables": [
-                    "DanHengPT_ExtraDamageRatio",
-                    "DanHengPT_ExtraDamageShield"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": [
-                  "Summon-Tag DMG"
-                ],
-                "attackType": "Additional DMG"
-              },
-              "overrideDamageOwner": {
-                "name": "Target Name",
-                "target": "{{Bondmate}}"
-              },
-              "overrideDamageStatSource": {
-                "name": "Target Name",
-                "target": "{{Bondmate}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Trace Activated",
-            "conditionList": "Sublimity"
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}.[[sortByHPCurrent]].[[reverse]]"
-              },
-              "includeDyingTargets": true,
-              "maxTargets": 1,
-              "ifTargetFound": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "DanHengPT_LongLing_Flag",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "ReadTargetType",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Bondmate}}"
-                          }
-                        },
-                        "Damage": {
-                          "operator": "Variables[0] (SkillTree_PointB3_OwnerDamagePercentage) || RETURN",
-                          "displayLines": "SkillTree_PointB3_OwnerDamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "SkillTree_PointB3_OwnerDamagePercentage"
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": [
-                          "Summon-Tag DMG"
-                        ],
-                        "attackType": "Additional DMG"
-                      },
-                      "overrideDamageOwner": {
-                        "name": "Target Name",
-                        "target": "{{Bondmate}}"
-                      },
-                      "overrideDamageStatSource": {
-                        "name": "Target Name",
-                        "target": "{{Bondmate}}"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "DanHengPT_IsFreeAction",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "DanHengPT_IsFreeAction",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "name": "Trigger: Attack End",
-          "fakeCharacterAttack": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "DanHengPT_DanHengPT_BE_InsertAttack_Part01": {
-      "fileName": "DanHengPT_DanHengPT_BE_InsertAttack_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Of Virtue, Forms Unfold"
-        },
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{DHPT}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "DanHengPT_BE_InsertAttack_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "DanHengPT_DanHengPT_BE_InsertShield_Part02": {
-      "fileName": "DanHengPT_DanHengPT_BE_InsertShield_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members}}"
-          },
-          "dispelCount": {
-            "operator": "Variables[0] (MDF_DisperseNum) || RETURN",
-            "displayLines": "MDF_DisperseNum",
-            "constants": [],
-            "variables": [
-              "MDF_DisperseNum"
-            ]
-          },
-          "dispelOrder": "LastAdded"
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{DHPT}}"
-          },
-          "ability": "DanHengPT_BE_AddShield"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "DanHengPT_DanHengPT_BE_InsertShield_Part01": {
-      "fileName": "DanHengPT_DanHengPT_BE_InsertShield_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "DanHengPT_BE_InsertShield_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "DanHengPT_DanHengPT_Ability03_Part02": {

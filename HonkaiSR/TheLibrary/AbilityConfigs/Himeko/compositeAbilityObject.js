@@ -3,9 +3,9 @@ const compositeAbilityObject = {
   "fullCharacterName": "Himeko",
   "trimCharacterName": "Himeko",
   "abilityList": [
-    "Himeko_Himeko_Eidolon2",
     "Himeko_Himeko_Trace03",
     "Himeko_Himeko_Trace01",
+    "Himeko_Himeko_Eidolon2",
     "Himeko_Himeko_TechniqueInLevel",
     "Himeko_Himeko_Passive1Atk02_Ability",
     "Himeko_Himeko_Passive1Atk_Ability",
@@ -20,92 +20,6 @@ const compositeAbilityObject = {
     "Himeko_Modifiers"
   ],
   "abilityObject": {
-    "Himeko_Himeko_Eidolon2": {
-      "fileName": "Himeko_Himeko_Eidolon2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"867071212\">Himeko_Eidolon2_DamageUP</a>",
-          "valuePerStack": {
-            "MDF_HPRatio": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
-            },
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.15) || RETURN",
-              "displayLines": "0.15",
-              "constants": [],
-              "variables": [
-                0.15
-              ]
-            }
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__867071212\">Himeko_Eidolon2_DamageUP</a>",
-          "stackData": [
-            "MDF_HPRatio",
-            "MDF_PropertyValue"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value1": "CurrentHP%",
-                    "compareType": "<=",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                      "displayLines": "MDF_HPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HPRatio"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                          "value": "MDF_PropertyValue"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "Himeko_Himeko_Trace03": {
       "fileName": "Himeko_Himeko_Trace03",
       "abilityType": null,
@@ -322,6 +236,92 @@ const compositeAbilityObject = {
                     }
                   },
                   "stackFlag": "CharacterSkill"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Himeko_Himeko_Eidolon2": {
+      "fileName": "Himeko_Himeko_Eidolon2",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"867071212\">Himeko_Eidolon2_DamageUP</a>",
+          "valuePerStack": {
+            "MDF_HPRatio": {
+              "operator": "Variables[0] (0.5) || RETURN",
+              "displayLines": "0.5",
+              "constants": [],
+              "variables": [
+                0.5
+              ]
+            },
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (0.15) || RETURN",
+              "displayLines": "0.15",
+              "constants": [],
+              "variables": [
+                0.15
+              ]
+            }
+          }
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__867071212\">Himeko_Eidolon2_DamageUP</a>",
+          "stackData": [
+            "MDF_HPRatio",
+            "MDF_PropertyValue"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value1": "CurrentHP%",
+                    "compareType": "<=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
+                      "displayLines": "MDF_HPRatio",
+                      "constants": [],
+                      "variables": [
+                        "MDF_HPRatio"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }

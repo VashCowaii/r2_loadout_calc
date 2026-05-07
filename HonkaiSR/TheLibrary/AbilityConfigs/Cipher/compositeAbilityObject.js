@@ -5,13 +5,13 @@ const compositeAbilityObject = {
   "abilityList": [
     "Cipher_Cipher_TechniqueInLevel_Insert",
     "Cipher_Cipher_TechniqueInLevel",
-    "Cipher_Cipher_PassiveAbility01",
     "Cipher_Cipher_PassiveAbility01_Insert_Part02",
     "Cipher_Cipher_PassiveAbility01_Insert_Part01",
     "Cipher_Cipher_PassiveAbility01_Insert_Bonuser",
+    "Cipher_Cipher_PassiveAbility01",
+    "Cipher_Cipher_Ability03_EnterReady",
     "Cipher_Cipher_Ability03_Part02",
     "Cipher_Cipher_Ability03_Part01",
-    "Cipher_Cipher_Ability03_EnterReady",
     "Cipher_Cipher_Ability02_Part02",
     "Cipher_Cipher_Ability02_Part01",
     "Cipher_Cipher_Ability01_Part02",
@@ -294,6 +294,451 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "Cipher_Cipher_PassiveAbility01_Insert_Part02": {
+      "fileName": "Cipher_Cipher_PassiveAbility01_Insert_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1467539794\">Cipher_Eidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Read the Room, Seek the Glee</span>]",
+              "duration": {
+                "operator": "Variables[0] (2) || RETURN",
+                "displayLines": "2",
+                "constants": [],
+                "variables": [
+                  2
+                ]
+              },
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.8) || RETURN",
+                  "displayLines": "0.8",
+                  "constants": [],
+                  "variables": [
+                    0.8
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-315567514\">Cipher_BpKuoSan_Insert_Bonuser</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Insert_Exec",
+          "value": 1
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] (1.5) || RETURN",
+              "displayLines": "1.5",
+              "constants": [],
+              "variables": [
+                1.5
+              ]
+            },
+            "HitSplit": 0.2,
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": [
+              "Cipher's Insert"
+            ],
+            "attackType": "Follow-up",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] (1.5) || RETURN",
+              "displayLines": "1.5",
+              "constants": [],
+              "variables": [
+                1.5
+              ]
+            },
+            "HitSplit": 0.1,
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": [
+              "Cipher's Insert"
+            ],
+            "attackType": "Follow-up",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] (1.5) || RETURN",
+              "displayLines": "1.5",
+              "constants": [],
+              "variables": [
+                1.5
+              ]
+            },
+            "HitSplit": 0.1,
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": [
+              "Cipher's Insert"
+            ],
+            "attackType": "Follow-up",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] (1.5) || RETURN",
+              "displayLines": "1.5",
+              "constants": [],
+              "variables": [
+                1.5
+              ]
+            },
+            "HitSplit": 0.6,
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": [
+              "Cipher's Insert"
+            ],
+            "attackType": "Follow-up",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Insert_Exec",
+          "value": 0
+        },
+        "Trigger: Skip Death Handling"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "Cipher_Cipher_PassiveAbility01_Insert_Part01": {
+      "fileName": "Cipher_Cipher_PassiveAbility01_Insert_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "The Hospitable Dolosian"
+        },
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Cipher_PassiveAbility01_Insert_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "Cipher_Cipher_PassiveAbility01_Insert_Bonuser": {
+      "fileName": "Cipher_Cipher_PassiveAbility01_Insert_Bonuser",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Target Exists",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "living": true
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Passive_Trigger_Count",
+              "value": {
+                "operator": "Variables[0] (Passive_Trigger_Count) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(Passive_Trigger_Count + 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "Passive_Trigger_Count"
+                ]
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Passive_Trigger_Count",
+                "compareType": ">=",
+                "value2": {
+                  "operator": "Variables[0] (Passive_Max_Count) || RETURN",
+                  "displayLines": "Passive_Max_Count",
+                  "constants": [],
+                  "variables": [
+                    "Passive_Max_Count"
+                  ]
+                }
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"4491835\">Cipher_BpKuoSan_Insert_CD</a>[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]"
+                }
+              ]
+            },
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "inherentTarget": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "ability": "Cipher_PassiveAbility01_Insert_Part01",
+              "isTrigger": true
+            }
+          ],
+          "noTargetFound": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}.[[livingOrLimbo]]"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "value1": "CurrentHP%",
+                      "compareType": ">",
+                      "value2": 0
+                    }
+                  },
+                  "Shuffle Targets",
+                  {
+                    "name": "Sort by Stat",
+                    "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
+                    "sortByHighest": true
+                  },
+                  {
+                    "name": "Return Target",
+                    "value": 1
+                  }
+                ]
+              },
+              "searchRandom": true,
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Target Exists",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "living": true
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Passive_Trigger_Count",
+                  "value": {
+                    "operator": "Variables[0] (Passive_Trigger_Count) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(Passive_Trigger_Count + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "Passive_Trigger_Count"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Passive_Trigger_Count",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (Passive_Max_Count) || RETURN",
+                      "displayLines": "Passive_Max_Count",
+                      "constants": [],
+                      "variables": [
+                        "Passive_Max_Count"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"4491835\">Cipher_BpKuoSan_Insert_CD</a>[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]"
+                    }
+                  ]
+                },
+                {
+                  "name": "Trigger Ability",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "inherentTarget": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "ability": "Cipher_PassiveAbility01_Insert_Part01",
+                  "isTrigger": true
+                }
+              ],
+              "noTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-315567514\">Cipher_BpKuoSan_Insert_Bonuser</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbort": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-315567514\">Cipher_BpKuoSan_Insert_Bonuser</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
       }
     },
     "Cipher_Cipher_PassiveAbility01": {
@@ -1861,446 +2306,12 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "Cipher_Cipher_PassiveAbility01_Insert_Part02": {
-      "fileName": "Cipher_Cipher_PassiveAbility01_Insert_Part02",
+    "Cipher_Cipher_Ability03_EnterReady": {
+      "fileName": "Cipher_Cipher_Ability03_EnterReady",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1467539794\">Cipher_Eidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Read the Room, Seek the Glee</span>]",
-              "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
-              },
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.8) || RETURN",
-                  "displayLines": "0.8",
-                  "constants": [],
-                  "variables": [
-                    0.8
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-315567514\">Cipher_BpKuoSan_Insert_Bonuser</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Insert_Exec",
-          "value": 1
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Variables[0] (1.5) || RETURN",
-              "displayLines": "1.5",
-              "constants": [],
-              "variables": [
-                1.5
-              ]
-            },
-            "HitSplit": 0.2,
-            "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
-            },
-            "Tags": [
-              "Cipher's Insert"
-            ],
-            "attackType": "Follow-up",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Variables[0] (1.5) || RETURN",
-              "displayLines": "1.5",
-              "constants": [],
-              "variables": [
-                1.5
-              ]
-            },
-            "HitSplit": 0.1,
-            "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
-            },
-            "Tags": [
-              "Cipher's Insert"
-            ],
-            "attackType": "Follow-up",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Variables[0] (1.5) || RETURN",
-              "displayLines": "1.5",
-              "constants": [],
-              "variables": [
-                1.5
-              ]
-            },
-            "HitSplit": 0.1,
-            "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
-            },
-            "Tags": [
-              "Cipher's Insert"
-            ],
-            "attackType": "Follow-up",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Variables[0] (1.5) || RETURN",
-              "displayLines": "1.5",
-              "constants": [],
-              "variables": [
-                1.5
-              ]
-            },
-            "HitSplit": 0.6,
-            "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
-            },
-            "Tags": [
-              "Cipher's Insert"
-            ],
-            "attackType": "Follow-up",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Insert_Exec",
-          "value": 0
-        },
-        "Trigger: Skip Death Handling"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "Cipher_Cipher_PassiveAbility01_Insert_Part01": {
-      "fileName": "Cipher_Cipher_PassiveAbility01_Insert_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "The Hospitable Dolosian"
-        },
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Cipher_PassiveAbility01_Insert_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "Cipher_Cipher_PassiveAbility01_Insert_Bonuser": {
-      "fileName": "Cipher_Cipher_PassiveAbility01_Insert_Bonuser",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Target Exists",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "living": true
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Passive_Trigger_Count",
-              "value": {
-                "operator": "Variables[0] (Passive_Trigger_Count) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(Passive_Trigger_Count + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Passive_Trigger_Count"
-                ]
-              }
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "Passive_Trigger_Count",
-                "compareType": ">=",
-                "value2": {
-                  "operator": "Variables[0] (Passive_Max_Count) || RETURN",
-                  "displayLines": "Passive_Max_Count",
-                  "constants": [],
-                  "variables": [
-                    "Passive_Max_Count"
-                  ]
-                }
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"4491835\">Cipher_BpKuoSan_Insert_CD</a>[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]"
-                }
-              ]
-            },
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "inherentTarget": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "ability": "Cipher_PassiveAbility01_Insert_Part01",
-              "isTrigger": true
-            }
-          ],
-          "noTargetFound": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}.[[livingOrLimbo]]"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Compare: Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value1": "CurrentHP%",
-                      "compareType": ">",
-                      "value2": 0
-                    }
-                  },
-                  "Shuffle Targets",
-                  {
-                    "name": "Sort by Stat",
-                    "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
-                    "sortByHighest": true
-                  },
-                  {
-                    "name": "Return Target",
-                    "value": 1
-                  }
-                ]
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Target Exists",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "living": true
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "Passive_Trigger_Count",
-                  "value": {
-                    "operator": "Variables[0] (Passive_Trigger_Count) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(Passive_Trigger_Count + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "Passive_Trigger_Count"
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Passive_Trigger_Count",
-                    "compareType": ">=",
-                    "value2": {
-                      "operator": "Variables[0] (Passive_Max_Count) || RETURN",
-                      "displayLines": "Passive_Max_Count",
-                      "constants": [],
-                      "variables": [
-                        "Passive_Max_Count"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"4491835\">Cipher_BpKuoSan_Insert_CD</a>[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]"
-                    }
-                  ]
-                },
-                {
-                  "name": "Trigger Ability",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "inherentTarget": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "ability": "Cipher_PassiveAbility01_Insert_Part01",
-                  "isTrigger": true
-                }
-              ],
-              "noTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-315567514\">Cipher_BpKuoSan_Insert_Bonuser</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "onAbort": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-315567514\">Cipher_BpKuoSan_Insert_Bonuser</a>"
-        }
-      ],
+      "parse": [],
       "references": [],
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
@@ -2795,17 +2806,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target",
         "subTarget": "Blast Targets"
-      }
-    },
-    "Cipher_Cipher_Ability03_EnterReady": {
-      "fileName": "Cipher_Cipher_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Cipher_Cipher_Ability02_Part02": {

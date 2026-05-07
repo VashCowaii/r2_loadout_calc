@@ -5,14 +5,14 @@ const compositeAbilityObject = {
   "abilityList": [
     "Ashveil_Ashveil_TechniqueInLevel",
     "Ashveil_Ashveil_Passive_FirstInsert_ForTest1",
-    "Ashveil_Ashveil_Insert_SelectTargetSelf_Enhance",
-    "Ashveil_Ashveil_Insert_SelectTargetSelf",
     "Ashveil_Ashveil_Insert_Enhance",
     "Ashveil_Ashveil_Insert",
+    "Ashveil_Ashveil_Insert_SelectTargetSelf_Enhance",
+    "Ashveil_Ashveil_Insert_SelectTargetSelf",
     "Ashveil_Ashveil_PassiveAbility01",
+    "Ashveil_Ashveil_Ability03_EnterReady",
     "Ashveil_Ashveil_Ability03_Part02",
     "Ashveil_Ashveil_Ability03_Part01",
-    "Ashveil_Ashveil_Ability03_EnterReady",
     "Ashveil_Ashveil_Ability02_Part02",
     "Ashveil_Ashveil_Ability02_Part01",
     "Ashveil_Ashveil_Ability01_Part02",
@@ -236,152 +236,6 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Ashveil_Ashveil_Insert_SelectTargetSelf_Enhance": {
-      "fileName": "Ashveil_Ashveil_Insert_SelectTargetSelf_Enhance",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Target Exists",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "living": true
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1185293706\">Ashveil_Ability02_Debuff</a>[<span class=\"descriptionNumberColor\">Bait</span>]"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "ability": "Ashveil_Insert_Enhance",
-              "isTrigger": true
-            }
-          ],
-          "noTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"972275728\">Ashveil_InsertCheckSelf_Enhance</a>"
-            }
-          ]
-        }
-      ],
-      "onAbort": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"972275728\">Ashveil_InsertCheckSelf_Enhance</a>"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "Ashveil_Ashveil_Insert_SelectTargetSelf": {
-      "fileName": "Ashveil_Ashveil_Insert_SelectTargetSelf",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Target Exists",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "living": true
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1185293706\">Ashveil_Ability02_Debuff</a>[<span class=\"descriptionNumberColor\">Bait</span>]"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "ability": "Ashveil_Insert",
-              "isTrigger": true
-            }
-          ],
-          "noTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"532779389\">Ashveil_InsertCheckSelf</a>"
-            }
-          ]
-        }
-      ],
-      "onAbort": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"532779389\">Ashveil_InsertCheckSelf</a>"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Ashveil_Ashveil_Insert_Enhance": {
@@ -1411,6 +1265,152 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
     },
+    "Ashveil_Ashveil_Insert_SelectTargetSelf_Enhance": {
+      "fileName": "Ashveil_Ashveil_Insert_SelectTargetSelf_Enhance",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Target Exists",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "living": true
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1185293706\">Ashveil_Ability02_Debuff</a>[<span class=\"descriptionNumberColor\">Bait</span>]"
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "ability": "Ashveil_Insert_Enhance",
+              "isTrigger": true
+            }
+          ],
+          "noTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"972275728\">Ashveil_InsertCheckSelf_Enhance</a>"
+            }
+          ]
+        }
+      ],
+      "onAbort": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"972275728\">Ashveil_InsertCheckSelf_Enhance</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "Ashveil_Ashveil_Insert_SelectTargetSelf": {
+      "fileName": "Ashveil_Ashveil_Insert_SelectTargetSelf",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Target Exists",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "living": true
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1185293706\">Ashveil_Ability02_Debuff</a>[<span class=\"descriptionNumberColor\">Bait</span>]"
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "ability": "Ashveil_Insert",
+              "isTrigger": true
+            }
+          ],
+          "noTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"532779389\">Ashveil_InsertCheckSelf</a>"
+            }
+          ]
+        }
+      ],
+      "onAbort": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"532779389\">Ashveil_InsertCheckSelf</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
     "Ashveil_Ashveil_PassiveAbility01": {
       "fileName": "Ashveil_Ashveil_PassiveAbility01",
       "childAbilityList": [
@@ -1751,6 +1751,17 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
+    "Ashveil_Ashveil_Ability03_EnterReady": {
+      "fileName": "Ashveil_Ashveil_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
     "Ashveil_Ashveil_Ability03_Part02": {
       "fileName": "Ashveil_Ashveil_Ability03_Part02",
       "abilityType": null,
@@ -2055,17 +2066,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
-      }
-    },
-    "Ashveil_Ashveil_Ability03_EnterReady": {
-      "fileName": "Ashveil_Ashveil_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Ashveil_Ashveil_Ability02_Part02": {

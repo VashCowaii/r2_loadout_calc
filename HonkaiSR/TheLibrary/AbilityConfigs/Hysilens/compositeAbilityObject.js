@@ -5,9 +5,9 @@ const compositeAbilityObject = {
   "abilityList": [
     "Hysilens_Harscyline_TechniqueInLevel",
     "Hysilens_Harscyline_PassiveAbility01",
+    "Hysilens_Harscyline_Ability03_EnterReady",
     "Hysilens_Harscyline_Ability03_Part02",
     "Hysilens_Harscyline_Ability03_Part01",
-    "Hysilens_Harscyline_Ability03_EnterReady",
     "Hysilens_Harscyline_Ability02_Part02",
     "Hysilens_Harscyline_Ability02_Part01",
     "Hysilens_Harscyline_Ability01_Part02",
@@ -675,6 +675,17 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
+    "Hysilens_Harscyline_Ability03_EnterReady": {
+      "fileName": "Hysilens_Harscyline_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
     "Hysilens_Harscyline_Ability03_Part02": {
       "fileName": "Hysilens_Harscyline_Ability03_Part02",
       "abilityType": null,
@@ -866,17 +877,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Hysilens_Harscyline_Ability03_EnterReady": {
-      "fileName": "Hysilens_Harscyline_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Hysilens_Harscyline_Ability02_Part02": {

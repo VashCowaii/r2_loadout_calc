@@ -3,13 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": "Cerydra",
   "trimCharacterName": "Cerydra",
   "abilityList": [
-    "Cerydra_Cerydra_TechniqueInLevel",
     "Cerydra_Cerydra_Eidolon6",
-    "Cerydra_Cerydra_Ability02_InsertEidolon1",
+    "Cerydra_Cerydra_TechniqueInLevel",
     "Cerydra_Cerydra_PassiveAbility",
     "Cerydra_Cerydra_Ability03_Part02",
     "Cerydra_Cerydra_Ability03_Part01",
     "Cerydra_Cerydra_Ability03_EnterReady",
+    "Cerydra_Cerydra_Ability02_InsertEidolon1",
     "Cerydra_Cerydra_Ability02_Others_Part02",
     "Cerydra_Cerydra_Ability02_Part01",
     "Cerydra_Cerydra_Ability01_Part02",
@@ -18,6 +18,44 @@ const compositeAbilityObject = {
     "Cerydra_Functions"
   ],
   "abilityObject": {
+    "Cerydra_Cerydra_Eidolon6": {
+      "fileName": "Cerydra_Cerydra_Eidolon6",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1076811702\">Cerydra_Eidolon6_AddDamageCarry</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1076811702\">Cerydra_Eidolon6_AddDamageCarry</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "scope": "AITag",
+                  "variableName": "DamageCarry",
+                  "value": 0.0009999999
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "Cerydra_Cerydra_TechniqueInLevel": {
       "fileName": "Cerydra_Cerydra_TechniqueInLevel",
       "childAbilityList": [
@@ -98,80 +136,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Cerydra_Cerydra_Eidolon6": {
-      "fileName": "Cerydra_Cerydra_Eidolon6",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1076811702\">Cerydra_Eidolon6_AddDamageCarry</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1076811702\">Cerydra_Eidolon6_AddDamageCarry</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "AITag",
-                  "variableName": "DamageCarry",
-                  "value": 0.0009999999
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Cerydra_Cerydra_Ability02_InsertEidolon1": {
-      "fileName": "Cerydra_Cerydra_Ability02_InsertEidolon1",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Ave Imperator"
-        },
-        "Deleted bullshit",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "target2": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "invertCondition": true
-          }
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"1336664335\">Cerydra_Template_ReachPromotionEidolon1</a>"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Cerydra_Cerydra_PassiveAbility": {
@@ -1545,6 +1509,42 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Cerydra_Cerydra_Ability02_InsertEidolon1": {
+      "fileName": "Cerydra_Cerydra_Ability02_InsertEidolon1",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Ave Imperator"
+        },
+        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "invertCondition": true
+          }
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"1336664335\">Cerydra_Template_ReachPromotionEidolon1</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
       }
     },
     "Cerydra_Cerydra_Ability02_Others_Part02": {

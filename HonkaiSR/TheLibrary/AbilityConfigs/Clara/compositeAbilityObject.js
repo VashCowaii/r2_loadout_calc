@@ -3,10 +3,10 @@ const compositeAbilityObject = {
   "fullCharacterName": "Clara",
   "trimCharacterName": "Clara",
   "abilityList": [
-    "Clara_Klara_Eidolon6",
-    "Clara_Klara_Eidolon4",
     "Clara_Klara_Trace02",
     "Clara_Klara_Trace01",
+    "Clara_Klara_Eidolon6",
+    "Clara_Klara_Eidolon4",
     "Clara_Klara_TechniqueInLevel",
     "Clara_Klara_PassiveAbility01_InsertAbility",
     "Clara_Klara_PassiveAbility01",
@@ -20,6 +20,104 @@ const compositeAbilityObject = {
     "Clara_Modifiers"
   ],
   "abilityObject": {
+    "Clara_Klara_Trace02": {
+      "fileName": "Clara_Klara_Trace02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Stack Target Resistance",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "statName": "STAT_CTRL",
+          "value": {
+            "operator": "Variables[0] (0.35) || RETURN",
+            "displayLines": "0.35",
+            "constants": [],
+            "variables": [
+              0.35
+            ]
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Clara_Klara_Trace01": {
+      "fileName": "Clara_Klara_Trace01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1111450796\">Klara_Trace01</a>",
+          "valuePerStack": {
+            "MDF_Chance": {
+              "operator": "Variables[0] (0.35) || RETURN",
+              "displayLines": "0.35",
+              "constants": [],
+              "variables": [
+                0.35
+              ]
+            }
+          }
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1111450796\">Klara_Trace01</a>",
+          "stackData": [
+            "MDF_Chance"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Being Attacked Start [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Random Chance",
+                    "chance": {
+                      "operator": "Variables[0] (MDF_Chance) || RETURN",
+                      "displayLines": "MDF_Chance",
+                      "constants": [],
+                      "variables": [
+                        "MDF_Chance"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Dispel Debuffs",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "dispelCount": 1,
+                      "dispelOrder": "LastAdded"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "Clara_Klara_Eidolon6": {
       "fileName": "Clara_Klara_Eidolon6",
       "abilityType": null,
@@ -271,104 +369,6 @@ const compositeAbilityObject = {
                       ]
                     }
                   }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Clara_Klara_Trace02": {
-      "fileName": "Clara_Klara_Trace02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Stack Target Resistance",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "statName": "STAT_CTRL",
-          "value": {
-            "operator": "Variables[0] (0.35) || RETURN",
-            "displayLines": "0.35",
-            "constants": [],
-            "variables": [
-              0.35
-            ]
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Clara_Klara_Trace01": {
-      "fileName": "Clara_Klara_Trace01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1111450796\">Klara_Trace01</a>",
-          "valuePerStack": {
-            "MDF_Chance": {
-              "operator": "Variables[0] (0.35) || RETURN",
-              "displayLines": "0.35",
-              "constants": [],
-              "variables": [
-                0.35
-              ]
-            }
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1111450796\">Klara_Trace01</a>",
-          "stackData": [
-            "MDF_Chance"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Being Attacked Start [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Random Chance",
-                    "chance": {
-                      "operator": "Variables[0] (MDF_Chance) || RETURN",
-                      "displayLines": "MDF_Chance",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Chance"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Dispel Debuffs",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "dispelCount": 1,
-                      "dispelOrder": "LastAdded"
-                    }
-                  ]
                 }
               ]
             }

@@ -3,9 +3,9 @@ const compositeAbilityObject = {
   "fullCharacterName": "Trailblazer - Destruction",
   "trimCharacterName": "TrailblazerDestruction",
   "abilityList": [
-    "TrailblazerDestruction_PlayerBoy_Eidolon6",
     "TrailblazerDestruction_PlayerBoy_Trace03",
     "TrailblazerDestruction_PlayerBoy_Trace01",
+    "TrailblazerDestruction_PlayerBoy_Eidolon6",
     "TrailblazerDestruction_PlayerBoy_AutoUseUltraAbility",
     "TrailblazerDestruction_PlayerBoy_PassiveAbility01",
     "TrailblazerDestruction_PlayerBoy_Ability03_EnterReady",
@@ -20,17 +20,6 @@ const compositeAbilityObject = {
     "TrailblazerDestruction_Modifiers"
   ],
   "abilityObject": {
-    "TrailblazerDestruction_PlayerBoy_Eidolon6": {
-      "fileName": "TrailblazerDestruction_PlayerBoy_Eidolon6",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "TrailblazerDestruction_PlayerBoy_Trace03": {
       "fileName": "TrailblazerDestruction_PlayerBoy_Trace03",
       "abilityType": null,
@@ -107,6 +96,17 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerDestruction_PlayerBoy_Eidolon6": {
+      "fileName": "TrailblazerDestruction_PlayerBoy_Eidolon6",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }

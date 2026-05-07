@@ -3,14 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": "Jingliu",
   "trimCharacterName": "Jingliu",
   "abilityList": [
-    "Jingliu_Advanced_Jingliu_Trace03",
     "Jingliu_Advanced_Jingliu_TechniqueInLevel",
-    "Jingliu_Advanced_Jingliu_PassiveAtkReady_Ability",
     "Jingliu_Advanced_Jingliu_PassiveAtkReady_Part01",
     "Jingliu_Advanced_Jingliu_PassiveAbility01",
+    "Jingliu_Advanced_Jingliu_PassiveAtkReady_Ability",
+    "Jingliu_Advanced_Jingliu_Ability03_EnterReady",
     "Jingliu_Advanced_Jingliu_Ability03_Part02",
     "Jingliu_Advanced_Jingliu_Ability03_Part01",
-    "Jingliu_Advanced_Jingliu_Ability03_EnterReady",
     "Jingliu_Advanced_Jingliu_Ability02_Part02",
     "Jingliu_Advanced_Jingliu_Ability02_Part01",
     "Jingliu_Advanced_Jingliu_Ability01_Part02",
@@ -18,17 +17,6 @@ const compositeAbilityObject = {
     "Jingliu_Modifiers"
   ],
   "abilityObject": {
-    "Jingliu_Advanced_Jingliu_Trace03": {
-      "fileName": "Jingliu_Advanced_Jingliu_Trace03",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "Jingliu_Advanced_Jingliu_TechniqueInLevel": {
       "fileName": "Jingliu_Advanced_Jingliu_TechniqueInLevel",
       "childAbilityList": [
@@ -356,6 +344,241 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "Jingliu_Advanced_Jingliu_PassiveAtkReady_Part01": {
+      "fileName": "Jingliu_Advanced_Jingliu_PassiveAtkReady_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Crescent Transmigration"
+        },
+        {
+          "name": "Adjust Variable Value",
+          "adjustmentType": "Overwrite Value",
+          "variableName": "Jingliu_MoonFlag",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "value": 0
+        },
+        "Deleted bullshit",
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": {
+            "operator": "Variables[0] (Jingliu_FullMoonFlag) || RETURN",
+            "displayLines": "Jingliu_FullMoonFlag",
+            "constants": [],
+            "variables": [
+              "Jingliu_FullMoonFlag"
+            ]
+          },
+          "maximum": {
+            "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
+            "displayLines": "Jingliu_FullMoonFlagMax",
+            "constants": [],
+            "variables": [
+              "Jingliu_FullMoonFlagMax"
+            ]
+          },
+          "assignState": "True",
+          "priorState": "Active",
+          "bar#": 3,
+          "cooldown": 0
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>",
+          "valuePerStack": {
+            "AbilityP01_P1_HpConsumption": {
+              "operator": "Variables[0] (0.3) || RETURN",
+              "displayLines": "0.3",
+              "constants": [],
+              "variables": [
+                0.3
+              ]
+            },
+            "AbilityP01_P2_HpConsumption": {
+              "operator": "Variables[0] (0.05) || RETURN",
+              "displayLines": "0.05",
+              "constants": [],
+              "variables": [
+                0.05
+              ]
+            }
+          }
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variables": {
+            "parameter[0]_NormalizedValue": {
+              "operator": "Variables[0] (1) || RETURN",
+              "displayLines": "1",
+              "constants": [],
+              "variables": [
+                1
+              ]
+            }
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Jingliu_Advanced_Jingliu_PassiveAbility01": {
+      "fileName": "Jingliu_Advanced_Jingliu_PassiveAbility01",
+      "childAbilityList": [
+        "Jingliu_Advanced_Jingliu_PassiveAbility01",
+        "Jingliu_Jingliu_Passive_Camera",
+        "Jingliu_Advanced_Jingliu_PassiveAtkReady_Part01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1453058731\">Advanced_Jingliu_LoseHPPreShow</a>"
+        },
+        {
+          "name": "Read Variable Value",
+          "adjustmentType": "Add to Value (Default)",
+          "variableName": "Jingliu_MoonFlag",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Read Variable Value",
+          "adjustmentType": "Add to Value (Default)",
+          "variableName": "Jingliu_FullMoonFlag",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Jingliu_FullMoonFlagMax",
+              "value": {
+                "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(Jingliu_FullMoonFlagMax + 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "Jingliu_FullMoonFlagMax"
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Jingliu_FullMoonFlagMax",
+              "value": {
+                "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
+                "displayLines": "Jingliu_FullMoonFlagMax",
+                "constants": [],
+                "variables": [
+                  "Jingliu_FullMoonFlagMax"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Adjust Variable Value",
+          "adjustmentType": "Overwrite Value",
+          "variableName": "Jingliu_MoonFlag",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "value": 0
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Jingliu_MoonFlagMax",
+          "value": {
+            "operator": "Variables[0] (2) || RETURN",
+            "displayLines": "2",
+            "constants": [],
+            "variables": [
+              2
+            ]
+          }
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": {
+            "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
+            "displayLines": "Jingliu_MoonFlag",
+            "constants": [],
+            "variables": [
+              "Jingliu_MoonFlag"
+            ]
+          },
+          "maximum": {
+            "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
+            "displayLines": "Jingliu_MoonFlagMax",
+            "constants": [],
+            "variables": [
+              "Jingliu_MoonFlagMax"
+            ]
+          },
+          "assignState": "True",
+          "priorState": "Normal",
+          "bar#": 3,
+          "cooldown": 0
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-908005903\">Advanced_Jingliu_Passive</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       }
     },
     "Jingliu_Advanced_Jingliu_PassiveAtkReady_Ability": {
@@ -1245,239 +1468,15 @@ const compositeAbilityObject = {
         "subTarget": "Blast Targets"
       }
     },
-    "Jingliu_Advanced_Jingliu_PassiveAtkReady_Part01": {
-      "fileName": "Jingliu_Advanced_Jingliu_PassiveAtkReady_Part01",
+    "Jingliu_Advanced_Jingliu_Ability03_EnterReady": {
+      "fileName": "Jingliu_Advanced_Jingliu_Ability03_EnterReady",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Crescent Transmigration"
-        },
-        {
-          "name": "Adjust Variable Value",
-          "adjustmentType": "Overwrite Value",
-          "variableName": "Jingliu_MoonFlag",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "value": 0
-        },
-        "Deleted bullshit",
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": {
-            "operator": "Variables[0] (Jingliu_FullMoonFlag) || RETURN",
-            "displayLines": "Jingliu_FullMoonFlag",
-            "constants": [],
-            "variables": [
-              "Jingliu_FullMoonFlag"
-            ]
-          },
-          "maximum": {
-            "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-            "displayLines": "Jingliu_FullMoonFlagMax",
-            "constants": [],
-            "variables": [
-              "Jingliu_FullMoonFlagMax"
-            ]
-          },
-          "assignState": "True",
-          "priorState": "Active",
-          "bar#": 3,
-          "cooldown": 0
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1784507575\">AdvancedJingliu_Attack_Transfer</a>",
-          "valuePerStack": {
-            "AbilityP01_P1_HpConsumption": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
-            },
-            "AbilityP01_P2_HpConsumption": {
-              "operator": "Variables[0] (0.05) || RETURN",
-              "displayLines": "0.05",
-              "constants": [],
-              "variables": [
-                0.05
-              ]
-            }
-          }
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variables": {
-            "parameter[0]_NormalizedValue": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
-            }
-          }
-        }
-      ],
+      "parse": [],
       "references": [],
       "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Jingliu_Advanced_Jingliu_PassiveAbility01": {
-      "fileName": "Jingliu_Advanced_Jingliu_PassiveAbility01",
-      "childAbilityList": [
-        "Jingliu_Advanced_Jingliu_PassiveAbility01",
-        "Jingliu_Jingliu_Passive_Camera",
-        "Jingliu_Advanced_Jingliu_PassiveAtkReady_Part01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1453058731\">Advanced_Jingliu_LoseHPPreShow</a>"
-        },
-        {
-          "name": "Read Variable Value",
-          "adjustmentType": "Add to Value (Default)",
-          "variableName": "Jingliu_MoonFlag",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Read Variable Value",
-          "adjustmentType": "Add to Value (Default)",
-          "variableName": "Jingliu_FullMoonFlag",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 6
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Jingliu_FullMoonFlagMax",
-              "value": {
-                "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(Jingliu_FullMoonFlagMax + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Jingliu_FullMoonFlagMax"
-                ]
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Jingliu_FullMoonFlagMax",
-              "value": {
-                "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
-                "displayLines": "Jingliu_FullMoonFlagMax",
-                "constants": [],
-                "variables": [
-                  "Jingliu_FullMoonFlagMax"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Adjust Variable Value",
-          "adjustmentType": "Overwrite Value",
-          "variableName": "Jingliu_MoonFlag",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "value": 0
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Jingliu_MoonFlagMax",
-          "value": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
-          }
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": {
-            "operator": "Variables[0] (Jingliu_MoonFlag) || RETURN",
-            "displayLines": "Jingliu_MoonFlag",
-            "constants": [],
-            "variables": [
-              "Jingliu_MoonFlag"
-            ]
-          },
-          "maximum": {
-            "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
-            "displayLines": "Jingliu_MoonFlagMax",
-            "constants": [],
-            "variables": [
-              "Jingliu_MoonFlagMax"
-            ]
-          },
-          "assignState": "True",
-          "priorState": "Normal",
-          "bar#": 3,
-          "cooldown": 0
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-908005903\">Advanced_Jingliu_Passive</a>"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
+        "primaryTarget": "Inherent Target"
       }
     },
     "Jingliu_Advanced_Jingliu_Ability03_Part02": {
@@ -1844,17 +1843,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target",
         "subTarget": "Blast Targets"
-      }
-    },
-    "Jingliu_Advanced_Jingliu_Ability03_EnterReady": {
-      "fileName": "Jingliu_Advanced_Jingliu_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Jingliu_Advanced_Jingliu_Ability02_Part02": {

@@ -3,10 +3,10 @@ const compositeAbilityObject = {
   "fullCharacterName": "Serval",
   "trimCharacterName": "Serval",
   "abilityList": [
-    "Serval_Serval_Eidolon6",
-    "Serval_Serval_TechniqueInLevel",
     "Serval_Serval_Trace03",
     "Serval_Serval_Trace02",
+    "Serval_Serval_Eidolon6",
+    "Serval_Serval_TechniqueInLevel",
     "Serval_Serval_PassiveAbility01",
     "Serval_Serval_Ability03_Part02",
     "Serval_Serval_Ability03_Part01",
@@ -18,6 +18,133 @@ const compositeAbilityObject = {
     "Serval_Modifiers"
   ],
   "abilityObject": {
+    "Serval_Serval_Trace03": {
+      "fileName": "Serval_Serval_Trace03",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1863302037\">M_Serval_Trace03</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1863302037\">M_Serval_Trace03</a>",
+          "execute": [
+            {
+              "eventTrigger": "Got a Kill [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2005029779\">Serval_Tree03_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+                  "duration": {
+                    "operator": "Variables[0] (2) || RETURN",
+                    "displayLines": "2",
+                    "constants": [],
+                    "variables": [
+                      2
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (0.2) || RETURN",
+                      "displayLines": "0.2",
+                      "constants": [],
+                      "variables": [
+                        0.2
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Serval_Serval_Trace02": {
+      "fileName": "Serval_Serval_Trace02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1880079656\">M_Serval_Trace02</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1880079656\">M_Serval_Trace02</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Trace Activated",
+                        "conditionList": "String Vibration"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Wave Count",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Energy",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "value": {
+                        "operator": "Variables[0] (15) || RETURN",
+                        "displayLines": "15",
+                        "constants": [],
+                        "variables": [
+                          15
+                        ]
+                      },
+                      "isFixed": "* ERR"
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "Serval_Serval_Eidolon6": {
       "fileName": "Serval_Serval_Eidolon6",
       "abilityType": null,
@@ -204,133 +331,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Serval_Serval_Trace03": {
-      "fileName": "Serval_Serval_Trace03",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1863302037\">M_Serval_Trace03</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1863302037\">M_Serval_Trace03</a>",
-          "execute": [
-            {
-              "eventTrigger": "Got a Kill [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2005029779\">Serval_Tree03_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
-                  "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.2) || RETURN",
-                      "displayLines": "0.2",
-                      "constants": [],
-                      "variables": [
-                        0.2
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Serval_Serval_Trace02": {
-      "fileName": "Serval_Serval_Trace02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1880079656\">M_Serval_Trace02</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1880079656\">M_Serval_Trace02</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Trace Activated",
-                        "conditionList": "String Vibration"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Wave Count",
-                        "compareType": "=",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Energy",
-                      "on": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "value": {
-                        "operator": "Variables[0] (15) || RETURN",
-                        "displayLines": "15",
-                        "constants": [],
-                        "variables": [
-                          15
-                        ]
-                      },
-                      "isFixed": "* ERR"
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
       }
     },
     "Serval_Serval_PassiveAbility01": {

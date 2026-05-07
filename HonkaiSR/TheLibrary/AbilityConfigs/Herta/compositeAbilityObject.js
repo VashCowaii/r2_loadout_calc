@@ -7,9 +7,9 @@ const compositeAbilityObject = {
     "Herta_Herta_TechniqueInLevel",
     "Herta_Herta_PassiveAtkReady_Ability",
     "Herta_Herta_PassiveAbility01",
+    "Herta_Herta_Ability03_EnterReady",
     "Herta_Herta_Ability03_Part02",
     "Herta_Herta_Ability03_Part01",
-    "Herta_Herta_Ability03_EnterReady",
     "Herta_Herta_Ability02_Part02",
     "Herta_Herta_Ability02_Part01",
     "Herta_Herta_Ability01_Part02",
@@ -898,6 +898,17 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
+    "Herta_Herta_Ability03_EnterReady": {
+      "fileName": "Herta_Herta_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
     "Herta_Herta_Ability03_Part02": {
       "fileName": "Herta_Herta_Ability03_Part02",
       "abilityType": null,
@@ -1131,17 +1142,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Herta_Herta_Ability03_EnterReady": {
-      "fileName": "Herta_Herta_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Herta_Herta_Ability02_Part02": {

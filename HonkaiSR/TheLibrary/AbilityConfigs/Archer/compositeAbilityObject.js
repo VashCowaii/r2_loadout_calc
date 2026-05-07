@@ -3,14 +3,14 @@ const compositeAbilityObject = {
   "fullCharacterName": "Archer",
   "trimCharacterName": "Archer",
   "abilityList": [
-    "Archer_Archer_Trace01",
-    "Archer_Archer_Trace02",
     "Archer_Archer_Trace03",
+    "Archer_Archer_Trace02",
+    "Archer_Archer_Trace01",
     "Archer_Archer_TechniqueInLevel",
+    "Archer_Archer_Bonus",
     "Archer_Archer_Insert_Part02",
     "Archer_Archer_Insert_Part01",
     "Archer_Archer_PassiveAbility01",
-    "Archer_Archer_Bonus",
     "Archer_Archer_Ability03_Part02",
     "Archer_Archer_Ability03_Part01",
     "Archer_Archer_Ability03_EnterReady",
@@ -23,78 +23,6 @@ const compositeAbilityObject = {
     "Archer_Modifiers"
   ],
   "abilityObject": {
-    "Archer_Archer_Trace01": {
-      "fileName": "Archer_Archer_Trace01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1642793787\">Archer_Trace01</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1642793787\">Archer_Trace01</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Change Skill Point Max",
-                  "function": "Add",
-                  "value": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Change Skill Point Max",
-                  "function": "Add",
-                  "value": {
-                    "operator": "Variables[0] (2) || INVERT || RETURN",
-                    "displayLines": "-2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Archer_Archer_Trace02": {
-      "fileName": "Archer_Archer_Trace02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "Archer_Archer_Trace03": {
       "fileName": "Archer_Archer_Trace03",
       "abilityType": null,
@@ -214,6 +142,78 @@ const compositeAbilityObject = {
                       }
                     }
                   ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Archer_Archer_Trace02": {
+      "fileName": "Archer_Archer_Trace02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Archer_Archer_Trace01": {
+      "fileName": "Archer_Archer_Trace01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1642793787\">Archer_Trace01</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1642793787\">Archer_Trace01</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Change Skill Point Max",
+                  "function": "Add",
+                  "value": {
+                    "operator": "Variables[0] (2) || RETURN",
+                    "displayLines": "2",
+                    "constants": [],
+                    "variables": [
+                      2
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Change Skill Point Max",
+                  "function": "Add",
+                  "value": {
+                    "operator": "Variables[0] (2) || INVERT || RETURN",
+                    "displayLines": "-2",
+                    "constants": [],
+                    "variables": [
+                      2
+                    ]
+                  }
                 }
               ]
             }
@@ -360,6 +360,27 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "Archer_Archer_Bonus": {
+      "fileName": "Archer_Archer_Bonus",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "MDF_InBonus",
+            "compareType": "=",
+            "value2": 1
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
       }
     },
     "Archer_Archer_Insert_Part02": {
@@ -1833,27 +1854,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       },
       "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Archer_Archer_Bonus": {
-      "fileName": "Archer_Archer_Bonus",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "MDF_InBonus",
-            "compareType": "=",
-            "value2": 1
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
     },

@@ -3,15 +3,15 @@ const compositeAbilityObject = {
   "fullCharacterName": "Kafka_v0",
   "trimCharacterName": "Kafkav0",
   "abilityList": [
-    "Kafkav0_Kafka_TechniqueInLevel",
-    "Kafkav0_Kafka_Eidolon2",
-    "Kafkav0_Kafka_Trace01",
     "Kafkav0_Kafka_Trace02",
+    "Kafkav0_Kafka_Trace01",
+    "Kafkav0_Kafka_Eidolon2",
+    "Kafkav0_Kafka_TechniqueInLevel",
     "Kafkav0_Kafka_PassiveAtk_Ability",
     "Kafkav0_Kafka_PassiveAbility01",
+    "Kafkav0_Kafka_Ability03_EnterReady",
     "Kafkav0_Kafka_Ability03_Part02",
     "Kafkav0_Kafka_Ability03_Part01",
-    "Kafkav0_Kafka_Ability03_EnterReady",
     "Kafkav0_Kafka_Ability02_Part02",
     "Kafkav0_Kafka_Ability02_Part01",
     "Kafkav0_Kafka_Ability01_Part02",
@@ -19,6 +19,209 @@ const compositeAbilityObject = {
     "Kafkav0_Modifiers"
   ],
   "abilityObject": {
+    "Kafkav0_Kafka_Trace02": {
+      "fileName": "Kafkav0_Kafka_Trace02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1069611135\">Kafka_Tree02</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1069611135\">Kafka_Tree02</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Target Exists",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target 2}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Is Part Of Team",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "team": "Enemy Team"
+                          },
+                          {
+                            "name": "NOT",
+                            "condition": {
+                              "name": "Is Part Of Team",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target 2}}"
+                              },
+                              "team": "Enemy Team"
+                            }
+                          },
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "flagName": "STAT_DOT_Electric"
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Update Energy",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "value": {
+                            "operator": "Variables[0] (5) || RETURN",
+                            "displayLines": "5",
+                            "constants": [],
+                            "variables": [
+                              5
+                            ]
+                          },
+                          "isFixed": "* ERR"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Kafkav0_Kafka_Trace01": {
+      "fileName": "Kafkav0_Kafka_Trace01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Kafkav0_Kafka_Eidolon2": {
+      "fileName": "Kafkav0_Kafka_Eidolon2",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1908096467\">Kafka_Eidolon2</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1908096467\">Kafka_Eidolon2</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Join Targets",
+                    "TargetList": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Unselectable Targets}}"
+                      }
+                    ]
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (0.25) || RETURN",
+                      "displayLines": "0.25",
+                      "constants": [],
+                      "variables": [
+                        0.25
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (0.25) || RETURN",
+                      "displayLines": "0.25",
+                      "constants": [],
+                      "variables": [
+                        0.25
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "Kafkav0_Kafka_TechniqueInLevel": {
       "fileName": "Kafkav0_Kafka_TechniqueInLevel",
       "childAbilityList": [
@@ -231,209 +434,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Kafkav0_Kafka_Eidolon2": {
-      "fileName": "Kafkav0_Kafka_Eidolon2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1908096467\">Kafka_Eidolon2</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1908096467\">Kafka_Eidolon2</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Join Targets",
-                    "TargetList": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{All Team Members}}"
-                      },
-                      {
-                        "name": "Target Name",
-                        "target": "{{All Unselectable Targets}}"
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Kafkav0_Kafka_Trace01": {
-      "fileName": "Kafkav0_Kafka_Trace01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Kafkav0_Kafka_Trace02": {
-      "fileName": "Kafkav0_Kafka_Trace02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1069611135\">Kafka_Tree02</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1069611135\">Kafka_Tree02</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Target Exists",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target 2}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Is Part Of Team",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "team": "Enemy Team"
-                          },
-                          {
-                            "name": "NOT",
-                            "condition": {
-                              "name": "Is Part Of Team",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target 2}}"
-                              },
-                              "team": "Enemy Team"
-                            }
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "STAT_DOT_Electric"
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Update Energy",
-                          "on": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "value": {
-                            "operator": "Variables[0] (5) || RETURN",
-                            "displayLines": "5",
-                            "constants": [],
-                            "variables": [
-                              5
-                            ]
-                          },
-                          "isFixed": "* ERR"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
       }
     },
     "Kafkav0_Kafka_PassiveAtk_Ability": {
@@ -1780,6 +1780,17 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
+    "Kafkav0_Kafka_Ability03_EnterReady": {
+      "fileName": "Kafkav0_Kafka_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
     "Kafkav0_Kafka_Ability03_Part02": {
       "fileName": "Kafkav0_Kafka_Ability03_Part02",
       "abilityType": null,
@@ -2035,17 +2046,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Kafkav0_Kafka_Ability03_EnterReady": {
-      "fileName": "Kafkav0_Kafka_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Kafkav0_Kafka_Ability02_Part02": {

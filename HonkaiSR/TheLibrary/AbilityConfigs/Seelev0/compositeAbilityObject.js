@@ -3,10 +3,10 @@ const compositeAbilityObject = {
   "fullCharacterName": "Seele_v0",
   "trimCharacterName": "Seelev0",
   "abilityList": [
+    "Seelev0_Seele_Trace01",
     "Seelev0_Seele_Eidolon6",
     "Seelev0_Seele_Eidolon4",
     "Seelev0_Seele_Eidolon1",
-    "Seelev0_Seele_Trace01",
     "Seelev0_Seele_TechniqueInLevel",
     "Seelev0_Seele_Bonus",
     "Seelev0_Seele_PassiveAbility_1",
@@ -20,6 +20,192 @@ const compositeAbilityObject = {
     "Seelev0_Modifiers"
   ],
   "abilityObject": {
+    "Seelev0_Seele_Trace01": {
+      "fileName": "Seelev0_Seele_Trace01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-730910953\">Seele_LowHP_AggroDown</a>",
+          "valuePerStack": {
+            "MDF_HPRatio": {
+              "operator": "Variables[0] (0.5) || RETURN",
+              "displayLines": "0.5",
+              "constants": [],
+              "variables": [
+                0.5
+              ]
+            },
+            "MDF_AggroDown": {
+              "operator": "Variables[0] (0.5) || RETURN",
+              "displayLines": "0.5",
+              "constants": [],
+              "variables": [
+                0.5
+              ]
+            }
+          }
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1465401968\">Seele_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Lowers the chances of being attacked by enemies.",
+          "type": "Buff",
+          "effectName": "Aggro Chance Reduction",
+          "statusName": "Nightshade",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-730910953\">Seele_LowHP_AggroDown</a>",
+          "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_HPRatio",
+            "MDF_AggroDown"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "CurrentHP%",
+                    "compareType": "<=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
+                      "displayLines": "MDF_HPRatio",
+                      "constants": [],
+                      "variables": [
+                        "MDF_HPRatio"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1465401968\">Seele_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (MDF_AggroDown) || RETURN",
+                          "displayLines": "MDF_AggroDown",
+                          "constants": [],
+                          "variables": [
+                            "MDF_AggroDown"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "HP Change [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "CurrentHP%",
+                    "compareType": "<=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
+                      "displayLines": "MDF_HPRatio",
+                      "constants": [],
+                      "variables": [
+                        "MDF_HPRatio"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1465401968\">Seele_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (MDF_AggroDown) || RETURN",
+                          "displayLines": "MDF_AggroDown",
+                          "constants": [],
+                          "variables": [
+                            "MDF_AggroDown"
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1465401968\">Seele_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
+                      "onlyRemoveOwnersInstance": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "Seelev0_Seele_Eidolon6": {
       "fileName": "Seelev0_Seele_Eidolon6",
       "abilityType": null,
@@ -202,192 +388,6 @@ const compositeAbilityObject = {
                           "value": "0.15"
                         }
                       ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Seelev0_Seele_Trace01": {
-      "fileName": "Seelev0_Seele_Trace01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-730910953\">Seele_LowHP_AggroDown</a>",
-          "valuePerStack": {
-            "MDF_HPRatio": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
-            },
-            "MDF_AggroDown": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
-            }
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1465401968\">Seele_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "description": "Lowers the chances of being attacked by enemies.",
-          "type": "Buff",
-          "effectName": "Aggro Chance Reduction",
-          "statusName": "Nightshade",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-730910953\">Seele_LowHP_AggroDown</a>",
-          "stackType": "ReplaceByCaster",
-          "stackData": [
-            "MDF_HPRatio",
-            "MDF_AggroDown"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "CurrentHP%",
-                    "compareType": "<=",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                      "displayLines": "MDF_HPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HPRatio"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1465401968\">Seele_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_AggroDown) || RETURN",
-                          "displayLines": "MDF_AggroDown",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AggroDown"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "HP Change [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "CurrentHP%",
-                    "compareType": "<=",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                      "displayLines": "MDF_HPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HPRatio"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1465401968\">Seele_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_AggroDown) || RETURN",
-                          "displayLines": "MDF_AggroDown",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AggroDown"
-                          ]
-                        }
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1465401968\">Seele_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
-                      "onlyRemoveOwnersInstance": true
                     }
                   ]
                 }

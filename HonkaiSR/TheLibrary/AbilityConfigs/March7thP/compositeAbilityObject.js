@@ -7,9 +7,9 @@ const compositeAbilityObject = {
     "March7thP_Mar_7th_TechniqueInLevel",
     "March7thP_Mar_7th_PassiveAbility01_InsertAbility",
     "March7thP_Mar_7th_PassiveAbility01",
+    "March7thP_Mar_7th_Ability03_EnterReady",
     "March7thP_Mar_7th_Ability03_Part02",
     "March7thP_Mar_7th_Ability03_Part01",
-    "March7thP_Mar_7th_Ability03_EnterReady",
     "March7thP_Mar_7th_Ability02_Part02",
     "March7thP_Mar_7th_Ability02_Part01",
     "March7thP_Mar_7th_Ability01_Part02",
@@ -1200,6 +1200,17 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
+    "March7thP_Mar_7th_Ability03_EnterReady": {
+      "fileName": "March7thP_Mar_7th_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
     "March7thP_Mar_7th_Ability03_Part02": {
       "fileName": "March7thP_Mar_7th_Ability03_Part02",
       "abilityType": null,
@@ -1770,17 +1781,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "March7thP_Mar_7th_Ability03_EnterReady": {
-      "fileName": "March7thP_Mar_7th_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "March7thP_Mar_7th_Ability02_Part02": {

@@ -3,26 +3,18 @@ const compositeAbilityObject = {
   "fullCharacterName": "Phainon",
   "trimCharacterName": "Phainon",
   "abilityList": [
-    "Phainon_Phainon_Eidolon6",
-    "Phainon_Phainon_Eidolon2",
-    "Phainon_Phainon_Eidolon1",
     "Phainon_Phainon_Trace03",
     "Phainon_Phainon_Trace02",
     "Phainon_Phainon_Trace01",
+    "Phainon_Phainon_Eidolon6",
+    "Phainon_Phainon_Eidolon2",
+    "Phainon_Phainon_Eidolon1",
     "Phainon_Phainon_TechniqueInLevel",
     "Phainon_Phainon_PassiveAbility02",
     "Phainon_Phainon_PassiveAbility01",
-    "Phainon_Phainon_Ability31_Part2",
-    "Phainon_Phainon_Ability31_Part1",
-    "Phainon_Phainon_Ability31_SelectTarget",
-    "Phainon_Phainon_Ability31_SelectTarget_OnLimbo",
-    "Phainon_Phainon_Ability03_BattleEvent",
-    "Phainon_Phainon_Ability03_Part02",
-    "Phainon_Phainon_Ability03_Part01",
-    "Phainon_Phainon_Ability03_EnterReady",
     "Phainon_Phainon_Ability22_v2_Part02",
-    "Phainon_Phainon_Ability22_v2_Part01",
     "Phainon_Phainon_Ability22_Part02",
+    "Phainon_Phainon_Ability22_v2_Part01",
     "Phainon_Phainon_Ability22_Part01",
     "Phainon_Phainon_Ability22_Entry",
     "Phainon_Phainon_Ability21_Insert_Part02",
@@ -32,6 +24,13 @@ const compositeAbilityObject = {
     "Phainon_Phainon_Ability11_Part02",
     "Phainon_Phainon_Ability11_Part01",
     "Phainon_Phainon_Ability11_EnterReady",
+    "Phainon_Phainon_Ability31_Part2",
+    "Phainon_Phainon_Ability31_Part1",
+    "Phainon_Phainon_Ability31_SelectTarget_OnLimbo",
+    "Phainon_Phainon_Ability31_SelectTarget",
+    "Phainon_Phainon_Ability03_Part02",
+    "Phainon_Phainon_Ability03_Part01",
+    "Phainon_Phainon_Ability03_EnterReady",
     "Phainon_Phainon_Ability02_Part02",
     "Phainon_Phainon_Ability02_Part01",
     "Phainon_Phainon_Ability01_Part02",
@@ -41,432 +40,6 @@ const compositeAbilityObject = {
     "Phainon_BE_BattleEvents"
   ],
   "abilityObject": {
-    "Phainon_Phainon_Eidolon6": {
-      "fileName": "Phainon_Phainon_Eidolon6",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1860923952\">M_Phainon_Eidolon6</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-770714134\">M_Phainon_Ability22_Eidolon6Listener</a>",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage End [Anyone]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      },
-                      {
-                        "name": "Is Entity Type",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "type": "Battle Event",
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Damage Data",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "MDF_TempDamage",
-                      "value": "Result_FinalDamageBase"
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_Rank06ExtraDamage",
-                      "value": {
-                        "operator": "Variables[0] (MDF_Rank06ExtraDamage) || Variables[1] (MDF_TempDamage) || ADD || RETURN",
-                        "displayLines": "(MDF_Rank06ExtraDamage + MDF_TempDamage)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Rank06ExtraDamage",
-                          "MDF_TempDamage"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack Start [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_Rank06ExtraDamage",
-                  "value": 0
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_TempDamage",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemies Still Alive",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}.[[living]].[[sortByHPCurrent]].[[getLast]]"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Physical",
-                        "DamageFlat": {
-                          "operator": "Variables[0] (MDF_Rank06ExtraDamage) || Variables[1] (0.36) || MUL || RETURN",
-                          "displayLines": "(MDF_Rank06ExtraDamage * 0.36)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rank06ExtraDamage",
-                            0.36
-                          ]
-                        },
-                        "dmgFormulaFinal": "Converted DMG Base",
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "True DMG"
-                      },
-                      "isConvertedDMG": true
-                    }
-                  ]
-                },
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1860923952\">M_Phainon_Eidolon6</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Name",
-                    "skillName": "Skill22"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-770714134\">M_Phainon_Ability22_Eidolon6Listener</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Wave Count",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
-                      "variables": {
-                        "parameter[0]_AddValue": {
-                          "operator": "Variables[0] (6) || RETURN",
-                          "displayLines": "6",
-                          "constants": [],
-                          "variables": [
-                            6
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Phainon_Phainon_Eidolon2": {
-      "fileName": "Phainon_Phainon_Eidolon2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Phainon_Phainon_Eidolon1": {
-      "fileName": "Phainon_Phainon_Eidolon1",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1978367285\">M_Phainon_Eidolon1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-847336142\">Phainon_Eidolon1_AddSpeedRatio</a>[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
-          "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>",
-          "valuePerStack": {
-            "MDF_SpeedRatio": {
-              "operator": "Variables[0] (0.66) || RETURN",
-              "displayLines": "0.66",
-              "constants": [],
-              "variables": [
-                0.66
-              ]
-            },
-            "MDF_MaxSpeedRatio": {
-              "operator": "Variables[0] (0.84) || RETURN",
-              "displayLines": "0.84",
-              "constants": [],
-              "variables": [
-                0.84
-              ]
-            },
-            "MDF_PropertyRatio": {
-              "operator": "Variables[0] (0.015) || RETURN",
-              "displayLines": "0.015",
-              "constants": [],
-              "variables": [
-                0.015
-              ]
-            }
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1978367285\">M_Phainon_Eidolon1</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Target Exists",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target 2}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Is Part Of Team",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "team": "Enemy Team"
-                          },
-                          {
-                            "name": "NOT",
-                            "condition": {
-                              "name": "Is Part Of Team",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target 2}}"
-                              },
-                              "team": "Enemy Team"
-                            }
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable with Added Value",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "variableName": "MDF_KillCount",
-                          "context": "ContextModifier",
-                          "value": 1
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "CDF_SpeedConvertRatio",
-                          "value": {
-                            "operator": "Variables[0] (0.66) || Variables[1] (MDF_KillCount) || Variables[2] (0.015) || MUL || ADD || RETURN",
-                            "displayLines": "(0.66 + (MDF_KillCount * 0.015))",
-                            "constants": [],
-                            "variables": [
-                              0.66,
-                              "MDF_KillCount",
-                              0.015
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Define Modifier-Specific Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifierName": "<a class=\"gModGreen\" id=\"-847336142\">Phainon_Eidolon1_AddSpeedRatio</a>[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
-                          "variableName": "MDF_SpeedRatio",
-                          "value": {
-                            "operator": "Variables[0] (CDF_SpeedConvertRatio) || RETURN",
-                            "displayLines": "CDF_SpeedConvertRatio",
-                            "constants": [],
-                            "variables": [
-                              "CDF_SpeedConvertRatio"
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Find New Target",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Khaslana(Battle Event Cluster)}}"
-                          },
-                          "ifTargetFound": [
-                            {
-                              "name": "Define Modifier-Specific Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifierName": "<a class=\"gModGreen\" id=\"320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>",
-                              "variableName": "MDF_PropertyValue",
-                              "value": {
-                                "operator": "Variables[0] (CDF_SpeedConvertRatio) || Variables[1] (Phainon_BaseSpeed) || MUL || RETURN",
-                                "displayLines": "(CDF_SpeedConvertRatio * Phainon_BaseSpeed)",
-                                "constants": [],
-                                "variables": [
-                                  "CDF_SpeedConvertRatio",
-                                  "Phainon_BaseSpeed"
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1114586000\">Phainon_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
-                      },
-                      "referenceModifier": "<a class=\"gModGreen\" id=\"1042665863\">MReference_CriticalDamageUp</a>",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "Phainon_Phainon_Trace03": {
       "fileName": "Phainon_Phainon_Trace03",
       "abilityType": null,
@@ -920,6 +493,432 @@ const compositeAbilityObject = {
                 }
               ],
               "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Phainon_Phainon_Eidolon6": {
+      "fileName": "Phainon_Phainon_Eidolon6",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1860923952\">M_Phainon_Eidolon6</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-770714134\">M_Phainon_Ability22_Eidolon6Listener</a>",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage End [Anyone]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "type": "Battle Event",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Damage Data",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "MDF_TempDamage",
+                      "value": "Result_FinalDamageBase"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Rank06ExtraDamage",
+                      "value": {
+                        "operator": "Variables[0] (MDF_Rank06ExtraDamage) || Variables[1] (MDF_TempDamage) || ADD || RETURN",
+                        "displayLines": "(MDF_Rank06ExtraDamage + MDF_TempDamage)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Rank06ExtraDamage",
+                          "MDF_TempDamage"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack Start [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Rank06ExtraDamage",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_TempDamage",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Enemies Still Alive",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}.[[living]].[[sortByHPCurrent]].[[getLast]]"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Physical",
+                        "DamageFlat": {
+                          "operator": "Variables[0] (MDF_Rank06ExtraDamage) || Variables[1] (0.36) || MUL || RETURN",
+                          "displayLines": "(MDF_Rank06ExtraDamage * 0.36)",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Rank06ExtraDamage",
+                            0.36
+                          ]
+                        },
+                        "dmgFormulaFinal": "Converted DMG Base",
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "True DMG"
+                      },
+                      "isConvertedDMG": true
+                    }
+                  ]
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1860923952\">M_Phainon_Eidolon6</a>",
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Owner]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Name",
+                    "skillName": "Skill22"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-770714134\">M_Phainon_Ability22_Eidolon6Listener</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Wave Count",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
+                      "variables": {
+                        "parameter[0]_AddValue": {
+                          "operator": "Variables[0] (6) || RETURN",
+                          "displayLines": "6",
+                          "constants": [],
+                          "variables": [
+                            6
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Phainon_Phainon_Eidolon2": {
+      "fileName": "Phainon_Phainon_Eidolon2",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Phainon_Phainon_Eidolon1": {
+      "fileName": "Phainon_Phainon_Eidolon1",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1978367285\">M_Phainon_Eidolon1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-847336142\">Phainon_Eidolon1_AddSpeedRatio</a>[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
+          "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>",
+          "valuePerStack": {
+            "MDF_SpeedRatio": {
+              "operator": "Variables[0] (0.66) || RETURN",
+              "displayLines": "0.66",
+              "constants": [],
+              "variables": [
+                0.66
+              ]
+            },
+            "MDF_MaxSpeedRatio": {
+              "operator": "Variables[0] (0.84) || RETURN",
+              "displayLines": "0.84",
+              "constants": [],
+              "variables": [
+                0.84
+              ]
+            },
+            "MDF_PropertyRatio": {
+              "operator": "Variables[0] (0.015) || RETURN",
+              "displayLines": "0.015",
+              "constants": [],
+              "variables": [
+                0.015
+              ]
+            }
+          }
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1978367285\">M_Phainon_Eidolon1</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Target Exists",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target 2}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Is Part Of Team",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "team": "Enemy Team"
+                          },
+                          {
+                            "name": "NOT",
+                            "condition": {
+                              "name": "Is Part Of Team",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target 2}}"
+                              },
+                              "team": "Enemy Team"
+                            }
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable with Added Value",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "variableName": "MDF_KillCount",
+                          "context": "ContextModifier",
+                          "value": 1
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "CDF_SpeedConvertRatio",
+                          "value": {
+                            "operator": "Variables[0] (0.66) || Variables[1] (MDF_KillCount) || Variables[2] (0.015) || MUL || ADD || RETURN",
+                            "displayLines": "(0.66 + (MDF_KillCount * 0.015))",
+                            "constants": [],
+                            "variables": [
+                              0.66,
+                              "MDF_KillCount",
+                              0.015
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Define Modifier-Specific Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifierName": "<a class=\"gModGreen\" id=\"-847336142\">Phainon_Eidolon1_AddSpeedRatio</a>[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
+                          "variableName": "MDF_SpeedRatio",
+                          "value": {
+                            "operator": "Variables[0] (CDF_SpeedConvertRatio) || RETURN",
+                            "displayLines": "CDF_SpeedConvertRatio",
+                            "constants": [],
+                            "variables": [
+                              "CDF_SpeedConvertRatio"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Find New Target",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Khaslana(Battle Event Cluster)}}"
+                          },
+                          "ifTargetFound": [
+                            {
+                              "name": "Define Modifier-Specific Variable",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifierName": "<a class=\"gModGreen\" id=\"320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>",
+                              "variableName": "MDF_PropertyValue",
+                              "value": {
+                                "operator": "Variables[0] (CDF_SpeedConvertRatio) || Variables[1] (Phainon_BaseSpeed) || MUL || RETURN",
+                                "displayLines": "(CDF_SpeedConvertRatio * Phainon_BaseSpeed)",
+                                "constants": [],
+                                "variables": [
+                                  "CDF_SpeedConvertRatio",
+                                  "Phainon_BaseSpeed"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1114586000\">Phainon_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Fire and Light Bind Virtue and Vice</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (3) || RETURN",
+                        "displayLines": "3",
+                        "constants": [],
+                        "variables": [
+                          3
+                        ]
+                      },
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"1042665863\">MReference_CriticalDamageUp</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.5) || RETURN",
+                          "displayLines": "0.5",
+                          "constants": [],
+                          "variables": [
+                            0.5
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -2091,1220 +2090,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "Phainon_Phainon_Ability31_Part2": {
-      "fileName": "Phainon_Phainon_Ability31_Part2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1508237621\">MStory_Main_Phainon_UltraNeverEnd</a>[<span class=\"descriptionNumberColor\">Futile Flames</span>]"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"7558249\">MStory_Stage10441070_Ability31</a>"
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-277317282\">Memosprite_CyreneServant_AmazingBonus_Phainon_Sub</a>[<span class=\"descriptionNumberColor\">Eternal Ignition</span>]"
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "ADF_BECount",
-                    "compareType": "<=",
-                    "value2": 0,
-                    "contextScope": "ContextAbility"
-                  }
-                ]
-              },
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1382374787\">M_Phainon_IsAbility31</a>",
-                  "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]"
-        },
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}.[[living]]"
-          },
-          "variableName": "ADF_TargetCount",
-          "livingTargets": true,
-          "context": "ContextAbility"
-        },
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Khaslana(Battle Event Cluster)}}"
-          },
-          "variableName": "ADF_BECount",
-          "context": "ContextAbility"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (9.6) || Constants[0] (1) || Variables[1] (ADF_BECount) || Variables[2] (0.125) || MUL || SUB || MUL || RETURN",
-              "displayLines": "(9.6 * (1 - (ADF_BECount * 0.125)))",
-              "constants": [
-                1
-              ],
-              "variables": [
-                9.6,
-                "ADF_BECount",
-                0.125
-              ]
-            },
-            "HitSplit": {
-              "operator": "Constants[0] (1) || Variables[0] (ADF_TargetCount) || DIV || RETURN",
-              "displayLines": "(1 / ADF_TargetCount)",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "ADF_TargetCount"
-              ]
-            },
-            "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
-            },
-            "Tags": null,
-            "attackType": "Ultimate"
-          },
-          "attackType": "Ultimate"
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Khaslana(Battle Event Cluster)}}"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1508237621\">MStory_Main_Phainon_UltraNeverEnd</a>[<span class=\"descriptionNumberColor\">Futile Flames</span>]"
-              },
-              {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-277317282\">Memosprite_CyreneServant_AmazingBonus_Phainon_Sub</a>[<span class=\"descriptionNumberColor\">Eternal Ignition</span>]"
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "ADF_BECount",
-                    "compareType": "<=",
-                    "value2": 0,
-                    "contextScope": "ContextAbility"
-                  }
-                ]
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Set Phainon Charge Points",
-              "value": {
-                "operator": "Variables[0] (Skill22_Energy) || RETURN",
-                "displayLines": "Skill22_Energy",
-                "constants": [],
-                "variables": [
-                  "Skill22_Energy"
-                ]
-              }
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1508237621\">MStory_Main_Phainon_UltraNeverEnd</a>[<span class=\"descriptionNumberColor\">Futile Flames</span>]"
-              },
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-277317282\">Memosprite_CyreneServant_AmazingBonus_Phainon_Sub</a>[<span class=\"descriptionNumberColor\">Eternal Ignition</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Copy",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-484368069\">Memosprite_CyreneServant_AmazingBonus_Phainon</a>[<span class=\"descriptionNumberColor\">Ode to Worldbearing</span>]",
-                      "variable": "MDF_ChargeEnergy",
-                      "target2": null,
-                      "variable2": "ADF_ExtraEnergy"
-                    },
-                    {
-                      "name": "Adjust Variable Value",
-                      "adjustmentType": "Add to Value (Default)",
-                      "variableName": "Skill22_Energy",
-                      "on": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "value": {
-                        "operator": "Variables[0] (ADF_ExtraEnergy) || RETURN",
-                        "displayLines": "ADF_ExtraEnergy",
-                        "constants": [],
-                        "variables": [
-                          "ADF_ExtraEnergy"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "ADF_Index",
-              "value": 0
-            },
-            {
-              "name": "Looped Event",
-              "maxLoops": {
-                "operator": "Variables[0] (8) || RETURN",
-                "displayLines": "8",
-                "constants": [],
-                "variables": [
-                  8
-                ]
-              },
-              "Event": [
-                {
-                  "name": "Add Battle Event",
-                  "teamName": "Player Team",
-                  "eventID": 11408,
-                  "variables": {
-                    "BE_Index": {
-                      "operator": "Variables[0] (ADF_Index) || RETURN",
-                      "displayLines": "ADF_Index",
-                      "constants": [],
-                      "variables": [
-                        "ADF_Index"
-                      ]
-                    },
-                    "BE_Count": {
-                      "operator": "Variables[0] (8) || RETURN",
-                      "displayLines": "8",
-                      "constants": [],
-                      "variables": [
-                        8
-                      ]
-                    },
-                    "BE_Speed": {
-                      "operator": "Variables[0] (CDF_SpeedConvertRatio) || Variables[1] (Phainon_BaseSpeed) || MUL || RETURN",
-                      "displayLines": "(CDF_SpeedConvertRatio * Phainon_BaseSpeed)",
-                      "constants": [],
-                      "variables": [
-                        "CDF_SpeedConvertRatio",
-                        "Phainon_BaseSpeed"
-                      ]
-                    }
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "ADF_Index",
-                  "value": {
-                    "operator": "Variables[0] (ADF_Index) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(ADF_Index + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "ADF_Index"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1662843541\">Phainon_Ultimate_VisualManager</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1545922215\">Phainon_ClearAvatarArea</a>",
-              "variables": {
-                "IsAsyncLoad": 1
-              }
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
-            },
-            {
-              "name": "UI Display Event (On Entity)",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "popUpText": "Phainon enters the cycle once more..."
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1382374787\">M_Phainon_IsAbility31</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__7558249\">MStory_Stage10441070_Ability31</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Phainon_Phainon_Ability31_Part1": {
-      "fileName": "Phainon_Phainon_Ability31_Part1",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "He Who Bears the World Must Burn"
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Phainon_Ability31_Part2",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "Clear DMG Numbers(UI)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          }
-        },
-        {
-          "name": "Clear DMG Numbers(UI)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          }
-        },
-        {
-          "name": "Clear DMG Numbers(UI)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          }
-        },
-        {
-          "name": "Clear DMG Numbers(UI)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Clear DMG Numbers(UI)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Clear DMG Numbers(UI)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Phainon_Phainon_Ability31_SelectTarget": {
-      "fileName": "Phainon_Phainon_Ability31_SelectTarget",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Target Exists",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "living": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "ability": "Phainon_Ability31_Part1",
-              "isTrigger": true
-            }
-          ]
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "Phainon_Phainon_Ability31_SelectTarget_OnLimbo": {
-      "fileName": "Phainon_Phainon_Ability31_SelectTarget_OnLimbo",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "ADF_MaxHPValue",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-        },
-        {
-          "name": "Set HP Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "setValue": {
-            "operator": "Variables[0] (ADF_MaxHPValue) || Variables[1] (0.25) || MUL || RETURN",
-            "displayLines": "(ADF_MaxHPValue * 0.25)",
-            "constants": [],
-            "variables": [
-              "ADF_MaxHPValue",
-              0.25
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemies Still Alive",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            }
-          },
-          "passed": [
-            {
-              "name": "Inject Ability Use",
-              "condition": {
-                "name": "Insert Ability Condition",
-                "type": "AbilityOwnerInsertUnusedCount",
-                "typeValue": 1
-              },
-              "conditionActive": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
-              },
-              "abilityName": "Phainon_Ability31_SelectTarget",
-              "abilitySource": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "abilityTarget": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "priorityTag": "CharacterAttackFromSelf",
-              "canHitNonTargets": true,
-              "showInActionOrder": true,
-              "abortFlags": [
-                "STAT_CTRL",
-                "DisableAction"
-              ],
-              "allowAbilityTriggers": false
-            }
-          ]
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Phainon_Phainon_Ability03_BattleEvent": {
-      "fileName": "Phainon_Phainon_Ability03_BattleEvent",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"62975260\">Phainon_Ability03_BattleEvent_Passive</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>",
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (BE_Speed) || RETURN",
-              "displayLines": "BE_Speed",
-              "constants": [],
-              "variables": [
-                "BE_Speed"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": {
-            "operator": "Variables[0] (BE_Index) || Variables[1] (MAX) || Constants[0] (1) || Variables[2] (BE_Count) || Constants[0] (1) || SUB || PARAM_2 || FUNCTION || DIV || RETURN",
-            "displayLines": "(BE_Index / &nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(1, (BE_Count - 1)))",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "BE_Index",
-              "MAX",
-              "BE_Count"
-            ]
-          }
-        },
-        {
-          "name": "Show Attack Time",
-          "time": {
-            "operator": "Variables[0] (BE_Count) || Variables[1] (BE_Index) || SUB || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "((BE_Count - BE_Index) - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "BE_Count",
-              "BE_Index"
-            ]
-          },
-          "on": null,
-          "show": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "BE_Index",
-            "compareType": ">=",
-            "value2": {
-              "operator": "Variables[0] (BE_Count) || Constants[0] (1) || SUB || RETURN",
-              "displayLines": "(BE_Count - 1)",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "BE_Count"
-              ]
-            }
-          },
-          "passed": [
-            {
-              "name": "Update Action Bar Display",
-              "triggerName": "Level_2",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1074413210\">Phainon_FinalBE_Hint</a>"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Update Action Bar Display",
-              "triggerName": "Level_1",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"133453837\">Phainon_NormalBE_Hint</a>"
-            }
-          ]
-        },
-        {
-          "name": "Block Advance/Delay Effects",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "whitelist": {
-            "name": "Target Name",
-            "target": "{{Battle Event's Caster}} + {{Caster}}"
-          },
-          "whitelistTag": 130,
-          "whitelistType": "Bit_Decrease"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1583163696\">M_Phainon_10_TriggerSoundOnTurnStart_Advantage</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "End Broken State [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_Lifetime",
-                    "compareType": "<=",
-                    "value2": 0,
-                    "contextScope": "ContextModifier"
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Battle Event/Summon Died [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of",
-                    "of": {
-                      "name": "Target Name",
-                      "target": "{{Khaslana(Battle Event Cluster)}}"
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_Lifetime",
-                      "value": {
-                        "operator": "Variables[0] (MDF_Lifetime) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(MDF_Lifetime - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_Lifetime"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2106985142\">M_Phainon_10_TriggerSoundOnTurnStart</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "Action Start [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "invertCondition": true
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__62975260\">Phainon_Ability03_BattleEvent_Passive</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Update Action Bar Display",
-                  "triggerName": "Level_0",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1074413210\">Phainon_FinalBE_Hint</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "conditionActive": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
-                      },
-                      "abilityName": "Phainon_Ability31_SelectTarget",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Battle Event's Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "priorityTag": "CharacterAttackFromSelf",
-                      "ownerState": "Mask_AliveOrLimbo",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "abortFlags": [
-                        "STAT_CTRL",
-                        "DisableAction"
-                      ],
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Target Count SUM",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Enemy Team All}}"
-                        },
-                        "conditions": {
-                          "name": "Has Flag",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "flagName": "Break"
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Battle Event's Caster}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-1583163696\">M_Phainon_10_TriggerSoundOnTurnStart_Advantage</a>"
-                          },
-                          "passed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Battle Event's Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"2106985142\">M_Phainon_10_TriggerSoundOnTurnStart</a>",
-                              "casterAssign": "TargetSelf"
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Battle Event's Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1583163696\">M_Phainon_10_TriggerSoundOnTurnStart_Advantage</a>",
-                          "casterAssign": "TargetSelf"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Battle Event's Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"2106985142\">M_Phainon_10_TriggerSoundOnTurnStart</a>",
-                          "casterAssign": "TargetSelf"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Inject Extra-Turn",
-                      "actionTag": "Phainon_BEInsertAction",
-                      "canInjectUltimates": true,
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Battle Event's Caster}}"
-                      },
-                      "afterInjection": []
-                    }
-                  ]
-                },
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>",
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "MDF_PropertyValue",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Stack Target Stat Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      },
-                      "isRefresh": true
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Phainon_Phainon_Ability03_Part02": {
-      "fileName": "Phainon_Phainon_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "ADF_Index",
-          "value": 0
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
-          "valuePerStack": {
-            "MDF_PropertyRatio": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
-            },
-            "MDF_PropertyRatio2": {
-              "operator": "Variables[0] (2.7) || RETURN",
-              "displayLines": "2.7",
-              "constants": [],
-              "variables": [
-                2.7
-              ]
-            }
-          }
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": {
-            "operator": "Variables[0] (8) || RETURN",
-            "displayLines": "8",
-            "constants": [],
-            "variables": [
-              8
-            ]
-          },
-          "Event": [
-            {
-              "name": "Add Battle Event",
-              "teamName": "Player Team",
-              "eventID": 11408,
-              "variables": {
-                "BE_Index": {
-                  "operator": "Variables[0] (ADF_Index) || RETURN",
-                  "displayLines": "ADF_Index",
-                  "constants": [],
-                  "variables": [
-                    "ADF_Index"
-                  ]
-                },
-                "BE_Count": {
-                  "operator": "Variables[0] (8) || RETURN",
-                  "displayLines": "8",
-                  "constants": [],
-                  "variables": [
-                    8
-                  ]
-                },
-                "BE_Speed": {
-                  "operator": "Variables[0] (CDF_SpeedConvertRatio) || Variables[1] (Phainon_BaseSpeed) || MUL || RETURN",
-                  "displayLines": "(CDF_SpeedConvertRatio * Phainon_BaseSpeed)",
-                  "constants": [],
-                  "variables": [
-                    "CDF_SpeedConvertRatio",
-                    "Phainon_BaseSpeed"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "ADF_Index",
-              "value": {
-                "operator": "Variables[0] (ADF_Index) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(ADF_Index + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "ADF_Index"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Redirect AV Changes",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "to": {
-            "name": "Target Name",
-            "target": "{{Khaslana(Battle Event Cluster)}}.[[sortByAV]].[[index0]]"
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Phainon_Phainon_Ability03_Part01": {
-      "fileName": "Phainon_Phainon_Ability03_Part01",
-      "childAbilityList": [
-        "Phainon_Phainon_Ability03_EnterReady",
-        "Phainon_Phainon_Ability03_Part01",
-        "Phainon_Phainon_Ability03_Part02",
-        "Phainon_Phainon_Ability03_Camera",
-        "Phainon_Phainon_Ability31_Camera",
-        "Phainon_Phainon_Ability31_SelectTarget",
-        "Phainon_Phainon_Ability31_SelectTarget_OnLimbo",
-        "Phainon_Phainon_Ability31_Part1",
-        "Phainon_Phainon_Ability31_Part2"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Ultimate",
-      "energy": null,
-      "toughnessList": [
-        0,
-        20,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Phainon_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "Change Battle Arena",
-          "arena": "PhainonBattleArea",
-          "tag": "BattleArea01",
-          "priorityTag": "Character"
-        },
-        {
-          "name": "Change Character Model"
-        },
-        {
-          "name": "Set Phainon Charge Points",
-          "value": {
-            "operator": "Variables[0] (Skill22_Energy) || RETURN",
-            "displayLines": "Skill22_Energy",
-            "constants": [],
-            "variables": [
-              "Skill22_Energy"
-            ]
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Phainon_Phainon_Ability03_EnterReady": {
-      "fileName": "Phainon_Phainon_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Set Render/Load State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members with Unselectables}}"
-          },
-          "showOrLoad": false
-        },
-        "Deleted bullshit"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
     "Phainon_Phainon_Ability22_v2_Part02": {
       "fileName": "Phainon_Phainon_Ability22_v2_Part02",
       "abilityType": null,
@@ -3677,42 +2462,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Ability Target List}}"
       }
     },
-    "Phainon_Phainon_Ability22_v2_Part01": {
-      "fileName": "Phainon_Phainon_Ability22_v2_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Phainon_Ability22_v2_Part02",
-          "isTrigger": true
-        },
-        {
-          "name": "Clear DMG Numbers(UI)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          }
-        },
-        {
-          "name": "Clear DMG Numbers(UI)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
     "Phainon_Phainon_Ability22_Part02": {
       "fileName": "Phainon_Phainon_Ability22_Part02",
       "abilityType": null,
@@ -3932,6 +2681,42 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "Phainon_Phainon_Ability22_v2_Part01": {
+      "fileName": "Phainon_Phainon_Ability22_v2_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Phainon_Ability22_v2_Part02",
+          "isTrigger": true
+        },
+        {
+          "name": "Clear DMG Numbers(UI)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          }
+        },
+        {
+          "name": "Clear DMG Numbers(UI)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          }
+        }
+      ],
+      "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
       }
@@ -5430,6 +4215,766 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Phainon_Phainon_Ability31_Part2": {
+      "fileName": "Phainon_Phainon_Ability31_Part2",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1508237621\">MStory_Main_Phainon_UltraNeverEnd</a>[<span class=\"descriptionNumberColor\">Futile Flames</span>]"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"7558249\">MStory_Stage10441070_Ability31</a>"
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-277317282\">Memosprite_CyreneServant_AmazingBonus_Phainon_Sub</a>[<span class=\"descriptionNumberColor\">Eternal Ignition</span>]"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "ADF_BECount",
+                    "compareType": "<=",
+                    "value2": 0,
+                    "contextScope": "ContextAbility"
+                  }
+                ]
+              },
+              "failed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1382374787\">M_Phainon_IsAbility31</a>",
+                  "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2124559598\">Phainon_Ultimate_LimboMark</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]"
+        },
+        {
+          "name": "Define Custom Variable with Team Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}.[[living]]"
+          },
+          "variableName": "ADF_TargetCount",
+          "livingTargets": true,
+          "context": "ContextAbility"
+        },
+        {
+          "name": "Define Custom Variable with Team Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Khaslana(Battle Event Cluster)}}"
+          },
+          "variableName": "ADF_BECount",
+          "context": "ContextAbility"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] (9.6) || Constants[0] (1) || Variables[1] (ADF_BECount) || Variables[2] (0.125) || MUL || SUB || MUL || RETURN",
+              "displayLines": "(9.6 * (1 - (ADF_BECount * 0.125)))",
+              "constants": [
+                1
+              ],
+              "variables": [
+                9.6,
+                "ADF_BECount",
+                0.125
+              ]
+            },
+            "HitSplit": {
+              "operator": "Constants[0] (1) || Variables[0] (ADF_TargetCount) || DIV || RETURN",
+              "displayLines": "(1 / ADF_TargetCount)",
+              "constants": [
+                1
+              ],
+              "variables": [
+                "ADF_TargetCount"
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
+              "displayLines": "AOE Toughness Value",
+              "constants": [],
+              "variables": [
+                "AOE Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "attackType": "Ultimate"
+          },
+          "attackType": "Ultimate"
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Force Entity Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Khaslana(Battle Event Cluster)}}"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1508237621\">MStory_Main_Phainon_UltraNeverEnd</a>[<span class=\"descriptionNumberColor\">Futile Flames</span>]"
+              },
+              {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-277317282\">Memosprite_CyreneServant_AmazingBonus_Phainon_Sub</a>[<span class=\"descriptionNumberColor\">Eternal Ignition</span>]"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "ADF_BECount",
+                    "compareType": "<=",
+                    "value2": 0,
+                    "contextScope": "ContextAbility"
+                  }
+                ]
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Set Phainon Charge Points",
+              "value": {
+                "operator": "Variables[0] (Skill22_Energy) || RETURN",
+                "displayLines": "Skill22_Energy",
+                "constants": [],
+                "variables": [
+                  "Skill22_Energy"
+                ]
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1508237621\">MStory_Main_Phainon_UltraNeverEnd</a>[<span class=\"descriptionNumberColor\">Futile Flames</span>]"
+              },
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-277317282\">Memosprite_CyreneServant_AmazingBonus_Phainon_Sub</a>[<span class=\"descriptionNumberColor\">Eternal Ignition</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Copy",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-484368069\">Memosprite_CyreneServant_AmazingBonus_Phainon</a>[<span class=\"descriptionNumberColor\">Ode to Worldbearing</span>]",
+                      "variable": "MDF_ChargeEnergy",
+                      "target2": null,
+                      "variable2": "ADF_ExtraEnergy"
+                    },
+                    {
+                      "name": "Adjust Variable Value",
+                      "adjustmentType": "Add to Value (Default)",
+                      "variableName": "Skill22_Energy",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "value": {
+                        "operator": "Variables[0] (ADF_ExtraEnergy) || RETURN",
+                        "displayLines": "ADF_ExtraEnergy",
+                        "constants": [],
+                        "variables": [
+                          "ADF_ExtraEnergy"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "ADF_Index",
+              "value": 0
+            },
+            {
+              "name": "Looped Event",
+              "maxLoops": {
+                "operator": "Variables[0] (8) || RETURN",
+                "displayLines": "8",
+                "constants": [],
+                "variables": [
+                  8
+                ]
+              },
+              "Event": [
+                {
+                  "name": "Add Battle Event",
+                  "teamName": "Player Team",
+                  "eventID": 11408,
+                  "variables": {
+                    "BE_Index": {
+                      "operator": "Variables[0] (ADF_Index) || RETURN",
+                      "displayLines": "ADF_Index",
+                      "constants": [],
+                      "variables": [
+                        "ADF_Index"
+                      ]
+                    },
+                    "BE_Count": {
+                      "operator": "Variables[0] (8) || RETURN",
+                      "displayLines": "8",
+                      "constants": [],
+                      "variables": [
+                        8
+                      ]
+                    },
+                    "BE_Speed": {
+                      "operator": "Variables[0] (CDF_SpeedConvertRatio) || Variables[1] (Phainon_BaseSpeed) || MUL || RETURN",
+                      "displayLines": "(CDF_SpeedConvertRatio * Phainon_BaseSpeed)",
+                      "constants": [],
+                      "variables": [
+                        "CDF_SpeedConvertRatio",
+                        "Phainon_BaseSpeed"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "ADF_Index",
+                  "value": {
+                    "operator": "Variables[0] (ADF_Index) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(ADF_Index + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "ADF_Index"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1662843541\">Phainon_Ultimate_VisualManager</a>"
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1545922215\">Phainon_ClearAvatarArea</a>",
+              "variables": {
+                "IsAsyncLoad": 1
+              }
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+            },
+            {
+              "name": "UI Display Event (On Entity)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "popUpText": "Phainon enters the cycle once more..."
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1382374787\">M_Phainon_IsAbility31</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__7558249\">MStory_Stage10441070_Ability31</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "Phainon_Phainon_Ability31_Part1": {
+      "fileName": "Phainon_Phainon_Ability31_Part1",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "He Who Bears the World Must Burn"
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Phainon_Ability31_Part2",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        {
+          "name": "Clear DMG Numbers(UI)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          }
+        },
+        {
+          "name": "Clear DMG Numbers(UI)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          }
+        },
+        {
+          "name": "Clear DMG Numbers(UI)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          }
+        },
+        {
+          "name": "Clear DMG Numbers(UI)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Clear DMG Numbers(UI)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Clear DMG Numbers(UI)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "Phainon_Phainon_Ability31_SelectTarget_OnLimbo": {
+      "fileName": "Phainon_Phainon_Ability31_SelectTarget_OnLimbo",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "ADF_MaxHPValue",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "Set HP Value",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "setValue": {
+            "operator": "Variables[0] (ADF_MaxHPValue) || Variables[1] (0.25) || MUL || RETURN",
+            "displayLines": "(ADF_MaxHPValue * 0.25)",
+            "constants": [],
+            "variables": [
+              "ADF_MaxHPValue",
+              0.25
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemies Still Alive",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
+          },
+          "passed": [
+            {
+              "name": "Inject Ability Use",
+              "condition": {
+                "name": "Insert Ability Condition",
+                "type": "AbilityOwnerInsertUnusedCount",
+                "typeValue": 1
+              },
+              "conditionActive": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+              },
+              "abilityName": "Phainon_Ability31_SelectTarget",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "priorityTag": "CharacterAttackFromSelf",
+              "canHitNonTargets": true,
+              "showInActionOrder": true,
+              "abortFlags": [
+                "STAT_CTRL",
+                "DisableAction"
+              ],
+              "allowAbilityTriggers": false
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Phainon_Phainon_Ability31_SelectTarget": {
+      "fileName": "Phainon_Phainon_Ability31_SelectTarget",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Target Exists",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "living": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "ability": "Phainon_Ability31_Part1",
+              "isTrigger": true
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "Phainon_Phainon_Ability03_Part02": {
+      "fileName": "Phainon_Phainon_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "ADF_Index",
+          "value": 0
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]",
+          "valuePerStack": {
+            "MDF_PropertyRatio": {
+              "operator": "Variables[0] (0.8) || RETURN",
+              "displayLines": "0.8",
+              "constants": [],
+              "variables": [
+                0.8
+              ]
+            },
+            "MDF_PropertyRatio2": {
+              "operator": "Variables[0] (2.7) || RETURN",
+              "displayLines": "2.7",
+              "constants": [],
+              "variables": [
+                2.7
+              ]
+            }
+          }
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": {
+            "operator": "Variables[0] (8) || RETURN",
+            "displayLines": "8",
+            "constants": [],
+            "variables": [
+              8
+            ]
+          },
+          "Event": [
+            {
+              "name": "Add Battle Event",
+              "teamName": "Player Team",
+              "eventID": 11408,
+              "variables": {
+                "BE_Index": {
+                  "operator": "Variables[0] (ADF_Index) || RETURN",
+                  "displayLines": "ADF_Index",
+                  "constants": [],
+                  "variables": [
+                    "ADF_Index"
+                  ]
+                },
+                "BE_Count": {
+                  "operator": "Variables[0] (8) || RETURN",
+                  "displayLines": "8",
+                  "constants": [],
+                  "variables": [
+                    8
+                  ]
+                },
+                "BE_Speed": {
+                  "operator": "Variables[0] (CDF_SpeedConvertRatio) || Variables[1] (Phainon_BaseSpeed) || MUL || RETURN",
+                  "displayLines": "(CDF_SpeedConvertRatio * Phainon_BaseSpeed)",
+                  "constants": [],
+                  "variables": [
+                    "CDF_SpeedConvertRatio",
+                    "Phainon_BaseSpeed"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "ADF_Index",
+              "value": {
+                "operator": "Variables[0] (ADF_Index) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(ADF_Index + 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "ADF_Index"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Redirect AV Changes",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "to": {
+            "name": "Target Name",
+            "target": "{{Khaslana(Battle Event Cluster)}}.[[sortByAV]].[[index0]]"
+          }
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Phainon_Phainon_Ability03_Part01": {
+      "fileName": "Phainon_Phainon_Ability03_Part01",
+      "childAbilityList": [
+        "Phainon_Phainon_Ability03_EnterReady",
+        "Phainon_Phainon_Ability03_Part01",
+        "Phainon_Phainon_Ability03_Part02",
+        "Phainon_Phainon_Ability03_Camera",
+        "Phainon_Phainon_Ability31_Camera",
+        "Phainon_Phainon_Ability31_SelectTarget",
+        "Phainon_Phainon_Ability31_SelectTarget_OnLimbo",
+        "Phainon_Phainon_Ability31_Part1",
+        "Phainon_Phainon_Ability31_Part2"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Ultimate",
+      "energy": null,
+      "toughnessList": [
+        0,
+        20,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Phainon_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        {
+          "name": "Change Battle Arena",
+          "arena": "PhainonBattleArea",
+          "tag": "BattleArea01",
+          "priorityTag": "Character"
+        },
+        {
+          "name": "Change Character Model"
+        },
+        {
+          "name": "Set Phainon Charge Points",
+          "value": {
+            "operator": "Variables[0] (Skill22_Energy) || RETURN",
+            "displayLines": "Skill22_Energy",
+            "constants": [],
+            "variables": [
+              "Skill22_Energy"
+            ]
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Phainon_Phainon_Ability03_EnterReady": {
+      "fileName": "Phainon_Phainon_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Set Render/Load State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
+          "showOrLoad": false
+        },
+        "Deleted bullshit"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
       }
     },
     "Phainon_Phainon_Ability02_Part02": {

@@ -5,13 +5,13 @@ const compositeAbilityObject = {
   "abilityList": [
     "Saber_Saber_TechniqueInLevel",
     "Saber_Saber_PassiveAbility01",
-    "Saber_Saber_Ability03_Part02",
-    "Saber_Saber_Ability03_Part01",
-    "Saber_Saber_Ability03_EnterReady",
-    "Saber_Saber_Ability02_Part02",
-    "Saber_Saber_Ability02_Part01",
     "Saber_Saber_Ability11_Part02",
     "Saber_Saber_Ability11_Part01",
+    "Saber_Saber_Ability03_EnterReady",
+    "Saber_Saber_Ability03_Part02",
+    "Saber_Saber_Ability03_Part01",
+    "Saber_Saber_Ability02_Part02",
+    "Saber_Saber_Ability02_Part01",
     "Saber_Saber_Ability01_Part02",
     "Saber_Saber_Ability01_Part01",
     "Saber_Modifiers",
@@ -1922,6 +1922,370 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
+    "Saber_Saber_Ability11_Part02": {
+      "fileName": "Saber_Saber_Ability11_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable with Team Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "variableName": "S11_Alive_Count",
+          "livingTargets": true
+        },
+        {
+          "name": "IF",
+          "conditions": "Under Control Effect",
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Trace Activated",
+                "conditionList": "Knight of the Dragon"
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"879085567\">Saber_Ability03_CD</a>[<span class=\"descriptionNumberColor\">Mana Burst</span>]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": "Under Control Effect",
+          "failed": [
+            {
+              "name": "Adjust Variable Value",
+              "adjustmentType": "Add to Value (Default)",
+              "variableName": "DV_SurgePoint",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "value": {
+                "operator": "Variables[0] (2) || RETURN",
+                "displayLines": "2",
+                "constants": [],
+                "variables": [
+                  2
+                ]
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Trace Activated",
+                "conditionList": "Crown of the Star"
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1328926688\">Saber_Trace03_Bonus_02</a>[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
+                  "stackLimit": {
+                    "operator": "Variables[0] (8) || RETURN",
+                    "displayLines": "8",
+                    "constants": [],
+                    "variables": [
+                      8
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (0.04) || RETURN",
+                      "displayLines": "0.04",
+                      "constants": [],
+                      "variables": [
+                        0.04
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": {
+                    "operator": "Variables[0] (2) || RETURN",
+                    "displayLines": "2",
+                    "constants": [],
+                    "variables": [
+                      2
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 2
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1058966793\">Saber_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
+                  "stackLimit": {
+                    "operator": "Variables[0] (15) || RETURN",
+                    "displayLines": "15",
+                    "constants": [],
+                    "variables": [
+                      15
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (0.01) || RETURN",
+                      "displayLines": "0.01",
+                      "constants": [],
+                      "variables": [
+                        0.01
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": {
+                    "operator": "Variables[0] (2) || RETURN",
+                    "displayLines": "2",
+                    "constants": [],
+                    "variables": [
+                      2
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": {
+                "operator": "Variables[0] (DV_SurgePoint) || RETURN",
+                "displayLines": "DV_SurgePoint",
+                "constants": [],
+                "variables": [
+                  "DV_SurgePoint"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Wind",
+            "Damage": {
+              "operator": "Variables[0] (1.5) || RETURN",
+              "displayLines": "1.5",
+              "constants": [],
+              "variables": [
+                1.5
+              ]
+            },
+            "HitSplit": 0.5,
+            "Toughness": {
+              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
+              "displayLines": "AOE Toughness Value",
+              "constants": [],
+              "variables": [
+                "AOE Toughness Value"
+              ]
+            },
+            "Tags": [
+              "Basic ATK"
+            ],
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "S11_Alive_Count",
+            "compareType": ">",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "S11_Alive_Count",
+                "compareType": ">",
+                "value2": 2
+              },
+              "failed": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "canPhase": true,
+                  "AttackScaling": {
+                    "DamageType": "Wind",
+                    "Damage": {
+                      "operator": "Variables[0] (1.5) || RETURN",
+                      "displayLines": "1.5",
+                      "constants": [],
+                      "variables": [
+                        1.5
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": [
+                      "Basic ATK"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Wind",
+                "Damage": {
+                  "operator": "Variables[0] (2.2) || RETURN",
+                  "displayLines": "2.2",
+                  "constants": [],
+                  "variables": [
+                    2.2
+                  ]
+                },
+                "Toughness": null,
+                "Tags": [
+                  "Basic ATK"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Wind",
+            "Damage": {
+              "operator": "Variables[0] (1.5) || RETURN",
+              "displayLines": "1.5",
+              "constants": [],
+              "variables": [
+                1.5
+              ]
+            },
+            "HitSplit": 0.5,
+            "Toughness": {
+              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
+              "displayLines": "AOE Toughness Value",
+              "constants": [],
+              "variables": [
+                "AOE Toughness Value"
+              ]
+            },
+            "Tags": [
+              "Basic ATK"
+            ],
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "IF",
+          "conditions": "Under Control Effect",
+          "failed": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-437296268\">Saber_Wind_Ability03_buff</a>"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "Saber_Saber_Ability11_Part01": {
+      "fileName": "Saber_Saber_Ability11_Part01",
+      "childAbilityList": [
+        "Saber_Saber_Ability11_Camera",
+        "Saber_Saber_Ability11_Part01",
+        "Saber_Saber_Ability11_Part02"
+      ],
+      "skillTrigger": "Skill11",
+      "abilityType": "Basic ATK",
+      "energy": 30,
+      "toughnessList": [
+        0,
+        20,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Saber_Ability11_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": "Under Control Effect"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "Saber_Saber_Ability03_EnterReady": {
+      "fileName": "Saber_Saber_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
     "Saber_Saber_Ability03_Part02": {
       "fileName": "Saber_Saber_Ability03_Part02",
       "abilityType": null,
@@ -2230,17 +2594,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Saber_Saber_Ability03_EnterReady": {
-      "fileName": "Saber_Saber_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Saber_Saber_Ability02_Part02": {
@@ -2933,359 +3286,6 @@ const compositeAbilityObject = {
         "subTarget": "Blast Targets"
       }
     },
-    "Saber_Saber_Ability11_Part02": {
-      "fileName": "Saber_Saber_Ability11_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "variableName": "S11_Alive_Count",
-          "livingTargets": true
-        },
-        {
-          "name": "IF",
-          "conditions": "Under Control Effect",
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Trace Activated",
-                "conditionList": "Knight of the Dragon"
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"879085567\">Saber_Ability03_CD</a>[<span class=\"descriptionNumberColor\">Mana Burst</span>]"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": "Under Control Effect",
-          "failed": [
-            {
-              "name": "Adjust Variable Value",
-              "adjustmentType": "Add to Value (Default)",
-              "variableName": "DV_SurgePoint",
-              "on": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "value": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
-              }
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Trace Activated",
-                "conditionList": "Crown of the Star"
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1328926688\">Saber_Trace03_Bonus_02</a>[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
-                  "stackLimit": {
-                    "operator": "Variables[0] (8) || RETURN",
-                    "displayLines": "8",
-                    "constants": [],
-                    "variables": [
-                      8
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.04) || RETURN",
-                      "displayLines": "0.04",
-                      "constants": [],
-                      "variables": [
-                        0.04
-                      ]
-                    }
-                  },
-                  "addStacksPerTrigger": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Eidolon Activated",
-                "eidolon": 2
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1058966793\">Saber_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
-                  "stackLimit": {
-                    "operator": "Variables[0] (15) || RETURN",
-                    "displayLines": "15",
-                    "constants": [],
-                    "variables": [
-                      15
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.01) || RETURN",
-                      "displayLines": "0.01",
-                      "constants": [],
-                      "variables": [
-                        0.01
-                      ]
-                    }
-                  },
-                  "addStacksPerTrigger": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "name": "Update Displayed Energy Bar",
-              "value": {
-                "operator": "Variables[0] (DV_SurgePoint) || RETURN",
-                "displayLines": "DV_SurgePoint",
-                "constants": [],
-                "variables": [
-                  "DV_SurgePoint"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] (1.5) || RETURN",
-              "displayLines": "1.5",
-              "constants": [],
-              "variables": [
-                1.5
-              ]
-            },
-            "HitSplit": 0.5,
-            "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
-            },
-            "Tags": [
-              "Basic ATK"
-            ],
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "S11_Alive_Count",
-            "compareType": ">",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "S11_Alive_Count",
-                "compareType": ">",
-                "value2": 2
-              },
-              "failed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "canPhase": true,
-                  "AttackScaling": {
-                    "DamageType": "Wind",
-                    "Damage": {
-                      "operator": "Variables[0] (1.5) || RETURN",
-                      "displayLines": "1.5",
-                      "constants": [],
-                      "variables": [
-                        1.5
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": [
-                      "Basic ATK"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "canPhase": true,
-              "AttackScaling": {
-                "DamageType": "Wind",
-                "Damage": {
-                  "operator": "Variables[0] (2.2) || RETURN",
-                  "displayLines": "2.2",
-                  "constants": [],
-                  "variables": [
-                    2.2
-                  ]
-                },
-                "Toughness": null,
-                "Tags": [
-                  "Basic ATK"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] (1.5) || RETURN",
-              "displayLines": "1.5",
-              "constants": [],
-              "variables": [
-                1.5
-              ]
-            },
-            "HitSplit": 0.5,
-            "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
-            },
-            "Tags": [
-              "Basic ATK"
-            ],
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": "Under Control Effect",
-          "failed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-437296268\">Saber_Wind_Ability03_buff</a>"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "Saber_Saber_Ability11_Part01": {
-      "fileName": "Saber_Saber_Ability11_Part01",
-      "childAbilityList": [
-        "Saber_Saber_Ability11_Camera",
-        "Saber_Saber_Ability11_Part01",
-        "Saber_Saber_Ability11_Part02"
-      ],
-      "skillTrigger": "Skill11",
-      "abilityType": "Basic ATK",
-      "energy": 30,
-      "toughnessList": [
-        0,
-        20,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Saber_Ability11_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "IF",
-          "conditions": "Under Control Effect"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
     "Saber_Saber_Ability01_Part02": {
       "fileName": "Saber_Saber_Ability01_Part02",
       "abilityType": null,
@@ -3599,6 +3599,9 @@ const compositeAbilityObject = {
           "stackData": [
             "MDF_PropertyValue"
           ],
+          "latentQueue": [
+            "S02_MSP"
+          ],
           "description": "Each stack causes DMG dealt by Saber to ignore <span class=\"descriptionNumberColor\">#SkillRank_Rank02_P2_Ratio</span> of the target's DEF.",
           "type": "Buff",
           "statusName": "The Lost Oath of the Round Table",
@@ -3626,6 +3629,9 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "stackData": [
             "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "S02_MSP"
           ],
           "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Buff",

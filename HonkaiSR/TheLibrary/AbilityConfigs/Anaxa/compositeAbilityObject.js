@@ -3,11 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": "Anaxa",
   "trimCharacterName": "Anaxa",
   "abilityList": [
+    "Anaxa_Anaxa_Trace03",
+    "Anaxa_Anaxa_Trace02",
     "Anaxa_Anaxa_Eidolon6",
     "Anaxa_Anaxa_Eidolon2",
     "Anaxa_Anaxa_Eidolon1",
-    "Anaxa_Anaxa_Trace03",
-    "Anaxa_Anaxa_Trace02",
     "Anaxa_Anaxa_TechniqueInLevel",
     "Anaxa_Anaxa_PassiveAbility01",
     "Anaxa_Anaxa_Ability03_Part02",
@@ -21,308 +21,6 @@ const compositeAbilityObject = {
     "Anaxa_Functions"
   ],
   "abilityObject": {
-    "Anaxa_Anaxa_Eidolon6": {
-      "fileName": "Anaxa_Anaxa_Eidolon6",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2017566930\">Anaxa_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
-          "valuePerStack": {
-            "MDF_PropertyRatio": {
-              "operator": "Variables[0] (1.3) || RETURN",
-              "displayLines": "1.3",
-              "constants": [],
-              "variables": [
-                1.3
-              ]
-            }
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2017566930\">Anaxa_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "description": "DMG dealt is <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original DMG.",
-          "type": "Buff",
-          "statusName": "Everything Is in Everything",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-446302809\">ModifyDamageData_IndependentDamageAddedRatio</a>",
-                  "variables": {
-                    "parameter[0]_IndependentDamageAddedRatio": {
-                      "operator": "Variables[0] (MDF_PropertyRatio) || Constants[0] (1) || SUB || RETURN",
-                      "displayLines": "(MDF_PropertyRatio - 1)",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "MDF_PropertyRatio"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Anaxa_Anaxa_Eidolon2": {
-      "fileName": "Anaxa_Anaxa_Eidolon2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"126451485\">Anaxa_Eidolon2</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1634329483\">M_Anaxa_Eidolon2_Bonus_OnCharacterCreate</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-2143749742\">function_Anaxa_AddWeakness</a>",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      }
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1219895923\">Anaxa_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
-                      "referenceModifier": "<a class=\"gModGreen\" id=\"-1864228635\">MReference_AllDamageTypeResistanceDown</a>",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__126451485\">Anaxa_Eidolon2</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-2143749742\">function_Anaxa_AddWeakness</a>",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      }
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1219895923\">Anaxa_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
-                      "referenceModifier": "<a class=\"gModGreen\" id=\"-1864228635\">MReference_AllDamageTypeResistanceDown</a>",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1634329483\">M_Anaxa_Eidolon2_Bonus_OnCharacterCreate</a>"
-                },
-                "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -80
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Anaxa_Anaxa_Eidolon1": {
-      "fileName": "Anaxa_Anaxa_Eidolon1",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"76118628\">Anaxa_Eidolon1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1900870399\">Anaxa_Eidolon1_FirstBP</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1900870399\">Anaxa_Eidolon1_FirstBP</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Skill"
-                  },
-                  "passed": [
-                    {
-                      "name": "Skill Points Modification",
-                      "adjustmentValue": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
-                      },
-                      "adjustmentType": "+"
-                    },
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__76118628\">Anaxa_Eidolon1</a>",
-          "execute": [
-            {
-              "eventTrigger": "Attacker Finalizes DMG Data",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has DMG Instance Tag",
-                    "tag": "Anaxa_00_BP"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-266153828\">Anaxa_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Magician, Isolated by Stars</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
-                      },
-                      "referenceModifier": "<a class=\"gModGreen\" id=\"779501689\">MReference_DefenceRatioDown</a>",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.16) || RETURN",
-                          "displayLines": "0.16",
-                          "constants": [],
-                          "variables": [
-                            0.16
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "Anaxa_Anaxa_Trace03": {
       "fileName": "Anaxa_Anaxa_Trace03",
       "abilityType": null,
@@ -819,6 +517,308 @@ const compositeAbilityObject = {
                 }
               ],
               "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Anaxa_Anaxa_Eidolon6": {
+      "fileName": "Anaxa_Anaxa_Eidolon6",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2017566930\">Anaxa_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
+          "valuePerStack": {
+            "MDF_PropertyRatio": {
+              "operator": "Variables[0] (1.3) || RETURN",
+              "displayLines": "1.3",
+              "constants": [],
+              "variables": [
+                1.3
+              ]
+            }
+          }
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2017566930\">Anaxa_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
+          "stackData": [
+            "MDF_PropertyRatio"
+          ],
+          "description": "DMG dealt is <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original DMG.",
+          "type": "Buff",
+          "statusName": "Everything Is in Everything",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-446302809\">ModifyDamageData_IndependentDamageAddedRatio</a>",
+                  "variables": {
+                    "parameter[0]_IndependentDamageAddedRatio": {
+                      "operator": "Variables[0] (MDF_PropertyRatio) || Constants[0] (1) || SUB || RETURN",
+                      "displayLines": "(MDF_PropertyRatio - 1)",
+                      "constants": [
+                        1
+                      ],
+                      "variables": [
+                        "MDF_PropertyRatio"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Anaxa_Anaxa_Eidolon2": {
+      "fileName": "Anaxa_Anaxa_Eidolon2",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"126451485\">Anaxa_Eidolon2</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1634329483\">M_Anaxa_Eidolon2_Bonus_OnCharacterCreate</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Enemy Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-2143749742\">function_Anaxa_AddWeakness</a>",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1219895923\">Anaxa_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"-1864228635\">MReference_AllDamageTypeResistanceDown</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.2) || RETURN",
+                          "displayLines": "0.2",
+                          "constants": [],
+                          "variables": [
+                            0.2
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__126451485\">Anaxa_Eidolon2</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-2143749742\">function_Anaxa_AddWeakness</a>",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1219895923\">Anaxa_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"-1864228635\">MReference_AllDamageTypeResistanceDown</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.2) || RETURN",
+                          "displayLines": "0.2",
+                          "constants": [],
+                          "variables": [
+                            0.2
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1634329483\">M_Anaxa_Eidolon2_Bonus_OnCharacterCreate</a>"
+                },
+                "Modifier Deletes Itself"
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Anaxa_Anaxa_Eidolon1": {
+      "fileName": "Anaxa_Anaxa_Eidolon1",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"76118628\">Anaxa_Eidolon1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1900870399\">Anaxa_Eidolon1_FirstBP</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1900870399\">Anaxa_Eidolon1_FirstBP</a>",
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Skill"
+                  },
+                  "passed": [
+                    {
+                      "name": "Skill Points Modification",
+                      "adjustmentValue": {
+                        "operator": "Variables[0] (1) || RETURN",
+                        "displayLines": "1",
+                        "constants": [],
+                        "variables": [
+                          1
+                        ]
+                      },
+                      "adjustmentType": "+"
+                    },
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__76118628\">Anaxa_Eidolon1</a>",
+          "execute": [
+            {
+              "eventTrigger": "Attacker Finalizes DMG Data",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has DMG Instance Tag",
+                    "tag": "Anaxa_00_BP"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-266153828\">Anaxa_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Magician, Isolated by Stars</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (2) || RETURN",
+                        "displayLines": "2",
+                        "constants": [],
+                        "variables": [
+                          2
+                        ]
+                      },
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"779501689\">MReference_DefenceRatioDown</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.16) || RETURN",
+                          "displayLines": "0.16",
+                          "constants": [],
+                          "variables": [
+                            0.16
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }

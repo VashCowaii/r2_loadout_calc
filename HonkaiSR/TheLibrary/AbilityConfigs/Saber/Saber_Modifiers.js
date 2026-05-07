@@ -232,6 +232,9 @@ const configAbility = {
       "stackData": [
         "MDF_PropertyValue"
       ],
+      "latentQueue": [
+        "S02_MSP"
+      ],
       "description": "Each stack causes DMG dealt by Saber to ignore <span class=\"descriptionNumberColor\">#SkillRank_Rank02_P2_Ratio</span> of the target's DEF.",
       "type": "Buff",
       "statusName": "The Lost Oath of the Round Table",
@@ -259,6 +262,9 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "stackData": [
         "MDF_PropertyValue"
+      ],
+      "latentQueue": [
+        "S02_MSP"
       ],
       "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",

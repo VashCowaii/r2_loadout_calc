@@ -4,10 +4,9 @@ const compositeAbilityObject = {
   "trimCharacterName": "JingYuan",
   "abilityList": [
     "JingYuan_BattleEventAbility_JingYuan_Passive_Insert",
+    "JingYuan_JingYuan_TechniqueInLevel",
     "JingYuan_JingYuan_Passive_Insert_Ability",
     "JingYuan_JingYuan_Passive_Insert",
-    "JingYuan_BattleEventAbility_JingYuan_Passive",
-    "JingYuan_JingYuan_TechniqueInLevel",
     "JingYuan_JingYuan_PassiveAbility01",
     "JingYuan_JingYuan_Ability03_Part02",
     "JingYuan_JingYuan_Ability03_Part01",
@@ -38,6 +37,210 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
+      }
+    },
+    "JingYuan_JingYuan_TechniqueInLevel": {
+      "fileName": "JingYuan_JingYuan_TechniqueInLevel",
+      "childAbilityList": [
+        "JingYuan_JingYuan_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
+      "abilityType": "Technique",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1753288775\">StageAbility_Maze_JingYuan_Modifier</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1753288775\">StageAbility_Maze_JingYuan_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Technique Modifies Current Wave"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Wave Count",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+                      "stackLimit": {
+                        "operator": "Variables[0] (10) || RETURN",
+                        "displayLines": "10",
+                        "constants": [],
+                        "variables": [
+                          10
+                        ]
+                      },
+                      "addStacksPerTrigger": {
+                        "operator": "Variables[0] (3) || RETURN",
+                        "displayLines": "3",
+                        "constants": [],
+                        "variables": [
+                          3
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable with Modifier Values",
+                      "valueType": "Layer",
+                      "variableName": "EnergyBar_ATKCount",
+                      "modifierName": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+                      "multiplier": 1
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "EnergyBar_ATKCountSum",
+                      "value": {
+                        "operator": "Variables[0] (EnergyBar_ATKCount) || Variables[1] (EnergyBar_UltraATKCount) || ADD || RETURN",
+                        "displayLines": "(EnergyBar_ATKCount + EnergyBar_UltraATKCount)",
+                        "constants": [],
+                        "variables": [
+                          "EnergyBar_ATKCount",
+                          "EnergyBar_UltraATKCount"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (EnergyBar_ATKCountSum) || RETURN",
+                        "displayLines": "EnergyBar_ATKCountSum",
+                        "constants": [],
+                        "variables": [
+                          "EnergyBar_ATKCountSum"
+                        ]
+                      },
+                      "maximum": {
+                        "operator": "Variables[0] (10) || RETURN",
+                        "displayLines": "10",
+                        "constants": [],
+                        "variables": [
+                          10
+                        ]
+                      },
+                      "assignState": "True",
+                      "priorState": "Normal",
+                      "bar#": 4,
+                      "cooldown": 0
+                    },
+                    {
+                      "name": "Show Attack Time",
+                      "time": {
+                        "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
+                        "displayLines": "EnergyBar_ATKCount",
+                        "constants": [],
+                        "variables": [
+                          "EnergyBar_ATKCount"
+                        ]
+                      },
+                      "enhanced": {
+                        "operator": "Variables[0] (EnergyBar_UltraATKCount) || RETURN",
+                        "displayLines": "EnergyBar_UltraATKCount",
+                        "constants": [],
+                        "variables": [
+                          "EnergyBar_UltraATKCount"
+                        ]
+                      },
+                      "on": null,
+                      "show": true
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Self-Made Battle-Events}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
+                      "valuePerStack": {
+                        "ATKCount": {
+                          "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
+                          "displayLines": "EnergyBar_ATKCount",
+                          "constants": [],
+                          "variables": [
+                            "EnergyBar_ATKCount"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Self-Made Battle-Events}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
+                      "stackLimit": {
+                        "operator": "Variables[0] (10) || Variables[1] (3) || SUB || RETURN",
+                        "displayLines": "(10 - 3)",
+                        "constants": [],
+                        "variables": [
+                          10,
+                          3
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (10) || RETURN",
+                          "displayLines": "10",
+                          "constants": [],
+                          "variables": [
+                            10
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": {
+                        "operator": "Variables[0] (3) || RETURN",
+                        "displayLines": "3",
+                        "constants": [],
+                        "variables": [
+                          3
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
     },
     "JingYuan_JingYuan_Passive_Insert_Ability": {
@@ -735,313 +938,6 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
-      }
-    },
-    "JingYuan_BattleEventAbility_JingYuan_Passive": {
-      "fileName": "JingYuan_BattleEventAbility_JingYuan_Passive",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1222558059\">JingYuan_BattleEvent</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1172851188\">JingYuan_BattleEvent_BaseSpeed</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"845727839\">JingYuan_BattleEvent_ForceKill</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__845727839\">JingYuan_BattleEvent_ForceKill</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-2008282890\">JingYuan_ListenFlag</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Force Entity Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "ignoreHPLossTriggers": true,
-                      "ignoreDeathTriggers": true
-                    },
-                    {
-                      "name": "Show Attack Time",
-                      "on": null,
-                      "show": false
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1172851188\">JingYuan_BattleEvent_BaseSpeed</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (BattleEvent_JingYuan_00_BaseSpeed) || RETURN",
-                    "displayLines": "BattleEvent_JingYuan_00_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "BattleEvent_JingYuan_00_BaseSpeed"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "JingYuan_JingYuan_TechniqueInLevel": {
-      "fileName": "JingYuan_JingYuan_TechniqueInLevel",
-      "childAbilityList": [
-        "JingYuan_JingYuan_TechniqueInLevel"
-      ],
-      "skillTrigger": "SkillMaze",
-      "abilityType": "Technique",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1753288775\">StageAbility_Maze_JingYuan_Modifier</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1753288775\">StageAbility_Maze_JingYuan_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Technique Modifies Current Wave"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Wave Count",
-                        "compareType": "=",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
-                      "stackLimit": {
-                        "operator": "Variables[0] (10) || RETURN",
-                        "displayLines": "10",
-                        "constants": [],
-                        "variables": [
-                          10
-                        ]
-                      },
-                      "addStacksPerTrigger": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Define Custom Variable with Modifier Values",
-                      "valueType": "Layer",
-                      "variableName": "EnergyBar_ATKCount",
-                      "modifierName": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
-                      "multiplier": 1
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "EnergyBar_ATKCountSum",
-                      "value": {
-                        "operator": "Variables[0] (EnergyBar_ATKCount) || Variables[1] (EnergyBar_UltraATKCount) || ADD || RETURN",
-                        "displayLines": "(EnergyBar_ATKCount + EnergyBar_UltraATKCount)",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_ATKCount",
-                          "EnergyBar_UltraATKCount"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (EnergyBar_ATKCountSum) || RETURN",
-                        "displayLines": "EnergyBar_ATKCountSum",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_ATKCountSum"
-                        ]
-                      },
-                      "maximum": {
-                        "operator": "Variables[0] (10) || RETURN",
-                        "displayLines": "10",
-                        "constants": [],
-                        "variables": [
-                          10
-                        ]
-                      },
-                      "assignState": "True",
-                      "priorState": "Normal",
-                      "bar#": 4,
-                      "cooldown": 0
-                    },
-                    {
-                      "name": "Show Attack Time",
-                      "time": {
-                        "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-                        "displayLines": "EnergyBar_ATKCount",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_ATKCount"
-                        ]
-                      },
-                      "enhanced": {
-                        "operator": "Variables[0] (EnergyBar_UltraATKCount) || RETURN",
-                        "displayLines": "EnergyBar_UltraATKCount",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_UltraATKCount"
-                        ]
-                      },
-                      "on": null,
-                      "show": true
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Self-Made Battle-Events}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
-                      "valuePerStack": {
-                        "ATKCount": {
-                          "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-                          "displayLines": "EnergyBar_ATKCount",
-                          "constants": [],
-                          "variables": [
-                            "EnergyBar_ATKCount"
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Self-Made Battle-Events}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
-                      "stackLimit": {
-                        "operator": "Variables[0] (10) || Variables[1] (3) || SUB || RETURN",
-                        "displayLines": "(10 - 3)",
-                        "constants": [],
-                        "variables": [
-                          10,
-                          3
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (10) || RETURN",
-                          "displayLines": "10",
-                          "constants": [],
-                          "variables": [
-                            10
-                          ]
-                        }
-                      },
-                      "addStacksPerTrigger": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
     },
     "JingYuan_JingYuan_PassiveAbility01": {

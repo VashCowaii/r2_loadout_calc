@@ -3,219 +3,32 @@ const compositeAbilityObject = {
   "fullCharacterName": "Firefly_v0",
   "trimCharacterName": "Fireflyv0",
   "abilityList": [
-    "Fireflyv0_Sam_Eidolon6",
-    "Fireflyv0_Sam_Eidolon4",
-    "Fireflyv0_Sam_Eidolon2_Bonus",
-    "Fireflyv0_Sam_Eidolon2",
-    "Fireflyv0_Sam_Eidolon1",
     "Fireflyv0_Sam_Trace03",
     "Fireflyv0_Sam_Trace02",
     "Fireflyv0_Sam_Trace01",
+    "Fireflyv0_Sam_Eidolon6",
+    "Fireflyv0_Sam_Eidolon4",
+    "Fireflyv0_Sam_Eidolon2",
+    "Fireflyv0_Sam_Eidolon1",
     "Fireflyv0_Sam_TechniqueInLevel",
     "Fireflyv0_Sam_PassiveAbility01_BattleEvent_Insert",
-    "Fireflyv0_Sam_PassiveAbility01_BattleEvent",
+    "Fireflyv0_Sam_Eidolon2_Bonus",
     "Fireflyv0_Sam_PassiveAbility01",
+    "Fireflyv0_Sam_Ability21_Part02",
+    "Fireflyv0_Sam_Ability21_Part01",
+    "Fireflyv0_Sam_Ability11_Part02",
+    "Fireflyv0_Sam_Ability11_Part01",
     "Fireflyv0_Sam_Ability03_Part02",
     "Fireflyv0_Sam_Ability03_Part01",
     "Fireflyv0_Sam_Ability03_EnterReady",
-    "Fireflyv0_Sam_Ability21_Part02",
-    "Fireflyv0_Sam_Ability21_Part01",
     "Fireflyv0_Sam_Ability02_Part02",
     "Fireflyv0_Sam_Ability02_Part01",
-    "Fireflyv0_Sam_Ability11_Part02",
-    "Fireflyv0_Sam_Ability11_Part01",
     "Fireflyv0_Sam_Ability01_Part02",
     "Fireflyv0_Sam_Ability01_Part01",
     "Fireflyv0_Modifiers",
     "Fireflyv0_BE_BattleEvents"
   ],
   "abilityObject": {
-    "Fireflyv0_Sam_Eidolon6": {
-      "fileName": "Fireflyv0_Sam_Eidolon6",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Rank06_StanceBreakAddedRatio",
-          "value": {
-            "operator": "Variables[0] (0.5) || RETURN",
-            "displayLines": "0.5",
-            "constants": [],
-            "variables": [
-              0.5
-            ]
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Fireflyv0_Sam_Eidolon4": {
-      "fileName": "Fireflyv0_Sam_Eidolon4",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Fireflyv0_Sam_Eidolon2_Bonus": {
-      "fileName": "Fireflyv0_Sam_Eidolon2_Bonus",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Fireflyv0_Sam_Eidolon2": {
-      "fileName": "Fireflyv0_Sam_Eidolon2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Update Displayed Energy Bar",
-          "assignState": "True",
-          "priorState": "Disable",
-          "bar#": 1,
-          "cooldown": 0
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Fireflyv0_Sam_Eidolon1": {
-      "fileName": "Fireflyv0_Sam_Eidolon1",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"626123002\">Sam_Eidolon1</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1464889709\">Sam_Eidolon1_Sub</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "Adjust Target Stats",
-                  "modifiedValuesArray": [
-                    {
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                      "value": "-0.15"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__626123002\">Sam_Eidolon1</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Update Ability Properties",
-                  "abilityTagList": [
-                    "Skill21"
-                  ],
-                  "propertyList": [
-                    {
-                      "name": "Ability Property Action",
-                      "propertyName": "Skill Point Cost",
-                      "propertyAction": "Reset to Default"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Update Ability Properties",
-                  "abilityTagList": [
-                    "Skill21"
-                  ],
-                  "propertyList": [
-                    {
-                      "name": "Ability Property Action",
-                      "propertyName": "Skill Point Cost",
-                      "propertyAction": "Remove"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Name",
-                    "skillName": "Skill21"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1464889709\">Sam_Eidolon1_Sub</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1464889709\">Sam_Eidolon1_Sub</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "Fireflyv0_Sam_Trace03": {
       "fileName": "Fireflyv0_Sam_Trace03",
       "abilityType": null,
@@ -501,6 +314,181 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
+    "Fireflyv0_Sam_Eidolon6": {
+      "fileName": "Fireflyv0_Sam_Eidolon6",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Rank06_StanceBreakAddedRatio",
+          "value": {
+            "operator": "Variables[0] (0.5) || RETURN",
+            "displayLines": "0.5",
+            "constants": [],
+            "variables": [
+              0.5
+            ]
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Fireflyv0_Sam_Eidolon4": {
+      "fileName": "Fireflyv0_Sam_Eidolon4",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Fireflyv0_Sam_Eidolon2": {
+      "fileName": "Fireflyv0_Sam_Eidolon2",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Update Displayed Energy Bar",
+          "assignState": "True",
+          "priorState": "Disable",
+          "bar#": 1,
+          "cooldown": 0
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Fireflyv0_Sam_Eidolon1": {
+      "fileName": "Fireflyv0_Sam_Eidolon1",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"626123002\">Sam_Eidolon1</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1464889709\">Sam_Eidolon1_Sub</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "Adjust Target Stats",
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "-0.15"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__626123002\">Sam_Eidolon1</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Update Ability Properties",
+                  "abilityTagList": [
+                    "Skill21"
+                  ],
+                  "propertyList": [
+                    {
+                      "name": "Ability Property Action",
+                      "propertyName": "Skill Point Cost",
+                      "propertyAction": "Reset to Default"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Update Ability Properties",
+                  "abilityTagList": [
+                    "Skill21"
+                  ],
+                  "propertyList": [
+                    {
+                      "name": "Ability Property Action",
+                      "propertyName": "Skill Point Cost",
+                      "propertyAction": "Remove"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Name",
+                    "skillName": "Skill21"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1464889709\">Sam_Eidolon1_Sub</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1464889709\">Sam_Eidolon1_Sub</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "Fireflyv0_Sam_TechniqueInLevel": {
       "fileName": "Fireflyv0_Sam_TechniqueInLevel",
       "childAbilityList": [
@@ -752,103 +740,13 @@ const compositeAbilityObject = {
         "primaryTarget": "Inherent Target"
       }
     },
-    "Fireflyv0_Sam_PassiveAbility01_BattleEvent": {
-      "fileName": "Fireflyv0_Sam_PassiveAbility01_BattleEvent",
+    "Fireflyv0_Sam_Eidolon2_Bonus": {
+      "fileName": "Fireflyv0_Sam_Eidolon2_Bonus",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"92987575\">Sam_PassiveAbility01_BattleEvent</a>"
-        },
-        {
-          "name": "Block Advance/Delay Effects",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "whitelist": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "whitelistTag": "Mask_TurnBasedAdvance"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__92987575\">Sam_PassiveAbility01_BattleEvent</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Sam_PassiveAbility01_BattleEvent_Insert",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Battle Event's Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Battle Event's Caster}}"
-                  },
-                  "priorityTag": "CharacterBuffOthers",
-                  "ownerState": "Anyone",
-                  "targetState": "Mask_AliveOrLimbo",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                },
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "ignoreHPLossTriggers": true,
-                  "ignoreDeathTriggers": true
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (BattleEvent_Sam_BaseSpeed) || RETURN",
-                    "displayLines": "BattleEvent_Sam_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "BattleEvent_Sam_BaseSpeed"
-                    ]
-                  }
-                },
-                {
-                  "name": "Update Action Bar Display",
-                  "triggerName": "Status_Status2",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
+      "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
@@ -1988,135 +1886,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "Fireflyv0_Sam_Ability03_Part02": {
-      "fileName": "Fireflyv0_Sam_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Battle Event",
-          "teamName": "Player Team",
-          "eventID": 11310,
-          "variables": {
-            "BattleEvent_Sam_BaseSpeed": {
-              "operator": "Variables[0] (70) || RETURN",
-              "displayLines": "70",
-              "constants": [],
-              "variables": [
-                70
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
-          "valuePerStack": {
-            "MDF_SpeedUP": {
-              "operator": "Variables[0] (60) || RETURN",
-              "displayLines": "60",
-              "constants": [],
-              "variables": [
-                60
-              ]
-            },
-            "MDF_StatusResistance": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
-            },
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
-            }
-          }
-        },
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "advanceType": "Advance",
-          "multiAdd": -1
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "valuePercent": 1,
-          "ofAbilitySplit": true,
-          "isFixed": "* ERR"
-        },
-        "Trigger: Skip Death Handling",
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "Fireflyv0_Sam_Ability03_Part01": {
-      "fileName": "Fireflyv0_Sam_Ability03_Part01",
-      "childAbilityList": [
-        "Fireflyv0_Sam_Ability03_Camera",
-        "Fireflyv0_Sam_Ability03_EnterReady",
-        "Fireflyv0_Sam_Ability03_Part01",
-        "Fireflyv0_Sam_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Ultimate",
-      "energy": 5,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Sam_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Fireflyv0_Sam_Ability03_EnterReady": {
-      "fileName": "Fireflyv0_Sam_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
     "Fireflyv0_Sam_Ability21_Part02": {
       "fileName": "Fireflyv0_Sam_Ability21_Part02",
       "abilityType": null,
@@ -2541,156 +2310,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target",
         "subTarget": "Blast Targets"
-      }
-    },
-    "Fireflyv0_Sam_Ability02_Part02": {
-      "fileName": "Fireflyv0_Sam_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Consume",
-          "consumeFrom": "MaxHP",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "consumePercent": {
-            "operator": "Variables[0] (0.4) || RETURN",
-            "displayLines": "0.4",
-            "constants": [],
-            "variables": [
-              0.4
-            ]
-          },
-          "consumeFloor": 1
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "valuePercent": {
-            "operator": "Variables[0] (0.6) || RETURN",
-            "displayLines": "0.6",
-            "constants": [],
-            "variables": [
-              0.6
-            ]
-          },
-          "isFixed": "(Fixed)"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
-            },
-            "HitSplit": 0.4,
-            "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
-            },
-            "ToughnessDMGType": {
-              "DamageType": "Fire"
-            },
-            "Tags": null,
-            "attackType": "Skill",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] (2) || RETURN",
-              "displayLines": "2",
-              "constants": [],
-              "variables": [
-                2
-              ]
-            },
-            "HitSplit": 0.6,
-            "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
-            },
-            "ToughnessDMGType": {
-              "DamageType": "Fire"
-            },
-            "Tags": null,
-            "attackType": "Skill",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "Fireflyv0_Sam_Ability02_Part01": {
-      "fileName": "Fireflyv0_Sam_Ability02_Part01",
-      "childAbilityList": [
-        "Fireflyv0_Sam_Ability02_Camera",
-        "Fireflyv0_Sam_Ability02_Part01",
-        "Fireflyv0_Sam_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": [
-        20,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Sam_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
       }
     },
     "Fireflyv0_Sam_Ability11_Part02": {
@@ -3137,6 +2756,285 @@ const compositeAbilityObject = {
           "ability": "Sam_Ability11_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Fireflyv0_Sam_Ability03_Part02": {
+      "fileName": "Fireflyv0_Sam_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Battle Event",
+          "teamName": "Player Team",
+          "eventID": 11310,
+          "variables": {
+            "BattleEvent_Sam_BaseSpeed": {
+              "operator": "Variables[0] (70) || RETURN",
+              "displayLines": "70",
+              "constants": [],
+              "variables": [
+                70
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1084783230\">Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]",
+          "valuePerStack": {
+            "MDF_SpeedUP": {
+              "operator": "Variables[0] (60) || RETURN",
+              "displayLines": "60",
+              "constants": [],
+              "variables": [
+                60
+              ]
+            },
+            "MDF_StatusResistance": {
+              "operator": "Variables[0] (0.3) || RETURN",
+              "displayLines": "0.3",
+              "constants": [],
+              "variables": [
+                0.3
+              ]
+            },
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (0.2) || RETURN",
+              "displayLines": "0.2",
+              "constants": [],
+              "variables": [
+                0.2
+              ]
+            }
+          }
+        },
+        {
+          "name": "Action Advance/Delay",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "advanceType": "Advance",
+          "multiAdd": -1
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "valuePercent": 1,
+          "ofAbilitySplit": true,
+          "isFixed": "* ERR"
+        },
+        "Trigger: Skip Death Handling",
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "Fireflyv0_Sam_Ability03_Part01": {
+      "fileName": "Fireflyv0_Sam_Ability03_Part01",
+      "childAbilityList": [
+        "Fireflyv0_Sam_Ability03_Camera",
+        "Fireflyv0_Sam_Ability03_EnterReady",
+        "Fireflyv0_Sam_Ability03_Part01",
+        "Fireflyv0_Sam_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Ultimate",
+      "energy": 5,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Sam_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Fireflyv0_Sam_Ability03_EnterReady": {
+      "fileName": "Fireflyv0_Sam_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "Fireflyv0_Sam_Ability02_Part02": {
+      "fileName": "Fireflyv0_Sam_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Consume",
+          "consumeFrom": "MaxHP",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "consumePercent": {
+            "operator": "Variables[0] (0.4) || RETURN",
+            "displayLines": "0.4",
+            "constants": [],
+            "variables": [
+              0.4
+            ]
+          },
+          "consumeFloor": 1
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "valuePercent": {
+            "operator": "Variables[0] (0.6) || RETURN",
+            "displayLines": "0.6",
+            "constants": [],
+            "variables": [
+              0.6
+            ]
+          },
+          "isFixed": "(Fixed)"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] (2) || RETURN",
+              "displayLines": "2",
+              "constants": [],
+              "variables": [
+                2
+              ]
+            },
+            "HitSplit": 0.4,
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "ToughnessDMGType": {
+              "DamageType": "Fire"
+            },
+            "Tags": null,
+            "attackType": "Skill",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] (2) || RETURN",
+              "displayLines": "2",
+              "constants": [],
+              "variables": [
+                2
+              ]
+            },
+            "HitSplit": 0.6,
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "ToughnessDMGType": {
+              "DamageType": "Fire"
+            },
+            "Tags": null,
+            "attackType": "Skill",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "Fireflyv0_Sam_Ability02_Part01": {
+      "fileName": "Fireflyv0_Sam_Ability02_Part01",
+      "childAbilityList": [
+        "Fireflyv0_Sam_Ability02_Camera",
+        "Fireflyv0_Sam_Ability02_Part01",
+        "Fireflyv0_Sam_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": [
+        20,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Sam_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": [],

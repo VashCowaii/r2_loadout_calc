@@ -1,11 +1,11 @@
 const configAbility = {
-  "fileName": "Gepard_Gepard_Trace02",
+  "fileName": "BlackSwan_BlackSwan_Ability03_Cutin",
   "abilityType": null,
   "energy": null,
   "toughnessList": null,
   "parse": [],
   "references": [],
   "targetObjectData": {
-    "primaryTarget": "{{Caster}}"
+    "primaryTarget": "Inherent Target"
   }
 }

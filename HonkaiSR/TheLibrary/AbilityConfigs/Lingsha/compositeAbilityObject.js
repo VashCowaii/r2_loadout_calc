@@ -4,13 +4,11 @@ const compositeAbilityObject = {
   "trimCharacterName": "Lingsha",
   "abilityList": [
     "Lingsha_Lingsha_TechniqueInLevel",
+    "Lingsha_Lingsha_BPAbility_BattleEvent_Part02",
     "Lingsha_Lingsha_PassiveAbility01",
     "Lingsha_Lingsha_Ability03_Part02",
     "Lingsha_Lingsha_Ability03_Part01",
     "Lingsha_Lingsha_Ability03_EnterReady",
-    "Lingsha_Lingsha_BPAbility_BattleEvent_Part02",
-    "Lingsha_Lingsha_BPAbility_BattleEvent_Part01",
-    "Lingsha_Lingsha_BE_PassiveAbility",
     "Lingsha_Lingsha_Ability02_Part02",
     "Lingsha_Lingsha_Ability02_Part01",
     "Lingsha_Lingsha_Ability01_Part02",
@@ -233,6 +231,236 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Lingsha_Lingsha_BPAbility_BattleEvent_Part02": {
+      "fileName": "Lingsha_Lingsha_BPAbility_BattleEvent_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Self-Made Battle-Events}}"
+            },
+            "value1": "BattleEvent_Lingsha_00_PointB3",
+            "compareType": ">=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Self-Made Battle-Events}}"
+              },
+              "variableName": "BattleEvent_Lingsha_00_PointB3",
+              "value": 0
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"551246003\">Lingsha_PointB3_CD</a>[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
+              "duration": {
+                "operator": "Variables[0] (2) || RETURN",
+                "displayLines": "2",
+                "constants": [],
+                "variables": [
+                  2
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] (0.75) || RETURN",
+              "displayLines": "0.75",
+              "constants": [],
+              "variables": [
+                0.75
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
+              "displayLines": "AOE Toughness Value",
+              "constants": [],
+              "variables": [
+                "AOE Toughness Value"
+              ]
+            },
+            "Tags": [
+              "Summon-Tag DMG"
+            ],
+            "attackType": "Follow-up"
+          }
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1849801979\">Lingsha_Passive_Target</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"988152442\">Lingsha_Passive_Target_Eidolon6</a>"
+            }
+          ]
+        },
+        {
+          "name": "Trigger: Attack End",
+          "fakeCharacterAttack": true
+        },
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
+          "dispelCount": {
+            "operator": "Variables[0] (1) || RETURN",
+            "displayLines": "1",
+            "constants": [],
+            "variables": [
+              1
+            ]
+          },
+          "dispelOrder": "LastAdded"
+        },
+        {
+          "name": "Heal",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
+          "healPercent": {
+            "operator": "Variables[0] (0.12) || RETURN",
+            "displayLines": "0.12",
+            "constants": [],
+            "variables": [
+              0.12
+            ]
+          },
+          "healFlat": {
+            "operator": "Variables[0] (360) || RETURN",
+            "displayLines": "360",
+            "constants": [],
+            "variables": [
+              360
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 4
+          },
+          "passed": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}.[[living]].[[sortByHPCurrent]]"
+              },
+              "maxTargets": 1,
+              "ifTargetFound": [
+                {
+                  "name": "Heal",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "healPercent": {
+                    "operator": "Variables[0] (0.4) || RETURN",
+                    "displayLines": "0.4",
+                    "constants": [],
+                    "variables": [
+                      0.4
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Self-Made Battle-Events}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
+            "invertCondition": true
+          },
+          "passed": [
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": 0,
+              "assignState": "True",
+              "priorState": "Normal",
+              "bar#": 4
+            },
+            {
+              "name": "Mark Entity For Immediate Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Self-Made Battle-Events}}"
+              }
+            },
+            {
+              "name": "Force Entity Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Self-Made Battle-Events}}"
+              },
+              "ignoreHPLossTriggers": true,
+              "ignoreDeathTriggers": true
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 6
+              },
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1458980452\">Lingsha_Eidolon6_Listen</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
       }
     },
     "Lingsha_Lingsha_PassiveAbility01": {
@@ -980,388 +1208,6 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
-      }
-    },
-    "Lingsha_Lingsha_BPAbility_BattleEvent_Part02": {
-      "fileName": "Lingsha_Lingsha_BPAbility_BattleEvent_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Self-Made Battle-Events}}"
-            },
-            "value1": "BattleEvent_Lingsha_00_PointB3",
-            "compareType": ">=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Self-Made Battle-Events}}"
-              },
-              "variableName": "BattleEvent_Lingsha_00_PointB3",
-              "value": 0
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"551246003\">Lingsha_PointB3_CD</a>[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
-              "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] (0.75) || RETURN",
-              "displayLines": "0.75",
-              "constants": [],
-              "variables": [
-                0.75
-              ]
-            },
-            "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
-            },
-            "Tags": [
-              "Summon-Tag DMG"
-            ],
-            "attackType": "Follow-up"
-          }
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-1849801979\">Lingsha_Passive_Target</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 6
-          },
-          "passed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"988152442\">Lingsha_Passive_Target_Eidolon6</a>"
-            }
-          ]
-        },
-        {
-          "name": "Trigger: Attack End",
-          "fakeCharacterAttack": true
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members}}"
-          },
-          "dispelCount": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
-          },
-          "dispelOrder": "LastAdded"
-        },
-        {
-          "name": "Heal",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members}}"
-          },
-          "healPercent": {
-            "operator": "Variables[0] (0.12) || RETURN",
-            "displayLines": "0.12",
-            "constants": [],
-            "variables": [
-              0.12
-            ]
-          },
-          "healFlat": {
-            "operator": "Variables[0] (360) || RETURN",
-            "displayLines": "360",
-            "constants": [],
-            "variables": [
-              360
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 4
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}.[[living]].[[sortByHPCurrent]]"
-              },
-              "maxTargets": 1,
-              "ifTargetFound": [
-                {
-                  "name": "Heal",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "healPercent": {
-                    "operator": "Variables[0] (0.4) || RETURN",
-                    "displayLines": "0.4",
-                    "constants": [],
-                    "variables": [
-                      0.4
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Self-Made Battle-Events}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "Update Displayed Energy Bar",
-              "value": 0,
-              "assignState": "True",
-              "priorState": "Normal",
-              "bar#": 4
-            },
-            {
-              "name": "Mark Entity For Immediate Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Self-Made Battle-Events}}"
-              }
-            },
-            {
-              "name": "Force Entity Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Self-Made Battle-Events}}"
-              },
-              "ignoreHPLossTriggers": true,
-              "ignoreDeathTriggers": true
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Eidolon Activated",
-                "eidolon": 6
-              },
-              "passed": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1458980452\">Lingsha_Eidolon6_Listen</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "Lingsha_Lingsha_BPAbility_BattleEvent_Part01": {
-      "fileName": "Lingsha_Lingsha_BPAbility_BattleEvent_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Battle Event's Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Lingsha_BPAbility_BattleEvent_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "Lingsha_Lingsha_BE_PassiveAbility": {
-      "fileName": "Lingsha_Lingsha_BE_PassiveAbility",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1795719445\">Lingsha_BPAbility_BattleEvent</a>",
-          "counter": {
-            "operator": "Variables[0] (BattleEvent_Lingsha_PointB3) || RETURN",
-            "displayLines": "BattleEvent_Lingsha_PointB3",
-            "constants": [],
-            "variables": [
-              "BattleEvent_Lingsha_PointB3"
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
-          "counter": {
-            "operator": "Variables[0] (BattleEvent_Lingsha_AttackTime) || RETURN",
-            "displayLines": "BattleEvent_Lingsha_AttackTime",
-            "constants": [],
-            "variables": [
-              "BattleEvent_Lingsha_AttackTime"
-            ]
-          },
-          "valuePerStack": {
-            "_AttackTime": {
-              "operator": "Variables[0] (BattleEvent_Lingsha_AttackTime) || RETURN",
-              "displayLines": "BattleEvent_Lingsha_AttackTime",
-              "constants": [],
-              "variables": [
-                "BattleEvent_Lingsha_AttackTime"
-              ]
-            }
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1795719445\">Lingsha_BPAbility_BattleEvent</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Battle Event's Caster}}"
-                  },
-                  "variableName": "Lingsha_BENum",
-                  "context": "TargetEntity",
-                  "value": -1,
-                  "max": 100
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "condition": {
-                    "name": "Insert Ability Condition",
-                    "type": "AbilityOwnerInsertUnusedCount",
-                    "typeValue": 1
-                  },
-                  "abilityName": "Lingsha_BPAbility_BattleEvent_Part01",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "priorityTag": "CharacterAttackFromSelf",
-                  "ownerState": "Mask_AliveOrRevivable",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (BattleEvent_Lingsha_BaseSpeed) || RETURN",
-                    "displayLines": "BattleEvent_Lingsha_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "BattleEvent_Lingsha_BaseSpeed"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
       }
     },
     "Lingsha_Lingsha_Ability02_Part02": {

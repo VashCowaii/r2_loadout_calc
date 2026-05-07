@@ -7,9 +7,9 @@ const compositeAbilityObject = {
     "Pela_Pela_Trace01",
     "Pela_Pela_TechniqueInLevel",
     "Pela_Pela_PassiveAbility01",
+    "Pela_Pela_Ability03_Cutin",
     "Pela_Pela_Ability03_Part02",
     "Pela_Pela_Ability03_Part01",
-    "Pela_Pela_Ability03_Cutin",
     "Pela_Pela_Ability02_Part02",
     "Pela_Pela_Ability02_Part01",
     "Pela_Pela_Ability01_Part02",
@@ -660,6 +660,17 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
+    "Pela_Pela_Ability03_Cutin": {
+      "fileName": "Pela_Pela_Ability03_Cutin",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
     "Pela_Pela_Ability03_Part02": {
       "fileName": "Pela_Pela_Ability03_Part02",
       "abilityType": null,
@@ -813,17 +824,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Pela_Pela_Ability03_Cutin": {
-      "fileName": "Pela_Pela_Ability03_Cutin",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Pela_Pela_Ability02_Part02": {

@@ -3,14 +3,14 @@ const compositeAbilityObject = {
   "fullCharacterName": "Sampo",
   "trimCharacterName": "Sampo",
   "abilityList": [
-    "Sampo_Sampo_Eidolon2",
     "Sampo_Sampo_Trace03",
     "Sampo_Sampo_Trace02",
+    "Sampo_Sampo_Eidolon2",
     "Sampo_Sampo_TechniqueInLevel",
     "Sampo_Sampo_PassiveAbility01",
+    "Sampo_Sampo_Ability03_EnterReady",
     "Sampo_Sampo_Ability03_Part02",
     "Sampo_Sampo_Ability03_Part01",
-    "Sampo_Sampo_Ability03_EnterReady",
     "Sampo_FireBullet_Ability",
     "Sampo_Sampo_Ability02_Part02",
     "Sampo_Sampo_Ability02_Part01",
@@ -19,6 +19,104 @@ const compositeAbilityObject = {
     "Sampo_Modifiers"
   ],
   "abilityObject": {
+    "Sampo_Sampo_Trace03": {
+      "fileName": "Sampo_Sampo_Trace03",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"759323043\">M_Sampo_Tree03</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__759323043\">M_Sampo_Tree03</a>",
+          "execute": [
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Source Owner}}"
+                        },
+                        "flagName": "STAT_DOT_Poison"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "flagName": "STAT_DOT_Poison"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
+                          "value": "0.15"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Sampo_Sampo_Trace02": {
+      "fileName": "Sampo_Sampo_Trace02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"63874351\">M_Ultimate_ExtraSP</a>",
+          "valuePerStack": {
+            "MDF_AddValue": {
+              "operator": "Variables[0] (10) || RETURN",
+              "displayLines": "10",
+              "constants": [],
+              "variables": [
+                10
+              ]
+            }
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "Sampo_Sampo_Eidolon2": {
       "fileName": "Sampo_Sampo_Eidolon2",
       "abilityType": null,
@@ -205,104 +303,6 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Sampo_Sampo_Trace03": {
-      "fileName": "Sampo_Sampo_Trace03",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"759323043\">M_Sampo_Tree03</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__759323043\">M_Sampo_Tree03</a>",
-          "execute": [
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target's Source Owner}}"
-                        },
-                        "flagName": "STAT_DOT_Poison"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "flagName": "STAT_DOT_Poison"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
-                          "value": "0.15"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Sampo_Sampo_Trace02": {
-      "fileName": "Sampo_Sampo_Trace02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"63874351\">M_Ultimate_ExtraSP</a>",
-          "valuePerStack": {
-            "MDF_AddValue": {
-              "operator": "Variables[0] (10) || RETURN",
-              "displayLines": "10",
-              "constants": [],
-              "variables": [
-                10
-              ]
-            }
-          }
-        }
-      ],
-      "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
@@ -562,6 +562,17 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
+    "Sampo_Sampo_Ability03_EnterReady": {
+      "fileName": "Sampo_Sampo_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
     "Sampo_Sampo_Ability03_Part02": {
       "fileName": "Sampo_Sampo_Ability03_Part02",
       "abilityType": null,
@@ -685,17 +696,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Sampo_Sampo_Ability03_EnterReady": {
-      "fileName": "Sampo_Sampo_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Sampo_FireBullet_Ability": {
