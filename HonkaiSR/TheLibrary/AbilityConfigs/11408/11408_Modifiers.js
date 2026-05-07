@@ -236,16 +236,16 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "MDF_DamageAddRatio",
               "value": {
-                "operator": "Variables[0] (MDF_DamageAddRatio) || Variables[1] (ENEMIES_OBJECT_UNUSED__213) || Variables[2] (_MaxHP) || DIV || Constants[0] (100) || MUL || Variables[3] (ENEMIES_OBJECT_UNUSED__260) || MUL || ADD || RETURN",
-                "displayLines": "(MDF_DamageAddRatio + (((ENEMIES_OBJECT_UNUSED__213 / _MaxHP) * 100) * ENEMIES_OBJECT_UNUSED__260))",
+                "operator": "Variables[0] (MDF_DamageAddRatio) || Variables[1] (MDF_OverHeal) || Variables[2] (_MaxHP) || DIV || Constants[0] (100) || MUL || Variables[3] (MDF_OverflowHealToDamageAddRatio) || MUL || ADD || RETURN",
+                "displayLines": "(MDF_DamageAddRatio + (((MDF_OverHeal / _MaxHP) * 100) * MDF_OverflowHealToDamageAddRatio))",
                 "constants": [
                   100
                 ],
                 "variables": [
                   "MDF_DamageAddRatio",
-                  "ENEMIES_OBJECT_UNUSED__213",
+                  "MDF_OverHeal",
                   "_MaxHP",
-                  "ENEMIES_OBJECT_UNUSED__260"
+                  "MDF_OverflowHealToDamageAddRatio"
                 ]
               }
             },
@@ -256,11 +256,11 @@ const configAbility = {
                 "value1": "MDF_DamageAddRatio",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__261) || RETURN",
-                  "displayLines": "ENEMIES_OBJECT_UNUSED__261",
+                  "operator": "Variables[0] (MDF_MaxDamageAddRatio) || RETURN",
+                  "displayLines": "MDF_MaxDamageAddRatio",
                   "constants": [],
                   "variables": [
-                    "ENEMIES_OBJECT_UNUSED__261"
+                    "MDF_MaxDamageAddRatio"
                   ]
                 }
               },
@@ -269,11 +269,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_DamageAddRatio",
                   "value": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__261) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__261",
+                    "operator": "Variables[0] (MDF_MaxDamageAddRatio) || RETURN",
+                    "displayLines": "MDF_MaxDamageAddRatio",
                     "constants": [],
                     "variables": [
-                      "ENEMIES_OBJECT_UNUSED__261"
+                      "MDF_MaxDamageAddRatio"
                     ]
                   }
                 }
@@ -307,12 +307,12 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "MDF_HealCount",
               "value": {
-                "operator": "Variables[0] (MDF_HealCount) || Variables[1] (ENEMIES_OBJECT_UNUSED__213) || ADD || RETURN",
-                "displayLines": "(MDF_HealCount + ENEMIES_OBJECT_UNUSED__213)",
+                "operator": "Variables[0] (MDF_HealCount) || Variables[1] (MDF_OverHeal) || ADD || RETURN",
+                "displayLines": "(MDF_HealCount + MDF_OverHeal)",
                 "constants": [],
                 "variables": [
                   "MDF_HealCount",
-                  "ENEMIES_OBJECT_UNUSED__213"
+                  "MDF_OverHeal"
                 ]
               }
             },
@@ -323,11 +323,11 @@ const configAbility = {
                 "value1": "MDF_HealCount",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__262) || Variables[1] (_MaxHP) || MUL || RETURN",
-                  "displayLines": "(ENEMIES_OBJECT_UNUSED__262 * _MaxHP)",
+                  "operator": "Variables[0] (MDF_HealHPRatio) || Variables[1] (_MaxHP) || MUL || RETURN",
+                  "displayLines": "(MDF_HealHPRatio * _MaxHP)",
                   "constants": [],
                   "variables": [
-                    "ENEMIES_OBJECT_UNUSED__262",
+                    "MDF_HealHPRatio",
                     "_MaxHP"
                   ]
                 }
@@ -337,11 +337,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_HealCount",
                   "value": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__262) || Variables[1] (_MaxHP) || MUL || RETURN",
-                    "displayLines": "(ENEMIES_OBJECT_UNUSED__262 * _MaxHP)",
+                    "operator": "Variables[0] (MDF_HealHPRatio) || Variables[1] (_MaxHP) || MUL || RETURN",
+                    "displayLines": "(MDF_HealHPRatio * _MaxHP)",
                     "constants": [],
                     "variables": [
-                      "ENEMIES_OBJECT_UNUSED__262",
+                      "MDF_HealHPRatio",
                       "_MaxHP"
                     ]
                   }
@@ -367,11 +367,11 @@ const configAbility = {
                     "value1": "CurrentHP%",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__263) || RETURN",
-                      "displayLines": "ENEMIES_OBJECT_UNUSED__263",
+                      "operator": "Variables[0] (MDF_MaxHealAmount) || RETURN",
+                      "displayLines": "MDF_MaxHealAmount",
                       "constants": [],
                       "variables": [
-                        "ENEMIES_OBJECT_UNUSED__263"
+                        "MDF_MaxHealAmount"
                       ]
                     }
                   },
