@@ -1142,7 +1142,7 @@ const configAbility = {
                                   },
                                   "modifier": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                                   "valuePerStack": {
-                                    "value_0_Saber_EntityStockSPForShow": {
+                                    "Saber_EntityStockSPForShow": {
                                       "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
                                       "displayLines": "Saber_00_EntityStockSP",
                                       "constants": [],
@@ -1164,7 +1164,7 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                               "valuePerStack": {
-                                "value_0_Saber_EntityStockSPForShow": {
+                                "Saber_EntityStockSPForShow": {
                                   "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
                                   "displayLines": "Saber_00_EntityStockSP",
                                   "constants": [],
