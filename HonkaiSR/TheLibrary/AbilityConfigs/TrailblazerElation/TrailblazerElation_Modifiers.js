@@ -10,6 +10,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-929199950\">ADV_StageAbility_Maze_Small_PlayerBoy_40</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__724493482\">ADV_StageAbility_Maze_PlayerBoy_40</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1187997183\">PlayerBoy_40_ElationEchoPointBonus</a>",
       "stackType": "Multiple",
       "modifierFlags": [
