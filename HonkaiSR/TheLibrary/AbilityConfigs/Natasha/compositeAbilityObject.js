@@ -7,6 +7,9 @@ const compositeAbilityObject = {
     "Natasha_Natasha_Trace02",
     "Natasha_Natasha_Eidolon4",
     "Natasha_Natasha_Eidolon1",
+    "Natasha_LocalPlayer_StandardAbility_AttackBreak",
+    "Natasha_LocalPlayer_Natasha_TechniqueUsage",
+    "Natasha_LocalPlayer_Natasha_NormalAtk01",
     "Natasha_Natasha_Eidolon1_InsertAbility_Part02",
     "Natasha_Natasha_Eidolon1_InsertAbility_Part01",
     "Natasha_Natasha_TechniqueInLevel",
@@ -30,6 +33,13 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1196866712\">ADV_StageAbility_Maze_Natasha</a>",
+          "counter": 1,
+          "stackType": "Merge",
+          "duration": 20
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1227965702\">Natasha_BPAbility_DefenceRatioUp</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
@@ -308,6 +318,448 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Natasha_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Natasha_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Natasha_LocalPlayer_Natasha_TechniqueUsage": {
+      "fileName": "Natasha_LocalPlayer_Natasha_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "110501(SkillMaze)"
+                    }
+                  ]
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "110501(SkillMaze)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "110501(SkillMaze)"
+                    }
+                  ]
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "110501(SkillMaze)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Natasha_LocalPlayer_Natasha_NormalAtk01": {
+      "fileName": "Natasha_LocalPlayer_Natasha_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "from": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "to": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
+                "value1": "Distance_Between_Entities",
+                "compareType": "<=",
+                "value2": 7.5
+              },
+              "passed": [
+                {
+                  "name": "Shot Fired",
+                  "execute": [
+                    {
+                      "name": "Overworld Attack Instance",
+                      "onHit": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "AND",
+                            "conditionList": [
+                              "Compare Projectile Visual Lifetime",
+                              {
+                                "name": "Target Exists",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Projectile's Target}}"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "projectileFinished": [
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Shot Fired",
+                  "execute": [
+                    {
+                      "name": "Overworld Attack Instance",
+                      "onAttack": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "AND",
+                            "conditionList": [
+                              "Compare Projectile Visual Lifetime",
+                              {
+                                "name": "Target Exists",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Projectile's Target}}"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "projectileFinished": [
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance",
+                  "onAttack": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          "Compare Projectile Visual Lifetime",
+                          {
+                            "name": "Target Exists",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Projectile's Target}}"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "Natasha_Natasha_Eidolon1_InsertAbility_Part02": {

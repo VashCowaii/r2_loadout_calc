@@ -10,6 +10,13 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1196866712\">ADV_StageAbility_Maze_Natasha</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "duration": 20
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1227965702\">Natasha_BPAbility_DefenceRatioUp</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
