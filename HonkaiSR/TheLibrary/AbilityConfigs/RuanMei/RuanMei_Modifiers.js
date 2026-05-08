@@ -10,12 +10,35 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-524458531\">ADV_StageAbility_Maze_RuanMei_RogueExtraEffect</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "onBattlePrep": [
+        {
+          "name": "IF",
+          "conditions": "Has SU Buff Aspect"
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__158695251\">ADV_StageAbility_Maze_RuanMei_RogueIgnoreWeakness</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "EnterBattleAdvantage"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-818714077\">ADV_StageAbility_Maze_RuanMei</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__104142449\">RuanMei_Ability02_Area_Friend</a>[<span class=\"descriptionNumberColor\">Overtone</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "Skill02_P1_DamageAddedRatio_Friend",
-        "Skill02_P2_StanceBreakAddedRatio_Friend"
-      ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">Skill02_P1_DamageAddedRatio_Friend</span>. Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">Skill02_P2_StanceBreakAddedRatio_Friend</span>.",
       "type": "Buff",
       "effectName": "Boost DMG and Weakness Break Efficiency",
@@ -447,9 +470,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1385395722\">RuanMei_PassiveArea</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "Skill03_P1_PenetrateRatio"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -866,9 +886,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1641844295\">RuanMei_AttackBreakEnemyAttackUp</a>[<span class=\"descriptionNumberColor\">Reedside Promenade</span>]",
-      "stackData": [
-        "SkillRank_Rank02_P1_AttackUpRatio"
-      ],
       "description": "When dealing DMG to enemy targets with Weakness Break, increases ATK by <span class=\"descriptionNumberColor\">#SkillRank_Rank02_P1_AttackUpRatio</span>.",
       "type": "Buff",
       "statusName": "Reedside Promenade",
@@ -909,9 +926,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "stackData": [
         "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "Skill03_P1_PenetrateRatio"
       ],
       "execute": [
         {
@@ -1272,9 +1286,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-780236472\">RuanMei_Tree02_RecoverSP</a>",
-      "stackData": [
-        "SkillTree_PointB2_P1_SP"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -1302,9 +1313,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-23155683\">RuanMei_BreakDamageAdded</a>[<span class=\"descriptionNumberColor\">Inert Respiration</span>]",
-      "stackData": [
-        "SkillTree_PointB1_P1_BreakDamageAdded"
-      ],
       "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">SkillTree_PointB1_P1_BreakDamageAdded</span>.",
       "type": "Buff",
       "statusName": "Inert Respiration",
