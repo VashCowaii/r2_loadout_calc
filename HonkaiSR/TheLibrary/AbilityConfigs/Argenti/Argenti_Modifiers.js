@@ -10,6 +10,43 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1438165383\">ADV_StageAbility_Argenti_BeforeBattleStunListener</a>",
+      "onBattlePrep": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Parameter Target List}}"
+          },
+          "modifier": null,
+          "ID": "130201(SkillMaze)",
+          "counter": 1,
+          "duration": {
+            "operator": "Variables[0] (10) || RETURN",
+            "displayLines": "10",
+            "constants": [],
+            "variables": [
+              10
+            ]
+          },
+          "conditions": {
+            "name": "Has Flag",
+            "flagName": "Stun"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1602556280\">ADV_StageAbility_Maze_Argenti</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "Stun"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1150044679\">Argenti_Eidolon2_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Agate's Humility</span>]",
       "stackType": "ReplaceByCaster",
       "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
