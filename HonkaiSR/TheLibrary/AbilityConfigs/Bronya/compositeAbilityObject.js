@@ -8,6 +8,9 @@ const compositeAbilityObject = {
     "Bronya_Bronya_Trace02",
     "Bronya_Bronya_Eidolon4",
     "Bronya_Bronya_Eidolon1",
+    "Bronya_LocalPlayer_StandardAbility_AttackBreak",
+    "Bronya_LocalPlayer_Bronya_TechniqueUsage",
+    "Bronya_LocalPlayer_Bronya_NormalAtk01",
     "Bronya_Bronya_TechniqueInLevel",
     "Bronya_Bronya_Eidolon4_ATK",
     "Bronya_Bronya_PassiveAbility_1",
@@ -31,6 +34,12 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1309114737\">ADV_StageAbility_Maze_Bronya</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2015057793\">Bronya_Tree02_DefenceUp</a>[<span class=\"descriptionNumberColor\">Battlefield</span>]",
@@ -716,6 +725,327 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Bronya_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Bronya_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Bronya_LocalPlayer_Bronya_TechniqueUsage": {
+      "fileName": "Bronya_LocalPlayer_Bronya_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        "Submit Technique Use",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "110101(SkillMaze)",
+          "duration": -1
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Bronya_LocalPlayer_Bronya_NormalAtk01": {
+      "fileName": "Bronya_LocalPlayer_Bronya_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "from": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "to": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
+                "value1": "Distance_Between_Entities",
+                "compareType": "<=",
+                "value2": 5
+              },
+              "passed": [
+                {
+                  "name": "Shot Fired",
+                  "execute": [
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "projectileFinished": [
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Shot Fired",
+                  "execute": [
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "projectileFinished": [
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "Bronya_Bronya_TechniqueInLevel": {

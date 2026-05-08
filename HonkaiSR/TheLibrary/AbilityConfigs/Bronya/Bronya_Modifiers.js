@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1309114737\">ADV_StageAbility_Maze_Bronya</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2015057793\">Bronya_Tree02_DefenceUp</a>[<span class=\"descriptionNumberColor\">Battlefield</span>]",
       "stackType": "ReplaceByCaster",
       "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>",
