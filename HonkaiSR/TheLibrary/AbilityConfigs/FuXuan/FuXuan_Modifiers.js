@@ -10,6 +10,21 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__62563489\">ADV_StageAbility_Maze_FuXuan</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__791374853\">ADV_StageAbility_Maze_FuXuan_HolyShield</a>",
+      "counter": 1,
+      "stackType": "Replace",
+      "modifierFlags": [
+        "HolyShield"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-72449608\">FuXuan_Eidolon2TeamCheck</a>",
       "execute": [
         {
