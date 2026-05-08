@@ -10,6 +10,16 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1562551226\">ADV_StageAbility_Maze_Sampo</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "Blind"
+      ],
+      "duration": 20
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2131103330\">Sampo_Ultimate_DOTTakenUp</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
       "description": "DoT taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
