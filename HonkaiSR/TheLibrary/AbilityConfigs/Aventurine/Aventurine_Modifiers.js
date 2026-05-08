@@ -10,11 +10,44 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1828815823\">ADV_StageAbility_Maze_Aventurine_SSR_2</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-343712064\">ADV_StageAbility_Maze_Aventurine_SR_2</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-492169293\">ADV_StageAbility_Maze_Aventurine_R_2</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-172812292\">ADV_StageAbility_Maze_Aventurine_SSR</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__543061849\">ADV_StageAbility_Maze_Aventurine_SR</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-685644514\">ADV_StageAbility_Maze_Aventurine_R</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-314126453\">Aventurine_Maze_Defence</a>[<span class=\"descriptionNumberColor\">The Red or the Black</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>",
       "type": "Buff",
       "effectName": "DEF Boost",
@@ -1264,9 +1297,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1438365222\">Aventurine_Eidolon2_ResistanceDown</a>[<span class=\"descriptionNumberColor\">Bounded Rationality</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
       "effectName": "All-Type RES Reduction",
@@ -1598,9 +1628,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-839248266\">Aventurine_Ability03_CritDmgIncrease</a>[<span class=\"descriptionNumberColor\">Unnerved</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Increase the CRIT DMG dealt by allies to this unit by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
       "effectName": "The received CRIT DMG increases",
