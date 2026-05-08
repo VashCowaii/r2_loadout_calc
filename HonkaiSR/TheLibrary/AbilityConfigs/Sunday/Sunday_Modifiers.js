@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1130386500\">ADV_StageAbility_Maze_Sunday</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]",
       "stackType": "ReplaceByCaster",
       "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">_CritialDamage_Add</span>.",
