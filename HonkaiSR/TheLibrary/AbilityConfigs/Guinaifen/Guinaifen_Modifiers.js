@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1631221662\">ADV_StageAbility_Maze_Guinaifen</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__573283172\">Guinaifen_Eidolon4</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
