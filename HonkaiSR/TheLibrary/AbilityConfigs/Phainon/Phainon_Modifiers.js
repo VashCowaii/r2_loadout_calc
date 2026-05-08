@@ -10,6 +10,118 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-881680395\">ADV_StageAbility_Maze_Phainon_Confine</a>",
+      "counter": 1,
+      "stackType": "Replace",
+      "modifierFlags": [
+        "Confine"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__661541648\">ADV_StageAbility_Maze_Phainon_Hit</a>",
+      "counter": 1,
+      "stackType": "Replace",
+      "onStack": [
+        "Deleted bullshit"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-975288543\">ADV_StageAbility_Maze_Phainon_KillFlag</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "NoAlert"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2011546348\">ADV_StageAbility_Maze_Phainon_ModifyMaxMP</a>",
+      "stackType": "Refresh",
+      "onCreation": [
+        "Overworld TechPoints adjustment(which we don't care about)"
+      ],
+      "onRemoval": [
+        "Overworld TechPoints adjustment(which we don't care about)"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1212118641\">ADV_StageAbility_Maze_Phainon_Trigger</a>",
+      "stackType": "Refresh",
+      "onCreation": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Team Leader",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            }
+          },
+          "passed": [
+            {
+              "name": "Create Overworld Entity",
+              "summonID": 14081
+            }
+          ]
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "summonID": 14081
+          }
+        }
+      ],
+      "onStageExit": [
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Adventure Player}}"
+            },
+            "summonID": 14081
+          }
+        }
+      ],
+      "onStageEntry": [
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 14081
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1426965473\">ADV_StageAbility_Maze_Phainon_Invincible</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "modifierFlags": [
+        "HolyShield"
+      ],
+      "duration": 2,
+      "onStageExit": [
+        "Modifier Deletes Itself"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1955077558\">ADV_StageAbility_Maze_Phainon_00</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1520947056\">M_Phainon_Ability21_InsertCheck</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"

@@ -10,6 +10,11 @@ const compositeAbilityObject = {
     "Phainon_Phainon_Eidolon6",
     "Phainon_Phainon_Eidolon2",
     "Phainon_Phainon_Eidolon1",
+    "Phainon_LocalPlayer_Phainon_ModifyMaxMP",
+    "Phainon_LocalPlayer_Phainon_SummonUnit",
+    "Phainon_LocalPlayer_StandardAbility_AttackBreak",
+    "Phainon_LocalPlayer_Phainon_TechniqueUsage",
+    "Phainon_LocalPlayer_Phainon_NormalAtk01",
     "Phainon_Phainon_TechniqueInLevel",
     "Phainon_Phainon_PassiveAbility02",
     "Phainon_Phainon_PassiveAbility01",
@@ -50,6 +55,118 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-881680395\">ADV_StageAbility_Maze_Phainon_Confine</a>",
+          "counter": 1,
+          "stackType": "Replace",
+          "modifierFlags": [
+            "Confine"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__661541648\">ADV_StageAbility_Maze_Phainon_Hit</a>",
+          "counter": 1,
+          "stackType": "Replace",
+          "onStack": [
+            "Deleted bullshit"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-975288543\">ADV_StageAbility_Maze_Phainon_KillFlag</a>",
+          "counter": 1,
+          "stackType": "Merge",
+          "modifierFlags": [
+            "NoAlert"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2011546348\">ADV_StageAbility_Maze_Phainon_ModifyMaxMP</a>",
+          "stackType": "Refresh",
+          "onCreation": [
+            "Overworld TechPoints adjustment(which we don't care about)"
+          ],
+          "onRemoval": [
+            "Overworld TechPoints adjustment(which we don't care about)"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1212118641\">ADV_StageAbility_Maze_Phainon_Trigger</a>",
+          "stackType": "Refresh",
+          "onCreation": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Team Leader",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
+              },
+              "passed": [
+                {
+                  "name": "Create Overworld Entity",
+                  "summonID": 14081
+                }
+              ]
+            }
+          ],
+          "onRemoval": [
+            {
+              "name": "Remove Overworld Entity",
+              "summon": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "summonID": 14081
+              }
+            }
+          ],
+          "onStageExit": [
+            {
+              "name": "Remove Overworld Entity",
+              "summon": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Adventure Player}}"
+                },
+                "summonID": 14081
+              }
+            }
+          ],
+          "onStageEntry": [
+            {
+              "name": "Create Overworld Entity",
+              "summonID": 14081
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1426965473\">ADV_StageAbility_Maze_Phainon_Invincible</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "modifierFlags": [
+            "HolyShield"
+          ],
+          "duration": 2,
+          "onStageExit": [
+            "Modifier Deletes Itself"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1955077558\">ADV_StageAbility_Maze_Phainon_00</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1520947056\">M_Phainon_Ability21_InsertCheck</a>",
@@ -2935,6 +3052,387 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Phainon_LocalPlayer_Phainon_ModifyMaxMP": {
+      "fileName": "Phainon_LocalPlayer_Phainon_ModifyMaxMP",
+      "skillTrigger": "MazeCommonPassve02",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2011546348\">ADV_StageAbility_Maze_Phainon_ModifyMaxMP</a>",
+          "counter": -1
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Phainon_LocalPlayer_Phainon_SummonUnit": {
+      "fileName": "Phainon_LocalPlayer_Phainon_SummonUnit",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1212118641\">ADV_StageAbility_Maze_Phainon_Trigger</a>",
+          "counter": -1
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Phainon_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Phainon_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Phainon_LocalPlayer_Phainon_TechniqueUsage": {
+      "fileName": "Phainon_LocalPlayer_Phainon_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target"
+        },
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 14082
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1426965473\">ADV_StageAbility_Maze_Phainon_Invincible</a>",
+          "duration": 2
+        },
+        "Deleted bullshit",
+        {
+          "name": "Overworld Attack Instance",
+          "onAttack": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Can Die Instantly",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              },
+              "passed": [
+                "Overworld Mark Target for Death(which we don't care about)"
+              ]
+            }
+          ],
+          "onBattle": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": null,
+              "ID": "140801(SkillMaze)",
+              "duration": 1
+            }
+          ],
+          "entryTargetType": "AllHitTarget"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1426965473\">ADV_StageAbility_Maze_Phainon_Invincible</a>"
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Phainon_LocalPlayer_Phainon_NormalAtk01": {
+      "fileName": "Phainon_LocalPlayer_Phainon_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit"
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit"
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit"
+                  ],
+                  "failed": [
+                    "Deleted bullshit"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Overworld Attack Instance"
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "Phainon_Phainon_TechniqueInLevel": {
