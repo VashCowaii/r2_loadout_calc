@@ -1,5 +1,5 @@
 const configAbility = {
-  "fileName": "Evernight_Evernight_Ability02_Servant",
+  "fileName": "Evey_Evernight_Ability02_Servant",
   "abilityType": null,
   "energy": null,
   "toughnessList": null,
