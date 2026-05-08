@@ -3,198 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": 20029,
   "trimCharacterName": 20029,
   "abilityList": [
+    "20029_Modifiers",
     "20029_BattleEvent_BattleEvent20029_Part01",
-    "20029_BattleEvent_BattleEvent20029_EnterReady",
-    "20029_Modifiers"
+    "20029_BattleEvent_BattleEvent20029_EnterReady"
   ],
   "abilityObject": {
-    "20029_BattleEvent_BattleEvent20029_Part01": {
-      "fileName": "20029_BattleEvent_BattleEvent20029_Part01",
-      "childAbilityList": [
-        "20029_BattleEvent_BattleEvent20029_EnterReady",
-        "20029_BattleEvent_BattleEvent20029_Part01"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Ultimate",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "value": "MonsterType_W3_Sam_01"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-781925470\">Enemy_W3_Sam_01_Ability04Target</a>[<span class=\"descriptionNumberColor\">Nemesis</span>]",
-          "valuePerStack": {
-            "MDF_BreakDamageAddedRatioBase": {
-              "operator": "Variables[0] (Ability03_BreakDamageAddedRatioBase) || RETURN",
-              "displayLines": "Ability03_BreakDamageAddedRatioBase",
-              "constants": [],
-              "variables": [
-                "Ability03_BreakDamageAddedRatioBase"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "set": 0
-        },
-        {
-          "name": "Advance/Delay up to Target",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}.[[getAttachedSummon]] - {{Ability Target(ST)}}.[[getAttachedSummon]].[[removeBattleEventsFromOthers]]"
-          },
-          "targetRef": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "refPoint": "After",
-          "isStartingAV": true
-        },
-        {
-          "name": "Advance/Delay up to Target",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}.[[getMemosprite]]"
-          },
-          "targetRef": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "refPoint": "After",
-          "isStartingAV": true
-        },
-        {
-          "name": "Advance/Delay up to Target",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}.[[getAttachedSummon]].[[removeBattleEventsFromOthers]]"
-          },
-          "targetRef": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "refPoint": "After",
-          "isStartingAV": true
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1466483299\">Enemy_W3_Sam_01_MuteUltra</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1435923301\">Enemy_W3_Sam_01_Locking</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "value": "MonsterType_W3_Sam_01"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "inherentTarget": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "ability": "Monster_W3_Sam_01_Ability04_End_Part01",
-              "isTrigger": true
-            }
-          ]
-        },
-        "Wait for Pending Ability Completions",
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Player-Team Target",
-        "allowMemoAllyTarget": "Forbidden",
-        "allowMemoHostileTarget": "Forbidden",
-        "excludeSelf": true,
-        "moveTargetToSummoner": true
-      }
-    },
-    "20029_BattleEvent_BattleEvent20029_EnterReady": {
-      "fileName": "20029_BattleEvent_BattleEvent20029_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "value": "MonsterType_W3_Sam_01"
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
     "20029_Modifiers": {
       "fileName": "20029_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -309,9 +122,6 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-781925470\">Enemy_W3_Sam_01_Ability04Target</a>[<span class=\"descriptionNumberColor\">Nemesis</span>]",
           "modifierFlags": [
             "RemoveWhenCasterDead"
-          ],
-          "stackData": [
-            "MDF_BreakDamageAddedRatioBase"
           ],
           "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_BreakDamageAddedRatioBase</span>. When attacking an enemy target in the \"Rapid Evolution\" state, ignores the \"Rapid Evolution\" effect that prevents attackers from dealing CRIT Hits. \"Juvenile Sting\" will prioritize attacking ally characters in the \"Nemesis\" state.",
           "type": "Other",
@@ -2117,6 +1927,193 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "20029_BattleEvent_BattleEvent20029_Part01": {
+      "fileName": "20029_BattleEvent_BattleEvent20029_Part01",
+      "childAbilityList": [
+        "20029_BattleEvent_BattleEvent20029_EnterReady",
+        "20029_BattleEvent_BattleEvent20029_Part01"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Ultimate",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "value": "MonsterType_W3_Sam_01"
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-781925470\">Enemy_W3_Sam_01_Ability04Target</a>[<span class=\"descriptionNumberColor\">Nemesis</span>]",
+          "valuePerStack": {
+            "MDF_BreakDamageAddedRatioBase": {
+              "operator": "Variables[0] (Ability03_BreakDamageAddedRatioBase) || RETURN",
+              "displayLines": "Ability03_BreakDamageAddedRatioBase",
+              "constants": [],
+              "variables": [
+                "Ability03_BreakDamageAddedRatioBase"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "set": 0
+        },
+        {
+          "name": "Advance/Delay up to Target",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}.[[getAttachedSummon]] - {{Ability Target(ST)}}.[[getAttachedSummon]].[[removeBattleEventsFromOthers]]"
+          },
+          "targetRef": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "refPoint": "After",
+          "isStartingAV": true
+        },
+        {
+          "name": "Advance/Delay up to Target",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}.[[getMemosprite]]"
+          },
+          "targetRef": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "refPoint": "After",
+          "isStartingAV": true
+        },
+        {
+          "name": "Advance/Delay up to Target",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}.[[getAttachedSummon]].[[removeBattleEventsFromOthers]]"
+          },
+          "targetRef": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "refPoint": "After",
+          "isStartingAV": true
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1466483299\">Enemy_W3_Sam_01_MuteUltra</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1435923301\">Enemy_W3_Sam_01_Locking</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "value": "MonsterType_W3_Sam_01"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "inherentTarget": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "ability": "Monster_W3_Sam_01_Ability04_End_Part01",
+              "isTrigger": true
+            }
+          ]
+        },
+        "Wait for Pending Ability Completions",
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Player-Team Target",
+        "allowMemoAllyTarget": "Forbidden",
+        "allowMemoHostileTarget": "Forbidden",
+        "excludeSelf": true,
+        "moveTargetToSummoner": true
+      }
+    },
+    "20029_BattleEvent_BattleEvent20029_EnterReady": {
+      "fileName": "20029_BattleEvent_BattleEvent20029_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "value": "MonsterType_W3_Sam_01"
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     }
   },
   "enemyData": {

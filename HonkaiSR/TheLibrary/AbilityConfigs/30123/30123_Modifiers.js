@@ -2488,9 +2488,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1571276631\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff5</a>[<span class=\"descriptionNumberColor\">Follow-Up ATK Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "BattleEvent_P5_ADF_Get"
-      ],
       "description": "Follow-Up ATK DMG taken increases by <span class=\"descriptionNumberColor\">BattleEvent_P5_ADF_Get</span>.",
       "type": "Debuff",
       "effectName": "Follow-Up ATK Vulnerability",
@@ -2560,9 +2557,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1554499012\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff4</a>[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "BattleEvent_P2_ADF_Get"
-      ],
       "description": "Effect RES decreases by <span class=\"descriptionNumberColor\">BattleEvent_P2_ADF_Get</span>.",
       "type": "Debuff",
       "effectName": "Effect RES Reduction",
@@ -2622,9 +2616,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedDown"
-      ],
-      "stackData": [
-        "BattleEvent_P2_ADF_Get"
       ],
       "description": "Decreases SPD by <span class=\"descriptionNumberColor\">BattleEvent_P2_ADF_Get</span>.",
       "type": "Debuff",
@@ -2686,9 +2677,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
-      "stackData": [
-        "BattleEvent_P2_ADF_Get"
-      ],
       "description": "Reduces DEF by <span class=\"descriptionNumberColor\">BattleEvent_P2_ADF_Get</span>.",
       "type": "Debuff",
       "effectName": "DEF Reduction",
@@ -2748,9 +2736,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_AttackDown"
-      ],
-      "stackData": [
-        "BattleEvent_P2_ADF_Get"
       ],
       "description": "ATK decreases by <span class=\"descriptionNumberColor\">BattleEvent_P2_ADF_Get</span>.",
       "type": "Debuff",

@@ -3,386 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": 30120,
   "trimCharacterName": 30120,
   "abilityList": [
-    "30120_BattleEventAbility_Challenge_Month_20",
     "30120_Modifiers",
+    "30120_BattleEventAbility_Challenge_Month_20",
+    "30120_BossInfiniteWave_Boss_Camera",
+    "30120_BossInfiniteWave_Boss_Insert",
     "30120_Functions"
   ],
   "abilityObject": {
-    "30120_BattleEventAbility_Challenge_Month_20": {
-      "fileName": "30120_BattleEventAbility_Challenge_Month_20",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1019309813\">Modifier_BattleEventAbility_Challenge_Month_20</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1799241140\">Modifier_BattleEventAbility_Challenge_Month_20_Sub</a>",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage End [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Attack Type",
-                    "attackTypes": [
-                      "Follow-up"
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "InsertFlag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Ultimate"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "InsertFlag",
-                        "compareType": "=",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Attack Targets of Modifier Holder}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 10,
-                      "ifTargetFound": [
-                        {
-                          "name": "Random Event",
-                          "isUnique": true,
-                          "count": {
-                            "operator": "Variables[0] (ADF_1) || RETURN",
-                            "displayLines": "ADF_1",
-                            "constants": [],
-                            "variables": [
-                              "ADF_1"
-                            ]
-                          },
-                          "odds": [
-                            0.142,
-                            0.143,
-                            0.143,
-                            0.143,
-                            0.143,
-                            0.143,
-                            0.143
-                          ],
-                          "execute": [
-                            {
-                              "name": "Sequence Event",
-                              "passed": [
-                                {
-                                  "name": "ATK Scaling DMG",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "AttackScaling": {
-                                    "DamageType": "Fire",
-                                    "Damage": {
-                                      "operator": "Variables[0] (ADF_2) || RETURN",
-                                      "displayLines": "ADF_2",
-                                      "constants": [],
-                                      "variables": [
-                                        "ADF_2"
-                                      ]
-                                    },
-                                    "Toughness": null,
-                                    "Tags": null,
-                                    "attackType": "Additional DMG"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "Sequence Event",
-                              "passed": [
-                                {
-                                  "name": "ATK Scaling DMG",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "AttackScaling": {
-                                    "DamageType": "Wind",
-                                    "Damage": {
-                                      "operator": "Variables[0] (ADF_2) || RETURN",
-                                      "displayLines": "ADF_2",
-                                      "constants": [],
-                                      "variables": [
-                                        "ADF_2"
-                                      ]
-                                    },
-                                    "Toughness": null,
-                                    "Tags": null,
-                                    "attackType": "Additional DMG"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "Sequence Event",
-                              "passed": [
-                                {
-                                  "name": "ATK Scaling DMG",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "AttackScaling": {
-                                    "DamageType": "Ice",
-                                    "Damage": {
-                                      "operator": "Variables[0] (ADF_2) || RETURN",
-                                      "displayLines": "ADF_2",
-                                      "constants": [],
-                                      "variables": [
-                                        "ADF_2"
-                                      ]
-                                    },
-                                    "Toughness": null,
-                                    "Tags": null,
-                                    "attackType": "Additional DMG"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "Sequence Event",
-                              "passed": [
-                                {
-                                  "name": "ATK Scaling DMG",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "AttackScaling": {
-                                    "DamageType": "Physical",
-                                    "Damage": {
-                                      "operator": "Variables[0] (ADF_2) || RETURN",
-                                      "displayLines": "ADF_2",
-                                      "constants": [],
-                                      "variables": [
-                                        "ADF_2"
-                                      ]
-                                    },
-                                    "Toughness": null,
-                                    "Tags": null,
-                                    "attackType": "Additional DMG"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "Sequence Event",
-                              "passed": [
-                                {
-                                  "name": "ATK Scaling DMG",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "AttackScaling": {
-                                    "DamageType": "Thunder",
-                                    "Damage": {
-                                      "operator": "Variables[0] (ADF_2) || RETURN",
-                                      "displayLines": "ADF_2",
-                                      "constants": [],
-                                      "variables": [
-                                        "ADF_2"
-                                      ]
-                                    },
-                                    "Toughness": null,
-                                    "Tags": null,
-                                    "attackType": "Additional DMG"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "Sequence Event",
-                              "passed": [
-                                {
-                                  "name": "ATK Scaling DMG",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "AttackScaling": {
-                                    "DamageType": "Quantum",
-                                    "Damage": {
-                                      "operator": "Variables[0] (ADF_2) || RETURN",
-                                      "displayLines": "ADF_2",
-                                      "constants": [],
-                                      "variables": [
-                                        "ADF_2"
-                                      ]
-                                    },
-                                    "Toughness": null,
-                                    "Tags": null,
-                                    "attackType": "Additional DMG"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "Sequence Event",
-                              "passed": [
-                                {
-                                  "name": "ATK Scaling DMG",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "AttackScaling": {
-                                    "DamageType": "Imaginary",
-                                    "Damage": {
-                                      "operator": "Variables[0] (ADF_2) || RETURN",
-                                      "displayLines": "ADF_2",
-                                      "constants": [],
-                                      "variables": [
-                                        "ADF_2"
-                                      ]
-                                    },
-                                    "Toughness": null,
-                                    "Tags": null,
-                                    "attackType": "Additional DMG"
-                                  }
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "InsertFlag",
-                  "value": 0
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1019309813\">Modifier_BattleEventAbility_Challenge_Month_20</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1799241140\">Modifier_BattleEventAbility_Challenge_Month_20_Sub</a>",
-                  "valuePerStack": {
-                    "ADF_1": {
-                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P1_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P1_ADF"
-                      ]
-                    },
-                    "ADF_2": {
-                      "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                      "displayLines": "#BattleEvent_P2_ADF",
-                      "constants": [],
-                      "variables": [
-                        "#BattleEvent_P2_ADF"
-                      ]
-                    }
-                  },
-                  "casterAssign": "TargetSelf"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Player Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1799241140\">Modifier_BattleEventAbility_Challenge_Month_20_Sub</a>",
-                      "valuePerStack": {
-                        "ADF_1": {
-                          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P1_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P1_ADF"
-                          ]
-                        },
-                        "ADF_2": {
-                          "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-                          "displayLines": "#BattleEvent_P2_ADF",
-                          "constants": [],
-                          "variables": [
-                            "#BattleEvent_P2_ADF"
-                          ]
-                        }
-                      },
-                      "casterAssign": "TargetSelf"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "30120_Modifiers": {
       "fileName": "30120_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -3177,6 +2804,446 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "30120_BattleEventAbility_Challenge_Month_20": {
+      "fileName": "30120_BattleEventAbility_Challenge_Month_20",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1019309813\">Modifier_BattleEventAbility_Challenge_Month_20</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1799241140\">Modifier_BattleEventAbility_Challenge_Month_20_Sub</a>",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage End [Owner]: Hit",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Follow-up"
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "InsertFlag",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Ultimate"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "InsertFlag",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Attack Targets of Modifier Holder}}"
+                      },
+                      "searchRandom": true,
+                      "maxTargets": 10,
+                      "ifTargetFound": [
+                        {
+                          "name": "Random Event",
+                          "isUnique": true,
+                          "count": {
+                            "operator": "Variables[0] (ADF_1) || RETURN",
+                            "displayLines": "ADF_1",
+                            "constants": [],
+                            "variables": [
+                              "ADF_1"
+                            ]
+                          },
+                          "odds": [
+                            0.142,
+                            0.143,
+                            0.143,
+                            0.143,
+                            0.143,
+                            0.143,
+                            0.143
+                          ],
+                          "execute": [
+                            {
+                              "name": "Sequence Event",
+                              "passed": [
+                                {
+                                  "name": "ATK Scaling DMG",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "AttackScaling": {
+                                    "DamageType": "Fire",
+                                    "Damage": {
+                                      "operator": "Variables[0] (ADF_2) || RETURN",
+                                      "displayLines": "ADF_2",
+                                      "constants": [],
+                                      "variables": [
+                                        "ADF_2"
+                                      ]
+                                    },
+                                    "Toughness": null,
+                                    "Tags": null,
+                                    "attackType": "Additional DMG"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Sequence Event",
+                              "passed": [
+                                {
+                                  "name": "ATK Scaling DMG",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "AttackScaling": {
+                                    "DamageType": "Wind",
+                                    "Damage": {
+                                      "operator": "Variables[0] (ADF_2) || RETURN",
+                                      "displayLines": "ADF_2",
+                                      "constants": [],
+                                      "variables": [
+                                        "ADF_2"
+                                      ]
+                                    },
+                                    "Toughness": null,
+                                    "Tags": null,
+                                    "attackType": "Additional DMG"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Sequence Event",
+                              "passed": [
+                                {
+                                  "name": "ATK Scaling DMG",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "AttackScaling": {
+                                    "DamageType": "Ice",
+                                    "Damage": {
+                                      "operator": "Variables[0] (ADF_2) || RETURN",
+                                      "displayLines": "ADF_2",
+                                      "constants": [],
+                                      "variables": [
+                                        "ADF_2"
+                                      ]
+                                    },
+                                    "Toughness": null,
+                                    "Tags": null,
+                                    "attackType": "Additional DMG"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Sequence Event",
+                              "passed": [
+                                {
+                                  "name": "ATK Scaling DMG",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "AttackScaling": {
+                                    "DamageType": "Physical",
+                                    "Damage": {
+                                      "operator": "Variables[0] (ADF_2) || RETURN",
+                                      "displayLines": "ADF_2",
+                                      "constants": [],
+                                      "variables": [
+                                        "ADF_2"
+                                      ]
+                                    },
+                                    "Toughness": null,
+                                    "Tags": null,
+                                    "attackType": "Additional DMG"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Sequence Event",
+                              "passed": [
+                                {
+                                  "name": "ATK Scaling DMG",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "AttackScaling": {
+                                    "DamageType": "Thunder",
+                                    "Damage": {
+                                      "operator": "Variables[0] (ADF_2) || RETURN",
+                                      "displayLines": "ADF_2",
+                                      "constants": [],
+                                      "variables": [
+                                        "ADF_2"
+                                      ]
+                                    },
+                                    "Toughness": null,
+                                    "Tags": null,
+                                    "attackType": "Additional DMG"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Sequence Event",
+                              "passed": [
+                                {
+                                  "name": "ATK Scaling DMG",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "AttackScaling": {
+                                    "DamageType": "Quantum",
+                                    "Damage": {
+                                      "operator": "Variables[0] (ADF_2) || RETURN",
+                                      "displayLines": "ADF_2",
+                                      "constants": [],
+                                      "variables": [
+                                        "ADF_2"
+                                      ]
+                                    },
+                                    "Toughness": null,
+                                    "Tags": null,
+                                    "attackType": "Additional DMG"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Sequence Event",
+                              "passed": [
+                                {
+                                  "name": "ATK Scaling DMG",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "AttackScaling": {
+                                    "DamageType": "Imaginary",
+                                    "Damage": {
+                                      "operator": "Variables[0] (ADF_2) || RETURN",
+                                      "displayLines": "ADF_2",
+                                      "constants": [],
+                                      "variables": [
+                                        "ADF_2"
+                                      ]
+                                    },
+                                    "Toughness": null,
+                                    "Tags": null,
+                                    "attackType": "Additional DMG"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "InsertFlag",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1019309813\">Modifier_BattleEventAbility_Challenge_Month_20</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1799241140\">Modifier_BattleEventAbility_Challenge_Month_20_Sub</a>",
+                  "valuePerStack": {
+                    "ADF_1": {
+                      "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
+                      "displayLines": "#BattleEvent_P1_ADF",
+                      "constants": [],
+                      "variables": [
+                        "#BattleEvent_P1_ADF"
+                      ]
+                    },
+                    "ADF_2": {
+                      "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
+                      "displayLines": "#BattleEvent_P2_ADF",
+                      "constants": [],
+                      "variables": [
+                        "#BattleEvent_P2_ADF"
+                      ]
+                    }
+                  },
+                  "casterAssign": "TargetSelf"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1799241140\">Modifier_BattleEventAbility_Challenge_Month_20_Sub</a>",
+                      "valuePerStack": {
+                        "ADF_1": {
+                          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
+                          "displayLines": "#BattleEvent_P1_ADF",
+                          "constants": [],
+                          "variables": [
+                            "#BattleEvent_P1_ADF"
+                          ]
+                        },
+                        "ADF_2": {
+                          "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
+                          "displayLines": "#BattleEvent_P2_ADF",
+                          "constants": [],
+                          "variables": [
+                            "#BattleEvent_P2_ADF"
+                          ]
+                        }
+                      },
+                      "casterAssign": "TargetSelf"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "30120_BossInfiniteWave_Boss_Camera": {
+      "fileName": "30120_BossInfiniteWave_Boss_Camera",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "30120_BossInfiniteWave_Boss_Insert": {
+      "fileName": "30120_BossInfiniteWave_Boss_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-842805226\">BossInfiniteWave_DamageTaken_Modifier</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-842805226\">BossInfiniteWave_DamageTaken_Modifier</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnemyVulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "30120_Functions": {
       "fileName": "30120_Functions",

@@ -3,997 +3,16 @@ const compositeAbilityObject = {
   "fullCharacterName": 30130,
   "trimCharacterName": 30130,
   "abilityList": [
+    "30130_Modifiers",
     "30130_BattleEventAbility_Challenge_Month_30",
+    "30130_BossInfiniteWave_Boss_Camera",
+    "30130_BossInfiniteWave_Boss_Insert",
     "30130_BattleEventAbility_Camera_AllDarkTeamWithoutDither",
     "30130_BattleEventAbility_Camear_AllLightTeamWithoutDither",
     "30130_BattleEventAbility_Challenge_Month_30_Insert",
-    "30130_Modifiers",
     "30130_Functions"
   ],
   "abilityObject": {
-    "30130_BattleEventAbility_Challenge_Month_30": {
-      "fileName": "30130_BattleEventAbility_Challenge_Month_30",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "ContextCaster",
-          "variableName": "_Init_Layer",
-          "value": {
-            "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P1_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P1_ADF"
-            ]
-          }
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "ContextCaster",
-          "variableName": "_DmgUp_Ratio",
-          "value": {
-            "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P2_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P2_ADF"
-            ]
-          }
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "ContextCaster",
-          "variableName": "_Damage_Ratio",
-          "value": {
-            "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P3_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P3_ADF"
-            ]
-          }
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "ContextCaster",
-          "variableName": "_Damage_Ratio_2",
-          "value": {
-            "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P4_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P4_ADF"
-            ]
-          }
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "ContextCaster",
-          "variableName": "_Current_Layer"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "ContextCaster",
-          "variableName": "_Trigger_Effect_Flag"
-        },
-        {
-          "name": "Add Ability",
-          "abilityName": "BattleEventAbility_Camera_AllDarkTeamWithoutDither"
-        },
-        {
-          "name": "Add Ability",
-          "abilityName": "BattleEventAbility_Camear_AllLightTeamWithoutDither"
-        },
-        {
-          "name": "Add Ability",
-          "abilityName": "BattleEventAbility_Challenge_Month_30_Insert"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"918497004\">Modifier_BattleEventAbility_Challenge_Month_30</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__918497004\">Modifier_BattleEventAbility_Challenge_Month_30</a>",
-          "stackType": "ReplaceByCaster",
-          "latentQueue": [
-            "_DmgUp_Ratio",
-            "_Trigger_Effect_Flag"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Enemies Still Alive",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Player Team All}}"
-                        },
-                        "includeNonTargets": true
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "_Trigger_Effect_Flag",
-                        "compareType": "=",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_Trigger_Effect_Flag",
-                      "value": 0
-                    },
-                    "Deleted bullshit",
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "includeDyingTargets": true,
-                      "maxTargets": 5,
-                      "ifTargetFound": [
-                        {
-                          "name": "Define Custom Variable with Stat",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "variableName": "_Temp_Hp",
-                          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "OR",
-                            "conditionList": [
-                              {
-                                "name": "Compare: Monster Rank",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "compareType": "=",
-                                "value2": 1
-                              },
-                              {
-                                "name": "Compare: Monster Rank",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "compareType": "=",
-                                "value2": 2
-                              }
-                            ]
-                          },
-                          "passed": [
-                            {
-                              "name": "ATK Scaling DMG",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "canPhase": true,
-                              "AttackScaling": {
-                                "DamageType": "Physical",
-                                "DamageFlat": {
-                                  "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio) || MUL || RETURN",
-                                  "displayLines": "(_Temp_Hp * _Damage_Ratio)",
-                                  "constants": [],
-                                  "variables": [
-                                    "_Temp_Hp",
-                                    "_Damage_Ratio"
-                                  ]
-                                },
-                                "dmgFormulaFinal": "Converted DMG Base",
-                                "Toughness": null,
-                                "Tags": null,
-                                "attackType": "DOT"
-                              }
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "ATK Scaling DMG",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "canPhase": true,
-                              "AttackScaling": {
-                                "DamageType": "Physical",
-                                "DamageFlat": {
-                                  "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio_2) || MUL || RETURN",
-                                  "displayLines": "(_Temp_Hp * _Damage_Ratio_2)",
-                                  "constants": [],
-                                  "variables": [
-                                    "_Temp_Hp",
-                                    "_Damage_Ratio_2"
-                                  ]
-                                },
-                                "dmgFormulaFinal": "Converted DMG Base",
-                                "Toughness": null,
-                                "Tags": null,
-                                "attackType": "DOT"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_Current_Layer",
-                      "value": 0
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]"
-                    },
-                    "Trigger: Attack End"
-                  ],
-                  "failed": [
-                    {
-                      "name": "Trigger Ability",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "inherentTarget": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "ability": "BattleEventAbility_Camear_AllLightTeamWithoutDither",
-                      "isTrigger": true
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_Current_Layer",
-                      "value": 0
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of",
-                    "of": {
-                      "name": "Target Name",
-                      "target": "{{Player Team All}}"
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
-                      "stackLimit": {
-                        "operator": "Variables[0] (_Init_Layer) || RETURN",
-                        "displayLines": "_Init_Layer",
-                        "constants": [],
-                        "variables": [
-                          "_Init_Layer"
-                        ]
-                      },
-                      "valuePerStack": {
-                        "_DmgUp_Ratio_get": {
-                          "operator": "Variables[0] (_DmgUp_Ratio) || RETURN",
-                          "displayLines": "_DmgUp_Ratio",
-                          "constants": [],
-                          "variables": [
-                            "_DmgUp_Ratio"
-                          ]
-                        }
-                      },
-                      "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_Current_Layer) || RETURN",
-                        "displayLines": "_Current_Layer",
-                        "constants": [],
-                        "variables": [
-                          "_Current_Layer"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of",
-                    "of": {
-                      "name": "Target Name",
-                      "target": "{{Player Team All}}"
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_Current_Layer",
-                      "value": {
-                        "operator": "Variables[0] (_Current_Layer) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_Current_Layer + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_Current_Layer"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "_Current_Layer",
-                        "compareType": "=",
-                        "value2": {
-                          "operator": "Variables[0] (_Init_Layer) || RETURN",
-                          "displayLines": "_Init_Layer",
-                          "constants": [],
-                          "variables": [
-                            "_Init_Layer"
-                          ]
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "_Trigger_Effect_Flag",
-                          "value": 1
-                        },
-                        {
-                          "name": "Find New Target",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          "searchRandom": true,
-                          "maxTargets": 1,
-                          "ifTargetFound": [
-                            {
-                              "name": "Inject Ability Use",
-                              "condition": {
-                                "name": "Insert Ability Condition",
-                                "type": "AbilityOwnerInsertUnusedCount",
-                                "typeValue": 1
-                              },
-                              "abilityName": "BattleEventAbility_Challenge_Month_30_Insert",
-                              "abilitySource": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "abilityTarget": {
-                                "name": "Target Name",
-                                "target": "{{Enemy Team All}}"
-                              },
-                              "priorityTag": "CharacterAttackFromSelf",
-                              "ownerState": "Anyone",
-                              "canHitNonTargets": true,
-                              "valuePerStack": {
-                                "_Damage_Ratio_get": {
-                                  "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-                                  "displayLines": "#BattleEvent_P3_ADF",
-                                  "constants": [],
-                                  "variables": [
-                                    "#BattleEvent_P3_ADF"
-                                  ]
-                                },
-                                "_Damage_Ratio_2_get": {
-                                  "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-                                  "displayLines": "#BattleEvent_P4_ADF",
-                                  "constants": [],
-                                  "variables": [
-                                    "#BattleEvent_P4_ADF"
-                                  ]
-                                }
-                              },
-                              "allowAbilityTriggers": false
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Enemies Still Alive",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Player Team All}}"
-                        },
-                        "includeNonTargets": true
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "_Trigger_Effect_Flag",
-                        "compareType": "=",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_Trigger_Effect_Flag",
-                      "value": 0
-                    },
-                    "Deleted bullshit",
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "includeDyingTargets": true,
-                      "maxTargets": 5,
-                      "ifTargetFound": [
-                        {
-                          "name": "Define Custom Variable with Stat",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "variableName": "_Temp_Hp",
-                          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "OR",
-                            "conditionList": [
-                              {
-                                "name": "Compare: Monster Rank",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "compareType": "=",
-                                "value2": 1
-                              },
-                              {
-                                "name": "Compare: Monster Rank",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "compareType": "=",
-                                "value2": 2
-                              }
-                            ]
-                          },
-                          "passed": [
-                            {
-                              "name": "ATK Scaling DMG",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "canPhase": true,
-                              "AttackScaling": {
-                                "DamageType": "Physical",
-                                "DamageFlat": {
-                                  "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio) || MUL || RETURN",
-                                  "displayLines": "(_Temp_Hp * _Damage_Ratio)",
-                                  "constants": [],
-                                  "variables": [
-                                    "_Temp_Hp",
-                                    "_Damage_Ratio"
-                                  ]
-                                },
-                                "dmgFormulaFinal": "Converted DMG Base",
-                                "Toughness": null,
-                                "Tags": null,
-                                "attackType": "DOT"
-                              }
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "ATK Scaling DMG",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "canPhase": true,
-                              "AttackScaling": {
-                                "DamageType": "Physical",
-                                "DamageFlat": {
-                                  "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio_2) || MUL || RETURN",
-                                  "displayLines": "(_Temp_Hp * _Damage_Ratio_2)",
-                                  "constants": [],
-                                  "variables": [
-                                    "_Temp_Hp",
-                                    "_Damage_Ratio_2"
-                                  ]
-                                },
-                                "dmgFormulaFinal": "Converted DMG Base",
-                                "Toughness": null,
-                                "Tags": null,
-                                "attackType": "DOT"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_Current_Layer",
-                      "value": 0
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]"
-                    },
-                    "Trigger: Attack End"
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "Wave Count",
-                        "compareType": "=",
-                        "value2": 1
-                      },
-                      "failed": [
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "inherentTarget": {
-                            "name": "Target Name",
-                            "target": "{{Player Team All}}"
-                          },
-                          "ability": "BattleEventAbility_Camear_AllLightTeamWithoutDither",
-                          "isTrigger": true
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "_Current_Layer",
-                          "value": 0
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_Current_Layer",
-                  "value": 0
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]"
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 10,
-                  "conditions": {
-                    "name": "Compare: Monster Rank",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "compareType": ">=",
-                    "value2": 4
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1736106961\">Modifier_BattleEventAbility_Challenge_Month_30_sub2</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "_Current_Layer",
-              "from": "ContextOwner",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 1,
-                  "maxValue": {
-                    "operator": "Variables[0] (_Init_Layer) || RETURN",
-                    "displayLines": "_Init_Layer",
-                    "constants": [],
-                    "variables": [
-                      "_Init_Layer"
-                    ]
-                  },
-                  "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 10,
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
-                          "stackLimit": {
-                            "operator": "Variables[0] (_Init_Layer) || RETURN",
-                            "displayLines": "_Init_Layer",
-                            "constants": [],
-                            "variables": [
-                              "_Init_Layer"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "_DmgUp_Ratio_get": {
-                              "operator": "Variables[0] (_DmgUp_Ratio) || RETURN",
-                              "displayLines": "_DmgUp_Ratio",
-                              "constants": [],
-                              "variables": [
-                                "_DmgUp_Ratio"
-                              ]
-                            }
-                          },
-                          "addStacksPerTrigger": {
-                            "operator": "Variables[0] (_Current_Layer) || RETURN",
-                            "displayLines": "_Current_Layer",
-                            "constants": [],
-                            "variables": [
-                              "_Current_Layer"
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  ],
-                  "whenValueChanges": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 10,
-                      "ifTargetFound": [
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]"
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
-                          "stackLimit": {
-                            "operator": "Variables[0] (_Init_Layer) || RETURN",
-                            "displayLines": "_Init_Layer",
-                            "constants": [],
-                            "variables": [
-                              "_Init_Layer"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "_DmgUp_Ratio_get": {
-                              "operator": "Variables[0] (_DmgUp_Ratio) || RETURN",
-                              "displayLines": "_DmgUp_Ratio",
-                              "constants": [],
-                              "variables": [
-                                "_DmgUp_Ratio"
-                              ]
-                            }
-                          },
-                          "addStacksPerTrigger": {
-                            "operator": "Variables[0] (_Current_Layer) || RETURN",
-                            "displayLines": "_Current_Layer",
-                            "constants": [],
-                            "variables": [
-                              "_Current_Layer"
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "30130_BattleEventAbility_Camera_AllDarkTeamWithoutDither": {
-      "fileName": "30130_BattleEventAbility_Camera_AllDarkTeamWithoutDither",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Clear DMG Numbers(UI)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          }
-        },
-        {
-          "name": "UI Display Event",
-          "popUpText": "Memory Turbulence"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "30130_BattleEventAbility_Camear_AllLightTeamWithoutDither": {
-      "fileName": "30130_BattleEventAbility_Camear_AllLightTeamWithoutDither",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Memory Turbulence"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "30130_BattleEventAbility_Challenge_Month_30_Insert": {
-      "fileName": "30130_BattleEventAbility_Challenge_Month_30_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_Trigger_Effect_Flag",
-          "value": 0
-        },
-        "Deleted bullshit",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "includeDyingTargets": true,
-          "maxTargets": 5,
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_Temp_Hp",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Compare: Monster Rank",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  {
-                    "name": "Compare: Monster Rank",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "compareType": "=",
-                    "value2": 2
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "canPhase": true,
-                  "AttackScaling": {
-                    "DamageType": "Physical",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio_get) || MUL || RETURN",
-                      "displayLines": "(_Temp_Hp * _Damage_Ratio_get)",
-                      "constants": [],
-                      "variables": [
-                        "_Temp_Hp",
-                        "_Damage_Ratio_get"
-                      ]
-                    },
-                    "dmgFormulaFinal": "Converted DMG Base",
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "DOT"
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "canPhase": true,
-                  "AttackScaling": {
-                    "DamageType": "Physical",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio_2_get) || MUL || RETURN",
-                      "displayLines": "(_Temp_Hp * _Damage_Ratio_2_get)",
-                      "constants": [],
-                      "variables": [
-                        "_Temp_Hp",
-                        "_Damage_Ratio_2_get"
-                      ]
-                    },
-                    "dmgFormulaFinal": "Converted DMG Base",
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "DOT"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
     "30130_Modifiers": {
       "fileName": "30130_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -2248,12 +1267,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
           "stackType": "ReplaceByCaster",
-          "stackData": [
-            "_DmgUp_Ratio_get"
-          ],
-          "latentQueue": [
-            "_Trigger_Effect_Flag"
-          ],
           "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">_DmgUp_Ratio_get</span>. After attacking, increases stacks by 1. When <span class=\"descriptionNumberColor\">_Init_Layer</span> stack(s) are reached, deals 1 instance of DMG to all enemies based on a certain percentage of their respective Max HP.",
           "type": "Buff",
           "effectName": "Memory Imprint",
@@ -2849,9 +1862,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1736106961\">Modifier_BattleEventAbility_Challenge_Month_30_sub2</a>",
           "stackType": "ReplaceByCaster",
-          "latentQueue": [
-            "_Trigger_Effect_Flag"
-          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -3797,6 +2807,1054 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "30130_BattleEventAbility_Challenge_Month_30": {
+      "fileName": "30130_BattleEventAbility_Challenge_Month_30",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "ContextCaster",
+          "variableName": "_Init_Layer",
+          "value": {
+            "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
+            "displayLines": "#BattleEvent_P1_ADF",
+            "constants": [],
+            "variables": [
+              "#BattleEvent_P1_ADF"
+            ]
+          }
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "ContextCaster",
+          "variableName": "_DmgUp_Ratio",
+          "value": {
+            "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
+            "displayLines": "#BattleEvent_P2_ADF",
+            "constants": [],
+            "variables": [
+              "#BattleEvent_P2_ADF"
+            ]
+          }
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "ContextCaster",
+          "variableName": "_Damage_Ratio",
+          "value": {
+            "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
+            "displayLines": "#BattleEvent_P3_ADF",
+            "constants": [],
+            "variables": [
+              "#BattleEvent_P3_ADF"
+            ]
+          }
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "ContextCaster",
+          "variableName": "_Damage_Ratio_2",
+          "value": {
+            "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
+            "displayLines": "#BattleEvent_P4_ADF",
+            "constants": [],
+            "variables": [
+              "#BattleEvent_P4_ADF"
+            ]
+          }
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "ContextCaster",
+          "variableName": "_Current_Layer"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "ContextCaster",
+          "variableName": "_Trigger_Effect_Flag"
+        },
+        {
+          "name": "Add Ability",
+          "abilityName": "BattleEventAbility_Camera_AllDarkTeamWithoutDither"
+        },
+        {
+          "name": "Add Ability",
+          "abilityName": "BattleEventAbility_Camear_AllLightTeamWithoutDither"
+        },
+        {
+          "name": "Add Ability",
+          "abilityName": "BattleEventAbility_Challenge_Month_30_Insert"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"918497004\">Modifier_BattleEventAbility_Challenge_Month_30</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__918497004\">Modifier_BattleEventAbility_Challenge_Month_30</a>",
+          "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "_DmgUp_Ratio",
+            "_Trigger_Effect_Flag"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Enemies Still Alive",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player Team All}}"
+                        },
+                        "includeNonTargets": true
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "_Trigger_Effect_Flag",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_Trigger_Effect_Flag",
+                      "value": 0
+                    },
+                    "Deleted bullshit",
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
+                      "searchRandom": true,
+                      "includeDyingTargets": true,
+                      "maxTargets": 5,
+                      "ifTargetFound": [
+                        {
+                          "name": "Define Custom Variable with Stat",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "variableName": "_Temp_Hp",
+                          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "OR",
+                            "conditionList": [
+                              {
+                                "name": "Compare: Monster Rank",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "compareType": "=",
+                                "value2": 1
+                              },
+                              {
+                                "name": "Compare: Monster Rank",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "compareType": "=",
+                                "value2": 2
+                              }
+                            ]
+                          },
+                          "passed": [
+                            {
+                              "name": "ATK Scaling DMG",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "canPhase": true,
+                              "AttackScaling": {
+                                "DamageType": "Physical",
+                                "DamageFlat": {
+                                  "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio) || MUL || RETURN",
+                                  "displayLines": "(_Temp_Hp * _Damage_Ratio)",
+                                  "constants": [],
+                                  "variables": [
+                                    "_Temp_Hp",
+                                    "_Damage_Ratio"
+                                  ]
+                                },
+                                "dmgFormulaFinal": "Converted DMG Base",
+                                "Toughness": null,
+                                "Tags": null,
+                                "attackType": "DOT"
+                              }
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "ATK Scaling DMG",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "canPhase": true,
+                              "AttackScaling": {
+                                "DamageType": "Physical",
+                                "DamageFlat": {
+                                  "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio_2) || MUL || RETURN",
+                                  "displayLines": "(_Temp_Hp * _Damage_Ratio_2)",
+                                  "constants": [],
+                                  "variables": [
+                                    "_Temp_Hp",
+                                    "_Damage_Ratio_2"
+                                  ]
+                                },
+                                "dmgFormulaFinal": "Converted DMG Base",
+                                "Toughness": null,
+                                "Tags": null,
+                                "attackType": "DOT"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_Current_Layer",
+                      "value": 0
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]"
+                    },
+                    "Trigger: Attack End"
+                  ],
+                  "failed": [
+                    {
+                      "name": "Trigger Ability",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "inherentTarget": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      "ability": "BattleEventAbility_Camear_AllLightTeamWithoutDither",
+                      "isTrigger": true
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_Current_Layer",
+                      "value": 0
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Player Team All}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "mustBeAlive2": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
+                      "stackLimit": {
+                        "operator": "Variables[0] (_Init_Layer) || RETURN",
+                        "displayLines": "_Init_Layer",
+                        "constants": [],
+                        "variables": [
+                          "_Init_Layer"
+                        ]
+                      },
+                      "valuePerStack": {
+                        "_DmgUp_Ratio_get": {
+                          "operator": "Variables[0] (_DmgUp_Ratio) || RETURN",
+                          "displayLines": "_DmgUp_Ratio",
+                          "constants": [],
+                          "variables": [
+                            "_DmgUp_Ratio"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": {
+                        "operator": "Variables[0] (_Current_Layer) || RETURN",
+                        "displayLines": "_Current_Layer",
+                        "constants": [],
+                        "variables": [
+                          "_Current_Layer"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Player Team All}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "mustBeAlive2": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_Current_Layer",
+                      "value": {
+                        "operator": "Variables[0] (_Current_Layer) || Constants[0] (1) || ADD || RETURN",
+                        "displayLines": "(_Current_Layer + 1)",
+                        "constants": [
+                          1
+                        ],
+                        "variables": [
+                          "_Current_Layer"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "_Current_Layer",
+                        "compareType": "=",
+                        "value2": {
+                          "operator": "Variables[0] (_Init_Layer) || RETURN",
+                          "displayLines": "_Init_Layer",
+                          "constants": [],
+                          "variables": [
+                            "_Init_Layer"
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "_Trigger_Effect_Flag",
+                          "value": 1
+                        },
+                        {
+                          "name": "Find New Target",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Enemy Team All}}"
+                          },
+                          "searchRandom": true,
+                          "maxTargets": 1,
+                          "ifTargetFound": [
+                            {
+                              "name": "Inject Ability Use",
+                              "condition": {
+                                "name": "Insert Ability Condition",
+                                "type": "AbilityOwnerInsertUnusedCount",
+                                "typeValue": 1
+                              },
+                              "abilityName": "BattleEventAbility_Challenge_Month_30_Insert",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Enemy Team All}}"
+                              },
+                              "priorityTag": "CharacterAttackFromSelf",
+                              "ownerState": "Anyone",
+                              "canHitNonTargets": true,
+                              "valuePerStack": {
+                                "_Damage_Ratio_get": {
+                                  "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
+                                  "displayLines": "#BattleEvent_P3_ADF",
+                                  "constants": [],
+                                  "variables": [
+                                    "#BattleEvent_P3_ADF"
+                                  ]
+                                },
+                                "_Damage_Ratio_2_get": {
+                                  "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
+                                  "displayLines": "#BattleEvent_P4_ADF",
+                                  "constants": [],
+                                  "variables": [
+                                    "#BattleEvent_P4_ADF"
+                                  ]
+                                }
+                              },
+                              "allowAbilityTriggers": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Enemies Still Alive",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player Team All}}"
+                        },
+                        "includeNonTargets": true
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "_Trigger_Effect_Flag",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_Trigger_Effect_Flag",
+                      "value": 0
+                    },
+                    "Deleted bullshit",
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
+                      "searchRandom": true,
+                      "includeDyingTargets": true,
+                      "maxTargets": 5,
+                      "ifTargetFound": [
+                        {
+                          "name": "Define Custom Variable with Stat",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "variableName": "_Temp_Hp",
+                          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "OR",
+                            "conditionList": [
+                              {
+                                "name": "Compare: Monster Rank",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "compareType": "=",
+                                "value2": 1
+                              },
+                              {
+                                "name": "Compare: Monster Rank",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "compareType": "=",
+                                "value2": 2
+                              }
+                            ]
+                          },
+                          "passed": [
+                            {
+                              "name": "ATK Scaling DMG",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "canPhase": true,
+                              "AttackScaling": {
+                                "DamageType": "Physical",
+                                "DamageFlat": {
+                                  "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio) || MUL || RETURN",
+                                  "displayLines": "(_Temp_Hp * _Damage_Ratio)",
+                                  "constants": [],
+                                  "variables": [
+                                    "_Temp_Hp",
+                                    "_Damage_Ratio"
+                                  ]
+                                },
+                                "dmgFormulaFinal": "Converted DMG Base",
+                                "Toughness": null,
+                                "Tags": null,
+                                "attackType": "DOT"
+                              }
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "ATK Scaling DMG",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "canPhase": true,
+                              "AttackScaling": {
+                                "DamageType": "Physical",
+                                "DamageFlat": {
+                                  "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio_2) || MUL || RETURN",
+                                  "displayLines": "(_Temp_Hp * _Damage_Ratio_2)",
+                                  "constants": [],
+                                  "variables": [
+                                    "_Temp_Hp",
+                                    "_Damage_Ratio_2"
+                                  ]
+                                },
+                                "dmgFormulaFinal": "Converted DMG Base",
+                                "Toughness": null,
+                                "Tags": null,
+                                "attackType": "DOT"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_Current_Layer",
+                      "value": 0
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]"
+                    },
+                    "Trigger: Attack End"
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "Wave Count",
+                        "compareType": "=",
+                        "value2": 1
+                      },
+                      "failed": [
+                        {
+                          "name": "Trigger Ability",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "inherentTarget": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All}}"
+                          },
+                          "ability": "BattleEventAbility_Camear_AllLightTeamWithoutDither",
+                          "isTrigger": true
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "_Current_Layer",
+                          "value": 0
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "New Enemy Wave",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_Current_Layer",
+                  "value": 0
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]"
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 10,
+                  "conditions": {
+                    "name": "Compare: Monster Rank",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "compareType": ">=",
+                    "value2": 4
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1736106961\">Modifier_BattleEventAbility_Challenge_Month_30_sub2</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "_Current_Layer",
+              "from": "ContextOwner",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 1,
+                  "maxValue": {
+                    "operator": "Variables[0] (_Init_Layer) || RETURN",
+                    "displayLines": "_Init_Layer",
+                    "constants": [],
+                    "variables": [
+                      "_Init_Layer"
+                    ]
+                  },
+                  "includeMaxValueInRange": true,
+                  "whenEnteringRange": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                      },
+                      "searchRandom": true,
+                      "maxTargets": 10,
+                      "ifTargetFound": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
+                          "stackLimit": {
+                            "operator": "Variables[0] (_Init_Layer) || RETURN",
+                            "displayLines": "_Init_Layer",
+                            "constants": [],
+                            "variables": [
+                              "_Init_Layer"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "_DmgUp_Ratio_get": {
+                              "operator": "Variables[0] (_DmgUp_Ratio) || RETURN",
+                              "displayLines": "_DmgUp_Ratio",
+                              "constants": [],
+                              "variables": [
+                                "_DmgUp_Ratio"
+                              ]
+                            }
+                          },
+                          "addStacksPerTrigger": {
+                            "operator": "Variables[0] (_Current_Layer) || RETURN",
+                            "displayLines": "_Current_Layer",
+                            "constants": [],
+                            "variables": [
+                              "_Current_Layer"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "whenValueChanges": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                      },
+                      "searchRandom": true,
+                      "maxTargets": 10,
+                      "ifTargetFound": [
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]"
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
+                          "stackLimit": {
+                            "operator": "Variables[0] (_Init_Layer) || RETURN",
+                            "displayLines": "_Init_Layer",
+                            "constants": [],
+                            "variables": [
+                              "_Init_Layer"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "_DmgUp_Ratio_get": {
+                              "operator": "Variables[0] (_DmgUp_Ratio) || RETURN",
+                              "displayLines": "_DmgUp_Ratio",
+                              "constants": [],
+                              "variables": [
+                                "_DmgUp_Ratio"
+                              ]
+                            }
+                          },
+                          "addStacksPerTrigger": {
+                            "operator": "Variables[0] (_Current_Layer) || RETURN",
+                            "displayLines": "_Current_Layer",
+                            "constants": [],
+                            "variables": [
+                              "_Current_Layer"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "30130_BossInfiniteWave_Boss_Camera": {
+      "fileName": "30130_BossInfiniteWave_Boss_Camera",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "30130_BossInfiniteWave_Boss_Insert": {
+      "fileName": "30130_BossInfiniteWave_Boss_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-842805226\">BossInfiniteWave_DamageTaken_Modifier</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-842805226\">BossInfiniteWave_DamageTaken_Modifier</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnemyVulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "30130_BattleEventAbility_Camera_AllDarkTeamWithoutDither": {
+      "fileName": "30130_BattleEventAbility_Camera_AllDarkTeamWithoutDither",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Clear DMG Numbers(UI)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          }
+        },
+        {
+          "name": "UI Display Event",
+          "popUpText": "Memory Turbulence"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "30130_BattleEventAbility_Camear_AllLightTeamWithoutDither": {
+      "fileName": "30130_BattleEventAbility_Camear_AllLightTeamWithoutDither",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Memory Turbulence"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "30130_BattleEventAbility_Challenge_Month_30_Insert": {
+      "fileName": "30130_BattleEventAbility_Challenge_Month_30_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_Trigger_Effect_Flag",
+          "value": 0
+        },
+        "Deleted bullshit",
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "searchRandom": true,
+          "includeDyingTargets": true,
+          "maxTargets": 5,
+          "ifTargetFound": [
+            {
+              "name": "Define Custom Variable with Stat",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "variableName": "_Temp_Hp",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Compare: Monster Rank",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  {
+                    "name": "Compare: Monster Rank",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "compareType": "=",
+                    "value2": 2
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "canPhase": true,
+                  "AttackScaling": {
+                    "DamageType": "Physical",
+                    "DamageFlat": {
+                      "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio_get) || MUL || RETURN",
+                      "displayLines": "(_Temp_Hp * _Damage_Ratio_get)",
+                      "constants": [],
+                      "variables": [
+                        "_Temp_Hp",
+                        "_Damage_Ratio_get"
+                      ]
+                    },
+                    "dmgFormulaFinal": "Converted DMG Base",
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "DOT"
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "canPhase": true,
+                  "AttackScaling": {
+                    "DamageType": "Physical",
+                    "DamageFlat": {
+                      "operator": "Variables[0] (_Temp_Hp) || Variables[1] (_Damage_Ratio_2_get) || MUL || RETURN",
+                      "displayLines": "(_Temp_Hp * _Damage_Ratio_2_get)",
+                      "constants": [],
+                      "variables": [
+                        "_Temp_Hp",
+                        "_Damage_Ratio_2_get"
+                      ]
+                    },
+                    "dmgFormulaFinal": "Converted DMG Base",
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "DOT"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Attack End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "30130_Functions": {
       "fileName": "30130_Functions",

@@ -3,522 +3,14 @@ const compositeAbilityObject = {
   "fullCharacterName": 30123,
   "trimCharacterName": 30123,
   "abilityList": [
-    "30123_BattleEventAbility_Challenge_Month_23",
-    "30123_BattleEventAbility_Challenge_Month_23_RandomDebuff",
     "30123_Modifiers",
+    "30123_BattleEventAbility_Challenge_Month_23",
+    "30123_BossInfiniteWave_Boss_Camera",
+    "30123_BossInfiniteWave_Boss_Insert",
+    "30123_BattleEventAbility_Challenge_Month_23_RandomDebuff",
     "30123_Functions"
   ],
   "abilityObject": {
-    "30123_BattleEventAbility_Challenge_Month_23": {
-      "fileName": "30123_BattleEventAbility_Challenge_Month_23",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "ContextCaster",
-          "variableName": "BattleEvent_P1_ADF",
-          "value": {
-            "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P1_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P1_ADF"
-            ]
-          }
-        },
-        {
-          "name": "Add Ability",
-          "abilityName": "BattleEventAbility_Camear_AllDarkTeam"
-        },
-        {
-          "name": "Add Ability",
-          "abilityName": "BattleEventAbility_Challenge_Month_23_RandomDebuff"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"968976956\">Modifier_BattleEventAbility_Challenge_Month_23</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__968976956\">Modifier_BattleEventAbility_Challenge_Month_23</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Trigger Ability",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "inherentTarget": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "ability": "BattleEventAbility_Camear_AllDarkTeam",
-                  "isTrigger": true
-                },
-                {
-                  "name": "Looped Event",
-                  "maxLoops": {
-                    "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "BattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "BattleEvent_P1_ADF"
-                    ]
-                  },
-                  "Event": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "includeDyingTargets": true,
-                      "maxTargets": 1,
-                      "ifTargetFound": [
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "inherentTarget": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "ability": "BattleEventAbility_Challenge_Month_23_RandomDebuff"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Target is Pathstrider",
-                    "path": [
-                      "The Hunt",
-                      "Destruction"
-                    ],
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "set": 0
-                    },
-                    {
-                      "name": "UI Display Event (On Entity)",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "popUpText": "Action Advanced",
-                      "living": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Trigger Ability",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "inherentTarget": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "ability": "BattleEventAbility_Camear_AllDarkTeam",
-                  "isTrigger": true
-                },
-                {
-                  "name": "Looped Event",
-                  "maxLoops": {
-                    "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "BattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "BattleEvent_P1_ADF"
-                    ]
-                  },
-                  "Event": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "includeDyingTargets": true,
-                      "maxTargets": 1,
-                      "ifTargetFound": [
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "inherentTarget": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "ability": "BattleEventAbility_Challenge_Month_23_RandomDebuff"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Target is Pathstrider",
-                    "path": [
-                      "The Hunt",
-                      "Destruction"
-                    ],
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "set": 0
-                    },
-                    {
-                      "name": "UI Display Event (On Entity)",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "popUpText": "Action Advanced",
-                      "living": true
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "30123_BattleEventAbility_Challenge_Month_23_RandomDebuff": {
-      "fileName": "30123_BattleEventAbility_Challenge_Month_23_RandomDebuff",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Random Event",
-          "odds": [
-            0.2,
-            0.2,
-            0.2,
-            0.2,
-            0.2
-          ],
-          "execute": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1504166155\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff1</a>[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
-              "duration": {
-                "operator": "Variables[0] (BattleEvent_P4_ADF) || RETURN",
-                "displayLines": "BattleEvent_P4_ADF",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_P4_ADF"
-                ]
-              },
-              "stackLimit": {
-                "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
-                "displayLines": "BattleEvent_P3_ADF",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_P3_ADF"
-                ]
-              },
-              "valuePerStack": {
-                "BattleEvent_P2_ADF_Get": {
-                  "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
-                  "displayLines": "BattleEvent_P2_ADF",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_P2_ADF"
-                  ]
-                }
-              },
-              "addStacksPerTrigger": 1
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1520943774\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff2</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
-              "duration": {
-                "operator": "Variables[0] (BattleEvent_P4_ADF) || RETURN",
-                "displayLines": "BattleEvent_P4_ADF",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_P4_ADF"
-                ]
-              },
-              "stackLimit": {
-                "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
-                "displayLines": "BattleEvent_P3_ADF",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_P3_ADF"
-                ]
-              },
-              "valuePerStack": {
-                "BattleEvent_P2_ADF_Get": {
-                  "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
-                  "displayLines": "BattleEvent_P2_ADF",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_P2_ADF"
-                  ]
-                }
-              },
-              "addStacksPerTrigger": 1
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1537721393\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff3</a>[<span class=\"descriptionNumberColor\">SPD Reduction</span>]",
-              "duration": {
-                "operator": "Variables[0] (BattleEvent_P4_ADF) || RETURN",
-                "displayLines": "BattleEvent_P4_ADF",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_P4_ADF"
-                ]
-              },
-              "stackLimit": {
-                "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
-                "displayLines": "BattleEvent_P3_ADF",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_P3_ADF"
-                ]
-              },
-              "valuePerStack": {
-                "BattleEvent_P2_ADF_Get": {
-                  "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
-                  "displayLines": "BattleEvent_P2_ADF",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_P2_ADF"
-                  ]
-                }
-              },
-              "addStacksPerTrigger": 1
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1554499012\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff4</a>[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
-              "duration": {
-                "operator": "Variables[0] (BattleEvent_P4_ADF) || RETURN",
-                "displayLines": "BattleEvent_P4_ADF",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_P4_ADF"
-                ]
-              },
-              "stackLimit": {
-                "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
-                "displayLines": "BattleEvent_P3_ADF",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_P3_ADF"
-                ]
-              },
-              "valuePerStack": {
-                "BattleEvent_P2_ADF_Get": {
-                  "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
-                  "displayLines": "BattleEvent_P2_ADF",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_P2_ADF"
-                  ]
-                }
-              },
-              "addStacksPerTrigger": 1
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1571276631\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff5</a>[<span class=\"descriptionNumberColor\">Follow-Up ATK Vulnerability</span>]",
-              "duration": {
-                "operator": "Variables[0] (BattleEvent_P4_ADF) || RETURN",
-                "displayLines": "BattleEvent_P4_ADF",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_P4_ADF"
-                ]
-              },
-              "stackLimit": {
-                "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
-                "displayLines": "BattleEvent_P3_ADF",
-                "constants": [],
-                "variables": [
-                  "BattleEvent_P3_ADF"
-                ]
-              },
-              "valuePerStack": {
-                "BattleEvent_P5_ADF_Get": {
-                  "operator": "Variables[0] (BattleEvent_P5_ADF) || RETURN",
-                  "displayLines": "BattleEvent_P5_ADF",
-                  "constants": [],
-                  "variables": [
-                    "BattleEvent_P5_ADF"
-                  ]
-                }
-              },
-              "addStacksPerTrigger": 1
-            }
-          ]
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "ContextCaster",
-          "variableName": "BattleEvent_P2_ADF",
-          "value": {
-            "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P2_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P2_ADF"
-            ]
-          }
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "ContextCaster",
-          "variableName": "BattleEvent_P3_ADF",
-          "value": {
-            "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P3_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P3_ADF"
-            ]
-          }
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "ContextCaster",
-          "variableName": "BattleEvent_P4_ADF",
-          "value": {
-            "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P4_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P4_ADF"
-            ]
-          }
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "ContextCaster",
-          "variableName": "BattleEvent_P5_ADF",
-          "value": {
-            "operator": "Variables[0] (#BattleEvent_P5_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P5_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P5_ADF"
-            ]
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
     "30123_Modifiers": {
       "fileName": "30123_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -3009,9 +2501,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1571276631\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff5</a>[<span class=\"descriptionNumberColor\">Follow-Up ATK Vulnerability</span>]",
           "stackType": "ReplaceByCaster",
-          "stackData": [
-            "BattleEvent_P5_ADF_Get"
-          ],
           "description": "Follow-Up ATK DMG taken increases by <span class=\"descriptionNumberColor\">BattleEvent_P5_ADF_Get</span>.",
           "type": "Debuff",
           "effectName": "Follow-Up ATK Vulnerability",
@@ -3081,9 +2570,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1554499012\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff4</a>[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
           "stackType": "ReplaceByCaster",
-          "stackData": [
-            "BattleEvent_P2_ADF_Get"
-          ],
           "description": "Effect RES decreases by <span class=\"descriptionNumberColor\">BattleEvent_P2_ADF_Get</span>.",
           "type": "Debuff",
           "effectName": "Effect RES Reduction",
@@ -3143,9 +2629,6 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedDown"
-          ],
-          "stackData": [
-            "BattleEvent_P2_ADF_Get"
           ],
           "description": "Decreases SPD by <span class=\"descriptionNumberColor\">BattleEvent_P2_ADF_Get</span>.",
           "type": "Debuff",
@@ -3207,9 +2690,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_DefenceDown"
           ],
-          "stackData": [
-            "BattleEvent_P2_ADF_Get"
-          ],
           "description": "Reduces DEF by <span class=\"descriptionNumberColor\">BattleEvent_P2_ADF_Get</span>.",
           "type": "Debuff",
           "effectName": "DEF Reduction",
@@ -3270,9 +2750,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_AttackDown"
           ],
-          "stackData": [
-            "BattleEvent_P2_ADF_Get"
-          ],
           "description": "ATK decreases by <span class=\"descriptionNumberColor\">BattleEvent_P2_ADF_Get</span>.",
           "type": "Debuff",
           "effectName": "ATK Reduction",
@@ -3328,6 +2805,581 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "30123_BattleEventAbility_Challenge_Month_23": {
+      "fileName": "30123_BattleEventAbility_Challenge_Month_23",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "ContextCaster",
+          "variableName": "BattleEvent_P1_ADF",
+          "value": {
+            "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
+            "displayLines": "#BattleEvent_P1_ADF",
+            "constants": [],
+            "variables": [
+              "#BattleEvent_P1_ADF"
+            ]
+          }
+        },
+        {
+          "name": "Add Ability",
+          "abilityName": "BattleEventAbility_Camear_AllDarkTeam"
+        },
+        {
+          "name": "Add Ability",
+          "abilityName": "BattleEventAbility_Challenge_Month_23_RandomDebuff"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"968976956\">Modifier_BattleEventAbility_Challenge_Month_23</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__968976956\">Modifier_BattleEventAbility_Challenge_Month_23</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "Trigger Ability",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "inherentTarget": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "ability": "BattleEventAbility_Camear_AllDarkTeam",
+                  "isTrigger": true
+                },
+                {
+                  "name": "Looped Event",
+                  "maxLoops": {
+                    "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
+                    "displayLines": "BattleEvent_P1_ADF",
+                    "constants": [],
+                    "variables": [
+                      "BattleEvent_P1_ADF"
+                    ]
+                  },
+                  "Event": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
+                      "searchRandom": true,
+                      "includeDyingTargets": true,
+                      "maxTargets": 1,
+                      "ifTargetFound": [
+                        {
+                          "name": "Trigger Ability",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "inherentTarget": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "ability": "BattleEventAbility_Challenge_Month_23_RandomDebuff"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "conditions": {
+                    "name": "Target is Pathstrider",
+                    "path": [
+                      "The Hunt",
+                      "Destruction"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Action Advance/Delay",
+                      "advanceType": "Set",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "set": 0
+                    },
+                    {
+                      "name": "UI Display Event (On Entity)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "popUpText": "Action Advanced",
+                      "living": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Trigger Ability",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "inherentTarget": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "ability": "BattleEventAbility_Camear_AllDarkTeam",
+                  "isTrigger": true
+                },
+                {
+                  "name": "Looped Event",
+                  "maxLoops": {
+                    "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
+                    "displayLines": "BattleEvent_P1_ADF",
+                    "constants": [],
+                    "variables": [
+                      "BattleEvent_P1_ADF"
+                    ]
+                  },
+                  "Event": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
+                      "searchRandom": true,
+                      "includeDyingTargets": true,
+                      "maxTargets": 1,
+                      "ifTargetFound": [
+                        {
+                          "name": "Trigger Ability",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "inherentTarget": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "ability": "BattleEventAbility_Challenge_Month_23_RandomDebuff"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "conditions": {
+                    "name": "Target is Pathstrider",
+                    "path": [
+                      "The Hunt",
+                      "Destruction"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Action Advance/Delay",
+                      "advanceType": "Set",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "set": 0
+                    },
+                    {
+                      "name": "UI Display Event (On Entity)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "popUpText": "Action Advanced",
+                      "living": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "30123_BossInfiniteWave_Boss_Camera": {
+      "fileName": "30123_BossInfiniteWave_Boss_Camera",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "30123_BossInfiniteWave_Boss_Insert": {
+      "fileName": "30123_BossInfiniteWave_Boss_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-842805226\">BossInfiniteWave_DamageTaken_Modifier</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-842805226\">BossInfiniteWave_DamageTaken_Modifier</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnemyVulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "30123_BattleEventAbility_Challenge_Month_23_RandomDebuff": {
+      "fileName": "30123_BattleEventAbility_Challenge_Month_23_RandomDebuff",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Random Event",
+          "odds": [
+            0.2,
+            0.2,
+            0.2,
+            0.2,
+            0.2
+          ],
+          "execute": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1504166155\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff1</a>[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
+              "duration": {
+                "operator": "Variables[0] (BattleEvent_P4_ADF) || RETURN",
+                "displayLines": "BattleEvent_P4_ADF",
+                "constants": [],
+                "variables": [
+                  "BattleEvent_P4_ADF"
+                ]
+              },
+              "stackLimit": {
+                "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
+                "displayLines": "BattleEvent_P3_ADF",
+                "constants": [],
+                "variables": [
+                  "BattleEvent_P3_ADF"
+                ]
+              },
+              "valuePerStack": {
+                "BattleEvent_P2_ADF_Get": {
+                  "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
+                  "displayLines": "BattleEvent_P2_ADF",
+                  "constants": [],
+                  "variables": [
+                    "BattleEvent_P2_ADF"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": 1
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1520943774\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff2</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+              "duration": {
+                "operator": "Variables[0] (BattleEvent_P4_ADF) || RETURN",
+                "displayLines": "BattleEvent_P4_ADF",
+                "constants": [],
+                "variables": [
+                  "BattleEvent_P4_ADF"
+                ]
+              },
+              "stackLimit": {
+                "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
+                "displayLines": "BattleEvent_P3_ADF",
+                "constants": [],
+                "variables": [
+                  "BattleEvent_P3_ADF"
+                ]
+              },
+              "valuePerStack": {
+                "BattleEvent_P2_ADF_Get": {
+                  "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
+                  "displayLines": "BattleEvent_P2_ADF",
+                  "constants": [],
+                  "variables": [
+                    "BattleEvent_P2_ADF"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": 1
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1537721393\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff3</a>[<span class=\"descriptionNumberColor\">SPD Reduction</span>]",
+              "duration": {
+                "operator": "Variables[0] (BattleEvent_P4_ADF) || RETURN",
+                "displayLines": "BattleEvent_P4_ADF",
+                "constants": [],
+                "variables": [
+                  "BattleEvent_P4_ADF"
+                ]
+              },
+              "stackLimit": {
+                "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
+                "displayLines": "BattleEvent_P3_ADF",
+                "constants": [],
+                "variables": [
+                  "BattleEvent_P3_ADF"
+                ]
+              },
+              "valuePerStack": {
+                "BattleEvent_P2_ADF_Get": {
+                  "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
+                  "displayLines": "BattleEvent_P2_ADF",
+                  "constants": [],
+                  "variables": [
+                    "BattleEvent_P2_ADF"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": 1
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1554499012\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff4</a>[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
+              "duration": {
+                "operator": "Variables[0] (BattleEvent_P4_ADF) || RETURN",
+                "displayLines": "BattleEvent_P4_ADF",
+                "constants": [],
+                "variables": [
+                  "BattleEvent_P4_ADF"
+                ]
+              },
+              "stackLimit": {
+                "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
+                "displayLines": "BattleEvent_P3_ADF",
+                "constants": [],
+                "variables": [
+                  "BattleEvent_P3_ADF"
+                ]
+              },
+              "valuePerStack": {
+                "BattleEvent_P2_ADF_Get": {
+                  "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
+                  "displayLines": "BattleEvent_P2_ADF",
+                  "constants": [],
+                  "variables": [
+                    "BattleEvent_P2_ADF"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": 1
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1571276631\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff5</a>[<span class=\"descriptionNumberColor\">Follow-Up ATK Vulnerability</span>]",
+              "duration": {
+                "operator": "Variables[0] (BattleEvent_P4_ADF) || RETURN",
+                "displayLines": "BattleEvent_P4_ADF",
+                "constants": [],
+                "variables": [
+                  "BattleEvent_P4_ADF"
+                ]
+              },
+              "stackLimit": {
+                "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
+                "displayLines": "BattleEvent_P3_ADF",
+                "constants": [],
+                "variables": [
+                  "BattleEvent_P3_ADF"
+                ]
+              },
+              "valuePerStack": {
+                "BattleEvent_P5_ADF_Get": {
+                  "operator": "Variables[0] (BattleEvent_P5_ADF) || RETURN",
+                  "displayLines": "BattleEvent_P5_ADF",
+                  "constants": [],
+                  "variables": [
+                    "BattleEvent_P5_ADF"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": 1
+            }
+          ]
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "ContextCaster",
+          "variableName": "BattleEvent_P2_ADF",
+          "value": {
+            "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
+            "displayLines": "#BattleEvent_P2_ADF",
+            "constants": [],
+            "variables": [
+              "#BattleEvent_P2_ADF"
+            ]
+          }
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "ContextCaster",
+          "variableName": "BattleEvent_P3_ADF",
+          "value": {
+            "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
+            "displayLines": "#BattleEvent_P3_ADF",
+            "constants": [],
+            "variables": [
+              "#BattleEvent_P3_ADF"
+            ]
+          }
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "ContextCaster",
+          "variableName": "BattleEvent_P4_ADF",
+          "value": {
+            "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
+            "displayLines": "#BattleEvent_P4_ADF",
+            "constants": [],
+            "variables": [
+              "#BattleEvent_P4_ADF"
+            ]
+          }
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "ContextCaster",
+          "variableName": "BattleEvent_P5_ADF",
+          "value": {
+            "operator": "Variables[0] (#BattleEvent_P5_ADF) || RETURN",
+            "displayLines": "#BattleEvent_P5_ADF",
+            "constants": [],
+            "variables": [
+              "#BattleEvent_P5_ADF"
+            ]
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "30123_Functions": {
       "fileName": "30123_Functions",

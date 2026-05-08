@@ -3,88 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": 20040,
   "trimCharacterName": 20040,
   "abilityList": [
+    "20040_Modifiers",
     "20040_BattleEvent_Monster_W5_Vtuber_Part01",
     "20040_BattleEvent_Monster_W5_Vtuber_EnterReady",
-    "20040_Modifiers",
+    "20040_Monster_W5_Vtuber_AbortInsert",
     "20040_Functions"
   ],
   "abilityObject": {
-    "20040_BattleEvent_Monster_W5_Vtuber_Part01": {
-      "fileName": "20040_BattleEvent_Monster_W5_Vtuber_Part01",
-      "childAbilityList": [
-        "20040_BattleEvent_Monster_W5_Vtuber_EnterReady",
-        "20040_BattleEvent_Monster_W5_Vtuber_Part01"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Ultimate",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Add Target by Unique Identifier",
-            "identifier": "W5_Vtuber_00"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1713929309\">Enemy_W5_Vtuber_MainStory_Ability03</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1869034007\">Enemy_W5_Vtuber_MuteUltra</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Add Target by Unique Identifier",
-            "identifier": "W5_Vtuber_00"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2019186097\">Enemy_W5_Vtuber_Locking</a>"
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Add Target by Unique Identifier",
-            "identifier": "W5_Vtuber_00"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W5_Vtuber_Ability03_Part01",
-          "isTrigger": true
-        },
-        "Wait for Pending Ability Completions",
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Ally Target",
-        "allowMemoAllyTarget": "Forbidden",
-        "excludeSelf": true
-      }
-    },
-    "20040_BattleEvent_Monster_W5_Vtuber_EnterReady": {
-      "fileName": "20040_BattleEvent_Monster_W5_Vtuber_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "20040_Modifiers": {
       "fileName": "20040_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -3732,6 +3657,145 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "20040_BattleEvent_Monster_W5_Vtuber_Part01": {
+      "fileName": "20040_BattleEvent_Monster_W5_Vtuber_Part01",
+      "childAbilityList": [
+        "20040_BattleEvent_Monster_W5_Vtuber_EnterReady",
+        "20040_BattleEvent_Monster_W5_Vtuber_Part01"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Ultimate",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Add Target by Unique Identifier",
+            "identifier": "W5_Vtuber_00"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1713929309\">Enemy_W5_Vtuber_MainStory_Ability03</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1869034007\">Enemy_W5_Vtuber_MuteUltra</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Add Target by Unique Identifier",
+            "identifier": "W5_Vtuber_00"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2019186097\">Enemy_W5_Vtuber_Locking</a>"
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Add Target by Unique Identifier",
+            "identifier": "W5_Vtuber_00"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W5_Vtuber_Ability03_Part01",
+          "isTrigger": true
+        },
+        "Wait for Pending Ability Completions",
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target",
+        "allowMemoAllyTarget": "Forbidden",
+        "excludeSelf": true
+      }
+    },
+    "20040_BattleEvent_Monster_W5_Vtuber_EnterReady": {
+      "fileName": "20040_BattleEvent_Monster_W5_Vtuber_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "20040_Monster_W5_Vtuber_AbortInsert": {
+      "fileName": "20040_Monster_W5_Vtuber_AbortInsert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Add Target by Unique Identifier",
+              "identifier": "W5_Vtuber_00"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"308759632\">Enemy_W5_Vtuber_SwitchField</a>"
+          },
+          "passed": [
+            {
+              "name": "Define Modifier-Specific Variable",
+              "target": {
+                "name": "Add Target by Unique Identifier",
+                "identifier": "W5_Vtuber_00"
+              },
+              "modifierName": "<a class=\"gModGreen\" id=\"308759632\">Enemy_W5_Vtuber_SwitchField</a>",
+              "variableName": "MDF_SwitchField",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "includeDyingTargets": true,
+          "conditions": {
+            "name": "Has Flag",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "flagName": [
+              "Stealth"
+            ],
+            "invertCondition": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add to Team Target Grouping",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "20040_Functions": {
       "fileName": "20040_Functions",

@@ -3,503 +3,14 @@ const compositeAbilityObject = {
   "fullCharacterName": 30129,
   "trimCharacterName": 30129,
   "abilityList": [
-    "30129_BattleEventAbility_Challenge_Month_29",
-    "30129_BattleEventAbility_Camera_AllDarkTeamWithoutDither",
     "30129_Modifiers",
+    "30129_BattleEventAbility_Challenge_Month_29",
+    "30129_BossInfiniteWave_Boss_Camera",
+    "30129_BossInfiniteWave_Boss_Insert",
+    "30129_BattleEventAbility_Camera_AllDarkTeamWithoutDither",
     "30129_Functions"
   ],
   "abilityObject": {
-    "30129_BattleEventAbility_Challenge_Month_29": {
-      "fileName": "30129_BattleEventAbility_Challenge_Month_29",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1136753146\">Modifier_BattleEventAbility_Challenge_Month_29</a>",
-          "valuePerStack": {
-            "BattleEvent_P1_ADF": {
-              "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P1_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P1_ADF"
-              ]
-            },
-            "BattleEvent_P2_ADF": {
-              "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P2_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P2_ADF"
-              ]
-            },
-            "BattleEvent_P3_ADF": {
-              "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P3_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P3_ADF"
-              ]
-            },
-            "BattleEvent_P4_ADF": {
-              "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P4_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P4_ADF"
-              ]
-            },
-            "BattleEvent_P5_ADF": {
-              "operator": "Variables[0] (#BattleEvent_P5_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P5_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P5_ADF"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Show Attack Time",
-          "time": 0,
-          "on": null,
-          "show": true
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1136753146\">Modifier_BattleEventAbility_Challenge_Month_29</a>",
-          "stackType": "ReplaceByCaster",
-          "stackData": [
-            "BattleEvent_P1_ADF",
-            "BattleEvent_P2_ADF",
-            "BattleEvent_P3_ADF",
-            "BattleEvent_P4_ADF",
-            "BattleEvent_P5_ADF"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_Count",
-                    "compareType": ">=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    "Deleted bullshit",
-                    {
-                      "name": "Looped Event",
-                      "maxLoops": {
-                        "operator": "Variables[0] (MDF_Count) || RETURN",
-                        "displayLines": "MDF_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Count"
-                        ]
-                      },
-                      "Event": [
-                        {
-                          "name": "Find New Target",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          "searchRandom": true,
-                          "includeDyingTargets": true,
-                          "maxTargets": 1,
-                          "ifTargetFound": [
-                            {
-                              "name": "Define Custom Variable with Stat",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "variableName": "_Temp_Hp",
-                              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
-                            },
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "OR",
-                                "conditionList": [
-                                  {
-                                    "name": "Compare: Monster Rank",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "compareType": "=",
-                                    "value2": 1
-                                  },
-                                  {
-                                    "name": "Compare: Monster Rank",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "compareType": "=",
-                                    "value2": 2
-                                  }
-                                ]
-                              },
-                              "passed": [
-                                {
-                                  "name": "ATK Scaling DMG",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "canPhase": true,
-                                  "AttackScaling": {
-                                    "DamageType": "Physical",
-                                    "DamageFlat": {
-                                      "operator": "Variables[0] (_Temp_Hp) || Variables[1] (BattleEvent_P5_ADF) || MUL || RETURN",
-                                      "displayLines": "(_Temp_Hp * BattleEvent_P5_ADF)",
-                                      "constants": [],
-                                      "variables": [
-                                        "_Temp_Hp",
-                                        "BattleEvent_P5_ADF"
-                                      ]
-                                    },
-                                    "dmgFormulaFinal": "Converted DMG Base",
-                                    "Toughness": null,
-                                    "Tags": null,
-                                    "attackType": "DOT"
-                                  }
-                                }
-                              ],
-                              "failed": [
-                                {
-                                  "name": "ATK Scaling DMG",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "canPhase": true,
-                                  "AttackScaling": {
-                                    "DamageType": "Physical",
-                                    "DamageFlat": {
-                                      "operator": "Variables[0] (_Temp_Hp) || Variables[1] (BattleEvent_P2_ADF) || MUL || RETURN",
-                                      "displayLines": "(_Temp_Hp * BattleEvent_P2_ADF)",
-                                      "constants": [],
-                                      "variables": [
-                                        "_Temp_Hp",
-                                        "BattleEvent_P2_ADF"
-                                      ]
-                                    },
-                                    "dmgFormulaFinal": "Converted DMG Base",
-                                    "Toughness": null,
-                                    "Tags": null,
-                                    "attackType": "DOT"
-                                  }
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
-                      "value": 0
-                    },
-                    {
-                      "name": "Show Attack Time",
-                      "time": 0,
-                      "on": null,
-                      "show": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Ability",
-                  "abilityName": "BattleEventAbility_Camera_AllDarkTeamWithoutDither"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack Start [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      },
-                      {
-                        "name": "Attack Type",
-                        "attackTypes": [
-                          "Follow-up"
-                        ],
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        }
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Insert_Flag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      },
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Skill"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
-                      "value": {
-                        "operator": "Variables[0] (MDF_Count) || Variables[1] (BattleEvent_P4_ADF) || ADD || RETURN",
-                        "displayLines": "(MDF_Count + BattleEvent_P4_ADF)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Count",
-                          "BattleEvent_P4_ADF"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "MDF_Count",
-                        "compareType": "<=",
-                        "value2": {
-                          "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                          "displayLines": "BattleEvent_P1_ADF",
-                          "constants": [],
-                          "variables": [
-                            "BattleEvent_P1_ADF"
-                          ]
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Show Attack Time",
-                          "time": {
-                            "operator": "Variables[0] (MDF_Count) || RETURN",
-                            "displayLines": "MDF_Count",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Count"
-                            ]
-                          },
-                          "on": null,
-                          "show": true
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Show Attack Time",
-                          "time": {
-                            "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                            "displayLines": "BattleEvent_P1_ADF",
-                            "constants": [],
-                            "variables": [
-                              "BattleEvent_P1_ADF"
-                            ]
-                          },
-                          "on": null,
-                          "show": true
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "MDF_Count",
-                          "value": {
-                            "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                            "displayLines": "BattleEvent_P1_ADF",
-                            "constants": [],
-                            "variables": [
-                              "BattleEvent_P1_ADF"
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Is Part Of Team",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "team": "Player Team"
-                          },
-                          {
-                            "name": "Compare: Variable",
-                            "value1": "Insert_Flag",
-                            "compareType": "=",
-                            "value2": 1
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "Insert_Flag",
-                          "value": 0
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "MDF_Count",
-                          "value": {
-                            "operator": "Variables[0] (MDF_Count) || Variables[1] (BattleEvent_P3_ADF) || ADD || RETURN",
-                            "displayLines": "(MDF_Count + BattleEvent_P3_ADF)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Count",
-                              "BattleEvent_P3_ADF"
-                            ]
-                          }
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "value1": "MDF_Count",
-                            "compareType": "<=",
-                            "value2": {
-                              "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                              "displayLines": "BattleEvent_P1_ADF",
-                              "constants": [],
-                              "variables": [
-                                "BattleEvent_P1_ADF"
-                              ]
-                            }
-                          },
-                          "passed": [
-                            {
-                              "name": "Show Attack Time",
-                              "time": {
-                                "operator": "Variables[0] (MDF_Count) || RETURN",
-                                "displayLines": "MDF_Count",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_Count"
-                                ]
-                              },
-                              "on": null,
-                              "show": true
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Show Attack Time",
-                              "time": {
-                                "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                                "displayLines": "BattleEvent_P1_ADF",
-                                "constants": [],
-                                "variables": [
-                                  "BattleEvent_P1_ADF"
-                                ]
-                              },
-                              "on": null,
-                              "show": true
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "MDF_Count",
-                              "value": {
-                                "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-                                "displayLines": "BattleEvent_P1_ADF",
-                                "constants": [],
-                                "variables": [
-                                  "BattleEvent_P1_ADF"
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "30129_BattleEventAbility_Camera_AllDarkTeamWithoutDither": {
-      "fileName": "30129_BattleEventAbility_Camera_AllDarkTeamWithoutDither",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Clear DMG Numbers(UI)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          }
-        },
-        {
-          "name": "UI Display Event",
-          "popUpText": "Memory Turbulence"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
     "30129_Modifiers": {
       "fileName": "30129_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -3294,6 +2805,562 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "30129_BattleEventAbility_Challenge_Month_29": {
+      "fileName": "30129_BattleEventAbility_Challenge_Month_29",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1136753146\">Modifier_BattleEventAbility_Challenge_Month_29</a>",
+          "valuePerStack": {
+            "BattleEvent_P1_ADF": {
+              "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
+              "displayLines": "#BattleEvent_P1_ADF",
+              "constants": [],
+              "variables": [
+                "#BattleEvent_P1_ADF"
+              ]
+            },
+            "BattleEvent_P2_ADF": {
+              "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
+              "displayLines": "#BattleEvent_P2_ADF",
+              "constants": [],
+              "variables": [
+                "#BattleEvent_P2_ADF"
+              ]
+            },
+            "BattleEvent_P3_ADF": {
+              "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
+              "displayLines": "#BattleEvent_P3_ADF",
+              "constants": [],
+              "variables": [
+                "#BattleEvent_P3_ADF"
+              ]
+            },
+            "BattleEvent_P4_ADF": {
+              "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
+              "displayLines": "#BattleEvent_P4_ADF",
+              "constants": [],
+              "variables": [
+                "#BattleEvent_P4_ADF"
+              ]
+            },
+            "BattleEvent_P5_ADF": {
+              "operator": "Variables[0] (#BattleEvent_P5_ADF) || RETURN",
+              "displayLines": "#BattleEvent_P5_ADF",
+              "constants": [],
+              "variables": [
+                "#BattleEvent_P5_ADF"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Show Attack Time",
+          "time": 0,
+          "on": null,
+          "show": true
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1136753146\">Modifier_BattleEventAbility_Challenge_Month_29</a>",
+          "stackType": "ReplaceByCaster",
+          "stackData": [
+            "BattleEvent_P1_ADF",
+            "BattleEvent_P2_ADF",
+            "BattleEvent_P3_ADF",
+            "BattleEvent_P4_ADF",
+            "BattleEvent_P5_ADF"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_Count",
+                    "compareType": ">=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Looped Event",
+                      "maxLoops": {
+                        "operator": "Variables[0] (MDF_Count) || RETURN",
+                        "displayLines": "MDF_Count",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Count"
+                        ]
+                      },
+                      "Event": [
+                        {
+                          "name": "Find New Target",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Enemy Team All}}"
+                          },
+                          "searchRandom": true,
+                          "includeDyingTargets": true,
+                          "maxTargets": 1,
+                          "ifTargetFound": [
+                            {
+                              "name": "Define Custom Variable with Stat",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "variableName": "_Temp_Hp",
+                              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
+                            },
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "OR",
+                                "conditionList": [
+                                  {
+                                    "name": "Compare: Monster Rank",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Parameter Target}}"
+                                    },
+                                    "compareType": "=",
+                                    "value2": 1
+                                  },
+                                  {
+                                    "name": "Compare: Monster Rank",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Parameter Target}}"
+                                    },
+                                    "compareType": "=",
+                                    "value2": 2
+                                  }
+                                ]
+                              },
+                              "passed": [
+                                {
+                                  "name": "ATK Scaling DMG",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "canPhase": true,
+                                  "AttackScaling": {
+                                    "DamageType": "Physical",
+                                    "DamageFlat": {
+                                      "operator": "Variables[0] (_Temp_Hp) || Variables[1] (BattleEvent_P5_ADF) || MUL || RETURN",
+                                      "displayLines": "(_Temp_Hp * BattleEvent_P5_ADF)",
+                                      "constants": [],
+                                      "variables": [
+                                        "_Temp_Hp",
+                                        "BattleEvent_P5_ADF"
+                                      ]
+                                    },
+                                    "dmgFormulaFinal": "Converted DMG Base",
+                                    "Toughness": null,
+                                    "Tags": null,
+                                    "attackType": "DOT"
+                                  }
+                                }
+                              ],
+                              "failed": [
+                                {
+                                  "name": "ATK Scaling DMG",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "canPhase": true,
+                                  "AttackScaling": {
+                                    "DamageType": "Physical",
+                                    "DamageFlat": {
+                                      "operator": "Variables[0] (_Temp_Hp) || Variables[1] (BattleEvent_P2_ADF) || MUL || RETURN",
+                                      "displayLines": "(_Temp_Hp * BattleEvent_P2_ADF)",
+                                      "constants": [],
+                                      "variables": [
+                                        "_Temp_Hp",
+                                        "BattleEvent_P2_ADF"
+                                      ]
+                                    },
+                                    "dmgFormulaFinal": "Converted DMG Base",
+                                    "Toughness": null,
+                                    "Tags": null,
+                                    "attackType": "DOT"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Count",
+                      "value": 0
+                    },
+                    {
+                      "name": "Show Attack Time",
+                      "time": 0,
+                      "on": null,
+                      "show": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Ability",
+                  "abilityName": "BattleEventAbility_Camera_AllDarkTeamWithoutDither"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack Start [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Attack Type",
+                        "attackTypes": [
+                          "Follow-up"
+                        ],
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "Insert_Flag",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Skill"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Count",
+                      "value": {
+                        "operator": "Variables[0] (MDF_Count) || Variables[1] (BattleEvent_P4_ADF) || ADD || RETURN",
+                        "displayLines": "(MDF_Count + BattleEvent_P4_ADF)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Count",
+                          "BattleEvent_P4_ADF"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_Count",
+                        "compareType": "<=",
+                        "value2": {
+                          "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
+                          "displayLines": "BattleEvent_P1_ADF",
+                          "constants": [],
+                          "variables": [
+                            "BattleEvent_P1_ADF"
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Show Attack Time",
+                          "time": {
+                            "operator": "Variables[0] (MDF_Count) || RETURN",
+                            "displayLines": "MDF_Count",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Count"
+                            ]
+                          },
+                          "on": null,
+                          "show": true
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Show Attack Time",
+                          "time": {
+                            "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
+                            "displayLines": "BattleEvent_P1_ADF",
+                            "constants": [],
+                            "variables": [
+                              "BattleEvent_P1_ADF"
+                            ]
+                          },
+                          "on": null,
+                          "show": true
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_Count",
+                          "value": {
+                            "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
+                            "displayLines": "BattleEvent_P1_ADF",
+                            "constants": [],
+                            "variables": [
+                              "BattleEvent_P1_ADF"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Is Part Of Team",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "team": "Player Team"
+                          },
+                          {
+                            "name": "Compare: Variable",
+                            "value1": "Insert_Flag",
+                            "compareType": "=",
+                            "value2": 1
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "Insert_Flag",
+                          "value": 0
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_Count",
+                          "value": {
+                            "operator": "Variables[0] (MDF_Count) || Variables[1] (BattleEvent_P3_ADF) || ADD || RETURN",
+                            "displayLines": "(MDF_Count + BattleEvent_P3_ADF)",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Count",
+                              "BattleEvent_P3_ADF"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "MDF_Count",
+                            "compareType": "<=",
+                            "value2": {
+                              "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
+                              "displayLines": "BattleEvent_P1_ADF",
+                              "constants": [],
+                              "variables": [
+                                "BattleEvent_P1_ADF"
+                              ]
+                            }
+                          },
+                          "passed": [
+                            {
+                              "name": "Show Attack Time",
+                              "time": {
+                                "operator": "Variables[0] (MDF_Count) || RETURN",
+                                "displayLines": "MDF_Count",
+                                "constants": [],
+                                "variables": [
+                                  "MDF_Count"
+                                ]
+                              },
+                              "on": null,
+                              "show": true
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Show Attack Time",
+                              "time": {
+                                "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
+                                "displayLines": "BattleEvent_P1_ADF",
+                                "constants": [],
+                                "variables": [
+                                  "BattleEvent_P1_ADF"
+                                ]
+                              },
+                              "on": null,
+                              "show": true
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "MDF_Count",
+                              "value": {
+                                "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
+                                "displayLines": "BattleEvent_P1_ADF",
+                                "constants": [],
+                                "variables": [
+                                  "BattleEvent_P1_ADF"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "30129_BossInfiniteWave_Boss_Camera": {
+      "fileName": "30129_BossInfiniteWave_Boss_Camera",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "30129_BossInfiniteWave_Boss_Insert": {
+      "fileName": "30129_BossInfiniteWave_Boss_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-842805226\">BossInfiniteWave_DamageTaken_Modifier</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-842805226\">BossInfiniteWave_DamageTaken_Modifier</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnemyVulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "30129_BattleEventAbility_Camera_AllDarkTeamWithoutDither": {
+      "fileName": "30129_BattleEventAbility_Camera_AllDarkTeamWithoutDither",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Clear DMG Numbers(UI)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          }
+        },
+        {
+          "name": "UI Display Event",
+          "popUpText": "Memory Turbulence"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     },
     "30129_Functions": {
       "fileName": "30129_Functions",

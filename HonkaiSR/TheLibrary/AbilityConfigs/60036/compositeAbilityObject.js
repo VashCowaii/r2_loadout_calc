@@ -3,13 +3,45 @@ const compositeAbilityObject = {
   "fullCharacterName": 60036,
   "trimCharacterName": 60036,
   "abilityList": [
+    "60036_Modifiers",
     "60036_MissionBattleEvent60020_PassiveAbility01",
     "60036_BattleEventAbility_60020_Camera",
     "60036_MissionBattleEvent60020_Ability03_Part02",
-    "60036_MissionBattleEvent60020_Ability03_Part01",
-    "60036_Modifiers"
+    "60036_MissionBattleEvent60020_Ability03_Part01"
   ],
   "abilityObject": {
+    "60036_Modifiers": {
+      "fileName": "60036_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1381424630\">MStageMissionBattleEvent60020</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Ability",
+                  "abilityName": "MissionBattleEvent60020_Ability03_Part01"
+                },
+                {
+                  "name": "Add Ability",
+                  "abilityName": "MissionBattleEvent60020_Ability03_Part02"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "60036_MissionBattleEvent60020_PassiveAbility01": {
       "fileName": "60036_MissionBattleEvent60020_PassiveAbility01",
       "childAbilityList": [
@@ -420,38 +452,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "All Enemy Team"
       }
-    },
-    "60036_Modifiers": {
-      "fileName": "60036_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1381424630\">MStageMissionBattleEvent60020</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Ability",
-                  "abilityName": "MissionBattleEvent60020_Ability03_Part01"
-                },
-                {
-                  "name": "Add Ability",
-                  "abilityName": "MissionBattleEvent60020_Ability03_Part02"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": []
     }
   },
   "enemyData": {

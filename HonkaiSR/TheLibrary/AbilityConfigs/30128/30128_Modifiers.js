@@ -802,9 +802,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__639115186\">Modifier_BattleEventAbility_Challenge_Month_28_Sub2</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "_ActionDelayRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "Got a Queued Kill [Owner]",
@@ -1667,10 +1664,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__701462759\">Modifier_BattleEventAbility_Challenge_Month_28_Insert</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "DV_DmgUpRatio_Get",
-        "DV_AtkUpRatio_Get"
-      ],
       "description": "Increases ATK by <span class=\"descriptionNumberColor\">DV_AtkUpRatio_Get</span> and Break Effect by <span class=\"descriptionNumberColor\">DV_DmgUpRatio_Get</span>.",
       "type": "Buff",
       "effectName": "Memory Imprint",
@@ -1751,9 +1744,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-595048974\">Modifier_BattleEventAbility_Challenge_Month_28_preshow</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "ActionDelayRatio"
-      ],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",

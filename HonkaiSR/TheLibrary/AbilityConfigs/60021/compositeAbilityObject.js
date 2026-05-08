@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 60021,
   "trimCharacterName": 60021,
   "abilityList": [
+    "60021_Modifiers",
     "60021_MissionBattleEvent60021_Insert4",
     "60021_MissionBattleEvent60021_Insert3",
     "60021_MissionBattleEvent60021_Insert2",
@@ -11,10 +12,26 @@ const compositeAbilityObject = {
     "60021_MissionBattleEvent60021_Ability03_Camera",
     "60021_MissionBattleEvent60021_Ability03_Part02",
     "60021_MissionBattleEvent60021_Ability03_Part01",
-    "60021_Modifiers",
     "60021_Functions"
   ],
   "abilityObject": {
+    "60021_Modifiers": {
+      "fileName": "60021_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1446276332\">MissionBattleEvent60021_TriggerBEAbility</a>"
+        }
+      ],
+      "references": []
+    },
     "60021_MissionBattleEvent60021_Insert4": {
       "fileName": "60021_MissionBattleEvent60021_Insert4",
       "abilityType": null,
@@ -1457,23 +1474,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "All Player Team"
       }
-    },
-    "60021_Modifiers": {
-      "fileName": "60021_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1446276332\">MissionBattleEvent60021_TriggerBEAbility</a>"
-        }
-      ],
-      "references": []
     },
     "60021_Functions": {
       "fileName": "60021_Functions",

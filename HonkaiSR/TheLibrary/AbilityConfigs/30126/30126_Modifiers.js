@@ -1965,9 +1965,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__319313068\">Modifier_BattleEventAbility_Challenge_Month_26_sub2</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "_Trigger_Damage_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -2086,9 +2083,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-245828586\">Modifier_BattleEventAbility_Challenge_Month_26_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "_Trigger_Damage_Flag"
-      ],
       "description": "Receive <span class=\"descriptionNumberColor\">_DamageUp_Ratio_Sum</span> more DMG. Increase 1 stack every time this unit receives an attack. Receive additional DMG when stacks reach <span class=\"descriptionNumberColor\">_Init_Layer</span>.",
       "type": "Debuff",
       "effectName": "Memory Imprint",

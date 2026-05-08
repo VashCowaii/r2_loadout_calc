@@ -661,9 +661,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-14605930\">Modifier_BattleEventAbility_Challenge_Month_34_ExceedSP</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "EntityStockSPForShow"
-      ],
       "description": "<span class=\"descriptionNumberColor\">EntityStockSPForShow</span> extra Energy. This will be consumed first when unleashing Ultimate.",
       "type": "Other",
       "effectName": "Energy Overflow",

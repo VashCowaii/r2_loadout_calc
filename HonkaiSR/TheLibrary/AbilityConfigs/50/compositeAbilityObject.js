@@ -3,431 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": 50,
   "trimCharacterName": 50,
   "abilityList": [
+    "50_Modifiers",
     "50_BattleEventAbility_CocoliaP1_RL_Insert",
-    "50_BattleEventAbility_CocoliaP1_RL",
-    "50_Modifiers"
+    "50_BattleEventAbility_CocoliaP1_RL"
   ],
   "abilityObject": {
-    "50_BattleEventAbility_CocoliaP1_RL_Insert": {
-      "fileName": "50_BattleEventAbility_CocoliaP1_RL_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Doomsday Ice Cascade"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Additional DMG",
-            "hitOwner": {
-              "name": "Target Name",
-              "target": "{{Enemy Teams}}"
-            },
-            "EnergyGainPercent": "33%"
-          }
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "value": {
-            "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
-            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
-            "constants": [
-              0.2
-            ],
-            "variables": [
-              "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
-            ]
-          },
-          "isFixed": "* ERR"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Additional DMG",
-            "hitOwner": {
-              "name": "Target Name",
-              "target": "{{Enemy Teams}}"
-            },
-            "EnergyGainPercent": "33%"
-          }
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "value": {
-            "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
-            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
-            "constants": [
-              0.2
-            ],
-            "variables": [
-              "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
-            ]
-          },
-          "isFixed": "* ERR"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Additional DMG",
-            "hitOwner": {
-              "name": "Target Name",
-              "target": "{{Enemy Teams}}"
-            },
-            "EnergyGainPercent": "34%"
-          }
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "value": {
-            "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
-            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
-            "constants": [
-              0.2
-            ],
-            "variables": [
-              "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
-            ]
-          },
-          "isFixed": "* ERR"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Additional DMG",
-            "hitOwner": {
-              "name": "Target Name",
-              "target": "{{Enemy Teams}}"
-            },
-            "EnergyGainPercent": "33%"
-          }
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "value": {
-            "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
-            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
-            "constants": [
-              0.2
-            ],
-            "variables": [
-              "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
-            ]
-          },
-          "isFixed": "* ERR"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Additional DMG",
-            "hitOwner": {
-              "name": "Target Name",
-              "target": "{{Enemy Teams}}"
-            },
-            "EnergyGainPercent": "33%"
-          }
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "value": {
-            "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
-            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
-            "constants": [
-              0.2
-            ],
-            "variables": [
-              "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
-            ]
-          },
-          "isFixed": "* ERR"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "MDF_CocoliaP1_00_RL_BattleEvent_Count",
-            "compareType": "=",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "MDF_CocoliaP1_00_RL_BattleEvent_Count",
-              "value": 1
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "conditions": {
-                "name": "NOT",
-                "condition": {
-                  "name": "Has Flag",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "flagName": "STAT_CTRL_Frozen"
-                }
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
-                  "duration": 1,
-                  "baseChance": 1,
-                  "valuePerStack": {
-                    "Modifier_Frozen_DamagePercentage": {
-                      "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn) || RETURN",
-                      "displayLines": "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "conditions": {
-                "name": "NOT",
-                "condition": {
-                  "name": "Has Flag",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "flagName": "STAT_CTRL_Frozen"
-                }
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
-                  "duration": 1,
-                  "baseChance": 1,
-                  "valuePerStack": {
-                    "Modifier_Frozen_DamagePercentage": {
-                      "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn) || RETURN",
-                      "displayLines": "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "50_BattleEventAbility_CocoliaP1_RL": {
-      "fileName": "50_BattleEventAbility_CocoliaP1_RL",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"826546199\">Modifier_CocoliaP1_RL_BattleEvent</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1295964216\">Modifier_CocoliaP1_RL_BattleEvent_BaseSpeed</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "advanceType": "Advance",
-          "multiAdd": -1
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1295964216\">Modifier_CocoliaP1_RL_BattleEvent_BaseSpeed</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_BaseSpeed) || RETURN",
-                    "displayLines": "MDF_CocoliaP1_00_RL_BattleEvent_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CocoliaP1_00_RL_BattleEvent_BaseSpeed"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "50_Modifiers": {
       "fileName": "50_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1153,6 +733,426 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "50_BattleEventAbility_CocoliaP1_RL_Insert": {
+      "fileName": "50_BattleEventAbility_CocoliaP1_RL_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Doomsday Ice Cascade"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
+              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
+              "constants": [
+                0.2
+              ],
+              "variables": [
+                "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Additional DMG",
+            "hitOwner": {
+              "name": "Target Name",
+              "target": "{{Enemy Teams}}"
+            },
+            "EnergyGainPercent": "33%"
+          }
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "value": {
+            "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
+            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
+            "constants": [
+              0.2
+            ],
+            "variables": [
+              "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
+            ]
+          },
+          "isFixed": "* ERR"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
+              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
+              "constants": [
+                0.2
+              ],
+              "variables": [
+                "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Additional DMG",
+            "hitOwner": {
+              "name": "Target Name",
+              "target": "{{Enemy Teams}}"
+            },
+            "EnergyGainPercent": "33%"
+          }
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "value": {
+            "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
+            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
+            "constants": [
+              0.2
+            ],
+            "variables": [
+              "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
+            ]
+          },
+          "isFixed": "* ERR"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
+              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
+              "constants": [
+                0.2
+              ],
+              "variables": [
+                "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Additional DMG",
+            "hitOwner": {
+              "name": "Target Name",
+              "target": "{{Enemy Teams}}"
+            },
+            "EnergyGainPercent": "34%"
+          }
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "value": {
+            "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
+            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
+            "constants": [
+              0.2
+            ],
+            "variables": [
+              "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
+            ]
+          },
+          "isFixed": "* ERR"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
+              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
+              "constants": [
+                0.2
+              ],
+              "variables": [
+                "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Additional DMG",
+            "hitOwner": {
+              "name": "Target Name",
+              "target": "{{Enemy Teams}}"
+            },
+            "EnergyGainPercent": "33%"
+          }
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "value": {
+            "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
+            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
+            "constants": [
+              0.2
+            ],
+            "variables": [
+              "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
+            ]
+          },
+          "isFixed": "* ERR"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage) || Constants[0] (0.2) || MUL || RETURN",
+              "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage * 0.2)",
+              "constants": [
+                0.2
+              ],
+              "variables": [
+                "MDF_CocoliaP1_00_RL_BattleEvent_DamagePercentage"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Additional DMG",
+            "hitOwner": {
+              "name": "Target Name",
+              "target": "{{Enemy Teams}}"
+            },
+            "EnergyGainPercent": "33%"
+          }
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "value": {
+            "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_SPAdd) || Constants[0] (0.2) || MUL || RETURN",
+            "displayLines": "(MDF_CocoliaP1_00_RL_BattleEvent_SPAdd * 0.2)",
+            "constants": [
+              0.2
+            ],
+            "variables": [
+              "MDF_CocoliaP1_00_RL_BattleEvent_SPAdd"
+            ]
+          },
+          "isFixed": "* ERR"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "MDF_CocoliaP1_00_RL_BattleEvent_Count",
+            "compareType": "=",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_CocoliaP1_00_RL_BattleEvent_Count",
+              "value": 1
+            },
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 1,
+              "conditions": {
+                "name": "NOT",
+                "condition": {
+                  "name": "Has Flag",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "flagName": "STAT_CTRL_Frozen"
+                }
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
+                  "duration": 1,
+                  "baseChance": 1,
+                  "valuePerStack": {
+                    "Modifier_Frozen_DamagePercentage": {
+                      "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn) || RETURN",
+                      "displayLines": "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn",
+                      "constants": [],
+                      "variables": [
+                        "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 1,
+              "conditions": {
+                "name": "NOT",
+                "condition": {
+                  "name": "Has Flag",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "flagName": "STAT_CTRL_Frozen"
+                }
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
+                  "duration": 1,
+                  "baseChance": 1,
+                  "valuePerStack": {
+                    "Modifier_Frozen_DamagePercentage": {
+                      "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn) || RETURN",
+                      "displayLines": "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn",
+                      "constants": [],
+                      "variables": [
+                        "MDF_CocoliaP1_00_RL_BattleEvent_FrozenDamagePerTurn"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Attack End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "50_BattleEventAbility_CocoliaP1_RL": {
+      "fileName": "50_BattleEventAbility_CocoliaP1_RL",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"826546199\">Modifier_CocoliaP1_RL_BattleEvent</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1295964216\">Modifier_CocoliaP1_RL_BattleEvent_BaseSpeed</a>"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "advanceType": "Advance",
+          "multiAdd": -1
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1295964216\">Modifier_CocoliaP1_RL_BattleEvent_BaseSpeed</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_CocoliaP1_00_RL_BattleEvent_BaseSpeed) || RETURN",
+                    "displayLines": "MDF_CocoliaP1_00_RL_BattleEvent_BaseSpeed",
+                    "constants": [],
+                    "variables": [
+                      "MDF_CocoliaP1_00_RL_BattleEvent_BaseSpeed"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     }
   },
   "enemyData": {},

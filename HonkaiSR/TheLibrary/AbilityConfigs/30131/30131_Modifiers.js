@@ -1131,9 +1131,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__389361840\">Modifier_BattleEventAbility_Challenge_Month_31_Sub2</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "ActionDelayRatio"
-      ],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -1170,10 +1167,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1231239842\">Modifier_BattleEventAbility_Challenge_Month_31_Sub</a>[<span class=\"descriptionNumberColor\">Exo-Toughness</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_RedStanceRatio",
-        "MDF_MinStance"
       ],
       "description": "Triggers Weakness Break when the enemy's initial Weakness is reduced to 0. Then, their temporary Weakness can continue to be reduced. When temporary Weakness is reduced to 0, Weakness Break will be triggered again. The effect will be removed after this occurs.",
       "type": "Other",

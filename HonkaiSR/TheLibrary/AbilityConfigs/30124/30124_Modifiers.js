@@ -2454,9 +2454,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1260413696\">Modifier_BattleEventAbility_Challenge_Month_24_sub</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "BattleEvent_P1_ADF_Get"
-      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",

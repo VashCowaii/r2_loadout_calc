@@ -3,75 +3,10 @@ const compositeAbilityObject = {
   "fullCharacterName": 30005,
   "trimCharacterName": 30005,
   "abilityList": [
-    "30005_BattleEventAbility_Challenge_05",
-    "30005_Modifiers"
+    "30005_Modifiers",
+    "30005_BattleEventAbility_Challenge_05"
   ],
   "abilityObject": {
-    "30005_BattleEventAbility_Challenge_05": {
-      "fileName": "30005_BattleEventAbility_Challenge_05",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1700745787\">Modifier_BattleEventAbility_Challenge_05</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1336457822\">Modifier_BattleEventAbility_Challenge_05_Sub</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageLightning</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-                    "displayLines": "#BattleEvent_P1_ADF",
-                    "constants": [],
-                    "variables": [
-                      "#BattleEvent_P1_ADF"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1700745787\">Modifier_BattleEventAbility_Challenge_05</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1336457822\">Modifier_BattleEventAbility_Challenge_05_Sub</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "30005_Modifiers": {
       "fileName": "30005_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -180,6 +115,71 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "30005_BattleEventAbility_Challenge_05": {
+      "fileName": "30005_BattleEventAbility_Challenge_05",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1700745787\">Modifier_BattleEventAbility_Challenge_05</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1336457822\">Modifier_BattleEventAbility_Challenge_05_Sub</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageLightning</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
+                    "displayLines": "#BattleEvent_P1_ADF",
+                    "constants": [],
+                    "variables": [
+                      "#BattleEvent_P1_ADF"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1700745787\">Modifier_BattleEventAbility_Challenge_05</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1336457822\">Modifier_BattleEventAbility_Challenge_05_Sub</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   },
   "enemyData": {},

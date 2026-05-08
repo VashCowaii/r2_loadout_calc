@@ -1252,12 +1252,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "_DmgUp_Ratio_get"
-      ],
-      "latentQueue": [
-        "_Trigger_Effect_Flag"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">_DmgUp_Ratio_get</span>. After attacking, increases stacks by 1. When <span class=\"descriptionNumberColor\">_Init_Layer</span> stack(s) are reached, deals 1 instance of DMG to all enemies based on a certain percentage of their respective Max HP.",
       "type": "Buff",
       "effectName": "Memory Imprint",
@@ -1853,9 +1847,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1736106961\">Modifier_BattleEventAbility_Challenge_Month_30_sub2</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "_Trigger_Effect_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",

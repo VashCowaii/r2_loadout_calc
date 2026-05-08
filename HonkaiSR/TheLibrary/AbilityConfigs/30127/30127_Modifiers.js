@@ -1311,9 +1311,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1567305749\">Modifier_BattleEventAbility_Challenge_Month_27_Sub4</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "_Trigger_Effect_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -1444,12 +1441,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1483417654\">Modifier_BattleEventAbility_Challenge_Month_27_Sub3</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "_SP_Ratio_get"
-      ],
-      "latentQueue": [
-        "_Trigger_Effect_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1628,12 +1619,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1232252899\">Modifier_BattleEventAbility_Challenge_Month_27_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "_DmgUp_Ratio_get"
-      ],
-      "latentQueue": [
-        "_Trigger_Effect_Flag"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">_DmgUp_Ratio_get</span>. After attacking, increases stacks by 1. When <span class=\"descriptionNumberColor\">_Init_Layer</span> stacks are reached, all allies regenerate Energy.",
       "type": "Buff",
       "effectName": "Memory Imprint",

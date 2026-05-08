@@ -3,368 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": 20011,
   "trimCharacterName": 20011,
   "abilityList": [
+    "20011_Modifiers",
     "20011_BattleEventAbility_Monster_Lycan_Rage",
-    "20011_Modifiers"
+    "20011_BattleEventAbility_Monster_Lycan_RageStart",
+    "20011_BattleEventAbility_Monster_Lycan_RageFinish",
+    "20011_BE_BattleEvents"
   ],
   "abilityObject": {
-    "20011_BattleEventAbility_Monster_Lycan_Rage": {
-      "fileName": "20011_BattleEventAbility_Monster_Lycan_Rage",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 1
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "Compare: Monster Rank",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "compareType": "=",
-            "value2": 4
-          },
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "ENEMIES_OBJECT_UNUSED__168",
-                "invertCondition": true
-              },
-              "passed": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Add Target by Unique Identifier",
-                    "identifier": "LycanSummon"
-                  },
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "P1_ActionDelay",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
-                    },
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "set": {
-                        "operator": "Variables[0] (P1_ActionDelay) || Constants[0] (0.1) || ADD || RETURN",
-                        "displayLines": "(P1_ActionDelay + 0.1)",
-                        "constants": [
-                          0.1
-                        ],
-                        "variables": [
-                          "P1_ActionDelay"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-972268997\">Modifier_BattleEventAbility_Rage</a>"
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "RageEnd",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-972268997\">Modifier_BattleEventAbility_Rage</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "condition": {
-                    "name": "Insert Ability Condition",
-                    "type": "AbilityOwnerInsertUnusedCount",
-                    "typeValue": 1
-                  },
-                  "conditionActive": {
-                    "name": "Target Exists",
-                    "target": {
-                      "name": "Add Target by Unique Identifier",
-                      "identifier": "RageEnd"
-                    },
-                    "living": true
-                  },
-                  "abilityName": "BattleEventAbility_Monster_Lycan_RageFinish",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Level Entity}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "priorityTag": "EnemyChangeState",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "ENEMIES_OBJECT_UNUSED__167"
-                  },
-                  "noTargetFound": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1736159544\">Enemy_W2_Lycan_RageStatus</a>"
-                    },
-                    {
-                      "name": "Force Entity Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "ENEMIES_OBJECT_UNUSED__167"
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "conditions": {
-                        "name": "Compare: Monster Rank",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "compareType": "=",
-                        "value2": 4
-                      },
-                      "noTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1787691973\">Enemy_W2_Lycan_RageMarkInRage</a>"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "entityClass": "Enemy",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "assignState": "True",
-                      "state": "Active"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "MonsterType_W2_Lycan_01"
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1726527858\">Enemy_W2_Lycan_RageEffectMark</a>"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "MonsterType_W2_Lycan_00"
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1726527858\">Enemy_W2_Lycan_RageEffectMark</a>"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "MonsterType_W2_Lycan"
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1726527858\">Enemy_W2_Lycan_RageEffectMark</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-                      },
-                      "noTargetFound": [
-                        {
-                          "name": "Inject Ability Use",
-                          "condition": {
-                            "name": "Insert Ability Condition",
-                            "type": "AbilityOwnerInsertUnusedCount",
-                            "typeValue": 1
-                          },
-                          "conditionActive": {
-                            "name": "Target Exists",
-                            "target": {
-                              "name": "Add Target by Unique Identifier",
-                              "identifier": "RageEnd"
-                            },
-                            "living": true
-                          },
-                          "abilityName": "BattleEventAbility_Monster_Lycan_RageFinish",
-                          "abilitySource": {
-                            "name": "Target Name",
-                            "target": "{{Level Entity}}"
-                          },
-                          "abilityTarget": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "priorityTag": "EnemyChangeState",
-                          "canHitNonTargets": true,
-                          "allowAbilityTriggers": false
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "20011_Modifiers": {
       "fileName": "20011_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1725,6 +1370,927 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1726527858\">Enemy_W2_Lycan_RageEffectMark</a>"
+        }
+      ],
+      "references": []
+    },
+    "20011_BattleEventAbility_Monster_Lycan_Rage": {
+      "fileName": "20011_BattleEventAbility_Monster_Lycan_Rage",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "multiBase": 1
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "Compare: Monster Rank",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "compareType": "=",
+            "value2": 4
+          },
+          "ifTargetFound": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "ENEMIES_OBJECT_UNUSED__168",
+                "invertCondition": true
+              },
+              "passed": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Add Target by Unique Identifier",
+                    "identifier": "LycanSummon"
+                  },
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "variableName": "P1_ActionDelay",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
+                    },
+                    {
+                      "name": "Action Advance/Delay",
+                      "advanceType": "Set",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "set": {
+                        "operator": "Variables[0] (P1_ActionDelay) || Constants[0] (0.1) || ADD || RETURN",
+                        "displayLines": "(P1_ActionDelay + 0.1)",
+                        "constants": [
+                          0.1
+                        ],
+                        "variables": [
+                          "P1_ActionDelay"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-972268997\">Modifier_BattleEventAbility_Rage</a>"
+        },
+        {
+          "name": "Assign Unique Name",
+          "uniqueName": "RageEnd",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-972268997\">Modifier_BattleEventAbility_Rage</a>",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "Inject Ability Use",
+                  "condition": {
+                    "name": "Insert Ability Condition",
+                    "type": "AbilityOwnerInsertUnusedCount",
+                    "typeValue": 1
+                  },
+                  "conditionActive": {
+                    "name": "Target Exists",
+                    "target": {
+                      "name": "Add Target by Unique Identifier",
+                      "identifier": "RageEnd"
+                    },
+                    "living": true
+                  },
+                  "abilityName": "BattleEventAbility_Monster_Lycan_RageFinish",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "priorityTag": "EnemyChangeState",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "maxTargets": 1,
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "ENEMIES_OBJECT_UNUSED__167"
+                  },
+                  "noTargetFound": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Level Entity}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1736159544\">Enemy_W2_Lycan_RageStatus</a>"
+                    },
+                    {
+                      "name": "Force Entity Death",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "ENEMIES_OBJECT_UNUSED__167"
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
+                      "conditions": {
+                        "name": "Compare: Monster Rank",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "compareType": "=",
+                        "value2": 4
+                      },
+                      "noTargetFound": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1787691973\">Enemy_W2_Lycan_RageMarkInRage</a>"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "entityClass": "Enemy",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "assignState": "True",
+                      "state": "Active"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value": "MonsterType_W2_Lycan_01"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1726527858\">Enemy_W2_Lycan_RageEffectMark</a>"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value": "MonsterType_W2_Lycan_00"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1726527858\">Enemy_W2_Lycan_RageEffectMark</a>"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value": "MonsterType_W2_Lycan"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1726527858\">Enemy_W2_Lycan_RageEffectMark</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
+                      },
+                      "noTargetFound": [
+                        {
+                          "name": "Inject Ability Use",
+                          "condition": {
+                            "name": "Insert Ability Condition",
+                            "type": "AbilityOwnerInsertUnusedCount",
+                            "typeValue": 1
+                          },
+                          "conditionActive": {
+                            "name": "Target Exists",
+                            "target": {
+                              "name": "Add Target by Unique Identifier",
+                              "identifier": "RageEnd"
+                            },
+                            "living": true
+                          },
+                          "abilityName": "BattleEventAbility_Monster_Lycan_RageFinish",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Level Entity}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "priorityTag": "EnemyChangeState",
+                          "canHitNonTargets": true,
+                          "allowAbilityTriggers": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "20011_BattleEventAbility_Monster_Lycan_RageStart": {
+      "fileName": "20011_BattleEventAbility_Monster_Lycan_RageStart",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 203401,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "characterName": null,
+            "isCompareUniqueID": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": {
+                "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
+                "displayLines": "Wolf_MaxAttackCount",
+                "constants": [],
+                "variables": [
+                  "Wolf_MaxAttackCount"
+                ]
+              },
+              "entityClass": "Enemy",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "maximum": {
+                "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
+                "displayLines": "Wolf_MaxAttackCount",
+                "constants": [],
+                "variables": [
+                  "Wolf_MaxAttackCount"
+                ]
+              },
+              "assignState": "True",
+              "state": "Normal"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
+                "flagName": "STAT_CTRL",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
+                "flagName": "Break",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "flagName": "DisableAction",
+                "invertCondition": true
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1726527858\">Enemy_W2_Lycan_RageEffectMark</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1346076887\">Enemy_W2_Lycan_RageStartMark</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "ENEMIES_OBJECT_UNUSED__167"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1346076887\">Enemy_W2_Lycan_RageStartMark</a>",
+                "invertCondition": true
+              },
+              {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "STAT_CTRL",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "DisableAction",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "Break",
+                    "invertCondition": true
+                  }
+                ]
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1726527858\">Enemy_W2_Lycan_RageEffectMark</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1414738413\">Enemy_W2_Lycan_RagePhase1Mark</a>[<span class=\"descriptionNumberColor\">Bloodlust</span>]"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "ENEMIES_OBJECT_UNUSED__167"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>",
+                "invertCondition": true
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Battle Event",
+          "teamName": "Enemy Team",
+          "eventID": 20009,
+          "variables": null
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "value": "ENEMIES_OBJECT_UNUSED__167"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1414738413\">Enemy_W2_Lycan_RagePhase1Mark</a>[<span class=\"descriptionNumberColor\">Bloodlust</span>]"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "ENEMIES_OBJECT_UNUSED__167"
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 203401,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": null,
+                "isCompareUniqueID": true,
+                "invertCondition": true
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": {
+                "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
+                "displayLines": "Wolf_AttackCount",
+                "constants": [],
+                "variables": [
+                  "Wolf_AttackCount"
+                ]
+              },
+              "entityClass": "Enemy",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "maximum": {
+                "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
+                "displayLines": "Wolf_MaxAttackCount",
+                "constants": [],
+                "variables": [
+                  "Wolf_MaxAttackCount"
+                ]
+              },
+              "assignState": "True",
+              "state": "Active"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1736159544\">Enemy_W2_Lycan_RageStatus</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "ENEMIES_OBJECT_UNUSED__167"
+              },
+              {
+                "name": "Compare: Monster Rank",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "compareType": "=",
+                "value2": 4
+              }
+            ]
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1346076887\">Enemy_W2_Lycan_RageStartMark</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "20011_BattleEventAbility_Monster_Lycan_RageFinish": {
+      "fileName": "20011_BattleEventAbility_Monster_Lycan_RageFinish",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Monster Rank",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "compareType": "=",
+                "value2": 4
+              },
+              {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "ENEMIES_OBJECT_UNUSED__167"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Reconstruct Modifier",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>",
+          "execute": [],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-136426635\">W2_Lycan_BattleScore1</a>"
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1736159544\">Enemy_W2_Lycan_RageStatus</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "value": "ENEMIES_OBJECT_UNUSED__167"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": {
+                "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
+                "displayLines": "Wolf_AttackCount",
+                "constants": [],
+                "variables": [
+                  "Wolf_AttackCount"
+                ]
+              },
+              "entityClass": "Enemy",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "maximum": {
+                "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
+                "displayLines": "Wolf_MaxAttackCount",
+                "constants": [],
+                "variables": [
+                  "Wolf_MaxAttackCount"
+                ]
+              },
+              "assignState": "True",
+              "state": "Normal"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1075172229\">HeiShengBei_PreAddBEModifier</a>"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "AI_HeiShengBei_Need",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "Destroy Battle Entity",
+          "identifier": "RageEnd"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "20011_BE_BattleEvents": {
+      "fileName": "20011_BE_BattleEvents",
+      "abilityType": "Char. B.Events",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Battle Event Construction",
+          "ID": 20009,
+          "team": "Enemy Team",
+          "eventType": "Assist",
+          "abilityList": [
+            "BattleEventAbility_Monster_Lycan_Rage"
+          ],
+          "overridesArray": [
+            {
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+              "value": 90
+            },
+            {
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+              "value": 100
+            }
+          ],
+          "eventSpeed": 105,
+          "hardLevelEvent": true
         }
       ],
       "references": []

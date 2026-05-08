@@ -12,9 +12,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__223685370\">Monster_W5_Pam_SummonedMinions_Appear</a>",
       "stackType": "Replace",
-      "latentQueue": [
-        "MDF_BEAlive"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

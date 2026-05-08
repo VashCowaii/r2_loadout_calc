@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 60029,
   "trimCharacterName": 60029,
   "abilityList": [
+    "60029_Modifiers",
     "60029_BattleEventAbility_620101_Camera",
     "60029_MissionBattleEvent60024_PassiveAbility01",
     "60029_MissionBattleEvent60024_Ability03_Insert_Camera",
@@ -11,10 +12,173 @@ const compositeAbilityObject = {
     "60029_MissionBattleEvent60024_Ability03_Camera",
     "60029_MissionBattleEvent60024_Ability03_Part02",
     "60029_MissionBattleEvent60024_Ability03_Part01",
-    "60029_MissionBattleEvent60024_Ability03_EnterReady",
-    "60029_Modifiers"
+    "60029_MissionBattleEvent60024_Ability03_EnterReady"
   ],
   "abilityObject": {
+    "60029_Modifiers": {
+      "fileName": "60029_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1322601933\">MissionBattleEvent60024_MainStory4</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1205158600\">MissionBattleEvent60024_MainStory3</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1221936219\">MissionBattleEvent60024_MainStory2</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1238713838\">MissionBattleEvent60024_MainStory1</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Level Entity}}"
+                    },
+                    "value1": "WeatherBEFlag",
+                    "compareType": "=",
+                    "value2": 0,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Level Entity}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "WeatherBEFlag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Action Phase Start [Anyone][?]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Level Entity}}"
+                        },
+                        "value1": "WeatherBEFlag",
+                        "compareType": "=",
+                        "value2": 0
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Level Entity}}"
+                      },
+                      "variableName": "WeatherBEFlag",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Extra Action/Turn [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Character ID",
+                        "ID": 1408,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "characterName": "Phainon"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Level Entity}}"
+                        },
+                        "value1": "WeatherBEFlag",
+                        "compareType": "=",
+                        "value2": 0
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Level Entity}}"
+                      },
+                      "variableName": "WeatherBEFlag",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "60029_BattleEventAbility_620101_Camera": {
       "fileName": "60029_BattleEventAbility_620101_Camera",
       "abilityType": null,
@@ -1426,170 +1590,6 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
       }
-    },
-    "60029_Modifiers": {
-      "fileName": "60029_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1322601933\">MissionBattleEvent60024_MainStory4</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1205158600\">MissionBattleEvent60024_MainStory3</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1221936219\">MissionBattleEvent60024_MainStory2</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1238713838\">MissionBattleEvent60024_MainStory1</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Level Entity}}"
-                    },
-                    "value1": "WeatherBEFlag",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "WeatherBEFlag"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Action Phase Start [Anyone][?]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Level Entity}}"
-                        },
-                        "value1": "WeatherBEFlag",
-                        "compareType": "=",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "variableName": "WeatherBEFlag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Extra Action/Turn [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Character ID",
-                        "ID": 1408,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": "Phainon"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Level Entity}}"
-                        },
-                        "value1": "WeatherBEFlag",
-                        "compareType": "=",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "variableName": "WeatherBEFlag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": []
     }
   },
   "enemyData": {

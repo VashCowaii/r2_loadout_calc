@@ -2400,12 +2400,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-691475768\">Modifier_BattleEventAbility_Challenge_Month_25_Insert_pre</a>",
       "stackType": "Replace",
-      "stackData": [
-        "BattleEvent_P2_ADF_Chance",
-        "BattleEvent_P3_ADF_LifeTime",
-        "BattleEvent_P4_ADF_DamagePercentage",
-        "BattleEvent_P5_ADF_DotTriggerRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

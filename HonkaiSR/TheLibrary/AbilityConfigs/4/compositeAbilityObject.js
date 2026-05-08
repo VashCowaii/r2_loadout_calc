@@ -3,28 +3,10 @@ const compositeAbilityObject = {
   "fullCharacterName": 4,
   "trimCharacterName": 4,
   "abilityList": [
-    "4_BattleEventAbility_ChallengeTurnLimit",
-    "4_Modifiers"
+    "4_Modifiers",
+    "4_BattleEventAbility_ChallengeTurnLimit"
   ],
   "abilityObject": {
-    "4_BattleEventAbility_ChallengeTurnLimit": {
-      "fileName": "4_BattleEventAbility_ChallengeTurnLimit",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-272210701\">Standard_ChallengeTurnLimit</a>"
-        }
-      ],
-      "references": []
-    },
     "4_Modifiers": {
       "fileName": "4_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -130,6 +112,24 @@ const compositeAbilityObject = {
               ]
             }
           ]
+        }
+      ],
+      "references": []
+    },
+    "4_BattleEventAbility_ChallengeTurnLimit": {
+      "fileName": "4_BattleEventAbility_ChallengeTurnLimit",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-272210701\">Standard_ChallengeTurnLimit</a>"
         }
       ],
       "references": []

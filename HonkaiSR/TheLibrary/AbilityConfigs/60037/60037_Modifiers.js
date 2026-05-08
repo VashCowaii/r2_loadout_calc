@@ -213,11 +213,6 @@ const configAbility = {
       "modifierFlags": [
         "CanBeAddedToServant"
       ],
-      "stackData": [
-        "MDF_HPDeltaPerLayer",
-        "MDF_HealAddRatio",
-        "MDF_Layer"
-      ],
       "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_HPDelta</span>.",
       "type": "Buff",
       "effectName": "Flame-Chase",
@@ -344,11 +339,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1743437362\">Modifier_Monster_W4_DawnsEye_01_MaxHPAddHalo_PeakBattle</a>",
       "modifierFlags": [],
-      "stackData": [
-        "MDF_HPDelta",
-        "MDF_HealAddRatio",
-        "MDF_HPDelta_ExtraRadio"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -377,14 +367,14 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_HPDeltaPerLayer": {
-              "operator": "Variables[0] (MDF_HPDelta) || Constants[0] (1) || Variables[1] (MDF_HPDelta_ExtraRadio) || ADD || MUL || RETURN",
-              "displayLines": "(MDF_HPDelta * (1 + MDF_HPDelta_ExtraRadio))",
+              "operator": "Variables[0] (MDF_HPDelta) || Constants[0] (1) || Variables[1] (ENEMIES_OBJECT_UNUSED__295) || ADD || MUL || RETURN",
+              "displayLines": "(MDF_HPDelta * (1 + ENEMIES_OBJECT_UNUSED__295))",
               "constants": [
                 1
               ],
               "variables": [
                 "MDF_HPDelta",
-                "MDF_HPDelta_ExtraRadio"
+                "ENEMIES_OBJECT_UNUSED__295"
               ]
             },
             "MDF_HealAddRatio": {

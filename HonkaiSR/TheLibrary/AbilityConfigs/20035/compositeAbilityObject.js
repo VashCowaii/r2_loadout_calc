@@ -3,83 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": 20035,
   "trimCharacterName": 20035,
   "abilityList": [
+    "20035_Modifiers",
     "20035_BattleEvent_W4_Manta_LocalLegend_Part01",
-    "20035_BattleEvent_W4_Manta_LocalLegend_EnterReady",
-    "20035_Modifiers"
+    "20035_BattleEvent_W4_Manta_LocalLegend_EnterReady"
   ],
   "abilityObject": {
-    "20035_BattleEvent_W4_Manta_LocalLegend_Part01": {
-      "fileName": "20035_BattleEvent_W4_Manta_LocalLegend_Part01",
-      "childAbilityList": [
-        "20035_BattleEvent_W4_Manta_LocalLegend_EnterReady",
-        "20035_BattleEvent_W4_Manta_LocalLegend_Part01"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Ultimate",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"833181750\">Enemy_W2_LycanKing_IF_MuteUltra</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Manta: Event Target 01}}"
-          },
-          "maxTargets": 1,
-          "ifTargetFound": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "inherentTarget": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "ability": "Monster_W4_Manta_LocalLegend_Ability01_Part01",
-              "isTrigger": true
-            }
-          ]
-        },
-        "Wait for Pending Ability Completions",
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Player-Team Target",
-        "filter": {
-          "name": "Target Name",
-          "target": "{{Player Team(Exclude Memosprites)}}.[[removeCharChange]]"
-        }
-      }
-    },
-    "20035_BattleEvent_W4_Manta_LocalLegend_EnterReady": {
-      "fileName": "20035_BattleEvent_W4_Manta_LocalLegend_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
     "20035_Modifiers": {
       "fileName": "20035_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1244,6 +1172,78 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "20035_BattleEvent_W4_Manta_LocalLegend_Part01": {
+      "fileName": "20035_BattleEvent_W4_Manta_LocalLegend_Part01",
+      "childAbilityList": [
+        "20035_BattleEvent_W4_Manta_LocalLegend_EnterReady",
+        "20035_BattleEvent_W4_Manta_LocalLegend_Part01"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Ultimate",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"833181750\">Enemy_W2_LycanKing_IF_MuteUltra</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Manta: Event Target 01}}"
+          },
+          "maxTargets": 1,
+          "ifTargetFound": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "inherentTarget": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "ability": "Monster_W4_Manta_LocalLegend_Ability01_Part01",
+              "isTrigger": true
+            }
+          ]
+        },
+        "Wait for Pending Ability Completions",
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Player-Team Target",
+        "filter": {
+          "name": "Target Name",
+          "target": "{{Player Team(Exclude Memosprites)}}.[[removeCharChange]]"
+        }
+      }
+    },
+    "20035_BattleEvent_W4_Manta_LocalLegend_EnterReady": {
+      "fileName": "20035_BattleEvent_W4_Manta_LocalLegend_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     }
   },
   "enemyData": {

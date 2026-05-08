@@ -3,141 +3,12 @@ const compositeAbilityObject = {
   "fullCharacterName": 60023,
   "trimCharacterName": 60023,
   "abilityList": [
+    "60023_Modifiers",
     "60023_BattleEventAbility_60023_Camera",
     "60023_MissionBattleEvent60023_Ability03_Part01",
-    "60023_MissionBattleEvent60023_Passive",
-    "60023_Modifiers"
+    "60023_MissionBattleEvent60023_Passive"
   ],
   "abilityObject": {
-    "60023_BattleEventAbility_60023_Camera": {
-      "fileName": "60023_BattleEventAbility_60023_Camera",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "60023_MissionBattleEvent60023_Ability03_Part01": {
-      "fileName": "60023_MissionBattleEvent60023_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"768878434\">Death_BattleEventAttackUPByMaxHP</a>"
-        },
-        "Deleted bullshit",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "displayLines": 18
-            },
-            "DamageFlat": {
-              "displayLines": 200000
-            },
-            "dmgFormula": "Max HP Scaling",
-            "HitSplit": 0.5,
-            "Toughness": {
-              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
-              "displayLines": "Blast Toughness Value",
-              "constants": [],
-              "variables": [
-                "Blast Toughness Value"
-              ]
-            },
-            "Tags": null
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "displayLines": 36
-            },
-            "DamageFlat": {
-              "displayLines": 400000
-            },
-            "dmgFormula": "Max HP Scaling",
-            "HitSplit": 0.5,
-            "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
-            },
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "60023_MissionBattleEvent60023_Passive": {
-      "fileName": "60023_MissionBattleEvent60023_Passive",
-      "childAbilityList": [
-        "60023_MissionBattleEvent60023_Passive",
-        "60023_MissionBattleEvent60023_Ability03_Part01",
-        "60023_BattleEventAbility_60023_Camera"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-889052403\">MissionBattleEvent60023_PassiveAbility</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"216394385\">MissionBattleEvent60023_AutoUseUltraAbility</a>"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "60023_Modifiers": {
       "fileName": "60023_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -330,6 +201,135 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "60023_BattleEventAbility_60023_Camera": {
+      "fileName": "60023_BattleEventAbility_60023_Camera",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "60023_MissionBattleEvent60023_Ability03_Part01": {
+      "fileName": "60023_MissionBattleEvent60023_Ability03_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"768878434\">Death_BattleEventAttackUPByMaxHP</a>"
+        },
+        "Deleted bullshit",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "displayLines": 18
+            },
+            "DamageFlat": {
+              "displayLines": 200000
+            },
+            "dmgFormula": "Max HP Scaling",
+            "HitSplit": 0.5,
+            "Toughness": {
+              "operator": "Variables[0] (Blast Toughness Value) || RETURN",
+              "displayLines": "Blast Toughness Value",
+              "constants": [],
+              "variables": [
+                "Blast Toughness Value"
+              ]
+            },
+            "Tags": null
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "displayLines": 36
+            },
+            "DamageFlat": {
+              "displayLines": 400000
+            },
+            "dmgFormula": "Max HP Scaling",
+            "HitSplit": 0.5,
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "60023_MissionBattleEvent60023_Passive": {
+      "fileName": "60023_MissionBattleEvent60023_Passive",
+      "childAbilityList": [
+        "60023_MissionBattleEvent60023_Passive",
+        "60023_MissionBattleEvent60023_Ability03_Part01",
+        "60023_BattleEventAbility_60023_Camera"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-889052403\">MissionBattleEvent60023_PassiveAbility</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"216394385\">MissionBattleEvent60023_AutoUseUltraAbility</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     }
   },
   "enemyData": {
