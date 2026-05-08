@@ -10,6 +10,30 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-317803134\">ADV_StageAbility_Maze_YaoGuang_Listener</a>",
+      "stackType": "Merge",
+      "onAttack": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Parameter Target List}}"
+          },
+          "includeDyingTargets": true,
+          "conditions": {
+            "name": "Is Entity Type"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1219253589\">ADV_StageAbility_Maze_YaoGuang</a>",
+      "counter": 1,
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-986503251\">G_YaoGuang_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">Ferried Along the Astral Arc</span>]",
       "stackType": "ReplaceByCaster",
       "description": "Elation DMG merrymakes by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
