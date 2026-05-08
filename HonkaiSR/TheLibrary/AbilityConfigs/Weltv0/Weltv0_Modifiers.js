@@ -10,6 +10,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1377119200\">ADV_StageAbility_Maze_Welt</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "Debuff"
+      ],
+      "onStack": [
+        "Overworld stats adjustment(which we don't care about)"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1040154561\">Welt_Trace01_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
       "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
