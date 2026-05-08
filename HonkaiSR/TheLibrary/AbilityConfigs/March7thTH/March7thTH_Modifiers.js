@@ -154,9 +154,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1941685711\">Mar_7th_10_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]",
-      "latentQueue": [
-        "_target_stance_before_attack"
-      ],
       "description": "The \"Blade Dances on Waves' Fight\" effect cannot be triggered yet.",
       "type": "Other",
       "statusName": "Blade Dances on Waves' Fight",
@@ -331,12 +328,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2055743569\">Mar_7th_10_Enhance</a>",
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [
-        "_has_enhanced_this_turn"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -485,9 +476,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedUp"
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
       ],
       "description": "Increases SPD of %CasterName's Shifu by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
       "type": "Buff",
@@ -818,10 +806,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RetainCountZero"
-      ],
-      "stackData": [
-        "MDF_PropertyRatio",
-        "MDF_Count"
       ],
       "description": "When Charge equals to <span class=\"descriptionNumberColor\">MDF_Count</span> or more, immediately takes action and simultaneously increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. Additionally, Basic ATK gets Enhanced.",
       "type": "Other",

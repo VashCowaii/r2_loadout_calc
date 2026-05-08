@@ -3,11 +3,12 @@ const compositeAbilityObject = {
   "fullCharacterName": "March 7th - The Hunt",
   "trimCharacterName": "March7thTH",
   "abilityList": [
-    "March7thTH_Mar_7th_10_Eidolon4",
-    "March7thTH_Mar_7th_10_Eidolon2",
+    "March7thTH_Modifiers",
     "March7thTH_Mar_7th_10_Trace03",
     "March7thTH_Mar_7th_10_Trace02",
     "March7thTH_Mar_7th_10_Trace01",
+    "March7thTH_Mar_7th_10_Eidolon4",
+    "March7thTH_Mar_7th_10_Eidolon2",
     "March7thTH_Mar_7th_10_TechniqueEnergy",
     "March7thTH_Mar_7th_10_TechniqueInLevel",
     "March7thTH_Mar_7th_10_Ready_Special",
@@ -25,106 +26,155 @@ const compositeAbilityObject = {
     "March7thTH_Mar_7th_10_Eidolon2_Insert_SelectTarget",
     "March7thTH_Mar_7th_10_Ability01_Part02",
     "March7thTH_Mar_7th_10_Ability01_Part01",
-    "March7thTH_Modifiers",
     "March7thTH_Functions"
   ],
   "abilityObject": {
-    "March7thTH_Mar_7th_10_Eidolon4": {
-      "fileName": "March7thTH_Mar_7th_10_Eidolon4",
-      "abilityType": null,
+    "March7thTH_Modifiers": {
+      "fileName": "March7thTH_Modifiers",
+      "abilityType": "Char. Modifiers",
       "energy": null,
-      "toughnessList": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
       "parse": [
         {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-926052805\">Mar_7th_10_Eidolon4</a>"
-        }
-      ],
-      "references": [
-        {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-926052805\">Mar_7th_10_Eidolon4</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Update Energy",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "value": {
-                    "operator": "Variables[0] (5) || RETURN",
-                    "displayLines": "5",
-                    "constants": [],
-                    "variables": [
-                      5
-                    ]
-                  },
-                  "isFixed": "* ERR"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "March7thTH_Mar_7th_10_Eidolon2": {
-      "fileName": "March7thTH_Mar_7th_10_Eidolon2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-825387091\">Mar_7th_10_Eidolon2</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-330303048\">M_Mar_7th_10_Eidolon2_Mark_Main</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__126431759\">M_Mar_7th_10_InsertCheck</a>",
           "modifierFlags": [
-            "RemoveWhenCasterDead"
+            "CustomEvent_InfiniteRefresh"
           ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
               "execute": [
                 {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-922050191\">Mar_7th_10_InsertRetarget</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Action Choice Window [Anyone]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-922050191\">Mar_7th_10_InsertRetarget</a>"
+                }
+              ],
+              "priorityLevel": -55
+            },
+            {
+              "eventTrigger": "Custom Event",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-922050191\">Mar_7th_10_InsertRetarget</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "New Enemy Wave",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-922050191\">Mar_7th_10_InsertRetarget</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Living State",
+                        "state": "Mask_AliveOrRevivable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-922050191\">Mar_7th_10_InsertRetarget</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "modifierFunctions": [
+            {
+              "name": "CharacterFunctions",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-922050191\">Mar_7th_10_InsertRetarget</a>",
+              "parse": [
+                {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE, with Unselectables)}} - {{Modifier Holder}}"
+                    "target": "{{Hostile Entities(AOE)}}"
                   },
+                  "searchRandom": true,
+                  "maxTargets": 1,
                   "conditions": {
-                    "name": "Has Modifier",
+                    "name": "Target Exists",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "<a class=\"gModGreen\" id=\"-330303048\">M_Mar_7th_10_Eidolon2_Mark_Main</a>"
+                    "living": true
                   },
                   "ifTargetFound": [
                     {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
+                      "name": "Inject Ability Use",
+                      "condition": {
+                        "name": "Insert Ability Condition",
+                        "type": "AbilityOwnerInsertUnusedCount",
+                        "typeValue": 1
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"-330303048\">M_Mar_7th_10_Eidolon2_Mark_Main</a>"
+                      "abilityName": "Mar_7th_10_Eidolon2_Insert_SelectTarget",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "priorityTag": "CharacterAttackFromSelf",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "abortFlags": [
+                        "STAT_CTRL",
+                        "DisableAction"
+                      ],
+                      "allowAbilityTriggers": false
                     }
                   ]
                 }
@@ -134,185 +184,564 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-825387091\">Mar_7th_10_Eidolon2</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1941685711\">Mar_7th_10_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]",
+          "description": "The \"Blade Dances on Waves' Fight\" effect cannot be triggered yet.",
+          "type": "Other",
+          "statusName": "Blade Dances on Waves' Fight",
           "execute": [
             {
-              "eventTrigger": "Attack DMG End [Anyone]",
+              "eventTrigger": "Turn [Action-End Phase]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-220132928\">M_Mar_7th_10_ForbidBP</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Skill_Flag",
-                        "compareType": ">=",
-                        "value2": 1
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1941685711\">Mar_7th_10_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_CTRL",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "DisableAction",
-                        "invertCondition": true
-                      }
+                  "name": "Disable Abilities",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "abilityTypes": [
+                    "Skill"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2037642738\">M_Mar_7th_10_MasterAttackEnergyPreshow</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "skillType": [
+              "Skill",
+              "Basic ATK"
+            ],
+            "conditions": {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Compare: Variable",
+                  "value1": "EnergyBar_CurEnergy",
+                  "compareType": ">=",
+                  "value2": {
+                    "operator": "Variables[0] (EnergyBar_MaxEnergy) || Variables[1] (Gain_Energy_Value) || SUB || RETURN",
+                    "displayLines": "(EnergyBar_MaxEnergy - Gain_Energy_Value)",
+                    "constants": [],
+                    "variables": [
+                      "EnergyBar_MaxEnergy",
+                      "Gain_Energy_Value"
                     ]
                   },
-                  "passed": [
+                  "contextScope": "ContextCaster"
+                },
+                {
+                  "name": "Is Part Of Team",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player Team Ability Target Lock}}"
+                  },
+                  "team": "Enemy Team"
+                }
+              ]
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": "0(Set AV)"
+            }
+          },
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]",
+            "casterFilter": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1499889908\">M_Mar_7th_10_MasterUltraEnergyPreshow</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "skillType": [
+              "Ultimate"
+            ],
+            "conditions": {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Compare: Variable",
+                  "value1": "EnergyBar_CurEnergy",
+                  "compareType": ">=",
+                  "value2": {
+                    "operator": "Variables[0] (EnergyBar_MaxEnergy) || Variables[1] (Gain_Energy_Value) || SUB || RETURN",
+                    "displayLines": "(EnergyBar_MaxEnergy - Gain_Energy_Value)",
+                    "constants": [],
+                    "variables": [
+                      "EnergyBar_MaxEnergy",
+                      "Gain_Energy_Value"
+                    ]
+                  },
+                  "contextScope": "ContextCaster"
+                }
+              ]
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": "0(Set AV)"
+            }
+          },
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]",
+            "casterFilter": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__754306422\">Mar_7th_10_Enhance_Visual</a>",
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
+            "casterFilter": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
+          },
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: Start",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            },
+            {
+              "eventTrigger": "Ultimate Prep-Phase [Owner]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2055743569\">Mar_7th_10_Enhance</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-220132928\">M_Mar_7th_10_ForbidBP</a>"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_has_enhanced_this_turn",
+                  "value": 0
+                },
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "abilityName": "Skill01",
+                  "skillSlot": "Basic ATK"
+                },
+                {
+                  "name": "Update Ability Enhance Button",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "display": "Hide",
+                  "abilityName": "Basic ATK"
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "priorState": "Normal"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Action Choice Window [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"754306422\">Mar_7th_10_Enhance_Visual</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
+                    "displayLines": "MDF_PropertyRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyRatio"
+                    ]
+                  }
+                },
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "abilityName": "Skill11",
+                  "skillSlot": "Basic ATK"
+                },
+                {
+                  "name": "Update Ability Enhance Button",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "display": "Show",
+                  "abilityName": "Basic ATK"
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "priorState": "Active"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-220132928\">M_Mar_7th_10_ForbidBP</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-237230767\">Mar_7th_10_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_SpeedUp"
+          ],
+          "description": "When Shifu is on the field, increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "My Sword Stirs Starlight",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
+                    "displayLines": "MDF_PropertyRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyRatio"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-178417190\">Mar_7th_10_Ability02_Master_SpeedUp</a>[<span class=\"descriptionNumberColor\">Master, It's Tea Time!</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_SpeedUp"
+          ],
+          "description": "Increases SPD of %CasterName's Shifu by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "statusName": "Master, It's Tea Time!",
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]",
+            "casterFilter": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
+          },
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
+                    "displayLines": "MDF_PropertyRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyRatio"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1861443977\">Mar_7th_10_Ability02_HaveMaster</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "description": "After using an attack or Ultimate, %CasterName gains a max of 1 Charge point each time.",
+          "type": "Other",
+          "effectName": "Become Shifu",
+          "statusName": "Shifu",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                  },
+                  "searchRandom": true,
+                  "includeDyingTargets": true,
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "invertCondition": true
+                  },
+                  "ifTargetFound": [
                     {
-                      "name": "Find New Target",
-                      "from": {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
                         "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
+                        "target": "{{Parameter Target}}"
                       },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "ifTargetFound": [
-                        {
-                          "name": "Inject Ability Use",
-                          "condition": {
-                            "name": "Insert Ability Condition",
-                            "type": "AbilityOwnerInsertUnusedCount",
-                            "typeValue": 1
-                          },
-                          "abilityName": "Mar_7th_10_Eidolon2_Insert_SelectTarget",
-                          "abilitySource": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "abilityTarget": {
-                            "name": "Target Name",
-                            "target": "{{Hostile Entities(AOE)}}"
-                          },
-                          "priorityTag": "CharacterAttackFromSelf",
-                          "canHitNonTargets": true,
-                          "showInActionOrder": true,
-                          "abortFlags": [
-                            "STAT_CTRL",
-                            "DisableAction"
-                          ],
-                          "allowAbilityTriggers": false
-                        }
-                      ],
-                      "noTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"126431759\">M_Mar_7th_10_InsertCheck</a>"
-                        }
-                      ]
+                      "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
                     }
                   ]
                 }
               ]
             },
             {
-              "eventTrigger": "Ability Use [Anyone]: Start",
+              "eventTrigger": "When Modifier Destroyed/Removed",
               "execute": [
+                {
+                  "name": "Update Displayed Energy Bar"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1861443977\">Mar_7th_10_Ability02_HaveMaster</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-237230767\">Mar_7th_10_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1499889908\">M_Mar_7th_10_MasterUltraEnergyPreshow</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2037642738\">M_Mar_7th_10_MasterAttackEnergyPreshow</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1861443977\">Mar_7th_10_Ability02_HaveMaster</a>"
+                },
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
-                      },
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Skill Type",
-                            "skillType": "Basic ATK"
-                          },
-                          {
-                            "name": "Skill Type",
-                            "skillType": "Skill"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target's Ability Targets}}"
-                        },
-                        "team": "Enemy Team"
-                      }
-                    ]
+                    "name": "Eidolon Activated",
+                    "eidolon": 1
                   },
                   "passed": [
                     {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-237230767\">Mar_7th_10_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyRatio": {
+                          "operator": "Variables[0] (0.1) || RETURN",
+                          "displayLines": "0.1",
+                          "constants": [],
+                          "variables": [
+                            0.1
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Target is Pathstrider",
+                    "path": [
+                      "Destruction",
+                      "Erudition",
+                      "The Hunt",
+                      "Remembrance",
+                      "Elation"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Displayed Energy Bar"
+                    },
+                    {
                       "name": "Define Custom Variable",
-                      "variableName": "Skill_Flag",
+                      "variableName": "Normal_StanceRatio",
                       "value": 1
                     },
                     {
+                      "name": "Define Custom Variable",
+                      "variableName": "Gain_Energy_Value",
+                      "value": 1
+                    }
+                  ],
+                  "failed": [
+                    {
                       "name": "IF",
                       "conditions": {
-                        "name": "Compare: Target Count",
+                        "name": "Target is Pathstrider",
+                        "path": [
+                          "Harmony",
+                          "Nihility",
+                          "Preservation",
+                          "Abundance"
+                        ],
                         "target": {
                           "name": "Target Name",
-                          "target": "{{Parameter Target's Ability Targets}}"
-                        },
-                        "compareType": "=",
-                        "value2": 1,
-                        "livingTargets": true
+                          "target": "{{Modifier Holder}}"
+                        }
                       },
                       "passed": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target's Ability Targets}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-330303048\">M_Mar_7th_10_Eidolon2_Mark_Main</a>"
-                        }
-                      ],
-                      "failed": [
+                          "name": "Update Displayed Energy Bar"
+                        },
                         {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-330303048\">M_Mar_7th_10_Eidolon2_Mark_Main</a>"
+                          "name": "Define Custom Variable",
+                          "variableName": "Normal_StanceRatio",
+                          "value": {
+                            "operator": "Constants[0] (1) || Variables[0] (1) || ADD || RETURN",
+                            "displayLines": "(1 + 1)",
+                            "constants": [
+                              1
+                            ],
+                            "variables": [
+                              1
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "Gain_Energy_Value",
+                          "value": 1
                         }
                       ]
                     }
@@ -321,21 +750,100 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Ability Use [Anyone]: End",
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1762944127\">Mar_7th_10_GainEnergyWithCheck</a>",
+                  "variables": {
+                    "parameter[0]_AddValue": {
+                      "operator": "Variables[0] (Gain_Energy_Value) || RETURN",
+                      "displayLines": "Gain_Energy_Value",
+                      "constants": [],
+                      "variables": [
+                        "Gain_Energy_Value"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_attack_flag",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: Start",
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill_Flag",
+                  "variableName": "_attack_flag",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Ultimate"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "_attack_flag",
+                        "compareType": "<=",
+                        "value2": 0,
+                        "contextScope": "ContextModifier"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1762944127\">Mar_7th_10_GainEnergyWithCheck</a>",
+                      "variables": {
+                        "parameter[0]_AddValue": {
+                          "operator": "Variables[0] (Gain_Energy_Value) || RETURN",
+                          "displayLines": "Gain_Energy_Value",
+                          "constants": [],
+                          "variables": [
+                            "Gain_Energy_Value"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_attack_flag",
                   "value": 0
                 }
               ]
             }
           ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-388995203\">Mar_7th_10_Energy</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
+          "counter": 1,
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "RetainCountZero"
+          ],
+          "description": "When Charge equals to <span class=\"descriptionNumberColor\">MDF_Count</span> or more, immediately takes action and simultaneously increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. Additionally, Basic ATK gets Enhanced.",
+          "type": "Other",
+          "statusName": "Charge"
         }
       ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
+      "references": []
     },
     "March7thTH_Mar_7th_10_Trace03": {
       "fileName": "March7thTH_Mar_7th_10_Trace03",
@@ -765,6 +1273,314 @@ const compositeAbilityObject = {
                 }
               ],
               "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "March7thTH_Mar_7th_10_Eidolon4": {
+      "fileName": "March7thTH_Mar_7th_10_Eidolon4",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-926052805\">Mar_7th_10_Eidolon4</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-926052805\">Mar_7th_10_Eidolon4</a>",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "Update Energy",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "value": {
+                    "operator": "Variables[0] (5) || RETURN",
+                    "displayLines": "5",
+                    "constants": [],
+                    "variables": [
+                      5
+                    ]
+                  },
+                  "isFixed": "* ERR"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "March7thTH_Mar_7th_10_Eidolon2": {
+      "fileName": "March7thTH_Mar_7th_10_Eidolon2",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-825387091\">Mar_7th_10_Eidolon2</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-330303048\">M_Mar_7th_10_Eidolon2_Mark_Main</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE, with Unselectables)}} - {{Modifier Holder}}"
+                  },
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-330303048\">M_Mar_7th_10_Eidolon2_Mark_Main</a>"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-330303048\">M_Mar_7th_10_Eidolon2_Mark_Main</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-825387091\">Mar_7th_10_Eidolon2</a>",
+          "execute": [
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Skill_Flag",
+                        "compareType": ">=",
+                        "value2": 1
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1941685711\">Mar_7th_10_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_CTRL",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "DisableAction",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "searchRandom": true,
+                      "maxTargets": 1,
+                      "ifTargetFound": [
+                        {
+                          "name": "Inject Ability Use",
+                          "condition": {
+                            "name": "Insert Ability Condition",
+                            "type": "AbilityOwnerInsertUnusedCount",
+                            "typeValue": 1
+                          },
+                          "abilityName": "Mar_7th_10_Eidolon2_Insert_SelectTarget",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
+                          "priorityTag": "CharacterAttackFromSelf",
+                          "canHitNonTargets": true,
+                          "showInActionOrder": true,
+                          "abortFlags": [
+                            "STAT_CTRL",
+                            "DisableAction"
+                          ],
+                          "allowAbilityTriggers": false
+                        }
+                      ],
+                      "noTargetFound": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"126431759\">M_Mar_7th_10_InsertCheck</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
+                      },
+                      {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Skill Type",
+                            "skillType": "Basic ATK"
+                          },
+                          {
+                            "name": "Skill Type",
+                            "skillType": "Skill"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Targets}}"
+                        },
+                        "team": "Enemy Team"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "Skill_Flag",
+                      "value": 1
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Target Count",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Targets}}"
+                        },
+                        "compareType": "=",
+                        "value2": 1,
+                        "livingTargets": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target's Ability Targets}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-330303048\">M_Mar_7th_10_Eidolon2_Mark_Main</a>"
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-330303048\">M_Mar_7th_10_Eidolon2_Mark_Main</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: End",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Skill_Flag",
+                  "value": 0
+                }
+              ]
             }
           ]
         }
@@ -3588,838 +4404,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "March7thTH_Modifiers": {
-      "fileName": "March7thTH_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__126431759\">M_Mar_7th_10_InsertCheck</a>",
-          "modifierFlags": [
-            "CustomEvent_InfiniteRefresh"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-922050191\">Mar_7th_10_InsertRetarget</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Action Choice Window [Anyone]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-922050191\">Mar_7th_10_InsertRetarget</a>"
-                }
-              ],
-              "priorityLevel": -55
-            },
-            {
-              "eventTrigger": "Custom Event",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-922050191\">Mar_7th_10_InsertRetarget</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-922050191\">Mar_7th_10_InsertRetarget</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Anyone]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Living State",
-                        "state": "Mask_AliveOrRevivable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        }
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-922050191\">Mar_7th_10_InsertRetarget</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "modifierFunctions": [
-            {
-              "name": "CharacterFunctions",
-              "functionName": "<a class=\"gTempYellow\" id=\"fun__-922050191\">Mar_7th_10_InsertRetarget</a>",
-              "parse": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Target Exists",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "living": true
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "Mar_7th_10_Eidolon2_Insert_SelectTarget",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "priorityTag": "CharacterAttackFromSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "abortFlags": [
-                        "STAT_CTRL",
-                        "DisableAction"
-                      ],
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1941685711\">Mar_7th_10_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]",
-          "latentQueue": [
-            "_target_stance_before_attack"
-          ],
-          "description": "The \"Blade Dances on Waves' Fight\" effect cannot be triggered yet.",
-          "type": "Other",
-          "statusName": "Blade Dances on Waves' Fight",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Action-End Phase]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-220132928\">M_Mar_7th_10_ForbidBP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Disable Abilities",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "abilityTypes": [
-                    "Skill"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2037642738\">M_Mar_7th_10_MasterAttackEnergyPreshow</a>",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "skillType": [
-              "Skill",
-              "Basic ATK"
-            ],
-            "conditions": {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Compare: Variable",
-                  "value1": "EnergyBar_CurEnergy",
-                  "compareType": ">=",
-                  "value2": {
-                    "operator": "Variables[0] (EnergyBar_MaxEnergy) || Variables[1] (Gain_Energy_Value) || SUB || RETURN",
-                    "displayLines": "(EnergyBar_MaxEnergy - Gain_Energy_Value)",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_MaxEnergy",
-                      "Gain_Energy_Value"
-                    ]
-                  },
-                  "contextScope": "ContextCaster"
-                },
-                {
-                  "name": "Is Part Of Team",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Player Team Ability Target Lock}}"
-                  },
-                  "team": "Enemy Team"
-                }
-              ]
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": "0(Set AV)"
-            }
-          },
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]",
-            "casterFilter": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1499889908\">M_Mar_7th_10_MasterUltraEnergyPreshow</a>",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "skillType": [
-              "Ultimate"
-            ],
-            "conditions": {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Compare: Variable",
-                  "value1": "EnergyBar_CurEnergy",
-                  "compareType": ">=",
-                  "value2": {
-                    "operator": "Variables[0] (EnergyBar_MaxEnergy) || Variables[1] (Gain_Energy_Value) || SUB || RETURN",
-                    "displayLines": "(EnergyBar_MaxEnergy - Gain_Energy_Value)",
-                    "constants": [],
-                    "variables": [
-                      "EnergyBar_MaxEnergy",
-                      "Gain_Energy_Value"
-                    ]
-                  },
-                  "contextScope": "ContextCaster"
-                }
-              ]
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": "0(Set AV)"
-            }
-          },
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]",
-            "casterFilter": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__754306422\">Mar_7th_10_Enhance_Visual</a>",
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
-            "casterFilter": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            }
-          },
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            },
-            {
-              "eventTrigger": "Ultimate Prep-Phase [Owner]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2055743569\">Mar_7th_10_Enhance</a>",
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [
-            "_has_enhanced_this_turn"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-220132928\">M_Mar_7th_10_ForbidBP</a>"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_has_enhanced_this_turn",
-                  "value": 0
-                },
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "abilityName": "Skill01",
-                  "skillSlot": "Basic ATK"
-                },
-                {
-                  "name": "Update Ability Enhance Button",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "display": "Hide",
-                  "abilityName": "Basic ATK"
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "priorState": "Normal"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Action Choice Window [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"754306422\">Mar_7th_10_Enhance_Visual</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
-                  }
-                },
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "abilityName": "Skill11",
-                  "skillSlot": "Basic ATK"
-                },
-                {
-                  "name": "Update Ability Enhance Button",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "display": "Show",
-                  "abilityName": "Basic ATK"
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "priorState": "Active"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-220132928\">M_Mar_7th_10_ForbidBP</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-237230767\">Mar_7th_10_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_SpeedUp"
-          ],
-          "description": "When Shifu is on the field, increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "My Sword Stirs Starlight",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-178417190\">Mar_7th_10_Ability02_Master_SpeedUp</a>[<span class=\"descriptionNumberColor\">Master, It's Tea Time!</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_SpeedUp"
-          ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "description": "Increases SPD of %CasterName's Shifu by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "statusName": "Master, It's Tea Time!",
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]",
-            "casterFilter": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            }
-          },
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1861443977\">Mar_7th_10_Ability02_HaveMaster</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "description": "After using an attack or Ultimate, %CasterName gains a max of 1 Charge point each time.",
-          "type": "Other",
-          "effectName": "Become Shifu",
-          "statusName": "Shifu",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
-                  },
-                  "searchRandom": true,
-                  "includeDyingTargets": true,
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "invertCondition": true
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-2014523245\">Mar_7th_10_Ability02_Master</a>[<span class=\"descriptionNumberColor\">Shifu</span>]"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Update Displayed Energy Bar"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1861443977\">Mar_7th_10_Ability02_HaveMaster</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-237230767\">Mar_7th_10_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1499889908\">M_Mar_7th_10_MasterUltraEnergyPreshow</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2037642738\">M_Mar_7th_10_MasterAttackEnergyPreshow</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1861443977\">Mar_7th_10_Ability02_HaveMaster</a>"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-237230767\">Mar_7th_10_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]",
-                      "valuePerStack": {
-                        "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (0.1) || RETURN",
-                          "displayLines": "0.1",
-                          "constants": [],
-                          "variables": [
-                            0.1
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Target is Pathstrider",
-                    "path": [
-                      "Destruction",
-                      "Erudition",
-                      "The Hunt",
-                      "Remembrance",
-                      "Elation"
-                    ],
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Displayed Energy Bar"
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Normal_StanceRatio",
-                      "value": 1
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Gain_Energy_Value",
-                      "value": 1
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Target is Pathstrider",
-                        "path": [
-                          "Harmony",
-                          "Nihility",
-                          "Preservation",
-                          "Abundance"
-                        ],
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Update Displayed Energy Bar"
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "Normal_StanceRatio",
-                          "value": {
-                            "operator": "Constants[0] (1) || Variables[0] (1) || ADD || RETURN",
-                            "displayLines": "(1 + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              1
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "Gain_Energy_Value",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-1762944127\">Mar_7th_10_GainEnergyWithCheck</a>",
-                  "variables": {
-                    "parameter[0]_AddValue": {
-                      "operator": "Variables[0] (Gain_Energy_Value) || RETURN",
-                      "displayLines": "Gain_Energy_Value",
-                      "constants": [],
-                      "variables": [
-                        "Gain_Energy_Value"
-                      ]
-                    }
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_attack_flag",
-                  "value": 1
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_attack_flag",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Ultimate"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "_attack_flag",
-                        "compareType": "<=",
-                        "value2": 0,
-                        "contextScope": "ContextModifier"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-1762944127\">Mar_7th_10_GainEnergyWithCheck</a>",
-                      "variables": {
-                        "parameter[0]_AddValue": {
-                          "operator": "Variables[0] (Gain_Energy_Value) || RETURN",
-                          "displayLines": "Gain_Energy_Value",
-                          "constants": [],
-                          "variables": [
-                            "Gain_Energy_Value"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_attack_flag",
-                  "value": 0
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-388995203\">Mar_7th_10_Energy</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
-          "counter": 1,
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "RetainCountZero"
-          ],
-          "stackData": [
-            "MDF_PropertyRatio",
-            "MDF_Count"
-          ],
-          "description": "When Charge equals to <span class=\"descriptionNumberColor\">MDF_Count</span> or more, immediately takes action and simultaneously increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. Additionally, Basic ATK gets Enhanced.",
-          "type": "Other",
-          "statusName": "Charge"
-        }
-      ],
-      "references": []
     },
     "March7thTH_Functions": {
       "fileName": "March7thTH_Functions",

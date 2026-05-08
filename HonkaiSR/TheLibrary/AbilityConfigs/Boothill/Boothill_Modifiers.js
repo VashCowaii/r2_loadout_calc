@@ -58,14 +58,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1894494257\">Boothill_SelfModification</a>[<span class=\"descriptionNumberColor\">Pocket Trickshot</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_MaxLayer",
-        "MDF_StanceAdded",
-        "MDF_GainFromPassive"
-      ],
-      "latentQueue": [
-        "Avatar_1315_Enhance"
-      ],
       "description": "Every stack increases the Toughness Reduction of the Enhanced Basic Attack by <span class=\"descriptionNumberColor\">MDF_StanceAdded</span>. If the target is Weakness Broken while the Enhanced Basic ATK is being used, deals additional Physical Break DMG based on the number of Pocket Trickshot stacks. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
       "type": "Other",
       "effectName": "Pocket Trickshot",
@@ -467,9 +459,6 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "KeepOnDeathrattle"
       ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
       "description": "This is considered a Taunt state and only %CasterName can be selected as the attack target. Increases DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> when attacked by %CasterName.",
       "type": "Debuff",
       "effectName": "Standoff",
@@ -717,9 +706,6 @@ const configAbility = {
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
         "ListenBattleEventSkill"
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
       ],
       "description": "When getting attacked by the target in the Standoff, increases the DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. The Basic ATK becomes Enhanced.",
       "type": "Other",

@@ -44,9 +44,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1521577078\">PlayerBoy_40_Maze_ElationRatio</a>[<span class=\"descriptionNumberColor\">We Are So Back!</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "We Are So Back!",
@@ -79,10 +76,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-557103509\">Player_40_Eidolon1_InsertActionSave</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "_Rank02",
-        "_Rank01"
-      ],
       "addStacksPerTrigger": 1,
       "execute": [
         {
@@ -229,10 +222,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1221062210\">Player_40_Eidolon1_InsertActionSaveMark</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "_Rank01",
-        "_Rank02"
-      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -255,10 +244,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-831933466\">Player_40_InsertElationAbilityShow</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "_Rank01",
-        "_Rank02"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",

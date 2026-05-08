@@ -71,9 +71,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__385618061\">M_Feixiao_UltraTarget_FadeInFlag</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "First_Break_Effect"
-      ],
       "removalDependencies": {
         "name": "Removal Dependency",
         "dependancyName": "<a class=\"gModGreen\" id=\"176878499\">M_Feixiao_UltraTarget_Mark</a>"
@@ -84,9 +81,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1192517657\">M_Feixiao_UltraTarget_Visual_Stun</a>",
       "modifierFlags": [
         "STAT_Stun_Effect"
-      ],
-      "latentQueue": [
-        "First_Break_Effect"
       ]
     },
     {
@@ -94,9 +88,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1169885953\">M_Feixiao_UltraTarget_Visual_Confine</a>",
       "modifierFlags": [
         "STAT_Confine_Effect"
-      ],
-      "latentQueue": [
-        "First_Break_Effect"
       ]
     },
     {
@@ -396,12 +387,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [
-        "IsUnCountedInsert"
-      ],
       "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
       "type": "Buff",
       "effectName": "SPD Boost",
@@ -434,9 +419,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
       "counter": 3,
-      "stackData": [
-        "MDF_Count"
-      ],
       "description": "In the Talent's effect, for every 1 instance of Follow-Up ATK launched by ally targets, Feixiao gains 1 point of \"Flying Aureus.\" This effect can still trigger <span class=\"descriptionNumberColor\">MDF_Count</span> time(s).",
       "type": "Other",
       "statusName": "Moonward I Wish"
