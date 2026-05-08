@@ -10,6 +10,106 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__326484510\">ADV_StageAbility_Maze_Castorice_RadiusFlag</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "modifierFlags": [
+        "NoAlert",
+        "Stun"
+      ],
+      "onCreation": [
+        "Deleted bullshit"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1699701312\">ADV_StageAbility_Maze_Castorice_AttackRadius</a>",
+      "counter": 1,
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1885580718\">ADV_StageAbility_Maze_Castorice_Attack</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1034446396\">ADV_StageAbility_Maze_Castorice_Radius</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "onCreation": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Team Leader",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            }
+          },
+          "passed": [
+            {
+              "name": "Create Overworld Entity",
+              "summonID": 14071
+            }
+          ]
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "summonID": 14071
+          }
+        },
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Adventure Player}}"
+            },
+            "summonID": 14071
+          }
+        }
+      ],
+      "onStageExit": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "overworldID": 140704
+        },
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Adventure Player}}"
+            },
+            "summonID": 14071
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1273066371\">ADV_GlobalAbility_Maze_Castorice</a>",
+      "stackType": "Replace"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-459849199\">Castorice_Eidolon6_QuantumPenetrate</a>[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
       "description": "When dealing DMG, increases Quantum RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",

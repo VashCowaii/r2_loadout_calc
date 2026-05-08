@@ -6,6 +6,12 @@ const compositeAbilityObject = {
   "trimSummonName": "NetherwingPollux",
   "abilityList": [
     "Castorice_Modifiers",
+    "Castorice_LocalPlayer_Castorice_SummonUnit",
+    "Castorice_LocalPlayer_StandardAbility_AttackBreak",
+    "Castorice_LocalPlayer_Castorice_TechniqueUsage_Out",
+    "Castorice_LocalPlayer_Castorice_TechniqueUsage_Input",
+    "Castorice_LocalPlayer_Castorice_TechniqueUsage",
+    "Castorice_LocalPlayer_Castorice_NormalAtk01",
     "Castorice_Castorice_TechniqueInLevel",
     "Castorice_Castorice_PassiveAbility_1",
     "Castorice_Castorice_Ability03_Part02",
@@ -49,6 +55,106 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__326484510\">ADV_StageAbility_Maze_Castorice_RadiusFlag</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "modifierFlags": [
+            "NoAlert",
+            "Stun"
+          ],
+          "onCreation": [
+            "Deleted bullshit"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1699701312\">ADV_StageAbility_Maze_Castorice_AttackRadius</a>",
+          "counter": 1,
+          "stackType": "Refresh"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1885580718\">ADV_StageAbility_Maze_Castorice_Attack</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1034446396\">ADV_StageAbility_Maze_Castorice_Radius</a>",
+          "counter": 1,
+          "stackType": "Merge",
+          "onCreation": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Team Leader",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
+              },
+              "passed": [
+                {
+                  "name": "Create Overworld Entity",
+                  "summonID": 14071
+                }
+              ]
+            }
+          ],
+          "onRemoval": [
+            {
+              "name": "Remove Overworld Entity",
+              "summon": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "summonID": 14071
+              }
+            },
+            {
+              "name": "Remove Overworld Entity",
+              "summon": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Adventure Player}}"
+                },
+                "summonID": 14071
+              }
+            }
+          ],
+          "onStageExit": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": null,
+              "overworldID": 140704
+            },
+            {
+              "name": "Remove Overworld Entity",
+              "summon": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Adventure Player}}"
+                },
+                "summonID": 14071
+              }
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1273066371\">ADV_GlobalAbility_Maze_Castorice</a>",
+          "stackType": "Replace"
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-459849199\">Castorice_Eidolon6_QuantumPenetrate</a>[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
@@ -1004,6 +1110,458 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "Castorice_LocalPlayer_Castorice_SummonUnit": {
+      "fileName": "Castorice_LocalPlayer_Castorice_SummonUnit",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1699701312\">ADV_StageAbility_Maze_Castorice_AttackRadius</a>",
+          "duration": -1
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Castorice_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Castorice_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Castorice_LocalPlayer_Castorice_TechniqueUsage_Out": {
+      "fileName": "Castorice_LocalPlayer_Castorice_TechniqueUsage_Out",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Castorice_OnInput_Flag",
+          "value": 0
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Adventure Combat Initiator(Latest)}}"
+            }
+          },
+          "passed": [
+            "Submit Technique Use",
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": null,
+              "overworldID": 140704
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "triggerType": "Free",
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      }
+    },
+    "Castorice_LocalPlayer_Castorice_TechniqueUsage_Input": {
+      "fileName": "Castorice_LocalPlayer_Castorice_TechniqueUsage_Input",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Castorice_OnInput_Flag",
+          "value": 1
+        },
+        "Deleted bullshit",
+        {
+          "name": "Overworld Attack Instance",
+          "onBattle": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Castorice_OnBattle_Flag",
+              "value": 1
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": null,
+              "ID": "140701(SkillMaze)"
+            }
+          ],
+          "entryTargetType": "AllHitTarget"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Castorice_OnBattle_Flag",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Castorice_OnBattle_Flag",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "overworldID": 140704
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Castorice_OnInput_Flag",
+          "value": 0
+        },
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "summonID": 14071
+          }
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "triggerType": "Free",
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      }
+    },
+    "Castorice_LocalPlayer_Castorice_TechniqueUsage": {
+      "fileName": "Castorice_LocalPlayer_Castorice_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "140704()",
+          "duration": {
+            "operator": "Variables[0] (20) || RETURN",
+            "displayLines": "20",
+            "constants": [],
+            "variables": [
+              20
+            ]
+          }
+        },
+        "Submit Technique Use"
+      ],
+      "onAbortReg": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Castorice_OnBattle_Flag",
+          "value": 0
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Castorice_LocalPlayer_Castorice_NormalAtk01": {
+      "fileName": "Castorice_LocalPlayer_Castorice_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit"
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit"
+                  ],
+                  "failed": [
+                    "Deleted bullshit"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Castorice_Castorice_TechniqueInLevel": {
       "fileName": "Castorice_Castorice_TechniqueInLevel",
