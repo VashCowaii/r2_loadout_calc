@@ -10,6 +10,202 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-389872781\">ADV_StageAbility_Maze_Mar_7th_10_Listener</a>",
+      "stackType": "Merge",
+      "onTechUse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Skill Type",
+                "skillType": "Technique[?]"
+              },
+              {
+                "name": "Compare: Target",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "invertCondition": true
+              },
+              {
+                "name": "Has Modifier (OVERWORLD)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "buffID": 122401,
+                "modifier": null,
+                "invertCondition": true
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": null,
+              "ID": "122401(Avatar_Mar_7th_10_SkillMazeEnergy)",
+              "buffLevel": 1,
+              "counter": 1,
+              "valuePerStack": {
+                "#ADF_1": 1,
+                "#ADF_2": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-51626442\">ADV_StageAbility_Maze_Mar_7th_10</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1904700983\">ADV_StageAbility_Maze_Mar_7th_10_Energy</a>",
+      "counter": 1,
+      "stackType": "Replace",
+      "onTechUse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Skill Type",
+                "skillType": "Technique[?]"
+              },
+              {
+                "name": "Compare: Target",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "invertCondition": true
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "#ADF_1",
+                "compareType": ">=",
+                "value2": {
+                  "operator": "Variables[0] (#ADF_2) || RETURN",
+                  "displayLines": "#ADF_2",
+                  "constants": [],
+                  "variables": [
+                    "#ADF_2"
+                  ]
+                }
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": null,
+                  "ID": "122401(Avatar_Mar_7th_10_SkillMazeEnergy)",
+                  "buffLevel": {
+                    "operator": "Variables[0] (#ADF_2) || RETURN",
+                    "displayLines": "#ADF_2",
+                    "constants": [],
+                    "variables": [
+                      "#ADF_2"
+                    ]
+                  },
+                  "counter": 1,
+                  "valuePerStack": {
+                    "#ADF_1": {
+                      "operator": "Variables[0] (#ADF_2) || RETURN",
+                      "displayLines": "#ADF_2",
+                      "constants": [],
+                      "variables": [
+                        "#ADF_2"
+                      ]
+                    },
+                    "#ADF_2": {
+                      "operator": "Variables[0] (#ADF_2) || RETURN",
+                      "displayLines": "#ADF_2",
+                      "constants": [],
+                      "variables": [
+                        "#ADF_2"
+                      ]
+                    }
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": null,
+                  "ID": "122401(Avatar_Mar_7th_10_SkillMazeEnergy)",
+                  "buffLevel": {
+                    "operator": "Variables[0] (#ADF_1) || RETURN",
+                    "displayLines": "#ADF_1",
+                    "constants": [],
+                    "variables": [
+                      "#ADF_1"
+                    ]
+                  },
+                  "counter": 1,
+                  "valuePerStack": {
+                    "#ADF_1": {
+                      "operator": "Variables[0] (#ADF_1) || Constants[0] (1) || ADD || RETURN",
+                      "displayLines": "(#ADF_1 + 1)",
+                      "constants": [
+                        1
+                      ],
+                      "variables": [
+                        "#ADF_1"
+                      ]
+                    },
+                    "#ADF_2": {
+                      "operator": "Variables[0] (#ADF_2) || RETURN",
+                      "displayLines": "#ADF_2",
+                      "constants": [],
+                      "variables": [
+                        "#ADF_2"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__126431759\">M_Mar_7th_10_InsertCheck</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
