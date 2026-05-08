@@ -10,6 +10,63 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-842574102\">ADV_StageAbility_Maze_Jade</a>",
+      "counter": 1,
+      "stackType": "Replace",
+      "modifierFlags": [
+        "Blind"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1106061455\">ADV_StageAbility_Maze_Jade_Flag</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1900960567\">ADV_StageAbility_Maze_Jade_TiggerExit</a>",
+      "stackType": "Merge",
+      "onCreation": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Team Leader",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            }
+          },
+          "passed": [
+            {
+              "name": "Create Overworld Entity",
+              "summonID": 13141
+            }
+          ]
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "summonID": 13141
+          }
+        }
+      ],
+      "onStageEntry": [
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 13141
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__68476876\">Jade_Eidolon6_QuantumPenetrate</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
