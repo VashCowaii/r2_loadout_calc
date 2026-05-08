@@ -10,6 +10,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__276886007\">ADV_StageAbility_Maze_TheHerta_RogueExtraEffect</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1507655097\">ADV_StageAbility_Maze_TheHerta</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1324497127\">TheHerta_Ability21</a>"
     },
     {
