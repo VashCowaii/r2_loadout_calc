@@ -10,6 +10,15 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-149061418\">ADV_StageAbility_Maze_Sparxie</a>",
+      "counter": 1,
+      "stackType": "Replace",
+      "modifierFlags": [
+        "Blind"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-769743474\">Sparxie_Eidolon6</a>[<span class=\"descriptionNumberColor\">#BuiltDifferent #GoingExtinct</span>]",
       "stackType": "ReplaceByCaster",
       "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
