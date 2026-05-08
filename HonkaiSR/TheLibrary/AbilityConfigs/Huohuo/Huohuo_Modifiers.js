@@ -10,6 +10,15 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1116329624\">ADV_Modifier_Maze_Huohuo_Fear</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "modifierFlags": [
+        "Fear"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-711212518\">Advanced_Huohuo_Eidolon2</a>",
       "stackType": "ReplaceByCaster",
       "execute": [

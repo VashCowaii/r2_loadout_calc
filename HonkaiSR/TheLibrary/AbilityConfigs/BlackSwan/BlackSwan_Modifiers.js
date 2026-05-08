@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-378953098\">ADV_StageAbility_Maze_BlackSwan</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1409864339\">M_BlackSwan_DOT_Eidolon4_HaveAddedSP</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [

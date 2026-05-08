@@ -755,6 +755,12 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1407981541\">ADV_StageAbility_Maze_Ren</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__634466478\">Advanced_Ren_LoseHPPreShow</a>",
       "execute": [
         {

@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1167212020\">ADV_StageAbility_Maze_Silwolf</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1388519324\">Advanced_Silwolf_Tree03_AttackUp</a>[<span class=\"descriptionNumberColor\">Side Note</span>]",
       "stackType": "ReplaceByCaster",
       "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",

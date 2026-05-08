@@ -1,0 +1,56 @@
+const configAbility = {
+  "fileName": "Kafka_LocalPlayer_Kafka_TechniqueUsage",
+  "skillTrigger": "MazeSkill",
+  "abilityType": "Basic ATK",
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "IF",
+      "conditions": "Ability Has a Target",
+      "passed": [
+        "Deleted bullshit",
+        {
+          "name": "Overworld Attack Instance",
+          "onBattle": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": null,
+              "ID": "100501(SkillMaze)"
+            }
+          ],
+          "entryTargetType": "AllHitTarget"
+        }
+      ],
+      "failed": [
+        "Deleted bullshit",
+        {
+          "name": "Overworld Attack Instance",
+          "onBattle": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": null,
+              "ID": "100501(SkillMaze)"
+            }
+          ],
+          "entryTargetType": "AllHitTarget"
+        }
+      ]
+    }
+  ],
+  "onAbortReg": [],
+  "references": [],
+  "targetObjectData": {
+    "primaryTarget": "Skill Point User(Or NONE)"
+  },
+  "realTargetData": {
+    "primaryTarget": "Select Hostile Target"
+  }
+}
