@@ -10,6 +10,123 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1559408124\">ADV_StageAbility_Maze_Firefly_FadeOut</a>",
+      "stackType": "ReplaceByCaster",
+      "onStageExit": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1559408124\">ADV_StageAbility_Maze_Firefly_FadeOut</a>"
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1650011873\">ADV_StageAbility_Maze_Firefly_MidAirInvincible</a>",
+      "counter": 1,
+      "tickTime": 0.03,
+      "stackType": "Refresh",
+      "modifierFlags": [
+        "Stealth",
+        "HolyShield"
+      ],
+      "duration": 5,
+      "onStageExit": [
+        "Modifier Deletes Itself"
+      ],
+      "onTick": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              "Player Movement Input Active",
+              "Compare Movement Speed"
+            ]
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "_SoundStartFlag",
+                "compareType": "=",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_SoundStartFlag",
+                  "value": 1
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_SoundEndFlag",
+                  "value": 0
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "_SoundStartFlag",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "_SoundEndFlag",
+                    "compareType": "=",
+                    "value2": 0
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_SoundStartFlag",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_SoundEndFlag",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1474797655\">ADV_StageAbility_Maze_Firefly_FireWeakness</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "onStack": [
+        {
+          "name": "Add Global Weakness",
+          "type": "Fire"
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1246299099\">ADV_StageAbility_Maze_Firefly</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-340351438\">Sam_PassiveAbility_RedMode_DisableUltraSkill</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
