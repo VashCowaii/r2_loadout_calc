@@ -10,6 +10,235 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1603714202\">ADV_StageAbility_Maze_Cipher_Mark_Stolen</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__223936728\">ADV_StageAbility_Maze_Cipher_Mark</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-627365117\">ADV_StageAbility_Maze_Cipher_Enemy</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "onCreation": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2037526883\">ADV_StageAbility_Maze_Cipher_Enemy_Shoot</a>"
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2037526883\">ADV_StageAbility_Maze_Cipher_Enemy_Shoot</a>"
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__2037526883\">ADV_StageAbility_Maze_Cipher_Enemy_Shoot</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1509949502\">ADV_StageAbility_Maze_Cipher_Enemy_ForShow</a>",
+      "onCreation": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1603714202\">ADV_StageAbility_Maze_Cipher_Mark_Stolen</a>"
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1603714202\">ADV_StageAbility_Maze_Cipher_Mark_Stolen</a>"
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1469325035\">ADV_StageAbility_Maze_Cipher_Collider</a>",
+      "modifierFlags": [
+        "Stealth"
+      ],
+      "onCreation": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1748356691\">ADV_StageAbility_Maze_Cipher_Collider_Effect</a>"
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1748356691\">ADV_StageAbility_Maze_Cipher_Collider_Effect</a>"
+        }
+      ],
+      "onStageExit": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1748356691\">ADV_StageAbility_Maze_Cipher_Collider_Effect</a>"
+        }
+      ],
+      "onStageEntry": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1748356691\">ADV_StageAbility_Maze_Cipher_Collider_Effect</a>"
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1748356691\">ADV_StageAbility_Maze_Cipher_Collider_Effect</a>",
+      "modifierTasks": [
+        {
+          "name": "Looped Event",
+          "maxLoops": 99999,
+          "Event": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__2114178382\">ADV_StageAbility_Maze_Cipher_Enemy_Added</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2107068353\">ADV_StageAbility_Maze_Cipher_Self</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierTasks": [
+        {
+          "name": "Looped Event",
+          "maxLoops": 99999,
+          "Event": []
+        }
+      ],
+      "onCreation": [
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 14061
+        },
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 14062
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1469325035\">ADV_StageAbility_Maze_Cipher_Collider</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1373730296\">ADV_StageAbility_Maze_Cipher_Speed</a>"
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Enemy NPCs}}"
+          },
+          "modifier": null,
+          "overworldID": 140603
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Team Members}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1469325035\">ADV_StageAbility_Maze_Cipher_Collider</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1373730296\">ADV_StageAbility_Maze_Cipher_Speed</a>"
+        },
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "summonID": 14061
+          }
+        },
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "summonID": 14062
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1588090863\">ADV_StageAbility_Maze_Cipher_Self_OnStage</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1373730296\">ADV_StageAbility_Maze_Cipher_Speed</a>",
+      "stackType": "Replace"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__825609644\">Cipher_SpecialMark01</a>",
       "stackType": "Replace",
       "modifierFlags": [
