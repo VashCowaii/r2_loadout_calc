@@ -690,7 +690,22 @@ let battleEvents = {
             },
             "skillEffect": "Passive",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Topaz_00_BE_PassiveSkill",
+              "Avatar_Topaz_00_BE_RefreshEnhance",
+              "Avatar_Topaz_00_BE_FirstAttack",
+              "Avatar_Topaz_00_BE_LaterAttack",
+              "Avatar_Topaz_00_BE_Skill01_Camera",
+              "Avatar_Topaz_00_BE_Skill02_Camera",
+              "Avatar_Topaz_00_BE_Skill01_Enhance_Camera",
+              "Avatar_Topaz_00_BE_Skill02_Enhance_Camera",
+              "Avatar_Topaz_00_BE_Skill02Ready",
+              "Avatar_Topaz_00_BE_Skill01Ready",
+              "Avatar_Topaz_00_BE_Skill03Ready",
+              "Avatar_Topaz_00_BE_Hit",
+              "Avatar_Topaz_00_BE_DelayLimbo",
+              "Avatar_Topaz_00_BE_CheckStun"
+            ],
             "toughnessList": [
               0,
               0,
@@ -722,7 +737,22 @@ let battleEvents = {
         },
         "skillEffect": "Passive",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_Topaz_00_BE_PassiveSkill",
+          "Avatar_Topaz_00_BE_RefreshEnhance",
+          "Avatar_Topaz_00_BE_FirstAttack",
+          "Avatar_Topaz_00_BE_LaterAttack",
+          "Avatar_Topaz_00_BE_Skill01_Camera",
+          "Avatar_Topaz_00_BE_Skill02_Camera",
+          "Avatar_Topaz_00_BE_Skill01_Enhance_Camera",
+          "Avatar_Topaz_00_BE_Skill02_Enhance_Camera",
+          "Avatar_Topaz_00_BE_Skill02Ready",
+          "Avatar_Topaz_00_BE_Skill01Ready",
+          "Avatar_Topaz_00_BE_Skill03Ready",
+          "Avatar_Topaz_00_BE_Hit",
+          "Avatar_Topaz_00_BE_DelayLimbo",
+          "Avatar_Topaz_00_BE_CheckStun"
+        ],
         "toughnessList": [
           0,
           0,
@@ -764,7 +794,11 @@ let battleEvents = {
             },
             "skillEffect": "Passive",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Lingsha_00_BE_PassiveSkill",
+              "Avatar_Lingsha_00_BPSkill_BattleEvent_Phase01",
+              "Avatar_Lingsha_00_BPSkill_BattleEvent_Camera"
+            ],
             "toughnessList": [
               0,
               0,
@@ -796,7 +830,11 @@ let battleEvents = {
         },
         "skillEffect": "Passive",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_Lingsha_00_BE_PassiveSkill",
+          "Avatar_Lingsha_00_BPSkill_BattleEvent_Phase01",
+          "Avatar_Lingsha_00_BPSkill_BattleEvent_Camera"
+        ],
         "toughnessList": [
           0,
           0,
@@ -899,7 +937,7 @@ let battleEvents = {
             "element": "Physical",
             "skillEffect": "AoEAttack",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [],
             "toughnessList": [
               0,
               60,
@@ -932,7 +970,14 @@ let battleEvents = {
             "attackType": "Normal",
             "skillEffect": "Passive",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_DanHengPT_00_BE_PassiveSkill",
+              "Avatar_DanHengPT_00_BE_InsertAttack_Phase01",
+              "Avatar_DanHengPT_00_BE_InsertAttack_Camera",
+              "Avatar_DanHengPT_00_BE_InsertShield_Phase01",
+              "Avatar_DanHengPT_00_BE_InsertShield_Phase02",
+              "Avatar_DanHengPT_00_BE_InsertShield_Camera"
+            ],
             "toughnessList": [
               0,
               0,
@@ -965,7 +1010,7 @@ let battleEvents = {
         "element": "Physical",
         "skillEffect": "AoEAttack",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [],
         "toughnessList": [
           0,
           60,
@@ -994,7 +1039,14 @@ let battleEvents = {
         "attackType": "Normal",
         "skillEffect": "Passive",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_DanHengPT_00_BE_PassiveSkill",
+          "Avatar_DanHengPT_00_BE_InsertAttack_Phase01",
+          "Avatar_DanHengPT_00_BE_InsertAttack_Camera",
+          "Avatar_DanHengPT_00_BE_InsertShield_Phase01",
+          "Avatar_DanHengPT_00_BE_InsertShield_Phase02",
+          "Avatar_DanHengPT_00_BE_InsertShield_Camera"
+        ],
         "toughnessList": [
           0,
           0,
@@ -1263,7 +1315,10 @@ let battleEvents = {
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "BattleEvent_W2_LycanKing_00_IF_EnterReady",
+              "BattleEvent_W2_LycanKing_00_IF_Phase01"
+            ],
             "toughnessList": [
               0,
               0,
@@ -1324,7 +1379,10 @@ let battleEvents = {
         "attackType": "Ultra",
         "skillEffect": "Support",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "BattleEvent_W2_LycanKing_00_IF_EnterReady",
+          "BattleEvent_W2_LycanKing_00_IF_Phase01"
+        ],
         "toughnessList": [
           0,
           0,
@@ -1439,7 +1497,10 @@ let battleEvents = {
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "BattleEvent_W2_Feixiao_00_IF_EnterReady",
+              "BattleEvent_W2_Feixiao_00_IF_Phase01"
+            ],
             "toughnessList": [
               0,
               0,
@@ -1500,7 +1561,10 @@ let battleEvents = {
         "attackType": "Ultra",
         "skillEffect": "Support",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "BattleEvent_W2_Feixiao_00_IF_EnterReady",
+          "BattleEvent_W2_Feixiao_00_IF_Phase01"
+        ],
         "toughnessList": [
           0,
           0,
@@ -1603,7 +1667,10 @@ let battleEvents = {
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "BattleEvent_BattleEvent20029_EnterReady",
+              "BattleEvent_BattleEvent20029_Phase01"
+            ],
             "toughnessList": [
               0,
               0,
@@ -1664,7 +1731,10 @@ let battleEvents = {
         "attackType": "Ultra",
         "skillEffect": "Support",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "BattleEvent_BattleEvent20029_EnterReady",
+          "BattleEvent_BattleEvent20029_Phase01"
+        ],
         "toughnessList": [
           0,
           0,
@@ -1731,7 +1801,10 @@ let battleEvents = {
             "attackType": "Ultra",
             "skillEffect": "Impair",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "BattleEvent_W4_Serpent_01_EnterReady",
+              "BattleEvent_W4_Serpent_01_Phase01"
+            ],
             "toughnessList": [
               0,
               0,
@@ -1792,7 +1865,10 @@ let battleEvents = {
         "attackType": "Ultra",
         "skillEffect": "Impair",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "BattleEvent_W4_Serpent_01_EnterReady",
+          "BattleEvent_W4_Serpent_01_Phase01"
+        ],
         "toughnessList": [
           0,
           0,
@@ -2087,7 +2163,10 @@ let battleEvents = {
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "BattleEvent_W4_Claymore_01_LocalLegend_EnterReady",
+              "BattleEvent_W4_Claymore_01_LocalLegend_Phase01"
+            ],
             "toughnessList": [
               0,
               0,
@@ -2148,7 +2227,10 @@ let battleEvents = {
         "attackType": "Ultra",
         "skillEffect": "Support",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "BattleEvent_W4_Claymore_01_LocalLegend_EnterReady",
+          "BattleEvent_W4_Claymore_01_LocalLegend_Phase01"
+        ],
         "toughnessList": [
           0,
           0,
@@ -2215,7 +2297,10 @@ let battleEvents = {
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "BattleEvent_W4_Manta_00_LocalLegend_EnterReady",
+              "BattleEvent_W4_Manta_00_LocalLegend_Phase01"
+            ],
             "toughnessList": [
               0,
               0,
@@ -2276,7 +2361,10 @@ let battleEvents = {
         "attackType": "Ultra",
         "skillEffect": "Support",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "BattleEvent_W4_Manta_00_LocalLegend_EnterReady",
+          "BattleEvent_W4_Manta_00_LocalLegend_Phase01"
+        ],
         "toughnessList": [
           0,
           0,
@@ -2369,7 +2457,10 @@ let battleEvents = {
             "attackType": "Ultra",
             "skillEffect": "Impair",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "BattleEvent_W4_Serpent_01_EnterReady",
+              "BattleEvent_W4_Serpent_01_Phase01"
+            ],
             "toughnessList": [
               0,
               0,
@@ -2430,7 +2521,10 @@ let battleEvents = {
         "attackType": "Ultra",
         "skillEffect": "Impair",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "BattleEvent_W4_Serpent_01_EnterReady",
+          "BattleEvent_W4_Serpent_01_Phase01"
+        ],
         "toughnessList": [
           0,
           0,
@@ -2509,7 +2603,10 @@ let battleEvents = {
             "attackType": "Ultra",
             "skillEffect": "Impair",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "BattleEvent_Monster_W5_Vtuber_00_EnterReady",
+              "BattleEvent_Monster_W5_Vtuber_00_Phase01"
+            ],
             "toughnessList": [
               0,
               0,
@@ -2570,7 +2667,10 @@ let battleEvents = {
         "attackType": "Ultra",
         "skillEffect": "Impair",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "BattleEvent_Monster_W5_Vtuber_00_EnterReady",
+          "BattleEvent_Monster_W5_Vtuber_00_Phase01"
+        ],
         "toughnessList": [
           0,
           0,
@@ -3887,7 +3987,12 @@ let battleEvents = {
             "element": "Imaginary",
             "skillEffect": "Bounce",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "BattleEventAbility_ChallengePeakBattle_Elation_01_Skill01_Phase01",
+              "BattleEventAbility_ChallengePeakBattle_Elation_01_Skill01_Phase02",
+              "BattleEventAbility_ChallengePeakBattle_Elation_01_Skill01_Camera",
+              "BattleEventAbility_ChallengePeakBattle_Elation_01_Skill01_Effect"
+            ],
             "toughnessList": [
               60,
               0,
@@ -3918,7 +4023,12 @@ let battleEvents = {
         "element": "Imaginary",
         "skillEffect": "Bounce",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "BattleEventAbility_ChallengePeakBattle_Elation_01_Skill01_Phase01",
+          "BattleEventAbility_ChallengePeakBattle_Elation_01_Skill01_Phase02",
+          "BattleEventAbility_ChallengePeakBattle_Elation_01_Skill01_Camera",
+          "BattleEventAbility_ChallengePeakBattle_Elation_01_Skill01_Effect"
+        ],
         "toughnessList": [
           60,
           0,
@@ -8314,7 +8424,13 @@ let battleEvents = {
             "attackType": "Ultra",
             "skillEffect": "AoEAttack",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Colossus_00_Skill03_Camera",
+              "Avatar_Colossus_00_Skill03_Camera_02",
+              "Avatar_Colossus_00_Skill03_Pre",
+              "Avatar_Colossus_00_Skill03_Phase01",
+              "Avatar_Colossus_00_Skill03_Phase02"
+            ],
             "toughnessList": [
               0,
               180,
@@ -8348,7 +8464,10 @@ let battleEvents = {
             },
             "skillEffect": "Passive",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Colossus_00_PassiveSkill01",
+              "Avatar_Colossus_00_SkillP01_InsertAbility"
+            ],
             "toughnessList": [
               0,
               0,
@@ -8382,7 +8501,13 @@ let battleEvents = {
         "attackType": "Ultra",
         "skillEffect": "AoEAttack",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_Colossus_00_Skill03_Camera",
+          "Avatar_Colossus_00_Skill03_Camera_02",
+          "Avatar_Colossus_00_Skill03_Pre",
+          "Avatar_Colossus_00_Skill03_Phase01",
+          "Avatar_Colossus_00_Skill03_Phase02"
+        ],
         "toughnessList": [
           0,
           180,
@@ -8412,7 +8537,10 @@ let battleEvents = {
         },
         "skillEffect": "Passive",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_Colossus_00_PassiveSkill01",
+          "Avatar_Colossus_00_SkillP01_InsertAbility"
+        ],
         "toughnessList": [
           0,
           0,
@@ -8716,7 +8844,13 @@ let battleEvents = {
             "attackType": "Ultra",
             "skillEffect": "AoEAttack",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Colossus_00_Skill03_Camera",
+              "Avatar_Colossus_00_Skill03_Camera_02",
+              "Avatar_Colossus_00_Skill03_Pre",
+              "Avatar_Colossus_00_Skill03_Phase01",
+              "Avatar_Colossus_00_Skill03_Phase02"
+            ],
             "toughnessList": [
               0,
               180,
@@ -8750,7 +8884,10 @@ let battleEvents = {
             },
             "skillEffect": "Passive",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Colossus_00_PassiveSkill01",
+              "Avatar_Colossus_00_SkillP01_InsertAbility"
+            ],
             "toughnessList": [
               0,
               0,
@@ -8784,7 +8921,13 @@ let battleEvents = {
         "attackType": "Ultra",
         "skillEffect": "AoEAttack",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_Colossus_00_Skill03_Camera",
+          "Avatar_Colossus_00_Skill03_Camera_02",
+          "Avatar_Colossus_00_Skill03_Pre",
+          "Avatar_Colossus_00_Skill03_Phase01",
+          "Avatar_Colossus_00_Skill03_Phase02"
+        ],
         "toughnessList": [
           0,
           180,
@@ -8814,7 +8957,10 @@ let battleEvents = {
         },
         "skillEffect": "Passive",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_Colossus_00_PassiveSkill01",
+          "Avatar_Colossus_00_SkillP01_InsertAbility"
+        ],
         "toughnessList": [
           0,
           0,
@@ -8858,7 +9004,11 @@ let battleEvents = {
             "attackType": "Normal",
             "skillEffect": "AoEAttack",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Monster_BattleEvent_W1_Colossus_00_Skill08_Phase01",
+              "Monster_BattleEvent_W1_Colossus_00_Skill08_Phase02",
+              "Monster_BattleEvent_W1_Colossus_00_Skill08_Camera"
+            ],
             "toughnessList": [
               0,
               0,
@@ -8892,7 +9042,11 @@ let battleEvents = {
         "attackType": "Normal",
         "skillEffect": "AoEAttack",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Monster_BattleEvent_W1_Colossus_00_Skill08_Phase01",
+          "Monster_BattleEvent_W1_Colossus_00_Skill08_Phase02",
+          "Monster_BattleEvent_W1_Colossus_00_Skill08_Camera"
+        ],
         "toughnessList": [
           0,
           0,
@@ -11941,7 +12095,16 @@ let battleEvents = {
             },
             "skillEffect": "Passive",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_MissionBattleEvent60037_PassiveSkill01",
+              "Avatar_MissionBattleEvent60024_Skill03_EnterReady",
+              "Avatar_MissionBattleEvent60037_Skill03_Phase01",
+              "Avatar_MissionBattleEvent60037_Skill03_Phase02",
+              "Avatar_MissionBattleEvent60024_Skill03_Camera",
+              "Avatar_MissionBattleEvent60024_Skill03_Insert_Phase01",
+              "Avatar_MissionBattleEvent60024_Skill03_Insert_Phase02",
+              "Avatar_MissionBattleEvent60024_Skill03_Insert_Camera"
+            ],
             "toughnessList": [
               0,
               0,
@@ -12007,7 +12170,16 @@ let battleEvents = {
         },
         "skillEffect": "Passive",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_MissionBattleEvent60037_PassiveSkill01",
+          "Avatar_MissionBattleEvent60024_Skill03_EnterReady",
+          "Avatar_MissionBattleEvent60037_Skill03_Phase01",
+          "Avatar_MissionBattleEvent60037_Skill03_Phase02",
+          "Avatar_MissionBattleEvent60024_Skill03_Camera",
+          "Avatar_MissionBattleEvent60024_Skill03_Insert_Phase01",
+          "Avatar_MissionBattleEvent60024_Skill03_Insert_Phase02",
+          "Avatar_MissionBattleEvent60024_Skill03_Insert_Camera"
+        ],
         "toughnessList": [
           0,
           0,
@@ -12051,7 +12223,11 @@ let battleEvents = {
             "attackType": "Ultra",
             "skillEffect": "AoEAttack",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_MissionBattleEvent60038_Skill03_Phase01",
+              "Avatar_MissionBattleEvent60038_Skill03_Phase02",
+              "Avatar_MissionBattleEvent60013_Skill03_Camera"
+            ],
             "toughnessList": [
               0,
               180,
@@ -12085,7 +12261,9 @@ let battleEvents = {
             },
             "skillEffect": "Passive",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_MissionBattleEvent60038_SkillP01"
+            ],
             "toughnessList": [
               0,
               0,
@@ -12119,7 +12297,11 @@ let battleEvents = {
         "attackType": "Ultra",
         "skillEffect": "AoEAttack",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_MissionBattleEvent60038_Skill03_Phase01",
+          "Avatar_MissionBattleEvent60038_Skill03_Phase02",
+          "Avatar_MissionBattleEvent60013_Skill03_Camera"
+        ],
         "toughnessList": [
           0,
           180,
@@ -12149,7 +12331,9 @@ let battleEvents = {
         },
         "skillEffect": "Passive",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_MissionBattleEvent60038_SkillP01"
+        ],
         "toughnessList": [
           0,
           0,
@@ -13095,7 +13279,13 @@ let battleEvents = {
             },
             "skillEffect": "Impair",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_HeliobusActionAbilityFormChange_Skill03_EnterReady",
+              "Avatar_HeliobusActionAbilityFormChange_Skill03_Phase01",
+              "Avatar_HeliobusActionAbilityFormChange_Skill03_Phase02",
+              "ActionEventAbility_Camera_AllDarkTeam",
+              "Avatar_HeliobusActionAbilityFormChange_Revert"
+            ],
             "toughnessList": [
               0,
               0,
@@ -13127,7 +13317,13 @@ let battleEvents = {
         },
         "skillEffect": "Impair",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_HeliobusActionAbilityFormChange_Skill03_EnterReady",
+          "Avatar_HeliobusActionAbilityFormChange_Skill03_Phase01",
+          "Avatar_HeliobusActionAbilityFormChange_Skill03_Phase02",
+          "ActionEventAbility_Camera_AllDarkTeam",
+          "Avatar_HeliobusActionAbilityFormChange_Revert"
+        ],
         "toughnessList": [
           0,
           0,
