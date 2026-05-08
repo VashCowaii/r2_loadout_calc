@@ -10,6 +10,108 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1616258500\">ADV_StageAbility_Maze_Boothill_AfterBattle</a>",
+      "stackType": "Merge",
+      "onBattleEnd": [
+        {
+          "name": "IF",
+          "conditions": "Won last Battle",
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "CurCount",
+                "compareType": ">",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": null,
+                  "overworldID": 131502
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": null,
+                  "ID": "131502(Avatar_Boothill_00_SkillMazeInLevel_GainEnhance)",
+                  "buffLevel": {
+                    "operator": "Variables[0] (CurCount) || RETURN",
+                    "displayLines": "CurCount",
+                    "constants": [],
+                    "variables": [
+                      "CurCount"
+                    ]
+                  },
+                  "counter": 2,
+                  "valuePerStack": {
+                    "#ADF_1": {
+                      "operator": "Variables[0] (CurCount) || RETURN",
+                      "displayLines": "CurCount",
+                      "constants": [],
+                      "variables": [
+                        "CurCount"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1030110078\">ADV_StageAbility_Maze_Boothill_EnhanceStack</a>",
+      "counter": 2,
+      "stackType": "Replace",
+      "onStack": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "#ADF_1",
+            "compareType": ">=",
+            "value2": 1
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "#ADF_1",
+            "compareType": ">=",
+            "value2": 2
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "#ADF_1",
+            "compareType": ">=",
+            "value2": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__925746155\">ADV_StageAbility_Maze_Boothill</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__827570007\">Boothill_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Milestonemonger</span>]",
       "description": "Milestonemonger's effect cannot be triggered yet.",
       "type": "Other",
