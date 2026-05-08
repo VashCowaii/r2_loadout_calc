@@ -10,6 +10,108 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__406447714\">ADV_StageAbility_Anaxa_IgnoreWeakness</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "EnterBattleAdvantage"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__524782816\">ADV_StageAbility_Anaxa_LineupAttackListener</a>",
+      "onAttack": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value1": "CurrentHP%",
+            "compareType": ">"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
+              },
+              "modifier": null,
+              "ID": "140502()",
+              "counter": 1,
+              "duration": 1,
+              "conditions": {
+                "name": "Has Flag",
+                "flagName": "Fear"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1211991680\">ADV_StageAbility_Anaxa_BeforeBattleFearListener</a>",
+      "onRemoval": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Lineup}}"
+          },
+          "modifier": null,
+          "overworldID": 140503
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Enemy NPCs}}"
+          },
+          "modifier": null,
+          "overworldID": 140502
+        }
+      ],
+      "onBattlePrep": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Parameter Target List}}"
+          },
+          "modifier": null,
+          "ID": "140501(SkillMaze)",
+          "counter": 1,
+          "duration": {
+            "operator": "Variables[0] (10) || RETURN",
+            "displayLines": "10",
+            "constants": [],
+            "variables": [
+              10
+            ]
+          },
+          "conditions": {
+            "name": "Has Flag",
+            "flagName": "Fear"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1095061274\">ADV_StageAbility_Maze_Anaxa_00</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "modifierFlags": [
+        "Fear",
+        "EnterBattleAdvantage"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1815988112\">M_Anaxa_StartFreeBP</a>",
       "removalDependencies": {
         "name": "Removal Dependency",
