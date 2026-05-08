@@ -10,6 +10,98 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1571575270\">ADV_StageAbility_Maze_DanHengPT_Empty</a>",
+      "counter": 1,
+      "stackType": "Replace",
+      "onStack": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Adventure Player}}"
+            }
+          },
+          "failed": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": null,
+              "overworldID": 141404
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1258046280\">ADV_StageAbility_Maze_DanHengPT_OnTeamLeaderChange</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "onStack": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Team Members}}"
+          },
+          "modifier": null,
+          "overworldID": 141404
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Player}}"
+          },
+          "modifier": null,
+          "ID": "141404()"
+        }
+      ],
+      "onChangeTeamLead": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Team Members}}"
+          },
+          "modifier": null,
+          "overworldID": 141404
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Player}}"
+          },
+          "modifier": null,
+          "ID": "141404()"
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1294472860\">ADV_StageAbility_DanHengPT_BeforeBattleStunListener</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1379733689\">ADV_StageAbility_Maze_DanHengPT_Stun</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "Stun"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__297054432\">DanHengPT_LongLingExtraShield</a>",
       "stackType": "Replace",
       "modifierFlags": [
