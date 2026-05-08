@@ -10,6 +10,43 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1221389813\">ADV_StageAbility_PlayerBoy_30_BeforeBattleDebuffListener</a>",
+      "onBattlePrep": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Parameter Target List}}"
+          },
+          "modifier": null,
+          "ID": "800701(SkillMaze)",
+          "counter": 1,
+          "duration": {
+            "operator": "Variables[0] (10) || RETURN",
+            "displayLines": "10",
+            "constants": [],
+            "variables": [
+              10
+            ]
+          },
+          "conditions": {
+            "name": "Has Flag",
+            "flagName": "TimeLock"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1657383963\">ADV_StageAbility_Maze_PlayerBoy_30</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "TimeLock"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-915997562\">PlayerBoy_30_UltraState_Sub</a>",
       "removalDependencies": {
         "name": "Removal Dependency",

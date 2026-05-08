@@ -9,6 +9,10 @@ const compositeAbilityObject = {
     "TrailblazerRemembrance_PlayerBoy_30_Trace01",
     "TrailblazerRemembrance_PlayerBoy_30_Eidolon4",
     "TrailblazerRemembrance_PlayerBoy_30_Eidolon2",
+    "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_BeforeBattleDebuffListener",
+    "TrailblazerRemembrance_LocalPlayer_StandardAbility_AttackBreak",
+    "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_TechniqueUsage",
+    "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_NormalAtk01",
     "TrailblazerRemembrance_PlayerBoy_30_TechniqueInLevel",
     "TrailblazerRemembrance_PlayerBoy_30_PassiveAbility01",
     "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02",
@@ -48,6 +52,43 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1221389813\">ADV_StageAbility_PlayerBoy_30_BeforeBattleDebuffListener</a>",
+          "onBattlePrep": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
+              },
+              "modifier": null,
+              "ID": "800701(SkillMaze)",
+              "counter": 1,
+              "duration": {
+                "operator": "Variables[0] (10) || RETURN",
+                "displayLines": "10",
+                "constants": [],
+                "variables": [
+                  10
+                ]
+              },
+              "conditions": {
+                "name": "Has Flag",
+                "flagName": "TimeLock"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1657383963\">ADV_StageAbility_Maze_PlayerBoy_30</a>",
+          "counter": 1,
+          "stackType": "Merge",
+          "modifierFlags": [
+            "TimeLock"
+          ]
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-915997562\">PlayerBoy_30_UltraState_Sub</a>",
@@ -939,6 +980,287 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_BeforeBattleDebuffListener": {
+      "fileName": "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_BeforeBattleDebuffListener",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1221389813\">ADV_StageAbility_PlayerBoy_30_BeforeBattleDebuffListener</a>",
+          "counter": -1
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerRemembrance_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "TrailblazerRemembrance_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_TechniqueUsage": {
+      "fileName": "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 80071
+        },
+        "Deleted bullshit"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_NormalAtk01": {
+      "fileName": "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Shot Fired",
+          "execute": [
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ],
+          "projectileFinished": [
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "TrailblazerRemembrance_PlayerBoy_30_TechniqueInLevel": {
