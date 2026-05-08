@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__2057678814\">ADV_StageAbility_Maze_Arlan</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1498391924\">Arlan_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Pain and Anger</span>]",
       "stackType": "ReplaceByCaster",
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
