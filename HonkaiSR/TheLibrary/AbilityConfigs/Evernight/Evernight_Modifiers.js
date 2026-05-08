@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__636196699\">ADV_StageAbility_Maze_Evernight_00</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1080789313\">Evernight_Weapon_Show_2</a>",
       "stackType": "Replace",
       "execute": [
