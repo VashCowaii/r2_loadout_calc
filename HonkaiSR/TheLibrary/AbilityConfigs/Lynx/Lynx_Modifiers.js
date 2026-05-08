@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__148301289\">ADV_StageAbility_Maze_Lynx</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-96135638\">Lynx_Eidolon4_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
       "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
