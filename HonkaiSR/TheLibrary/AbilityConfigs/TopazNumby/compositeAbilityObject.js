@@ -3,21 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": "Topaz & Numby",
   "trimCharacterName": "TopazNumby",
   "abilityList": [
-    "TopazNumby_Topaz_BE_CheckStun",
-    "TopazNumby_Topaz_BE_Hit",
-    "TopazNumby_Topaz_BE_Ability03Ready",
-    "TopazNumby_Topaz_BE_Ability01Ready",
-    "TopazNumby_Topaz_BE_Ability02Ready",
+    "TopazNumby_Topaz_TechniqueInLevel",
     "TopazNumby_Topaz_BE_UltraAttackDamage",
     "TopazNumby_Topaz_BE_NormalAttackDamage",
-    "TopazNumby_Topaz_BE_LaterAttack",
-    "TopazNumby_Topaz_BE_FirstAttack",
-    "TopazNumby_Topaz_BE_RefreshEnhance",
-    "TopazNumby_Topaz_BE_DelayLimbo",
-    "TopazNumby_Topaz_BE_DelayDeath",
-    "TopazNumby_Topaz_BE_PassiveAbility",
-    "TopazNumby_Topaz_TechniqueInLevel",
+    "TopazNumby_Topaz_Eidolon4_ReduceDelay",
     "TopazNumby_Topaz_PassiveAbility01",
+    "TopazNumby_Klara_Ability03_Part01",
+    "TopazNumby_Klara_Ability03_EnterReady",
     "TopazNumby_Topaz_Ability03_Part02",
     "TopazNumby_Topaz_Ability03_Part01",
     "TopazNumby_Topaz_Ability03_EnterReady",
@@ -25,107 +17,76 @@ const compositeAbilityObject = {
     "TopazNumby_Topaz_Ability02_Part01",
     "TopazNumby_Topaz_Ability01_Part02",
     "TopazNumby_Topaz_Ability01_Part01",
-    "TopazNumby_Topaz_Eidolon4_ReduceDelay",
     "TopazNumby_Modifiers",
     "TopazNumby_BE_BattleEvents"
   ],
   "abilityObject": {
-    "TopazNumby_Topaz_BE_CheckStun": {
-      "fileName": "TopazNumby_Topaz_BE_CheckStun",
-      "abilityType": null,
+    "TopazNumby_Topaz_TechniqueInLevel": {
+      "fileName": "TopazNumby_Topaz_TechniqueInLevel",
+      "childAbilityList": [
+        "TopazNumby_Topaz_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
+      "abilityType": "Technique",
       "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TopazNumby_Topaz_BE_Hit": {
-      "fileName": "TopazNumby_Topaz_BE_Hit",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
       "parse": [
         {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1899526189\">Topaz_BE_HitEffect</a>"
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
           },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "HasHitEffect",
-              "value": 1
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1899526189\">Topaz_BE_HitEffect</a>"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "HasHitEffect",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HasHitEffect",
-            "compareType": ">",
-            "value2": 0
-          }
+          "modifier": "<a class=\"gModGreen\" id=\"520958214\">Technique_Topaz_Modifier</a>"
         }
       ],
-      "references": [],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__285365186\">Topaz_Bonus</a>",
+          "stackType": "ReplaceByCaster"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__520958214\">Technique_Topaz_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Wave Count",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TopazNumby_Topaz_BE_Ability03Ready": {
-      "fileName": "TopazNumby_Topaz_BE_Ability03Ready",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TopazNumby_Topaz_BE_Ability01Ready": {
-      "fileName": "TopazNumby_Topaz_BE_Ability01Ready",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TopazNumby_Topaz_BE_Ability02Ready": {
-      "fileName": "TopazNumby_Topaz_BE_Ability02Ready",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
     },
     "TopazNumby_Topaz_BE_UltraAttackDamage": {
@@ -573,500 +534,25 @@ const compositeAbilityObject = {
         "primaryTarget": "Inherent Target"
       }
     },
-    "TopazNumby_Topaz_BE_LaterAttack": {
-      "fileName": "TopazNumby_Topaz_BE_LaterAttack",
+    "TopazNumby_Topaz_Eidolon4_ReduceDelay": {
+      "fileName": "TopazNumby_Topaz_Eidolon4_ReduceDelay",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Battle Event's Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
-          },
-          "passed": [
-            "Deleted bullshit"
-          ],
-          "failed": [
-            "Deleted bullshit"
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Battle Event's Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
-          },
-          "passed": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Battle Event's Caster}}"
-              },
-              "inherentTarget": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "ability": "Topaz_BE_UltraAttackDamage",
-              "isTrigger": true
-            }
-          ],
-          "failed": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Battle Event's Caster}}"
-              },
-              "inherentTarget": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "ability": "Topaz_BE_NormalAttackDamage",
-              "isTrigger": true
-            }
-          ]
-        }
-      ],
-      "onAbort": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Battle Event's Caster}}"
-                },
-                "flagName": "STAT_CTRL"
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Battle Event's Caster}}"
-                },
-                "flagName": "STAT_CTRL_Frozen"
-              }
-            ]
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "TopazNumby_Topaz_BE_FirstAttack": {
-      "fileName": "TopazNumby_Topaz_BE_FirstAttack",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Battle Event's Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
-          },
-          "passed": [
-            "Deleted bullshit",
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Battle Event's Caster}}"
-              },
-              "scope": "ContextCaster",
-              "variableName": "_damageStart",
-              "value": 1
-            }
-          ],
-          "failed": [
-            "Deleted bullshit",
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Battle Event's Caster}}"
-              },
-              "scope": "ContextCaster",
-              "variableName": "_damageStart",
-              "value": 1
-            }
-          ]
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "TopazNumby_Topaz_BE_RefreshEnhance": {
-      "fileName": "TopazNumby_Topaz_BE_RefreshEnhance",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TopazNumby_Topaz_BE_DelayLimbo": {
-      "fileName": "TopazNumby_Topaz_BE_DelayLimbo",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TopazNumby_Topaz_BE_DelayDeath": {
-      "fileName": "TopazNumby_Topaz_BE_DelayDeath",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Force Entity Death",
+          "name": "Action Advance/Delay",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ignoreHPLossTriggers": true,
-          "ignoreDeathTriggers": true
+          "advanceType": "Set",
+          "multiAdd": "(0 - 0.2)"
         }
       ],
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TopazNumby_Topaz_BE_PassiveAbility": {
-      "fileName": "TopazNumby_Topaz_BE_PassiveAbility",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1529971415\">Topaz_BETag</a>"
-        },
-        {
-          "name": "Set Action-State",
-          "on": null,
-          "stateName": "TopazBE",
-          "state": false
-        },
-        {
-          "name": "Set Action-State",
-          "on": null,
-          "stateName": "TopazBE"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1529971415\">Topaz_BETag</a>",
-          "modifierFlags": [
-            "BlockDamage",
-            "Stealth"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                "Mark Entity as Non-Target(Unselectable)"
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-182734853\">Topaz_BE_ReduceDelay</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Trigger Ability",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Battle Event's Caster}}"
-                      },
-                      "ability": "Topaz_Eidolon4_ReduceDelay"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target Count SUM",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Enemy Team All}}.[[living]]"
-                    },
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
-                    }
-                  },
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-93497222\">Topaz_BE_FindNoTargetFlag</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target Count SUM",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Enemy Team All}}.[[living]]"
-                    },
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Topaz_BE_LaterAttack",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}.[[living]]"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Has Modifier",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
-                            }
-                          }
-                        ]
-                      },
-                      "priorityTag": "STAGE_Character",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn End [Anyone]"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Put Into Limbo [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Owner]"
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Battle Event's Caster}}"
-                        },
-                        "flagName": "STAT_CTRL"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Battle Event's Caster}}"
-                        },
-                        "flagName": "STAT_CTRL_Frozen"
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Get Revived [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TopazNumby_Topaz_TechniqueInLevel": {
-      "fileName": "TopazNumby_Topaz_TechniqueInLevel",
-      "childAbilityList": [
-        "TopazNumby_Topaz_TechniqueInLevel"
-      ],
-      "skillTrigger": "SkillMaze",
-      "abilityType": "Technique",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"520958214\">Technique_Topaz_Modifier</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__285365186\">Topaz_Bonus</a>",
-          "stackType": "ReplaceByCaster"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__520958214\">Technique_Topaz_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Wave Count",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
     },
     "TopazNumby_Topaz_PassiveAbility01": {
@@ -2097,6 +1583,39 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TopazNumby_Klara_Ability03_Part01": {
+      "fileName": "TopazNumby_Klara_Ability03_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Klara_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TopazNumby_Klara_Ability03_EnterReady": {
+      "fileName": "TopazNumby_Klara_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
       }
     },
     "TopazNumby_Topaz_Ability03_Part02": {
@@ -3169,27 +2688,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       }
     },
-    "TopazNumby_Topaz_Eidolon4_ReduceDelay": {
-      "fileName": "TopazNumby_Topaz_Eidolon4_ReduceDelay",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "advanceType": "Set",
-          "multiAdd": "(0 - 0.2)"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "TopazNumby_Modifiers": {
       "fileName": "TopazNumby_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -3200,6 +2698,174 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1602537794\">Klara_Passive_ShowAmmo</a>",
+          "stackType": "ReplaceByCaster"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-796199138\">Klara_Passive_DamageReduce</a>[<span class=\"descriptionNumberColor\">Guardian</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Guardian",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__90816647\">Klara_BPAbility_Revenge</a>[<span class=\"descriptionNumberColor\">Mark of Counter</span>]",
+          "modifierFlags": [
+            "ListenBattleEventSkill",
+            "RemoveWhenCasterDead"
+          ],
+          "description": "The target is Marked by Svarog.",
+          "type": "Other",
+          "statusName": "Mark of Counter",
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Toggle Skill Mark"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Active Ability Chosen [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Toggle Skill Mark",
+                      "toggle": true,
+                      "skillTypesAllow": [
+                        "Skill"
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Toggle Skill Mark"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-459252663\">Klara_TechniqueUsage_AggroUP</a>[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Higher chance to be attacked.",
+          "type": "Buff",
+          "statusName": "A Small Price for Victory",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1426674462\">Klara_PassiveATK_Mark</a>",
+          "execute": [
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Klara_PassiveAbility01_InsertAbility",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "priorityTag": "CharacterAttackFromSelf",
+                  "showInActionOrder": true,
+                  "abortFlags": [
+                    "STAT_CTRL",
+                    "DisableAction"
+                  ],
+                  "allowAbilityTriggers": false
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1361568506\">Topaz_BE_UltraEnhance_ShowText</a>",

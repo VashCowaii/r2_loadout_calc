@@ -1,18 +1,19 @@
 const configAbility = {
-  "fileName": "TopazNumby_Topaz_BE_DelayDeath",
+  "fileName": "TopazNumby_Klara_Ability03_Part01",
   "abilityType": null,
   "energy": null,
   "toughnessList": null,
   "parse": [
     {
-      "name": "Force Entity Death",
-      "target": {
+      "name": "Trigger Ability",
+      "from": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "ignoreHPLossTriggers": true,
-      "ignoreDeathTriggers": true
-    }
+      "ability": "Klara_Ability03_Part02",
+      "isTrigger": true
+    },
+    "Deleted bullshit"
   ],
   "references": [],
   "targetObjectData": {

@@ -1,11 +1,11 @@
 const configAbility = {
-  "fileName": "TopazNumby_Topaz_BE_Ability02Ready",
+  "fileName": "Qingque_Pela_Ability03_Cutin",
   "abilityType": null,
   "energy": null,
   "toughnessList": null,
   "parse": [],
   "references": [],
   "targetObjectData": {
-    "primaryTarget": "{{Caster}}"
+    "primaryTarget": "Inherent Target"
   }
 }

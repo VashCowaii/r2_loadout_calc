@@ -26,12 +26,12 @@ const compositeAbilityObject = {
     "TrailblazerRemembrance_Functions",
     "Mem_Servant_PlayerBoyServant_30_DeathRattle",
     "Mem_Servant_PlayerBoyServant_30_BattleCry",
-    "Mem_Servant_PlayerBoyServant_30_PassiveAbility01",
+    "Mem_Servant_PlayerBoyServant_30_Ability11_Together",
     "Mem_Servant_PlayerBoyServant_30_Ability03_Part02",
+    "Mem_Servant_PlayerBoyServant_30_PassiveAbility01",
     "Mem_Servant_PlayerBoyServant_30_Ability11_Part02",
     "Mem_Servant_PlayerBoyServant_30_Ability11_Part01",
     "Mem_Servant_PlayerBoyServant_30_Ability11_Entry",
-    "Mem_Servant_PlayerBoyServant_30_Ability11_Together",
     "Mem_Servant_PlayerBoyServant_30_Ability01_Part02",
     "Mem_Servant_PlayerBoyServant_30_Ability01_Part01",
     "Mem_Modifiers",
@@ -2085,6 +2085,170 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
+    "Mem_Servant_PlayerBoyServant_30_Ability11_Together": {
+      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability11_Together",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] (Ability11_P2_DamagePercentage) || RETURN",
+              "displayLines": "Ability11_P2_DamagePercentage",
+              "constants": [],
+              "variables": [
+                "Ability11_P2_DamagePercentage"
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (Skill11_Stance) || RETURN",
+              "displayLines": "Skill11_Stance",
+              "constants": [],
+              "variables": [
+                "Skill11_Stance"
+              ]
+            },
+            "Tags": [
+              "Joint-Attack"
+            ],
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          },
+          "attackType": "Basic ATK"
+        },
+        "Trigger: Attack End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "Mem_Servant_PlayerBoyServant_30_Ability03_Part02": {
+      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}.[[getSummoner]]"
+          },
+          "ability": "PlayerBoy_30_Ability03_Part02_Charge",
+          "isTrigger": true
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] (Ability03_P1_DamagePercentage) || RETURN",
+              "displayLines": "Ability03_P1_DamagePercentage",
+              "constants": [],
+              "variables": [
+                "Ability03_P1_DamagePercentage"
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (Ultra_Stance) || RETURN",
+              "displayLines": "Ultra_Stance",
+              "constants": [],
+              "variables": [
+                "Ultra_Stance"
+              ]
+            },
+            "ToughnessDMGType": {
+              "DamageType": "Ice"
+            },
+            "instanceTag": "PlayerBoy_30_Ultra",
+            "Tags": null,
+            "attackType": "Ultimate"
+          },
+          "attackType": "Ultimate"
+        },
+        "Trigger: Attack End",
+        "Trigger: Skip Death Handling"
+      ],
+      "whenAdded": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"164475936\">M_PlayerBoyServant_30_Eidolon6</a>"
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__164475936\">M_PlayerBoyServant_30_Eidolon6</a>",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Attack Type",
+                        "attackTypes": [
+                          "Ultimate"
+                        ]
+                      },
+                      {
+                        "name": "Has DMG Instance Tag",
+                        "tag": "PlayerBoy_30_Ultra"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateFIXED</span>&nbsp;",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
     "Mem_Servant_PlayerBoyServant_30_PassiveAbility01": {
       "fileName": "Mem_Servant_PlayerBoyServant_30_PassiveAbility01",
       "childAbilityList": [
@@ -2593,124 +2757,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "Mem_Servant_PlayerBoyServant_30_Ability03_Part02": {
-      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}.[[getSummoner]]"
-          },
-          "ability": "PlayerBoy_30_Ability03_Part02_Charge",
-          "isTrigger": true
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (Ability03_P1_DamagePercentage) || RETURN",
-              "displayLines": "Ability03_P1_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Ability03_P1_DamagePercentage"
-              ]
-            },
-            "Toughness": {
-              "operator": "Variables[0] (Ultra_Stance) || RETURN",
-              "displayLines": "Ultra_Stance",
-              "constants": [],
-              "variables": [
-                "Ultra_Stance"
-              ]
-            },
-            "ToughnessDMGType": {
-              "DamageType": "Ice"
-            },
-            "instanceTag": "PlayerBoy_30_Ultra",
-            "Tags": null,
-            "attackType": "Ultimate"
-          },
-          "attackType": "Ultimate"
-        },
-        "Trigger: Attack End",
-        "Trigger: Skip Death Handling"
-      ],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 6
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"164475936\">M_PlayerBoyServant_30_Eidolon6</a>"
-            }
-          ]
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__164475936\">M_PlayerBoyServant_30_Eidolon6</a>",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Attack Type",
-                        "attackTypes": [
-                          "Ultimate"
-                        ]
-                      },
-                      {
-                        "name": "Has DMG Instance Tag",
-                        "tag": "PlayerBoy_30_Ultra"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateFIXED</span>&nbsp;",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
     "Mem_Servant_PlayerBoyServant_30_Ability11_Part02": {
       "fileName": "Mem_Servant_PlayerBoyServant_30_Ability11_Part02",
       "abilityType": null,
@@ -3023,52 +3069,6 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Mem_Servant_PlayerBoyServant_30_Ability11_Together": {
-      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability11_Together",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (Ability11_P2_DamagePercentage) || RETURN",
-              "displayLines": "Ability11_P2_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Ability11_P2_DamagePercentage"
-              ]
-            },
-            "Toughness": {
-              "operator": "Variables[0] (Skill11_Stance) || RETURN",
-              "displayLines": "Skill11_Stance",
-              "constants": [],
-              "variables": [
-                "Skill11_Stance"
-              ]
-            },
-            "Tags": [
-              "Joint-Attack"
-            ],
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          },
-          "attackType": "Basic ATK"
-        },
-        "Trigger: Attack End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
       }
     },
     "Mem_Servant_PlayerBoyServant_30_Ability01_Part02": {

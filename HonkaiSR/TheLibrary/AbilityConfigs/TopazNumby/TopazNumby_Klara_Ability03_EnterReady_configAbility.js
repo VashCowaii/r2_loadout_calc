@@ -1,11 +1,11 @@
 const configAbility = {
-  "fileName": "TopazNumby_Topaz_BE_Ability03Ready",
+  "fileName": "TopazNumby_Klara_Ability03_EnterReady",
   "abilityType": null,
   "energy": null,
   "toughnessList": null,
   "parse": [],
   "references": [],
   "targetObjectData": {
-    "primaryTarget": "{{Caster}}"
+    "primaryTarget": "Inherent Target"
   }
 }

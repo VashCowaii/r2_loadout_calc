@@ -3,15 +3,15 @@ const compositeAbilityObject = {
   "fullCharacterName": "Kafka",
   "trimCharacterName": "Kafka",
   "abilityList": [
-    "Kafka_Advanced_Kafka_TechniqueInLevel",
-    "Kafka_Advanced_Kafka_Eidolon2",
-    "Kafka_Advanced_Kafka_Trace01",
     "Kafka_Advanced_Kafka_Trace02",
+    "Kafka_Advanced_Kafka_Trace01",
+    "Kafka_Advanced_Kafka_Eidolon2",
+    "Kafka_Advanced_Kafka_TechniqueInLevel",
     "Kafka_Advanced_Kafka_PassiveAtk_Ability",
     "Kafka_Advanced_Kafka_PassiveAbility01",
+    "Kafka_Advanced_Kafka_Ability03_EnterReady",
     "Kafka_Advanced_Kafka_Ability03_Part02",
     "Kafka_Advanced_Kafka_Ability03_Part01",
-    "Kafka_Advanced_Kafka_Ability03_EnterReady",
     "Kafka_Advanced_Kafka_Ability02_Part02",
     "Kafka_Advanced_Kafka_Ability02_Part01",
     "Kafka_Advanced_Kafka_Ability01_Part02",
@@ -19,241 +19,8 @@ const compositeAbilityObject = {
     "Kafka_Modifiers"
   ],
   "abilityObject": {
-    "Kafka_Advanced_Kafka_TechniqueInLevel": {
-      "fileName": "Kafka_Advanced_Kafka_TechniqueInLevel",
-      "childAbilityList": [
-        "Kafka_Advanced_Kafka_TechniqueInLevel"
-      ],
-      "skillTrigger": "SkillMaze",
-      "abilityType": "Technique",
-      "energy": null,
-      "toughnessList": [
-        20,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-629359028\">StageAbility_Maze_Kafka_Modifier</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-629359028\">StageAbility_Maze_Kafka_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Technique Modifies Current Wave"
-                      },
-                      {
-                        "name": "Is Stage Wave 1"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Eidolon Activated",
-                        "eidolon": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Hostile Entities(AOE)}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1537350177\">Advanced_Kafka_PassiveDotDamage_Eidolon1</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
-                          "duration": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] (1) || RETURN",
-                            "displayLines": "1",
-                            "constants": [],
-                            "variables": [
-                              1
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_DotRatio": {
-                              "operator": "Variables[0] (0.3) || RETURN",
-                              "displayLines": "0.3",
-                              "constants": [],
-                              "variables": [
-                                0.3
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Thunder",
-                        "Damage": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null
-                      }
-                    },
-                    "Trigger: Attack End",
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Eidolon Activated",
-                        "eidolon": 6
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "Skill03_P3_LifeTime",
-                          "value": {
-                            "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                            "displayLines": "(2 + 1)",
-                            "constants": [],
-                            "variables": [
-                              2,
-                              1
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "Skill03_P4_DOTPercentage",
-                          "value": {
-                            "operator": "Variables[0] (2.9) || Variables[1] (1.56) || ADD || RETURN",
-                            "displayLines": "(2.9 + 1.56)",
-                            "constants": [],
-                            "variables": [
-                              2.9,
-                              1.56
-                            ]
-                          }
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "Skill03_P3_LifeTime",
-                          "value": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "Skill03_P4_DOTPercentage",
-                          "value": {
-                            "operator": "Variables[0] (2.9) || RETURN",
-                            "displayLines": "2.9",
-                            "constants": [],
-                            "variables": [
-                              2.9
-                            ]
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "SkillMaze_P1_Chance",
-                      "value": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (Skill03_P3_LifeTime) || RETURN",
-                        "displayLines": "Skill03_P3_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "Skill03_P3_LifeTime"
-                        ]
-                      },
-                      "baseChance": {
-                        "operator": "Variables[0] (SkillMaze_P1_Chance) || RETURN",
-                        "displayLines": "SkillMaze_P1_Chance",
-                        "constants": [],
-                        "variables": [
-                          "SkillMaze_P1_Chance"
-                        ]
-                      },
-                      "valuePerStack": {
-                        "Modifier_Electric_DamagePercentage": {
-                          "operator": "Variables[0] (Skill03_P4_DOTPercentage) || RETURN",
-                          "displayLines": "Skill03_P4_DOTPercentage",
-                          "constants": [],
-                          "variables": [
-                            "Skill03_P4_DOTPercentage"
-                          ]
-                        }
-                      },
-                      "stackFlag": "CharacterSkill"
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -60
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Kafka_Advanced_Kafka_Eidolon2": {
-      "fileName": "Kafka_Advanced_Kafka_Eidolon2",
+    "Kafka_Advanced_Kafka_Trace02": {
+      "fileName": "Kafka_Advanced_Kafka_Trace02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -264,79 +31,81 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1190941926\">Advanced_Kafka_Eidolon2</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"2069092104\">Advanced_Kafka_Tree02</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1190941926\">Advanced_Kafka_Eidolon2</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__2069092104\">Advanced_Kafka_Tree02</a>",
           "execute": [
             {
-              "eventTrigger": "When Modifier Destroyed/Removed",
+              "eventTrigger": "Entity Death [Anyone]",
               "execute": [
                 {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Join Targets",
-                    "TargetList": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{All Team Members}}"
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Target Exists",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target 2}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Is Part Of Team",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "team": "Enemy Team"
+                          },
+                          {
+                            "name": "NOT",
+                            "condition": {
+                              "name": "Is Part Of Team",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target 2}}"
+                              },
+                              "team": "Enemy Team"
+                            }
+                          },
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "flagName": "STAT_DOT_Electric"
+                          }
+                        ]
                       },
-                      {
-                        "name": "Target Name",
-                        "target": "{{All Unselectable Targets}}"
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.33) || RETURN",
-                      "displayLines": "0.33",
-                      "constants": [],
-                      "variables": [
-                        0.33
+                      "passed": [
+                        {
+                          "name": "Update Energy",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "value": {
+                            "operator": "Variables[0] (5) || RETURN",
+                            "displayLines": "5",
+                            "constants": [],
+                            "variables": [
+                              5
+                            ]
+                          },
+                          "isFixed": "* ERR"
+                        }
                       ]
                     }
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.33) || RETURN",
-                      "displayLines": "0.33",
-                      "constants": [],
-                      "variables": [
-                        0.33
-                      ]
-                    }
-                  }
+                  ]
                 }
               ]
             }
@@ -577,8 +346,8 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "Kafka_Advanced_Kafka_Trace02": {
-      "fileName": "Kafka_Advanced_Kafka_Trace02",
+    "Kafka_Advanced_Kafka_Eidolon2": {
+      "fileName": "Kafka_Advanced_Kafka_Eidolon2",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -589,81 +358,79 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"2069092104\">Advanced_Kafka_Tree02</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-1190941926\">Advanced_Kafka_Eidolon2</a>"
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2069092104\">Advanced_Kafka_Tree02</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1190941926\">Advanced_Kafka_Eidolon2</a>",
           "execute": [
             {
-              "eventTrigger": "Entity Death [Anyone]",
+              "eventTrigger": "When Modifier Destroyed/Removed",
               "execute": [
                 {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Target Exists",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target 2}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Is Part Of Team",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "team": "Enemy Team"
-                          },
-                          {
-                            "name": "NOT",
-                            "condition": {
-                              "name": "Is Part Of Team",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target 2}}"
-                              },
-                              "team": "Enemy Team"
-                            }
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "STAT_DOT_Electric"
-                          }
-                        ]
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Join Targets",
+                    "TargetList": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
                       },
-                      "passed": [
-                        {
-                          "name": "Update Energy",
-                          "on": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "value": {
-                            "operator": "Variables[0] (5) || RETURN",
-                            "displayLines": "5",
-                            "constants": [],
-                            "variables": [
-                              5
-                            ]
-                          },
-                          "isFixed": "* ERR"
-                        }
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Unselectable Targets}}"
+                      }
+                    ]
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (0.33) || RETURN",
+                      "displayLines": "0.33",
+                      "constants": [],
+                      "variables": [
+                        0.33
                       ]
                     }
-                  ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (0.33) || RETURN",
+                      "displayLines": "0.33",
+                      "constants": [],
+                      "variables": [
+                        0.33
+                      ]
+                    }
+                  }
                 }
               ]
             }
@@ -672,6 +439,239 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Kafka_Advanced_Kafka_TechniqueInLevel": {
+      "fileName": "Kafka_Advanced_Kafka_TechniqueInLevel",
+      "childAbilityList": [
+        "Kafka_Advanced_Kafka_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
+      "abilityType": "Technique",
+      "energy": null,
+      "toughnessList": [
+        20,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-629359028\">StageAbility_Maze_Kafka_Modifier</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-629359028\">StageAbility_Maze_Kafka_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Technique Modifies Current Wave"
+                      },
+                      {
+                        "name": "Is Stage Wave 1"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Eidolon Activated",
+                        "eidolon": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1537350177\">Advanced_Kafka_PassiveDotDamage_Eidolon1</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (2) || RETURN",
+                            "displayLines": "2",
+                            "constants": [],
+                            "variables": [
+                              2
+                            ]
+                          },
+                          "baseChance": {
+                            "operator": "Variables[0] (1) || RETURN",
+                            "displayLines": "1",
+                            "constants": [],
+                            "variables": [
+                              1
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_DotRatio": {
+                              "operator": "Variables[0] (0.3) || RETURN",
+                              "displayLines": "0.3",
+                              "constants": [],
+                              "variables": [
+                                0.3
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Thunder",
+                        "Damage": {
+                          "operator": "Variables[0] (0.5) || RETURN",
+                          "displayLines": "0.5",
+                          "constants": [],
+                          "variables": [
+                            0.5
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null
+                      }
+                    },
+                    "Trigger: Attack End",
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Eidolon Activated",
+                        "eidolon": 6
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "Skill03_P3_LifeTime",
+                          "value": {
+                            "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
+                            "displayLines": "(2 + 1)",
+                            "constants": [],
+                            "variables": [
+                              2,
+                              1
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "Skill03_P4_DOTPercentage",
+                          "value": {
+                            "operator": "Variables[0] (2.9) || Variables[1] (1.56) || ADD || RETURN",
+                            "displayLines": "(2.9 + 1.56)",
+                            "constants": [],
+                            "variables": [
+                              2.9,
+                              1.56
+                            ]
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "Skill03_P3_LifeTime",
+                          "value": {
+                            "operator": "Variables[0] (2) || RETURN",
+                            "displayLines": "2",
+                            "constants": [],
+                            "variables": [
+                              2
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "Skill03_P4_DOTPercentage",
+                          "value": {
+                            "operator": "Variables[0] (2.9) || RETURN",
+                            "displayLines": "2.9",
+                            "constants": [],
+                            "variables": [
+                              2.9
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "SkillMaze_P1_Chance",
+                      "value": {
+                        "operator": "Variables[0] (1) || RETURN",
+                        "displayLines": "1",
+                        "constants": [],
+                        "variables": [
+                          1
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (Skill03_P3_LifeTime) || RETURN",
+                        "displayLines": "Skill03_P3_LifeTime",
+                        "constants": [],
+                        "variables": [
+                          "Skill03_P3_LifeTime"
+                        ]
+                      },
+                      "baseChance": {
+                        "operator": "Variables[0] (SkillMaze_P1_Chance) || RETURN",
+                        "displayLines": "SkillMaze_P1_Chance",
+                        "constants": [],
+                        "variables": [
+                          "SkillMaze_P1_Chance"
+                        ]
+                      },
+                      "valuePerStack": {
+                        "Modifier_Electric_DamagePercentage": {
+                          "operator": "Variables[0] (Skill03_P4_DOTPercentage) || RETURN",
+                          "displayLines": "Skill03_P4_DOTPercentage",
+                          "constants": [],
+                          "variables": [
+                            "Skill03_P4_DOTPercentage"
+                          ]
+                        }
+                      },
+                      "stackFlag": "CharacterSkill"
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -60
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
     },
     "Kafka_Advanced_Kafka_PassiveAtk_Ability": {
@@ -2090,6 +2090,17 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
+    "Kafka_Advanced_Kafka_Ability03_EnterReady": {
+      "fileName": "Kafka_Advanced_Kafka_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
     "Kafka_Advanced_Kafka_Ability03_Part02": {
       "fileName": "Kafka_Advanced_Kafka_Ability03_Part02",
       "abilityType": null,
@@ -2384,17 +2395,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Kafka_Advanced_Kafka_Ability03_EnterReady": {
-      "fileName": "Kafka_Advanced_Kafka_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Kafka_Advanced_Kafka_Ability02_Part02": {
