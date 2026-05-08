@@ -8,6 +8,9 @@ const compositeAbilityObject = {
     "Yukong_Yukong_Trace01",
     "Yukong_Yukong_Eidolon2",
     "Yukong_Yukong_Eidolon1",
+    "Yukong_LocalPlayer_StandardAbility_AttackBreak",
+    "Yukong_LocalPlayer_Yukong_TechniqueUsage",
+    "Yukong_LocalPlayer_Yukong_NormalAtk01",
     "Yukong_Yukong_TechniqueInLevel",
     "Yukong_Yukong_PassiveAbility01",
     "Yukong_Yukong_Ability03_AddFlower",
@@ -32,6 +35,33 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1461700286\">ADV_Modifier_Maze_Yukong</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "onCreation": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Animator Variable",
+                "paramType": "Int",
+                "paramName": "MotionFlag",
+                "compareType": "=",
+                "compareValue": 3
+              }
+            }
+          ],
+          "onStageExit": [
+            "Modifier Deletes Itself"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__203914091\">ADV_StageAbility_Maze_Yukong</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__64466487\">Yukong_FlowerListen</a>",
@@ -1193,6 +1223,404 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Yukong_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Yukong_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Yukong_LocalPlayer_Yukong_TechniqueUsage": {
+      "fileName": "Yukong_LocalPlayer_Yukong_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "120702()",
+          "duration": {
+            "operator": "Variables[0] (20) || RETURN",
+            "displayLines": "20",
+            "constants": [],
+            "variables": [
+              20
+            ]
+          },
+          "valuePerStack": {
+            "MDF_MoveSpeedRatio": {
+              "operator": "Variables[0] (0.35) || RETURN",
+              "displayLines": "0.35",
+              "constants": [],
+              "variables": [
+                0.35
+              ]
+            }
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Yukong_LocalPlayer_Yukong_NormalAtk01": {
+      "fileName": "Yukong_LocalPlayer_Yukong_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier (OVERWORLD)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1461700286\">ADV_Modifier_Maze_Yukong</a>"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": null,
+                          "ID": "120701(SkillMaze)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier (OVERWORLD)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1461700286\">ADV_Modifier_Maze_Yukong</a>"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": null,
+                          "ID": "120701(SkillMaze)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier (OVERWORLD)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1461700286\">ADV_Modifier_Maze_Yukong</a>"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": null,
+                          "ID": "120701(SkillMaze)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier (OVERWORLD)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1461700286\">ADV_Modifier_Maze_Yukong</a>"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": null,
+                          "ID": "120701(SkillMaze)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "whenAdded": [],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "Yukong_Yukong_TechniqueInLevel": {

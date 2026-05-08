@@ -10,6 +10,33 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1461700286\">ADV_Modifier_Maze_Yukong</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "onCreation": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Animator Variable",
+            "paramType": "Int",
+            "paramName": "MotionFlag",
+            "compareType": "=",
+            "compareValue": 3
+          }
+        }
+      ],
+      "onStageExit": [
+        "Modifier Deletes Itself"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__203914091\">ADV_StageAbility_Maze_Yukong</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__64466487\">Yukong_FlowerListen</a>",
       "execute": [
         {
