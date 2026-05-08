@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1455758345\">ADV_StageAbility_Maze_PlayerBoy_10</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2059998112\">PlayerBoy_Weapon_Effect</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
