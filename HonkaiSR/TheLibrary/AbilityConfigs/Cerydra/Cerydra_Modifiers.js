@@ -10,6 +10,94 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-357737176\">ADV_StageAbility_Maze_Cerydra_Hit</a>",
+      "counter": 1,
+      "stackType": "Replace",
+      "onApplication": [
+        "Deleted bullshit"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__190694761\">ADV_StageAbility_Maze_Cerydra_Empty_2</a>",
+      "counter": 1,
+      "stackType": "Replace",
+      "onStack": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Adventure Player}}"
+            }
+          },
+          "failed": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": null,
+              "overworldID": 141203
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1260160146\">ADV_StageAbility_Maze_Cerydra</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "onStack": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Team Members}}"
+          },
+          "modifier": null,
+          "overworldID": 141203
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Player}}"
+          },
+          "modifier": null,
+          "ID": "141203()"
+        }
+      ],
+      "onChangeTeamLead": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Team Members}}"
+          },
+          "modifier": null,
+          "overworldID": 141203
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Player}}"
+          },
+          "modifier": null,
+          "ID": "141203()"
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__358533823\">Cerydra_Ability02_ListenSelf</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
