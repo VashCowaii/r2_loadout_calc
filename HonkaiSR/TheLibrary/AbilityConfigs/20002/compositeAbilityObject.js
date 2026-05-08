@@ -3,275 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": 20002,
   "trimCharacterName": 20002,
   "abilityList": [
+    "20002_Modifiers",
     "20002_BattleEventAbility_W2_Kafka_RL_Insert",
-    "20002_BattleEventAbility_W2_Kafka_RL",
-    "20002_Modifiers"
+    "20002_BattleEventAbility_W2_Kafka_RL"
   ],
   "abilityObject": {
-    "20002_BattleEventAbility_W2_Kafka_RL_Insert": {
-      "fileName": "20002_BattleEventAbility_W2_Kafka_RL_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Revelation"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
-              "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_8792) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(UnusedUnderThisBase_8792 + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "UnusedUnderThisBase_8792"
-                ]
-              },
-              "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_8786) || RETURN",
-                "displayLines": "UnusedUnderThisBase_8786",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_8786"
-                ]
-              },
-              "valuePerStack": {
-                "MDF_MindControlDamagePercentage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11882) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11882",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_11882"
-                  ]
-                },
-                "MDF_MaxDamageRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8801) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8801",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_8801"
-                  ]
-                },
-                "MDF_MinDamageRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8790) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8790",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_8790"
-                  ]
-                }
-              },
-              "success": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "MindControlSuccess",
-                  "value": 1
-                }
-              ]
-            },
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "advanceType": "Advance",
-              "multiAdd": -1
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "MindControlSuccess",
-            "compareType": "=",
-            "value2": 1,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "scope": "TargetEntity",
-              "variableName": "MindControlSuccess",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2054484016\">Monster_W2_Kafka_RL_MindControl_False</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
-        },
-        {
-          "name": "Define Custom Variable",
-          "scope": "TargetEntity",
-          "variableName": "BattleEventFlag",
-          "value": 0
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "20002_BattleEventAbility_W2_Kafka_RL": {
-      "fileName": "20002_BattleEventAbility_W2_Kafka_RL",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1014249439\">Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "advanceType": "Set",
-          "multiAdd": "MDF_W2_Kafka_00_RL_BattleEvent_ActionDelay"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1014249439\">Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed) || RETURN",
-                    "displayLines": "MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "BattleEventAbility_W2_Kafka_RL_Insert",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Battle Event's Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "priorityTag": "EnemyAttackFromSelf",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                },
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "20002_Modifiers": {
       "fileName": "20002_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1407,6 +1143,270 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "20002_BattleEventAbility_W2_Kafka_RL_Insert": {
+      "fileName": "20002_BattleEventAbility_W2_Kafka_RL_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Revelation"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "searchRandom": true,
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
+              "duration": {
+                "operator": "Variables[0] (UnusedUnderThisBase_8792) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(UnusedUnderThisBase_8792 + 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "UnusedUnderThisBase_8792"
+                ]
+              },
+              "baseChance": {
+                "operator": "Variables[0] (UnusedUnderThisBase_8786) || RETURN",
+                "displayLines": "UnusedUnderThisBase_8786",
+                "constants": [],
+                "variables": [
+                  "UnusedUnderThisBase_8786"
+                ]
+              },
+              "valuePerStack": {
+                "MDF_MindControlDamagePercentage": {
+                  "operator": "Variables[0] (UnusedUnderThisBase_11882) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11882",
+                  "constants": [],
+                  "variables": [
+                    "UnusedUnderThisBase_11882"
+                  ]
+                },
+                "MDF_MaxDamageRatio": {
+                  "operator": "Variables[0] (UnusedUnderThisBase_8801) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8801",
+                  "constants": [],
+                  "variables": [
+                    "UnusedUnderThisBase_8801"
+                  ]
+                },
+                "MDF_MinDamageRatio": {
+                  "operator": "Variables[0] (UnusedUnderThisBase_8790) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8790",
+                  "constants": [],
+                  "variables": [
+                    "UnusedUnderThisBase_8790"
+                  ]
+                }
+              },
+              "success": [
+                {
+                  "name": "Define Custom Variable",
+                  "scope": "TargetEntity",
+                  "variableName": "MindControlSuccess",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "Action Advance/Delay",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "advanceType": "Advance",
+              "multiAdd": -1
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "MindControlSuccess",
+            "compareType": "=",
+            "value2": 1,
+            "contextScope": "TargetEntity"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "scope": "TargetEntity",
+              "variableName": "MindControlSuccess",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2054484016\">Monster_W2_Kafka_RL_MindControl_False</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+        },
+        {
+          "name": "Define Custom Variable",
+          "scope": "TargetEntity",
+          "variableName": "BattleEventFlag",
+          "value": 0
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "20002_BattleEventAbility_W2_Kafka_RL": {
+      "fileName": "20002_BattleEventAbility_W2_Kafka_RL",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1014249439\">Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed</a>"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "advanceType": "Set",
+          "multiAdd": "MDF_W2_Kafka_00_RL_BattleEvent_ActionDelay"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1014249439\">Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed) || RETURN",
+                    "displayLines": "MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed",
+                    "constants": [],
+                    "variables": [
+                      "MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "BattleEventAbility_W2_Kafka_RL_Insert",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Battle Event's Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "priorityTag": "EnemyAttackFromSelf",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                },
+                {
+                  "name": "Force Entity Death",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     }
   },
   "enemyData": {},

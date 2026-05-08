@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 11216,
   "trimCharacterName": 11216,
   "abilityList": [
+    "11216_Modifiers",
     "11216_Topaz_BE_CheckStun",
     "11216_Topaz_BE_DelayLimbo",
     "11216_Topaz_BE_Hit",
@@ -12,539 +13,9 @@ const compositeAbilityObject = {
     "11216_Topaz_BE_LaterAttack",
     "11216_Topaz_BE_FirstAttack",
     "11216_Topaz_BE_RefreshEnhance",
-    "11216_Topaz_BE_PassiveAbility",
-    "11216_Modifiers"
+    "11216_Topaz_BE_PassiveAbility"
   ],
   "abilityObject": {
-    "11216_Topaz_BE_CheckStun": {
-      "fileName": "11216_Topaz_BE_CheckStun",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "11216_Topaz_BE_DelayLimbo": {
-      "fileName": "11216_Topaz_BE_DelayLimbo",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "11216_Topaz_BE_Hit": {
-      "fileName": "11216_Topaz_BE_Hit",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1899526189\">Topaz_BE_HitEffect</a>"
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "HasHitEffect",
-              "value": 1
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1899526189\">Topaz_BE_HitEffect</a>"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "HasHitEffect",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HasHitEffect",
-            "compareType": ">",
-            "value2": 0
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "11216_Topaz_BE_Ability03Ready": {
-      "fileName": "11216_Topaz_BE_Ability03Ready",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "11216_Topaz_BE_Ability01Ready": {
-      "fileName": "11216_Topaz_BE_Ability01Ready",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "11216_Topaz_BE_Ability02Ready": {
-      "fileName": "11216_Topaz_BE_Ability02Ready",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "11216_Topaz_BE_LaterAttack": {
-      "fileName": "11216_Topaz_BE_LaterAttack",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Battle Event's Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
-          },
-          "passed": [
-            "Deleted bullshit"
-          ],
-          "failed": [
-            "Deleted bullshit"
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Battle Event's Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
-          },
-          "passed": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Battle Event's Caster}}"
-              },
-              "inherentTarget": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "ability": "Topaz_BE_UltraAttackDamage",
-              "isTrigger": true
-            }
-          ],
-          "failed": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Battle Event's Caster}}"
-              },
-              "inherentTarget": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "ability": "Topaz_BE_NormalAttackDamage",
-              "isTrigger": true
-            }
-          ]
-        }
-      ],
-      "onAbort": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Battle Event's Caster}}"
-                },
-                "flagName": "STAT_CTRL"
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Battle Event's Caster}}"
-                },
-                "flagName": "STAT_CTRL_Frozen"
-              }
-            ]
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "11216_Topaz_BE_FirstAttack": {
-      "fileName": "11216_Topaz_BE_FirstAttack",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Battle Event's Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
-          },
-          "passed": [
-            "Deleted bullshit",
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Battle Event's Caster}}"
-              },
-              "scope": "ContextCaster",
-              "variableName": "_damageStart",
-              "value": 1
-            }
-          ],
-          "failed": [
-            "Deleted bullshit",
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Battle Event's Caster}}"
-              },
-              "scope": "ContextCaster",
-              "variableName": "_damageStart",
-              "value": 1
-            }
-          ]
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "11216_Topaz_BE_RefreshEnhance": {
-      "fileName": "11216_Topaz_BE_RefreshEnhance",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "11216_Topaz_BE_PassiveAbility": {
-      "fileName": "11216_Topaz_BE_PassiveAbility",
-      "childAbilityList": [
-        "11216_Topaz_BE_PassiveAbility",
-        "11216_Topaz_BE_RefreshEnhance",
-        "11216_Topaz_BE_FirstAttack",
-        "11216_Topaz_BE_LaterAttack",
-        "11216_Topaz_BE_Ability01_Camera",
-        "11216_Topaz_BE_Ability02_Camera",
-        "11216_Topaz_BE_Ability01_Enhance_Camera",
-        "11216_Topaz_BE_Ability02_Enhance_Camera",
-        "11216_Topaz_BE_Ability02Ready",
-        "11216_Topaz_BE_Ability01Ready",
-        "11216_Topaz_BE_Ability03Ready",
-        "11216_Topaz_BE_Hit",
-        "11216_Topaz_BE_DelayLimbo",
-        "11216_Topaz_BE_CheckStun"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1529971415\">Topaz_BETag</a>"
-        },
-        {
-          "name": "Set Action-State",
-          "on": null,
-          "stateName": "TopazBE",
-          "state": false
-        },
-        {
-          "name": "Set Action-State",
-          "on": null,
-          "stateName": "TopazBE"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1529971415\">Topaz_BETag</a>",
-          "modifierFlags": [
-            "BlockDamage",
-            "Stealth"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                "Mark Entity as Non-Target(Unselectable)"
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-182734853\">Topaz_BE_ReduceDelay</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Trigger Ability",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Battle Event's Caster}}"
-                      },
-                      "ability": "Topaz_Eidolon4_ReduceDelay"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target Count SUM",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Enemy Team All}}.[[living]]"
-                    },
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
-                    }
-                  },
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-93497222\">Topaz_BE_FindNoTargetFlag</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target Count SUM",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Enemy Team All}}.[[living]]"
-                    },
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Topaz_BE_LaterAttack",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}.[[living]]"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Has Modifier",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
-                            }
-                          }
-                        ]
-                      },
-                      "priorityTag": "STAGE_Character",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn End [Anyone]"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Put Into Limbo [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Owner]"
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Battle Event's Caster}}"
-                        },
-                        "flagName": "STAT_CTRL"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Battle Event's Caster}}"
-                        },
-                        "flagName": "STAT_CTRL_Frozen"
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Get Revived [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "11216_Modifiers": {
       "fileName": "11216_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1751,6 +1222,535 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "11216_Topaz_BE_CheckStun": {
+      "fileName": "11216_Topaz_BE_CheckStun",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "11216_Topaz_BE_DelayLimbo": {
+      "fileName": "11216_Topaz_BE_DelayLimbo",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "11216_Topaz_BE_Hit": {
+      "fileName": "11216_Topaz_BE_Hit",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1899526189\">Topaz_BE_HitEffect</a>"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "HasHitEffect",
+              "value": 1
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1899526189\">Topaz_BE_HitEffect</a>"
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "HasHitEffect",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HasHitEffect",
+            "compareType": ">",
+            "value2": 0
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "11216_Topaz_BE_Ability03Ready": {
+      "fileName": "11216_Topaz_BE_Ability03Ready",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "11216_Topaz_BE_Ability01Ready": {
+      "fileName": "11216_Topaz_BE_Ability01Ready",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "11216_Topaz_BE_Ability02Ready": {
+      "fileName": "11216_Topaz_BE_Ability02Ready",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "11216_Topaz_BE_LaterAttack": {
+      "fileName": "11216_Topaz_BE_LaterAttack",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Battle Event's Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+          },
+          "passed": [
+            "Deleted bullshit"
+          ],
+          "failed": [
+            "Deleted bullshit"
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Battle Event's Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+          },
+          "passed": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Battle Event's Caster}}"
+              },
+              "inherentTarget": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "ability": "Topaz_BE_UltraAttackDamage",
+              "isTrigger": true
+            }
+          ],
+          "failed": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Battle Event's Caster}}"
+              },
+              "inherentTarget": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "ability": "Topaz_BE_NormalAttackDamage",
+              "isTrigger": true
+            }
+          ]
+        }
+      ],
+      "onAbort": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Battle Event's Caster}}"
+                },
+                "flagName": "STAT_CTRL"
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Battle Event's Caster}}"
+                },
+                "flagName": "STAT_CTRL_Frozen"
+              }
+            ]
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "11216_Topaz_BE_FirstAttack": {
+      "fileName": "11216_Topaz_BE_FirstAttack",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Battle Event's Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+          },
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Battle Event's Caster}}"
+              },
+              "scope": "ContextCaster",
+              "variableName": "_damageStart",
+              "value": 1
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Battle Event's Caster}}"
+              },
+              "scope": "ContextCaster",
+              "variableName": "_damageStart",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "11216_Topaz_BE_RefreshEnhance": {
+      "fileName": "11216_Topaz_BE_RefreshEnhance",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "11216_Topaz_BE_PassiveAbility": {
+      "fileName": "11216_Topaz_BE_PassiveAbility",
+      "childAbilityList": [
+        "11216_Topaz_BE_PassiveAbility",
+        "11216_Topaz_BE_RefreshEnhance",
+        "11216_Topaz_BE_FirstAttack",
+        "11216_Topaz_BE_LaterAttack",
+        "11216_Topaz_BE_Ability01_Camera",
+        "11216_Topaz_BE_Ability02_Camera",
+        "11216_Topaz_BE_Ability01_Enhance_Camera",
+        "11216_Topaz_BE_Ability02_Enhance_Camera",
+        "11216_Topaz_BE_Ability02Ready",
+        "11216_Topaz_BE_Ability01Ready",
+        "11216_Topaz_BE_Ability03Ready",
+        "11216_Topaz_BE_Hit",
+        "11216_Topaz_BE_DelayLimbo",
+        "11216_Topaz_BE_CheckStun"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1529971415\">Topaz_BETag</a>"
+        },
+        {
+          "name": "Set Action-State",
+          "on": null,
+          "stateName": "TopazBE",
+          "state": false
+        },
+        {
+          "name": "Set Action-State",
+          "on": null,
+          "stateName": "TopazBE"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1529971415\">Topaz_BETag</a>",
+          "modifierFlags": [
+            "BlockDamage",
+            "Stealth"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                "Mark Entity as Non-Target(Unselectable)"
+              ]
+            },
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-182734853\">Topaz_BE_ReduceDelay</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Trigger Ability",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Battle Event's Caster}}"
+                      },
+                      "ability": "Topaz_Eidolon4_ReduceDelay"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target Count SUM",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All}}.[[living]]"
+                    },
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                    }
+                  },
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-93497222\">Topaz_BE_FindNoTargetFlag</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target Count SUM",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All}}.[[living]]"
+                    },
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Inject Ability Use",
+                      "abilityName": "Topaz_BE_LaterAttack",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Sequence",
+                        "Sequence": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{Enemy Team All}}.[[living]]"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Has Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                            }
+                          }
+                        ]
+                      },
+                      "priorityTag": "STAGE_Character",
+                      "canHitNonTargets": true,
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Turn End [Anyone]"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Put Into Limbo [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier is Added [Owner]"
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Battle Event's Caster}}"
+                        },
+                        "flagName": "STAT_CTRL"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Battle Event's Caster}}"
+                        },
+                        "flagName": "STAT_CTRL_Frozen"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Get Revived [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     }
   },
   "enemyData": {

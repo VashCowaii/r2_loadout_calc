@@ -585,9 +585,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
       "stackType": "Replace",
-      "stackData": [
-        "_AttackTime"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",

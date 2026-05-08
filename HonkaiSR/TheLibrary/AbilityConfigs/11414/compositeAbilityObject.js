@@ -3,299 +3,14 @@ const compositeAbilityObject = {
   "fullCharacterName": 11414,
   "trimCharacterName": 11414,
   "abilityList": [
+    "11414_Modifiers",
     "11414_DanHengPT_BE_InsertShield_Part02",
     "11414_DanHengPT_BE_InsertShield_Part01",
     "11414_DanHengPT_BE_InsertAttack_Part01",
     "11414_DanHengPT_BE_PassiveAbility",
-    "11414_Modifiers",
     "11414_Functions"
   ],
   "abilityObject": {
-    "11414_DanHengPT_BE_InsertShield_Part02": {
-      "fileName": "11414_DanHengPT_BE_InsertShield_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members}}"
-          },
-          "dispelCount": {
-            "operator": "Variables[0] (MDF_DisperseNum) || RETURN",
-            "displayLines": "MDF_DisperseNum",
-            "constants": [],
-            "variables": [
-              "MDF_DisperseNum"
-            ]
-          },
-          "dispelOrder": "LastAdded"
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{DHPT}}"
-          },
-          "ability": "DanHengPT_BE_AddShield"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "11414_DanHengPT_BE_InsertShield_Part01": {
-      "fileName": "11414_DanHengPT_BE_InsertShield_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "DanHengPT_BE_InsertShield_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "11414_DanHengPT_BE_InsertAttack_Part01": {
-      "fileName": "11414_DanHengPT_BE_InsertAttack_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Of Virtue, Forms Unfold"
-        },
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{DHPT}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "DanHengPT_BE_InsertAttack_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "11414_DanHengPT_BE_PassiveAbility": {
-      "fileName": "11414_DanHengPT_BE_PassiveAbility",
-      "childAbilityList": [
-        "11414_DanHengPT_BE_PassiveAbility",
-        "11414_DanHengPT_BE_InsertAttack_Part01",
-        "11414_DanHengPT_BE_InsertAttack_Camera",
-        "11414_DanHengPT_BE_InsertShield_Part01",
-        "11414_DanHengPT_BE_InsertShield_Part02",
-        "11414_DanHengPT_BE_InsertShield_Camera"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-516529797\">DanHengPT_BEModifier</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-516529797\">DanHengPT_BEModifier</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{DHPT}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "DanHengPT_BE_InsertAttack_Part01",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "priorityTag": "CharacterAttackFromSelf",
-                      "ownerState": "Mask_AliveOrRevivable",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "DanHengPT_BE_InsertShield_Part01",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members}}"
-                      },
-                      "priorityTag": "CharacterBuffSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Event Owner Change",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}.[[getSummoner]]"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>"
-                    },
-                    {
-                      "name": "Set Action-State",
-                      "on": null,
-                      "stateName": "Standard_Departed"
-                    },
-                    {
-                      "name": "Remove Modifier Behavior Flag(s)",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "flagNames": [
-                        "STAT_SheepStatus_SummonObjects"
-                      ]
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-480380135\">Enemy_W2_LycanKing_IF_DisableAction</a>[<span class=\"descriptionNumberColor\">Departed</span>]"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"40667951\">Enemy_W2_LycanKing_IF_DisableActionEndMark</a>"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "11414_Modifiers": {
       "fileName": "11414_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1108,6 +823,291 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "11414_DanHengPT_BE_InsertShield_Part02": {
+      "fileName": "11414_DanHengPT_BE_InsertShield_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
+          "dispelCount": {
+            "operator": "Variables[0] (MDF_DisperseNum) || RETURN",
+            "displayLines": "MDF_DisperseNum",
+            "constants": [],
+            "variables": [
+              "MDF_DisperseNum"
+            ]
+          },
+          "dispelOrder": "LastAdded"
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{DHPT}}"
+          },
+          "ability": "DanHengPT_BE_AddShield"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "11414_DanHengPT_BE_InsertShield_Part01": {
+      "fileName": "11414_DanHengPT_BE_InsertShield_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "DanHengPT_BE_InsertShield_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "11414_DanHengPT_BE_InsertAttack_Part01": {
+      "fileName": "11414_DanHengPT_BE_InsertAttack_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Of Virtue, Forms Unfold"
+        },
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{DHPT}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "DanHengPT_BE_InsertAttack_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "11414_DanHengPT_BE_PassiveAbility": {
+      "fileName": "11414_DanHengPT_BE_PassiveAbility",
+      "childAbilityList": [
+        "11414_DanHengPT_BE_PassiveAbility",
+        "11414_DanHengPT_BE_InsertAttack_Part01",
+        "11414_DanHengPT_BE_InsertAttack_Camera",
+        "11414_DanHengPT_BE_InsertShield_Part01",
+        "11414_DanHengPT_BE_InsertShield_Part02",
+        "11414_DanHengPT_BE_InsertShield_Camera"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "multiBase": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-516529797\">DanHengPT_BEModifier</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-516529797\">DanHengPT_BEModifier</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{DHPT}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Inject Ability Use",
+                      "condition": {
+                        "name": "Insert Ability Condition",
+                        "type": "AbilityOwnerInsertUnusedCount",
+                        "typeValue": 1
+                      },
+                      "abilityName": "DanHengPT_BE_InsertAttack_Part01",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "priorityTag": "CharacterAttackFromSelf",
+                      "ownerState": "Mask_AliveOrRevivable",
+                      "canHitNonTargets": true,
+                      "allowAbilityTriggers": false
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Inject Ability Use",
+                      "abilityName": "DanHengPT_BE_InsertShield_Part01",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
+                      "priorityTag": "CharacterBuffSelf",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Event Owner Change",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}.[[getSummoner]]"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>"
+                    },
+                    {
+                      "name": "Set Action-State",
+                      "on": null,
+                      "stateName": "Standard_Departed"
+                    },
+                    {
+                      "name": "Remove Modifier Behavior Flag(s)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "flagNames": [
+                        "STAT_SheepStatus_SummonObjects"
+                      ]
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-480380135\">Enemy_W2_LycanKing_IF_DisableAction</a>[<span class=\"descriptionNumberColor\">Departed</span>]"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"40667951\">Enemy_W2_LycanKing_IF_DisableActionEndMark</a>"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "11414_Functions": {
       "fileName": "11414_Functions",

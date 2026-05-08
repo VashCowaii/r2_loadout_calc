@@ -3,151 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": 16007,
   "trimCharacterName": 16007,
   "abilityList": [
+    "16007_Modifiers",
     "16007_BattleEventAbility_AetherDivide_W2_Beast01_01_Passive",
-    "16007_AetherDivide_W2_Beast01_01_Passive_Insert",
-    "16007_Modifiers"
+    "16007_AetherDivide_W2_Beast01_01_Passive_Insert"
   ],
   "abilityObject": {
-    "16007_BattleEventAbility_AetherDivide_W2_Beast01_01_Passive": {
-      "fileName": "16007_BattleEventAbility_AetherDivide_W2_Beast01_01_Passive",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1424821717\">AetherDivide_Standard_P</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-35249873\">AetherDivide_W2_Beast01_01_BattleEvent</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-274213515\">Beast01_01_BattleEvent_ForceKill</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-274213515\">Beast01_01_BattleEvent_ForceKill</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1729613140\">AetherDivide_W2_Beast01_01_MDF</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Force Entity Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-35249873\">AetherDivide_W2_Beast01_01_BattleEvent</a>",
-          "modifierFlags": [
-            "BlockDamage",
-            "Stealth"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "AetherDivide_W2_Beast01_01_Passive_Insert",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "priorityTag": "CharacterAttackFromSelf",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "16007_AetherDivide_W2_Beast01_01_Passive_Insert": {
-      "fileName": "16007_AetherDivide_W2_Beast01_01_Passive_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "UI Display Event",
-          "popUpText": "Wolf Predation"
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Battle Event's Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "AetherDivide_W2_Beast01_01_NormalAttackDamage",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
     "16007_Modifiers": {
       "fileName": "16007_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -304,6 +164,146 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "16007_BattleEventAbility_AetherDivide_W2_Beast01_01_Passive": {
+      "fileName": "16007_BattleEventAbility_AetherDivide_W2_Beast01_01_Passive",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1424821717\">AetherDivide_Standard_P</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-35249873\">AetherDivide_W2_Beast01_01_BattleEvent</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-274213515\">Beast01_01_BattleEvent_ForceKill</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-274213515\">Beast01_01_BattleEvent_ForceKill</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1729613140\">AetherDivide_W2_Beast01_01_MDF</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Force Entity Death",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-35249873\">AetherDivide_W2_Beast01_01_BattleEvent</a>",
+          "modifierFlags": [
+            "BlockDamage",
+            "Stealth"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "Inject Ability Use",
+                      "abilityName": "AetherDivide_W2_Beast01_01_Passive_Insert",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "priorityTag": "CharacterAttackFromSelf",
+                      "canHitNonTargets": true,
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "16007_AetherDivide_W2_Beast01_01_Passive_Insert": {
+      "fileName": "16007_AetherDivide_W2_Beast01_01_Passive_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "UI Display Event",
+          "popUpText": "Wolf Predation"
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Battle Event's Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "AetherDivide_W2_Beast01_01_NormalAttackDamage",
+          "isTrigger": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
     }
   },
   "enemyData": {},
