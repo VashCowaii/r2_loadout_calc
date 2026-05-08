@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__671225241\">ADV_StageAbility_Maze_Hanya</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1573793887\">WHanya_BpZhanYin_SpecialMark_Listen4</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
