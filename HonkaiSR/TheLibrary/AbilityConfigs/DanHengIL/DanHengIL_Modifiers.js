@@ -10,6 +10,37 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__983817284\">M_ADV_Maze_DanHengIL_StopSprintFlag</a>",
+      "counter": 1,
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__888002889\">ADV_Modifier_Maze_DanHengIL_HolyShield</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "HolyShield"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-748629763\">ADV_Modifier_Maze_DanHengIL</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "duration": 20,
+      "onStageExit": [
+        "Modifier Deletes Itself"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1981106226\">ADV_StageAbility_Maze_DanHengIL</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-807307973\">DanHengIL_CancelCamera</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
