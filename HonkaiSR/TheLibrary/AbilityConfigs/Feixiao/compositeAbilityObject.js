@@ -9,6 +9,10 @@ const compositeAbilityObject = {
     "Feixiao_Feixiao_Trace01",
     "Feixiao_Feixiao_Eidolon6",
     "Feixiao_Feixiao_TechniqueSP",
+    "Feixiao_LocalPlayer_StandardAbility_AttackBreak",
+    "Feixiao_LocalPlayer_Feixiao_TechniqueUsage",
+    "Feixiao_LocalPlayer_Feixiao_NormalAtk01_RemoveMazebuff",
+    "Feixiao_LocalPlayer_Feixiao_NormalAtk01",
     "Feixiao_Feixiao_TechniqueInLevel",
     "Feixiao_Feixiao_Insert_Part02",
     "Feixiao_Feixiao_Insert_Part01",
@@ -56,6 +60,239 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__450225831\">ADV_StageAbility_Maze_Feixiao_Achievement</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__164111166\">ADV_StageAbility_Maze_Feixiao_GatheredEnemyElite_Visual</a>",
+          "counter": 1,
+          "stackType": "Replace",
+          "modifierFlags": [
+            "LoopHit"
+          ],
+          "onApplication": [
+            "Deleted bullshit"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1694983067\">ADV_StageAbility_Maze_Feixiao_GatheredEnemy_Visual</a>",
+          "counter": 1,
+          "stackType": "Replace",
+          "modifierFlags": [
+            "Confine"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2059238450\">ADV_StageAbility_Maze_Feixiao_GatheredEnemy</a>",
+          "counter": 1,
+          "stackType": "Replace",
+          "onCreation": [
+            {
+              "name": "Set Target Parameter",
+              "readTarget": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "summonID": 12201
+              },
+              "paramTarget": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "variableName": "_Feixiao_Achievement_Count"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target Count",
+                "target": {
+                  "name": "Target Sequence",
+                  "Sequence": [
+                    {
+                      "name": "Add Target by Summoned Units",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "summonID": 12201
+                    }
+                  ]
+                },
+                "compareType": ">=",
+                "value2": 5
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"450225831\">ADV_StageAbility_Maze_Feixiao_Achievement</a>",
+                  "duration": -1
+                }
+              ]
+            }
+          ],
+          "onRemoval": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target Count",
+                "target": {
+                  "name": "Target Sequence",
+                  "Sequence": [
+                    {
+                      "name": "Add Target by Summoned Units",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "summonID": 12201
+                    }
+                  ]
+                },
+                "compareType": ">=",
+                "value2": 5
+              },
+              "failed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"450225831\">ADV_StageAbility_Maze_Feixiao_Achievement</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1609663662\">ADV_StageAbility_Maze_Feixiao_Attack_HolyShield</a>",
+          "counter": 1,
+          "stackType": "Merge",
+          "modifierFlags": [
+            "HolyShield"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__698297764\">ADV_StageAbility_Maze_Feixiao_Attack</a>",
+          "counter": 1
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-147386284\">ADV_StageAbility_Maze_Feixiao_Visual</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "onCreation": [
+            {
+              "name": "Create Overworld Entity",
+              "summonID": 12203
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              }
+            }
+          ],
+          "onRemoval": [
+            {
+              "name": "Remove Overworld Entity",
+              "summon": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "summonID": 12203
+              }
+            }
+          ],
+          "onStageExit": [
+            "Modifier Deletes Itself"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1139036944\">ADV_StageAbility_Maze_Feixiao_SummonUnitLifetimer</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "onCreation": [
+            {
+              "name": "Create Overworld Entity",
+              "summonID": 12201
+            }
+          ],
+          "onRemoval": [
+            {
+              "name": "Remove Overworld Entity",
+              "summon": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "summonID": 12201
+              }
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__769308695\">ADV_StageAbility_Maze_Feixiao</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "onCreation": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "CDF_IsEnterBattle",
+              "value": 0
+            }
+          ],
+          "onRemoval": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-147386284\">ADV_StageAbility_Maze_Feixiao_Visual</a>"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "CDF_IsEnterBattle",
+                "compareType": "=",
+                "value2": 0
+              }
+            }
+          ],
+          "onStageExit": [
+            "Modifier Deletes Itself"
+          ],
+          "onStack": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-147386284\">ADV_StageAbility_Maze_Feixiao_Visual</a>"
+            }
+          ]
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1813368649\">StageAbility_Maze_Feixiao_Modifier_GainSP</a>",
@@ -1169,6 +1406,499 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Feixiao_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Feixiao_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Feixiao_LocalPlayer_Feixiao_TechniqueUsage": {
+      "fileName": "Feixiao_LocalPlayer_Feixiao_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "122004()",
+          "duration": {
+            "operator": "Variables[0] (20) || Constants[0] (0.5) || ADD || RETURN",
+            "displayLines": "(20 + 0.5)",
+            "constants": [
+              0.5
+            ],
+            "variables": [
+              20
+            ]
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "122001(Avatar_Feixiao_00_SkillMazeSP)",
+          "duration": {
+            "operator": "Variables[0] (20) || RETURN",
+            "displayLines": "20",
+            "constants": [],
+            "variables": [
+              20
+            ]
+          },
+          "valuePerStack": {
+            "MDF_MoveSpeedRatio": {
+              "operator": "Variables[0] (0.5) || RETURN",
+              "displayLines": "0.5",
+              "constants": [],
+              "variables": [
+                0.5
+              ]
+            }
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              {
+                "name": "In Motion (Overworld)",
+                "flag": "Run"
+              },
+              {
+                "name": "In Motion (Overworld)",
+                "flag": "Walk"
+              }
+            ]
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Feixiao_LocalPlayer_Feixiao_NormalAtk01_RemoveMazebuff": {
+      "fileName": "Feixiao_LocalPlayer_Feixiao_NormalAtk01_RemoveMazebuff",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "overworldID": 122001
+        },
+        "Submit Technique Use"
+      ],
+      "references": [],
+      "triggerType": "Free",
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Feixiao_LocalPlayer_Feixiao_NormalAtk01": {
+      "fileName": "Feixiao_LocalPlayer_Feixiao_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier (OVERWORLD)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"769308695\">ADV_StageAbility_Maze_Feixiao</a>"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "CDF_IsEnterBattle",
+              "value": 0
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1609663662\">ADV_StageAbility_Maze_Feixiao_Attack_HolyShield</a>",
+              "counter": 1,
+              "duration": 1
+            },
+            {
+              "name": "IF",
+              "conditions": "Ability Has a Target"
+            },
+            {
+              "name": "Create Overworld Entity",
+              "summonID": 12202
+            },
+            "Deleted bullshit",
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-147386284\">ADV_StageAbility_Maze_Feixiao_Visual</a>"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": null,
+              "overworldID": 122004
+            },
+            {
+              "name": "Remove Overworld Entity",
+              "summon": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "summonID": 12201
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": "Ability Has a Target"
+            },
+            {
+              "name": "Overworld Attack Instance",
+              "onBattle": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": null,
+                  "ID": "122002(SkillMaze)"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "CDF_IsEnterBattle",
+                  "value": 1
+                }
+              ],
+              "entryTargetType": "AllHitTarget"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "CDF_IsEnterBattle",
+                "compareType": "<=",
+                "value2": 0
+              }
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": null,
+              "overworldID": 122001
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1609663662\">ADV_StageAbility_Maze_Feixiao_Attack_HolyShield</a>"
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": "Ability Has a Target",
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "FastRun"
+                  },
+                  "passed": [
+                    "Deleted bullshit"
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "In Motion (Overworld)",
+                        "flag": "Run"
+                      },
+                      "passed": [
+                        "Deleted bullshit"
+                      ],
+                      "failed": [
+                        "Deleted bullshit"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1609663662\">ADV_StageAbility_Maze_Feixiao_Attack_HolyShield</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "Feixiao_Feixiao_TechniqueInLevel": {
