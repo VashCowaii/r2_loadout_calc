@@ -10,6 +10,15 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1331167740\">ADV_StageAbility_Maze_Constance</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "Blind"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2093019273\">_M_Constance_InsertCheck</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
