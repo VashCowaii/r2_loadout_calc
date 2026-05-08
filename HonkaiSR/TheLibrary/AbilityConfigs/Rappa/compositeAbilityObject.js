@@ -4,6 +4,14 @@ const compositeAbilityObject = {
   "trimCharacterName": "Rappa",
   "abilityList": [
     "Rappa_Modifiers",
+    "Rappa_LocalPlayer_Rappa_Achievenment",
+    "Rappa_LocalPlayer_StandardAbility_AttackBreak",
+    "Rappa_LocalPlayer_Rappa_TechniqueUsage",
+    "Rappa_LocalPlayer_Rappa_NormalAtk01",
+    "Rappa_LocalPlayer_Rappa_TechniqueUsage_ListenInput",
+    "Rappa_LocalPlayer_Rappa_TechniqueUsage_Abort",
+    "Rappa_LocalPlayer_Rappa_TechniqueUsage_End",
+    "Rappa_LocalPlayer_Rappa_TechniqueUsage_TriggerHitMonster",
     "Rappa_Rappa_TechniqueInLevel",
     "Rappa_Rappa_PassiveAbility01",
     "Rappa_Rappa_Ability03_SP0_Part01",
@@ -33,6 +41,73 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2126707950\">M_ADV_Maze_Rappa_StopSprintFlag</a>",
+          "counter": 1,
+          "stackType": "Refresh"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1023191181\">ADV_Modifier_Maze_Rappa_SummonUnit</a>",
+          "onCreation": [
+            {
+              "name": "Create Overworld Entity",
+              "summonID": 13171
+            }
+          ],
+          "onRemoval": [
+            {
+              "name": "Remove Overworld Entity",
+              "summon": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "summonID": 13171
+              }
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1835153663\">ADV_Modifier_Maze_Rappa_HolyShield</a>",
+          "counter": 1,
+          "stackType": "Merge",
+          "modifierFlags": [
+            "HolyShield"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1641564581\">ADV_Modifier_Maze_Rappa</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "duration": 20,
+          "onCreation": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Skill Type",
+                "skillType": "Technique[?]"
+              }
+            }
+          ],
+          "onStageExit": [
+            "Modifier Deletes Itself"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-770906695\">ADV_Modifier_Maze_Rappa_IsHit</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__509266484\">ADV_StageAbility_Maze_Rappa</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
@@ -1267,6 +1342,722 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "Rappa_LocalPlayer_Rappa_Achievenment": {
+      "fileName": "Rappa_LocalPlayer_Rappa_Achievenment",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1581434995\">ADV_StageAbility_Maze_Achievenment</a>",
+          "duration": {
+            "operator": "Variables[0] (20) || Constants[0] (0.1) || SUB || RETURN",
+            "displayLines": "(20 - 0.1)",
+            "constants": [
+              0.1
+            ],
+            "variables": [
+              20
+            ]
+          }
+        },
+        {
+          "name": "WAIT FOR",
+          "condition": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Compare: Variable",
+                "value1": "DV_AbilityEnd",
+                "compareType": "=",
+                "value2": 1
+              }
+            ]
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Rappa_00_Achievenment",
+          "value": 1
+        }
+      ],
+      "references": [],
+      "triggerType": "Free",
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      }
+    },
+    "Rappa_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Rappa_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Rappa_LocalPlayer_Rappa_TechniqueUsage": {
+      "fileName": "Rappa_LocalPlayer_Rappa_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"933509647\">ADV_StageAbility_Maze_IgnoreWeakness_TechniqueUsageMark</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "ContextCaster",
+          "variableName": "DV_AbilityEnd"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "SprintModifiedSteerSpeed",
+          "value": {
+            "operator": "Variables[0] (SprintModifiedSteerSpeed) || RETURN",
+            "displayLines": "SprintModifiedSteerSpeed",
+            "constants": [],
+            "variables": [
+              "SprintModifiedSteerSpeed"
+            ]
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "SprintModifiedSpeed",
+          "value": {
+            "operator": "Variables[0] (SprintModifiedSpeed) || RETURN",
+            "displayLines": "SprintModifiedSpeed",
+            "constants": [],
+            "variables": [
+              "SprintModifiedSpeed"
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Move Input Active (Overworld)",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "from": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "to": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target(ST)}}"
+                        },
+                        "value1": "Distance_Between_Entities",
+                        "compareType": "<",
+                        "value2": 2
+                      }
+                    ]
+                  },
+                  {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "from": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "to": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target(ST)}}"
+                        },
+                        "value1": "Distance_Between_Entities",
+                        "compareType": "<",
+                        "value2": 6
+                      }
+                    ]
+                  },
+                  {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "from": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "to": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target(ST)}}"
+                        },
+                        "value1": "Distance_Between_Entities",
+                        "compareType": ">=",
+                        "value2": 6
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 13171
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "131702()",
+          "duration": {
+            "operator": "Variables[0] (20) || RETURN",
+            "displayLines": "20",
+            "constants": [],
+            "variables": [
+              20
+            ]
+          }
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-379736777\">Rappa_Sprint_PreProcess</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "DV_AbilityEnd",
+            "compareType": "=",
+            "value2": 1
+          }
+        }
+      ],
+      "onAbortReg": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "DV_AbilityEnd",
+          "value": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-379736777\">Rappa_Sprint_PreProcess</a>",
+          "parse": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1835153663\">ADV_Modifier_Maze_Rappa_HolyShield</a>",
+              "duration": 22
+            },
+            "Deleted bullshit",
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-770906695\">ADV_Modifier_Maze_Rappa_IsHit</a>"
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Rappa_00_Achievenment",
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Rappa_LocalPlayer_Rappa_NormalAtk01": {
+      "fileName": "Rappa_LocalPlayer_Rappa_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"933509647\">ADV_StageAbility_Maze_IgnoreWeakness_TechniqueUsageMark</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "failed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Rappa_LocalPlayer_Rappa_TechniqueUsage_ListenInput": {
+      "fileName": "Rappa_LocalPlayer_Rappa_TechniqueUsage_ListenInput",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "DV_AbilityEnd",
+          "value": 1
+        }
+      ],
+      "references": [],
+      "triggerType": "Free",
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      }
+    },
+    "Rappa_LocalPlayer_Rappa_TechniqueUsage_Abort": {
+      "fileName": "Rappa_LocalPlayer_Rappa_TechniqueUsage_Abort",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Submit Technique Use",
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "summonID": 13171
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "overworldID": 131702
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1835153663\">ADV_Modifier_Maze_Rappa_HolyShield</a>"
+        }
+      ],
+      "references": [],
+      "triggerType": "Free",
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      }
+    },
+    "Rappa_LocalPlayer_Rappa_TechniqueUsage_End": {
+      "fileName": "Rappa_LocalPlayer_Rappa_TechniqueUsage_End",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Variable",
+                "value1": "Rappa_00_Achievenment",
+                "compareType": "<=",
+                "value2": 0
+              },
+              {
+                "name": "Has Modifier (OVERWORLD)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1581434995\">ADV_StageAbility_Maze_Achievenment</a>",
+                "invertCondition": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1581434995\">ADV_StageAbility_Maze_Achievenment</a>"
+        },
+        "Submit Technique Use",
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "summonID": 13171
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1835153663\">ADV_Modifier_Maze_Rappa_HolyShield</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Move Input Active (Overworld)"
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "overworldID": 131702
+        }
+      ],
+      "references": [],
+      "triggerType": "Free",
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      }
+    },
+    "Rappa_LocalPlayer_Rappa_TechniqueUsage_TriggerHitMonster": {
+      "fileName": "Rappa_LocalPlayer_Rappa_TechniqueUsage_TriggerHitMonster",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Overworld Attack Instance",
+          "onBattle": [
+            {
+              "name": "Remove Overworld Entity",
+              "summon": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "summonID": 13171
+              }
+            },
+            "Deleted bullshit",
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": null,
+              "ID": "131701(SkillMaze)"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": null,
+              "overworldID": 131702
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "triggerType": "BySummonUnit",
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      }
     },
     "Rappa_Rappa_TechniqueInLevel": {
       "fileName": "Rappa_Rappa_TechniqueInLevel",

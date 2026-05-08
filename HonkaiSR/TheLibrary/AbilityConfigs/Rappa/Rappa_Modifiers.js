@@ -10,6 +10,73 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__2126707950\">M_ADV_Maze_Rappa_StopSprintFlag</a>",
+      "counter": 1,
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1023191181\">ADV_Modifier_Maze_Rappa_SummonUnit</a>",
+      "onCreation": [
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 13171
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "summonID": 13171
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1835153663\">ADV_Modifier_Maze_Rappa_HolyShield</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "HolyShield"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1641564581\">ADV_Modifier_Maze_Rappa</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "duration": 20,
+      "onCreation": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Skill Type",
+            "skillType": "Technique[?]"
+          }
+        }
+      ],
+      "onStageExit": [
+        "Modifier Deletes Itself"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-770906695\">ADV_Modifier_Maze_Rappa_IsHit</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__509266484\">ADV_StageAbility_Maze_Rappa</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
       "stackType": "ReplaceByCaster",
       "description": "The next time the third hit of \"Ningu: Demonbane Petalblade\" is launched, the additionally dealt Break DMG multiplier increases by <span class=\"descriptionNumberColor\">_CurrentRatio</span>, and the Toughness Reduction increases by <span class=\"descriptionNumberColor\">_CurrentValue</span>.",
