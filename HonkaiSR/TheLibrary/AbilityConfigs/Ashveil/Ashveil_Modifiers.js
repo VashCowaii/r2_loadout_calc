@@ -10,6 +10,43 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-206244305\">ADV_StageAbility_Ashveil_BeforeBattleStunListener</a>",
+      "onBattlePrep": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Parameter Target List}}"
+          },
+          "modifier": null,
+          "ID": "150401(SkillMaze)",
+          "counter": 1,
+          "duration": {
+            "operator": "Variables[0] (10) || RETURN",
+            "displayLines": "10",
+            "constants": [],
+            "variables": [
+              10
+            ]
+          },
+          "conditions": {
+            "name": "Has Flag",
+            "flagName": "Stun"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1808468304\">ADV_StageAbility_Maze_Ashveil</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "Stun"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1033168707\">Ashveil_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Finale: And Then There Were None</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
