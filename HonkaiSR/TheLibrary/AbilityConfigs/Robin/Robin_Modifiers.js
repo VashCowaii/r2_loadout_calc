@@ -10,6 +10,85 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__186905595\">ADV_StageAbility_Maze_Robin_Enemy</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "onCreation": [
+        {
+          "name": "Set Target Parameter",
+          "readTarget": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "summonID": 13091
+          },
+          "paramTarget": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "variableName": "_Robin_Taunt_Count"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target Count",
+            "target": {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Add Target by Summoned Units",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "summonID": 13091
+                }
+              ]
+            },
+            "compareType": ">=",
+            "value2": 6
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-193060010\">ADV_StageAbility_Maze_Robin_Enemy_ForShow</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "modifierFlags": [
+        "Enchanted"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1925937127\">ADV_StageAbility_Maze_Robin_Self</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "onCreation": [
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 13091
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "summonID": 13091
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-24245169\">Robin_AbilityEidolon6_ExtraRatioForShow</a>[<span class=\"descriptionNumberColor\">Moonless Midnight</span>]",
       "stackType": "ReplaceByCaster",
       "description": "Additionally increases the CRIT DMG for the Ultimate's Physical Additional DMG dealt by <span class=\"descriptionNumberColor\">SkillRank_Rank06_P2_ExtraRatio</span>. The remaining triggerable count is <span class=\"descriptionNumberColor\">_Rank06_BigDmgCount</span>.",
