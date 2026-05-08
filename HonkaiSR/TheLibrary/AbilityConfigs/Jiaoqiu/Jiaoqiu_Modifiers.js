@@ -10,6 +10,15 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1974834290\">ADV_StageAbility_Maze_Jiaoqiu</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "Debuff"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1036174530\">Jiaoqiu_AbilityEidolon6_ResistDown</a>[<span class=\"descriptionNumberColor\">Nonamorphic Pyrobind</span>]",
       "stackType": "ReplaceByCaster",
       "description": "Decreases All-Type RES by <span class=\"descriptionNumberColor\">ResistDownRatio</span>.",
